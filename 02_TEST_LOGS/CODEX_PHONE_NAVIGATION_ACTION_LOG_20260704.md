@@ -2,11 +2,11 @@
 
 STATUS: ACTIVE OPERATING LOG
 
-Purpose: record Moto Razr 2024, TeamViewer, Tasker, TextNow, AutoInput, and phone-proof navigation actions that work or fail so future phone testing is faster and safer.
+Purpose: record Moto Razr 2024, TeamViewer, Tasker, TextNow, AutoInput, and phone navigation actions that work or fail so future phone testing is faster and safer.
 
-Navigation logs are operational speed tools, not passive reports. Use this file to move faster on the phone, reuse known-good coordinates/routes, avoid failed click/search paths, and keep the needed phone screen visible for the current proof step.
+Navigation logs are UI-speed tools only. They are not app proof, release evidence, or Tasker status reports. Use this file to move faster on the phone, reuse known-good coordinates/routes, avoid failed click/search paths, and keep the needed phone screen visible.
 
-Do not store or print TeamViewer session IDs, phone numbers, account identifiers, contacts, message contents, API keys, webhook URLs, or Sheet IDs in this log. Record route behavior and proof status only.
+Do not store or print TeamViewer session IDs, phone numbers, account identifiers, contacts, message contents, API keys, webhook URLs, or Sheet IDs in this log. Record route behavior only. Put proof/status in phone proof reports and the active tracker.
 
 ## Current Phone Context
 
@@ -162,3 +162,36 @@ Fallback rules:
 - P82 task block was reachable by scrolling downward through the task list, then slightly upward after overshooting.
 - `AIW DASHBOARD P82` was located just above the visible `AIW P82 CC STATUS` / `AIW P82 CC START LIVE` / `AIW P82 CC QUEUEVIEW` block.
 - Runtime `STATUS` button worked at approximate TeamViewer coordinate `x=478, y=247`.
+
+## Stage 2 STATUS Rerun Navigation Addendum
+
+- TeamViewer scaling changed during the session; prior coordinates became invalid after TeamViewer reconnected/resized.
+- Verified phone soft keys on the earlier TeamViewer scale:
+  - Back: approximate `x=481, y=456`
+  - Home: approximate `x=497, y=456`
+  - Recents: approximate `x=512, y=456`
+- Do not use old `x=514, y=458` as Home. It is Recents on this scale.
+- Home-screen icon correction:
+  - The green lower-center icon is file manager, not Tasker.
+  - The purple/yellow icon immediately left of it opens Tasker.
+- Tasker runtime dashboard correction:
+  - The verified STATUS button is the top-left blue button around `x=484, y=232` on the earlier TeamViewer scale.
+  - A prior tap at `x=478, y=247` landed lower in the safe controls area and did not capture STATUS output.
+- Tasker run/play correction:
+  - In `AIW DASHBOARD P82` task edit, the run control is the small blue button at Tasker's lower-left toolbar around `x=462, y=444` on the earlier TeamViewer scale.
+- Tasker menu correction:
+  - Search icon is left of the far-right overflow.
+  - Far-right overflow around `x=573, y=171` opened Tasker menu.
+  - `More` did not expose Run Log in this installed UI.
+  - `Monitoring` was attempted but led to a blank/loading screen and was not completed.
+- QuickSupport overlay correction:
+  - The orange QuickSupport bubble can block Tasker back/menu controls.
+  - If a "Close connection" dialog appears, left button is `Cancel`; right button is `Close`.
+  - Do not press the right button.
+- ADB correction:
+  - Local ADB exists at `tools\platform-tools\adb.exe` and `tools\scrcpy\scrcpy-win64-v4.0\adb.exe`.
+  - `adb devices -l` returned no attached devices in this pass.
+- Current phone finish state after this addendum:
+  - TeamViewer reconnected.
+  - Phone was restored to a stable Home screen.
+  - Codex was visible on the PC side.

@@ -4,7 +4,7 @@ STATUS: ACTIVE OPERATING LOG
 
 Purpose: record Windows, ChatGPT Desktop, file-picker, and phone-screen navigation actions that worked or failed so the next automation pass is faster and less error-prone.
 
-Navigation logs are operational speed tools, not passive reports. Read them before screen work, reuse known-good routes/coordinates, avoid repeating failed paths, and keep the needed work surface visible.
+Navigation logs are UI-speed tools only. They are not app proof, release evidence, or Tasker status reports. Read them before screen work, reuse known-good routes/coordinates, avoid repeating failed paths, keep the needed work surface visible, and reduce time spent hunting for controls.
 
 ## Current Targets
 
@@ -26,6 +26,7 @@ Navigation logs are operational speed tools, not passive reports. Read them befo
 6. Before phone actions, announce that Moto screen control is about to start and avoid live/send/start paths unless explicitly approved by the current proof step.
 7. After phone actions, return the Moto to the prior progress/chat screen when possible, then bring Codex desktop back to the PC foreground so the user can see progress.
 8. Actively track the current target app/window, visible phone screen, pending audit/build/proof task, and next safe action. If the visible screen drifts from the work target, restore the needed screen before continuing.
+9. Do not turn navigation logging into proof analysis. Keep proof/status in proof reports and trackers; keep this file focused on faster UI movement.
 
 ## Worked
 
