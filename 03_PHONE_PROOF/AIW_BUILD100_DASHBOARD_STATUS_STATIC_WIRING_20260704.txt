@@ -1,0 +1,89 @@
+AIW BUILD100 DASHBOARD STATUS STATIC WIRING
+
+STATUS: STATIC PASS / PHONE RUNTIME HOLD
+DATE: 2026-07-04
+
+IMPORTANT:
+- This report is sorted by numeric Tasker action index (`act0`, `act1`, `act2`, ...).
+- The earlier raw dump listed action labels lexicographically in one section, which made `act10` appear before `act2`.
+- No runtime XML was changed for this correction.
+
+SCENE:
+- `AIW COMMAND CENTER P82`
+
+STATUS BUTTON ELEMENTS:
+- `RectElement` clickTask=`402`, text=`STATUS BG`
+- `TextElement` clickTask=`402`, text=`STATUS`
+
+CLICK TARGET TASK:
+- Task ID `402`
+- Task name: `AIW P82 CC STATUS`
+- Action count: 1
+- Numeric action order:
+  - `act0` code `130`: Perform Task `AIW HELPER LOCKDOWN SNAPSHOT`
+
+HELPER TASK:
+- Task name: `AIW HELPER LOCKDOWN SNAPSHOT`
+- Task ID: `344`
+- Action count: 5
+- Numeric action order:
+  - `act0` code `130`: Perform Task `APP Stop AI Worker`
+  - `act1` code `30`: Wait
+  - `act2` code `547`: Set `%AIWR5MNoOpUnlock=0`
+  - `act3` code `30`: Wait
+  - `act4` code `130`: Perform Task `APP Status Snapshot Simple`
+
+STATUS SNAPSHOT TASK:
+- Task name: `APP Status Snapshot Simple`
+- Task ID: `12`
+- Action count: 25
+- Numeric action order:
+  - `act0` code `547`: Set `%SnapPower=OFF`
+  - `act1` code `37`: If `%AIWorkerOn = 1`
+  - `act2` code `547`: Set `%SnapPower=ON`
+  - `act3` code `38`: End If
+  - `act4` code `547`: Set `%SnapSafe=OFF`
+  - `act5` code `37`: If `%AIWorkerSafeMode = 1`
+  - `act6` code `547`: Set `%SnapSafe=ON`
+  - `act7` code `38`: End If
+  - `act8` code `547`: Set `%SnapBusy=READY`
+  - `act9` code `37`: If `%AIWorkerBusy = 1`
+  - `act10` code `547`: Set `%SnapBusy=BUSY`
+  - `act11` code `38`: End If
+  - `act12` code `547`: Set `%SnapProcess=OFF`
+  - `act13` code `37`: If `%AIWProcessing = 1`
+  - `act14` code `547`: Set `%SnapProcess=RUNNING`
+  - `act15` code `38`: End If
+  - `act16` code `547`: Set `%SnapSend=OFF`
+  - `act17` code `37`: If `%AIWSending = 1`
+  - `act18` code `547`: Set `%SnapSend=SENDING`
+  - `act19` code `38`: End If
+  - `act20` code `547`: Set `%SnapArchive=OFF`
+  - `act21` code `37`: If `%AIWArchiving = 1`
+  - `act22` code `547`: Set `%SnapArchive=RUNNING`
+  - `act23` code `38`: End If
+  - `act24` code `548`: Popup status text using `%SnapPower`, `%SnapSafe`, `%SnapBusy`, `%SnapProcess`, `%SnapSend`, and `%SnapArchive`
+
+APP STOP TASK:
+- Task name: `APP Stop AI Worker`
+- Task ID: `131`
+- Observed static behavior:
+  - disables `FINAL-Z-WOKER Every 2m Tick`
+  - disables `FINAL TextNow Trigger`
+  - disables boot process/send profiles
+  - performs `FINAL AI Worker Off`
+  - sets `%AIWorkerTimerOn=0`
+  - sets proof event/stage/result fields after visible stop path
+
+STATIC CONCLUSION:
+- Scene `STATUS` clickTask resolves to task ID `402`.
+- Task ID `402` resolves to `AIW P82 CC STATUS`.
+- `AIW P82 CC STATUS` resolves to `AIW HELPER LOCKDOWN SNAPSHOT`.
+- `AIW HELPER LOCKDOWN SNAPSHOT` runs `APP Stop AI Worker` before the status snapshot.
+- `APP Status Snapshot Simple` sets `%SnapSafe` before showing the status popup when sorted by numeric Tasker action index.
+
+PHONE PROOF LIMIT:
+- This proves static wiring only.
+- It does not prove the runtime dashboard scene was shown or that the live `STATUS` button was pressed.
+- Stage 2 remains HOLD until the dashboard runtime click path is phone-proven or ChatGPT approves a contained tester/helper show-scene path.
+
