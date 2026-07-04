@@ -1,0 +1,23 @@
+{
+    "package":  "AIW_BUILD100_CANDIDATE_HOLD_FOR_PHONE_PROOF_20260704",
+    "status":  "CANDIDATE / HOLD FOR PHONE PROOF",
+    "generated_local":  "2026-07-03T20:12:34-07:00",
+    "source_root":  "C:\\Users\\Shadow\\Documents\\ai work\\package-audit\\BUILD100_latest\\AIW_CODEX_FULL_PROJECT_CONTROL_PACKAGE_BUILD100_20260704",
+    "target_runtime":  "AIW_BUILD100_FULL_CONTROL_50_CONTACT_CAPPED_QUEUE_WITH_WATCHDOG_CANDIDATE.xml",
+    "phone_proof_claimed":  false,
+    "private_data_rule":  "Preserve private/WITH_KEY data inside XML; do not print secrets in reports.",
+    "files":  [
+                  "AIW_BUILD100_FULL_CONTROL_50_CONTACT_CAPPED_QUEUE_WITH_WATCHDOG_CANDIDATE.xml",
+                  "BUILD100_CANDIDATE_100_PASS_VALIDATION_REPORT.md",
+                  "BUILD100_CANDIDATE_CHANGE_REPORT.md",
+                  "BUILD100_PACKAGE_MANIFEST.json",
+                  "DEPENDENCY_AND_SYSTEM_REGISTRY.md",
+                  "FAILURE_AND_REGRESSION_LEDGER.md",
+                  "HOLD_LIST.md",
+                  "PHONE_PROOF_CHECKLIST.md",
+                  "PROMOTION_GATE_REPORT.md",
+                  "RUNTIME_SAFEGUARD_MAP.md",
+                  "SOURCE_HASH_LOCK.md",
+                  "STATIC_AUDIT_BUILD100_CANDIDATE.txt"
+              ]
+}

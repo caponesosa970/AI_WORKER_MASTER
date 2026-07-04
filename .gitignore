@@ -1,0 +1,12 @@
+downloads/
+tools/
+tmp-install/
+
+# Local/editor state
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+
+# Keep ZIP handoff packages in Drive unless explicitly approved for GitHub.
+*.zip

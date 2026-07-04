@@ -1,0 +1,41 @@
+file: C:\Users\Shadow\Documents\ai work\package-audit\generated-build100\AIW_BUILD100_FULL_CONTROL_50_CONTACT_CAPPED_QUEUE_WITH_WATCHDOG_CANDIDATE.xml
+sha256: B1C86DC853159B2162DAFDB7250CE3BAFBC5BEAF58CD8A6B99594BD4A1E0DC50
+release_status: CANDIDATE / HOLD FOR PHONE PROOF
+xml_parse: PASS
+root: TaskerData
+task_count: 218
+profile_count: 4
+scene_count: 2
+duplicate_task_id_count: 0
+duplicate_task_name_count: 0
+missing_profile_task_refs: 0
+missing_perform_task_refs: 0
+click_task_ref_count: 35
+missing_click_task_refs: 0
+defined_tasks_not_in_project_count: 0
+project_tasks_not_defined_count: 0
+defined_scenes_not_in_project_count: 0
+project_scenes_not_defined_count: 0
+project_scenes: Popup,AIW COMMAND CENTER P82
+build95_marker_count: 0
+build99_marker_count: 0
+build100_marker_count: 11
+patch83_marker_count: 0
+json_true_count: 0
+se_true_count: 0
+mojibake_A_count: 0
+section_sign_count: 443
+openai_key_marker_present: True
+textnow_marker_count: 97
+auto_live_tick_present: True
+send_wait_1000_present: True
+watchdog_marker_count: 25
+recovery_marker_count: 25
+failure_ledger_marker_count: 2
+regression_ledger_marker_count: 2
+validation_engine_marker_count: 2
+promotion_engine_marker_count: 2
+hold_controller_marker_count: 2
+dependency_registry_marker_count: 5
+queue_pressure_marker_count: 2
+failures: []

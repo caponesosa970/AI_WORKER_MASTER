@@ -1,0 +1,116 @@
+{
+  "package": "AIW_CODEX_FULL_PROJECT_CONTROL_PACKAGE_BUILD100_20260704",
+  "generated_utc": "2026-07-04T01:46:17.102188+00:00",
+  "status": "CANDIDATE FULL PROJECT CONTROL PACKAGE",
+  "target_runtime": "AIW_BUILD100_FULL_CONTROL_50_CONTACT_CAPPED_QUEUE_WITH_WATCHDOG_CANDIDATE.xml",
+  "raw_reference_rule": "raw files copied byte-for-byte and not reformatted",
+  "private_data_rule": "preserve WITH_KEY/private data inside XML; do not print secrets in reports",
+  "xml_stats": {
+    "main_xml_found": true,
+    "sha256": "a75f90a37c0f698eabd8ec3aabe9158beffa3a63eaffda65ed0dc44aad3a2413",
+    "size_bytes": 2733880,
+    "xml_parse": {
+      "status": "PASS",
+      "root": "TaskerData"
+    },
+    "task_tag_count": 211,
+    "profile_tag_count": 4,
+    "scene_tag_count": 2,
+    "duplicate_task_id_count": 0,
+    "duplicate_name_count_estimate": 0,
+    "BUILD95_marker_count": 2,
+    "BUILD99_marker_count": 1,
+    "BUILD100_marker_count": 0,
+    "PATCH83_marker_count": 0,
+    "json_true_count": 0,
+    "se_true_count": 0,
+    "mojibake_A_count": 0,
+    "section_sign_count": 443,
+    "openai_key_marker_present": true,
+    "tasker_root_present": true,
+    "textnow_trigger_present": true,
+    "auto_live_tick_present": true,
+    "send_wait_1000_present": true,
+    "aiw_watchdog_present": false,
+    "failure_ledger_present": false,
+    "regression_ledger_present": false
+  },
+  "hash_inventory": {
+    "AIW_BUILD99_PATCH83_IMPORT_SAFE_MINIMAL.xml": {
+      "sha256": "a75f90a37c0f698eabd8ec3aabe9158beffa3a63eaffda65ed0dc44aad3a2413",
+      "size_bytes": 2733880,
+      "copied_as": "REFERENCE_RAW_DO_NOT_REFORMAT/AIW_BUILD99_PATCH83_IMPORT_SAFE_MINIMAL.xml"
+    },
+    "AIW_BUILD99_PATCH83_IMPORT_SAFE_MINIMAL_AUDIT_20260704.md": {
+      "sha256": "2fe432a001a4d74dc1d79506f6cee6a457a363650f397d16d7173daec7851dce",
+      "size_bytes": 4407,
+      "copied_as": "REFERENCE_RAW_DO_NOT_REFORMAT/AIW_BUILD99_PATCH83_IMPORT_SAFE_MINIMAL_AUDIT_20260704.md"
+    },
+    "AIW_CODEX_A_TO_Z_BUILD100_CONTROL_HANDOFF_20260704.zip": {
+      "sha256": "5d5f24f3f7fe5cbc31731a35952e3a9d092bbfa9de226abeb4ff8d3b61e4600c",
+      "size_bytes": 1433896,
+      "copied_as": "REFERENCE_RAW_DO_NOT_REFORMAT/AIW_CODEX_A_TO_Z_BUILD100_CONTROL_HANDOFF_20260704.zip"
+    },
+    "AIW_CODEX_BUILD100_50_CONTACT_FULL_BUILD_PLAN_20260704.zip": {
+      "sha256": "79bc31fcb68f73ba76f13df322bfee761d57db0428106175eb7effdad4ec21ef",
+      "size_bytes": 668132,
+      "copied_as": "REFERENCE_RAW_DO_NOT_REFORMAT/AIW_CODEX_BUILD100_50_CONTACT_FULL_BUILD_PLAN_20260704.zip"
+    },
+    "AIW_COMPACT_ARCHIVE_AND_MASTER_PLAN_20260703.zip": {
+      "sha256": "8a8d343b46a0d8f9952e8f41b7a4a591a8689b15f708f354eb1b5491ba712ac0",
+      "size_bytes": 9870,
+      "copied_as": "REFERENCE_RAW_DO_NOT_REFORMAT/AIW_COMPACT_ARCHIVE_AND_MASTER_PLAN_20260703.zip"
+    },
+    "AIW_CODEX_HANDOFF_NEXT_BEST_MOVE_20260703.zip": {
+      "sha256": "dcf79796924c9926c6abf23389c34defc6c2b70efbb5ebd08437f6e2036b6364",
+      "size_bytes": 489596,
+      "copied_as": "REFERENCE_RAW_DO_NOT_REFORMAT/AIW_CODEX_HANDOFF_NEXT_BEST_MOVE_20260703.zip"
+    },
+    "AIW_CODEX_BUILD99_LOAD_FAILURE_AUDIT_20260703.md": {
+      "sha256": "604fb9b6ab937bab905ddf6d800ad37ec20057d5c8ae820e490c0496e9a675b0",
+      "size_bytes": 3982,
+      "copied_as": "REFERENCE_RAW_DO_NOT_REFORMAT/AIW_CODEX_BUILD99_LOAD_FAILURE_AUDIT_20260703.md"
+    },
+    "AIW_FINAL_BUILD99_PATCH83_LEAN_RUNTIME.xml": {
+      "sha256": "b98f748554d47173454f58a8c7d28fdc0dbf5e4d6676678d6b5606faea4e3d2e",
+      "size_bytes": 1479884,
+      "copied_as": "REFERENCE_RAW_DO_NOT_REFORMAT/AIW_FINAL_BUILD99_PATCH83_LEAN_RUNTIME.xml"
+    },
+    "83_AIW_SEND_WAIT_MICRO_STABILIZER_RUNTIME.xml": {
+      "sha256": "f5ae33fee530ab0f32770c3b27a1b54b715046ed6258a0673865bec88103db91",
+      "size_bytes": 2562355,
+      "copied_as": "REFERENCE_RAW_DO_NOT_REFORMAT/83_AIW_SEND_WAIT_MICRO_STABILIZER_RUNTIME.xml"
+    }
+  },
+  "validation_summary": {
+    "validation_type": "package-control-validation-loop",
+    "passes_requested": 100,
+    "passes_completed": 100,
+    "all_passed": true,
+    "failures": []
+  },
+  "files": [
+    "00_START_HERE_READ_FIRST.md",
+    "01_FULL_PROJECT_A_TO_Z_SYSTEM_SPEC.md",
+    "02_CODEX_MASTER_PROMPT.md",
+    "03_RUNTIME_SAFEGUARD_MAP.md",
+    "04_WATCHDOG_RECOVERY_MAINTENANCE_SPEC.md",
+    "05_FAILURE_AND_REGRESSION_LEDGER.md",
+    "06_VALIDATION_PROMOTION_RELEASE_ENGINE.md",
+    "07_DEPENDENCY_AND_SYSTEM_REGISTRY.md",
+    "08_TASKER_XML_FORMAT_LOCK.md",
+    "09_PHONE_PROOF_CHECKLIST.md",
+    "10_HOLD_LIST.md",
+    "11_STATIC_AUDIT_OF_REFERENCE.md",
+    "12_PACKAGE_100_PASS_VALIDATION_REPORT.md",
+    "REFERENCE_RAW_DO_NOT_REFORMAT/83_AIW_SEND_WAIT_MICRO_STABILIZER_RUNTIME.xml",
+    "REFERENCE_RAW_DO_NOT_REFORMAT/AIW_BUILD99_PATCH83_IMPORT_SAFE_MINIMAL.xml",
+    "REFERENCE_RAW_DO_NOT_REFORMAT/AIW_BUILD99_PATCH83_IMPORT_SAFE_MINIMAL_AUDIT_20260704.md",
+    "REFERENCE_RAW_DO_NOT_REFORMAT/AIW_CODEX_A_TO_Z_BUILD100_CONTROL_HANDOFF_20260704.zip",
+    "REFERENCE_RAW_DO_NOT_REFORMAT/AIW_CODEX_BUILD100_50_CONTACT_FULL_BUILD_PLAN_20260704.zip",
+    "REFERENCE_RAW_DO_NOT_REFORMAT/AIW_CODEX_BUILD99_LOAD_FAILURE_AUDIT_20260703.md",
+    "REFERENCE_RAW_DO_NOT_REFORMAT/AIW_CODEX_HANDOFF_NEXT_BEST_MOVE_20260703.zip",
+    "REFERENCE_RAW_DO_NOT_REFORMAT/AIW_COMPACT_ARCHIVE_AND_MASTER_PLAN_20260703.zip",
+    "REFERENCE_RAW_DO_NOT_REFORMAT/AIW_FINAL_BUILD99_PATCH83_LEAN_RUNTIME.xml"
+  ]
+}
