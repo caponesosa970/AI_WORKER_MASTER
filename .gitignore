@@ -10,3 +10,8 @@ Thumbs.db
 
 # Keep ZIP handoff packages in Drive unless explicitly approved for GitHub.
 *.zip
+
+# Codex UI navigation/screen-control logs are local-only speed notes, not AI Worker app artifacts.
+02_TEST_LOGS/CODEX_NAVIGATION_ACTION_LOG_*.md
+02_TEST_LOGS/CODEX_PHONE_NAVIGATION_ACTION_LOG_*.md
+02_TEST_LOGS/CODEX_ACTIVE_WORK_TRACKER_*.md
