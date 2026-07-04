@@ -50,13 +50,21 @@ Use these logs to increase speed, avoid repeated mistakes, reuse known-good coor
 
 ## Next Safe Action
 
-1. Sync non-ZIP proof/log/report files to GitHub.
-2. Keep Codex visible unless checking ChatGPT or TeamViewer.
-3. Continue only the contained Stage 2 improvement route:
+1. Keep Codex visible unless checking ChatGPT or TeamViewer.
+2. Continue only the contained Stage 2 improvement route:
    - run `AIW DASHBOARD P82`
    - press only `STATUS`
    - wait 3-5 seconds
    - capture final status screenshot if visible
    - export Tasker runlog immediately
-4. Send runlog plus screenshot to ChatGPT for audit.
-5. Do not press live/start/send/archive/compactor/queue/timer/trigger/TextNow controls.
+3. Send runlog plus screenshot to ChatGPT for audit.
+4. Do not press live/start/send/archive/compactor/queue/timer/trigger/TextNow controls.
+
+## GitHub Sync Checkpoint
+
+- Checked: `2026-07-04 16:00:16 -07:00`
+- Branch: `main`
+- Remote: `origin/main`
+- Latest synced commit: `91f3f9c Add Build100 phone proof logs and tracker`
+- Verified state: local branch matched GitHub remote and no tracked changes were shown after the push.
+- ZIP packages remain intentionally ignored by `.gitignore`; keep them local/Drive unless explicitly force-added.
