@@ -4,7 +4,9 @@ Updated: 2026-07-05
 
 ## Current Workflow Plan
 
-Use the subsystem completion plan as the current workflow plan:
+Use `MASTER_PLAN_CURRENT.md` as the active workflow plan.
+
+The active workflow package is:
 
 `04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/README_FIRST_FOR_CHATGPT.md`
 
@@ -14,7 +16,7 @@ The ChatGPT audit ZIP is:
 
 ## Status
 
-`CANDIDATE / HOLD FOR CHATGPT AUDIT`
+`CANDIDATE / HOLD`
 
 ## Current Rule
 
@@ -24,11 +26,18 @@ They remain evidence/source history unless the current workflow plan or a newer 
 
 Technical truth still comes from the runtime XML, static audits, runlogs, screenshots, SHA256 records, proof ledger, frozen logic register, failed packages ledger, and ChatGPT audit results.
 
+## Current Subsystem Order
+
+1. Group A: frozen proven systems.
+2. Group B: Send UI Dry Run, current active subsystem.
+3. Group C: Controlled One Send.
+4. Group D: Live Controller / Timer.
+5. Group E: Maintenance / Recovery.
+6. Group F: Capacity / Production.
+
 ## Next Allowed Step
 
-1. ChatGPT audits the subsystem completion plan.
-2. If approved, Codex patches Group B2 only.
-3. Group B2 scope: `SS Safe Send Dry-Run` search-key normalization, message-box detection, dry-run paste proof markers, speed markers, fail-closed route, and stop-before-send-button guard.
+ChatGPT audits the subsystem completion plan. If approved, Codex patches Group B only.
 
 ## Still Forbidden
 
@@ -44,4 +53,4 @@ Technical truth still comes from the runtime XML, static audits, runlogs, screen
 
 ## Final Status
 
-`CANDIDATE / HOLD FOR CHATGPT AUDIT`
+`CANDIDATE / HOLD`

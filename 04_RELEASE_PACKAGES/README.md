@@ -6,7 +6,7 @@ Updated: 2026-07-05
 
 `_subsystem_completion_plan_20260705/`
 
-This is the current workflow-plan handoff package.
+This is the current workflow-plan handoff package. It controls the work order, not technical truth.
 
 ## Current ChatGPT ZIP
 

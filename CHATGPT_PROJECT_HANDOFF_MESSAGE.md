@@ -8,7 +8,7 @@ Please audit the current AI Worker Build100 workflow plan package.
 
 ## Status
 
-`CANDIDATE / HOLD FOR CHATGPT AUDIT`
+`CANDIDATE / HOLD`
 
 ## Important
 
@@ -23,7 +23,7 @@ Technical truth remains in the XML, audits, runlogs, screenshots, SHA256 records
 Confirm:
 
 - no runtime XML was patched in the subsystem-plan pass
-- Group B2 is the next safe patch lane only after audit
+- Group B Send UI Dry Run is the next safe patch lane only after audit
 - LOCKED means layer-level only
 - failed packages remain quarantined
 - controlled one-send, timer/live, maintenance, and capacity remain HOLD
@@ -33,8 +33,8 @@ Return:
 - final classification
 - approved next Codex patch scope
 - forbidden changes
-- phone proof checklist after Group B2
+- phone proof checklist after Group B
 
 ## Final Status
 
-`CANDIDATE / HOLD FOR CHATGPT AUDIT`
+`CANDIDATE / HOLD`

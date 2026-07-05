@@ -6,7 +6,7 @@ Current workflow plan:
 
 Current status:
 
-`CANDIDATE / HOLD FOR CHATGPT AUDIT`
+`CANDIDATE / HOLD`
 
 Older packages are evidence/source history only unless the current workflow plan or a newer ChatGPT audit promotes them.
 

@@ -1,61 +1,115 @@
-# AI Worker Build100 Current Workflow Plan
+# AI Worker Build100 Active Workflow
 
 Updated: 2026-07-05
 
-## Status
+This document is the ACTIVE WORKFLOW PLAN only.
 
-`CANDIDATE / HOLD FOR CHATGPT AUDIT`
+It is NOT the source of truth for runtime behavior.
+It must NEVER replace:
 
-## Important Meaning
+- locked source XML
+- proven runtime behavior
+- proof ledger
+- runlogs
+- screenshots
+- SHA256 evidence
+- Git history
 
-This file is the active workflow plan. It controls the order of work.
+## Source Of Truth Priority
 
-It is not the source of technical truth.
+1. Locked source packages
+2. Proven phone proof
+3. Current runtime XML
+4. Proof Ledger
+5. Git history
+6. Active workflow plan
 
-Technical truth remains in the runtime XML, static audits, phone runlogs, screenshots, SHA256 inventories, proof ledger, frozen logic register, failed packages ledger, and ChatGPT audit results.
+## Workflow Roles
 
-## Active Workflow Plan
+ChatGPT:
 
-The current workflow plan is:
+- System architect
+- Planner
+- Auditor
+- Release controller
+- Decides promotion from CANDIDATE to LOCKED
 
-`04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/README_FIRST_FOR_CHATGPT.md`
+Codex:
 
-The current ChatGPT audit ZIP is:
+- Static auditor
+- Repository maintainer
+- Builder
+- Documentation maintainer
+- Git historian
+
+## General Rules
+
+- Never replace locked source without proof.
+- Never remove proven logic unless evidence proves it is broken.
+- Never invent proof.
+- If proof is missing, mark HARD HOLD and identify the exact missing file.
+- Preserve every proven layer when the source chain is unchanged.
+- Build by subsystem, not by isolated bugs.
+- Group independent safe fixes together.
+- Leave dangerous runtime changes isolated for phone proof.
+
+## Current Subsystem Order
+
+Group A:
+
+- Frozen proven systems.
+- Do not touch unless source changes.
+
+Group B:
+
+- Send UI Dry Run.
+- Current active subsystem.
+
+Group C:
+
+- Controlled One Send.
+
+Group D:
+
+- Live Controller / Timer.
+
+Group E:
+
+- Maintenance / Recovery.
+
+Group F:
+
+- Capacity / Production.
+
+## Phone Testing
+
+Phone proof is required only when runtime behavior cannot be proven statically.
+
+Static work should be grouped whenever safe.
+
+## Every Codex Output Must Include
+
+- static audit
+- SHA256 inventory
+- git status
+- git log -1 --stat
+- git diff --name-only
+- files changed
+- remaining HOLD list
+- next phone-proof checklist
+
+## Current Package
+
+Current workflow package:
+
+`04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/`
+
+Current ChatGPT audit ZIP:
 
 `C:\Users\Shadow\Downloads\ai work\Codex to ChatGPT\06_CHATGPT_AUDIT_ZIP__AIW_BUILD100_SUBSYSTEM_COMPLETION_PLAN_20260705.zip`
 
-## Active Next Step
+## Final Project Status
 
-ChatGPT audits the subsystem completion package.
+`CANDIDATE / HOLD`
 
-If ChatGPT approves, Codex patches Group B2 only:
-
-- `SS Safe Send Dry-Run`
-- search-key normalization
-- message-box detection
-- dry-run paste proof markers
-- speed markers
-- fail-closed route
-- stop before send button
-
-## Superseded Guidance
-
-Older instructions that say to continue phone-import retry, raw CONTACT_PICK patching, SEARCH_ICON-only patching, Stage4A patching, or repeated Stage4B retesting are no longer active as workflow instructions.
-
-Those files remain evidence/source history only.
-
-## Forbidden Until Later Gates
-
-- real send
-- `FINAL Send Sheet`
-- `SS Controlled One-Row Send Proof`
-- `AIW SEND 1`
-- send button
-- DONE marking
-- timer/live/autonomous
-- archive/deadarchive/compactor/TT5
-- multi-send
-
-## Final Rule
-
-Do not claim ready, locked full app, released, or phone-proven beyond named layer-level proofs.
+This remains true until ChatGPT audits the results.

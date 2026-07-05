@@ -35,7 +35,7 @@ This folder is the clean working root for AI Worker Build100 work.
 
 Overall Build100 remains:
 
-`CANDIDATE / HOLD FOR CHATGPT AUDIT`
+`CANDIDATE / HOLD`
 
 Layer status:
 
@@ -47,13 +47,13 @@ Layer status:
 - Stage4B no-ready dry-run hold: `LOCKED` for no-ready hold behavior only, per runlog audit.
 - Stage4B formatted-number contact/search dry-run: `FAILED / DATA FORMAT CONTACT_PICK FAILURE`; use as evidence only.
 - Stage4B digits-only contact/search dry-run: `LOCKED` for contact-pick/no-send layer only.
-- Group B2 send UI completion dry-run: `CANDIDATE / HOLD FOR CHATGPT AUDIT`.
+- Group B Send UI Dry Run: `CANDIDATE / HOLD`.
 - Controlled one-send, timer/live, archive/deadarchive/compactor/TT5, and 50-contact capacity: `HOLD`.
 
 ## Current Runtime Candidate
 
 - Current workflow plan: `MASTER_PLAN_CURRENT.md`.
-- Current lane: Build100 Group B2 `SS Safe Send Dry-Run` send UI completion dry-run.
+- Current lane: Build100 Group B `SS Safe Send Dry-Run` send UI completion dry-run.
 - Current active package: `04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/`.
 - Current ChatGPT audit ZIP: `C:\Users\Shadow\Downloads\ai work\Codex to ChatGPT\06_CHATGPT_AUDIT_ZIP__AIW_BUILD100_SUBSYSTEM_COMPLETION_PLAN_20260705.zip`.
 - Current import-safe XML: `01_CANDIDATE_PATCHES/BUILD100_GROUP_B_SEARCH_ICON_IMPORT_SAFE/xml/AIW_BUILD100_GROUP_B_SEARCH_ICON_IMPORT_SAFE_FULL_TASKER_20260705.xml`
