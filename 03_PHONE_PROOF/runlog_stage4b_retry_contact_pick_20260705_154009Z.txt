@@ -1,0 +1,163 @@
+
+20260705 11.29.23 E Start    ID0:0.0  TaskService
+20260705 11.29.28 E Stop     ID0:0.0  TaskService
+20260705 11.29.29 E Start    ID0:0.0  TaskService
+20260705 11.29.30 T Running  ID273    SS Safe Send Dry-Run
+20260705 11.29.30 A OK       ID273.1  SS Safe Send Dry-Run.Var Set, %SSReadyCount=0
+20260705 11.29.30 A OK       ID273.2  SS Safe Send Dry-Run.Var Set, %SSIndex=0
+20260705 11.29.30 A OK       ID273.3  SS Safe Send Dry-Run.Var Set, %SSBoundIndex=0
+20260705 11.29.30 A OK       ID273.4  SS Safe Send Dry-Run.Var Set, %SSBoundRow=%SSBoundRow
+20260705 11.29.30 A OK       ID273.5  SS Safe Send Dry-Run.Var Set, %SSBoundId=%SSBoundId
+20260705 11.29.30 A OK       ID273.6  SS Safe Send Dry-Run.Var Set, %SSBoundSender=%SSBoundSender
+20260705 11.29.30 A OK       ID273.7  SS Safe Send Dry-Run.Var Set, %SSBoundMessage=%SSBoundMessage
+20260705 11.29.30 A OK       ID273.8  SS Safe Send Dry-Run.Var Set, %SSBoundStatus=%SSBoundStatus
+20260705 11.29.30 A OK       ID273.9  SS Safe Send Dry-Run.Var Set, %SSBoundReply=%SSBoundReply
+20260705 11.29.30 A OK       ID273.10 SS Safe Send Dry-Run.Var Set, %SSBoundTicker=%SSBoundTicker
+20260705 11.29.30 A OK       ID273.11 SS Safe Send Dry-Run.Var Set, %SSSearch=%SSSearch
+20260705 11.29.30 A OK       ID273.12 SS Safe Send Dry-Run.Var Set, %SSResult=START
+20260705 11.29.30 A OK       ID273.13 SS Safe Send Dry-Run.Var Set, %SSProofLine=SS_SYNC_PREFLIGHT_..
+20260705 11.29.31 A OK       ID273.14 SS Safe Send Dry-Run.com.joaomgcd.autosheets\n***\n*!&$*;com.joaomgcd.autosheets.activity.ActivityConfigGetData, SS Safe Send Dry-Run
+20260705 11.29.31 A OK       ID273.15 SS Safe Send Dry-Run.For, %SSStatusLoop=READY_TO_SEND
+20260705 11.29.31 A OK       ID273.16 SS Safe Send Dry-Run.Var Add, %SSIndex=1
+20260705 11.29.31 A OK       ID273.17 SS Safe Send Dry-Run.If
+20260705 11.29.31 A OK       ID273.18 SS Safe Send Dry-Run.Var Add, %SSReadyCount=1
+20260705 11.29.31 A OK       ID273.19 SS Safe Send Dry-Run.If
+20260705 11.29.31 A OK       ID273.20 SS Safe Send Dry-Run.Var Set, %SSBoundIndex=1
+20260705 11.29.31 A OK       ID273.21 SS Safe Send Dry-Run.Var Set, %SSBoundRow=61
+20260705 11.29.31 A OK       ID273.22 SS Safe Send Dry-Run.Var Set, %SSBoundId=1783063452285
+20260705 11.29.31 A OK       ID273.23 SS Safe Send Dry-Run.Var Set, %SSBoundSender=+1(843) 932-0770
+20260705 11.29.31 A OK       ID273.24 SS Safe Send Dry-Run.Var Set, %SSBoundMessage=B97 trigger proof 01
+20260705 11.29.31 A OK       ID273.25 SS Safe Send Dry-Run.Var Set, %SSBoundStatus=READY_TO_SEND
+20260705 11.29.31 A OK       ID273.26 SS Safe Send Dry-Run.Var Set, %SSBoundReply=Sounds interesting..
+20260705 11.29.31 A OK       ID273.27 SS Safe Send Dry-Run.Var Set, %SSBoundTicker=+1(843) 932-0770: ..
+20260705 11.29.31 A OK       ID273.28 SS Safe Send Dry-Run.End If
+20260705 11.29.31 A OK       ID273.29 SS Safe Send Dry-Run.End If
+20260705 11.29.31 A OK       ID273.30 SS Safe Send Dry-Run.End For
+20260705 11.29.31 A OK       ID273.15 SS Safe Send Dry-Run.For, %SSStatusLoop=REVIEW_READY
+20260705 11.29.31 A OK       ID273.16 SS Safe Send Dry-Run.Var Add, %SSIndex=2
+20260705 11.29.31 A OK       ID273.17 SS Safe Send Dry-Run.If
+20260705 11.29.31 A OK       ID273.30 SS Safe Send Dry-Run.End For
+20260705 11.29.31 A OK       ID273.15 SS Safe Send Dry-Run.For, %SSStatusLoop=%SSStatusLoop
+20260705 11.29.31 A OK       ID273.31 SS Safe Send Dry-Run.If
+20260705 11.29.31 A OK       ID273.46 SS Safe Send Dry-Run.If
+20260705 11.29.31 A OK       ID273.61 SS Safe Send Dry-Run.If
+20260705 11.29.31 A OK       ID273.76 SS Safe Send Dry-Run.If
+20260705 11.29.31 A OK       ID273.93 SS Safe Send Dry-Run.If
+20260705 11.29.31 A OK       ID273.110 SS Safe Send Dry-Run.If
+20260705 11.29.31 A OK       ID273.127 SS Safe Send Dry-Run.Var Set, %SSSearch=+1(843) 932-0770
+20260705 11.29.31 A OK       ID273.128 SS Safe Send Dry-Run.If
+20260705 11.29.31 A OK       ID273.131 SS Safe Send Dry-Run.If
+20260705 11.29.31 A OK       ID273.148 SS Safe Send Dry-Run.Var Set, %SSResult=PASS
+20260705 11.29.31 A OK       ID273.149 SS Safe Send Dry-Run.Var Set, %SSProofLine=SS_SYNC_PASS READY..
+20260705 11.29.32 A OK       ID273.150 SS Safe Send Dry-Run.com.joaomgcd.autosheets\n***\n*!&$*;com.joaomgcd.autosheets.activity.ActivityConfigUpdateCells, SS Safe Send Dry-Run
+20260705 11.29.32 A OK       ID273.151 SS Safe Send Dry-Run.Var Set, %AIWProofEvent=SS_SYNC_PREFLIGHT_..
+20260705 11.29.32 A OK       ID273.152 SS Safe Send Dry-Run.Var Set, %AIWProofStage=SS_SYNC_PREFLIGHT
+20260705 11.29.32 A OK       ID273.153 SS Safe Send Dry-Run.Var Set, %AIWProofResult=PASS
+20260705 11.29.32 A OK       ID273.154 SS Safe Send Dry-Run.Var Set, %AIWProofRow=61
+20260705 11.29.32 A OK       ID273.155 SS Safe Send Dry-Run.Var Set, %AIWProofSender=+1(843) 932-0770
+20260705 11.29.32 A OK       ID273.156 SS Safe Send Dry-Run.Var Set, %AIWProofStatusBefore=READY_TO_SEND
+20260705 11.29.32 A OK       ID273.157 SS Safe Send Dry-Run.Var Set, %AIWProofStatusAfter=READY_TO_SEND
+20260705 11.29.32 A OK       ID273.158 SS Safe Send Dry-Run.Var Set, %AIWProofDetails=SS Sync Preflight ..
+20260705 11.29.32 A OK       ID273.159 SS Safe Send Dry-Run.Var Set, %AIWProofError=NONE
+20260705 11.29.32 T Running  ID224:2  AIW PROOF Log Event
+20260705 11.29.32 A OK       ID273.160 SS Safe Send Dry-Run.Perform Task, AIW PROOF Log Event
+20260705 11.29.32 A OK       ID224:2.1 AIW PROOF Log Event.If
+20260705 11.29.32 A OK       ID224:2.6 AIW PROOF Log Event.If
+20260705 11.29.32 A OK       ID224:2.7 AIW PROOF Log Event.If
+20260705 11.29.32 A OK       ID224:2.10 AIW PROOF Log Event.Var Add, %AIWProofLogIndex=1594
+20260705 11.29.32 A OK       ID224:2.11 AIW PROOF Log Event.If
+20260705 11.29.32 A OK       ID224:2.14 AIW PROOF Log Event.Var Set, %AIWProofTargetRow=1595
+20260705 11.29.32 A OK       ID224:2.15 AIW PROOF Log Event.Var Set, %AIWProofTS=7-5-26 11.29
+20260705 11.29.32 A OK       ID224:2.16 AIW PROOF Log Event.Var Set, %AIWProofData=7-5-26 11.29§V19I§..
+20260705 11.29.32 A Err      ID224:2.17 AIW PROOF Log Event.com.joaomgcd.autosheets\n***\n*!&$*;com.joaomgcd.autosheets.activity.ActivityConfigUpdateCells, AIW PROOF Log Event
+20260705 11.29.33 A OK       ID224:2.18 AIW PROOF Log Event.com.joaomgcd.autosheets\n***\n*!&$*;com.joaomgcd.autosheets.activity.ActivityConfigUpdateCells, AIW PROOF Log Event
+20260705 11.29.33 A OK       ID224:2.19 AIW PROOF Log Event.Var Set, %AIWProofLastWrite=SS_SYNC_PREFLIGHT_..
+20260705 11.29.33 A OK       ID224:2.20 AIW PROOF Log Event.Var Set, %AIWProofWriteResult=OK
+20260705 11.29.33 A OK       ID224:2.21 AIW PROOF Log Event.End If
+20260705 11.29.33 T ExitOK   ID224:2  AIW PROOF Log Event
+20260705 11.29.33 A OK       ID273.161 SS Safe Send Dry-Run.Var Set, %SSResult=DRYRUN_UI_START
+20260705 11.29.33 A OK       ID273.162 SS Safe Send Dry-Run.Var Set, %SSDryRun=1
+20260705 11.29.33 A OK       ID273.163 SS Safe Send Dry-Run.Var Set, %SSRealRow=61
+20260705 11.29.33 A OK       ID273.164 SS Safe Send Dry-Run.Var Set, %sendname=+1(843) 932-0770
+20260705 11.29.33 A OK       ID273.165 SS Safe Send Dry-Run.Var Set, %sendsearch=+1(843) 932-0770
+20260705 11.29.33 A OK       ID273.166 SS Safe Send Dry-Run.Var Set, %sendreply=Sounds interesting..
+20260705 11.29.33 A OK       ID273.167 SS Safe Send Dry-Run.Var Set, %AIWSending=1
+20260705 11.29.33 A OK       ID273.168 SS Safe Send Dry-Run.Var Set, %AIWSendingStartedAt=1783265373
+20260705 11.29.33 A OK       ID273.169 SS Safe Send Dry-Run.Var Set, %AIWorkerLastError=SAFE SEND DRY-RUN ..
+20260705 11.29.33 A OK       ID273.170 SS Safe Send Dry-Run.Launch App
+20260705 11.29.34 A OK       ID273.171 SS Safe Send Dry-Run.Wait
+20260705 11.29.34 A OK       ID273.172 SS Safe Send Dry-Run.com.joaomgcd.autoinput\n***\n*!&$*;com.joaomgcd.autoinput.activity.ActivityConfigPerformAction, SS Safe Send Dry-Run
+20260705 11.29.35 A OK       ID273.173 SS Safe Send Dry-Run.Wait
+20260705 11.29.35 A OK       ID273.174 SS Safe Send Dry-Run.com.joaomgcd.autoinput\n***\n*!&$*;com.joaomgcd.autoinput.activity.ActivityConfigPerformAction, SS Safe Send Dry-Run
+20260705 11.29.37 A OK       ID273.175 SS Safe Send Dry-Run.Wait
+20260705 11.29.37 A OK       ID273.176 SS Safe Send Dry-Run.Var Clear, %err=%err
+20260705 11.29.37 A OK       ID273.177 SS Safe Send Dry-Run.Var Clear, %errmsg=%errmsg
+20260705 11.29.37 A OK       ID273.178 SS Safe Send Dry-Run.Var Set, %SSUIStep=SEARCH_ICON
+20260705 11.29.37 A OK       ID273.179 SS Safe Send Dry-Run.com.joaomgcd.autoinput\n***\n*!&$*;com.joaomgcd.autoinput.activity.ActivityConfigPerformAction, SS Safe Send Dry-Run
+20260705 11.29.37 A OK       ID273.180 SS Safe Send Dry-Run.If
+20260705 11.29.38 A OK       ID273.184 SS Safe Send Dry-Run.Wait
+20260705 11.29.38 A OK       ID273.185 SS Safe Send Dry-Run.Var Clear, %err=%err
+20260705 11.29.38 A OK       ID273.186 SS Safe Send Dry-Run.Var Clear, %errmsg=%errmsg
+20260705 11.29.38 A OK       ID273.187 SS Safe Send Dry-Run.Var Set, %SSUIStep=SEARCH_FIELD
+20260705 11.29.39 A OK       ID273.188 SS Safe Send Dry-Run.com.joaomgcd.autoinput\n***\n*!&$*;com.joaomgcd.autoinput.activity.ActivityConfigPerformAction, SS Safe Send Dry-Run
+20260705 11.29.39 A OK       ID273.189 SS Safe Send Dry-Run.If
+20260705 11.29.39 A OK       ID273.193 SS Safe Send Dry-Run.Wait
+20260705 11.29.42 A OK       ID273.194 SS Safe Send Dry-Run.Keyboard, SS Safe Send Dry-Run
+20260705 11.29.43 A OK       ID273.195 SS Safe Send Dry-Run.Wait
+20260705 11.29.43 A OK       ID273.196 SS Safe Send Dry-Run.Var Clear, %err=%err
+20260705 11.29.43 A OK       ID273.197 SS Safe Send Dry-Run.Var Clear, %errmsg=%errmsg
+20260705 11.29.43 A OK       ID273.198 SS Safe Send Dry-Run.Var Set, %SSUIStep=CONTACT_PICK
+20260705 11.29.58 A ErrIgnore ID273.199 SS Safe Send Dry-Run.com.joaomgcd.autoinput\n***\n*!&$*;com.joaomgcd.autoinput.activity.ActivityConfigPerformAction, SS Safe Send Dry-Run
+20260705 11.29.58 A OK       ID273.200 SS Safe Send Dry-Run.If
+20260705 11.29.58 T Running  ID212:3  SS Fail UI Dirty Stop
+20260705 11.29.58 A OK       ID273.201 SS Safe Send Dry-Run.Perform Task, SS Fail UI Dirty Stop
+20260705 11.29.58 A OK       ID212:3.1 SS Fail UI Dirty Stop.Var Set, %SSDirtyUI=1
+20260705 11.29.59 A OK       ID212:3.2 SS Fail UI Dirty Stop.Var Set, %SSFailed=1
+20260705 11.29.59 A OK       ID212:3.3 SS Fail UI Dirty Stop.Var Set, %SSSentOne=0
+20260705 11.29.59 A OK       ID212:3.4 SS Fail UI Dirty Stop.Var Set, %SSResult=SEND_FAILED_STOP
+20260705 11.29.59 A OK       ID212:3.5 SS Fail UI Dirty Stop.Var Set, %SSLastError=SEND UI dirty stop..
+20260705 11.29.59 A OK       ID212:3.6 SS Fail UI Dirty Stop.Var Set, %SSProofLine=SEND_UI_DIRTY_STOP..
+20260705 11.29.59 A OK       ID212:3.7 SS Fail UI Dirty Stop.If
+20260705 11.29.59 A OK       ID212:3.8 SS Fail UI Dirty Stop.com.joaomgcd.autosheets\n***\n*!&$*;com.joaomgcd.autosheets.activity.ActivityConfigUpdateCells, SS Fail UI Dirty Stop
+20260705 11.29.59 A OK       ID212:3.9 SS Fail UI Dirty Stop.com.joaomgcd.autosheets\n***\n*!&$*;com.joaomgcd.autosheets.activity.ActivityConfigUpdateCells, SS Fail UI Dirty Stop
+20260705 11.29.59 A OK       ID212:3.10 SS Fail UI Dirty Stop.End If
+20260705 11.29.59 A OK       ID212:3.11 SS Fail UI Dirty Stop.Var Set, %AIWProofEvent=SEND_UI_DIRTY_STOP
+20260705 11.29.59 A OK       ID212:3.12 SS Fail UI Dirty Stop.Var Set, %AIWProofStage=SEND_UI
+20260705 11.29.59 A OK       ID212:3.13 SS Fail UI Dirty Stop.Var Set, %AIWProofResult=STOP
+20260705 11.29.59 A OK       ID212:3.14 SS Fail UI Dirty Stop.Var Set, %AIWProofRow=61
+20260705 11.29.59 A OK       ID212:3.15 SS Fail UI Dirty Stop.Var Set, %AIWProofSender=%sendsearch
+20260705 11.29.59 A OK       ID212:3.16 SS Fail UI Dirty Stop.Var Set, %AIWProofStatusBefore=READY_TO_SEND
+20260705 11.29.59 A OK       ID212:3.17 SS Fail UI Dirty Stop.Var Set, %AIWProofStatusAfter=ERROR_SEND_REVIEW
+20260705 11.29.59 A OK       ID212:3.18 SS Fail UI Dirty Stop.Var Set, %AIWProofDetails=SEND_UI_DIRTY_STOP..
+20260705 11.29.59 A OK       ID212:3.19 SS Fail UI Dirty Stop.Var Set, %AIWProofError=CONTACT_PICK %err ..
+20260705 11.29.59 T Running  ID224:4  AIW PROOF Log Event
+20260705 11.29.59 A OK       ID212:3.20 SS Fail UI Dirty Stop.Perform Task, AIW PROOF Log Event
+20260705 11.29.59 A OK       ID224:4.1 AIW PROOF Log Event.If
+20260705 11.29.59 A OK       ID224:4.6 AIW PROOF Log Event.If
+20260705 11.29.59 A OK       ID224:4.7 AIW PROOF Log Event.If
+20260705 11.29.59 A OK       ID224:4.10 AIW PROOF Log Event.Var Add, %AIWProofLogIndex=1595
+20260705 11.29.59 A OK       ID224:4.11 AIW PROOF Log Event.If
+20260705 11.29.59 A OK       ID224:4.14 AIW PROOF Log Event.Var Set, %AIWProofTargetRow=1596
+20260705 11.29.59 A OK       ID224:4.15 AIW PROOF Log Event.Var Set, %AIWProofTS=7-5-26 11.29
+20260705 11.29.59 A OK       ID224:4.16 AIW PROOF Log Event.Var Set, %AIWProofData=7-5-26 11.29§V19I§..
+20260705 11.30.00 A Err      ID224:4.17 AIW PROOF Log Event.com.joaomgcd.autosheets\n***\n*!&$*;com.joaomgcd.autosheets.activity.ActivityConfigUpdateCells, AIW PROOF Log Event
+20260705 11.30.00 A OK       ID224:4.18 AIW PROOF Log Event.com.joaomgcd.autosheets\n***\n*!&$*;com.joaomgcd.autosheets.activity.ActivityConfigUpdateCells, AIW PROOF Log Event
+20260705 11.30.00 A OK       ID224:4.19 AIW PROOF Log Event.Var Set, %AIWProofLastWrite=SEND_UI_DIRTY_STOP..
+20260705 11.30.00 A OK       ID224:4.20 AIW PROOF Log Event.Var Set, %AIWProofWriteResult=OK
+20260705 11.30.00 A OK       ID224:4.21 AIW PROOF Log Event.End If
+20260705 11.30.00 T ExitOK   ID224:4  AIW PROOF Log Event
+20260705 11.30.00 A OK       ID212:3.21 SS Fail UI Dirty Stop.Var Set, %AIWorkerLastError=SEND UI dirty stop..
+20260705 11.30.00 T Running  ID17:5   SS Lock Release HARD
+20260705 11.30.00 A OK       ID212:3.22 SS Fail UI Dirty Stop.Perform Task, SS Lock Release HARD
+20260705 11.30.00 T ExitOK   ID212:3  SS Fail UI Dirty Stop
+20260705 11.30.00 A OK       ID17:5.1 SS Lock Release HARD.Var Set, %AIWSending=0
+20260705 11.30.00 A OK       ID17:5.2 SS Lock Release HARD.Var Clear, %AIWSendingStartedAt=%AIWSendingStartedAt
+20260705 11.30.00 A OK       ID17:5.3 SS Lock Release HARD.Var Set, %AIWorkerLastError=SEND LOCK RELEASED..
+20260705 11.30.00 T ExitOK   ID17:5   SS Lock Release HARD
+20260705 11.30.00 A OK       ID273.202 SS Safe Send Dry-Run.Stop
+20260705 11.30.00 T ExitOK   ID273    SS Safe Send Dry-Run
+20260705 11.30.00 E Stop     ID0:0.0  TaskService
+20260705 11.30.03 E Start    ID0:0.0  TaskService
+20260705 11.30.05 E Stop     ID0:0.0  TaskService
+20260705 11.39.33 E Start    ID0:0.0  TaskService
+20260705 11.39.37 E Stop     ID0:0.0  TaskService
