@@ -13,7 +13,8 @@ This ledger rebuild does not patch runtime XML and does not claim phone proof fo
 - Candidate lane: Build100 Group B SEARCH_ICON / CONTACT_PICK dry-run route.
 - Current XML: `01_CANDIDATE_PATCHES/BUILD100_GROUP_B_SEARCH_ICON_IMPORT_SAFE/xml/AIW_BUILD100_GROUP_B_SEARCH_ICON_IMPORT_SAFE_FULL_TASKER_20260705.xml`
 - XML SHA256: `55A4936C329A16DDD0DFA94003D52AB53887BBBEBE192045EEA6F9D38B6DE4CA`
-- Status: `CANDIDATE / HOLD FOR PHONE IMPORT RETRY`
+- Status: `CANDIDATE / HOLD FOR STAGE4B READY_TO_SEND PHONE RERUN`
+- Phone import note: Tasker import was user-reported clean. `SS Safe Send Dry-Run` ran afterward, so import retry is no longer the active blocker.
 
 ## LOCKED
 
@@ -33,7 +34,8 @@ Layer-level only:
 
 ## HOLD
 
-- Tasker import proof for current `IMPORT_SAFE` XML.
+- Stage4B `READY_TO_SEND` dry-run proof for current `IMPORT_SAFE` XML.
+- Optional screenshot proof of the clean Tasker import if ChatGPT requires visible import evidence.
 - Stage4B SEARCH_ICON / SEARCH_FIELD / CONTACT_PICK success.
 - `SEND=NO` proof on contact-selection dry-run.
 - `%SSSentOne=0` proof on contact-selection dry-run.
@@ -53,9 +55,9 @@ Layer-level only:
 
 ## Safe Next Step
 
-1. Send this ledger package to ChatGPT for audit.
-2. If ChatGPT accepts the ledger, phone-import only the numbered `IMPORT_SAFE` XML.
-3. Run one Stage4B `SS Safe Send Dry-Run` phone proof with exactly one approved `READY_TO_SEND` row.
+1. Send this corrected ledger package to ChatGPT for audit.
+2. If ChatGPT accepts the ledger, set up exactly one approved `READY_TO_SEND` row.
+3. Run one Stage4B `SS Safe Send Dry-Run` phone proof.
 4. Do not run controlled one-send, timer/live, archive, deadarchive, compactor, TT5, or capacity tests until Stage4B dry-run passes.
 
 ## Files Changed By This Ledger Rebuild

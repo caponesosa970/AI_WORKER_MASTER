@@ -6,15 +6,15 @@ Updated: 2026-07-05
 
 `CANDIDATE / HOLD FOR CHATGPT AUDIT`
 
-No more repeated phone loops until ChatGPT audits this ledger or explicitly tells Codex the next patch order.
+No runtime XML patch is next. After ChatGPT accepts this corrected ledger, the next technical action is phone setup for one Stage4B dry-run proof.
 
-## Safe Next Group
+## Safe Next Action
 
-Group B retry only:
+Group B `READY_TO_SEND` phone rerun only:
 
 1. Use current import-safe XML:
    `01_CANDIDATE_PATCHES/BUILD100_GROUP_B_SEARCH_ICON_IMPORT_SAFE/xml/AIW_BUILD100_GROUP_B_SEARCH_ICON_IMPORT_SAFE_FULL_TASKER_20260705.xml`
-2. Import into Tasker only if the phone accepts the XML.
+2. Do not patch runtime XML.
 3. Prepare exactly one approved `READY_TO_SEND` row.
 4. Run only:
    `SS Safe Send Dry-Run`

@@ -36,8 +36,9 @@ If an item has no exact file, it remains `HARD HOLD`. Do not replace missing pro
 
 ## Current Missing Proof
 
-- Current `IMPORT_SAFE` XML phone import retry.
-- Stage4B `SS Safe Send Dry-Run` contact-selection runlog after import-safe XML.
+- Active blocker: Stage4B `READY_TO_SEND` dry-run proof after the current `IMPORT_SAFE` XML import.
+- Tasker import is user-reported clean because `SS Safe Send Dry-Run` ran afterward. If screenshot-level import proof is required, classify that screenshot as HOLD, not HARD HOLD.
+- Stage4B `SS Safe Send Dry-Run` contact-selection runlog with exactly one approved `READY_TO_SEND` row.
 - `DRYRUN_CONTACT_PICK_PASS` or `SEND_DRYRUN_PASS`.
 - `SEND=NO`.
 - `%SSSentOne=0`.
