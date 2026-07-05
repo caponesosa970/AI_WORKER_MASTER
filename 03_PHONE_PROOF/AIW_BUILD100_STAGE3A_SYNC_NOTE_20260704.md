@@ -69,6 +69,14 @@ Drive link:
 
 `https://drive.google.com/file/d/1-SxmQTL-RQOjqplMy7EtavA2tL2cKm46/view?usp=drivesdk`
 
+Audit prompt file also uploaded:
+
+`CHATGPT_STAGE3A_2NDLINE_SAME_DEVICE_RETRY_AUDIT_PROMPT_20260704.md`
+
+Audit prompt Drive link:
+
+`https://drive.google.com/file/d/1RTvJVv_YSbx7hAHHrWZSZxLvlR6l3R3g/view?usp=drivesdk`
+
 ## ChatGPT Upload Staging
 
 Local staging folder:
