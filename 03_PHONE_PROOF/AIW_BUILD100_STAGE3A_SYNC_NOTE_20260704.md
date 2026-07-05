@@ -69,13 +69,70 @@ XML SHA256 inside ZIP:
 
 ZIP file:
 
+Original retry ZIP:
+
 `03_PHONE_PROOF/AIW_BUILD100_STAGE3A_2NDLINE_SAME_DEVICE_RETRY_HOLD_20260704.zip`
 
 Package SHA256:
 
 `871DA73FCAA796295382E09A9030E6D04C4B6F7AAAD3D4DB85E357BD6B9AAD9F`
 
-This ZIP is ignored by Git by rule `*.zip`, so it remains local unless uploaded separately.
+Updated Run Log captured ZIP:
+
+`03_PHONE_PROOF/AIW_BUILD100_STAGE3A_2NDLINE_SAME_DEVICE_RETRY_RUNLOG_CAPTURED_HOLD_20260704.zip`
+
+Updated package SHA256 and byte size:
+
+Recorded outside the ZIP in:
+
+`03_PHONE_PROOF/SHA256_STAGE3A_2NDLINE_SAME_DEVICE_RETRY_RUNLOG_CAPTURED_PACKAGE_20260704.csv`
+
+Reason:
+
+The ZIP cannot contain a note with its own final SHA256 without changing that SHA256.
+
+Updated package file count:
+
+`13`
+
+This ZIP is superseded by the final runlog-included ZIP below.
+
+Final runlog-included ZIP:
+
+`03_PHONE_PROOF/AIW_BUILD100_STAGE3A_2NDLINE_SAME_DEVICE_RETRY_WITH_RUNLOG_HOLD_20260705.zip`
+
+Final package SHA256 and byte size:
+
+Recorded outside the ZIP in:
+
+`03_PHONE_PROOF/SHA256_STAGE3A_2NDLINE_SAME_DEVICE_RETRY_WITH_RUNLOG_PACKAGE_20260705.csv`
+
+This ZIP includes:
+
+- post-test Run Log screenshot,
+- Moto `runlog.txt` external-view screenshot,
+- redacted full runlog text,
+- Stage 3A runlog audit report.
+
+Raw private runlog:
+
+`03_PHONE_PROOF/PRIVATE_RUNTIME_DO_NOT_SHARE/runlog_STAGE3A_same_device_retry_RAW_PRIVATE_20260705.txt`
+
+Raw private runlog SHA256:
+
+`BBA0DC77592849C9C5E8017AC229D0BC1D68C4A833352D4801F6624BB2AEDC48`
+
+Redacted runlog SHA256:
+
+`832F5874D52BD24A42216720D553AAD5DBE09312C22DC7E837A50EBF6EA47CBB`
+
+Privacy:
+
+- KEY_PRESENT_IN_RAW=true
+- KEY_REDACTED_IN_AUDIT_COPY=true
+- PHONE_VALUES_REDACTED_IN_AUDIT_COPY=true
+
+ZIP files are ignored by Git by rule `*.zip`, so local ZIPs remain local unless uploaded separately.
 
 ## Drive Backup / Transfer Copy
 
@@ -127,7 +184,11 @@ Meaning:
 
 ## Current Hold
 
-The next useful screen step is ChatGPT audit upload.
+The full downloaded Moto `runlog.txt` has been pulled from Drive and audited through a redacted copy.
+
+Stage 3A remains HOLD because the runlog proves trigger capture but also shows safety/setup task clean exit was not proven.
+
+Next phone step is a clean Stage 3A rerun, not process/send testing.
 
 Screen rule:
 

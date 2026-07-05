@@ -1,0 +1,502 @@
+﻿
+20260705 02.14.10 M Restart  ID0:0.0  Monitor
+20260705 02.15.03 P Instant  ID136    FINAL TextNow Trigger
+20260705 02.15.03 E Start    ID0:0.0  TaskService
+20260705 02.15.03 T Running  ID68     FINAL Simple
+20260705 02.15.03 A OK       ID68.1   FINAL Simple.Var Set, %SNLoggerEntryMarker=ENTER-[PHONE_REDACTED]
+20260705 02.15.03 A OK       ID68.2   FINAL Simple.Wait
+20260705 02.15.03 A OK       ID68.3   FINAL Simple.Var Set, %SNsender=[PHONE_REDACTED]
+20260705 02.15.03 A OK       ID68.4   FINAL Simple.Var Set, %SNmessage=STAGE3A-0[PHONE_REDACTED]5 02.15.03 A OK       ID68.5   FINAL Simple.Var Set, %SNticker=[PHONE_REDACTED]: ..
+20260705 02.15.03 A OK       ID68.6   FINAL Simple.Var Set, %SNStatus=Created
+20260705 02.15.03 A OK       ID68.7   FINAL Simple.If
+20260705 02.15.03 A OK       ID68.11  FINAL Simple.If
+20260705 02.15.03 A Disabled ID68.15  FINAL Simple.Var Set, %SNFingerprint=%SNFingerprint
+20260705 02.15.03 A Disabled ID68.16  FINAL Simple.Var Set, %SNDupeAge=34
+20260705 02.15.03 A Disabled ID68.17  FINAL Simple.If
+20260705 02.15.03 A Disabled ID68.18  FINAL Simple.Var Set, %AIWorkerLastError=RST-000 Locks rese..
+20260705 02.15.03 A Disabled ID68.19  FINAL Simple.Stop
+20260705 02.15.03 A Disabled ID68.20  FINAL Simple.End If
+20260705 02.15.03 A OK       ID68.21  FINAL Simple.Var Set, %SNkey=0|com.enflick.andr..
+20260705 02.15.03 A OK       ID68.22  FINAL Simple.Var Set, %SNdupage=6[PHONE_REDACTED]5 02.15.03 A OK       ID68.23  FINAL Simple.Var Clear, %SNid=%SNid
+20260705 02.15.03 A OK       ID68.24  FINAL Simple.If
+20260705 02.15.03 A OK       ID68.25  FINAL Simple.If
+20260705 02.15.03 A OK       ID68.30  FINAL Simple.End If
+20260705 02.15.03 A OK       ID68.31  FINAL Simple.Var Set, %SNLockAge=0
+20260705 02.15.03 A OK       ID68.32  FINAL Simple.If
+20260705 02.15.03 A OK       ID68.40  FINAL Simple.If
+20260705 02.15.03 A OK       ID68.43  FINAL Simple.If
+20260705 02.15.03 A OK       ID68.49  FINAL Simple.If
+20260705 02.15.03 A OK       ID68.54  FINAL Simple.Var Set, %AIWSimpleLogging=1
+20260705 02.15.03 A OK       ID68.55  FINAL Simple.Var Set, %AIWSimpleLoggingStartedAt=[PHONE_REDACTED]
+20260705 02.15.03 A OK       ID68.56  FINAL Simple.Var Clear, %SNrealrow=%SNrealrow
+20260705 02.15.03 A OK       ID68.57  FINAL Simple.If
+20260705 02.15.03 A OK       ID68.63  FINAL Simple.Var Search Replace, %SNsender=[PHONE_REDACTED]
+20260705 02.15.03 A OK       ID68.64  FINAL Simple.Var Search Replace, %SNticker=[PHONE_REDACTED]: ..
+20260705 02.15.03 A OK       ID68.65  FINAL Simple.Var Set, %SNtouch=d4497984-b29d-4dcd..
+20260705 02.15.03 A OK       ID68.66  FINAL Simple.Var Set, %SNbutton=3a6b9cbe-b342-409f..
+20260705 02.15.03 A OK       ID68.67  FINAL Simple.Var Set, %SNtime=7-5-26 02.15
+20260705 02.15.03 A OK       ID68.68  FINAL Simple.Var Set, %SNWriteSender=[PHONE_REDACTED]
+20260705 02.15.03 A OK       ID68.69  FINAL Simple.Var Set, %SNWriteMessage=STAGE3A-0[PHONE_REDACTED]5 02.15.03 A OK       ID68.70  FINAL Simple.Var Set, %SNWriteTicker=[PHONE_REDACTED]: ..
+20260705 02.15.03 A OK       ID68.71  FINAL Simple.If
+20260705 02.15.03 A OK       ID68.72  FINAL Simple.Var Set, %SNWriteSender='[PHONE_REDACTED]
+20260705 02.15.03 A OK       ID68.73  FINAL Simple.End If
+20260705 02.15.03 A OK       ID68.74  FINAL Simple.If
+20260705 02.15.03 A OK       ID68.77  FINAL Simple.If
+20260705 02.15.03 A OK       ID68.80  FINAL Simple.If
+20260705 02.15.03 A OK       ID68.81  FINAL Simple.Var Set, %SNWriteTicker='[PHONE_REDACTED]:..
+20260705 02.15.03 A OK       ID68.82  FINAL Simple.End If
+20260705 02.15.03 A OK       ID68.83  FINAL Simple.If
+20260705 02.15.03 A OK       ID68.84  FINAL Simple.Var Set, %SNsecond=[PHONE_REDACTED]50
+20260705 02.15.03 A OK       ID68.85  FINAL Simple.If
+20260705 02.15.03 A OK       ID68.88  FINAL Simple.If
+20260705 02.15.03 A OK       ID68.90  FINAL Simple.Else
+20260705 02.15.03 A OK       ID68.91  FINAL Simple.Var Set, %AIWLogSeqSec=[PHONE_REDACTED]50
+20260705 02.15.03 A OK       ID68.92  FINAL Simple.Var Set, %AIWLogSeq=1
+20260705 02.15.03 A OK       ID68.93  FINAL Simple.End If
+20260705 02.15.03 A OK       ID68.94  FINAL Simple.If
+20260705 02.15.03 A OK       ID68.97  FINAL Simple.Var Set, %SNid=[PHONE_REDACTED]50
+20260705 02.15.03 A OK       ID68.98  FINAL Simple.Var Set, %AIWorkerLastError=LGR-100 ID ready b..
+20260705 02.15.03 A OK       ID68.99  FINAL Simple.End If
+20260705 02.15.03 T Running  ID218:2  TT5 Overflow Pending Quick Check
+20260705 02.15.03 A OK       ID68.100 FINAL Simple.Perform Task, TT5 Overflow Pending Quick Check
+20260705 02.15.03 A OK       ID218:2.1 TT5 Overflow Pending Quick Check.Var Set, %OVPendingCheckOK=0
+20260705 02.15.03 A OK       ID218:2.2 TT5 Overflow Pending Quick Check.Var Clear, %err=%err
+20260705 02.15.03 A OK       ID218:2.3 TT5 Overflow Pending Quick Check.Var Clear, %errmsg=%errmsg
+20260705 02.15.04 A OK       ID218:2.4 TT5 Overflow Pending Quick Check.com.joaomgcd.autosheets\n***\n*!&$*;com.joaomgcd.autosheets.activity.ActivityConfigGetData, TT5 Overflow Pending Quick Check
+20260705 02.15.04 A OK       ID218:2.5 TT5 Overflow Pending Quick Check.If
+20260705 02.15.04 A OK       ID218:2.10 TT5 Overflow Pending Quick Check.Var Set, %AIWOverflowPendingCount=0
+20260705 02.15.04 A OK       ID218:2.11 TT5 Overflow Pending Quick Check.For, %OVCheckDummy=DRAINED
+20260705 02.15.04 A OK       ID218:2.12 TT5 Overflow Pending Quick Check.If
+20260705 02.15.04 A OK       ID218:2.15 TT5 Overflow Pending Quick Check.End For
+20260705 02.15.04 A OK       ID218:2.11 TT5 Overflow Pending Quick Check.For, %OVCheckDummy=DRAINED
+20260705 02.15.04 A OK       ID218:2.12 TT5 Overflow Pending Quick Check.If
+20260705 02.15.04 A OK       ID218:2.15 TT5 Overflow Pending Quick Check.End For
+20260705 02.15.04 A OK       ID218:2.11 TT5 Overflow Pending Quick Check.For, %OVCheckDummy=DRAINED
+20260705 02.15.04 A OK       ID218:2.12 TT5 Overflow Pending Quick Check.If
+20260705 02.15.04 A OK       ID218:2.15 TT5 Overflow Pending Quick Check.End For
+20260705 02.15.04 A OK       ID218:2.11 TT5 Overflow Pending Quick Check.For, %OVCheckDummy=DRAINED
+20260705 02.15.04 A OK       ID218:2.12 TT5 Overflow Pending Quick Check.If
+20260705 02.15.04 A OK       ID218:2.15 TT5 Overflow Pending Quick Check.End For
+20260705 02.15.04 A OK       ID218:2.11 TT5 Overflow Pending Quick Check.For, %OVCheckDummy=DRAINED
+20260705 02.15.04 A OK       ID218:2.12 TT5 Overflow Pending Quick Check.If
+20260705 02.15.04 A OK       ID218:2.15 TT5 Overflow Pending Quick Check.End For
+20260705 02.15.04 A OK       ID218:2.11 TT5 Overflow Pending Quick Check.For, %OVCheckDummy=DRAINED
+20260705 02.15.04 A OK       ID218:2.12 TT5 Overflow Pending Quick Check.If
+20260705 02.15.04 A OK       ID218:2.15 TT5 Overflow Pending Quick Check.End For
+20260705 02.15.04 A OK       ID218:2.11 TT5 Overflow Pending Quick Check.For, %OVCheckDummy=DRAINED
+20260705 02.15.04 A OK       ID218:2.12 TT5 Overflow Pending Quick Check.If
+20260705 02.15.04 A OK       ID218:2.15 TT5 Overflow Pending Quick Check.End For
+20260705 02.15.04 A OK       ID218:2.11 TT5 Overflow Pending Quick Check.For, %OVCheckDummy=DRAINED
+20260705 02.15.04 A OK       ID218:2.12 TT5 Overflow Pending Quick Check.If
+20260705 02.15.04 A OK       ID218:2.15 TT5 Overflow Pending Quick Check.End For
+20260705 02.15.04 A OK       ID218:2.11 TT5 Overflow Pending Quick Check.For, %OVCheckDummy=DRAINED
+20260705 02.15.04 A OK       ID218:2.12 TT5 Overflow Pending Quick Check.If
+20260705 02.15.04 A OK       ID218:2.15 TT5 Overflow Pending Quick Check.End For
+20260705 02.15.04 A OK       ID218:2.11 TT5 Overflow Pending Quick Check.For, %OVCheckDummy=DRAINED
+20260705 02.15.04 A OK       ID218:2.12 TT5 Overflow Pending Quick Check.If
+20260705 02.15.04 A OK       ID218:2.15 TT5 Overflow Pending Quick Check.End For
+20260705 02.15.04 A OK       ID218:2.11 TT5 Overflow Pending Quick Check.For, %OVCheckDummy=DRAINED
+20260705 02.15.04 A OK       ID218:2.12 TT5 Overflow Pending Quick Check.If
+20260705 02.15.04 A OK       ID218:2.15 TT5 Overflow Pending Quick Check.End For
+20260705 02.15.04 A OK       ID218:2.11 TT5 Overflow Pending Quick Check.For, %OVCheckDummy=DRAINED
+20260705 02.15.04 A OK       ID218:2.12 TT5 Overflow Pending Quick Check.If
+20260705 02.15.04 A OK       ID218:2.15 TT5 Overflow Pending Quick Check.End For
+20260705 02.15.04 A OK       ID218:2.11 TT5 Overflow Pending Quick Check.For, %OVCheckDummy=DRAINED
+20260705 02.15.04 A OK       ID218:2.12 TT5 Overflow Pending Quick Check.If
+20260705 02.15.04 A OK       ID218:2.15 TT5 Overflow Pending Quick Check.End For
+20260705 02.15.04 A OK       ID218:2.11 TT5 Overflow Pending Quick Check.For, %OVCheckDummy=DRAINED
+20260705 02.15.04 A OK       ID218:2.12 TT5 Overflow Pending Quick Check.If
+20260705 02.15.04 A OK       ID218:2.15 TT5 Overflow Pending Quick Check.End For
+20260705 02.15.04 A OK       ID218:2.11 TT5 Overflow Pending Quick Check.For, %OVCheckDummy=DRAINED
+20260705 02.15.04 A OK       ID218:2.12 TT5 Overflow Pending Quick Check.If
+20260705 02.15.04 A OK       ID218:2.15 TT5 Overflow Pending Quick Check.End For
+20260705 02.15.04 A OK       ID218:2.11 TT5 Overflow Pending Quick Check.For, %OVCheckDummy=DRAINED
+20260705 02.15.04 A OK       ID218:2.12 TT5 Overflow Pending Quick Check.If
+20260705 02.15.04 A OK       ID218:2.15 TT5 Overflow Pending Quick Check.End For
+20260705 02.15.04 A OK       ID218:2.11 TT5 Overflow Pending Quick Check.For, %OVCheckDummy=DRAINED
+20260705 02.15.04 A OK       ID218:2.12 TT5 Overflow Pending Quick Check.If
+20260705 02.15.04 A OK       ID218:2.15 TT5 Overflow Pending Quick Check.End For
+20260705 02.15.04 A OK       ID218:2.11 TT5 Overflow Pending Quick Check.For, %OVCheckDummy=DRAINED
+20260705 02.15.04 A OK       ID218:2.12 TT5 Overflow Pending Quick Check.If
+20260705 02.15.04 A OK       ID218:2.15 TT5 Overflow Pending Quick Check.End For
+20260705 02.15.04 A OK       ID218:2.11 TT5 Overflow Pending Quick Check.For, %OVCheckDummy=%OVCheckDummy
+20260705 02.15.04 A OK       ID218:2.16 TT5 Overflow Pending Quick Check.Var Set, %OVPendingCheckOK=1
+20260705 02.15.04 A OK       ID218:2.17 TT5 Overflow Pending Quick Check.Var Set, %AIWorkerLastError=OVC-090 pending co..
+20260705 02.15.04 T ExitOK   ID218:2  TT5 Overflow Pending Quick Check
+20260705 02.15.04 A OK       ID68.101 FINAL Simple.If
+20260705 02.15.04 A OK       ID68.104 FINAL Simple.If
+20260705 02.15.04 A OK       ID68.116 FINAL Simple.Var Clear, %openslot_row=%openslot_row
+20260705 02.15.04 A OK       ID68.117 FINAL Simple.Var Clear, %err=%err
+20260705 02.15.04 A OK       ID68.118 FINAL Simple.Var Clear, %errmsg=%errmsg
+20260705 02.15.04 T Running  ID35:3   FINAL Simple Get Open Slot Row
+20260705 02.15.04 A OK       ID68.119 FINAL Simple.Perform Task, FINAL Simple Get Open Slot Row
+20260705 02.15.05 A OK       ID35:3.1 FINAL Simple Get Open Slot Row.com.joaomgcd.autosheets\n***\n*!&$*;com.joaomgcd.autosheets.activity.ActivityConfigGetData, FINAL Simple Get Open Slot Row
+20260705 02.15.05 A OK       ID35:3.2 FINAL Simple Get Open Slot Row.Var Set, %SNrealrow=67
+20260705 02.15.05 A OK       ID35:3.3 FINAL Simple Get Open Slot Row.Var Search Replace, %SNrealrow=67
+20260705 02.15.05 A OK       ID35:3.4 FINAL Simple Get Open Slot Row.If
+20260705 02.15.05 A OK       ID35:3.7 FINAL Simple Get Open Slot Row.If
+20260705 02.15.05 A OK       ID35:3.10 FINAL Simple Get Open Slot Row.If
+20260705 02.15.05 A OK       ID35:3.13 FINAL Simple Get Open Slot Row.If
+20260705 02.15.05 A OK       ID35:3.17 FINAL Simple Get Open Slot Row.If
+20260705 02.15.05 A OK       ID35:3.21 FINAL Simple Get Open Slot Row.If
+20260705 02.15.05 A OK       ID35:3.25 FINAL Simple Get Open Slot Row.Var Set, %AIWorkerLastError=OSL-090 fast row:67
+20260705 02.15.05 T ExitOK   ID35:3   FINAL Simple Get Open Slot Row
+20260705 02.15.05 A OK       ID68.120 FINAL Simple.Wait
+20260705 02.15.05 A OK       ID68.121 FINAL Simple.If
+20260705 02.15.05 A OK       ID68.133 FINAL Simple.If
+20260705 02.15.05 A OK       ID68.145 FINAL Simple.If
+20260705 02.15.05 A OK       ID68.157 FINAL Simple.Var Clear, %err=%err
+20260705 02.15.05 A OK       ID68.158 FINAL Simple.Var Clear, %errmsg=%errmsg
+20260705 02.15.05 T Running  ID39:4   TT5 Simple Sheet Duplicate Guard
+20260705 02.15.05 A OK       ID68.159 FINAL Simple.Perform Task, TT5 Simple Sheet Duplicate Guard
+20260705 02.15.05 A OK       ID39:4.1 TT5 Simple Sheet Duplicate Guard.Var Set, %SNSheetDuplicate=0
+20260705 02.15.05 A OK       ID39:4.2 TT5 Simple Sheet Duplicate Guard.Var Clear, %sn_chk_id=%sn_chk_id
+20260705 02.15.05 A OK       ID39:4.3 TT5 Simple Sheet Duplicate Guard.Var Clear, %sn_chk_message=%sn_chk_message
+20260705 02.15.05 A OK       ID39:4.4 TT5 Simple Sheet Duplicate Guard.Var Clear, %err=%err
+20260705 02.15.05 A OK       ID39:4.5 TT5 Simple Sheet Duplicate Guard.Var Clear, %errmsg=%errmsg
+20260705 02.15.05 A OK       ID39:4.6 TT5 Simple Sheet Duplicate Guard.com.joaomgcd.autosheets\n***\n*!&$*;com.joaomgcd.autosheets.activity.ActivityConfigGetData, TT5 Simple Sheet Duplicate Guard
+20260705 02.15.05 A OK       ID39:4.7 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.05 A OK       ID39:4.12 TT5 Simple Sheet Duplicate Guard.Var Set, %SNCheckIndex=0
+20260705 02.15.05 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_TEST_PARSE_[PHONE_REDACTED]5 02.15.05 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=1
+20260705 02.15.05 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.05 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.05 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_TEST_SEND_DRYR..
+20260705 02.15.05 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=2
+20260705 02.15.05 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.05 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.05 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_SEND_SAFE_[PHONE_REDACTED]5 02.15.05 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=3
+20260705 02.15.05 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.05 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.05 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_SEND_SAFE_[PHONE_REDACTED]5 02.15.05 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=4
+20260705 02.15.05 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.05 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.05 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_SEND_SAFE_[PHONE_REDACTED]5 02.15.05 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=5
+20260705 02.15.05 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.05 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.05 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_LIVE_SEND_[PHONE_REDACTED]5 02.15.05 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=6
+20260705 02.15.05 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.05 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.05 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_LIVE_SEND_[PHONE_REDACTED]5 02.15.05 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=7
+20260705 02.15.05 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.05 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.05 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW-ARCHIVE-DISABL..
+20260705 02.15.05 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=8
+20260705 02.15.05 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.05 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.05 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=[PHONE_REDACTED]97
+20260705 02.15.05 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=9
+20260705 02.15.05 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.05 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.05 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_TEST_[PHONE_REDACTED]5 02.15.05 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=10
+20260705 02.15.05 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.05 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.05 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=[PHONE_REDACTED]73
+20260705 02.15.05 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=11
+20260705 02.15.05 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.05 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.05 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=[PHONE_REDACTED]55
+20260705 02.15.05 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=12
+20260705 02.15.05 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.05 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=[PHONE_REDACTED]79
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=13
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=[PHONE_REDACTED]69
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=14
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=[PHONE_REDACTED]12
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=15
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=[PHONE_REDACTED]13
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=16
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=[PHONE_REDACTED]27
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=17
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=[PHONE_REDACTED]40
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=18
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_R4A1_APP_TICK_..
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=19
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_R4A2_TIMER_ENT..
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=20
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_R4A2_TIMER_PRO..
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=21
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_R4A2A_RETEST_[PHONE_REDACTED]5 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=22
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_R4A2_TIMER_PRO..
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=23
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_R5D_MINIBATCH_..
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=24
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_R5D_MINIBATCH_..
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=25
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_R5E_3ROW_RETRY..
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=26
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_R5E_3ROW_RETRY..
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=27
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_R5E_3ROW_RETRY..
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=28
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_R5E_5ROW_[PHONE_REDACTED]5 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=29
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_R5E_5ROW_[PHONE_REDACTED]5 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=30
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_R5E_5ROW_[PHONE_REDACTED]5 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=31
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_R5E_5ROW_[PHONE_REDACTED]5 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=32
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_R5E_5ROW_[PHONE_REDACTED]5 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=33
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_R5F_BADFIRST_[PHONE_REDACTED]5 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=34
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_R5F_BADFIRST_[PHONE_REDACTED]5 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=35
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_R5F_BADFIRST_[PHONE_REDACTED]5 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=36
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_R5F_RESTART_[PHONE_REDACTED]5 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=37
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_R5F_RESTART_[PHONE_REDACTED]5 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=38
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_R5F_RESTART_[PHONE_REDACTED]5 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=39
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_R5FJ_RECOVERY_..
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=40
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_R5FJ_RECOVERY_..
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=41
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_R5FJ_BADMID_[PHONE_REDACTED]5 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=42
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_R5FJ_BADMID_[PHONE_REDACTED]5 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=43
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_R5FJ_BADMID_[PHONE_REDACTED]5 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=44
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_R5FJ_BADLAST_[PHONE_REDACTED]5 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=45
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_R5FJ_BADLAST_[PHONE_REDACTED]5 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=46
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_R5FJ_BADLAST_[PHONE_REDACTED]5 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=47
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_R5G_MANUAL_CON..
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=48
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_R5G_E2E_MANUAL..
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=49
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_R5G_MANUAL_APP..
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=50
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_R5G_MANUAL_APP..
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=51
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=[PHONE_REDACTED]85
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=52
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=[PHONE_REDACTED]83
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=53
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=[PHONE_REDACTED]71
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=54
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=[PHONE_REDACTED]96
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=55
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=[PHONE_REDACTED]44
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=56
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=AIW_R5K_BADCONTACT..
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=57
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=[PHONE_REDACTED]84
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=58
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=[PHONE_REDACTED]96
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=59
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=[PHONE_REDACTED]85
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=60
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=[PHONE_REDACTED]54
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=61
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=[PHONE_REDACTED]77
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=62
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=[PHONE_REDACTED]73
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=63
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=[PHONE_REDACTED]56
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=64
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=[PHONE_REDACTED]33
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=65
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=%sn_chk_id66
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=66
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=%sn_chk_id67
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=67
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=%sn_chk_id68
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=68
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=%sn_chk_id69
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=69
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=%sn_chk_id70
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=70
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=%sn_chk_id71
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=71
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.06 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=%sn_chk_id72
+20260705 02.15.06 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=72
+20260705 02.15.06 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.06 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.07 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=%sn_chk_id73
+20260705 02.15.07 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=73
+20260705 02.15.07 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.07 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.07 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=%sn_chk_id74
+20260705 02.15.07 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=74
+20260705 02.15.07 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.07 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.07 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=%sn_chk_id75
+20260705 02.15.07 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=75
+20260705 02.15.07 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.07 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.07 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=%sn_chk_id76
+20260705 02.15.07 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=76
+20260705 02.15.07 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.07 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.07 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=%sn_chk_id77
+20260705 02.15.07 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=77
+20260705 02.15.07 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.07 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.07 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=%sn_chk_id78
+20260705 02.15.07 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=78
+20260705 02.15.07 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.07 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.07 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=%sn_chk_id79
+20260705 02.15.07 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=79
+20260705 02.15.07 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.07 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.07 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=%sn_chk_id80
+20260705 02.15.07 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=80
+20260705 02.15.07 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.07 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.07 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=%sn_chk_id81
+20260705 02.15.07 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=81
+20260705 02.15.07 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.07 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.07 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=%sn_chk_id82
+20260705 02.15.07 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=82
+20260705 02.15.07 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.07 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.07 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=%sn_chk_id83
+20260705 02.15.07 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=83
+20260705 02.15.07 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.07 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.07 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=[PHONE_REDACTED]87
+20260705 02.15.07 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=84
+20260705 02.15.07 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.07 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.07 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=[PHONE_REDACTED]22
+20260705 02.15.07 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=85
+20260705 02.15.07 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.07 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.07 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=P85_ARCHIVE_TEST_[PHONE_REDACTED]5 02.15.07 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=86
+20260705 02.15.07 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.07 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.07 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=[PHONE_REDACTED]28
+20260705 02.15.07 A OK       ID39:4.14 TT5 Simple Sheet Duplicate Guard.Var Add, %SNCheckIndex=87
+20260705 02.15.07 A OK       ID39:4.15 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.07 A OK       ID39:4.19 TT5 Simple Sheet Duplicate Guard.End For
+20260705 02.15.07 A OK       ID39:4.13 TT5 Simple Sheet Duplicate Guard.For, %SNCheckDummy=%SNCheckDummy
+20260705 02.15.07 A OK       ID39:4.20 TT5 Simple Sheet Duplicate Guard.If
+20260705 02.15.07 A OK       ID39:4.23 TT5 Simple Sheet Duplicate Guard.Var Set, %AIWorkerLastError=DUP-090 pass id:17..
+20260705 02.15.07 T ExitOK   ID39:4   TT5 Simple Sheet Duplicate Guard
+20260705 02.15.07 A OK       ID68.160 FINAL Simple.If
+20260705 02.15.07 A OK       ID68.164 FINAL Simple.Var Set, %AIWorkerLastError=LGR-160 ID built i..
+20260705 02.15.08 A OK       ID68.165 FINAL Simple.com.joaomgcd.autosheets\n***\n*!&$*;com.joaomgcd.autosheets.activity.ActivityConfigUpdateCells, FINAL Simple
+20260705 02.15.08 A OK       ID68.166 FINAL Simple.If
+20260705 02.15.08 A OK       ID68.171 FINAL Simple.Var Set, %LastLogKey=0|com.enflick.andr..
+20260705 02.15.08 A OK       ID68.172 FINAL Simple.Var Set, %LastLogTime=[PHONE_REDACTED]
+20260705 02.15.08 A OK       ID68.173 FINAL Simple.Var Set, %LastInboundFingerprint=%SNFingerprint
+20260705 02.15.08 A OK       ID68.174 FINAL Simple.Var Set, %LastInboundLogTime=[PHONE_REDACTED]
+20260705 02.15.08 T Running  ID214:5  TT5 Simple Log Lock Release HARD
+20260705 02.15.08 A OK       ID68.175 FINAL Simple.Perform Task, TT5 Simple Log Lock Release HARD
+20260705 02.15.08 T ExitOK   ID68     FINAL Simple
+20260705 02.15.08 A OK       ID214:5.1 TT5 Simple Log Lock Release HARD.Var Set, %AIWSimpleLogging=0
+20260705 02.15.08 A OK       ID214:5.2 TT5 Simple Log Lock Release HARD.Var Clear, %AIWSimpleLoggingStartedAt=%AIWSimpleLoggingS..
+20260705 02.15.08 T ExitOK   ID214:5  TT5 Simple Log Lock Release HARD
+20260705 02.15.08 E Stop     ID0:0.0  TaskService
+20260705 02.15.15 M Restart  ID0:0.0  Monitor
+

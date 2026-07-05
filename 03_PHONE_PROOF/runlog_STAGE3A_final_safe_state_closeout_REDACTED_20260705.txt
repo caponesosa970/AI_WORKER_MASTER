@@ -1,0 +1,496 @@
+﻿
+20260705 02.50.51 E Start    ID0:0.0  TaskService
+20260705 02.50.53 T Running  ID425    AIW AUTO LIVE STOP V1
+20260705 02.50.53 A OK       ID425.1  AIW AUTO LIVE STOP V1.Flash, AIW AUTO LIVE STOP V1
+20260705 02.50.53 A OK       ID425.2  AIW AUTO LIVE STOP V1.Profile Status
+20260705 02.50.53 A OK       ID425.3  AIW AUTO LIVE STOP V1.Var Set, %AIWTextNowTriggerArmRequested=0
+20260705 02.50.53 A OK       ID425.4  AIW AUTO LIVE STOP V1.Var Set, %AIWTextNowTriggerArmSource=STOP_PRE_LOCKDOWN
+20260705 02.50.53 A OK       ID425.5  AIW AUTO LIVE STOP V1.Var Set, %AIWAutoLive=0
+20260705 02.50.53 A OK       ID425.6  AIW AUTO LIVE STOP V1.Var Set, %AIWAutoLiveMode=OFF
+20260705 02.50.53 A OK       ID425.7  AIW AUTO LIVE STOP V1.Var Set, %AIWAutoLiveStoppedAt=[PHONE_REDACTED]
+20260705 02.50.53 A OK       ID425.8  AIW AUTO LIVE STOP V1.Var Set, %AIWV19MPhoneLiveHold=1
+20260705 02.50.53 A OK       ID425.9  AIW AUTO LIVE STOP V1.Var Set, %AIWV19MSendLiveHold=1
+20260705 02.50.53 A OK       ID425.10 AIW AUTO LIVE STOP V1.Var Set, %AIWV19MSendFlowDryRunOnly=1
+20260705 02.50.53 A OK       ID425.11 AIW AUTO LIVE STOP V1.Var Set, %AIWorkerSafeMode=1
+20260705 02.50.53 A OK       ID425.12 AIW AUTO LIVE STOP V1.Profile Status
+20260705 02.50.53 A OK       ID425.13 AIW AUTO LIVE STOP V1.Profile Status
+20260705 02.50.53 T Running  ID131:2  APP Stop AI Worker
+20260705 02.50.53 A OK       ID425.14 AIW AUTO LIVE STOP V1.Perform Task, APP Stop AI Worker
+20260705 02.50.53 A OK       ID131:2.1 APP Stop AI Worker.Profile Status
+20260705 02.50.53 A OK       ID131:2.2 APP Stop AI Worker.Profile Status
+20260705 02.50.53 A OK       ID131:2.3 APP Stop AI Worker.Profile Status
+20260705 02.50.53 A OK       ID131:2.4 APP Stop AI Worker.Profile Status
+20260705 02.50.53 T Running  ID74:3   FINAL AI Worker Off
+20260705 02.50.53 A OK       ID131:2.5 APP Stop AI Worker.Perform Task, FINAL AI Worker Off
+20260705 02.50.53 A OK       ID74:3.1 FINAL AI Worker Off.Var Set, %AIWorkerOn=0
+20260705 02.50.53 A OK       ID74:3.2 FINAL AI Worker Off.Var Set, %AIWorkerBusy=0
+20260705 02.50.53 A OK       ID74:3.3 FINAL AI Worker Off.Var Set, %processing=0
+20260705 02.50.53 A OK       ID74:3.4 FINAL AI Worker Off.Var Set, %sending=0
+20260705 02.50.54 A OK       ID74:3.5 FINAL AI Worker Off.Var Set, %archiving=0
+20260705 02.50.54 A OK       ID74:3.6 FINAL AI Worker Off.Var Set, %retrying=0
+20260705 02.50.54 A OK       ID74:3.7 FINAL AI Worker Off.Var Set, %compacting=0
+20260705 02.50.54 A OK       ID74:3.8 FINAL AI Worker Off.Var Set, %AIWorkerKickPending=0
+20260705 02.50.54 A OK       ID74:3.9 FINAL AI Worker Off.Var Set, %AIWProcessing=0
+20260705 02.50.54 A OK       ID74:3.10 FINAL AI Worker Off.Var Set, %AIWSending=0
+20260705 02.50.54 A OK       ID74:3.11 FINAL AI Worker Off.Var Set, %AIWArchiving=0
+20260705 02.50.54 A OK       ID74:3.12 FINAL AI Worker Off.Var Set, %AIWRetrying=0
+20260705 02.50.54 A OK       ID74:3.13 FINAL AI Worker Off.Var Set, %AIWCompacting=0
+20260705 02.50.54 A OK       ID74:3.14 FINAL AI Worker Off.Var Set, %AIWDeadArchiving=0
+20260705 02.50.54 A OK       ID74:3.15 FINAL AI Worker Off.Var Set, %AIWWatchdogging=0
+20260705 02.50.54 A OK       ID74:3.16 FINAL AI Worker Off.Var Set, %AIWorkerLastError=Worker Stopped
+20260705 02.50.54 A OK       ID74:3.17 FINAL AI Worker Off.Flash, FINAL AI Worker Off
+20260705 02.50.54 A OK       ID74:3.18 FINAL AI Worker Off.Var Set, %AIWAutoLive=0
+20260705 02.50.54 A OK       ID74:3.19 FINAL AI Worker Off.Var Set, %AIWAutoLiveMode=OFF
+20260705 02.50.54 A OK       ID74:3.20 FINAL AI Worker Off.Var Set, %AIWAutoLiveLastStopSource=FINAL_AI_WORKER_OFF
+20260705 02.50.54 T ExitOK   ID74:3   FINAL AI Worker Off
+20260705 02.50.54 A OK       ID131:2.6 APP Stop AI Worker.Var Set, %AIWorkerTimerOn=0
+20260705 02.50.54 A OK       ID131:2.7 APP Stop AI Worker.Flash, APP Stop AI Worker
+20260705 02.50.54 A OK       ID131:2.8 APP Stop AI Worker.Var Set, %AIWProofEvent=APP_STOP_COMPLETE
+20260705 02.50.54 A OK       ID131:2.9 APP Stop AI Worker.Var Set, %AIWProofStage=CONTROL
+20260705 02.50.54 A OK       ID131:2.10 APP Stop AI Worker.Var Set, %AIWProofResult=PASS
+20260705 02.50.54 A OK       ID131:2.11 APP Stop AI Worker.Var Set, %AIWProofRow=%AIWProofRow
+20260705 02.50.54 A OK       ID131:2.12 APP Stop AI Worker.Var Set, %AIWProofSender=%AIWProofSender
+20260705 02.50.54 A OK       ID131:2.13 APP Stop AI Worker.Var Set, %AIWProofStatusBefore=%AIWProofStatusBef..
+20260705 02.50.54 A OK       ID131:2.14 APP Stop AI Worker.Var Set, %AIWProofStatusAfter=%AIWProofStatusAfter
+20260705 02.50.54 A OK       ID131:2.15 APP Stop AI Worker.Var Set, %AIWProofDetails=APP Stop AI Worker..
+20260705 02.50.54 A OK       ID131:2.16 APP Stop AI Worker.Var Set, %AIWProofError=Worker Stopped
+20260705 02.50.54 T Running  ID224:4  AIW PROOF Log Event
+20260705 02.50.54 A OK       ID131:2.17 APP Stop AI Worker.Perform Task, AIW PROOF Log Event
+20260705 02.50.54 T ExitOK   ID131:2  APP Stop AI Worker
+20260705 02.50.54 A OK       ID224:4.1 AIW PROOF Log Event.If
+20260705 02.50.54 A OK       ID224:4.6 AIW PROOF Log Event.If
+20260705 02.50.54 A OK       ID224:4.7 AIW PROOF Log Event.If
+20260705 02.50.54 A OK       ID224:4.10 AIW PROOF Log Event.Var Add, %AIWProofLogIndex=[PHONE_REDACTED]5 02.50.54 A OK       ID224:4.11 AIW PROOF Log Event.If
+20260705 02.50.54 A OK       ID224:4.14 AIW PROOF Log Event.Var Set, %AIWProofTargetRow=[PHONE_REDACTED]5 02.50.54 A OK       ID224:4.15 AIW PROOF Log Event.Var Set, %AIWProofTS=7-5-26 02.50
+20260705 02.50.54 A OK       ID224:4.16 AIW PROOF Log Event.Var Set, %AIWProofData=7-5-26 02.50Â§V19IÂ§..
+20260705 02.50.56 A Err      ID224:4.17 AIW PROOF Log Event.com.joaomgcd.autosheets\n***\n*!&$*;com.joaomgcd.autosheets.activity.ActivityConfigUpdateCells, AIW PROOF Log Event
+20260705 02.50.56 A OK       ID224:4.18 AIW PROOF Log Event.com.joaomgcd.autosheets\n***\n*!&$*;com.joaomgcd.autosheets.activity.ActivityConfigUpdateCells, AIW PROOF Log Event
+20260705 02.50.56 A OK       ID224:4.19 AIW PROOF Log Event.Var Set, %AIWProofLastWrite=APP_STOP_COMPLETE ..
+20260705 02.50.56 A OK       ID224:4.20 AIW PROOF Log Event.Var Set, %AIWProofWriteResult=OK
+20260705 02.50.56 A OK       ID224:4.21 AIW PROOF Log Event.End If
+20260705 02.50.56 T ExitOK   ID224:4  AIW PROOF Log Event
+20260705 02.50.57 A OK       ID425.15 AIW AUTO LIVE STOP V1.Wait
+20260705 02.50.57 A OK       ID425.16 AIW AUTO LIVE STOP V1.Var Set, %AIWAutoLive=0
+20260705 02.50.57 A OK       ID425.17 AIW AUTO LIVE STOP V1.Var Set, %AIWAutoLiveMode=OFF
+20260705 02.50.57 A OK       ID425.18 AIW AUTO LIVE STOP V1.Var Set, %AIWorkerLastError=AUTO LIVE STOPPED
+20260705 02.50.57 A OK       ID425.19 AIW AUTO LIVE STOP V1.Var Set, %AIWProofEvent=AUTO_LIVE_STOP
+20260705 02.50.57 A OK       ID425.20 AIW AUTO LIVE STOP V1.Var Set, %AIWProofStage=AUTONOMOUS_CONTROL
+20260705 02.50.57 A OK       ID425.21 AIW AUTO LIVE STOP V1.Var Set, %AIWProofResult=PASS
+20260705 02.50.57 A OK       ID425.22 AIW AUTO LIVE STOP V1.Var Set, %AIWProofRow=%AIWProofRow
+20260705 02.50.57 A OK       ID425.23 AIW AUTO LIVE STOP V1.Var Set, %AIWProofSender=%AIWProofSender
+20260705 02.50.57 A OK       ID425.24 AIW AUTO LIVE STOP V1.Var Set, %AIWProofStatusBefore=ON
+20260705 02.50.57 A OK       ID425.25 AIW AUTO LIVE STOP V1.Var Set, %AIWProofStatusAfter=OFF
+20260705 02.50.57 A OK       ID425.26 AIW AUTO LIVE STOP V1.Var Set, %AIWProofDetails=Build100 candidate..
+20260705 02.50.57 A OK       ID425.27 AIW AUTO LIVE STOP V1.Var Set, %AIWProofError=NONE
+20260705 02.50.57 T Running  ID224:5  AIW PROOF Log Event
+20260705 02.50.57 A OK       ID425.28 AIW AUTO LIVE STOP V1.Perform Task, AIW PROOF Log Event
+20260705 02.50.57 A OK       ID224:5.1 AIW PROOF Log Event.If
+20260705 02.50.57 A OK       ID224:5.6 AIW PROOF Log Event.If
+20260705 02.50.57 A OK       ID224:5.7 AIW PROOF Log Event.If
+20260705 02.50.57 A OK       ID224:5.10 AIW PROOF Log Event.Var Add, %AIWProofLogIndex=[PHONE_REDACTED]5 02.50.57 A OK       ID224:5.11 AIW PROOF Log Event.If
+20260705 02.50.57 A OK       ID224:5.14 AIW PROOF Log Event.Var Set, %AIWProofTargetRow=[PHONE_REDACTED]5 02.50.57 A OK       ID224:5.15 AIW PROOF Log Event.Var Set, %AIWProofTS=7-5-26 02.50
+20260705 02.50.57 A OK       ID224:5.16 AIW PROOF Log Event.Var Set, %AIWProofData=7-5-26 02.50Â§V19IÂ§..
+20260705 02.50.58 A Err      ID224:5.17 AIW PROOF Log Event.com.joaomgcd.autosheets\n***\n*!&$*;com.joaomgcd.autosheets.activity.ActivityConfigUpdateCells, AIW PROOF Log Event
+20260705 02.50.58 A OK       ID224:5.18 AIW PROOF Log Event.com.joaomgcd.autosheets\n***\n*!&$*;com.joaomgcd.autosheets.activity.ActivityConfigUpdateCells, AIW PROOF Log Event
+20260705 02.50.58 A OK       ID224:5.19 AIW PROOF Log Event.Var Set, %AIWProofLastWrite=AUTO_LIVE_STOP row..
+20260705 02.50.58 A OK       ID224:5.20 AIW PROOF Log Event.Var Set, %AIWProofWriteResult=OK
+20260705 02.50.58 A OK       ID224:5.21 AIW PROOF Log Event.End If
+20260705 02.50.58 T ExitOK   ID224:5  AIW PROOF Log Event
+20260705 02.50.58 T Running  ID12:6   APP Status Snapshot Simple
+20260705 02.50.58 A OK       ID425.29 AIW AUTO LIVE STOP V1.Perform Task, APP Status Snapshot Simple
+20260705 02.50.58 A OK       ID12:6.1 APP Status Snapshot Simple.Var Set, %SnapPower=OFF
+20260705 02.50.58 A OK       ID12:6.2 APP Status Snapshot Simple.If
+20260705 02.50.58 A OK       ID12:6.5 APP Status Snapshot Simple.Var Set, %SnapSafe=OFF
+20260705 02.50.58 A OK       ID12:6.6 APP Status Snapshot Simple.If
+20260705 02.50.59 A OK       ID12:6.7 APP Status Snapshot Simple.Var Set, %SnapSafe=ON
+20260705 02.50.59 A OK       ID12:6.8 APP Status Snapshot Simple.End If
+20260705 02.50.59 A OK       ID12:6.9 APP Status Snapshot Simple.Var Set, %SnapBusy=READY
+20260705 02.50.59 A OK       ID12:6.10 APP Status Snapshot Simple.If
+20260705 02.50.59 A OK       ID12:6.13 APP Status Snapshot Simple.Var Set, %SnapProcess=OFF
+20260705 02.50.59 A OK       ID12:6.14 APP Status Snapshot Simple.If
+20260705 02.50.59 A OK       ID12:6.17 APP Status Snapshot Simple.Var Set, %SnapSend=OFF
+20260705 02.50.59 A OK       ID12:6.18 APP Status Snapshot Simple.If
+20260705 02.50.59 A OK       ID12:6.21 APP Status Snapshot Simple.Var Set, %SnapArchive=OFF
+20260705 02.50.59 A OK       ID12:6.22 APP Status Snapshot Simple.If
+20260705 02.50.59 A OK       ID12:6.25 APP Status Snapshot Simple.Flash, APP Status Snapshot Simple
+20260705 02.50.59 T ExitOK   ID12:6   APP Status Snapshot Simple
+20260705 02.50.59 A OK       ID425.30 AIW AUTO LIVE STOP V1.Flash, AIW AUTO LIVE STOP V1
+20260705 02.50.59 T ExitOK   ID425    AIW AUTO LIVE STOP V1
+20260705 02.50.59 E Stop     ID0:0.0  TaskService
+20260705 02.51.06 E Start    ID0:0.0  TaskService
+20260705 02.51.08 T Running  ID148    APP Safe Mode ON
+20260705 02.51.08 A OK       ID148.1  APP Safe Mode ON.Var Set, %AIWorkerSafeMode=1
+20260705 02.51.11 A OK       ID148.2  APP Safe Mode ON.Popup, APP Safe Mode ON
+20260705 02.51.11 T ExitOK   ID148    APP Safe Mode ON
+20260705 02.51.14 E Stop     ID0:0.0  TaskService
+20260705 02.51.24 E Start    ID0:0.0  TaskService
+20260705 02.51.25 T Running  ID147    APP Reset Locks
+20260705 02.51.25 A OK       ID147.1  APP Reset Locks.Var Set, %AIWorkerBusy=0
+20260705 02.51.25 A OK       ID147.2  APP Reset Locks.Var Set, %AIWProcessing=0
+20260705 02.51.25 A OK       ID147.3  APP Reset Locks.Var Set, %AIWorkerLastError=RST-000 Locks rese..
+20260705 02.51.25 A OK       ID147.4  APP Reset Locks.Var Set, %PSProcessingReady=0
+20260705 02.51.25 A OK       ID147.5  APP Reset Locks.Var Set, %PSActiveRows=0
+20260705 02.51.25 A OK       ID147.6  APP Reset Locks.Var Set, %PSReadWindow=0
+20260705 02.51.25 A OK       ID147.7  APP Reset Locks.Var Set, %PSQueuePressure=0
+20260705 02.51.25 A OK       ID147.8  APP Reset Locks.Var Set, %PSProcessThisRow=0
+20260705 02.51.25 A OK       ID147.9  APP Reset Locks.Var Set, %PSMainIndex=0
+20260705 02.51.25 A OK       ID147.10 APP Reset Locks.Var Set, %PSMainRow=0
+20260705 02.51.25 A OK       ID147.11 APP Reset Locks.Var Set, %PSSenderValid=0
+20260705 02.51.25 A OK       ID147.12 APP Reset Locks.Var Set, %PSGroupCount=0
+20260705 02.51.25 A OK       ID147.13 APP Reset Locks.Var Set, %AIWSending=0
+20260705 02.51.25 A OK       ID147.14 APP Reset Locks.Var Set, %PSValidWork=0
+20260705 02.51.25 A OK       ID147.15 APP Reset Locks.Var Set, %PSHttpSuccess=0
+20260705 02.51.25 A OK       ID147.16 APP Reset Locks.Var Set, %PSReplyValid=0
+20260705 02.51.25 A OK       ID147.17 APP Reset Locks.Var Set, %PSMode=NONE
+20260705 02.51.25 A OK       ID147.18 APP Reset Locks.Var Set, %PSMarkedProcessing=0
+20260705 02.51.25 A OK       ID147.19 APP Reset Locks.Var Set, %PSBuildPromptOk=0
+20260705 02.51.25 A OK       ID147.20 APP Reset Locks.Var Set, %PSValidWork=0
+20260705 02.51.25 A OK       ID147.21 APP Reset Locks.Var Set, %PSSenderValid=0
+20260705 02.51.25 A OK       ID147.22 APP Reset Locks.Var Set, %PSHttpCode=0
+20260705 02.51.25 A OK       ID147.23 APP Reset Locks.Var Set, %PSSenderType=BAD
+20260705 02.51.25 A OK       ID147.24 APP Reset Locks.Var Set, %AIWArchiving=0
+20260705 02.51.25 A OK       ID147.25 APP Reset Locks.Var Clear, %PSReadRange=%PSReadRange
+20260705 02.51.25 A OK       ID147.26 APP Reset Locks.Var Clear, %PSPressureMode=%PSPressureMode
+20260705 02.51.25 A OK       ID147.27 APP Reset Locks.Var Clear, %PSSenderRaw=%PSSenderRaw
+20260705 02.51.25 A OK       ID147.28 APP Reset Locks.Var Clear, %PSSenderKey=%PSSenderKey
+20260705 02.51.25 A OK       ID147.29 APP Reset Locks.Var Clear, %PSNewestMessage=%PSNewestMessage
+20260705 02.51.25 A OK       ID147.30 APP Reset Locks.Var Clear, %PSGroupPolicy=%PSGroupPolicy
+20260705 02.51.25 A OK       ID147.31 APP Reset Locks.Var Clear, %PSIncludedIndexes=%PSIncludedIndexes
+20260705 02.51.25 A OK       ID147.32 APP Reset Locks.Var Clear, %PSGroupMessages=%PSGroupMessages
+20260705 02.51.25 A OK       ID147.33 APP Reset Locks.Var Clear, %PSDebug=%PSDebug
+20260705 02.51.25 A OK       ID147.34 APP Reset Locks.Var Clear, %PSFailureStatus=%PSFailureStatus
+20260705 02.51.25 A OK       ID147.35 APP Reset Locks.Var Set, %AIWRetrying=0
+20260705 02.51.25 A OK       ID147.36 APP Reset Locks.Var Clear, %PSError=%PSError
+20260705 02.51.25 A OK       ID147.37 APP Reset Locks.Var Clear, %PSReply=%PSReply
+20260705 02.51.25 A OK       ID147.38 APP Reset Locks.Var Clear, %PSFinalStatus=%PSFinalStatus
+20260705 02.51.25 A OK       ID147.39 APP Reset Locks.Var Clear, %CurrentMessageBlock=%CurrentMessageBlock
+20260705 02.51.25 A OK       ID147.40 APP Reset Locks.Var Clear, %BrainRules=%BrainRules
+20260705 02.51.25 A OK       ID147.41 APP Reset Locks.Var Clear, %PresetMatch=%PresetMatch
+20260705 02.51.25 A OK       ID147.42 APP Reset Locks.Var Clear, %PresetReply=%PresetReply
+20260705 02.51.25 A OK       ID147.43 APP Reset Locks.Var Clear, %ConversationHistory=%ConversationHistory
+20260705 02.51.25 A OK       ID147.44 APP Reset Locks.Var Clear, %FinalPrompt=%FinalPrompt
+20260705 02.51.25 A OK       ID147.45 APP Reset Locks.Var Clear, %SafeSystemPrompt=%SafeSystemPrompt
+20260705 02.51.25 A OK       ID147.46 APP Reset Locks.Var Set, %AIWCompacting=0
+20260705 02.51.25 A OK       ID147.47 APP Reset Locks.Var Clear, %SafeUserPrompt=%SafeUserPrompt
+20260705 02.51.25 A OK       ID147.48 APP Reset Locks.Var Clear, %PSSenderKey=%PSSenderKey
+20260705 02.51.25 A OK       ID147.49 APP Reset Locks.Var Clear, %PSSender=%PSSender
+20260705 02.51.25 A OK       ID147.50 APP Reset Locks.Var Clear, %PSSenderRaw=%PSSenderRaw
+20260705 02.51.25 A OK       ID147.51 APP Reset Locks.Var Clear, %PSNewestMessage=%PSNewestMessage
+20260705 02.51.25 A OK       ID147.52 APP Reset Locks.Var Clear, %PSHttpData=%PSHttpData
+20260705 02.51.25 A OK       ID147.53 APP Reset Locks.Var Clear, %AIWSimpleLogging=%AIWSimpleLogging
+20260705 02.51.25 A OK       ID147.54 APP Reset Locks.Var Clear, %AIWSimpleLoggingStartedAt=%AIWSimpleLoggingS..
+20260705 02.51.25 A OK       ID147.55 APP Reset Locks.Var Clear, %AIWNextLogRow=%AIWNextLogRow
+20260705 02.51.25 A OK       ID147.56 APP Reset Locks.Var Clear, %SNrealrow=%SNrealrow
+20260705 02.51.25 A OK       ID147.57 APP Reset Locks.Var Set, %AIWDeadArchiving=0
+20260705 02.51.25 A OK       ID147.58 APP Reset Locks.Var Set, %AIWArchiveEnabled=0
+20260705 02.51.25 A OK       ID147.59 APP Reset Locks.Var Set, %AIWDeadArchiveEnabled=0
+20260705 02.51.25 A OK       ID147.60 APP Reset Locks.Var Set, %AIWCompactorEnabled=0
+20260705 02.51.25 A OK       ID147.61 APP Reset Locks.Var Set, %AIWArchiveGraceSec=[PHONE_REDACTED]5 02.51.25 A OK       ID147.62 APP Reset Locks.Var Set, %AIWFastSendPrepass=0
+20260705 02.51.25 A OK       ID147.63 APP Reset Locks.Var Set, %AIWSendSameChatFastPath=0
+20260705 02.51.25 A OK       ID147.64 APP Reset Locks.Var Set, %AIWDebugLevel=0
+20260705 02.51.25 A OK       ID147.65 APP Reset Locks.Var Set, %AIWDebugPopups=0
+20260705 02.51.25 A OK       ID147.66 APP Reset Locks.Var Set, %AIWDebugSheetLog=0
+20260705 02.51.25 A OK       ID147.67 APP Reset Locks.Var Set, %AIWRepairTestMode=0
+20260705 02.51.25 A OK       ID147.68 APP Reset Locks.Var Set, %AIWWatchdogging=0
+20260705 02.51.25 A OK       ID147.69 APP Reset Locks.Var Clear, %SNsender=%SNsender
+20260705 02.51.25 A OK       ID147.70 APP Reset Locks.Var Clear, %SNmessage=%SNmessage
+20260705 02.51.25 A OK       ID147.71 APP Reset Locks.Var Clear, %SNticker=%SNticker
+20260705 02.51.25 A OK       ID147.72 APP Reset Locks.Var Clear, %SNid=%SNid
+20260705 02.51.25 A OK       ID147.73 APP Reset Locks.Var Clear, %SNrealrow=%SNrealrow
+20260705 02.51.25 A OK       ID147.74 APP Reset Locks.Var Clear, %SNFingerprint=%SNFingerprint
+20260705 02.51.25 A OK       ID147.75 APP Reset Locks.Var Clear, %LastInboundFingerprint=%LastInboundFinger..
+20260705 02.51.25 A OK       ID147.76 APP Reset Locks.Var Clear, %LastInboundLogTime=%LastInboundLogTime
+20260705 02.51.25 A OK       ID147.77 APP Reset Locks.Var Clear, %SNSheetDuplicate=%SNSheetDuplicate
+20260705 02.51.25 A OK       ID147.78 APP Reset Locks.Var Clear, %OVLogResult=%OVLogResult
+20260705 02.51.25 A OK       ID147.79 APP Reset Locks.Var Set, %AIWQueueChecking=0
+20260705 02.51.26 A OK       ID147.80 APP Reset Locks.Var Set, %AIWOverflowPendingCount=0
+20260705 02.51.26 A OK       ID147.81 APP Reset Locks.Var Clear, %OVPendingCheckOK=%OVPendingCheckOK
+20260705 02.51.26 A OK       ID147.82 APP Reset Locks.Var Set, %AIWorkerKickPending=0
+20260705 02.51.26 A OK       ID147.83 APP Reset Locks.Var Set, %AIWSourceLock=1
+20260705 02.51.26 A OK       ID147.84 APP Reset Locks.Var Set, %AIWPatchMode=SAFE_NON_UI_GUARD_..
+20260705 02.51.26 A OK       ID147.85 APP Reset Locks.Var Set, %AIWBestWorkStandard=1
+20260705 02.51.26 A OK       ID147.86 APP Reset Locks.Var Set, %AIWNoUnrelatedChanges=1
+20260705 02.51.26 A OK       ID147.87 APP Reset Locks.Var Set, %AIWPrivacyBoundary=POLICY_OR_USER_APP..
+20260705 02.51.26 A OK       ID147.88 APP Reset Locks.Var Set, %AIWDoNotTouchTextNowUI=1
+20260705 02.51.26 A OK       ID147.89 APP Reset Locks.Var Set, %AIWDoNotTouchAutoInput=1
+20260705 02.51.26 A OK       ID147.90 APP Reset Locks.Var Set, %AIWDeviceTunedFrozen=1
+20260705 02.51.26 A OK       ID147.91 APP Reset Locks.Var Set, %AIWPreserveKeysInWithKeyPackage=1
+20260705 02.51.26 A OK       ID147.92 APP Reset Locks.Var Set, %AIWDoNotPrintKeys=1
+20260705 02.51.26 A OK       ID147.93 APP Reset Locks.Var Set, %AIWAllowTempTools=0
+20260705 02.51.26 A OK       ID147.94 APP Reset Locks.Var Set, %AIWAllowHeavyCleanup=0
+20260705 02.51.26 A OK       ID147.95 APP Reset Locks.Var Set, %AIWDeviceTunedPatchAllowed=0
+20260705 02.51.26 A OK       ID147.96 APP Reset Locks.Var Set, %AIWFinalSystemTarget=50_CONTACT_MONTH_R..
+20260705 02.51.26 A OK       ID147.97 APP Reset Locks.Var Set, %AIWBackpressureMode=NORMAL
+20260705 02.51.26 A OK       ID147.98 APP Reset Locks.Var Set, %AIWNextPatchGate=PHONE_IMPORT_SAFE_..
+20260705 02.51.26 A OK       ID147.99 APP Reset Locks.Var Set, %AIWProofPatchVersion=V19I
+20260705 02.51.26 A OK       ID147.100 APP Reset Locks.Var Set, %AIWProofLoggingEnabled=1
+20260705 02.51.26 A OK       ID147.101 APP Reset Locks.Var Set, %AIWSendLogEnabled=1
+20260705 02.51.26 A OK       ID147.102 APP Reset Locks.Var Set, %AIWHealthLogEnabled=1
+20260705 02.51.26 A OK       ID147.103 APP Reset Locks.Var Set, %AIWProofSelfTestRequired=1
+20260705 02.51.26 A OK       ID147.104 APP Reset Locks.Var Set, %AIWProofLogSheet=AIWProofLog
+20260705 02.51.26 A OK       ID147.105 APP Reset Locks.Var Set, %AIWSendLogSheet=SendLog
+20260705 02.51.26 A OK       ID147.106 APP Reset Locks.Var Set, %AIWHealthLogSheet=HealthLog
+20260705 02.51.26 A OK       ID147.107 APP Reset Locks.Var Set, %AIWProofBoardSheet=AIWProofBoard
+20260705 02.51.26 A OK       ID147.108 APP Reset Locks.Var Set, %AIWDebugProofScope=NON_UI_ALL_MAJOR_S..
+20260705 02.51.26 A OK       ID147.109 APP Reset Locks.Var Set, %AIWProofEvent=APP Reset Locks_CO..
+20260705 02.51.26 A OK       ID147.110 APP Reset Locks.Var Set, %AIWProofStage=CONFIG_RESET
+20260705 02.51.26 A OK       ID147.111 APP Reset Locks.Var Set, %AIWProofResult=PASS
+20260705 02.51.26 A OK       ID147.112 APP Reset Locks.Var Set, %AIWProofRow=%AIWProofRow
+20260705 02.51.26 A OK       ID147.113 APP Reset Locks.Var Set, %AIWProofSender=%AIWProofSender
+20260705 02.51.26 A OK       ID147.114 APP Reset Locks.Var Set, %AIWProofStatusBefore=%AIWProofStatusBef..
+20260705 02.51.26 A OK       ID147.115 APP Reset Locks.Var Set, %AIWProofStatusAfter=%AIWProofStatusAfter
+20260705 02.51.26 A OK       ID147.116 APP Reset Locks.Var Set, %AIWProofDetails=APP Reset Locks co..
+20260705 02.51.26 A OK       ID147.117 APP Reset Locks.Var Set, %AIWProofError=RST-000 Locks rese..
+20260705 02.51.26 T Running  ID224:2  AIW PROOF Log Event
+20260705 02.51.26 A OK       ID147.118 APP Reset Locks.Perform Task, AIW PROOF Log Event
+20260705 02.51.26 A OK       ID224:2.1 AIW PROOF Log Event.If
+20260705 02.51.26 A OK       ID224:2.6 AIW PROOF Log Event.If
+20260705 02.51.26 A OK       ID224:2.7 AIW PROOF Log Event.If
+20260705 02.51.26 A OK       ID224:2.10 AIW PROOF Log Event.Var Add, %AIWProofLogIndex=[PHONE_REDACTED]5 02.51.26 A OK       ID224:2.11 AIW PROOF Log Event.If
+20260705 02.51.26 A OK       ID224:2.14 AIW PROOF Log Event.Var Set, %AIWProofTargetRow=[PHONE_REDACTED]5 02.51.26 A OK       ID224:2.15 AIW PROOF Log Event.Var Set, %AIWProofTS=7-5-26 02.51
+20260705 02.51.26 A OK       ID224:2.16 AIW PROOF Log Event.Var Set, %AIWProofData=7-5-26 02.51Â§V19IÂ§..
+20260705 02.51.27 A Err      ID224:2.17 AIW PROOF Log Event.com.joaomgcd.autosheets\n***\n*!&$*;com.joaomgcd.autosheets.activity.ActivityConfigUpdateCells, AIW PROOF Log Event
+20260705 02.51.27 A OK       ID224:2.18 AIW PROOF Log Event.com.joaomgcd.autosheets\n***\n*!&$*;com.joaomgcd.autosheets.activity.ActivityConfigUpdateCells, AIW PROOF Log Event
+20260705 02.51.27 A OK       ID224:2.19 AIW PROOF Log Event.Var Set, %AIWProofLastWrite=APP Reset Locks_CO..
+20260705 02.51.27 A OK       ID224:2.20 AIW PROOF Log Event.Var Set, %AIWProofWriteResult=OK
+20260705 02.51.27 A OK       ID224:2.21 AIW PROOF Log Event.End If
+20260705 02.51.27 T ExitOK   ID224:2  AIW PROOF Log Event
+20260705 02.51.27 A OK       ID147.119 APP Reset Locks.Var Set, %AIWStateProofPatchVersion=V19J
+20260705 02.51.27 A OK       ID147.120 APP Reset Locks.Var Set, %AIWRetryStateEnabled=1
+20260705 02.51.27 A OK       ID147.121 APP Reset Locks.Var Set, %AIWSenderStateEnabled=1
+20260705 02.51.27 A OK       ID147.122 APP Reset Locks.Var Set, %AIWBackpressureProofEnabled=1
+20260705 02.51.27 A OK       ID147.123 APP Reset Locks.Var Set, %AIWSystemConfigProofEnabled=1
+20260705 02.51.27 A OK       ID147.124 APP Reset Locks.Var Set, %AIWStateToolsSelfTestRequired=1
+20260705 02.51.27 A OK       ID147.125 APP Reset Locks.Var Set, %AIWDoNotChangeQueueSelectionUntilProofPass=1
+20260705 02.51.27 T Running  ID236:3  AIW SYSTEMCONFIG Write Snapshot
+20260705 02.51.27 A OK       ID147.126 APP Reset Locks.Perform Task, AIW SYSTEMCONFIG Write Snapshot
+20260705 02.51.27 A OK       ID236:3.1 AIW SYSTEMCONFIG Write Snapshot.If
+20260705 02.51.27 A OK       ID236:3.4 AIW SYSTEMCONFIG Write Snapshot.If
+20260705 02.51.27 A OK       ID236:3.5 AIW SYSTEMCONFIG Write Snapshot.Var Set, %AIWSystemConfigTS=7-5-26 02.51
+20260705 02.51.27 A OK       ID236:3.6 AIW SYSTEMCONFIG Write Snapshot.Var Set, %AIWSystemConfigData=7-5-26 02.51Â§V19JÂ§..
+20260705 02.51.28 A OK       ID236:3.7 AIW SYSTEMCONFIG Write Snapshot.com.joaomgcd.autosheets\n***\n*!&$*;com.joaomgcd.autosheets.activity.ActivityConfigUpdateCells, AIW SYSTEMCONFIG Write Snapshot
+20260705 02.51.28 A OK       ID236:3.8 AIW SYSTEMCONFIG Write Snapshot.com.joaomgcd.autosheets\n***\n*!&$*;com.joaomgcd.autosheets.activity.ActivityConfigUpdateCells, AIW SYSTEMCONFIG Write Snapshot
+20260705 02.51.28 A OK       ID236:3.9 AIW SYSTEMCONFIG Write Snapshot.Var Set, %AIWSystemConfigLastWrite=A2
+20260705 02.51.28 A OK       ID236:3.10 AIW SYSTEMCONFIG Write Snapshot.Var Set, %AIWSystemConfigWriteResult=OK
+20260705 02.51.28 A OK       ID236:3.11 AIW SYSTEMCONFIG Write Snapshot.End If
+20260705 02.51.28 T ExitOK   ID236:3  AIW SYSTEMCONFIG Write Snapshot
+20260705 02.51.28 A OK       ID147.127 APP Reset Locks.Var Set, %AIWV19MPhase=PHASE1_DEEP_RESEAR..
+20260705 02.51.28 A OK       ID147.128 APP Reset Locks.Var Set, %AIWV19MSourceSemanticHold=1
+20260705 02.51.28 A OK       ID147.129 APP Reset Locks.Var Set, %AIWV19MPhoneLiveHold=1
+20260705 02.51.28 A OK       ID147.130 APP Reset Locks.Var Set, %AIWV19MSendLiveHold=1
+20260705 02.51.28 A OK       ID147.131 APP Reset Locks.Var Set, %AIWCapacityTarget=50_CONTACTS_2_MSG_..
+20260705 02.51.28 A OK       ID147.132 APP Reset Locks.Var Set, %AIWV19MNextPatchGate=REBUILD_PROCESS_AN..
+20260705 02.51.28 A OK       ID147.133 APP Reset Locks.Var Set, %AIWV19MPhase=PROCESS_SEND_FLOW_..
+20260705 02.51.28 A OK       ID147.134 APP Reset Locks.Var Set, %AIWV19MProcessSemanticHold=0
+20260705 02.51.28 A OK       ID147.135 APP Reset Locks.Var Set, %AIWV19MProcessFlowRebuilt=1
+20260705 02.51.28 A OK       ID147.136 APP Reset Locks.Var Set, %AIWV19MSendLiveHold=1
+20260705 02.51.28 A OK       ID147.137 APP Reset Locks.Var Set, %AIWV19MSendFlowDryRunOnly=1
+20260705 02.51.28 A OK       ID147.138 APP Reset Locks.Var Set, %AIWV19MPhoneLiveHold=1
+20260705 02.51.28 A OK       ID147.139 APP Reset Locks.Var Set, %AIWV19MNextPatchGate=PHONE_PROOF_PROCES..
+20260705 02.51.28 T ExitOK   ID147    APP Reset Locks
+20260705 02.51.32 E Stop     ID0:0.0  TaskService
+20260705 02.51.52 E Start    ID0:0.0  TaskService
+20260705 02.51.56 T Running  ID12     APP Status Snapshot Simple
+20260705 02.51.56 A OK       ID12.1   APP Status Snapshot Simple.Var Set, %SnapPower=OFF
+20260705 02.51.56 A OK       ID12.2   APP Status Snapshot Simple.If
+20260705 02.51.56 A OK       ID12.5   APP Status Snapshot Simple.Var Set, %SnapSafe=OFF
+20260705 02.51.56 A OK       ID12.6   APP Status Snapshot Simple.If
+20260705 02.51.56 A OK       ID12.7   APP Status Snapshot Simple.Var Set, %SnapSafe=ON
+20260705 02.51.56 A OK       ID12.8   APP Status Snapshot Simple.End If
+20260705 02.51.56 A OK       ID12.9   APP Status Snapshot Simple.Var Set, %SnapBusy=READY
+20260705 02.51.56 A OK       ID12.10  APP Status Snapshot Simple.If
+20260705 02.51.56 A OK       ID12.13  APP Status Snapshot Simple.Var Set, %SnapProcess=OFF
+20260705 02.51.56 A OK       ID12.14  APP Status Snapshot Simple.If
+20260705 02.51.56 A OK       ID12.17  APP Status Snapshot Simple.Var Set, %SnapSend=OFF
+20260705 02.51.56 A OK       ID12.18  APP Status Snapshot Simple.If
+20260705 02.51.56 A OK       ID12.21  APP Status Snapshot Simple.Var Set, %SnapArchive=OFF
+20260705 02.51.56 A OK       ID12.22  APP Status Snapshot Simple.If
+20260705 02.51.56 A OK       ID12.25  APP Status Snapshot Simple.Flash, APP Status Snapshot Simple
+20260705 02.51.56 T ExitOK   ID12     APP Status Snapshot Simple
+20260705 02.54.23 E Stop     ID0:0.0  TaskService
+20260705 02.55.01 E Start    ID0:0.0  TaskService
+20260705 02.55.02 T Running  ID147    APP Reset Locks
+20260705 02.55.02 A OK       ID147.1  APP Reset Locks.Var Set, %AIWorkerBusy=0
+20260705 02.55.02 A OK       ID147.2  APP Reset Locks.Var Set, %AIWProcessing=0
+20260705 02.55.02 A OK       ID147.3  APP Reset Locks.Var Set, %AIWorkerLastError=RST-000 Locks rese..
+20260705 02.55.02 A OK       ID147.4  APP Reset Locks.Var Set, %PSProcessingReady=0
+20260705 02.55.02 A OK       ID147.5  APP Reset Locks.Var Set, %PSActiveRows=0
+20260705 02.55.02 A OK       ID147.6  APP Reset Locks.Var Set, %PSReadWindow=0
+20260705 02.55.02 A OK       ID147.7  APP Reset Locks.Var Set, %PSQueuePressure=0
+20260705 02.55.02 A OK       ID147.8  APP Reset Locks.Var Set, %PSProcessThisRow=0
+20260705 02.55.02 A OK       ID147.9  APP Reset Locks.Var Set, %PSMainIndex=0
+20260705 02.55.02 A OK       ID147.10 APP Reset Locks.Var Set, %PSMainRow=0
+20260705 02.55.02 A OK       ID147.11 APP Reset Locks.Var Set, %PSSenderValid=0
+20260705 02.55.02 A OK       ID147.12 APP Reset Locks.Var Set, %PSGroupCount=0
+20260705 02.55.02 A OK       ID147.13 APP Reset Locks.Var Set, %AIWSending=0
+20260705 02.55.02 A OK       ID147.14 APP Reset Locks.Var Set, %PSValidWork=0
+20260705 02.55.02 A OK       ID147.15 APP Reset Locks.Var Set, %PSHttpSuccess=0
+20260705 02.55.02 A OK       ID147.16 APP Reset Locks.Var Set, %PSReplyValid=0
+20260705 02.55.02 A OK       ID147.17 APP Reset Locks.Var Set, %PSMode=NONE
+20260705 02.55.02 A OK       ID147.18 APP Reset Locks.Var Set, %PSMarkedProcessing=0
+20260705 02.55.03 A OK       ID147.19 APP Reset Locks.Var Set, %PSBuildPromptOk=0
+20260705 02.55.03 A OK       ID147.20 APP Reset Locks.Var Set, %PSValidWork=0
+20260705 02.55.03 A OK       ID147.21 APP Reset Locks.Var Set, %PSSenderValid=0
+20260705 02.55.03 A OK       ID147.22 APP Reset Locks.Var Set, %PSHttpCode=0
+20260705 02.55.03 A OK       ID147.23 APP Reset Locks.Var Set, %PSSenderType=BAD
+20260705 02.55.03 A OK       ID147.24 APP Reset Locks.Var Set, %AIWArchiving=0
+20260705 02.55.03 A OK       ID147.25 APP Reset Locks.Var Clear, %PSReadRange=%PSReadRange
+20260705 02.55.03 A OK       ID147.26 APP Reset Locks.Var Clear, %PSPressureMode=%PSPressureMode
+20260705 02.55.03 A OK       ID147.27 APP Reset Locks.Var Clear, %PSSenderRaw=%PSSenderRaw
+20260705 02.55.03 A OK       ID147.28 APP Reset Locks.Var Clear, %PSSenderKey=%PSSenderKey
+20260705 02.55.03 A OK       ID147.29 APP Reset Locks.Var Clear, %PSNewestMessage=%PSNewestMessage
+20260705 02.55.03 A OK       ID147.30 APP Reset Locks.Var Clear, %PSGroupPolicy=%PSGroupPolicy
+20260705 02.55.03 A OK       ID147.31 APP Reset Locks.Var Clear, %PSIncludedIndexes=%PSIncludedIndexes
+20260705 02.55.03 A OK       ID147.32 APP Reset Locks.Var Clear, %PSGroupMessages=%PSGroupMessages
+20260705 02.55.03 A OK       ID147.33 APP Reset Locks.Var Clear, %PSDebug=%PSDebug
+20260705 02.55.03 A OK       ID147.34 APP Reset Locks.Var Clear, %PSFailureStatus=%PSFailureStatus
+20260705 02.55.03 A OK       ID147.35 APP Reset Locks.Var Set, %AIWRetrying=0
+20260705 02.55.03 A OK       ID147.36 APP Reset Locks.Var Clear, %PSError=%PSError
+20260705 02.55.03 A OK       ID147.37 APP Reset Locks.Var Clear, %PSReply=%PSReply
+20260705 02.55.03 A OK       ID147.38 APP Reset Locks.Var Clear, %PSFinalStatus=%PSFinalStatus
+20260705 02.55.03 A OK       ID147.39 APP Reset Locks.Var Clear, %CurrentMessageBlock=%CurrentMessageBlock
+20260705 02.55.03 A OK       ID147.40 APP Reset Locks.Var Clear, %BrainRules=%BrainRules
+20260705 02.55.03 A OK       ID147.41 APP Reset Locks.Var Clear, %PresetMatch=%PresetMatch
+20260705 02.55.03 A OK       ID147.42 APP Reset Locks.Var Clear, %PresetReply=%PresetReply
+20260705 02.55.03 A OK       ID147.43 APP Reset Locks.Var Clear, %ConversationHistory=%ConversationHistory
+20260705 02.55.03 A OK       ID147.44 APP Reset Locks.Var Clear, %FinalPrompt=%FinalPrompt
+20260705 02.55.03 A OK       ID147.45 APP Reset Locks.Var Clear, %SafeSystemPrompt=%SafeSystemPrompt
+20260705 02.55.03 A OK       ID147.46 APP Reset Locks.Var Set, %AIWCompacting=0
+20260705 02.55.03 A OK       ID147.47 APP Reset Locks.Var Clear, %SafeUserPrompt=%SafeUserPrompt
+20260705 02.55.03 A OK       ID147.48 APP Reset Locks.Var Clear, %PSSenderKey=%PSSenderKey
+20260705 02.55.03 A OK       ID147.49 APP Reset Locks.Var Clear, %PSSender=%PSSender
+20260705 02.55.03 A OK       ID147.50 APP Reset Locks.Var Clear, %PSSenderRaw=%PSSenderRaw
+20260705 02.55.03 A OK       ID147.51 APP Reset Locks.Var Clear, %PSNewestMessage=%PSNewestMessage
+20260705 02.55.03 A OK       ID147.52 APP Reset Locks.Var Clear, %PSHttpData=%PSHttpData
+20260705 02.55.03 A OK       ID147.53 APP Reset Locks.Var Clear, %AIWSimpleLogging=%AIWSimpleLogging
+20260705 02.55.03 A OK       ID147.54 APP Reset Locks.Var Clear, %AIWSimpleLoggingStartedAt=%AIWSimpleLoggingS..
+20260705 02.55.03 A OK       ID147.55 APP Reset Locks.Var Clear, %AIWNextLogRow=%AIWNextLogRow
+20260705 02.55.03 A OK       ID147.56 APP Reset Locks.Var Clear, %SNrealrow=%SNrealrow
+20260705 02.55.03 A OK       ID147.57 APP Reset Locks.Var Set, %AIWDeadArchiving=0
+20260705 02.55.03 A OK       ID147.58 APP Reset Locks.Var Set, %AIWArchiveEnabled=0
+20260705 02.55.03 A OK       ID147.59 APP Reset Locks.Var Set, %AIWDeadArchiveEnabled=0
+20260705 02.55.03 A OK       ID147.60 APP Reset Locks.Var Set, %AIWCompactorEnabled=0
+20260705 02.55.03 A OK       ID147.61 APP Reset Locks.Var Set, %AIWArchiveGraceSec=[PHONE_REDACTED]5 02.55.03 A OK       ID147.62 APP Reset Locks.Var Set, %AIWFastSendPrepass=0
+20260705 02.55.03 A OK       ID147.63 APP Reset Locks.Var Set, %AIWSendSameChatFastPath=0
+20260705 02.55.03 A OK       ID147.64 APP Reset Locks.Var Set, %AIWDebugLevel=0
+20260705 02.55.03 A OK       ID147.65 APP Reset Locks.Var Set, %AIWDebugPopups=0
+20260705 02.55.03 A OK       ID147.66 APP Reset Locks.Var Set, %AIWDebugSheetLog=0
+20260705 02.55.03 A OK       ID147.67 APP Reset Locks.Var Set, %AIWRepairTestMode=0
+20260705 02.55.03 A OK       ID147.68 APP Reset Locks.Var Set, %AIWWatchdogging=0
+20260705 02.55.03 A OK       ID147.69 APP Reset Locks.Var Clear, %SNsender=%SNsender
+20260705 02.55.03 A OK       ID147.70 APP Reset Locks.Var Clear, %SNmessage=%SNmessage
+20260705 02.55.03 A OK       ID147.71 APP Reset Locks.Var Clear, %SNticker=%SNticker
+20260705 02.55.03 A OK       ID147.72 APP Reset Locks.Var Clear, %SNid=%SNid
+20260705 02.55.03 A OK       ID147.73 APP Reset Locks.Var Clear, %SNrealrow=%SNrealrow
+20260705 02.55.03 A OK       ID147.74 APP Reset Locks.Var Clear, %SNFingerprint=%SNFingerprint
+20260705 02.55.03 A OK       ID147.75 APP Reset Locks.Var Clear, %LastInboundFingerprint=%LastInboundFinger..
+20260705 02.55.03 A OK       ID147.76 APP Reset Locks.Var Clear, %LastInboundLogTime=%LastInboundLogTime
+20260705 02.55.03 A OK       ID147.77 APP Reset Locks.Var Clear, %SNSheetDuplicate=%SNSheetDuplicate
+20260705 02.55.03 A OK       ID147.78 APP Reset Locks.Var Clear, %OVLogResult=%OVLogResult
+20260705 02.55.03 A OK       ID147.79 APP Reset Locks.Var Set, %AIWQueueChecking=0
+20260705 02.55.03 A OK       ID147.80 APP Reset Locks.Var Set, %AIWOverflowPendingCount=0
+20260705 02.55.03 A OK       ID147.81 APP Reset Locks.Var Clear, %OVPendingCheckOK=%OVPendingCheckOK
+20260705 02.55.03 A OK       ID147.82 APP Reset Locks.Var Set, %AIWorkerKickPending=0
+20260705 02.55.03 A OK       ID147.83 APP Reset Locks.Var Set, %AIWSourceLock=1
+20260705 02.55.03 A OK       ID147.84 APP Reset Locks.Var Set, %AIWPatchMode=SAFE_NON_UI_GUARD_..
+20260705 02.55.03 A OK       ID147.85 APP Reset Locks.Var Set, %AIWBestWorkStandard=1
+20260705 02.55.03 A OK       ID147.86 APP Reset Locks.Var Set, %AIWNoUnrelatedChanges=1
+20260705 02.55.03 A OK       ID147.87 APP Reset Locks.Var Set, %AIWPrivacyBoundary=POLICY_OR_USER_APP..
+20260705 02.55.03 A OK       ID147.88 APP Reset Locks.Var Set, %AIWDoNotTouchTextNowUI=1
+20260705 02.55.03 A OK       ID147.89 APP Reset Locks.Var Set, %AIWDoNotTouchAutoInput=1
+20260705 02.55.03 A OK       ID147.90 APP Reset Locks.Var Set, %AIWDeviceTunedFrozen=1
+20260705 02.55.03 A OK       ID147.91 APP Reset Locks.Var Set, %AIWPreserveKeysInWithKeyPackage=1
+20260705 02.55.03 A OK       ID147.92 APP Reset Locks.Var Set, %AIWDoNotPrintKeys=1
+20260705 02.55.03 A OK       ID147.93 APP Reset Locks.Var Set, %AIWAllowTempTools=0
+20260705 02.55.03 A OK       ID147.94 APP Reset Locks.Var Set, %AIWAllowHeavyCleanup=0
+20260705 02.55.03 A OK       ID147.95 APP Reset Locks.Var Set, %AIWDeviceTunedPatchAllowed=0
+20260705 02.55.03 A OK       ID147.96 APP Reset Locks.Var Set, %AIWFinalSystemTarget=50_CONTACT_MONTH_R..
+20260705 02.55.03 A OK       ID147.97 APP Reset Locks.Var Set, %AIWBackpressureMode=NORMAL
+20260705 02.55.03 A OK       ID147.98 APP Reset Locks.Var Set, %AIWNextPatchGate=PHONE_IMPORT_SAFE_..
+20260705 02.55.03 A OK       ID147.99 APP Reset Locks.Var Set, %AIWProofPatchVersion=V19I
+20260705 02.55.03 A OK       ID147.100 APP Reset Locks.Var Set, %AIWProofLoggingEnabled=1
+20260705 02.55.03 A OK       ID147.101 APP Reset Locks.Var Set, %AIWSendLogEnabled=1
+20260705 02.55.03 A OK       ID147.102 APP Reset Locks.Var Set, %AIWHealthLogEnabled=1
+20260705 02.55.03 A OK       ID147.103 APP Reset Locks.Var Set, %AIWProofSelfTestRequired=1
+20260705 02.55.03 A OK       ID147.104 APP Reset Locks.Var Set, %AIWProofLogSheet=AIWProofLog
+20260705 02.55.03 A OK       ID147.105 APP Reset Locks.Var Set, %AIWSendLogSheet=SendLog
+20260705 02.55.03 A OK       ID147.106 APP Reset Locks.Var Set, %AIWHealthLogSheet=HealthLog
+20260705 02.55.03 A OK       ID147.107 APP Reset Locks.Var Set, %AIWProofBoardSheet=AIWProofBoard
+20260705 02.55.03 A OK       ID147.108 APP Reset Locks.Var Set, %AIWDebugProofScope=NON_UI_ALL_MAJOR_S..
+20260705 02.55.03 A OK       ID147.109 APP Reset Locks.Var Set, %AIWProofEvent=APP Reset Locks_CO..
+20260705 02.55.03 A OK       ID147.110 APP Reset Locks.Var Set, %AIWProofStage=CONFIG_RESET
+20260705 02.55.03 A OK       ID147.111 APP Reset Locks.Var Set, %AIWProofResult=PASS
+20260705 02.55.03 A OK       ID147.112 APP Reset Locks.Var Set, %AIWProofRow=%AIWProofRow
+20260705 02.55.03 A OK       ID147.113 APP Reset Locks.Var Set, %AIWProofSender=%AIWProofSender
+20260705 02.55.03 A OK       ID147.114 APP Reset Locks.Var Set, %AIWProofStatusBefore=%AIWProofStatusBef..
+20260705 02.55.03 A OK       ID147.115 APP Reset Locks.Var Set, %AIWProofStatusAfter=%AIWProofStatusAfter
+20260705 02.55.03 A OK       ID147.116 APP Reset Locks.Var Set, %AIWProofDetails=APP Reset Locks co..
+20260705 02.55.03 A OK       ID147.117 APP Reset Locks.Var Set, %AIWProofError=RST-000 Locks rese..
+20260705 02.55.03 T Running  ID224:2  AIW PROOF Log Event
+20260705 02.55.03 A OK       ID147.118 APP Reset Locks.Perform Task, AIW PROOF Log Event
+20260705 02.55.03 A OK       ID224:2.1 AIW PROOF Log Event.If
+20260705 02.55.03 A OK       ID224:2.6 AIW PROOF Log Event.If
+20260705 02.55.03 A OK       ID224:2.7 AIW PROOF Log Event.If
+20260705 02.55.03 A OK       ID224:2.10 AIW PROOF Log Event.Var Add, %AIWProofLogIndex=[PHONE_REDACTED]5 02.55.03 A OK       ID224:2.11 AIW PROOF Log Event.If
+20260705 02.55.03 A OK       ID224:2.14 AIW PROOF Log Event.Var Set, %AIWProofTargetRow=[PHONE_REDACTED]5 02.55.03 A OK       ID224:2.15 AIW PROOF Log Event.Var Set, %AIWProofTS=7-5-26 02.55
+20260705 02.55.03 A OK       ID224:2.16 AIW PROOF Log Event.Var Set, %AIWProofData=7-5-26 02.55Â§V19IÂ§..
+20260705 02.55.04 A Err      ID224:2.17 AIW PROOF Log Event.com.joaomgcd.autosheets\n***\n*!&$*;com.joaomgcd.autosheets.activity.ActivityConfigUpdateCells, AIW PROOF Log Event
+20260705 02.55.05 A OK       ID224:2.18 AIW PROOF Log Event.com.joaomgcd.autosheets\n***\n*!&$*;com.joaomgcd.autosheets.activity.ActivityConfigUpdateCells, AIW PROOF Log Event
+20260705 02.55.05 A OK       ID224:2.19 AIW PROOF Log Event.Var Set, %AIWProofLastWrite=APP Reset Locks_CO..
+20260705 02.55.05 A OK       ID224:2.20 AIW PROOF Log Event.Var Set, %AIWProofWriteResult=OK
+20260705 02.55.05 A OK       ID224:2.21 AIW PROOF Log Event.End If
+20260705 02.55.05 T ExitOK   ID224:2  AIW PROOF Log Event
+20260705 02.55.05 A OK       ID147.119 APP Reset Locks.Var Set, %AIWStateProofPatchVersion=V19J
+20260705 02.55.05 A OK       ID147.120 APP Reset Locks.Var Set, %AIWRetryStateEnabled=1
+20260705 02.55.05 A OK       ID147.121 APP Reset Locks.Var Set, %AIWSenderStateEnabled=1
+20260705 02.55.05 A OK       ID147.122 APP Reset Locks.Var Set, %AIWBackpressureProofEnabled=1
+20260705 02.55.05 A OK       ID147.123 APP Reset Locks.Var Set, %AIWSystemConfigProofEnabled=1
+20260705 02.55.05 A OK       ID147.124 APP Reset Locks.Var Set, %AIWStateToolsSelfTestRequired=1
+20260705 02.55.05 A OK       ID147.125 APP Reset Locks.Var Set, %AIWDoNotChangeQueueSelectionUntilProofPass=1
+20260705 02.55.05 T Running  ID236:3  AIW SYSTEMCONFIG Write Snapshot
+20260705 02.55.05 A OK       ID147.126 APP Reset Locks.Perform Task, AIW SYSTEMCONFIG Write Snapshot
+20260705 02.55.05 A OK       ID236:3.1 AIW SYSTEMCONFIG Write Snapshot.If
+20260705 02.55.05 A OK       ID236:3.4 AIW SYSTEMCONFIG Write Snapshot.If
+20260705 02.55.05 A OK       ID236:3.5 AIW SYSTEMCONFIG Write Snapshot.Var Set, %AIWSystemConfigTS=7-5-26 02.55
+20260705 02.55.05 A OK       ID236:3.6 AIW SYSTEMCONFIG Write Snapshot.Var Set, %AIWSystemConfigData=7-5-26 02.55Â§V19JÂ§..
+20260705 02.55.05 A OK       ID236:3.7 AIW SYSTEMCONFIG Write Snapshot.com.joaomgcd.autosheets\n***\n*!&$*;com.joaomgcd.autosheets.activity.ActivityConfigUpdateCells, AIW SYSTEMCONFIG Write Snapshot
+20260705 02.55.05 A OK       ID236:3.8 AIW SYSTEMCONFIG Write Snapshot.com.joaomgcd.autosheets\n***\n*!&$*;com.joaomgcd.autosheets.activity.ActivityConfigUpdateCells, AIW SYSTEMCONFIG Write Snapshot
+20260705 02.55.05 A OK       ID236:3.9 AIW SYSTEMCONFIG Write Snapshot.Var Set, %AIWSystemConfigLastWrite=A2
+20260705 02.55.05 A OK       ID236:3.10 AIW SYSTEMCONFIG Write Snapshot.Var Set, %AIWSystemConfigWriteResult=OK
+20260705 02.55.05 A OK       ID236:3.11 AIW SYSTEMCONFIG Write Snapshot.End If
+20260705 02.55.05 T ExitOK   ID236:3  AIW SYSTEMCONFIG Write Snapshot
+20260705 02.55.05 A OK       ID147.127 APP Reset Locks.Var Set, %AIWV19MPhase=PHASE1_DEEP_RESEAR..
+20260705 02.55.05 A OK       ID147.128 APP Reset Locks.Var Set, %AIWV19MSourceSemanticHold=1
+20260705 02.55.05 A OK       ID147.129 APP Reset Locks.Var Set, %AIWV19MPhoneLiveHold=1
+20260705 02.55.05 A OK       ID147.130 APP Reset Locks.Var Set, %AIWV19MSendLiveHold=1
+20260705 02.55.05 A OK       ID147.131 APP Reset Locks.Var Set, %AIWCapacityTarget=50_CONTACTS_2_MSG_..
+20260705 02.55.06 A OK       ID147.132 APP Reset Locks.Var Set, %AIWV19MNextPatchGate=REBUILD_PROCESS_AN..
+20260705 02.55.06 A OK       ID147.133 APP Reset Locks.Var Set, %AIWV19MPhase=PROCESS_SEND_FLOW_..
+20260705 02.55.06 A OK       ID147.134 APP Reset Locks.Var Set, %AIWV19MProcessSemanticHold=0
+20260705 02.55.06 A OK       ID147.135 APP Reset Locks.Var Set, %AIWV19MProcessFlowRebuilt=1
+20260705 02.55.06 A OK       ID147.136 APP Reset Locks.Var Set, %AIWV19MSendLiveHold=1
+20260705 02.55.06 A OK       ID147.137 APP Reset Locks.Var Set, %AIWV19MSendFlowDryRunOnly=1
+20260705 02.55.06 A OK       ID147.138 APP Reset Locks.Var Set, %AIWV19MPhoneLiveHold=1
+20260705 02.55.06 A OK       ID147.139 APP Reset Locks.Var Set, %AIWV19MNextPatchGate=PHONE_PROOF_PROCES..
+20260705 02.55.06 T ExitOK   ID147    APP Reset Locks
+20260705 02.55.08 E Stop     ID0:0.0  TaskService
+20260705 02.55.12 E Start    ID0:0.0  TaskService
+20260705 02.55.13 T Running  ID12     APP Status Snapshot Simple
+20260705 02.55.14 A OK       ID12.1   APP Status Snapshot Simple.Var Set, %SnapPower=OFF
+20260705 02.55.14 A OK       ID12.2   APP Status Snapshot Simple.If
+20260705 02.55.14 A OK       ID12.5   APP Status Snapshot Simple.Var Set, %SnapSafe=OFF
+20260705 02.55.14 A OK       ID12.6   APP Status Snapshot Simple.If
+20260705 02.55.14 A OK       ID12.7   APP Status Snapshot Simple.Var Set, %SnapSafe=ON
+20260705 02.55.14 A OK       ID12.8   APP Status Snapshot Simple.End If
+20260705 02.55.14 A OK       ID12.9   APP Status Snapshot Simple.Var Set, %SnapBusy=READY
+20260705 02.55.14 A OK       ID12.10  APP Status Snapshot Simple.If
+20260705 02.55.14 A OK       ID12.13  APP Status Snapshot Simple.Var Set, %SnapProcess=OFF
+20260705 02.55.14 A OK       ID12.14  APP Status Snapshot Simple.If
+20260705 02.55.14 A OK       ID12.17  APP Status Snapshot Simple.Var Set, %SnapSend=OFF
+20260705 02.55.14 A OK       ID12.18  APP Status Snapshot Simple.If
+20260705 02.55.14 A OK       ID12.21  APP Status Snapshot Simple.Var Set, %SnapArchive=OFF
+20260705 02.55.14 A OK       ID12.22  APP Status Snapshot Simple.If
+20260705 02.55.14 A OK       ID12.25  APP Status Snapshot Simple.Flash, APP Status Snapshot Simple
+20260705 02.55.14 T ExitOK   ID12     APP Status Snapshot Simple
+20260705 02.55.19 E Stop     ID0:0.0  TaskService
+

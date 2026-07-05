@@ -8,7 +8,7 @@ CANDIDATE / HOLD FOR PHONE PROOF
 
 Stage-specific status:
 
-HOLD / NEED FINAL RUN LOG AND TRIGGER STATE VERIFICATION
+HOLD / TRIGGER CAPTURE PROVEN, SAFETY TASK CLEAN EXIT NOT PROVEN
 
 ## Goal
 
@@ -41,10 +41,18 @@ This retry used the Moto Razr 2024 with TeamViewer remote view and the 2ndLine a
 6. FINAL TextNow Trigger was visually enabled for the test window.
 7. FINAL-Z-WOKER Every 2m Tick appeared visually off during the test window.
 8. 2ndLine sent exactly one visible outbound test message from the Moto sender app.
-9. The actual sent test message content was `636`.
+9. The visible sent test message looked like `636`.
 10. FINAL TextNow Trigger was visually disabled after the message.
 11. Proof-log Sheet checks found no `STAGE3A` or `636` marker in AIWProofLog.
 12. HealthLog and SendLog tail checks did not show visible proof rows in the checked ranges.
+13. Post-test Tasker Run Log screenshot was captured after the same-device retry.
+14. Tasker Run Log external text view opened as `runlog.txt` on the Moto.
+15. User confirmed the runlog was downloaded on the Moto.
+16. Full runlog was pulled from Drive folder `AI Work / phone to pc`.
+17. Redacted runlog audit found two `FINAL TextNow Trigger` firings on 2026-07-05.
+18. The retry message captured by Tasker was `63s6`.
+19. The retry `FINAL Simple` path exited OK.
+20. During the 2026-07-05 test window, the runlog showed 0 hits for `FINAL Send Sheet`, `FINAL Queue Cycle`, `AIW AUTO LIVE START V1`, `APP Start AI Worker`, `APP Run Tick Once`, and `AIW AUTO LIVE TICK V1`.
 
 ## Important Limits
 
@@ -53,11 +61,14 @@ This retry is not enough to pass Stage 3A.
 Reasons:
 
 - The sender was 2ndLine on the same Moto, not a separate external sender.
-- The intended message text was not entered correctly. The sent text was `636`.
-- No post-test Tasker Run Log screenshot was captured.
+- The user approved same-device 2ndLine sending as valid enough for this Stage 3A cleanup proof only.
+- The intended message text was not entered correctly. The runlog captured the retry text as `63s6`.
+- Full runlog text has now been copied into the repo as a redacted audit copy.
 - The user raised a concern that the Tasker check/apply button may not have been tapped after enabling the trigger.
 - Trigger enabled/disabled state is visual proof only, not Run Log proof.
 - Sheet proof did not show a matching Stage 3A proof marker in the checked proof tabs.
+- Safety/setup tasks around the retry did not cleanly exit in the runlog.
+- A task named `AIW SEND 1` was attempted before the trigger proof and failed; this was not `FINAL Send Sheet`, but it is unresolved test noise.
 
 ## Trigger Apply Concern
 
@@ -95,14 +106,20 @@ This is not a proof failure. It only means no Sheet-side Stage 3A proof was foun
 - `20260704_STAGE3A_TRIGGER_ENABLED_TIMER_OFF_TEAMVIEWER.png`
 - `20260704_STAGE3A_2NDLINE_SINGLE_MESSAGE_SENT_TEAMVIEWER.png`
 - `20260704_STAGE3A_TRIGGER_DISABLED_AFTER_MESSAGE_TEAMVIEWER.png`
+- `20260704_STAGE3A_TASKER_PROFILES_AFTER_SAME_DEVICE_RETRY_TEAMVIEWER.png`
+- `20260704_STAGE3A_RUNLOG_AFTER_SAME_DEVICE_RETRY_TEAMVIEWER.png`
+- `20260704_STAGE3A_RUNLOG_EXPORTED_TEXT_OPENED_TEAMVIEWER.png`
+- `runlog_STAGE3A_same_device_retry_REDACTED_20260705.txt`
+- `AIW_BUILD100_STAGE3A_RUNLOG_AUDIT_20260705.md`
 
 ## Missing Proof
 
-- Post-test Tasker Run Log screenshot.
-- Confirmed FINAL TextNow Trigger profile state after the retry.
+- Confirmed FINAL TextNow Trigger profile state after the retry from a clear final screenshot or Run Log entry.
 - Confirmation whether Tasker required a check/apply tap after trigger toggle.
 - Sheet-side capture row, if capture wrote one.
-- Separate external-sender proof.
+- Clean rerun proving stop/safe/reset tasks exit OK before trigger.
+- Explanation or avoidance of the failed `AIW SEND 1` attempts.
+- Separate external-sender proof is not required for this cleanup proof because the user approved same-device 2ndLine for this stage only.
 
 ## Classification
 
@@ -115,14 +132,19 @@ CANDIDATE:
 - Build100 remains candidate.
 - Safe Mode ON visual proof exists for this retry.
 - Trigger enable/disable visual evidence exists for this retry.
+- Post-test Run Log screenshot proof exists.
+- Moto-side `runlog.txt` external view/download path was reached.
+- Full redacted runlog is now in the proof folder.
+- Trigger capture is proven by runlog.
+- No final send, queue cycle, auto-live start, run tick, or live timer path is shown in the 2026-07-05 test window.
 
 HOLD:
 
-- Stage 3A remains hold because final Run Log proof and trigger-state verification are missing.
+- Stage 3A remains hold because safety/setup tasks did not cleanly exit and final trigger-state verification is still incomplete.
 
 HARD HOLD:
 
-- Do not move to process-only, send dry-run, one-send, timer, or live-loop testing until Stage 3A Run Log proof is captured.
+- Do not move to process-only, send dry-run, one-send, timer, or live-loop testing until a clean Stage 3A rerun proves stop/safe/reset, one trigger marker, trigger OFF, timer OFF, and no send/queue/archive/compactor paths.
 
 FAILED:
 
@@ -132,12 +154,16 @@ FAILED:
 
 Safest next action is not a patch.
 
-Safest next action is a controlled Stage 3A cleanup proof:
+Safest next action is a clean Stage 3A rerun:
 
-1. Open Tasker Run Log.
-2. Confirm what happened after the 2ndLine message.
-3. Reopen Profiles.
-4. Confirm FINAL TextNow Trigger is OFF.
-5. Confirm FINAL-Z-WOKER Every 2m Tick is OFF.
-6. Capture screenshots.
-7. If the trigger did not apply or no Run Log entries exist, rerun Stage 3A from the beginning with a separate external sender.
+1. Stop/lockdown.
+2. Safe Mode ON.
+3. Reset Locks.
+4. Baseline or clear Run Log.
+5. Confirm FINAL TextNow Trigger OFF.
+6. Confirm FINAL-Z-WOKER Every 2m Tick OFF.
+7. Enable trigger only.
+8. Send one clear marker from the approved sender path.
+9. Disable trigger.
+10. Export Run Log.
+11. Confirm no send, queue, archive, compactor, or auto-live start path ran.
