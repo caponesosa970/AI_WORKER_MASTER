@@ -19,6 +19,25 @@ Remote:
 - `ee65a25` - Add Stage 3A same-device retry hold proof
 - `b93fd95` - Add Stage 3A same-device retry audit prompt
 - `8fc84fb` - Add Stage 3A cleanup proof checklist
+- `b140247` - Add Stage 3A sync note
+- `bcb1c15` - Add controlled-test Build100 source routing
+- `2425307` - Preserve Tasker XML bytes in Git
+
+## Controlled-Test XML In GitHub Branch
+
+Current controlled-test XML:
+
+`01_CANDIDATE_PATCHES/AIW_BUILD100_CONTROLLED_TEST_HOLD_FULL_TASKER.xml`
+
+SHA256:
+
+`99B2A1C8C9AE1FF3FF191F49ACA9245DAEA45A5FA08810EAE89D3DAB5BF18D7F`
+
+Byte-preservation check:
+
+- Git HEAD blob SHA256 matches working file SHA256.
+- Git HEAD blob byte length matches working file byte length.
+- `.gitattributes` now contains `*.xml -text` so Tasker XML is not line-ending-normalized by Git.
 
 ## Local ZIP For ChatGPT Audit
 
