@@ -10,22 +10,22 @@ CANDIDATE / HOLD FOR CHATGPT AUDIT
 
 build100-phone-proof
 
-## Subsystem Plan Commit Hash
+## Latest Commit Hash At Report Time
 
-d9feefb547b43bfce1b10de57a62cd852e145424
+ee49d36ff45363f5fd2fa1787b918d9d89c2cad7
 
-## Runtime XML Change Check For Subsystem Plan Commit
+## Runtime XML Change Check For This Subsystem Pass
 
-`	ext
+~~~text
 
-`
+~~~
 
-Result: empty block means no runtime XML changed in the subsystem plan commit.
+Result: empty block means no runtime XML changed across the subsystem plan commits.
 
-## Git Status After Subsystem Plan Commit
+## Git Status At Report Time
 
-`	ext
-## build100-phone-proof...origin/build100-phone-proof [ahead 1]
+~~~text
+## build100-phone-proof...origin/build100-phone-proof [ahead 2]
 ?? 01_CANDIDATE_PATCHES/AIW_BUILD100_GROUP_B_CONTACT_PICK_PATCHED_FULL_TASKER_20260705.xml
 ?? 01_CANDIDATE_PATCHES/BUILD100_GROUP_B_CONTACT_PICK/
 ?? 01_CANDIDATE_PATCHES/BUILD100_GROUP_B_SEARCH_ICON_IMPORT_SAFE/
@@ -91,98 +91,63 @@ Result: empty block means no runtime XML changed in the subsystem plan commit.
 ?? PRIVATE_WITH_KEY/runtime_xml/AIW_BUILD100_GROUP_B_SEARCH_ICON_PATCHED_WITH_KEY_PRIVATE_20260705.xml
 ?? PRIVATE_WITH_KEY/runtime_xml/take_api_WITH_KEY_PRIVATE_20260705.xml
 ?? scripts/patch-search-icon-byte-preserve.ps1
-`
+~~~
 
 ## Git Log -1 --stat
 
-`	ext
-commit d9feefb547b43bfce1b10de57a62cd852e145424
+~~~text
+commit ee49d36ff45363f5fd2fa1787b918d9d89c2cad7
 Author: caponesosa970 <caponesosa970@users.noreply.github.com>
-Date:   Sun Jul 5 16:23:13 2026 -0700
+Date:   Sun Jul 5 16:23:40 2026 -0700
 
-    Add Build100 subsystem completion plan
+    Update subsystem completion git proof
 
- .../CURRENT_BUILD_STATUS.md                        |  69 ++++++++
- .../FROZEN_LOGIC_REGISTER.md                       |  51 ++++++
- .../GIT_PROOF_REPORT_20260705.md                   | 173 +++++++++++++++++++++
- .../NEXT_GROUPED_PATCH_PLAN.md                     |  68 ++++++++
- .../PATCH_SCOPE_REGISTER.md                        |  46 ++++++
- .../PHONE_PROOF_SEQUENCE.md                        |  47 ++++++
- .../PROOF_LEDGER.md                                |  44 ++++++
- .../README_FIRST_FOR_CHATGPT.md                    |  46 ++++++
- .../RELEASE_BLOCKER_REGISTER.md                    |  37 +++++
- .../RELEASE_DEPENDENCY_GRAPH.md                    |  43 +++++
- .../SHA256_SUBSYSTEM_COMPLETION_PLAN_20260705.csv  |  13 ++
- .../SPEED_TUNING_REGISTER.md                       |  39 +++++
- .../TONIGHT_COMPLETION_PLAN.md                     |  35 +++++
- CURRENT_BUILD_STATUS.md                            |  59 +++----
- FROZEN_LOGIC_REGISTER.md                           |  28 ++--
- NEXT_GROUPED_PATCH_PLAN.md                         |  86 +++++-----
- PATCH_SCOPE_REGISTER.md                            |  44 ++----
- PHONE_PROOF_SEQUENCE.md                            |  47 ++++++
- PROOF_LEDGER.md                                    |  72 ++++-----
- RELEASE_BLOCKER_REGISTER.md                        |  37 +++++
- RELEASE_DEPENDENCY_GRAPH.md                        |  43 +++++
- SPEED_TUNING_REGISTER.md                           |  39 +++++
- TONIGHT_COMPLETION_PLAN.md                         |  35 +++++
- 23 files changed, 1040 insertions(+), 161 deletions(-)
-`
+ .../GIT_PROOF_REPORT_20260705.md                   | 441 ++++++++++++++++++---
+ .../SHA256_SUBSYSTEM_COMPLETION_PLAN_20260705.csv  |   2 +-
+ 2 files changed, 388 insertions(+), 55 deletions(-)
+~~~
 
 ## Git Diff --name-only HEAD~1..HEAD
 
-`	ext
-04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/CURRENT_BUILD_STATUS.md
-04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/FROZEN_LOGIC_REGISTER.md
+~~~text
 04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/GIT_PROOF_REPORT_20260705.md
-04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/NEXT_GROUPED_PATCH_PLAN.md
-04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/PATCH_SCOPE_REGISTER.md
-04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/PHONE_PROOF_SEQUENCE.md
-04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/PROOF_LEDGER.md
-04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/README_FIRST_FOR_CHATGPT.md
-04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/RELEASE_BLOCKER_REGISTER.md
-04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/RELEASE_DEPENDENCY_GRAPH.md
 04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/SHA256_SUBSYSTEM_COMPLETION_PLAN_20260705.csv
-04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/SPEED_TUNING_REGISTER.md
-04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/TONIGHT_COMPLETION_PLAN.md
+~~~
+
+## Exact Files Changed By Latest Proof Commit
+
+~~~text
+04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/GIT_PROOF_REPORT_20260705.md
+04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/SHA256_SUBSYSTEM_COMPLETION_PLAN_20260705.csv
+~~~
+
+## Exact Files Generated For The Subsystem Package
+
+~~~text
 CURRENT_BUILD_STATUS.md
-FROZEN_LOGIC_REGISTER.md
-NEXT_GROUPED_PATCH_PLAN.md
-PATCH_SCOPE_REGISTER.md
-PHONE_PROOF_SEQUENCE.md
 PROOF_LEDGER.md
-RELEASE_BLOCKER_REGISTER.md
+FROZEN_LOGIC_REGISTER.md
+PATCH_SCOPE_REGISTER.md
+NEXT_GROUPED_PATCH_PLAN.md
 RELEASE_DEPENDENCY_GRAPH.md
+RELEASE_BLOCKER_REGISTER.md
+PHONE_PROOF_SEQUENCE.md
 SPEED_TUNING_REGISTER.md
 TONIGHT_COMPLETION_PLAN.md
-`
-
-## Exact Files Changed By The Subsystem Plan Commit
-
-`	ext
-04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/CURRENT_BUILD_STATUS.md
-04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/FROZEN_LOGIC_REGISTER.md
-04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/GIT_PROOF_REPORT_20260705.md
-04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/NEXT_GROUPED_PATCH_PLAN.md
-04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/PATCH_SCOPE_REGISTER.md
-04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/PHONE_PROOF_SEQUENCE.md
-04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/PROOF_LEDGER.md
 04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/README_FIRST_FOR_CHATGPT.md
-04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/RELEASE_BLOCKER_REGISTER.md
+04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/CURRENT_BUILD_STATUS.md
+04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/PROOF_LEDGER.md
+04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/FROZEN_LOGIC_REGISTER.md
+04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/PATCH_SCOPE_REGISTER.md
+04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/NEXT_GROUPED_PATCH_PLAN.md
 04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/RELEASE_DEPENDENCY_GRAPH.md
-04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/SHA256_SUBSYSTEM_COMPLETION_PLAN_20260705.csv
+04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/RELEASE_BLOCKER_REGISTER.md
+04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/PHONE_PROOF_SEQUENCE.md
 04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/SPEED_TUNING_REGISTER.md
 04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/TONIGHT_COMPLETION_PLAN.md
-CURRENT_BUILD_STATUS.md
-FROZEN_LOGIC_REGISTER.md
-NEXT_GROUPED_PATCH_PLAN.md
-PATCH_SCOPE_REGISTER.md
-PHONE_PROOF_SEQUENCE.md
-PROOF_LEDGER.md
-RELEASE_BLOCKER_REGISTER.md
-RELEASE_DEPENDENCY_GRAPH.md
-SPEED_TUNING_REGISTER.md
-TONIGHT_COMPLETION_PLAN.md
-`
+04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/SHA256_SUBSYSTEM_COMPLETION_PLAN_20260705.csv
+04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/GIT_PROOF_REPORT_20260705.md
+~~~
 
 ## MASTER_INDEX Updated
 
@@ -190,11 +155,21 @@ NO
 
 Reason: the user requested only the subsystem completion plan files. MASTER_INDEX.md was not part of this plan.
 
+## Failed Packages Quarantined
+
+These remain failed/quarantined and were not reused as phone-test candidates:
+
+- Failed SEARCH_ICON package with broken Tasker block nesting.
+- Tasker import rejected/rebased XML package.
+- 200-task private/reference XML as Build100 replacement.
+- Stage4A no-work run where FINAL Send Sheet entered.
+- Stage4B formatted-number run as a passing proof.
+
 ## Untracked Files Warning
 
 The repo already had unrelated untracked files before this task. They were not staged or committed for this subsystem completion package.
 
-`	ext
+~~~text
 01_CANDIDATE_PATCHES/AIW_BUILD100_GROUP_B_CONTACT_PICK_PATCHED_FULL_TASKER_20260705.xml
 01_CANDIDATE_PATCHES/BUILD100_GROUP_B_CONTACT_PICK/audits/AIW_BUILD100_GROUP_B_SEARCH_ICON_STATIC_AUDIT_20260705.txt
 01_CANDIDATE_PATCHES/BUILD100_GROUP_B_CONTACT_PICK/audits/AIW_STAGE4B_DRY_RUN_PHONE_RERUN_FAILED_SEARCH_ICON_AUDIT_20260705.md
@@ -495,7 +470,7 @@ PRIVATE_WITH_KEY/runtime_xml/AIW_BUILD100_GROUP_B_CONTACT_PICK_PATCHED_WITH_KEY_
 PRIVATE_WITH_KEY/runtime_xml/AIW_BUILD100_GROUP_B_SEARCH_ICON_PATCHED_WITH_KEY_PRIVATE_20260705.xml
 PRIVATE_WITH_KEY/runtime_xml/take_api_WITH_KEY_PRIVATE_20260705.xml
 scripts/patch-search-icon-byte-preserve.ps1
-`
+~~~
 
 ## Runtime XML Patch
 
