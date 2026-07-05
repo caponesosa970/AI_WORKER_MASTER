@@ -36,12 +36,10 @@ If an item has no exact file, it remains `HARD HOLD`. Do not replace missing pro
 
 ## Current Missing Proof
 
-- Active blocker: Stage4B `READY_TO_SEND` dry-run proof after the current `IMPORT_SAFE` XML import.
+- Active blocker: ChatGPT audit of Stage4B digits-only dry-run ledger sync and approval for next controlled gate.
 - Tasker import is user-reported clean because `SS Safe Send Dry-Run` ran afterward. If screenshot-level import proof is required, classify that screenshot as HOLD, not HARD HOLD.
-- Stage4B `SS Safe Send Dry-Run` contact-selection runlog with exactly one approved `READY_TO_SEND` row.
-- `DRYRUN_CONTACT_PICK_PASS` or `SEND_DRYRUN_PASS`.
-- `SEND=NO`.
-- `%SSSentOne=0`.
+- Raw local copies of `runlog.txt` and `runlog (1).txt`; current ledger has the supplied SHA values and speed/proof summary, but exact raw files were not found locally by exact name during this sync.
+- Formatted-number normalization proof using B=`+1(910) 447-7850` and I=`9104477850`.
 - no message box marker.
 - no `button_send` marker.
 - no `FINAL Send Sheet`, `SS Controlled One-Row Send Proof`, `AIW SEND 1`, timer/live/archive/deadarchive/compactor/TT5.

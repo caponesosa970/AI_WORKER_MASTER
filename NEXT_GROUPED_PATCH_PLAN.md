@@ -6,20 +6,26 @@ Updated: 2026-07-05
 
 `CANDIDATE / HOLD FOR CHATGPT AUDIT`
 
-No runtime XML patch is next. After ChatGPT accepts this corrected ledger, the next technical action is phone setup for one Stage4B dry-run proof.
+No runtime XML patch is approved yet. After ChatGPT accepts this Stage4B ledger sync, the next candidate patch is limited to `SS Safe Send Dry-Run` search-key normalization.
 
 ## Safe Next Action
 
-Group B `READY_TO_SEND` phone rerun only:
+Group B2 normalization proposal only:
 
-1. Use current import-safe XML:
+1. Start from current import-safe XML:
    `01_CANDIDATE_PATCHES/BUILD100_GROUP_B_SEARCH_ICON_IMPORT_SAFE/xml/AIW_BUILD100_GROUP_B_SEARCH_ICON_IMPORT_SAFE_FULL_TASKER_20260705.xml`
-2. Do not patch runtime XML.
-3. Prepare exactly one approved `READY_TO_SEND` row.
-4. Run only:
+2. Patch only `SS Safe Send Dry-Run` search-key normalization.
+3. If sender is phone-like or ticker has cleaned digits, use digits-only search key.
+4. Add proof markers for selected search key and speed timestamps.
+5. Do not touch `FINAL Send Sheet`, `SS Controlled One-Row Send Proof`, `AIW SEND 1`, message box, send button, timer/live, archive/deadarchive/compactor/TT5, or multi-send.
+6. After ChatGPT audit and import, test with:
+   - B = `+1(910) 447-7850`
+   - I = `9104477850`
+   - expected selected search key = `9104477850`
+7. Run only:
    `SS Safe Send Dry-Run`
-5. Export runlog.
-6. Audit runlog before any next layer.
+8. Export runlog.
+9. Audit runlog before any next layer.
 
 ## Pass Conditions
 
@@ -35,16 +41,15 @@ Group B `READY_TO_SEND` phone rerun only:
 - message box marker = 0
 - timer/live/archive/deadarchive/compactor/TT5 = 0
 - no unhandled errors
+- selected search key shown as `9104477850`
 
 ## If It Fails
 
 Patch only the failing sub-area inside `SS Safe Send Dry-Run`:
 
-- `SEARCH_ICON`
-- `SEARCH_FIELD`
-- `CONTACT_PICK`
-- bounded waits
-- safe keyboard/back dismissal
+- search-key selection / normalization
+- selected search key proof marker
+- bounded waits only if the normalization proof shows they are still needed
 - fail-closed proof values
 
 Do not patch send logic.

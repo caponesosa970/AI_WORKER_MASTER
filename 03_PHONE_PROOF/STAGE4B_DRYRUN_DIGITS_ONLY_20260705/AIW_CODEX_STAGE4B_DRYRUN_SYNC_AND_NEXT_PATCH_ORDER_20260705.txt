@@ -1,0 +1,62 @@
+AI Worker Build100 Stage4B ledger sync + safe grouped patch planning.
+
+Do not patch FINAL Send Sheet yet.
+Do not patch real send yet.
+Do not enable timer/live/archive/deadarchive/compactor/TT5/multi-send.
+
+Use the two new phone runlogs:
+- runlog.txt
+- runlog (1).txt
+
+Classify them:
+
+1. runlog.txt
+   - SHA256: EB4937BC8EF57CF21EF0E96D9B8676B2A33D171A980EC3F9D799526608E8197E
+   - Result: FAILED / DATA FORMAT CONTACT_PICK FAILURE
+   - Search key used: +1(910) 447-7850
+   - Contact pick failed, SS Fail UI Dirty Stop ran, SSSentOne=0, lock released.
+   - Speed: task 39 sec, UI-start-to-stop 37 sec, contact-pick timeout about 15 sec.
+   - Do not classify as XML failure.
+
+2. runlog (1).txt
+   - SHA256: 59811D4A3F731A4693C540CB512CFC7C39E46366A15D88058EA6A195017D053C
+   - Result: LOCKED for Stage4B SS Safe Send Dry-Run contact-pick pass only.
+   - Search key used: 9104477850
+   - SEARCH_ICON OK.
+   - SEARCH_FIELD OK.
+   - CONTACT_PICK_ATTEMPT OK.
+   - SEND_DRYRUN_PASS / SAFE_SEND_DRYRUN_PASS reached.
+   - SSSentOne=0.
+   - SSFailed=0.
+   - SS Lock Release HARD exited OK.
+   - SS Safe Send Dry-Run exited OK.
+   - No message paste was expected or required in this gate.
+   - Speed: task 25 sec total, UI-start-to-pass 15 sec, task-start-to-lock-release 20 sec.
+
+Update:
+- PROOF_LEDGER.md
+- CURRENT_BUILD_STATUS.md
+- FROZEN_LOGIC_REGISTER.md
+- FAILED_PACKAGES_LEDGER.md
+- MISSING_PROOF_REGISTER.md
+- NEXT_GROUPED_PATCH_PLAN.md
+- speed/proof metrics section if one exists
+
+Add synchronization rule:
+Any build layer already tested and proven stays promoted into the working final build when proof is tied to the source chain and relevant logic is unchanged. Do not retest or replace frozen working logic unless source changed or proof is missing.
+
+Candidate grouped patch proposal only:
+- Search-key normalization inside SS Safe Send Dry-Run only.
+- If sender is phone-like or ticker has cleaned digits, use digits-only search key.
+- Add proof markers for selected search key and speed timestamps.
+- Do not touch FINAL Send Sheet, SS Controlled One-Row Send Proof, AIW SEND 1, message box, send button, timer/live, archive/deadarchive/compactor/TT5, or multi-send.
+
+Return:
+- files changed
+- commit hash
+- ledger classifications
+- proposed grouped patch scope
+- exact test plan using formatted number B and cleaned ticker I
+
+Final status:
+CANDIDATE / HOLD FOR CHATGPT AUDIT.

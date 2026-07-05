@@ -6,16 +6,16 @@ Updated: 2026-07-05
 
 `CANDIDATE / HOLD FOR CHATGPT AUDIT`
 
-No runtime XML patch is allowed in this ledger task.
+No runtime XML patch is allowed in this ledger sync task.
 
 ## Current Safe Patch Lane After ChatGPT Audit
 
-Group B only:
+Group B2 proposal only, after ChatGPT audit:
 
 - Task: `SS Safe Send Dry-Run`
-- Area: `SEARCH_ICON`, `SEARCH_FIELD`, `CONTACT_PICK`
-- Goal: contact-selection dry-run success without touching send button, message box, reply paste, or DONE marking.
-- Required proof after patch/import: one phone runlog from `SS Safe Send Dry-Run`.
+- Area: search-key normalization before `SEARCH_ICON` / TextNow search.
+- Goal: if B has formatted phone text and I has cleaned digits, use the cleaned digits-only search key.
+- Required proof after patch/import: one phone runlog from `SS Safe Send Dry-Run` with formatted B and cleaned I.
 
 ## Forbidden In Group B
 
@@ -30,6 +30,12 @@ Group B only:
 - timer/live/autonomous
 - archive/deadarchive/compactor/TT5
 - multi-send
+
+## Current Locked Dry-Run Result
+
+Stage4B digits-only dry-run passed with search key `9104477850`.
+
+Do not patch the passed `SEARCH_ICON`, `SEARCH_FIELD`, `CONTACT_PICK_ATTEMPT`, lock release, or no-send guard unless the normalization patch directly requires a local adjustment and ChatGPT approves it.
 
 ## Later Patch Groups
 

@@ -13,7 +13,7 @@ This ledger rebuild does not patch runtime XML and does not claim phone proof fo
 - Candidate lane: Build100 Group B SEARCH_ICON / CONTACT_PICK dry-run route.
 - Current XML: `01_CANDIDATE_PATCHES/BUILD100_GROUP_B_SEARCH_ICON_IMPORT_SAFE/xml/AIW_BUILD100_GROUP_B_SEARCH_ICON_IMPORT_SAFE_FULL_TASKER_20260705.xml`
 - XML SHA256: `55A4936C329A16DDD0DFA94003D52AB53887BBBEBE192045EEA6F9D38B6DE4CA`
-- Status: `CANDIDATE / HOLD FOR STAGE4B READY_TO_SEND PHONE RERUN`
+- Status: `CANDIDATE / HOLD FOR CHATGPT AUDIT AND NEXT CONTROLLED GATE`
 - Phone import note: Tasker import was user-reported clean. `SS Safe Send Dry-Run` ran afterward, so import retry is no longer the active blocker.
 
 ## LOCKED
@@ -23,6 +23,7 @@ Layer-level only:
 - Stage3A final safe-state closeout.
 - Stage4A process-only no-work guard.
 - Stage4B no-ready dry-run hold path.
+- Stage4B digits-only `SS Safe Send Dry-Run` contact-pick/no-send proof.
 - Current Group B XML static structure.
 
 ## CANDIDATE
@@ -31,14 +32,14 @@ Layer-level only:
 - Stage2 dashboard STATUS visual runtime proof.
 - Stage3A trigger marker capture.
 - Current Group B import-safe SEARCH_ICON XML.
+- Proposed Group B search-key normalization patch scope.
 
 ## HOLD
 
-- Stage4B `READY_TO_SEND` dry-run proof for current `IMPORT_SAFE` XML.
 - Optional screenshot proof of the clean Tasker import if ChatGPT requires visible import evidence.
-- Stage4B SEARCH_ICON / SEARCH_FIELD / CONTACT_PICK success.
-- `SEND=NO` proof on contact-selection dry-run.
-- `%SSSentOne=0` proof on contact-selection dry-run.
+- Raw local copies of `runlog.txt` and `runlog (1).txt`; current ledger has their SHA and the supplied speed/proof summary.
+- Formatted-number search-key normalization proof.
+- Message box / reply paste proof.
 - Controlled one-send proof.
 - Timer/live-loop proof.
 - Archive/DeadArchive/Compactor/TT5 proof.
@@ -48,6 +49,7 @@ Layer-level only:
 ## FAILED
 
 - Stage4B contact/search dry-run runlog `AIW_STAGE4B_SEND_DRYRUN_RUNLOG_AUDIT_20260705_084108.md`.
+- Stage4B formatted-number dry-run `runlog.txt` SHA `EB4937BC8EF57CF21EF0E96D9B8676B2A33D171A980EC3F9D799526608E8197E`, classified as `FAILED / DATA FORMAT CONTACT_PICK FAILURE`, not XML failure.
 - Failed SEARCH_ICON package with broken Tasker block nesting, per ChatGPT audit.
 - Tasker import rejected/rebased XML package, superseded by import-safe XML.
 - 200-task private/reference XML as a phone-test candidate.
@@ -55,10 +57,10 @@ Layer-level only:
 
 ## Safe Next Step
 
-1. Send this corrected ledger package to ChatGPT for audit.
-2. If ChatGPT accepts the ledger, set up exactly one approved `READY_TO_SEND` row.
-3. Run one Stage4B `SS Safe Send Dry-Run` phone proof.
-4. Do not run controlled one-send, timer/live, archive, deadarchive, compactor, TT5, or capacity tests until Stage4B dry-run passes.
+1. Send this ledger sync to ChatGPT for audit.
+2. If ChatGPT approves, patch only `SS Safe Send Dry-Run` search-key normalization.
+3. Re-test with formatted sender in column B and cleaned digits in column I.
+4. Do not run controlled one-send, timer/live, archive, deadarchive, compactor, TT5, or capacity tests until ChatGPT clears the next gate.
 
 ## Files Changed By This Ledger Rebuild
 
