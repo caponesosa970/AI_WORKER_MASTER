@@ -1,0 +1,109 @@
+AI Worker proof-chain repair task.
+
+Do not patch runtime logic yet.
+
+First check the GitHub repo and report whether these files exist:
+- MASTER_INDEX.md
+- PROOF_LEDGER.md
+- CURRENT_BUILD_STATUS.md
+- FROZEN_LOGIC_REGISTER.md
+- FAILED_PACKAGES_LEDGER.md
+- PATCH_SCOPE_REGISTER.md
+- MISSING_PROOF_REGISTER.md
+- NEXT_GROUPED_PATCH_PLAN.md
+- AI_Worker_Handoff_Current_2026-05-19.txt
+- OLD_AI_WORKER_CHAT_REFERENCE.txt
+- runlog (5).txt
+- runlog (16).txt
+- AIW_ERROR_PROTECTION_PRE_RESPONSE_LOCK_V1.txt
+- old full build plan before Codex
+- old Simple logging proof files
+- old Process Sheet proof files
+- old Send Sheet / manual TextNow send proof files
+- old AI Worker Tick proof files
+- old Time Profile proof files
+- old Archive manual copy+clear proof files
+- old dashboard/P81/P82 proof files
+- locked source ZIP/XML files
+- SHA256 files/audit reports
+
+Then build a clean proof/history ledger for Build100 from the repo, uploaded audits, runlogs, prior handoff files, and current XML.
+
+Goal:
+Stop treating already-proven layers as unknown.
+
+Create/update these files:
+1. MASTER_INDEX.md
+2. PROOF_LEDGER.md
+3. FAILED_PACKAGES_LEDGER.md
+4. CURRENT_BUILD_STATUS.md
+5. FROZEN_LOGIC_REGISTER.md
+6. PATCH_SCOPE_REGISTER.md
+7. MISSING_PROOF_REGISTER.md
+8. NEXT_GROUPED_PATCH_PLAN.md
+
+Required classifications:
+
+LOCKED:
+Only mark an item LOCKED if exact proof exists and still applies to the current XML/source chain.
+
+CANDIDATE:
+Use for current Build100/Group B candidates and historical proofs that look likely but are not fully tied to current source.
+
+HOLD:
+Use for anything missing exact proof, changed since proof, or not yet phone-tested.
+
+FAILED:
+Mark failed/rejected packages so they cannot be reused.
+
+Must include these historical layers, but do not lock them unless file-backed:
+- Simple logging
+- Process Sheet
+- Send Sheet manual/TextNow movement
+- TextNow search/open/type/send proof
+- double-tap/search-icon behavior
+- AI Worker Tick
+- Time Profile every 2 minutes
+- Archive manual copy+clear, disconnected from live loop
+- dashboard/P81/P82 or Legacy dashboard proof
+- bottom Send self-loop OFF
+- call notification filter
+- duplicate protection
+- JSON guard / Structure Output OFF
+
+Current Build100 facts to include:
+- Current Group B lane is SS Safe Send Dry-Run around SEARCH_ICON/opening TextNow search.
+- Latest NO_READY runlog is safe-stop proof only, not SEARCH_ICON proof.
+- Earlier READY_TO_SEND dry-run failed at SEARCH_ICON and fail-closed.
+- Build100 static audit reported XML parse PASS, 215 tasks, 4 profiles, 2 scenes, missing refs 0, duplicate IDs/names 0, block issues 0.
+- Build100 deep audit still held runtime because phone proof was missing.
+- One-send rule is partial static evidence until phone UI proof.
+
+For every proof entry include:
+- task/profile/scene name
+- file name
+- SHA256 if known
+- source package
+- proof type: phone runlog, screenshot, XML static audit, manual phone proof, handoff reference, or memory reference
+- pass condition
+- whether this proof still applies to current XML
+- if not, explain why
+
+Answer these questions in your report:
+1. Which proven layers are unchanged in the current XML?
+2. Which old proofs can be carried forward safely?
+3. Which old proofs are historical only and need rerun because the task changed?
+4. Which proofs are missing from the repo and need files/screenshots/runlogs restored?
+5. What exact files did you update?
+6. What commit hash saved the ledger update?
+7. Did you update MASTER_INDEX.md?
+8. Did you mark failed packages as FAILED and prevent reuse?
+9. What grouped bug patch set is safe after the ledger is rebuilt?
+10. What must remain one-layer phone proof only?
+
+Do not claim ready.
+Do not claim phone proof.
+Do not modify XML/runtime logic in this task.
+
+Final status:
+CANDIDATE / HOLD FOR CHATGPT AUDIT.
