@@ -51,6 +51,24 @@ Package SHA256:
 
 This ZIP is ignored by Git by rule `*.zip`, so it remains local unless uploaded separately.
 
+## Drive Backup / Transfer Copy
+
+Uploaded to Google Drive folder:
+
+`AI Work / CHATGPT_HANDOFF`
+
+Drive file:
+
+`AIW_BUILD100_STAGE3A_2NDLINE_SAME_DEVICE_RETRY_HOLD_20260704.zip`
+
+Drive size:
+
+`127521` bytes
+
+Drive link:
+
+`https://drive.google.com/file/d/1-SxmQTL-RQOjqplMy7EtavA2tL2cKm46/view?usp=drivesdk`
+
 ## ChatGPT Upload Staging
 
 Local staging folder:
