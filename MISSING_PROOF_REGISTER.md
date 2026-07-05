@@ -36,10 +36,11 @@ If an item has no exact file, it remains `HARD HOLD`. Do not replace missing pro
 
 ## Current Missing Proof
 
-- Active blocker: ChatGPT audit of Stage4B digits-only dry-run ledger sync and approval for next controlled gate.
+- Active blocker: ChatGPT audit of the subsystem completion package and approval for Group B2.
 - Tasker import is user-reported clean because `SS Safe Send Dry-Run` ran afterward. If screenshot-level import proof is required, classify that screenshot as HOLD, not HARD HOLD.
 - Raw local copies of `runlog.txt` and `runlog (1).txt`; current ledger has the supplied SHA values and speed/proof summary, but exact raw files were not found locally by exact name during this sync.
 - Formatted-number normalization proof using B=`+1(910) 447-7850` and I=`9104477850`.
-- no message box marker.
-- no `button_send` marker.
-- no `FINAL Send Sheet`, `SS Controlled One-Row Send Proof`, `AIW SEND 1`, timer/live/archive/deadarchive/compactor/TT5.
+- Group B2 message-box detection proof.
+- Group B2 dry-run paste marker proof if ChatGPT approves paste in dry-run.
+- Proof that `button_send` remains untouched during Group B2.
+- Proof that `FINAL Send Sheet`, `SS Controlled One-Row Send Proof`, `AIW SEND 1`, timer/live/archive/deadarchive/compactor/TT5 remain at 0 during Group B2.

@@ -1,27 +1,45 @@
-﻿# AI Worker ChatGPT Handoff
+# AI Worker ChatGPT Read First
 
-STATUS: CANDIDATE / HOLD FOR PHONE PROOF
+Updated: 2026-07-05
 
-Use this packet for review and phone-import help only.
-Do not call this live, locked, final, deployed, or phone-proven.
-Do not start live TextNow sending from this packet.
+## Current Master Plan
 
-Main import XML:
-IMPORT_THIS_IN_TASKER_BUILD100_CANDIDATE.xml
+Use the subsystem completion plan as the current master plan:
 
-What ChatGPT should help with:
-1. Tasker import proof on the phone.
-2. Safe Mode / STOP / LOCKDOWN proof.
-3. Dashboard proof.
-4. Reading screenshots or runlogs.
-5. Keeping all live-send actions on HOLD until controlled phone proof exists.
+`04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/README_FIRST_FOR_CHATGPT.md`
 
-Required proof before promotion:
-- XML imports on Moto Razr 2024.
-- Dashboard opens.
-- STOP / LOCKDOWN works.
-- No uncontrolled live send.
-- Controlled dry-run proof.
-- Only later: one controlled send proof.
+The ChatGPT audit ZIP is:
 
-ZIPs and release packages stay in Drive, not GitHub.
+`06_CHATGPT_AUDIT_ZIP__AIW_BUILD100_SUBSYSTEM_COMPLETION_PLAN_20260705.zip`
+
+## Status
+
+`CANDIDATE / HOLD FOR CHATGPT AUDIT`
+
+## Current Rule
+
+Do not use older import, contact-pick, SEARCH_ICON, Stage4A, or ledger handoff packages as the active plan.
+
+They are evidence only unless the current master plan or a newer ChatGPT audit explicitly says otherwise.
+
+## Next Allowed Step
+
+1. ChatGPT audits the subsystem completion plan.
+2. If approved, Codex patches Group B2 only.
+3. Group B2 scope: `SS Safe Send Dry-Run` search-key normalization, message-box detection, dry-run paste proof markers, speed markers, fail-closed route, and stop-before-send-button guard.
+
+## Still Forbidden
+
+- real send
+- `FINAL Send Sheet`
+- `SS Controlled One-Row Send Proof`
+- `AIW SEND 1`
+- send button
+- DONE marking
+- timer/live/autonomous
+- archive/deadarchive/compactor/TT5
+- multi-send
+
+## Final Status
+
+`CANDIDATE / HOLD FOR CHATGPT AUDIT`

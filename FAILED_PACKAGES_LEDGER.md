@@ -18,3 +18,9 @@ Failed packages must not be used as phone-test candidates. They may be inspected
 Do not build from a failed package unless the task explicitly says to use it as reference only. The current usable candidate is:
 
 `01_CANDIDATE_PATCHES/BUILD100_GROUP_B_SEARCH_ICON_IMPORT_SAFE/xml/AIW_BUILD100_GROUP_B_SEARCH_ICON_IMPORT_SAFE_FULL_TASKER_20260705.xml`
+
+The current active plan is:
+
+`MASTER_PLAN_CURRENT.md`
+
+Older packages may be read as evidence only. They do not override the subsystem completion plan.
