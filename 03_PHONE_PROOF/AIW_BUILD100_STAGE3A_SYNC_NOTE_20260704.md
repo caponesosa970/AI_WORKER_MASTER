@@ -39,6 +39,32 @@ Byte-preservation check:
 - Git HEAD blob byte length matches working file byte length.
 - `.gitattributes` now contains `*.xml -text` so Tasker XML is not line-ending-normalized by Git.
 
+## Controlled-Test Release ZIP Verification
+
+Release ZIP:
+
+`04_RELEASE_PACKAGES/AIW_BUILD100_CONTROLLED_TEST_HOLD_CANDIDATE_20260704.zip`
+
+ZIP SHA256:
+
+`4393777CB373420862979A094263564B5BD06BE5E3940D36D697C34F453AAF39`
+
+ZIP byte size:
+
+`180890`
+
+ZIP file count:
+
+`8`
+
+XML inside ZIP:
+
+`AIW_BUILD100_CONTROLLED_TEST_HOLD_FULL_TASKER.xml`
+
+XML SHA256 inside ZIP:
+
+`99B2A1C8C9AE1FF3FF191F49ACA9245DAEA45A5FA08810EAE89D3DAB5BF18D7F`
+
 ## Local ZIP For ChatGPT Audit
 
 ZIP file:
