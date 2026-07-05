@@ -13,6 +13,13 @@ CANDIDATE / HOLD FOR PHONE DRY-RUN PROOF
 - Drive file ID: 1YaxY5ongeeHUmI2qcAa-ef-fBGJPxdA9
 - Drive link: https://drive.google.com/file/d/1YaxY5ongeeHUmI2qcAa-ef-fBGJPxdA9/view?usp=drivesdk
 
+## Uploaded ChatGPT Prompt
+
+- File: CHATGPT_STAGE4B_SEND_DRYRUN_PREFLIGHT_AUDIT_PROMPT_20260705_0448.md
+- Local path: 03_PHONE_PROOF/CHATGPT_STAGE4B_SEND_DRYRUN_PREFLIGHT_AUDIT_PROMPT_20260705_0448.md
+- Drive file ID: 1pP_2swIMeaAyxyW2jKszZadS5UsGqD0_
+- Drive link: https://drive.google.com/file/d/1pP_2swIMeaAyxyW2jKszZadS5UsGqD0_/view?usp=drivesdk
+
 ## Contents
 
 - Stage4A proof-cleaned private WITH_KEY XML
