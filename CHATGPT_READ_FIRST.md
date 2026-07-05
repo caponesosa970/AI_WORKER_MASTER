@@ -2,9 +2,9 @@
 
 Updated: 2026-07-05
 
-## Current Master Plan
+## Current Workflow Plan
 
-Use the subsystem completion plan as the current master plan:
+Use the subsystem completion plan as the current workflow plan:
 
 `04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/README_FIRST_FOR_CHATGPT.md`
 
@@ -18,9 +18,11 @@ The ChatGPT audit ZIP is:
 
 ## Current Rule
 
-Do not use older import, contact-pick, SEARCH_ICON, Stage4A, or ledger handoff packages as the active plan.
+Do not use older import, contact-pick, SEARCH_ICON, Stage4A, or ledger handoff packages as the active workflow plan.
 
-They are evidence only unless the current master plan or a newer ChatGPT audit explicitly says otherwise.
+They remain evidence/source history unless the current workflow plan or a newer ChatGPT audit explicitly says otherwise.
+
+Technical truth still comes from the runtime XML, static audits, runlogs, screenshots, SHA256 records, proof ledger, frozen logic register, failed packages ledger, and ChatGPT audit results.
 
 ## Next Allowed Step
 

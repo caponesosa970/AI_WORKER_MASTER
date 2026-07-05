@@ -1,6 +1,6 @@
 # Send This To ChatGPT
 
-Please audit the current AI Worker Build100 master plan package.
+Please audit the current AI Worker Build100 workflow plan package.
 
 ## Use This ZIP
 
@@ -14,7 +14,9 @@ Please audit the current AI Worker Build100 master plan package.
 
 This supersedes older handoff instructions that said to import old XML packages or continue earlier tiny patch loops.
 
-Older packages remain evidence only. They are not the active plan.
+Older packages remain evidence/source history only. They are not the active workflow plan.
+
+Technical truth remains in the XML, audits, runlogs, screenshots, SHA256 records, ledgers, and ChatGPT audit results.
 
 ## Audit Request
 

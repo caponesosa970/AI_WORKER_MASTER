@@ -6,7 +6,7 @@ Updated: 2026-07-05
 
 `_subsystem_completion_plan_20260705/`
 
-This is the current master-plan handoff package.
+This is the current workflow-plan handoff package.
 
 ## Current ChatGPT ZIP
 
@@ -18,8 +18,10 @@ Local copy:
 
 ## Rule
 
-Older ZIPs and staging folders in this directory are historical evidence only.
+Older ZIPs and staging folders in this directory are historical evidence/source history only.
 
-Do not use older Stage4A, contact-pick, SEARCH_ICON, ledger, or import-safe packages as the active plan unless a newer ChatGPT audit explicitly restores them.
+Do not use older Stage4A, contact-pick, SEARCH_ICON, ledger, or import-safe packages as the active workflow plan unless a newer ChatGPT audit explicitly restores them.
+
+Technical truth remains in XML, audits, runlogs, screenshots, SHA256 records, proof ledgers, and ChatGPT audit results.
 
 Do not commit new release ZIPs to GitHub unless explicitly approved.

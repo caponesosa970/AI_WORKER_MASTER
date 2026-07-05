@@ -17,7 +17,7 @@ This folder is the clean working root for AI Worker Build100 work.
 
 ## Required Ledgers
 
-- `MASTER_PLAN_CURRENT.md`: current active plan and supersession rule.
+- `MASTER_PLAN_CURRENT.md`: current active workflow plan and supersession rule.
 - `PROOF_LEDGER.md`: file-backed proof map by layer.
 - `CURRENT_BUILD_STATUS.md`: current Build100 status and next gate.
 - `FROZEN_LOGIC_REGISTER.md`: logic that must not be patched unless directly touched by a new approved scope.
@@ -52,7 +52,7 @@ Layer status:
 
 ## Current Runtime Candidate
 
-- Current master plan: `MASTER_PLAN_CURRENT.md`.
+- Current workflow plan: `MASTER_PLAN_CURRENT.md`.
 - Current lane: Build100 Group B2 `SS Safe Send Dry-Run` send UI completion dry-run.
 - Current active package: `04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/`.
 - Current ChatGPT audit ZIP: `C:\Users\Shadow\Downloads\ai work\Codex to ChatGPT\06_CHATGPT_AUDIT_ZIP__AIW_BUILD100_SUBSYSTEM_COMPLETION_PLAN_20260705.zip`.
@@ -62,9 +62,11 @@ Layer status:
 
 ## Supersession Rule
 
-Older import, contact-pick, SEARCH_ICON, Stage4A, and ledger handoff packages are historical evidence only.
+Older import, contact-pick, SEARCH_ICON, Stage4A, and ledger handoff packages are historical evidence/source history only.
 
-Do not use them as the active plan unless a newer ChatGPT audit explicitly restores them.
+Do not use them as the active workflow plan unless a newer ChatGPT audit explicitly restores them.
+
+Technical truth remains in runtime XML, static audits, phone runlogs, screenshots, SHA256 inventories, `PROOF_LEDGER.md`, `FROZEN_LOGIC_REGISTER.md`, `FAILED_PACKAGES_LEDGER.md`, and ChatGPT audit results.
 
 ## Git Note
 

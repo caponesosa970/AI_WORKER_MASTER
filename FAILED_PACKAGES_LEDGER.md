@@ -19,8 +19,10 @@ Do not build from a failed package unless the task explicitly says to use it as 
 
 `01_CANDIDATE_PATCHES/BUILD100_GROUP_B_SEARCH_ICON_IMPORT_SAFE/xml/AIW_BUILD100_GROUP_B_SEARCH_ICON_IMPORT_SAFE_FULL_TASKER_20260705.xml`
 
-The current active plan is:
+The current active workflow plan is:
 
 `MASTER_PLAN_CURRENT.md`
 
-Older packages may be read as evidence only. They do not override the subsystem completion plan.
+Older packages may be read as evidence/source history only. They do not override the subsystem completion workflow plan.
+
+This workflow plan does not override technical truth from XML, audits, runlogs, screenshots, SHA256 records, or ledgers.

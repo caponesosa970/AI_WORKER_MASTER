@@ -1,4 +1,4 @@
-# AI Worker Build100 Current Master Plan
+# AI Worker Build100 Current Workflow Plan
 
 Updated: 2026-07-05
 
@@ -6,9 +6,17 @@ Updated: 2026-07-05
 
 `CANDIDATE / HOLD FOR CHATGPT AUDIT`
 
-## Active Master Plan
+## Important Meaning
 
-The current master plan is:
+This file is the active workflow plan. It controls the order of work.
+
+It is not the source of technical truth.
+
+Technical truth remains in the runtime XML, static audits, phone runlogs, screenshots, SHA256 inventories, proof ledger, frozen logic register, failed packages ledger, and ChatGPT audit results.
+
+## Active Workflow Plan
+
+The current workflow plan is:
 
 `04_RELEASE_PACKAGES/_subsystem_completion_plan_20260705/README_FIRST_FOR_CHATGPT.md`
 
@@ -32,9 +40,9 @@ If ChatGPT approves, Codex patches Group B2 only:
 
 ## Superseded Guidance
 
-Older instructions that say to continue phone-import retry, raw CONTACT_PICK patching, SEARCH_ICON-only patching, Stage4A patching, or repeated Stage4B retesting are no longer active.
+Older instructions that say to continue phone-import retry, raw CONTACT_PICK patching, SEARCH_ICON-only patching, Stage4A patching, or repeated Stage4B retesting are no longer active as workflow instructions.
 
-Those files are evidence only.
+Those files remain evidence/source history only.
 
 ## Forbidden Until Later Gates
 
