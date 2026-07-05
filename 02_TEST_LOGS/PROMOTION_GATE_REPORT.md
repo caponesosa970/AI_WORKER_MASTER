@@ -12,6 +12,9 @@ Promotion remains blocked until these external proof gates pass on the Moto Razr
 
 - Tasker import proof.
 - Dashboard proof.
+- Stage 3A trigger-only capture proof with a working external sender.
+- Run Log proof after inbound capture.
+- Sheet row proof after inbound capture, if available.
 - Controlled processor proof.
 - Controlled one-send proof.
 - Watchdog and recovery proof.

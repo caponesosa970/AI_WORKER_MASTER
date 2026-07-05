@@ -28,10 +28,17 @@
 
 ## Capture proof
 
+- Prepare an external second-line TextNow sender before Stage 3A.
+- Confirm sender is already signed in and can send without Google/TextNow verification.
+- Use only the external sender for the controlled inbound test message.
+- Enable only `FINAL TextNow Trigger` for Stage 3A trigger-only capture proof.
 - Real TextNow message logs once.
 - Dialing/ongoing/call notification does not log.
 - Exact duplicate does not log.
 - Different same-sender message does log.
+- Disable `FINAL TextNow Trigger` immediately after the controlled capture.
+- Capture Run Log after inbound capture.
+- Capture Sheet row proof if available.
 
 ## Processor proof
 
