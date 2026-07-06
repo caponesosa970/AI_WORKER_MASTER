@@ -1,43 +1,73 @@
 # AI Worker Patch Scope Register
 
-Updated: 2026-07-05
+Updated: 2026-07-06
 
 ## Active Scope
 
 `CANDIDATE / HOLD FOR CHATGPT AUDIT`
 
-This pass is documentation-only. No runtime XML patch is allowed in this subsystem completion task.
+This issue-history pass is documentation-only. No runtime XML patch is allowed in this task.
+
+## Required Pre-Build Reads
+
+Before every future build or package, Codex must read:
+
+- `ISSUE_HISTORY_REGISTER.md`
+- `BUILD_MISTAKE_PREVENTION_RULES.md`
+- `FAILED_PACKAGES_LEDGER.md`
+
+Codex must state which prevention rules apply before editing or packaging.
+
+## Current Safe Baseline
+
+- Current private runtime source: `PRIVATE_WITH_KEY/runtime_xml/10C_TASKER_IMPORT_XML__AIW_BUILD100_GROUP_B2_SEND_UI_DRYRUN_WITH_KEY_TASKER_SAFE_20260706.xml`
+- Source SHA256: `5E6ACEC6AAADE464A3F19E9750A80E3B33CD3CDB97E5085B965429461ECF527F`
+- Group B2 phone proof is the latest locked send-UI layer.
+
+## Current Blocker
+
+Group C controlled one-send is on HARD HOLD for the current narrow patch target:
+
+`SS Controlled One-Row Send Proof`
+
+Reason:
+
+- missing approved-recipient guard,
+- missing TextNow thread/header confirmation before send,
+- DONE/pass markers occur after send-button action without independent sent-message proof.
 
 ## Next Safe Patch Lane After ChatGPT Audit
 
-Group B2 only:
+ChatGPT must choose one route:
 
-- Task: `SS Safe Send Dry-Run`
-- Areas: search-key normalization, message-box detection, dry-run paste proof, proof markers, speed timestamps, fail-closed route, stop-before-send-button guard.
-- Goal: finish dry-run send UI completion without touching real send.
-- Required proof after patch/import: one phone runlog from `SS Safe Send Dry-Run`.
+1. broader rebuild of `SS Controlled One-Row Send Proof`, or
+2. new isolated Group C controlled one-send proof task, or
+3. continued HARD HOLD.
 
-## Forbidden In Group B2
-
-- `FINAL Send Sheet`
-- `SS Controlled One-Row Send Proof`
-- `AIW SEND 1`
-- send button
-- DONE marking
-- `START`
-- timer/live/autonomous
-- archive/deadarchive/compactor/TT5
-- multi-send
+No Group C phone test is approved until this decision is made and a runtime patch package passes audit.
 
 ## Patch Group Boundaries
 
 | group | status | scope | patch grouping | phone proof rule |
 |---|---|---|---|---|
-| Group B2 | CANDIDATE | Send UI Completion Dry-Run | May patch as one subsystem. | One dry-run phone proof only. |
-| Group C | HOLD | Controlled One-Send | Patch after Group B2 passes. | Must be phone-tested alone. |
+| Group B2 | LOCKED layer | Send UI Completion Dry-Run | Do not patch unless source changes or ChatGPT approves direct carry-forward fix. | Phone proof passed for dry-run paste/no-send only. |
+| Group C | HARD HOLD | Controlled One-Send | Patch only after ChatGPT chooses safe route. | Must be phone-tested alone. |
 | Group D | HOLD | Live Controller / Timer Gates | Patch after controlled one-send passes. | Must be phone-tested after Group C only. |
 | Group E | HOLD | Maintenance / Recovery | Patch after live gates are safe or explicitly held. | Must not run with core send proof. |
 | Group F | HOLD | Capacity / Production | Patch last. | Must be tested after Groups B2-C-D are proven. |
+
+## Forbidden Until Approved
+
+- FINAL Queue Cycle,
+- FINAL Send Sheet,
+- AIW SEND 1,
+- START,
+- timer/live/autonomous,
+- archive/deadarchive/compactor/TT5,
+- multi-send,
+- redacted XML phone import,
+- building from failed runtime XML,
+- controlled send without approved-recipient and thread/header confirmation.
 
 ## Grouping Rule
 
