@@ -1,0 +1,8 @@
+source_action,new_action,ui_step,preserved,difference
+72,108,NAVIGATE_UP_FALLBACK,YES,none ignoring action sr
+74,110,CHATS_FALLBACK,YES,none ignoring action sr
+79,115,SEARCH_ICON,YES,none ignoring action sr
+88,124,SEARCH_FIELD,YES,none ignoring action sr
+99,153,CONTACT_PICK,YES,none ignoring action sr
+108,162,MESSAGE_BOX,YES,none ignoring action sr
+123,195,SEND_BUTTON,YES,none ignoring action sr

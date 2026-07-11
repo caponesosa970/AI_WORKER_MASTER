@@ -1,0 +1,16 @@
+27B no-send guard runlog summary.
+
+Status: summary from Sosa/ChatGPT instruction, not raw runlog.
+
+Raw 27B no-send guard runlog was not found locally during 28A repo sync.
+
+Recorded facts from current instruction:
+- 27B no-send guard proof is LOCKED.
+- 27B controlled one-send rerun is HOLD.
+- Send remains blocked.
+- DONE remains blocked.
+- Archive remains blocked.
+- live/timer/capacity/release remain blocked.
+
+Do not treat this file as raw phone runlog.
+
