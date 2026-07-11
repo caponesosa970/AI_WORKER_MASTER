@@ -1,0 +1,93 @@
+# AI Worker Project Controller State Current
+
+Updated: 2026-07-10
+
+Status: CURRENT SOURCE-TRUTH TRACKER / HOLD FOR CHATGPT AUDIT
+
+## Current Proof Percent
+
+8/14 locked = 57%.
+
+## Locked Main Gates
+
+1. 1/14 Group B2 dry-run UI proof - LOCKED
+2. 2/14 Group C2 controlled one-send proof - LOCKED
+3. 3/14 Group D controller/timer-safe proof - LOCKED
+4. 4/14 Group E maintenance/recovery proof - LOCKED
+5. 5/14 Group F 22D trigger-only proof - LOCKED
+6. 6/14 Group F 22J trigger-to-queue proof - LOCKED
+7. 7/14 Group G process-only exact row proof - LOCKED
+8. 8/14 controlled queue-cycle proof - LOCKED
+
+## Locked Sub-Proofs
+
+- Gate 9A non-UI send-readiness - LOCKED
+- Gate 9B0 manual TextNow identity - LOCKED
+- Gate 9B1A TextNow search-navigation - LOCKED
+- Gate 9B1B manual thread identity - LOCKED
+- Gate 9B1C no-send compose safety inspection - LOCKED
+- Gate 9B1D manual compose-focus proof - LOCKED
+- Gate 9B1E manual draft insert-and-clear proof - LOCKED
+- Gate 9B1F exact reply compose dry-run - LOCKED
+- 27B no-send guard proof - LOCKED
+
+## Current Paused Gate
+
+27B controlled one-send rerun - HOLD.
+
+## Current Sheet State
+
+Row 74:
+
+- D74 = HOLD_27B_PRESERVE
+
+Row 75:
+
+- A75 = AIW9B1G-STAGED-20260709-01
+- B75 = +1(910) 447-7850
+- C75 = AIW staged no-send test
+- D75 = TEST_STAGED_NO_SEND
+- E75 = Got it, I’ll keep it quick!
+
+Queue scan:
+
+- No READY_TO_SEND rows found in Sheet1 A1:I200.
+- No READY_TO_SEND rows found in QueueView A1:I200.
+
+## Current Source Truth
+
+V15A source:
+
+- File: basefile_v15a_phone_send_cleanup_pass.xml
+- Drive ID: 1ApmhN8tYy248mAnbDgeTnZhyXh7-fPAz
+- SHA256: C4CDEAA0BFD78120386FF1B03FA0A2D6B13BCEEDBD15687F84D03A3AD5FEF1C8
+
+27B package:
+
+- ZIP: 27B_CHATGPT_AUDIT_ZIP__AIW_BUILD100_V15A_PRESERVED_CONTROLLED_SEND_CANDIDATE_20260710.zip
+- Drive ID: 147cIakG5wCZ4PYvOxR-23RVFmR2PF0Hf
+- SHA sidecar: 27B_SHA256__AIW_BUILD100_V15A_PRESERVED_CONTROLLED_SEND_CANDIDATE_20260710.txt
+- SHA sidecar Drive ID: 17RpfQs5mC5cIxSm4PSkvK6sproTZzOft
+- ZIP SHA256: 28A859D8B5D2ADF07CC2D608D382136CADC94D9E03D97808D72B87A0E6133FD5
+
+## Blocked Paths
+
+- Send
+- DONE write
+- Archive
+- DeadArchive
+- Compactor
+- TT5
+- live/timer
+- capacity
+- release/production
+
+## Authority Rules
+
+- ChatGPT is controller/auditor/release checker.
+- Sosa owns phone proof.
+- Codex may package, audit, and sync repo state.
+- Codex must not claim phone proof.
+- Codex must not approve phone import.
+- Codex must not unlock Send/DONE/Archive/live/capacity/release.
+

@@ -1,0 +1,15 @@
+{
+  "package": "27B_CHATGPT_AUDIT_ZIP__AIW_BUILD100_V15A_PRESERVED_CONTROLLED_SEND_CANDIDATE_20260710.zip",
+  "full_xml": "PHONE_IMPORT_XML/full_importable_xml/27B_TASKER_IMPORT_XML__AIW_BUILD100_V15A_PRESERVED_CONTROLLED_SEND_CANDIDATE_WITH_KEY_20260710.xml",
+  "redacted_xml": "CHATGPT_AUDIT_XML/redacted_for_audit/27B_REDACTED_NOT_FOR_IMPORT__AIW_BUILD100_V15A_PRESERVED_CONTROLLED_SEND_CANDIDATE_20260710.xml",
+  "runtime_xml_changed_from_v15a": "YES - one task added and project tids updated",
+  "original_final_send_sheet_body_changed": "NO",
+  "original_final_send_sheet_body_sha_match": true,
+  "redacted_xml_sk_prefix_count": 0,
+  "redacted_xml_raw_sheet_id_count": 0,
+  "redacted_xml_raw_target_phone_count": 0,
+  "redacted_xml_raw_target_digits_count": 0,
+  "phone_import_approved": "NO",
+  "phone_proof_claimed": "NO",
+  "final_status": "CANDIDATE / HOLD FOR CHATGPT AUDIT"
+}

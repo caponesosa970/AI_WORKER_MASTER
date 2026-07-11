@@ -1,40 +1,58 @@
-# Send This To ChatGPT
+# AI Worker Current ChatGPT Handoff
 
-Please audit the current AI Worker Build100 workflow plan package.
+Updated: 2026-07-10
 
-## Use This ZIP
+Status: REPO SOURCE-TRUTH SYNC / HOLD FOR CHATGPT AUDIT
 
-`06_CHATGPT_AUDIT_ZIP__AIW_BUILD100_SUBSYSTEM_COMPLETION_PLAN_20260705.zip`
+## Read First
 
-## Status
+Use:
 
-`CANDIDATE / HOLD`
+- `AIW_PROJECT_CONTROLLER_STATE_CURRENT.md`
+- `MASTER_INDEX.md`
+- `docs/CURRENT_DRIVE_SOURCE_TRUTH_MAP.md`
+- `docs/V15A_AUTOINPUT_PRESERVATION_RULE_20260710.md`
+- `02_TEST_LOGS/27B_20260710/`
+- `03_PHONE_PROOF/27B_NO_SEND_GUARD_20260710/`
 
-## Important
+## Current State
 
-This supersedes older handoff instructions that said to import old XML packages or continue earlier tiny patch loops.
+8/14 locked = 57%.
 
-Older packages remain evidence/source history only. They are not the active workflow plan.
+Current paused gate:
 
-Technical truth remains in the XML, audits, runlogs, screenshots, SHA256 records, ledgers, and ChatGPT audit results.
+- 27B controlled one-send rerun - HOLD
 
-## Audit Request
+Current blocked paths:
 
-Confirm:
+- Send
+- DONE
+- Archive
+- DeadArchive
+- Compactor
+- TT5
+- live/timer
+- capacity
+- release/production
 
-- no runtime XML was patched in the subsystem-plan pass
-- Group B Send UI Dry Run is the next safe patch lane only after audit
-- LOCKED means layer-level only
-- failed packages remain quarantined
-- controlled one-send, timer/live, maintenance, and capacity remain HOLD
+## Current Package
 
-Return:
+27B candidate package:
 
-- final classification
-- approved next Codex patch scope
-- forbidden changes
-- phone proof checklist after Group B
+- `27B_CHATGPT_AUDIT_ZIP__AIW_BUILD100_V15A_PRESERVED_CONTROLLED_SEND_CANDIDATE_20260710.zip`
+- Drive ID: `147cIakG5wCZ4PYvOxR-23RVFmR2PF0Hf`
+- SHA sidecar Drive ID: `17RpfQs5mC5cIxSm4PSkvK6sproTZzOft`
+- ZIP SHA256: `28A859D8B5D2ADF07CC2D608D382136CADC94D9E03D97808D72B87A0E6133FD5`
+
+## Source Rule
+
+The old July 4 / Stage 3A handoff is historical only.
+
+Do not resume from old Stage 3A or Stage 4B instructions unless ChatGPT explicitly restores that route.
+
+Do not import or run any Tasker XML from this repository without ChatGPT approval of the exact `PHONE_IMPORT_XML` path.
 
 ## Final Status
 
-`CANDIDATE / HOLD`
+REPO SYNC ONLY / HOLD FOR CHATGPT AUDIT
+
