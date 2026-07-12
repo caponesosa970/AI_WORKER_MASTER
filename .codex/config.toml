@@ -1,0 +1,16 @@
+model = "gpt-5.5"
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+
+[sandbox_workspace_write]
+network_access = false
+writable_roots = [
+  "<AIW_REPO_ROOT>"
+]
+
+project_doc_fallback_filenames = [
+  "AGENTS.md",
+  "AIW_PROJECT_CONTROLLER_STATE_CURRENT.md"
+]
+
+project_doc_max_bytes = 50000
