@@ -1,7 +1,7 @@
 # AI Worker Build Accountability Ledger Current
 
 Status: ACTIVE BUILD GATE
-Updated: 2026-07-12T18:23:45-07:00
+Updated: 2026-07-12T18:53:46-07:00
 
 This ledger is mandatory for all AI Worker work. A build, audit, repository sync, phone-test request, or release review is incomplete until its claims are recorded here and mapped to proof in `AIW_CLAIM_TO_PROOF_MATRIX_CURRENT.md`.
 
@@ -332,3 +332,113 @@ No percentage change. Current tracker remains `8/14 locked = 57%`.
 ### Prevention Rule Added
 
 An AutoInput action may not be repaired from a merely plausible older source. It must satisfy the source-truth rule: phone-exported or Sosa-created, successful historical behavior, no newer contradiction, and fully inspectable fields.
+
+## 30A Source-Truth Correction Entry
+
+### Accountability ID
+
+AIW-ACC-20260712-30A-V15A-SOURCE-TRUTH-CORRECTION
+
+### Gate
+
+Gate 9 send-adjacent / 27B controlled one-send candidate remains HOLD.
+
+### Issue
+
+ISSUE_27B_AUTOINPUT_TARGET_NOT_V15A_PRESERVED
+
+### Exact Task Assigned
+
+Apply Sosa's source-truth correction, compare authoritative V15A SEARCH_ICON against current private 27B SEARCH_ICON field-by-field, repair only if drift exists, and otherwise state the next diagnostic gate.
+
+### Exact Source Files
+
+| Source | Role | SHA256 |
+|---|---|---|
+| `basefile_v15a_phone_send_cleanup_pass.xml` | authoritative Sosa-created send-path AutoInput source | `C4CDEAA0BFD78120386FF1B03FA0A2D6B13BCEEDBD15687F84D03A3AD5FEF1C8` |
+| current private 27B import XML reference | current failed private runtime reference | `1D354D6E3A672C96F07CA5A991D03764631AD335127313EC1CB1DC552339C31D` |
+
+### Current Branch
+
+`repair/30A-v15a-source-truth-correction`
+
+### Codex Mode
+
+Forensic correction and one-action repair decision. No runtime patch if no SEARCH_ICON drift exists.
+
+### Approved Actions
+
+- Treat Sosa-created V15A send-path AutoInput actions as authoritative.
+- Compare V15A SEARCH_ICON and 27B SEARCH_ICON field-by-field.
+- Use two independent comparison methods.
+- Update public-safe accountability reports and ledgers.
+- Open a PR for ChatGPT audit.
+
+### Prohibited Actions
+
+- Do not ask Sosa to recreate or re-export V15A actions.
+- Do not run Tasker.
+- Do not edit the Sheet.
+- Do not patch runtime unless drift exists.
+- Do not change Search Field, Contact Pick, Message Box, Send Button, DONE, Archive, timer, live, or capacity.
+- Do not claim phone proof.
+- Do not approve phone import.
+
+### Runtime Tasks Touched
+
+None.
+
+### Exact Actions Touched
+
+None.
+
+### Claims Made
+
+| Claim | Required proof | Current status |
+|---|---|---|
+| V15A send-path AutoInput actions are Sosa-created authoritative source | Direct Sosa source-truth correction | SUPPORTED BY USER SOURCE TRUTH |
+| 27B SEARCH_ICON matches V15A SEARCH_ICON | two independent field comparisons | SUPPORTED |
+| no private runtime repair was created | repair decision report and no private hash output | SUPPORTED |
+| tracker percentage unchanged | tracker still says `8/14 locked = 57%` | TO VERIFY IN PR AUDIT |
+
+### Proof Supporting Each Claim
+
+- `02_TEST_LOGS/30A_V15A_SOURCE_TRUTH_CORRECTION/SOURCE_TRUTH_CORRECTION.md`
+- `02_TEST_LOGS/30A_V15A_SOURCE_TRUTH_CORRECTION/V15A_VS_27B_SEARCH_ICON_EXACT_DIFF.md`
+- `02_TEST_LOGS/30A_V15A_SOURCE_TRUTH_CORRECTION/INDEPENDENT_VALIDATION_RESULTS.md`
+- `02_TEST_LOGS/30A_V15A_SOURCE_TRUTH_CORRECTION/ONE_ACTION_REPAIR_DECISION.md`
+
+### Proof Not Available
+
+- New phone runtime proof is not available and is not claimed.
+- The reason the preserved V15A SEARCH_ICON failed on phone remains unresolved.
+
+### Contradictions Corrected
+
+29A's "no authoritative source" conclusion is superseded. Sosa directly confirmed V15A send-path AutoInput actions were manually created by him.
+
+### Regression Results
+
+No fake repair was created because no SEARCH_ICON drift exists.
+
+### Phone Proof Required
+
+Next proof is a 30B phone/runtime/UI diagnostic, not an XML preservation repair.
+
+### Final Controller Decision
+
+Pending ChatGPT audit of 30A correction PR.
+
+### Tracker Effect
+
+No percentage change. Current tracker remains `8/14 locked = 57%`.
+
+### Responsible Party For Each Failure
+
+| Failure | Codex responsibility | ChatGPT/controller responsibility | User/operator responsibility |
+|---|---|---|---|
+| 29A authoritative-source conclusion superseded | Prior conclusion became unsupported after Sosa source-truth correction; Codex must correct ledger and not patch when no drift exists | Failed to apply repeated user source-truth instructions before accepting the 29A source-not-found conclusion | NONE |
+
+### Prevention Rule Added
+
+When Sosa directly confirms a phone-created Tasker/AutoInput source, Codex and ChatGPT must treat that as controlling source truth unless stronger phone proof specifically disproves the source role. Runtime failure does not by itself prove source-copy drift.

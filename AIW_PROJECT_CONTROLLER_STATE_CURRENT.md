@@ -37,15 +37,20 @@ Status: CURRENT SOURCE-TRUTH TRACKER / HOLD FOR CHATGPT AUDIT
 
 ## Current Active Issue
 
-- ISSUE_27B_AUTOINPUT_TARGET_NOT_V15A_PRESERVED - OPEN
+- ISSUE_27B_AUTOINPUT_TARGET_NOT_V15A_PRESERVED - CORRECTED / SOURCE PRESERVATION STATICALLY PROVEN FOR SEARCH_ICON
+- ISSUE_27B_SEARCH_ICON_RUNTIME_UI_FAILURE_WITH_V15A_PRESERVED - OPEN
 
 Controlled send remains HOLD.
 
 Accountability-system installation is active from main commit `aa4e1ded4d70a8262adc80cc80a7bb5fad957b46`.
 
-29A SEARCH_ICON source-truth forensic review is HOLD: no authoritative source found, no runtime repair created.
+30A V15A source-truth correction supersedes 29A: Sosa directly confirmed V15A send-path AutoInput actions were manually created by him.
 
-No runtime repair is authorized until ChatGPT audits 29A and supplies/approves the missing source proof.
+30A comparison found no SEARCH_ICON XML/plugin-bundle drift between authoritative V15A and current private 27B.
+
+No runtime repair was created. Remaining issue is phone/runtime/UI behavior, not source preservation.
+
+Next required proof is a ChatGPT-approved 30B phone/runtime/UI diagnostic. No XML patch is approved by 30A.
 
 ## Current Sheet State
 
@@ -73,6 +78,7 @@ V15A source:
 - File: basefile_v15a_phone_send_cleanup_pass.xml
 - Private source reference: Private Drive source - link and ID retained outside the public repository.
 - SHA256: C4CDEAA0BFD78120386FF1B03FA0A2D6B13BCEEDBD15687F84D03A3AD5FEF1C8
+- Source status: Sosa-created authoritative send-path AutoInput source.
 
 27B package:
 

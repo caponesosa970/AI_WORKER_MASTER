@@ -1,7 +1,7 @@
 # AI Worker Failure And Regression Ledger Current
 
 Status: ACTIVE ISSUE LEDGER
-Updated: 2026-07-12T18:23:45-07:00
+Updated: 2026-07-12T18:53:46-07:00
 
 Every failure remains active until it has a required repair, a required regression test, and closing proof reviewed by ChatGPT. Static audit cannot close a phone/runtime issue by itself.
 
@@ -140,6 +140,38 @@ HOLD. No authoritative SEARCH_ICON source was found. No runtime repair was perfo
 29A prevention rule:
 
 Do not patch from partial historical evidence. Older text-based `Search` action evidence is a candidate only until direct source and successful behavior proof are supplied.
+
+30A correction:
+
+Sosa directly confirmed that all V15A send-path AutoInput actions were manually created by him. The authoritative source exists and is `basefile_v15a_phone_send_cleanup_pass.xml`.
+
+30A comparison result:
+
+- V15A SEARCH_ICON and current private 27B SEARCH_ICON are semantically identical.
+- The only byte-level difference is action `sr`, required because the action lives at a different position in the 27B task.
+- No SEARCH_ICON field drift was found.
+- No runtime repair was created.
+
+Corrected issue classification:
+
+The original "not V15A preserved" claim is not supported after 30A comparison. The remaining failure is now classified as phone/runtime/UI behavior with V15A SEARCH_ICON preserved.
+
+Codex responsibility:
+
+- Prior 29A conclusion that no authoritative source existed is superseded and must not be used as active truth.
+- No proven copy drift exists in SEARCH_ICON.
+
+ChatGPT/controller responsibility:
+
+- Failed to apply repeated user source-truth instructions before accepting the 29A source-not-found conclusion.
+
+User/operator responsibility:
+
+NONE.
+
+Required next diagnostic:
+
+30B phone/runtime/UI diagnostic. Do not patch XML. Verify the phone-visible SEARCH_ICON action state, TextNow UI state, and runlog behavior around SEARCH_ICON.
 
 ## Existing Regression Categories Still Active
 
