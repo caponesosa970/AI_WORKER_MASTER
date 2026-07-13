@@ -75,10 +75,17 @@ The proof must identify the exact XML action in both files and must be validated
 | CLAIM-31A-003 | 31A | Original 27B task unchanged | semantic comparison | original 27B unchanged in output | `02_TEST_LOGS/31A_DASHGOOD_SEARCH_LANE_CONTROLLED_SEND/EXACT_SEARCH_LANE_CHANGE.md` | original 27B task | YES | NO | PENDING | PROVEN STATICALLY |
 | CLAIM-31A-004 | 31A | Downstream actions unchanged | semantic comparison | actions from keyboard write through end unchanged in 31A | `02_TEST_LOGS/31A_DASHGOOD_SEARCH_LANE_CONTROLLED_SEND/REGRESSION_AND_FORBIDDEN_PATH_SCAN.md` | 31A downstream actions | YES | NO | PENDING | PROVEN STATICALLY |
 | CLAIM-31A-005 | 31A | Phone proof not claimed and phone import not approved | report status | README and private hash report say no phone proof/import approval | `02_TEST_LOGS/31A_DASHGOOD_SEARCH_LANE_CONTROLLED_SEND/README_FIRST_FOR_CHATGPT.md` | package status | YES | NO | PENDING | PROVEN |
+| CLAIM-31A-006 | 31A | Current private key unchanged | direct source/output credential equality proof required | ChatGPT audit disproved the claim; 31A carried discontinued credential | `02_TEST_LOGS/31A_DASHGOOD_SEARCH_LANE_CONTROLLED_SEND/PRIVATE_PACKAGE_HASHES.md` | private credential value, redacted in reports | NO | NO | YES | DISPROVEN |
+| CLAIM-31A1-001 | 31A1 | Credential source verified | SHA256 and credential equality check without printing key | reconstructed exact current 27B source matched required SHA `03CDD603FE4D3991BC3E88472BEA6C684F4CE10D0597A429EF5E247859D66925` | `02_TEST_LOGS/31A_DASHGOOD_SEARCH_LANE_CONTROLLED_SEND/31A1_CURRENT_KEY_REPAIR_REPORT.md` | private credential source | YES | NO | PENDING | PROVEN PRIVATELY |
+| CLAIM-31A1-002 | 31A1 | Only credential literal changed | sanitized XML byte comparison after replacing all `sk-...` credentials with `[REDACTED_API_KEY]` | sanitized original 31A and 31A1 output are IDENTICAL | `02_TEST_LOGS/31A_DASHGOOD_SEARCH_LANE_CONTROLLED_SEND/31A1_CURRENT_KEY_REPAIR_REPORT.md` | full private XML after redaction | YES | NO | PENDING | PROVEN STATICALLY |
+| CLAIM-31A1-003 | 31A1 | Task 224 unchanged | raw task-node byte comparison | Task 224 block unchanged byte-for-byte | `02_TEST_LOGS/31A_DASHGOOD_SEARCH_LANE_CONTROLLED_SEND/31A1_CURRENT_KEY_REPAIR_REPORT.md` | task 224 | YES | NO | PENDING | PROVEN STATICALLY |
+| CLAIM-31A1-004 | 31A1 | Phone proof not claimed and phone import not approved | report status | README and repair report state no phone proof/import approval | `02_TEST_LOGS/31A_DASHGOOD_SEARCH_LANE_CONTROLLED_SEND/README_FIRST_FOR_CHATGPT.md`; `02_TEST_LOGS/31A_DASHGOOD_SEARCH_LANE_CONTROLLED_SEND/31A1_CURRENT_KEY_REPAIR_REPORT.md` | package status | YES | NO | PENDING | PROVEN |
 
 ## Unsupported Claim Disclosure
 
-30A corrects the active source-truth state. Sosa confirmed V15A send-path AutoInput actions are manually created by him. SEARCH_ICON source preservation is statically proven field-by-field for 27B. The remaining failure is phone/runtime/UI behavior, not proven source-copy drift.
+30A corrects the active source-truth state. Sosa confirmed V15A send-path AutoInput actions are manually created by him. SEARCH_ICON source preservation is statically proven field-by-field for 27B. The remaining SEARCH_ICON failure is phone/runtime/UI behavior, not proven source-copy drift.
+
+31A current-key preservation was disproven by ChatGPT audit. 31A1 corrects only the private credential literal and documents credential-current proof separately from runtime/search-lane proof.
 
 ## Controller Checklist
 

@@ -276,3 +276,70 @@ Open issue coverage:
 - `ISSUE_27B_SEARCH_ICON_RUNTIME_UI_FAILURE_WITH_V15A_PRESERVED` remains OPEN until 31A passes ChatGPT audit and future phone proof.
 - Controlled Send remains HOLD.
 - Phone proof is not claimed for 31A.
+
+
+## ISSUE_31A_DISCONTINUED_CREDENTIAL_IN_PRIVATE_PACKAGE
+
+Status: REPAIRED CANDIDATE / HOLD FOR CHATGPT AUDIT
+
+First detected date: 2026-07-13
+
+Affected build:
+
+31A Dashgood search-lane controlled-send candidate.
+
+Observed symptom:
+
+ChatGPT private-package audit found that 31A carried a discontinued credential from an older 27B base even though the report claimed the current key was unchanged.
+
+Direct evidence:
+
+- Original 31A XML SHA256: `D0F5F43DCE0BCD42ED75964ADDFFF078FCBEBC01637553153A280F478583CCD3`
+- Credential source XML SHA256: `03CDD603FE4D3991BC3E88472BEA6C684F4CE10D0597A429EF5E247859D66925`
+- 31A1 final XML SHA256: `1C1FAF33EA30B69E8F35478AA8E93E58A2AA4ABB967CAA8F5EA927506BBF1B6E`
+- Sanitized XML comparison after credential redaction: IDENTICAL
+
+Root cause:
+
+31A used an older private 27B base for credential material.
+
+Contributing cause:
+
+The report claim "Current key unchanged" was accepted from package construction instead of comparing the actual credential against the current credential source.
+
+Codex responsibility:
+
+Codex made an unsupported current-key claim in the original 31A package.
+
+ChatGPT/controller responsibility:
+
+ChatGPT caught the private-key mismatch before phone import and held the package.
+
+User/operator responsibility:
+
+NONE.
+
+Required repair:
+
+Replace only the discontinued private credential literal with the current credential from the verified source. Do not change runtime actions.
+
+Required regression test:
+
+- Sanitized XML byte comparison after redacting all `sk-...` credentials must be IDENTICAL.
+- Task 224 must remain byte-identical.
+- Discontinued credential remaining count must be `0`.
+- Current credential occurrence count must be `1`.
+- ZIP integrity must pass.
+
+Closing proof:
+
+Pending ChatGPT audit of 31A1.
+
+Prevention rule:
+
+Credential-current claims require direct source/output credential equality checks without printing the credential. A key-count check alone is not enough.
+
+Builds that must check this issue in preflight:
+
+- 31A1
+- any future private runtime package carrying the OpenAI key

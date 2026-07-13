@@ -182,6 +182,64 @@ Pending ChatGPT audit of accountability PR.
 
 No percentage change. Current tracker remains `8/14 locked = 57%`.
 
+
+## 31A1 Current-Key Repair Entry
+
+### Accountability ID
+
+AIW-ACC-20260713-31A1-CURRENT-KEY-REPAIR
+
+### Gate
+
+Gate 9 controlled-send repair candidate. Controlled Send remains HOLD.
+
+### Issue
+
+ISSUE_31A_DISCONTINUED_CREDENTIAL_IN_PRIVATE_PACKAGE
+
+### Exact Task Assigned
+
+Repair only the credential value in the existing 31A full-project XML. Do not change Tasker actions, task IDs, task names, search lane, row guards, Send guards, Sheet logic, DONE logic, Archive logic, profiles, or scenes.
+
+### Source Truth
+
+- Original 31A XML SHA256: `D0F5F43DCE0BCD42ED75964ADDFFF078FCBEBC01637553153A280F478583CCD3`
+- Credential source XML SHA256: `03CDD603FE4D3991BC3E88472BEA6C684F4CE10D0597A429EF5E247859D66925`
+- Final 31A1 XML SHA256: `1C1FAF33EA30B69E8F35478AA8E93E58A2AA4ABB967CAA8F5EA927506BBF1B6E`
+- Final 31A1 ZIP SHA256: `C05103D3EE95185E6FB47523C2793A27D9DAECFDA55931C569952B7DB5023921`
+
+### Files Touched
+
+Public-safe documentation and accountability ledgers only. Private XML and ZIP artifacts remain outside Git.
+
+### Runtime Tasks Touched
+
+None in the public repository. Private 31A1 XML changed only the credential literal.
+
+### Claims And Proof
+
+| Claim | Proof | Result |
+|---|---|---|
+| Original 31A carried discontinued credential | ChatGPT audit plus private source comparison | PROVEN |
+| 31A search-lane runtime logic passed static audit | ChatGPT audit result recorded in 31A1 report | PROVEN STATICALLY |
+| 31A1 changed only credential literal | Sanitized XML comparison after credential redaction is IDENTICAL | PROVEN STATICALLY |
+| Task 224 unchanged | Raw task-node byte comparison between 31A and 31A1 | PROVEN STATICALLY |
+| Current credential equals verified source credential | Source/output credential equality check without printing value | PROVEN PRIVATELY |
+
+### Responsibility
+
+- Codex responsibility: prior 31A report incorrectly claimed current key unchanged.
+- ChatGPT/controller responsibility: caught the credential mismatch during audit before phone import.
+- User/operator responsibility: NONE.
+
+### Tracker Effect
+
+No percentage change. Current tracker remains `8/14 locked = 57%`.
+
+### Phone Proof Required
+
+ChatGPT re-audit is required before any phone import. Codex does not approve import or claim phone proof.
+
 ### Responsible Party For Each Failure
 
 | Failure | Codex responsibility | ChatGPT/controller responsibility | User/operator responsibility |

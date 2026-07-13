@@ -9,7 +9,12 @@
 - Missing Perform Task refs: `0`
 - Search-lane-only semantic diff: PASS
 - Downstream actions unchanged: TRUE
-- Current private key count unchanged: TRUE
+- Original 31A current-key claim: REJECTED / DISCONTINUED
+- 31A1 sanitized XML comparison after credential redaction: IDENTICAL
+- 31A1 Task 224 unchanged byte-for-byte: TRUE
+- 31A1 runtime actions changed: NO
+- 31A1 discontinued credential remaining count: `0`
+- 31A1 current credential occurrence count: `1`
 - ZIP integrity: PASS
 - Tracker unchanged: `8/14 locked = 57%`
 - Sheet changed: NO
@@ -30,3 +35,4 @@ These markers are expected elsewhere in the full project because this is a full-
 - 26A/26B false-pass class: 30B1 phone result used successful `search_field` reach as positive end-state validation, not the intermediate Text Search marker alone.
 - 27B source-preservation issue: original 27B remains unchanged and 31A changes only the cloned task.
 - SEARCH_ICON runtime/UI failure: 31A replaces only the failing search lane with Dashgood active Task 71 recovery logic.
+- 31A credential provenance failure: 31A1 corrects only the private credential value and keeps runtime actions unchanged.

@@ -2,6 +2,26 @@
 
 Status: CANDIDATE / HOLD FOR CHATGPT AUDIT
 
+## 31A1 Current-Key Repair Update
+
+ChatGPT rejected the original 31A private package because the search-lane runtime logic passed static audit, but the private XML carried the discontinued credential from an older 27B base.
+
+31A1 repairs only that private credential literal. No Tasker action, task ID, task name, search lane action, AutoInput action, row guard, Send guard, Sheet logic, DONE logic, Archive logic, profile, or scene was changed.
+
+Validation summary for 31A1:
+
+- Original 31A XML SHA256: `D0F5F43DCE0BCD42ED75964ADDFFF078FCBEBC01637553153A280F478583CCD3`
+- Credential source XML SHA256: `03CDD603FE4D3991BC3E88472BEA6C684F4CE10D0597A429EF5E247859D66925`
+- Final 31A1 XML SHA256: `1C1FAF33EA30B69E8F35478AA8E93E58A2AA4ABB967CAA8F5EA927506BBF1B6E`
+- Final 31A1 ZIP SHA256: `C05103D3EE95185E6FB47523C2793A27D9DAECFDA55931C569952B7DB5023921`
+- Sanitized XML comparison after replacing all `sk-...` credentials with `[REDACTED_API_KEY]`: IDENTICAL
+- Task 224 unchanged byte-for-byte: TRUE
+- Runtime actions changed: NO
+- Discontinued credential remaining count: `0`
+- Current credential intended occurrence count: `1`
+- Phone proof claimed for 31A1: NO
+- Phone import approved by Codex: NO
+
 ## Preflight
 
 - AGENTS.md read: YES
@@ -45,9 +65,10 @@ Only the search lane in the cloned 31A task was changed. The replaced lane start
 - 31A task present: YES
 - Search lane copied exactly: TRUE
 - Downstream actions unchanged: TRUE
-- Current key count unchanged: TRUE
+- 31A original current-key claim: REJECTED / DISCONTINUED
+- 31A1 current-key repair: credential-only repair, runtime actions unchanged
 - ZIP integrity: PASS
 
 ## Blocked Paths
 
-31A remains a controlled-send candidate for ChatGPT audit. Codex does not approve import, phone proof, Send, DONE, Archive, live, capacity, or release.
+31A1 remains a controlled-send candidate for ChatGPT audit. Codex does not approve import, phone proof, Send, DONE, Archive, live, capacity, or release.
