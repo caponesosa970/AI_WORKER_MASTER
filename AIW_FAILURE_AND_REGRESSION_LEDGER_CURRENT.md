@@ -577,3 +577,23 @@ Builds that must check this issue in preflight:
 - User/operator responsibility: NONE
 - Status: VERIFIED CLOSED BY BYTE-IDENTITY AND CONTROLLER RULING
 <!-- PLAN_A1_CORRECTION_FAILURES_END -->
+
+## ISSUE_GATE10_CONFIRMATION_SOURCE_NOT_PROVEN
+
+- First detected: 2026-07-13.
+- Affected build: Gate 10 confirmation-only request.
+- Affected task/action: proposed `FINAL Confirm One Bound Row`; no runtime task was created.
+- Observed symptom: no phone-exported or phone-proven Tasker action was found that independently recognizes the exact outgoing reply in TextNow.
+- Direct evidence: repository/private XML search, Git history search, Drive source search, R1 UI Query control, historical Gate 10 and Group C2 reports.
+- Root cause: the project proved Send visually and manually, but never established an automatable outgoing-message detection contract.
+- Contributing cause: UI Query timed out previously and remains blocked; screenshots and recordings do not expose a reusable Tasker plugin bundle.
+- Codex responsibility: stop before runtime generation and disclose the missing proof.
+- ChatGPT/controller responsibility: supply or approve a separately phone-proven confirmation method before any Gate 10 runtime build.
+- User/operator responsibility: NONE.
+- Prior warning missed: historical reports repeatedly state that automated sent-message proof is not reliable or approved.
+- Required repair: none may be guessed.
+- Required regression test: after an exact phone-exported confirmation action exists, prove it can match the bound outgoing reply with zero Send/compose/keyboard actions and preserve awaiting-confirm state on uncertainty.
+- Status: OPEN / HOLD.
+- Closing proof: a fully inspectable Sosa-created or phone-exported confirmation action plus successful phone runlog and visual proof.
+- Prevention rule: DONE logic cannot be built from manual sent-bubble evidence alone.
+- Builds that must check this issue: Gate 10 confirmation, DONE, Archive, live/timer, capacity, and release.

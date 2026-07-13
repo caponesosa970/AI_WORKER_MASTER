@@ -147,3 +147,13 @@ Before approving any phone import/test, ChatGPT must record:
 
 Replacement XML SHA256: `82148AF8B72A24E3DBA77936A15E547E2114FEC01B705A084D12AA319534442B`
 <!-- PLAN_A1_CORRECTION_CLAIMS_END -->
+
+## Gate 10 Confirmation Source Audit Claims
+
+| Claim ID | Build | Claim | Evidence required | Actual evidence | Exact source/action | Static proof | Phone proof | Controller checked | Result |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| GATE10-SRC-001 | Gate 10 source audit | Corrected Plan A base is exact | SHA256 | Exact private base matched `82148AF8B72A24E3DBA77936A15E547E2114FEC01B705A084D12AA319534442B` | Full-project base | YES | N/A | Pending | PROVEN STATIC |
+| GATE10-SRC-002 | Gate 10 source audit | Gate 9 controlled Send is locked | Direct Sosa phone proof and controller decision | Sosa supplied the controlling proof result; public state records private values only as redacted | Gate 9 phone result | NO | USER SUPPLIED | Direct Sosa decision | PROVEN BY CONTROLLER / NOT CLAIMED BY CODEX |
+| GATE10-SRC-003 | Gate 10 source audit | Existing sources provide exact outgoing-message recognition | Phone-exported action plus successful phone proof | No qualifying action found | Proposed confirmation action | NO | NO | Pending | UNSUPPORTED / HOLD |
+| GATE10-SRC-004 | Gate 10 source audit | UI Query can provide confirmation now | Required R1 phone-proof standard | Prior timeouts and explicit current block; required standard not met | AutoInput UI Query | NO | FAILED / BLOCKED | Pending | DISPROVEN FOR CURRENT GATE |
+| GATE10-SRC-005 | Gate 10 source audit | A safe runtime candidate was generated | Exact source-backed XML and package | No runtime XML, ZIP, or sidecar generated because the source gate failed | Gate 10 runtime | N/A | N/A | Pending | CORRECTLY NOT BUILT |

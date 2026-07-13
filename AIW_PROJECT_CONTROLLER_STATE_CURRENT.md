@@ -2,11 +2,11 @@
 
 Updated: 2026-07-13
 
-Status: CURRENT SOURCE-TRUTH TRACKER / HOLD FOR CHATGPT AUDIT
+Status: CURRENT SOURCE-TRUTH TRACKER / GATE 10 CONFIRMATION SOURCE HOLD
 
 ## Current Proof Percent
 
-8/14 locked = 57%.
+9/14 locked = 64%.
 
 ## Locked Main Gates
 
@@ -18,6 +18,7 @@ Status: CURRENT SOURCE-TRUTH TRACKER / HOLD FOR CHATGPT AUDIT
 6. 6/14 Group F 22J trigger-to-queue proof - LOCKED
 7. 7/14 Group G process-only exact row proof - LOCKED
 8. 8/14 controlled queue-cycle proof - LOCKED
+9. 9/14 Gate 9 controlled Send - LOCKED by direct Sosa phone proof
 
 ## Locked Sub-Proofs
 
@@ -33,7 +34,7 @@ Status: CURRENT SOURCE-TRUTH TRACKER / HOLD FOR CHATGPT AUDIT
 
 ## Current Paused Gate
 
-27B controlled one-send rerun - HOLD.
+Gate 10 independent confirmation-only build - HOLD pending a source-proven outgoing-message confirmation action.
 
 ## Current Active Issue
 
@@ -42,8 +43,11 @@ Status: CURRENT SOURCE-TRUTH TRACKER / HOLD FOR CHATGPT AUDIT
 - ISSUE_31A_DISCONTINUED_CREDENTIAL_IN_PRIVATE_PACKAGE - REPAIRED CANDIDATE / HOLD FOR CHATGPT AUDIT
 - ISSUE_31A_AUTOSHEETS_ROW_READ_TIMEOUT_LOCK_RELEASE_RISK - SUPERSEDED REPAIR CANDIDATE / HOLD FOR CHATGPT AUDIT
 - ISSUE_31B_CONTROLLED_SEND_TRANSACTION_SAFETY_REQUIREMENTS - CANDIDATE / HOLD FOR CHATGPT AUDIT
+- ISSUE_GATE10_CONFIRMATION_SOURCE_NOT_PROVEN - OPEN / HARD SOURCE HOLD
 
-Controlled send remains HOLD.
+Gate 9 controlled Send is LOCKED / PASS. The Gate 9 launcher must not run again. New Send transactions remain blocked while the existing row awaits independent confirmation.
+
+Direct Sosa phone proof is the authority for the Gate 9 lock. Codex records that controller decision but does not independently claim phone proof.
 
 Accountability-system installation is active from main commit `aa4e1ded4d70a8262adc80cc80a7bb5fad957b46`.
 
@@ -57,11 +61,11 @@ Next required proof is a ChatGPT-approved 30B phone/runtime/UI diagnostic. No XM
 
 30B1 diagnostic phone result: DEVELOPMENT PASS. Full-project Tasker import/render passed. V15A Id `menu_search` timed out. Active Dashgood Task 71 combined Search lane reached TextNow Search and both exact `search_field` actions completed OK. Final visible state was Search field focused with keyboard open. No number, contact select, compose, Send, DONE, Archive, live, or Sheet action ran.
 
-31A Dashgood search-lane controlled-send candidate status: CANDIDATE / HOLD FOR CHATGPT AUDIT. 31A clones 27B into a new task, keeps original 27B unchanged, and replaces only the cloned task search lane with the active Dashgood Task 71 Search recovery lane. Controlled Send remains HOLD.
+Historical 31A candidate record: before Gate 9 phone proof, 31A was CANDIDATE / HOLD FOR CHATGPT AUDIT. Its search-lane work was later incorporated into the corrected Plan A artifact. This historical status does not override the current Gate 9 lock.
 
 31A1 current-key repair status: CANDIDATE / HOLD FOR CHATGPT AUDIT. Original 31A was rejected because the private package carried a discontinued credential from an older 27B base. 31A1 changed only the private credential literal. Sanitized XML comparison after redacting all `sk-...` credentials is IDENTICAL, task 224 is unchanged byte-for-byte, and runtime actions are unchanged. No phone proof is claimed and Codex does not approve phone import.
 
-31B superseding transaction-safety repair status: CANDIDATE / HOLD FOR CHATGPT AUDIT. The earlier AutoSheets-only 31B is superseded. Current 31B changes only task 224 and includes bounded row-read retry, Send authorization consumption into a local run latch, global AllowSend closed before TextNow and every exit, pre-TextNow `SENDING` write/retry/readback, no `DONE` write after Send click, post-Send `SEND_CLICKED_AWAITING_CONFIRM` write/retry, and lock release on final exits. Search, contact selection, compose, exact reply insertion, Send-button AutoInput, credential, profiles, scenes, and other tasks remain unchanged. No phone proof is claimed and Codex does not approve phone import.
+Historical 31B candidate record: the AutoSheets-only and transaction-wrapper 31B candidates were superseded by Plan A and are not current runtime source truth. Their HOLD status does not override the current Gate 9 lock.
 
 ## Current Sheet State
 
@@ -73,11 +77,13 @@ Row 75:
 
 - A75 = AIW9B1G-STAGED-20260709-01
 - B75 = [REDACTED_TEST_RECIPIENT]
-- C75 = AIW staged no-send test
-- D75 = TEST_STAGED_NO_SEND
-- E75 = Got it, I'll keep it quick!
+- C75 = [REDACTED_TEST_MESSAGE]
+- D75 = SEND_CLICKED_AWAITING_CONFIRM
+- E75 = [REDACTED_EXACT_REPLY]
 
-Queue scan:
+This row state is recorded from the accepted Gate 9 phone-proof result. Codex did not read or change the live Sheet.
+
+Historical queue scan before Gate 9:
 
 - No READY_TO_SEND rows found in Sheet1 A1:I200.
 - No READY_TO_SEND rows found in QueueView A1:I200.
@@ -101,7 +107,8 @@ V15A source:
 
 ## Blocked Paths
 
-- Send
+- Gate 9 launcher rerun / second Send
+- New Send transaction while an awaiting-confirm row exists
 - DONE write
 - Archive
 - DeadArchive
@@ -144,16 +151,27 @@ Codex return is automatically rejected if it lacks preflight, bug-history search
 <!-- PLAN_A_ACCOUNTABILITY_START -->
 ## Plan A Corrected Candidate
 
-- Tracker remains `8/14 locked = 57%`.
+- Tracker is `9/14 locked = 64%` by direct Sosa Gate 9 phone proof.
 - Replacement XML SHA256: `82148AF8B72A24E3DBA77936A15E547E2114FEC01B705A084D12AA319534442B`.
-- Controlled Send: HOLD.
+- Gate 9 controlled Send: LOCKED / PASS.
+- Gate 9 launcher rerun: BLOCKED.
+- Row 75 proof state: `SEND_CLICKED_AWAITING_CONFIRM`; recipient and content remain redacted publicly.
 - Sheet changed by Codex: NO.
 - Phone import: NOT APPROVED BY CODEX.
-- Phone proof for corrected Plan A: NONE.
+- Phone proof authority: direct Sosa phone proof; Codex records it but does not claim it.
 - Active repair issues: `ISSUE_PLAN_A_AUTOSHEETS_CONTINUE_AFTER_ERROR_MISSING` and `ISSUE_PLAN_A_SEND_ERROR_NOT_PRESERVED` are repaired candidates pending ChatGPT artifact audit.
 - `PLAN_A_ARCHIVE_ASSERTION_WORDING_CONFLICT` is closed as a controller wording correction; Task 199 is byte-identical and no new Archive route exists.
 - Tasks changed from rejected Plan A: 71 and 223 only.
 - Tasks 199 and 224: byte-identical.
 - Permanent outcomes remain `SEND_CLICKED_AWAITING_CONFIRM`, `SEND_OUTCOME_UNKNOWN_REVIEW`, `POST_SEND_STATUS_UPDATE_FAILED`, and `HOLD_PRE_SEND_FAILED`.
-- Controlled Send, DONE, Archive progression, live/timer, capacity, and release remain blocked.
+- Gate 10 confirmation source is not proven. DONE, Archive progression, live/timer, capacity, and release remain blocked.
 <!-- PLAN_A_ACCOUNTABILITY_END -->
+
+## Gate 10 Confirmation Source Decision
+
+- Base artifact SHA verified: `82148AF8B72A24E3DBA77936A15E547E2114FEC01B705A084D12AA319534442B`.
+- Existing phone-proven sources provide navigation, thread opening, compose, and Send action shapes, but no exact outgoing-message recognition action.
+- Manual visible sent-bubble evidence is phone proof of Gate 9, not an automatable confirmation action contract.
+- AutoInput UI Query remains blocked and did not meet its required phone-proof standard.
+- Runtime XML generated for Gate 10: NO.
+- Exact missing proof: a Sosa-created or phone-exported, phone-proven, non-mutating Tasker action/task that reads the exact outgoing reply from the correct TextNow thread without any reachable compose, keyboard, paste, or Send action.

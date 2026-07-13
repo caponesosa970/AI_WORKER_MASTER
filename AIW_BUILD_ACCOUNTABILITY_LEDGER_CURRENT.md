@@ -918,3 +918,30 @@ No percentage change. Current tracker remains `8/14 locked = 57%`.
 - Phone import approved: NO
 - Phone proof claimed: NO
 <!-- PLAN_A1_CORRECTION_ACCOUNTABILITY_END -->
+
+## GATE10_CONFIRMATION_SOURCE_AUDIT_20260713
+
+- Accountability ID: `AIW-GATE10-SOURCE-AUDIT-20260713`.
+- Gate: Gate 10 independent confirmation-only.
+- Operational tracker read: `9/14 locked = 64%` by direct Sosa Gate 9 phone proof.
+- Exact task assigned: create a permanent bound-row confirmation task and removable Gate 10 launcher only if an exact phone-proven outgoing-message confirmation source exists.
+- Exact base: corrected Plan A full-project artifact SHA `82148AF8B72A24E3DBA77936A15E547E2114FEC01B705A084D12AA319534442B`.
+- Codex mode: source-truth audit with a mandatory no-guess HOLD gate.
+- Approved actions: read current controls; verify the private base; search local, Git, Drive, reports, XMLs, and phone-proof summaries; update public-safe accountability state.
+- Prohibited actions: guessed UI selectors, runtime XML generation without source proof, Sheet changes, Tasker execution, Send, DONE, Archive, live/timer, capacity, release, phone-proof claims, and phone-import approval.
+- Files touched publicly: current controller/accountability ledgers and the Gate 10 source-audit report folder.
+- Runtime tasks touched: NONE.
+- Runtime actions touched: NONE.
+- Claims made: base SHA verified; no fully inspectable, phone-proven outgoing-message confirmation action was found; UI Query remains blocked; Gate 10 runtime build is HOLD.
+- Proof: direct SHA verification, unique-XML/task search, Git history search, current control-note review, and Drive title/content search.
+- Proof not available: a phone-exported exact outgoing-reply detector and successful phone evidence for that action.
+- Known assumption: none used as build logic.
+- Contradiction found: manual sent-bubble proof confirms Gate 9 but cannot supply an automatable selector/action contract for Gate 10.
+- Regression result: no guessed runtime artifact was created; permanent Send tasks were not changed; no second Send path was introduced.
+- Phone proof required: a non-mutating confirmation action must first be proven on phone; no phone test is requested from this HOLD result.
+- Phone proof received: direct Sosa proof locks Gate 9 only. Codex does not claim it.
+- Final controller decision: Gate 10 source HOLD.
+- Tracker effect: Gate 9 recorded at `9/14 locked = 64%`; no advance beyond 9/14.
+- Codex responsibility: refuse to manufacture an unsupported confirmation action.
+- ChatGPT verification checklist: confirm the search record, the UI Query block, the absence of runtime artifacts, and the exact missing-proof request.
+- Prevention rule: manual visual proof and static XML evidence must not be promoted into an automatable UI contract.
