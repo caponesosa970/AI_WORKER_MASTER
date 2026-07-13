@@ -115,3 +115,18 @@ Before approving any phone import/test, ChatGPT must record:
 - exact unsupported claims rejected or held
 - exact phone proof needed
 - exact blocked paths that remain blocked
+
+<!-- PLAN_A_ACCOUNTABILITY_START -->
+## Plan A Claim-to-Proof Entries
+
+| Claim ID | Build | Claim | Evidence required | Actual evidence | Exact source/action | Static proof | Phone proof | Controller checked | Result |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| PLAN-A-001 | Plan A | Only Tasks 71/199/223/224 changed | Direct base/output task comparison | Byte-preserving task-block diff + independent parser | Base/output full project | YES | N/A | Pending | PROVEN STATIC |
+| PLAN-A-002 | Plan A | AutoInput preserved | Field-by-field source/output comparison by two implementations | 14 complete nodes; 35 mapped source actions/waits | V15A and active Dashgood Task 71 to output Task 223 | YES | NO | Pending | PROVEN STATIC / PHONE HOLD |
+| PLAN-A-003 | Plan A | At most one Send click | Reachability and node-count proof | One button_send node, one latch, no retry edge, 18-case model | Task 223 | YES | NO | Pending | PROVEN STATIC / PHONE HOLD |
+| PLAN-A-004 | Plan A | Owned lock releases exactly once | Direct common-cleanup and non-owner branch inspection | One helper call; non-owner stop precedes ownership | Task 223 common cleanup | YES | NO | Pending | PROVEN STATIC / PHONE HOLD |
+| PLAN-A-005 | Plan A | No DONE/confirmed send claim | Direct assignment and status scan | DONE writes 0; SSSentOne remains 0 | Tasks 71/199/223/224 | YES | NO | Pending | PROVEN STATIC |
+| PLAN-A-006 | Plan A | Current key unchanged | Equality check without printing value | One equal occurrence in base/source/output | Intended private credential task outside changed tasks | YES | N/A | Pending | PROVEN STATIC |
+| PLAN-A-007 | Plan A | Tasker/phone behavior works | Phone import/render and controlled recording | Not provided | Phone | NO | NO | NO | UNSUPPORTED / HOLD |
+| PLAN-A-008 | Plan A | Archive actions zero in Task 199 | Direct Task 199 scan | Historical non-Send maintenance route remains unchanged | Task 199 outside Send block | NO | N/A | Pending | CONTRADICTED LITERALLY / NO NEW ARCHIVE PROVEN |
+<!-- PLAN_A_ACCOUNTABILITY_END -->

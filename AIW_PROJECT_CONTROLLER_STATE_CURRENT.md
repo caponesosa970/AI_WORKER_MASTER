@@ -140,3 +140,23 @@ Current mandatory accountability files:
 - `AIW_MANDATORY_BUILD_PREFLIGHT.md`
 
 Codex return is automatically rejected if it lacks preflight, bug-history search, source SHA, changed-file list, changed-task/action list, claim-to-proof matrix, regression results, unsupported-claim disclosure, phone-proof limitations, tracker decision, Codex responsibility statement, and ChatGPT verification checklist.
+
+<!-- PLAN_A_ACCOUNTABILITY_START -->
+## Plan A Current Candidate
+
+- Tracker remains `8/14 locked = 57%`.
+- Phase 0 controller-file installation is complete on GitHub main at merge commit `e3dc7c77830f67e84034761f6d3dab6ed5406698`.
+- Current build: Plan A permanent Send module plus removable Gate 9 launcher.
+- Static status: two independent validators PASS; external Tasker structure lint PASS.
+- Full private XML SHA256: `00C66283AD073BBCB3E8DEBA6EDE3258BB53258D56D007BB48EF4E404307AA59`.
+- Private ZIP SHA256: `086811C752CCEAF1705EE00427290F756B3EFC489363F52C93BDDC7A5A2575E4`.
+- Controlled Send: HOLD.
+- Phone import: NOT APPROVED BY CODEX.
+- Phone proof for Plan A: NONE.
+- Sheet: not read or changed by Codex during this build.
+- Permanent output states: SEND_CLICKED_AWAITING_CONFIRM, SEND_OUTCOME_UNKNOWN_REVIEW, POST_SEND_STATUS_UPDATE_FAILED, HOLD_PRE_SEND_FAILED.
+- Later confirmation and Archive modules remain separate blocked gates.
+- Current open control item: ChatGPT must decide the literal Task 199 zero-Archive assertion versus the simultaneously required preservation of its existing non-Send maintenance branch.
+- Send, DONE, Archive expansion, live, capacity, and release remain blocked.
+- Next action: ChatGPT full artifact audit of standalone XML and ZIP bytes.
+<!-- PLAN_A_ACCOUNTABILITY_END -->

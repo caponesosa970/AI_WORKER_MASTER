@@ -868,3 +868,30 @@ ChatGPT audit is required before any phone import. Sosa phone recording and visi
 ### Tracker Effect
 
 No percentage change. Current tracker remains `8/14 locked = 57%`.
+
+<!-- PLAN_A_ACCOUNTABILITY_START -->
+## PLAN_A_FINAL_SEND_MODULE_20260713
+
+- Accountability ID: `AIW-PLAN-A-20260713`.
+- Gate: Gate 9 permanent Send-module candidate; controlled phone test remains HOLD.
+- Exact task assigned: permanent Tasks 71/199/223 plus removable Task 224 launcher.
+- Source SHA values: base `1C1FAF33EA30B69E8F35478AA8E93E58A2AA4ABB967CAA8F5EA927506BBF1B6E`; V15A `C4CDEAA0BFD78120386FF1B03FA0A2D6B13BCEEDBD15687F84D03A3AD5FEF1C8`; Dashgood `62804D52AE6BAB0E0E5895757D56123539F18F99A4E3E9E9060A8BC9C96A8DB7`; credential source `03CDD603FE4D3991BC3E88472BEA6C684F4CE10D0597A429EF5E247859D66925`.
+- Codex mode: one complete bounded runtime build plus public accountability; no Tasker execution.
+- Files touched publicly: seven Plan A reports plus four current accountability/controller ledgers.
+- Runtime tasks touched privately: 71, 199, 223, 224 only.
+- Claim: only four task nodes changed. Proof: byte-preserving block replacement plus two independent parsers; unchanged task-byte differences = 0.
+- Claim: AutoInput nodes preserved. Proof: 14 complete AutoInput node comparisons and 35 source-node/wait/keyboard comparisons by two implementations.
+- Claim: exact-once Send. Proof: one button_send node, one click latch, no retry edge, 18-case model.
+- Claim: credential unchanged. Proof: one occurrence in base/source/output and equality checked without printing value.
+- Proof not available: Tasker import/render, visible TextNow identity, compose state, outgoing message, duplicate absence on phone.
+- Assumptions: exact phone-exported actions retain their phone behavior; static audit cannot establish that assumption.
+- Contradiction disclosed: Task 199's historical non-Send maintenance branch includes Archive routing; it was preserved because the controlling instruction also forbids changing non-Send logic. No Archive behavior was added to the Plan A Send block.
+- Regression results: all machine checks and 18 static cases PASS; generic Build100 deep audit remains HOLD only for unrelated absent capacity defaults and absent runlog.
+- Phone proof required: YES, after ChatGPT full artifact audit.
+- Phone proof received for Plan A: NO.
+- Final controller decision: pending ChatGPT full artifact audit.
+- Tracker effect: none; remains 8/14 locked = 57%.
+- Codex responsibility: generated and independently re-read the exact private artifact; disclosed static limitations and source contradiction.
+- ChatGPT verification checklist: inspect actual standalone/ZIP XML, changed nodes, calls, locks, retries, bundles, GULAG, credential occurrence, and hashes before any import approval.
+- Prevention rule: no summary-only approval; direct artifact evidence is mandatory.
+<!-- PLAN_A_ACCOUNTABILITY_END -->

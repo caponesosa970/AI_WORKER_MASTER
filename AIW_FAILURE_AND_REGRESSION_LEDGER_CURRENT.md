@@ -501,3 +501,37 @@ Builds that must check this issue in preflight:
 - any future Gate 10 one-send package
 - any future controlled-send package
 - any release package
+
+<!-- PLAN_A_ACCOUNTABILITY_START -->
+## ISSUE_PLAN_A_PHONE_PROOF_PENDING
+
+- First detected: 2026-07-13.
+- Affected build: Plan A permanent Send module candidate.
+- Affected tasks: 71, 199, 223, 224.
+- Observed symptom: none on phone; artifact has not been imported or run.
+- Direct evidence: static XML/package validation only.
+- Root cause: phone behavior is intentionally not inferred from static output.
+- Codex responsibility: keep issue OPEN and avoid phone-proof claims.
+- ChatGPT/controller responsibility: independently audit actual artifacts before authorizing any phone import.
+- User/operator responsibility: NONE.
+- Prior warning: static audit previously passed candidates that later failed on phone.
+- Required repair: none statically identified; repair only if full artifact audit finds a concrete defect.
+- Required regression test: controlled phone import/render and one approved Gate 9 test after controller approval.
+- Status: OPEN / HOLD.
+- Closing proof: not available.
+- Prevention rule: phone proof supersedes every generated report.
+- Builds that must check this issue: Plan A and every later confirmation/Archive integration.
+
+## ISSUE_PLAN_A_TASK199_ARCHIVE_ASSERTION_CONFLICT
+
+- First detected: 2026-07-13.
+- Affected build: Plan A permanent Send module candidate.
+- Affected task: 199, unchanged non-Send maintenance branch.
+- Direct evidence: approved base contains historical Archive/maintenance calls outside the Send block.
+- Root cause: controlling instructions simultaneously require preserving every non-Send Task 199 action and report zero Archive actions across Task 199.
+- Codex responsibility: do not silently remove old maintenance logic and disclose the contradiction.
+- User/operator responsibility: NONE.
+- Required repair: controller decision only if literal zero-Archive scope is required; otherwise accept no-new-Archive interpretation.
+- Status: OPEN / HOLD FOR CHATGPT ARTIFACT AUDIT.
+- Prevention rule: conflicting acceptance statements are surfaced, not guessed away.
+<!-- PLAN_A_ACCOUNTABILITY_END -->
