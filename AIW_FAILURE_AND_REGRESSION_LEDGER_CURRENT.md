@@ -184,3 +184,82 @@ Required next diagnostic:
 | F012 Lock not released | OPEN | Verify lock release on success, hold, and error exits |
 | 23A/23B/23C malformed phone task class | OPEN/HISTORICAL | Do not treat XML parse as Tasker phone-render proof |
 | 26A/26B AutoInput false-pass class | OPEN/HISTORICAL | Required AutoInput errors must not set success variables or ExitOK proof states |
+
+## 30B Diagnostic Follow-Up
+
+Issue:
+
+`ISSUE_27B_SEARCH_ICON_RUNTIME_UI_FAILURE_WITH_V15A_PRESERVED`
+
+Status:
+
+OPEN / DIAGNOSTIC PACKAGE CANDIDATE.
+
+30B action:
+
+Created one no-send diagnostic task candidate to compare V15A ID `menu_search` plus `search_field` against Dashgood active Task 71 Text `Search` plus `search_field` reset/retry path.
+
+Repair status:
+
+No repair to 27B or FINAL Send Sheet was performed.
+
+Required regression proof:
+
+- phone import/render of diagnostic task after ChatGPT audit
+- runlog showing which path succeeds/fails
+- no phone number typed
+- no result/contact selection
+- no compose focus
+- no Send/DONE/Archive/live/capacity path touched
+
+Closing proof:
+
+None. Issue remains OPEN until phone/runtime diagnostic proof is supplied and ChatGPT decides the next repair path.
+
+## 30B Rejection / 30B1 Repair Status
+
+30B private-package audit result: REJECTED.
+
+Blocking defects:
+
+1. Original 30B If/End If count was unbalanced: 6 If actions and 5 End If actions, final stack depth 1.
+2. Original 30B claimed a Dashgood failure result even though Dashgood exact AutoInput nodes use Continue Task After Error OFF.
+
+30B1 repair status:
+
+- If/End If balanced: 2 If actions and 2 End If actions.
+- Final control stack depth: 0.
+- Dashgood retry block removed.
+- Unsupported `DASHGOOD_TEXT_SEARCH_FAILED` claim removed.
+- Exact-off AutoInput steps now use pre-action NOT_COMPLETED markers and immediate PASS markers.
+
+Issue remains OPEN until ChatGPT re-audits and phone/runtime proof is supplied.
+
+## 30B1 Phone Result
+
+Status:
+
+DEVELOPMENT PASS.
+
+Direct phone findings:
+
+- Full-project Tasker import/render passed.
+- `AIW30B_SEARCH_ICON_RUNTIME_COMPARE_NO_SEND` ran.
+- V15A Id `menu_search` timed out.
+- Active Dashgood Task 71 combined Search lane reached the TextNow Search screen.
+- Both exact Dashgood `search_field` actions completed OK.
+- Final visible state was the Search field focused with keyboard open.
+- No number was typed.
+- No contact was selected.
+- No compose, Send, DONE, Archive, live, or Sheet action ran.
+
+Interpretation:
+
+- Do not treat the Dashgood Text Search AutoInput error alone as fatal.
+- Do not trust intermediate wrapper PASS markers as final proof.
+- Use successful `search_field` reach as the positive end-state validation.
+- Preserve the active Dashgood Search recovery logic exactly.
+
+Tracker effect:
+
+No percentage change. Current tracker remains `8/14 locked = 57%`.
