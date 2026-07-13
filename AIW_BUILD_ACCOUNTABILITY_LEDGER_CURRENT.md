@@ -540,3 +540,57 @@ No percentage change. Current tracker remains `8/14 locked = 57%`.
 ### Prevention Rule Added
 
 When source preservation is statically proven but phone runtime still fails, the next package should isolate runtime/UI behavior with a no-send diagnostic before any repair or Send-capable rerun.
+
+## 30B1 Diagnostic Control-Flow Repair Entry
+
+### Accountability ID
+
+AIW-ACC-20260713-30B1-CONTROL-FLOW-REPAIR
+
+### Gate
+
+Gate 9 send-adjacent diagnostic. Controlled Send remains HOLD.
+
+### Issue
+
+30B private-package audit rejected original candidate for unbalanced Tasker control flow and unsupported Dashgood failure-result claim.
+
+### Exact Task Assigned
+
+Rebuild only the diagnostic wrapper for `AIW30B_SEARCH_ICON_RUNTIME_COMPARE_NO_SEND`, preserve every copied AutoInput source node exactly, remove unreachable Dashgood retry/failure claim, and regenerate private XML/ZIP/SHA.
+
+### Original Rejected Hashes
+
+- Original XML SHA256: `91EC3870FE7F463E478BB10CF1E812EE7DB8F3636D3B971BBCFE7DBFA537E275`
+- Original ZIP SHA256: `7241D7FB0405C4B7E4805D05ADA53EF58E8537363C508836BFEED9CF5A217362`
+
+### Repaired Candidate Hashes
+
+- Repaired XML SHA256: `08D88FA8B5DFF7BA0F5D90F7C389B6FFAE20EA68FB4DC82E5EC70A4E6D08DD98`
+- Repaired ZIP SHA256: `0F5BA14F00A0402A7364A1D747F7FBC956B2342EC4B99BB9839520B329A383BD`
+
+### Runtime Tasks Touched
+
+No existing runtime task touched. Private standalone diagnostic task regenerated.
+
+### Exact Actions Touched
+
+Only diagnostic wrapper logic changed. Copied AutoInput source nodes preserved exactly except output action `sr` placement.
+
+### Claims Made
+
+| Claim | Required proof | Current status |
+|---|---|---|
+| If/End If balanced | static control-flow validator | SUPPORTED |
+| exact AutoInput nodes unchanged | source/output XML and semantic comparison | SUPPORTED |
+| Dashgood retry/failure claim removed | forbidden/unsupported-claim scan | SUPPORTED |
+| no forbidden action class | forbidden scan | SUPPORTED |
+| phone proof not claimed | reports and status | SUPPORTED |
+
+### Tracker Effect
+
+No percentage change. Current tracker remains `8/14 locked = 57%`.
+
+### Phone Proof Required
+
+ChatGPT re-audit is required before any phone import. Codex does not approve import or claim phone proof.

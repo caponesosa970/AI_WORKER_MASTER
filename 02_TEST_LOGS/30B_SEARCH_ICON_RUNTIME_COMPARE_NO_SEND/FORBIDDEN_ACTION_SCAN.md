@@ -1,8 +1,8 @@
-# FORBIDDEN ACTION SCAN - 30B
+# FORBIDDEN ACTION SCAN - 30B1
 
 Private XML scanned: `30B_TASKER_TASK_IMPORT__SEARCH_ICON_RUNTIME_COMPARE_NO_SEND.xml`
 
-| Forbidden marker | Found |
+| Marker | Found |
 |---|---|
 | AutoSheets | NO |
 | HTTP | NO |
@@ -15,8 +15,10 @@ Private XML scanned: `30B_TASKER_TASK_IMPORT__SEARCH_ICON_RUNTIME_COMPARE_NO_SEN
 | Archive | NO |
 | TimerLive | NO |
 | api_key_pattern | NO |
+| dashgood_failed_result_claim | NO |
+| dashgood_retry_block | NO |
 
-Result: PASS. No forbidden action class was found in the diagnostic task.
+Result: PASS.
 
 Explicitly absent:
 
@@ -31,3 +33,5 @@ Explicitly absent:
 - Archive/DeadArchive/Compactor/TT5
 - timer/live/capacity
 - API key pattern
+- unreachable Dashgood failed-result claim
+- Dashgood retry block

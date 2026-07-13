@@ -215,3 +215,22 @@ Required regression proof:
 Closing proof:
 
 None. Issue remains OPEN until phone/runtime diagnostic proof is supplied and ChatGPT decides the next repair path.
+
+## 30B Rejection / 30B1 Repair Status
+
+30B private-package audit result: REJECTED.
+
+Blocking defects:
+
+1. Original 30B If/End If count was unbalanced: 6 If actions and 5 End If actions, final stack depth 1.
+2. Original 30B claimed a Dashgood failure result even though Dashgood exact AutoInput nodes use Continue Task After Error OFF.
+
+30B1 repair status:
+
+- If/End If balanced: 2 If actions and 2 End If actions.
+- Final control stack depth: 0.
+- Dashgood retry block removed.
+- Unsupported `DASHGOOD_TEXT_SEARCH_FAILED` claim removed.
+- Exact-off AutoInput steps now use pre-action NOT_COMPLETED markers and immediate PASS markers.
+
+Issue remains OPEN until ChatGPT re-audits and phone/runtime proof is supplied.

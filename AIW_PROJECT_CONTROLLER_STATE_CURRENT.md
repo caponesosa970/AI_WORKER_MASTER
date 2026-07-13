@@ -52,7 +52,7 @@ No runtime repair was created. Remaining issue is phone/runtime/UI behavior, not
 
 Next required proof is a ChatGPT-approved 30B phone/runtime/UI diagnostic. No XML patch is approved by 30A.
 
-30B diagnostic package status: CANDIDATE / HOLD FOR CHATGPT AUDIT. 30B creates one isolated no-send task import candidate and does not approve phone import, claim phone proof, change tracker percentage, edit Sheet state, or unlock controlled Send.
+30B1 diagnostic control-flow repair status: CANDIDATE / HOLD FOR CHATGPT RE-AUDIT. Original 30B was rejected for unbalanced If/End If flow and unsupported Dashgood failure-result claim. 30B1 repairs only the diagnostic wrapper, keeps tracker percentage unchanged, does not edit Sheet state, does not approve phone import, does not claim phone proof, and does not unlock controlled Send.
 
 ## Current Sheet State
 

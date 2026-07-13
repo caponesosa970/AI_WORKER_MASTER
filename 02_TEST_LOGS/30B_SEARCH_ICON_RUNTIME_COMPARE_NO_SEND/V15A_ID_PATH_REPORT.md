@@ -1,4 +1,4 @@
-# V15A ID PATH REPORT - 30B
+# V15A ID PATH REPORT - 30B1
 
 ## Purpose
 
@@ -16,14 +16,15 @@ Test the authoritative V15A ID-based search entry path first.
 - Wait after SEARCH_ICON: V15A source action list index 126
 - SEARCH_FIELD ID `search_field`: V15A source action list index 130
 
-## Runtime Result Variables
+## Markers
 
-- Start step: `%AIW30BStep=V15A_ID_SEARCH_ATTEMPT`
-- Error capture: `%AIW30BV15AErr` and `%AIW30BV15AErrMsg`
-- Success result: `%AIW30BResult=V15A_ID_SEARCH_AND_FIELD_PASS`
+- `%AIW30BResult=V15A_NAVIGATE_UP_NOT_COMPLETED` before Navigate up
+- `%AIW30BResult=V15A_NAVIGATE_UP_PASS` immediately after Navigate up succeeds
+- `%AIW30BResult=V15A_CHATS_NOT_COMPLETED` before Chats
+- `%AIW30BResult=V15A_CHATS_PASS` immediately after Chats succeeds
+- `%AIW30BResult=V15A_ID_SEARCH_NOT_COMPLETED` before V15A SEARCH_ICON
+- `%AIW30BResult=V15A_ID_SEARCH_PASS` immediately after V15A SEARCH_ICON succeeds
+- `%AIW30BResult=V15A_SEARCH_FIELD_NOT_COMPLETED` before V15A SEARCH_FIELD
+- `%AIW30BResult=V15A_SEARCH_FIELD_PASS` immediately after V15A SEARCH_FIELD succeeds
 
-## Safety
-
-If both V15A SEARCH_ICON and SEARCH_FIELD complete without `%err`, the diagnostic stops immediately. It does not type, select, compose, send, or write to Sheets.
-
-If either action reports an error, the diagnostic preserves the error values and proceeds to the Dashgood text-search comparison path.
+If V15A Search and Search Field both pass, the task sets `%AIW30BResult=V15A_ID_SEARCH_AND_FIELD_PASS` and stops.

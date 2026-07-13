@@ -1,4 +1,27 @@
-# SOURCE NODE LEDGER - 30B
+# SOURCE NODE LEDGER - 30B1 CONTROL-FLOW REPAIR
+
+Status: CANDIDATE / HOLD FOR CHATGPT RE-AUDIT
+
+## Original Rejected Candidate
+
+| Artifact | SHA256 |
+|---|---|
+| original XML | `91EC3870FE7F463E478BB10CF1E812EE7DB8F3636D3B971BBCFE7DBFA537E275` |
+| original ZIP | `7241D7FB0405C4B7E4805D05ADA53EF58E8537363C508836BFEED9CF5A217362` |
+
+Original audit result: REJECTED.
+
+Reasons:
+
+1. If/End If control flow was unbalanced.
+2. Dashgood exact-off AutoInput actions made the claimed post-error failure result unreachable.
+
+## Repaired Candidate
+
+| Artifact | SHA256 |
+|---|---|
+| repaired XML | `08D88FA8B5DFF7BA0F5D90F7C389B6FFAE20EA68FB4DC82E5EC70A4E6D08DD98` |
+| repaired ZIP | `0F5BA14F00A0402A7364A1D747F7FBC956B2342EC4B99BB9839520B329A383BD` |
 
 ## Source A - Authoritative V15A
 
@@ -6,44 +29,36 @@
 - SHA256: `C4CDEAA0BFD78120386FF1B03FA0A2D6B13BCEEDBD15687F84D03A3AD5FEF1C8`
 - Source role: Authoritative Sosa-created V15A send-path AutoInput source
 - Task: `FINAL Send Sheet`
-- Use: exact source nodes for launch, navigation fallback, ID `menu_search`, ID `search_field`, and surrounding waits
 
 ## Source B - Dashgood Active Send Task
 
 - File title: `dashgood-backup.xml`
 - SHA256: `62804D52AE6BAB0E0E5895757D56123539F18F99A4E3E9E9060A8BC9C96A8DB7`
-- Source role: Private historical Tasker backup, active send-path reference
+- Source role: Private historical active Tasker backup
 - Active task: ID `71`, name `FINAL Send Sheet`
 - Legacy excluded: ID `270`, name `FINAL Send Sheet LEGACY UI FROZEN V19M`
-- Use: exact source nodes for active reset/navigation sequence, text `Search`, ID `search_field`, retry field sequence, and waits
 
 ## Exact Source-to-Output Copy Map
 
-| Source | Source sr | Source list index | Output action index | Purpose | XML equal except sr | Semantic equal |
-|---|---:|---:|---:|---|---|---|
-| v15 | act70 | 111 | 6 | Launch TextNow | YES | YES |
-| v15 | act71 | 112 | 7 | wait before nav | YES | YES |
-| v15 | act72 | 113 | 8 | Navigate up | YES | YES |
-| v15 | act73 | 114 | 9 | wait after nav | YES | YES |
-| v15 | act74 | 115 | 10 | Chats | YES | YES |
-| v15 | act75 | 116 | 11 | wait after chats | YES | YES |
-| v15 | act79 | 120 | 15 | V15A menu_search | YES | YES |
-| v15 | act84 | 126 | 19 | wait after menu_search | YES | YES |
-| v15 | act88 | 130 | 20 | V15A search_field | YES | YES |
-| dash | act189 | 100 | 29 | dash reset wait | YES | YES |
-| dash | act190 | 102 | 30 | dash reset navigate | YES | YES |
-| dash | act191 | 103 | 31 | dash reset nav wait | YES | YES |
-| dash | act192 | 104 | 32 | dash reset chats | YES | YES |
-| dash | act193 | 105 | 33 | dash reset chats wait | YES | YES |
-| dash | act197 | 109 | 37 | dash Text Search | YES | YES |
-| dash | act198 | 110 | 41 | dash search wait | YES | YES |
-| dash | act208 | 122 | 42 | dash field1 | YES | YES |
-| dash | act209 | 123 | 43 | dash field2 | YES | YES |
-| dash | act214 | 129 | 51 | dash retry wait | YES | YES |
-| dash | act215 | 130 | 54 | dash retry Text Search | YES | YES |
-| dash | act216 | 131 | 58 | dash retry search wait | YES | YES |
-| dash | act220 | 136 | 61 | dash retry field1 | YES | YES |
-| dash | act221 | 137 | 62 | dash retry field2 | YES | YES |
-| dash | act222 | 138 | 63 | dash retry field wait | YES | YES |
+| Node | Source | Source sr | Source list index | Output action index | AutoInput | Continue After Error | XML equal except sr | Semantic equal |
+|---|---|---:|---:|---:|---|---|---|---|
+| V15A_LAUNCH | v15a | act70 | 111 | 6 | NO | false | YES | YES |
+| V15A_WAIT_BEFORE_NAV | v15a | act71 | 112 | 7 | NO | false | YES | YES |
+| V15A_NAVIGATE_UP | v15a | act72 | 113 | 10 | YES | false | YES | YES |
+| V15A_WAIT_AFTER_NAV | v15a | act73 | 114 | 12 | NO | false | YES | YES |
+| V15A_CHATS | v15a | act74 | 115 | 15 | YES | false | YES | YES |
+| V15A_WAIT_AFTER_CHATS | v15a | act75 | 116 | 17 | NO | false | YES | YES |
+| V15A_ID_SEARCH | v15a | act79 | 120 | 22 | YES | false | YES | YES |
+| V15A_WAIT_AFTER_ID_SEARCH | v15a | act84 | 126 | 27 | NO | false | YES | YES |
+| V15A_SEARCH_FIELD | v15a | act88 | 130 | 32 | YES | false | YES | YES |
+| DASHGOOD_WAIT_BEFORE_NAV | dashgood | act189 | 100 | 43 | NO | false | YES | YES |
+| DASHGOOD_NAVIGATE_UP | dashgood | act190 | 102 | 46 | YES | false | YES | YES |
+| DASHGOOD_WAIT_AFTER_NAV | dashgood | act191 | 103 | 48 | NO | false | YES | YES |
+| DASHGOOD_CHATS | dashgood | act192 | 104 | 51 | YES | false | YES | YES |
+| DASHGOOD_WAIT_AFTER_CHATS | dashgood | act193 | 105 | 53 | NO | false | YES | YES |
+| DASHGOOD_TEXT_SEARCH | dashgood | act197 | 109 | 56 | YES | false | YES | YES |
+| DASHGOOD_WAIT_AFTER_TEXT_SEARCH | dashgood | act198 | 110 | 58 | NO | false | YES | YES |
+| DASHGOOD_SEARCH_FIELD_1 | dashgood | act208 | 122 | 61 | YES | false | YES | YES |
+| DASHGOOD_SEARCH_FIELD_2 | dashgood | act209 | 123 | 65 | YES | false | YES | YES |
 
-Result: all selected source nodes are copied exactly except required output `sr` renumbering, and all selected nodes are semantically equal by an independent comparison.
+Result: all selected source nodes are copied exactly except required output `sr` renumbering.

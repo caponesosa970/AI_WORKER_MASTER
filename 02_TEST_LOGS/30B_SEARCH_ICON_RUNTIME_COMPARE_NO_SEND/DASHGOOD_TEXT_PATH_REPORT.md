@@ -1,8 +1,8 @@
-# DASHGOOD TEXT PATH REPORT - 30B
+# DASHGOOD TEXT PATH REPORT - 30B1
 
 ## Purpose
 
-If the V15A ID path fails, test the active Dashgood Task 71 text-search and search-field path without typing or selecting a result.
+If the V15A ID path does not complete, test the active Dashgood Task 71 text-search and search-field path without typing or selecting a result.
 
 ## Active Task Verified
 
@@ -20,21 +20,22 @@ If the V15A ID path fails, test the active Dashgood Task 71 text-search and sear
 - Text `Search` action: active Task 71 source index 109
 - Wait after Text `Search`: active Task 71 source index 110
 - Search field click pair: active Task 71 source indices 122 and 123
-- Retry wait: active Task 71 source index 129
-- Retry Text `Search`: active Task 71 source index 130
-- Retry wait after Text `Search`: active Task 71 source index 131
-- Retry search field click pair: active Task 71 source indices 136 and 137
-- Retry field wait: active Task 71 source index 138
 
-## Runtime Result Variables
+## Repaired Failure Semantics
 
-- Reset step: `%AIW30BStep=DASHGOOD_RESET_NAVIGATION`
-- Search step: `%AIW30BStep=DASHGOOD_TEXT_SEARCH_ATTEMPT`
-- Retry step: `%AIW30BStep=DASHGOOD_SEARCH_FIELD_RETRY`
-- Error capture: `%AIW30BDashErr` and `%AIW30BDashErrMsg`
-- Success result: `%AIW30BResult=DASHGOOD_TEXT_SEARCH_AND_FIELD_PASS`
-- Failure result: `%AIW30BResult=DASHGOOD_TEXT_SEARCH_FAILED`
+Dashgood AutoInput nodes retain Continue Task After Error OFF. Therefore no post-error Dashgood failure variable is claimed.
 
-## Safety
+For each Dashgood exact-off AutoInput action:
 
-The Dashgood path is limited to reset/navigation, Text `Search`, and `search_field` clicks. It does not type a number, select a result, focus compose, paste, send, write DONE, write Sheets, or call Archive.
+1. 30B1 sets `%AIW30BStep=<STEP>`.
+2. 30B1 sets `%AIW30BResult=<STEP>_NOT_COMPLETED` before the action.
+3. The exact Dashgood AutoInput node runs.
+4. If the action succeeds, 30B1 immediately sets `%AIW30BResult=<STEP>_PASS`.
+5. If the action fails and Tasker stops, the last NOT_COMPLETED marker plus runlog is the failure proof.
+
+Removed from 30B1:
+
+- Dashgood retry block
+- `%AIW30BResult=DASHGOOD_TEXT_SEARCH_FAILED` unsupported claim
+
+If both Dashgood search-field nodes finish, the task sets `%AIW30BResult=DASHGOOD_TEXT_SEARCH_AND_FIELD_PASS` and stops.
