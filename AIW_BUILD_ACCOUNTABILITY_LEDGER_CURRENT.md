@@ -442,3 +442,101 @@ No percentage change. Current tracker remains `8/14 locked = 57%`.
 ### Prevention Rule Added
 
 When Sosa directly confirms a phone-created Tasker/AutoInput source, Codex and ChatGPT must treat that as controlling source truth unless stronger phone proof specifically disproves the source role. Runtime failure does not by itself prove source-copy drift.
+
+## 30B Search Runtime Comparison Diagnostic Entry
+
+### Accountability ID
+
+AIW-ACC-20260712-30B-SEARCH-RUNTIME-COMPARE-NO-SEND
+
+### Gate
+
+Gate 9 send-adjacent diagnostic. Controlled Send remains HOLD.
+
+### Issue
+
+ISSUE_27B_SEARCH_ICON_RUNTIME_UI_FAILURE_WITH_V15A_PRESERVED
+
+### Exact Task Assigned
+
+Create one isolated no-send Tasker diagnostic task named `AIW30B_SEARCH_ICON_RUNTIME_COMPARE_NO_SEND` to compare the V15A ID-based search path against the Dashgood active Task 71 text-search path.
+
+### Exact Source Files
+
+| Source | Role | SHA256 |
+|---|---|---|
+| `basefile_v15a_phone_send_cleanup_pass.xml` | authoritative Sosa-created V15A send-path source | `C4CDEAA0BFD78120386FF1B03FA0A2D6B13BCEEDBD15687F84D03A3AD5FEF1C8` |
+| `dashgood-backup.xml` | private historical active Task 71 source | `62804D52AE6BAB0E0E5895757D56123539F18F99A4E3E9E9060A8BC9C96A8DB7` |
+
+### Current Branch
+
+`diagnostic/30B-search-icon-runtime-compare`
+
+### Codex Mode
+
+Diagnostic package build only. No Send, no Sheet write, no runtime repair to existing tasks.
+
+### Approved Actions
+
+- Create one standalone diagnostic task import XML.
+- Copy exact V15A source nodes for launch/navigation/search icon/search field/waits.
+- Copy exact Dashgood active Task 71 source nodes for reset/navigation/Text Search/search field retry/waits.
+- Create public-safe reports and update accountability ledgers.
+- Open a PR for ChatGPT audit.
+
+### Prohibited Actions
+
+- Do not type a phone number.
+- Do not select a contact/result/thread.
+- Do not focus compose.
+- Do not insert reply text.
+- Do not tap Send.
+- Do not write DONE.
+- Do not read/write Sheets.
+- Do not call HTTP/API.
+- Do not touch Archive, timer/live, capacity, release, or existing 27B/FINAL Send tasks.
+
+### Files Touched
+
+- `02_TEST_LOGS/30B_SEARCH_ICON_RUNTIME_COMPARE_NO_SEND/`
+- `AIW_BUILD_ACCOUNTABILITY_LEDGER_CURRENT.md`
+- `AIW_FAILURE_AND_REGRESSION_LEDGER_CURRENT.md`
+- `AIW_CLAIM_TO_PROOF_MATRIX_CURRENT.md`
+- `AIW_PROJECT_CONTROLLER_STATE_CURRENT.md`
+
+### Runtime Tasks Touched
+
+No existing runtime task touched. One private standalone diagnostic task created: `AIW30B_SEARCH_ICON_RUNTIME_COMPARE_NO_SEND`.
+
+### Exact Actions Touched
+
+No existing action touched. New diagnostic action sequence created from copied source nodes.
+
+### Claims Made
+
+| Claim | Required proof | Current status |
+|---|---|---|
+| V15A source SHA verified | SHA256 check | SUPPORTED |
+| Dashgood active source found and Task 71 verified | XML parse and task ID/name check | SUPPORTED |
+| selected nodes copied exactly | XML comparison and independent semantic comparison | SUPPORTED |
+| diagnostic contains no forbidden action class | forbidden scan | SUPPORTED |
+| phone proof not claimed | reports and status | SUPPORTED |
+
+### Proof Supporting Each Claim
+
+- `02_TEST_LOGS/30B_SEARCH_ICON_RUNTIME_COMPARE_NO_SEND/SOURCE_NODE_LEDGER.md`
+- `02_TEST_LOGS/30B_SEARCH_ICON_RUNTIME_COMPARE_NO_SEND/TASK_IMPORT_VALIDATION.md`
+- `02_TEST_LOGS/30B_SEARCH_ICON_RUNTIME_COMPARE_NO_SEND/FORBIDDEN_ACTION_SCAN.md`
+- `02_TEST_LOGS/30B_SEARCH_ICON_RUNTIME_COMPARE_NO_SEND/PHONE_PROOF_REQUIRED.md`
+
+### Proof Not Available
+
+Phone runtime proof is not available and is not claimed.
+
+### Tracker Effect
+
+No percentage change. Current tracker remains `8/14 locked = 57%`.
+
+### Prevention Rule Added
+
+When source preservation is statically proven but phone runtime still fails, the next package should isolate runtime/UI behavior with a no-send diagnostic before any repair or Send-capable rerun.

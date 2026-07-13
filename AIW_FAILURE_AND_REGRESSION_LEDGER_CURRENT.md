@@ -184,3 +184,34 @@ Required next diagnostic:
 | F012 Lock not released | OPEN | Verify lock release on success, hold, and error exits |
 | 23A/23B/23C malformed phone task class | OPEN/HISTORICAL | Do not treat XML parse as Tasker phone-render proof |
 | 26A/26B AutoInput false-pass class | OPEN/HISTORICAL | Required AutoInput errors must not set success variables or ExitOK proof states |
+
+## 30B Diagnostic Follow-Up
+
+Issue:
+
+`ISSUE_27B_SEARCH_ICON_RUNTIME_UI_FAILURE_WITH_V15A_PRESERVED`
+
+Status:
+
+OPEN / DIAGNOSTIC PACKAGE CANDIDATE.
+
+30B action:
+
+Created one no-send diagnostic task candidate to compare V15A ID `menu_search` plus `search_field` against Dashgood active Task 71 Text `Search` plus `search_field` reset/retry path.
+
+Repair status:
+
+No repair to 27B or FINAL Send Sheet was performed.
+
+Required regression proof:
+
+- phone import/render of diagnostic task after ChatGPT audit
+- runlog showing which path succeeds/fails
+- no phone number typed
+- no result/contact selection
+- no compose focus
+- no Send/DONE/Archive/live/capacity path touched
+
+Closing proof:
+
+None. Issue remains OPEN until phone/runtime diagnostic proof is supplied and ChatGPT decides the next repair path.
