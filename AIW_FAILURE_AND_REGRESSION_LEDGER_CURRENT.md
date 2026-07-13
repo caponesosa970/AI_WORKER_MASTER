@@ -1,7 +1,7 @@
 # AI Worker Failure And Regression Ledger Current
 
 Status: ACTIVE ISSUE LEDGER
-Updated: 2026-07-12T17:43:24-07:00
+Updated: 2026-07-12T18:23:45-07:00
 
 Every failure remains active until it has a required repair, a required regression test, and closing proof reviewed by ChatGPT. Static audit cannot close a phone/runtime issue by itself.
 
@@ -120,10 +120,26 @@ No `PRESERVED`, `UNCHANGED`, `PHONE-PROVEN`, or `PASS` claim may be recorded wit
 Builds that must check this issue in preflight:
 
 - 27B repair
+- 29A or later SEARCH_ICON source-truth repair
 - any Gate 9B1 TextNow UI work
 - any result select or thread identity work
 - any compose, paste, Send, DONE, Archive, live, capacity, or release work
 - any AutoInput preservation or migration work
+
+29A forensic status:
+
+HOLD. No authoritative SEARCH_ICON source was found. No runtime repair was performed.
+
+29A missing proof:
+
+- phone-exported or Sosa-created SEARCH_ICON action source
+- successful historical phone behavior tied to that exact source
+- no contradiction from newer phone proof
+- fully inspectable field-by-field AutoInput bundle values
+
+29A prevention rule:
+
+Do not patch from partial historical evidence. Older text-based `Search` action evidence is a candidate only until direct source and successful behavior proof are supplied.
 
 ## Existing Regression Categories Still Active
 

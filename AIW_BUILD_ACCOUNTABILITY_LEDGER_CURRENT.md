@@ -1,7 +1,7 @@
 # AI Worker Build Accountability Ledger Current
 
 Status: ACTIVE BUILD GATE
-Updated: 2026-07-12T17:43:24-07:00
+Updated: 2026-07-12T18:23:45-07:00
 
 This ledger is mandatory for all AI Worker work. A build, audit, repository sync, phone-test request, or release review is incomplete until its claims are recorded here and mapped to proof in `AIW_CLAIM_TO_PROOF_MATRIX_CURRENT.md`.
 
@@ -191,3 +191,144 @@ No percentage change. Current tracker remains `8/14 locked = 57%`.
 ### Prevention Rule Added
 
 A PRESERVED claim is forbidden unless source and output values are shown field-by-field and validated by a second independent parser/check. Static XML parse and generated CSV output cannot prove Tasker rendering or phone behavior.
+
+## 29A Forensic Entry
+
+### Accountability ID
+
+AIW-ACC-20260712-29A-SEARCH-ICON-SOURCE-TRUTH
+
+### Date/Time
+
+2026-07-12T18:23:45-07:00
+
+### Gate
+
+Gate 9 send-adjacent / 27B controlled one-send candidate remains HOLD.
+
+### Issue
+
+ISSUE_27B_AUTOINPUT_TARGET_NOT_V15A_PRESERVED
+
+### Exact Task Assigned
+
+Find an authoritative SEARCH_ICON source. Repair only if source proof is conclusive. If no source satisfies the source-truth rule, stop and report the missing proof.
+
+### Exact Source Files
+
+| Source | Role | SHA256 |
+|---|---|---|
+| V15A source XML | disputed V15A source action | `C4CDEAA0BFD78120386FF1B03FA0A2D6B13BCEEDBD15687F84D03A3AD5FEF1C8` |
+| 27B package ZIP | current failed package reference | `28A859D8B5D2ADF07CC2D608D382136CADC94D9E03D97808D72B87A0E6133FD5` |
+| current private 27B import XML reference | current failed private runtime reference | `1D354D6E3A672C96F07CA5A991D03764631AD335127313EC1CB1DC552339C31D` |
+| older text-search candidate reference | historical candidate only | `8A99DD4995B310AFABEC414A321240CD98EE4D5225B9F2144B115811ED0B7CF1` |
+
+### Current Branch
+
+`repair/29A-27B-search-icon-source-truth`
+
+### Starting Commit
+
+`aa4e1ded4d70a8262adc80cc80a7bb5fad957b46`
+
+### Codex Mode
+
+Forensic audit and source-truth decision. Runtime repair only if source proof is conclusive.
+
+### Approved Actions
+
+- Read broad source history.
+- Search local and Drive evidence.
+- Parse Tasker XML.
+- Compare SEARCH_ICON action fields.
+- Update public-safe accountability reports and ledgers.
+- Open a PR for ChatGPT audit.
+
+### Prohibited Actions
+
+- Do not run Tasker.
+- Do not edit the Sheet.
+- Do not patch runtime without authoritative source proof.
+- Do not expose private XML, API keys, private Drive IDs, local user paths, or phone numbers in public reports.
+- Do not claim phone proof.
+- Do not approve phone import.
+
+### Files Touched
+
+Public-safe reports under `02_TEST_LOGS/29A_27B_SEARCH_ICON_SOURCE_TRUTH_REPAIR/` plus the current accountability ledgers and tracker.
+
+### Runtime Tasks Touched
+
+None.
+
+### Exact Actions Touched
+
+None.
+
+### Claims Made
+
+| Claim | Required proof | Current status |
+|---|---|---|
+| No authoritative SEARCH_ICON source was found | Source ledger, Drive/local search, parser result, independent semantic review | SUPPORTED |
+| No runtime repair was performed | Git diff contains no runtime XML change | TO VERIFY IN PR AUDIT |
+| 27B issue remains open | Failure ledger and claim matrix updated | TO VERIFY IN PR AUDIT |
+| Tracker percentage unchanged | Tracker still says `8/14 locked = 57%` | TO VERIFY IN PR AUDIT |
+
+### Proof Supporting Each Claim
+
+- `02_TEST_LOGS/29A_27B_SEARCH_ICON_SOURCE_TRUTH_REPAIR/SOURCE_CANDIDATE_LEDGER.md`
+- `02_TEST_LOGS/29A_27B_SEARCH_ICON_SOURCE_TRUTH_REPAIR/AUTHORITATIVE_SOURCE_DECISION.md`
+- `02_TEST_LOGS/29A_27B_SEARCH_ICON_SOURCE_TRUTH_REPAIR/SEARCH_ICON_FIELD_BY_FIELD_COMPARISON.md`
+- `02_TEST_LOGS/29A_27B_SEARCH_ICON_SOURCE_TRUTH_REPAIR/INDEPENDENT_VALIDATION_RESULTS.md`
+- `02_TEST_LOGS/29A_27B_SEARCH_ICON_SOURCE_TRUTH_REPAIR/ONE_ACTION_CHANGE_REPORT.md`
+
+### Proof Not Available
+
+- No phone-exported Sosa-created SEARCH_ICON action source was found.
+- No complete successful raw runlog was found that ties the older text-based `Search` action to a complete successful historical phone behavior chain.
+- No phone-visible field proof is available for a replacement SEARCH_ICON action.
+
+### Known Assumptions
+
+None used for patching. Missing proof caused HOLD.
+
+### Contradictions Found
+
+V15A `FINAL Send Sheet` provides a `menu_search` ID SEARCH_ICON shape, but the current 27B phone proof contradicted that action for current repair use.
+
+### Regression Checks Required
+
+- Reject static-report-only AutoInput preservation.
+- Reject contradicted source actions.
+- Reject source candidates without complete successful behavior proof.
+- Verify no runtime XML change occurred.
+
+### Regression Results
+
+29A prevented another unsupported AutoInput repair by stopping before runtime patch.
+
+### Phone Proof Required
+
+Future repair needs a Sosa-created or phone-exported SEARCH_ICON source plus successful behavior proof.
+
+### Phone Proof Received
+
+No new phone proof. Existing phone proof continues to show 27B SEARCH_ICON failed safely before send.
+
+### Final Controller Decision
+
+Pending ChatGPT audit of 29A forensic PR.
+
+### Tracker Effect
+
+No percentage change. Current tracker remains `8/14 locked = 57%`.
+
+### Responsible Party For Each Failure
+
+| Failure | Codex responsibility | ChatGPT/controller responsibility | User/operator responsibility |
+|---|---|---|---|
+| 29A source proof not sufficient for repair | Stop instead of patching from partial evidence | Audit the blocker and request exact missing proof before authorizing repair | No operator fault recorded |
+
+### Prevention Rule Added
+
+An AutoInput action may not be repaired from a merely plausible older source. It must satisfy the source-truth rule: phone-exported or Sosa-created, successful historical behavior, no newer contradiction, and fully inspectable fields.
