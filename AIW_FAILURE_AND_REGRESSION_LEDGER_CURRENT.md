@@ -263,3 +263,16 @@ Interpretation:
 Tracker effect:
 
 No percentage change. Current tracker remains `8/14 locked = 57%`.
+
+
+## 31A Repair Candidate Status
+
+31A uses the 30B1 phone result to create a production candidate that preserves the active Dashgood Search recovery lane exactly inside a cloned task.
+
+Status: CANDIDATE / HOLD FOR CHATGPT AUDIT.
+
+Open issue coverage:
+
+- `ISSUE_27B_SEARCH_ICON_RUNTIME_UI_FAILURE_WITH_V15A_PRESERVED` remains OPEN until 31A passes ChatGPT audit and future phone proof.
+- Controlled Send remains HOLD.
+- Phone proof is not claimed for 31A.

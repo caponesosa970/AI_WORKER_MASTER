@@ -52,7 +52,9 @@ No runtime repair was created. Remaining issue is phone/runtime/UI behavior, not
 
 Next required proof is a ChatGPT-approved 30B phone/runtime/UI diagnostic. No XML patch is approved by 30A.
 
-30B1 diagnostic phone result: DEVELOPMENT PASS. Full-project Tasker import/render passed. V15A Id `menu_search` timed out. Active Dashgood Task 71 combined Search lane reached TextNow Search and both exact `search_field` actions completed OK. Final visible state was Search field focused with keyboard open. No number, contact select, compose, Send, DONE, Archive, live, or Sheet action ran. Controlled Send remains HOLD.
+30B1 diagnostic phone result: DEVELOPMENT PASS. Full-project Tasker import/render passed. V15A Id `menu_search` timed out. Active Dashgood Task 71 combined Search lane reached TextNow Search and both exact `search_field` actions completed OK. Final visible state was Search field focused with keyboard open. No number, contact select, compose, Send, DONE, Archive, live, or Sheet action ran.
+
+31A Dashgood search-lane controlled-send candidate status: CANDIDATE / HOLD FOR CHATGPT AUDIT. 31A clones 27B into a new task, keeps original 27B unchanged, and replaces only the cloned task search lane with the active Dashgood Task 71 Search recovery lane. Controlled Send remains HOLD.
 
 ## Current Sheet State
 

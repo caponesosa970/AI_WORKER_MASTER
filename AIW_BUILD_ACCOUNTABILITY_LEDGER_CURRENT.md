@@ -636,3 +636,43 @@ No percentage change. Current tracker remains `8/14 locked = 57%`.
 ### Phone Proof Required
 
 ChatGPT re-audit is required before any phone import. Codex does not approve import or claim phone proof.
+
+
+## 31A Dashgood Search Lane Controlled Send Candidate Entry
+
+### Accountability ID
+
+AIW-ACC-20260713-31A-DASHGOOD-SEARCH-LANE
+
+### Gate
+
+Gate 9 controlled-send repair candidate. Controlled Send remains HOLD.
+
+### Source Truth
+
+- Private 27B full-project XML SHA256: `1D354D6E3A672C96F07CA5A991D03764631AD335127313EC1CB1DC552339C31D`
+- Dashgood active Task 71 source SHA256: `62804D52AE6BAB0E0E5895757D56123539F18F99A4E3E9E9060A8BC9C96A8DB7`
+- 30B1 phone result: Dashgood combined Search plus both `search_field` actions reached the positive end state.
+
+### Exact Task Assigned
+
+Clone `AIW27B_V15A_PRESERVED_CONTROLLED_SEND_CANDIDATE` into `AIW31A_DASHGOOD_SEARCH_LANE_CONTROLLED_SEND_CANDIDATE` and replace only the search lane with active Dashgood Task 71 search recovery logic.
+
+### Runtime Tasks Touched
+
+- Existing 27B task: unchanged.
+- New 31A task: added.
+
+### Proof Summary
+
+- XML parse PASS.
+- TaskerData root PASS.
+- Original 27B unchanged: TRUE.
+- Search lane copied exactly: TRUE.
+- Downstream actions unchanged: TRUE.
+- Key count unchanged: TRUE.
+- ZIP integrity: PASS.
+
+### Tracker Effect
+
+No percentage change. Current tracker remains `8/14 locked = 57%`.
