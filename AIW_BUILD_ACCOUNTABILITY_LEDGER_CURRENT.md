@@ -591,6 +591,48 @@ Only diagnostic wrapper logic changed. Copied AutoInput source nodes preserved e
 
 No percentage change. Current tracker remains `8/14 locked = 57%`.
 
+## 30B1 Phone Result Entry
+
+### Accountability ID
+
+AIW-ACC-20260713-30B1-PHONE-RESULT
+
+### Gate
+
+Gate 9 send-adjacent diagnostic. Controlled Send remains HOLD.
+
+### Issue
+
+ISSUE_27B_SEARCH_ICON_RUNTIME_UI_FAILURE_WITH_V15A_PRESERVED
+
+### Phone Result
+
+30B1 phone result: DEVELOPMENT PASS.
+
+Direct findings supplied by Sosa:
+
+- Full-project Tasker import/render passed.
+- `AIW30B_SEARCH_ICON_RUNTIME_COMPARE_NO_SEND` ran.
+- V15A Id `menu_search` timed out.
+- Active Dashgood Task 71 combined Search lane reached TextNow Search.
+- Both exact Dashgood `search_field` actions completed OK.
+- Final visible phone state was Search field focused with keyboard open.
+- No number was typed.
+- No contact was selected.
+- No compose, Send, DONE, Archive, live, or Sheet action ran.
+
+### Interpretation
+
+The exact Dashgood `Text = Search` action can report an AutoInput error while still changing the UI successfully. Do not treat the Text Search error alone as fatal. Positive end-state validation is successful `search_field` reach.
+
+### Prevention Rule Added
+
+Future production repair must preserve the active Dashgood Search recovery logic exactly and must not trust intermediate wrapper PASS markers as final proof.
+
+### Tracker Effect
+
+No percentage change. Current tracker remains `8/14 locked = 57%`.
+
 ### Phone Proof Required
 
 ChatGPT re-audit is required before any phone import. Codex does not approve import or claim phone proof.

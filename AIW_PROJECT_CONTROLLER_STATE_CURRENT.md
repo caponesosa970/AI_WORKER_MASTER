@@ -52,7 +52,7 @@ No runtime repair was created. Remaining issue is phone/runtime/UI behavior, not
 
 Next required proof is a ChatGPT-approved 30B phone/runtime/UI diagnostic. No XML patch is approved by 30A.
 
-30B1 diagnostic control-flow repair status: CANDIDATE / HOLD FOR CHATGPT RE-AUDIT. Original 30B was rejected for unbalanced If/End If flow and unsupported Dashgood failure-result claim. 30B1 repairs only the diagnostic wrapper, keeps tracker percentage unchanged, does not edit Sheet state, does not approve phone import, does not claim phone proof, and does not unlock controlled Send.
+30B1 diagnostic phone result: DEVELOPMENT PASS. Full-project Tasker import/render passed. V15A Id `menu_search` timed out. Active Dashgood Task 71 combined Search lane reached TextNow Search and both exact `search_field` actions completed OK. Final visible state was Search field focused with keyboard open. No number, contact select, compose, Send, DONE, Archive, live, or Sheet action ran. Controlled Send remains HOLD.
 
 ## Current Sheet State
 
