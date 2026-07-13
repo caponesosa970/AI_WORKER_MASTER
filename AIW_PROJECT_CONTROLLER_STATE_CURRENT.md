@@ -35,6 +35,16 @@ Status: CURRENT SOURCE-TRUTH TRACKER / HOLD FOR CHATGPT AUDIT
 
 27B controlled one-send rerun - HOLD.
 
+## Current Active Issue
+
+- ISSUE_27B_AUTOINPUT_TARGET_NOT_V15A_PRESERVED - OPEN
+
+Controlled send remains HOLD.
+
+Accountability-system installation is pending ChatGPT audit.
+
+No runtime repair is authorized until the accountability PR passes.
+
 ## Current Sheet State
 
 Row 74:
@@ -100,3 +110,14 @@ Last verified handoff state:
 - D75 = TEST_STAGED_NO_SEND
 
 These are not authority for the current live Sheet state. The Sheet must be re-read before any future test.
+
+## Accountability Enforcement
+
+Current mandatory accountability files:
+
+- `AIW_BUILD_ACCOUNTABILITY_LEDGER_CURRENT.md`
+- `AIW_FAILURE_AND_REGRESSION_LEDGER_CURRENT.md`
+- `AIW_CLAIM_TO_PROOF_MATRIX_CURRENT.md`
+- `AIW_MANDATORY_BUILD_PREFLIGHT.md`
+
+Codex return is automatically rejected if it lacks preflight, bug-history search, source SHA, changed-file list, changed-task/action list, claim-to-proof matrix, regression results, unsupported-claim disclosure, phone-proof limitations, tracker decision, Codex responsibility statement, and ChatGPT verification checklist.
