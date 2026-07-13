@@ -535,3 +535,45 @@ Builds that must check this issue in preflight:
 - Status: OPEN / HOLD FOR CHATGPT ARTIFACT AUDIT.
 - Prevention rule: conflicting acceptance statements are surfaced, not guessed away.
 <!-- PLAN_A_ACCOUNTABILITY_END -->
+
+<!-- PLAN_A1_CORRECTION_FAILURES_START -->
+## Plan A Final Artifact Correction Issues
+
+### ISSUE_PLAN_A_AUTOSHEETS_CONTINUE_AFTER_ERROR_MISSING
+
+- First detected: 2026-07-13
+- Affected artifact: rejected Plan A XML SHA `00C66283AD073BBCB3E8DEBA6EDE3258BB53258D56D007BB48EF4E404307AA59`
+- Affected tasks/actions: all 2 Task 71 and all 24 Task 223 AutoSheets actions
+- Symptom: exported actions lacked `<se>false</se>`, so plugin timeout could terminate before retry and lock cleanup
+- Root cause: validator treated plugin arg4 as continuation proof and did not inspect the exported `se` field
+- Codex responsibility: YES
+- ChatGPT/controller responsibility: detected during direct artifact audit
+- User/operator responsibility: NONE
+- Repair: all 26 AutoSheets actions now contain `<se>false</se>` with payloads unchanged
+- Regression: pairwise two-attempt simulation plus lock-release reachability
+- Status: REPAIRED CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT
+- Closing proof required: ChatGPT artifact audit, followed later by approved phone proof
+
+### ISSUE_PLAN_A_SEND_ERROR_NOT_PRESERVED
+
+- First detected: 2026-07-13
+- Affected task/action: Task 223 immediately after `button_send`
+- Symptom: `%err` and `%errmsg` were cleared before being preserved; unknown outcome could be reported without confirmed persistent state
+- Root cause: Send action error and later AutoSheets errors shared the same transient variables
+- Codex responsibility: YES
+- ChatGPT/controller responsibility: detected during direct artifact audit
+- User/operator responsibility: NONE
+- Repair: saved lowercase local variables, confirmed-only unknown result, fallback to POST_SEND_STATUS_UPDATE_FAILED
+- Regression: branch ancestry, immediate adjacency, error-source, and no-resend checks
+- Status: REPAIRED CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT
+- Closing proof required: ChatGPT artifact audit, followed later by approved phone proof
+
+### PLAN_A_ARCHIVE_ASSERTION_WORDING_CONFLICT
+
+- Type: controller specification correction, not runtime defect
+- Correction: zero Archive actions applies to Tasks 71/223/224; Task 199 may retain only its byte-identical historical gated maintenance calls
+- Task 199 changed by correction: NO
+- New Archive connection: NO
+- User/operator responsibility: NONE
+- Status: VERIFIED CLOSED BY BYTE-IDENTITY AND CONTROLLER RULING
+<!-- PLAN_A1_CORRECTION_FAILURES_END -->

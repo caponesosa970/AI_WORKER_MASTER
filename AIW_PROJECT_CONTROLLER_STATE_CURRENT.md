@@ -142,21 +142,18 @@ Current mandatory accountability files:
 Codex return is automatically rejected if it lacks preflight, bug-history search, source SHA, changed-file list, changed-task/action list, claim-to-proof matrix, regression results, unsupported-claim disclosure, phone-proof limitations, tracker decision, Codex responsibility statement, and ChatGPT verification checklist.
 
 <!-- PLAN_A_ACCOUNTABILITY_START -->
-## Plan A Current Candidate
+## Plan A Corrected Candidate
 
 - Tracker remains `8/14 locked = 57%`.
-- Phase 0 controller-file installation is complete on GitHub main at merge commit `e3dc7c77830f67e84034761f6d3dab6ed5406698`.
-- Current build: Plan A permanent Send module plus removable Gate 9 launcher.
-- Static status: two independent validators PASS; external Tasker structure lint PASS.
-- Full private XML SHA256: `00C66283AD073BBCB3E8DEBA6EDE3258BB53258D56D007BB48EF4E404307AA59`.
-- Private ZIP SHA256: `086811C752CCEAF1705EE00427290F756B3EFC489363F52C93BDDC7A5A2575E4`.
+- Replacement XML SHA256: `82148AF8B72A24E3DBA77936A15E547E2114FEC01B705A084D12AA319534442B`.
 - Controlled Send: HOLD.
+- Sheet changed by Codex: NO.
 - Phone import: NOT APPROVED BY CODEX.
-- Phone proof for Plan A: NONE.
-- Sheet: not read or changed by Codex during this build.
-- Permanent output states: SEND_CLICKED_AWAITING_CONFIRM, SEND_OUTCOME_UNKNOWN_REVIEW, POST_SEND_STATUS_UPDATE_FAILED, HOLD_PRE_SEND_FAILED.
-- Later confirmation and Archive modules remain separate blocked gates.
-- Current open control item: ChatGPT must decide the literal Task 199 zero-Archive assertion versus the simultaneously required preservation of its existing non-Send maintenance branch.
-- Send, DONE, Archive expansion, live, capacity, and release remain blocked.
-- Next action: ChatGPT full artifact audit of standalone XML and ZIP bytes.
+- Phone proof for corrected Plan A: NONE.
+- Active repair issues: `ISSUE_PLAN_A_AUTOSHEETS_CONTINUE_AFTER_ERROR_MISSING` and `ISSUE_PLAN_A_SEND_ERROR_NOT_PRESERVED` are repaired candidates pending ChatGPT artifact audit.
+- `PLAN_A_ARCHIVE_ASSERTION_WORDING_CONFLICT` is closed as a controller wording correction; Task 199 is byte-identical and no new Archive route exists.
+- Tasks changed from rejected Plan A: 71 and 223 only.
+- Tasks 199 and 224: byte-identical.
+- Permanent outcomes remain `SEND_CLICKED_AWAITING_CONFIRM`, `SEND_OUTCOME_UNKNOWN_REVIEW`, `POST_SEND_STATUS_UPDATE_FAILED`, and `HOLD_PRE_SEND_FAILED`.
+- Controlled Send, DONE, Archive progression, live/timer, capacity, and release remain blocked.
 <!-- PLAN_A_ACCOUNTABILITY_END -->

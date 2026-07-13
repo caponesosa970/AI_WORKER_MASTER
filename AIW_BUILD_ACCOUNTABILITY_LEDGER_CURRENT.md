@@ -895,3 +895,26 @@ No percentage change. Current tracker remains `8/14 locked = 57%`.
 - ChatGPT verification checklist: inspect actual standalone/ZIP XML, changed nodes, calls, locks, retries, bundles, GULAG, credential occurrence, and hashes before any import approval.
 - Prevention rule: no summary-only approval; direct artifact evidence is mandatory.
 <!-- PLAN_A_ACCOUNTABILITY_END -->
+
+<!-- PLAN_A1_CORRECTION_ACCOUNTABILITY_START -->
+## Plan A Final Artifact Correction - 2026-07-13
+
+- Accountability ID: `AIW-PLAN-A1-FINAL-CORRECTION-20260713`
+- Gate: Gate 9 permanent Send module candidate
+- Exact source: rejected Plan A XML SHA `00C66283AD073BBCB3E8DEBA6EDE3258BB53258D56D007BB48EF4E404307AA59`
+- Codex mode: one consolidated artifact correction
+- Approved runtime tasks: 71 and 223 only
+- Prohibited runtime tasks: 199, 224, and every other task
+- Runtime tasks actually changed: 71 and 223
+- Claims: AutoSheets continuation repaired; Send error preserved; Archive wording corrected without Task 199 change
+- Direct proof: actual replacement XML/ZIP, prior 43-check suite, independent 67-check suite, 18-case matrix, Tasker static audit
+- Proof unavailable: Tasker import/render, TextNow UI, real Send, phone proof
+- Tracker effect: none; 8/14 locked = 57%
+- Sheet effect: none
+- Codex responsibility: prior validator checked plugin arg4 but failed to inspect exported `se=false`; prior Send branch did not save the Send error before clearing plugin outputs
+- Controller responsibility: Archive assertion wording conflicted with required Task 199 preservation; controller corrected the wording
+- User/operator responsibility: NONE
+- Final controller decision: pending ChatGPT full artifact audit
+- Phone import approved: NO
+- Phone proof claimed: NO
+<!-- PLAN_A1_CORRECTION_ACCOUNTABILITY_END -->

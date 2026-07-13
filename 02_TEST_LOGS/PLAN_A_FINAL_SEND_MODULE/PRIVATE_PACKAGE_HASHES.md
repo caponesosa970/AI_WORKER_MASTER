@@ -1,16 +1,19 @@
 # Private Package Hashes
 
-Private values and private XML are not included in this public report.
+| Artifact | Size | SHA256 |
+| --- | ---: | --- |
+| `PLAN_A1_FULL_PROJECT_TASKER_IMPORT__FINAL_SEND_MODULE_CORRECTED_PRIVATE.xml` | 1094084 | `82148AF8B72A24E3DBA77936A15E547E2114FEC01B705A084D12AA319534442B` |
+| `PLAN_A1_FULL_PROJECT_PHONE_IMPORT__FINAL_SEND_MODULE_CORRECTED_PRIVATE.zip` | 62464 | `3FC66D70AA55B517E99F7AECB067DBD9D211AAF91667D94161ED424C73E73F89` |
+| `PLAN_A1_SHA256__FINAL_SEND_MODULE_CORRECTED_PRIVATE.txt` | 285 | `DF9822AA85B4DBE6C00877116364479416A2F0BD12AD514D7EB7C46E1C3124CD` |
 
-| Artifact | Size | SHA256 | Result |
-| --- | ---: | --- | --- |
-| `PLAN_A_FULL_PROJECT_TASKER_IMPORT__FINAL_SEND_MODULE_GATE9_PRIVATE.xml` | 1090811 bytes | `00C66283AD073BBCB3E8DEBA6EDE3258BB53258D56D007BB48EF4E404307AA59` | XML parse PASS; TaskerData root |
-| `PLAN_A_FULL_PROJECT_PHONE_IMPORT__FINAL_SEND_MODULE_GATE9_PRIVATE.zip` | private package | `086811C752CCEAF1705EE00427290F756B3EFC489363F52C93BDDC7A5A2575E4` | ZIP integrity PASS; contains exactly matching full-project XML |
-| `PLAN_A_SHA256__FINAL_SEND_MODULE_GATE9_PRIVATE.txt` | sidecar | recorded in private folder | Records XML and ZIP hashes |
+The ZIP contains exactly one file, the full-project XML. Its bytes match the standalone XML.
 
 Credential occurrence count: 1.
-Credential equals current private source: YES.
+
+Credential equals the rejected Plan A source: YES.
+
 Credential printed in public output: NO.
+
 Private files tracked by Git: NO.
+
 Phone import approved: NO.
-Phone proof claimed: NO.

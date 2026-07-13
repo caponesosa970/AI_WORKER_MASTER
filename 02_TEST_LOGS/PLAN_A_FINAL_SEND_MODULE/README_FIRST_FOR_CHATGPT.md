@@ -1,64 +1,53 @@
-# README First for ChatGPT
+# Plan A Final Artifact Correction
 
-## Front-Page Scorecard
+Status: CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT
 
-| Field | Result |
-| --- | --- |
-| Gate | Gate 9 permanent Send-module candidate with removable controlled launcher |
-| Goal | Bind one exact queue row, persist SENDING, permit at most one Send click, then hold for independent confirmation |
-| Approved base | 31A1 current-key full project; SHA `1C1FAF33EA30B69E8F35478AA8E93E58A2AA4ABB967CAA8F5EA927506BBF1B6E` |
-| Changed runtime tasks | Tasks 71, 199, 223, and 224 only |
-| Full project | 76 tasks / 4 profiles / 1 scene |
-| Forbidden new Send retries | NO |
-| DONE from Send path | NO |
-| Archive added to Send path | NO |
-| Current credential changed | NO |
-| Static validator 1 | PASS |
-| Static validator 2 | PASS |
-| Phone proof claimed | NO |
-| Phone import approved | NO |
-| Tracker | 8/14 locked = 57% (unchanged) |
-| Final status | CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT |
+## Replacement
 
-## Phase 0 Source-Truth Installation
+- Rejected XML SHA256: `00C66283AD073BBCB3E8DEBA6EDE3258BB53258D56D007BB48EF4E404307AA59`
+- Rejected ZIP SHA256: `086811C752CCEAF1705EE00427290F756B3EFC489363F52C93BDDC7A5A2575E4`
+- Replacement XML: `PLAN_A1_FULL_PROJECT_TASKER_IMPORT__FINAL_SEND_MODULE_CORRECTED_PRIVATE.xml`
+- Replacement XML SHA256: `82148AF8B72A24E3DBA77936A15E547E2114FEC01B705A084D12AA319534442B`
+- Replacement ZIP: `PLAN_A1_FULL_PROJECT_PHONE_IMPORT__FINAL_SEND_MODULE_CORRECTED_PRIVATE.zip`
+- Replacement ZIP SHA256: `3FC66D70AA55B517E99F7AECB067DBD9D211AAF91667D94161ED424C73E73F89`
+- Replacement sidecar: `PLAN_A1_SHA256__FINAL_SEND_MODULE_CORRECTED_PRIVATE.txt`
 
-- Exact controller package hash verification: PASS.
-- Exact three-file content preservation: PASS.
-- Docs-only installation commit: `305047b7bdfb90a0148eb8d4c520e1528a55204a`.
-- GitHub main merge commit: `e3dc7c77830f67e84034761f6d3dab6ed5406698`.
-- All six required current-main controller files were re-read from updated `main` before this build.
+Do not import the rejected Plan A artifact.
 
-## Source Truth
+## Exact Correction
 
-| Role | Filename | SHA256 | Result |
-| --- | --- | --- | --- |
-| Full-project base | `31A1_FULL_PROJECT_TASKER_IMPORT__DASHGOOD_SEARCH_LANE_CURRENT_KEY_PRIVATE.xml` | `1C1FAF33EA30B69E8F35478AA8E93E58A2AA4ABB967CAA8F5EA927506BBF1B6E` | VERIFIED |
-| Rejected reference only | `31B_FULL_PROJECT_TASKER_IMPORT__AUTOSHEETS_RETRY_CONTROLLED_SEND_PRIVATE.xml` | `156D44624EF534DB8F0D4E81F0E873A44FE8A9560B26D1C260348AFA4ED8B820` | REFERENCE ONLY, NOT BASE |
-| V15A UI source | `basefile_v15a_phone_send_cleanup_pass.xml` | `C4CDEAA0BFD78120386FF1B03FA0A2D6B13BCEEDBD15687F84D03A3AD5FEF1C8` | VERIFIED |
-| Dashgood active source | `dashgood-backup.xml` Task 71 | `62804D52AE6BAB0E0E5895757D56123539F18F99A4E3E9E9060A8BC9C96A8DB7` | VERIFIED |
-| Current credential source | `27B_CURRENT_RECONSTRUCTED_SOURCE.xml` | `03CDD603FE4D3991BC3E88472BEA6C684F4CE10D0597A429EF5E247859D66925` | VERIFIED WITHOUT PRINTING VALUE |
+1. Task 71 AutoSheets actions with `se=false`: 2/2.
+2. Task 223 AutoSheets actions with `se=false`: 24/24.
+3. The Send-button `%err` and `%errmsg` are copied immediately into `%send_action_err` and `%send_action_errmsg` before any clear.
+4. Numeric Send-error detection uses `%send_action_err`.
+5. `SEND_OUTCOME_UNKNOWN_REVIEW` is reported only after exact ID/status readback confirms that state.
+6. An unconfirmed unknown outcome routes to `POST_SEND_STATUS_UPDATE_FAILED` without another Send click.
+7. The original saved Send error is retained through `SS Lock Release HARD`.
 
-## Controller Decision Boundary
+Only Tasks 71 and 223 changed from the rejected Plan A artifact. Tasks 199 and 224 are byte-identical.
 
-`SAFE FOR CHATGPT FULL ARTIFACT AUDIT` means only that Codex static checks passed. It is not phone-import approval. ChatGPT must inspect the standalone XML, ZIP XML bytes, changed task nodes, Perform Task references, all reachable Send paths, lock-owned exits, AutoSheets retry paths, AutoInput bundles, GULAG removals, private credential occurrence, and hashes before any phone instruction.
+## Archive Ruling
 
-## Unsupported-Claim Disclosure
+The previous Archive HOLD statement is superseded. Existing Task 199 Archive/DeadArchive maintenance calls were present in the verified base, remain byte-identical, remain behind their existing flags, and are not reachable from Task 224. No new Archive action or Send-to-Archive route was added.
 
-- XML parse does not prove Tasker phone import/render acceptance.
-- Static control-flow checks do not prove the visible TextNow thread, clean compose state, or outgoing message.
-- No Plan A phone run occurred.
-- The unchanged Task 199 maintenance branch still contains its historical Archive route. Plan A added no Archive behavior to Tasks 71, 223, or 224 and did not alter Task 199 outside its Send block.
-- QueueView is intentionally a multi-row read; its dimensions must be equal and nonzero. Every exact-row read requires exactly one result in every required array.
+## Validation
 
-## Artifacts
+- Prior independent suite: 43/43 PASS.
+- New independent suite: 67/67 PASS.
+- Static scenarios: 18/18 PASS.
+- Tasker XML parse/root/reference audit: PASS.
+- Tasks/profiles/scenes: 76/4/1.
+- Duplicate task IDs/names/sr and missing references: 0.
+- `button_send` nodes: 1.
+- Automatic Send retry paths: 0.
+- Owned-lock AutoSheets failures bypassing cleanup: 0.
+- ZIP contains exactly one XML and its bytes match the standalone XML.
 
-- XML: `PLAN_A_FULL_PROJECT_TASKER_IMPORT__FINAL_SEND_MODULE_GATE9_PRIVATE.xml`
-- XML SHA256: `00C66283AD073BBCB3E8DEBA6EDE3258BB53258D56D007BB48EF4E404307AA59`
-- ZIP: `PLAN_A_FULL_PROJECT_PHONE_IMPORT__FINAL_SEND_MODULE_GATE9_PRIVATE.zip`
-- ZIP SHA256: `086811C752CCEAF1705EE00427290F756B3EFC489363F52C93BDDC7A5A2575E4`
-- Sidecar: `PLAN_A_SHA256__FINAL_SEND_MODULE_GATE9_PRIVATE.txt`
+## Boundaries
 
-Phone proof claimed: NO
-Phone import approved: NO
-Tracker changed: NO
-Sheet changed: NO
+- Tracker: 8/14 locked = 57%.
+- Sheet changed: NO.
+- Tasker run: NO.
+- Phone proof claimed: NO.
+- Phone import approved: NO.
+- Controlled Send, DONE, Archive progression, live/timer, capacity, and release remain blocked.

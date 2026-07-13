@@ -128,5 +128,22 @@ Before approving any phone import/test, ChatGPT must record:
 | PLAN-A-005 | Plan A | No DONE/confirmed send claim | Direct assignment and status scan | DONE writes 0; SSSentOne remains 0 | Tasks 71/199/223/224 | YES | NO | Pending | PROVEN STATIC |
 | PLAN-A-006 | Plan A | Current key unchanged | Equality check without printing value | One equal occurrence in base/source/output | Intended private credential task outside changed tasks | YES | N/A | Pending | PROVEN STATIC |
 | PLAN-A-007 | Plan A | Tasker/phone behavior works | Phone import/render and controlled recording | Not provided | Phone | NO | NO | NO | UNSUPPORTED / HOLD |
-| PLAN-A-008 | Plan A | Archive actions zero in Task 199 | Direct Task 199 scan | Historical non-Send maintenance route remains unchanged | Task 199 outside Send block | NO | N/A | Pending | CONTRADICTED LITERALLY / NO NEW ARCHIVE PROVEN |
+| PLAN-A-008 | Plan A | Historical Task 199 Archive/DeadArchive routes remain unchanged and unconnected to the Send module | Raw Task 199 byte comparison and call graph | Task 199 is byte-identical; no new Archive connection | Task 199 | YES | N/A | Controller corrected wording | PROVEN STATIC / RUNTIME STILL BLOCKED |
 <!-- PLAN_A_ACCOUNTABILITY_END -->
+
+<!-- PLAN_A1_CORRECTION_CLAIMS_START -->
+## Plan A Final Correction Claim-to-Proof Entries
+
+| Claim ID | Claim | Evidence required | Actual evidence | Result |
+| --- | --- | --- | --- | --- |
+| PLAN-A1-001 | Task 71 AutoSheets `se=false` is 2/2 | Actual XML field count | 2 total, 2 false, 0 missing | PROVEN STATIC |
+| PLAN-A1-002 | Task 223 AutoSheets `se=false` is 24/24 | Actual XML field count | 24 total, 24 false, 0 missing | PROVEN STATIC |
+| PLAN-A1-003 | Plugin payloads unchanged except `se` and action location | Independent source/output comparison | All 26 pairs equal after removing `se` and `sr` | PROVEN STATIC |
+| PLAN-A1-004 | Send error saved before clear | Immediate action adjacency | Actions 689/690 save `%err`/`%errmsg`; later clears follow | PROVEN STATIC |
+| PLAN-A1-005 | Unknown result requires confirmed status | Control-flow ancestry | Single SSResult assignment enclosed by `%status_confirmed=1` | PROVEN STATIC |
+| PLAN-A1-006 | Unconfirmed unknown routes to fallback | State/control scan | fallback latch plus POST_SEND_STATUS_UPDATE_FAILED path | PROVEN STATIC |
+| PLAN-A1-007 | Task 199 and 224 unchanged | Raw task-node byte comparison | IDENTICAL | PROVEN STATIC |
+| PLAN-A1-008 | Runtime works on phone | Phone import/render and controlled recording | Not provided | UNSUPPORTED / HOLD |
+
+Replacement XML SHA256: `82148AF8B72A24E3DBA77936A15E547E2114FEC01B705A084D12AA319534442B`
+<!-- PLAN_A1_CORRECTION_CLAIMS_END -->
