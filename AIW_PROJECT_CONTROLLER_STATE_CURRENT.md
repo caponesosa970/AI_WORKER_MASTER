@@ -1,6 +1,6 @@
 # AI Worker Project Controller State Current
 
-Updated: 2026-07-10
+Updated: 2026-07-12
 
 Status: CURRENT SOURCE-TRUTH TRACKER / HOLD FOR CHATGPT AUDIT
 
@@ -41,9 +41,11 @@ Status: CURRENT SOURCE-TRUTH TRACKER / HOLD FOR CHATGPT AUDIT
 
 Controlled send remains HOLD.
 
-Accountability-system installation is pending ChatGPT audit.
+Accountability-system installation is active from main commit `aa4e1ded4d70a8262adc80cc80a7bb5fad957b46`.
 
-No runtime repair is authorized until the accountability PR passes.
+29A SEARCH_ICON source-truth forensic review is HOLD: no authoritative source found, no runtime repair created.
+
+No runtime repair is authorized until ChatGPT audits 29A and supplies/approves the missing source proof.
 
 ## Current Sheet State
 

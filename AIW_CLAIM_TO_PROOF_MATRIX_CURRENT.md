@@ -1,7 +1,7 @@
 # AI Worker Claim To Proof Matrix Current
 
 Status: ACTIVE CLAIM GATE
-Updated: 2026-07-12T17:43:24-07:00
+Updated: 2026-07-12T18:23:45-07:00
 
 Every Codex claim must map to direct evidence. If proof is missing, the claim is HOLD or UNSUPPORTED.
 
@@ -49,10 +49,15 @@ The proof must identify the exact XML action in both files and must be validated
 | CLAIM-ACC-001 | Accountability install | Accountability ledgers created | Direct file existence and commit diff | This PR should add files | root accountability files | project control docs | PENDING | N/A | PENDING | PARTIAL UNTIL PR AUDIT |
 | CLAIM-ACC-002 | Accountability install | Tracker percentage unchanged | Direct tracker inspection | Tracker must retain `8/14 locked = 57%` | `AIW_PROJECT_CONTROLLER_STATE_CURRENT.md` | proof percent | PENDING | N/A | PENDING | PARTIAL UNTIL PR AUDIT |
 | CLAIM-ACC-003 | Accountability install | Runtime untouched | Git diff has no runtime XML behavior change | To be verified after commit | git changed-file list | changed paths | PENDING | N/A | PENDING | PARTIAL UNTIL PR AUDIT |
+| CLAIM-29A-001 | 29A | Authoritative SEARCH_ICON source found | Phone-exported/Sosa-created source plus successful behavior plus no contradiction plus full field inspection | Source search found no candidate satisfying all four requirements | `02_TEST_LOGS/29A_27B_SEARCH_ICON_SOURCE_TRUTH_REPAIR/AUTHORITATIVE_SOURCE_DECISION.md` | SEARCH_ICON source decision | YES | Existing phone proof contradicts V15A menu_search source for current repair | PENDING | DISPROVEN |
+| CLAIM-29A-002 | 29A | Runtime repair performed | Git diff and private package hashes | No repair package created because source proof was missing | `02_TEST_LOGS/29A_27B_SEARCH_ICON_SOURCE_TRUTH_REPAIR/ONE_ACTION_CHANGE_REPORT.md` | runtime repair status | YES | N/A | PENDING | NOT PERFORMED |
+| CLAIM-29A-003 | 29A | Older text-based Search action is usable repair source | Exact source plus complete successful raw runlog plus phone-visible/source field proof | Partial historical evidence only; complete successful raw runlog tied to exact source not found | `02_TEST_LOGS/29A_27B_SEARCH_ICON_SOURCE_TRUTH_REPAIR/SOURCE_CANDIDATE_LEDGER.md` | old text-search SEARCH_ICON candidate | PARTIAL | PARTIAL ONLY | PENDING | UNSUPPORTED |
 
 ## Unsupported Claim Disclosure
 
 The previous 27B `PRESERVED` claim is no longer accepted as proven. It is DISPROVEN for SEARCH_ICON until a future repair supplies direct AutoInput field evidence and phone-visible proof.
+
+29A did not find a source that satisfies the repair rule. The older text-based `Search` action remains a candidate only. It is not approved as runtime build logic.
 
 ## Controller Checklist
 
