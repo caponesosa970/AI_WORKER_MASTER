@@ -88,6 +88,12 @@ The proof must identify the exact XML action in both files and must be validated
 | CLAIM-31B-006 | 31B | Final AutoSheets failure releases lock and closes AllowSend | failure-path scan | final failure path sets AllowSend to `0`, records `AUTOSHEETS_ROW_READ_FAILED`, performs `SS Lock Release HARD`, and stops before TextNow | `02_TEST_LOGS/31A_DASHGOOD_SEARCH_LANE_CONTROLLED_SEND/31B_AUTOSHEETS_PREFLIGHT_REPAIR_REPORT.md` | task `224` final failure path | YES | NO | PENDING | PROVEN STATICALLY |
 | CLAIM-31B-007 | 31B | Search lane and downstream runtime unchanged | semantic comparison excluding Tasker action sr/location renumbering | downstream comparison passed | `02_TEST_LOGS/31A_DASHGOOD_SEARCH_LANE_CONTROLLED_SEND/31B_AUTOSHEETS_PREFLIGHT_REPAIR_REPORT.md` | task `224` after AutoSheets preflight | YES | NO | PENDING | PROVEN STATICALLY |
 | CLAIM-31B-008 | 31B | Phone proof not claimed and phone import not approved | report status | README and 31B repair report state no phone proof/import approval | `02_TEST_LOGS/31A_DASHGOOD_SEARCH_LANE_CONTROLLED_SEND/README_FIRST_FOR_CHATGPT.md`; `02_TEST_LOGS/31A_DASHGOOD_SEARCH_LANE_CONTROLLED_SEND/31B_AUTOSHEETS_PREFLIGHT_REPAIR_REPORT.md` | package status | YES | NO | PENDING | PROVEN |
+| CLAIM-31B-TX-001 | 31B superseding | Earlier narrow 31B is superseded | package hash ledger | superseded and final hashes recorded | `02_TEST_LOGS/31A_DASHGOOD_SEARCH_LANE_CONTROLLED_SEND/31B_AUTOSHEETS_PREFLIGHT_REPAIR_REPORT.md`; `02_TEST_LOGS/31A_DASHGOOD_SEARCH_LANE_CONTROLLED_SEND/PRIVATE_PACKAGE_HASHES.md` | 31B package status | YES | NO | PENDING | PROVEN STATICALLY |
+| CLAIM-31B-TX-002 | 31B superseding | Authorization is consumed before TextNow | task action scan | `%AIW31BRunAllowSendLatch` is set from `%AIW27BAllowSend`, global AllowSend is set to `0`, and later checks use the local latch | `02_TEST_LOGS/31A_DASHGOOD_SEARCH_LANE_CONTROLLED_SEND/31B_AUTOSHEETS_PREFLIGHT_REPAIR_REPORT.md` | task `224` authorization gate | YES | NO | PENDING | PROVEN STATICALLY |
+| CLAIM-31B-TX-003 | 31B superseding | SENDING is persisted before TextNow | action order scan | `SENDING` update exists with retry, D-status readback exists, and TextNow is blocked if readback fails | `02_TEST_LOGS/31A_DASHGOOD_SEARCH_LANE_CONTROLLED_SEND/31B_AUTOSHEETS_PREFLIGHT_REPAIR_REPORT.md` | task `224` pre-TextNow state | YES | NO | PENDING | PROVEN STATICALLY |
+| CLAIM-31B-TX-004 | 31B superseding | Send click does not write DONE or final SENT proof | action scan | task `224` has `DONE` update count `0`, `%SSSentOne=1` count `0`, and `%SSResult=SENT` count `0` | `02_TEST_LOGS/31A_DASHGOOD_SEARCH_LANE_CONTROLLED_SEND/31B_AUTOSHEETS_PREFLIGHT_REPAIR_REPORT.md` | task `224` post-Send state | YES | NO | PENDING | PROVEN STATICALLY |
+| CLAIM-31B-TX-005 | 31B superseding | Post-Send status update uses awaiting-confirm state | action scan | `SEND_CLICKED_AWAITING_CONFIRM` update exists with one retry and failure status `POST_SEND_STATUS_UPDATE_FAILED` | `02_TEST_LOGS/31A_DASHGOOD_SEARCH_LANE_CONTROLLED_SEND/31B_AUTOSHEETS_PREFLIGHT_REPAIR_REPORT.md` | task `224` post-Send state | YES | NO | PENDING | PROVEN STATICALLY |
+| CLAIM-31B-TX-006 | 31B superseding | AutoInput nodes unchanged | source/output semantic comparison | all 14 AutoInput nodes match 31A1 semantics excluding action sr/location | `02_TEST_LOGS/31A_DASHGOOD_SEARCH_LANE_CONTROLLED_SEND/31B_AUTOSHEETS_PREFLIGHT_REPAIR_REPORT.md` | task `224` AutoInput actions | YES | NO | PENDING | PROVEN STATICALLY |
 
 ## Unsupported Claim Disclosure
 
@@ -96,6 +102,8 @@ The proof must identify the exact XML action in both files and must be validated
 31A current-key preservation was disproven by ChatGPT audit. 31A1 corrects only the private credential literal and documents credential-current proof separately from runtime/search-lane proof.
 
 31B is not phone proof. It is a private runtime candidate whose AutoSheets retry and lock-release behavior is statically validated and held for ChatGPT audit.
+
+Superseding 31B is still not phone proof. It adds transaction-safety controls required before the controlled one-send gate can be tested. DONE remains controller-owned after ChatGPT verifies phone evidence.
 
 ## Controller Checklist
 

@@ -38,12 +38,14 @@ Original 31A key result: REJECTED / DISCONTINUED.
 
 ## 31B AutoSheets Preflight Retry Package
 
-31B changes only task `224` AutoSheets row-read preflight error handling. It does not change the private credential, Search lane, AutoInput actions, downstream Send path, profiles, or scenes.
+The narrow 31B AutoSheets-only package is superseded by the current 31B transaction-safety package.
 
 | Artifact | SHA256 |
 |---|---|
-| 31B full private XML | `0B984F8CADCBCCA4915676F76C269F927ADED0473C34043F15609F1720C60007` |
-| 31B private ZIP | `4C529BF48A8DD71B64B0B6B2B62801A0C5C536BD1CA8B6B5DB478723B8150EA3` |
+| superseded narrow 31B full private XML | `0B984F8CADCBCCA4915676F76C269F927ADED0473C34043F15609F1720C60007` |
+| superseded narrow 31B private ZIP | `4C529BF48A8DD71B64B0B6B2B62801A0C5C536BD1CA8B6B5DB478723B8150EA3` |
+| final superseding 31B full private XML | `156D44624EF534DB8F0D4E81F0E873A44FE8A9560B26D1C260348AFA4ED8B820` |
+| final superseding 31B private ZIP | `B6C8126034AE775157105A0343F627464AF1F1626B44584CA9140DA3B0D3B67D` |
 
 ## 31B Private Package Facts
 
@@ -54,6 +56,13 @@ Original 31A key result: REJECTED / DISCONTINUED.
 - AutoSheets attempts maximum: `2`
 - Final AutoSheets failure releases lock: YES
 - Final AutoSheets failure closes AllowSend: YES
+- Send authorization consumed into local latch before TextNow: YES
+- Global `%AIW27BAllowSend` closed before TextNow and on every exit: YES
+- Pre-Send `SENDING` write/readback before TextNow: YES
+- Post-Send `SEND_CLICKED_AWAITING_CONFIRM` write: YES
+- Task 224 `DONE` write: NO
+- Task 224 final sent proof: NO
+- AutoInput nodes changed: NO
 - Current private key printed: NO
 - Current private key changed: NO
 - ZIP integrity: PASS

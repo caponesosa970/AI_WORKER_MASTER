@@ -23,8 +23,18 @@
 - 31B final AutoSheets failure sets `%AIW27BAllowSend=0`: TRUE
 - 31B final AutoSheets failure performs `SS Lock Release HARD`: TRUE
 - 31B final AutoSheets failure stops before TextNow launch: TRUE
-- 31B Search lane unchanged semantically: TRUE
-- 31B downstream runtime unchanged semantically excluding Tasker action sr/location renumbering: TRUE
+- 31B consumes global authorization into local run latch before TextNow: TRUE
+- 31B closes global `%AIW27BAllowSend` before TextNow: TRUE
+- 31B uses local run latch for later send checks: TRUE
+- 31B writes `SENDING` before TextNow with one retry: TRUE
+- 31B reads back `SENDING` before TextNow: TRUE
+- 31B blocks TextNow if `SENDING` is not confirmed: TRUE
+- 31B writes `SEND_CLICKED_AWAITING_CONFIRM` after Send click with one retry: TRUE
+- 31B leaves row in `SENDING` if post-Send status update fails: TRUE
+- 31B task 224 `DONE` write count: `0`
+- 31B task 224 `%SSSentOne=1` count: `0`
+- 31B task 224 `%SSResult=SENT` count: `0`
+- 31B AutoInput nodes unchanged semantically: TRUE
 - ZIP integrity: PASS
 - Tracker unchanged: `8/14 locked = 57%`
 - Sheet changed: NO
@@ -47,3 +57,4 @@ These markers are expected elsewhere in the full project because this is a full-
 - SEARCH_ICON runtime/UI failure: 31A replaces only the failing search lane with Dashgood active Task 71 recovery logic.
 - 31A credential provenance failure: 31A1 corrects only the private credential value and keeps runtime actions unchanged.
 - 31A AutoSheets timeout after Send lock: 31B adds one retry and lock-release failure handling before TextNow launch.
+- Controlled one-send transaction risk: superseding 31B consumes authorization, persists SENDING before UI, removes DONE from the Send-click path, and waits for ChatGPT-controlled confirmation before DONE.

@@ -417,3 +417,87 @@ Builds that must check this issue in preflight:
 - any future controlled-send candidate
 - any Gate 10 one-send package
 - any future Send-lock or Sheet preflight repair
+
+## ISSUE_31B_CONTROLLED_SEND_TRANSACTION_SAFETY_REQUIREMENTS
+
+Status: CANDIDATE / HOLD FOR CHATGPT AUDIT
+
+First detected date: 2026-07-13
+
+Affected build:
+
+31B controlled-send candidate.
+
+Affected task/action:
+
+Task `224`, controlled one-send transaction path.
+
+Observed symptom:
+
+The prior 31B AutoSheets-only repair did not include all current transaction-safety requirements needed to clear the controlled one-send gate.
+
+Direct evidence:
+
+- Sosa/ChatGPT superseding 31B gate correction.
+- Final superseding 31B XML SHA256: `156D44624EF534DB8F0D4E81F0E873A44FE8A9560B26D1C260348AFA4ED8B820`
+- Final superseding 31B ZIP SHA256: `B6C8126034AE775157105A0343F627464AF1F1626B44584CA9140DA3B0D3B67D`
+
+Root cause:
+
+Controlled one-send needs transaction semantics beyond UI and timeout handling: Send authorization must be consumed, the Sheet row must be moved to `SENDING` before UI, and Send click must not immediately mark `DONE`.
+
+Contributing cause:
+
+The earlier repair was scoped only to AutoSheets timeout survival and lock release.
+
+Codex responsibility:
+
+Implement the complete transaction-safety gate in task `224` without altering AutoInput action nodes, credentials, profiles, scenes, or other tasks.
+
+ChatGPT/controller responsibility:
+
+Audit the private XML directly and do not approve phone import from summary alone.
+
+User/operator responsibility:
+
+NONE.
+
+Required repair:
+
+Superseding 31B must include:
+
+- bounded preflight read retry
+- output clearing before each read attempt
+- first-element and array-count read validation
+- local authorization latch
+- global authorization closed before TextNow and every Stop
+- `SENDING` write/retry/readback before TextNow
+- no `DONE` write from Send click
+- post-Send `SEND_CLICKED_AWAITING_CONFIRM` write/retry
+- lock release on all exits
+
+Required regression test:
+
+- verify exact read attempts maximum is `2`
+- verify exact SENDING update attempts maximum is `2`
+- verify exact post-Send status update attempts maximum is `2`
+- verify TextNow launch is blocked until SENDING readback passes
+- verify task 224 contains no `DONE` write
+- verify task 224 contains no `%SSSentOne=1`
+- verify task 224 contains no `%SSResult=SENT`
+- verify AutoInput nodes are unchanged
+
+Closing proof:
+
+Pending ChatGPT audit and any later approved phone proof.
+
+Prevention rule:
+
+Controlled Send cannot be cleared by a Send-button click alone. It must preserve transaction state: READY_TO_SEND to SENDING before UI, SEND_CLICKED_AWAITING_CONFIRM after click, and controller-verified DONE only after phone evidence.
+
+Builds that must check this issue in preflight:
+
+- 31B
+- any future Gate 10 one-send package
+- any future controlled-send package
+- any release package

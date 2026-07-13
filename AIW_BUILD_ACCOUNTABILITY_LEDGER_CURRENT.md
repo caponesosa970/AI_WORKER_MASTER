@@ -799,3 +799,72 @@ ChatGPT audit is required before any phone import. A later phone test must prove
 ### Tracker Effect
 
 No percentage change. Current tracker remains `8/14 locked = 57%`.
+
+## 31B Superseding Transaction-Safety Repair Entry
+
+### Accountability ID
+
+AIW-ACC-20260713-31B-TRANSACTION-SAFETY
+
+### Gate
+
+Gate 9 controlled-send transaction-safety candidate. Controlled Send remains HOLD.
+
+### Issue
+
+ISSUE_31B_CONTROLLED_SEND_TRANSACTION_SAFETY_REQUIREMENTS
+
+### Exact Task Assigned
+
+Supersede the narrower 31B AutoSheets-only package. Keep bounded row-read retry and add all known transaction-safety requirements before controlled one-send gate testing.
+
+### Source Truth
+
+- Source 31A1 XML SHA256: `1C1FAF33EA30B69E8F35478AA8E93E58A2AA4ABB967CAA8F5EA927506BBF1B6E`
+- Superseded narrow 31B XML SHA256: `0B984F8CADCBCCA4915676F76C269F927ADED0473C34043F15609F1720C60007`
+- Final superseding 31B XML SHA256: `156D44624EF534DB8F0D4E81F0E873A44FE8A9560B26D1C260348AFA4ED8B820`
+- Final superseding 31B ZIP SHA256: `B6C8126034AE775157105A0343F627464AF1F1626B44584CA9140DA3B0D3B67D`
+
+### Files Touched
+
+Public-safe documentation and accountability ledgers only. Private XML and ZIP artifacts remain outside Git.
+
+### Runtime Tasks Touched
+
+Private runtime candidate changes only task `224`.
+
+### Exact Actions Touched
+
+Task `224` transaction wrapper only:
+
+- preflight row-read retry remains bounded to two attempts
+- output arrays are cleared before each row-read attempt
+- row-read success requires all five first elements and all five array counts
+- authorization is copied into `%AIW31BRunAllowSendLatch`
+- global `%AIW27BAllowSend` is set to `0` before TextNow and before every Stop
+- later Send checks use the local latch
+- pre-TextNow row status writes `SENDING`, retries once, then reads back `SENDING`
+- post-Send row status writes `SEND_CLICKED_AWAITING_CONFIRM`, retries once, and does not write `DONE`
+- final sent proof variables are not set
+
+### Claims And Proof
+
+| Claim | Required proof | Current status |
+|---|---|---|
+| only task 224 changed | source/output task comparison | SUPPORTED |
+| current private key unchanged | private equality check without printing key | SUPPORTED |
+| AutoInput nodes unchanged | source/output semantic comparison excluding sr/location | SUPPORTED |
+| no DONE write in task 224 | action scan | SUPPORTED |
+| no `%SSSentOne=1` in task 224 | action scan | SUPPORTED |
+| no `%SSResult=SENT` in task 224 | action scan | SUPPORTED |
+| SENDING write and readback exist before TextNow | action scan and order validation | SUPPORTED |
+| Send authorization consumed before TextNow | action scan | SUPPORTED |
+| phone proof not claimed | report status | SUPPORTED |
+
+### Phone Proof Required
+
+ChatGPT audit is required before any phone import. Sosa phone recording and visible outgoing message are the confirmation source for this controlled gate. Only ChatGPT may move the row from `SEND_CLICKED_AWAITING_CONFIRM` to `DONE` after verifying correct thread, exact reply, exactly one outgoing message, and no duplicate.
+
+### Tracker Effect
+
+No percentage change. Current tracker remains `8/14 locked = 57%`.

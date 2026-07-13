@@ -2,21 +2,40 @@
 
 Status: CANDIDATE / HOLD FOR CHATGPT AUDIT
 
-## 31B AutoSheets Preflight Retry Repair Update
+## 31B Superseding Transaction-Safety Repair Update
+
+The earlier 31B AutoSheets-only repair is superseded by the current transaction-safety 31B package.
 
 31B records the phone failure where task `224` stopped at the AutoSheets row-read preflight with a socket timeout after the Send lock was active and before TextNow launched.
 
-31B changes only task `224` AutoSheets preflight error handling. The task is renamed to:
+31B changes only task `224`. The task is named:
 
 `AIW31B_AUTOSHEETS_RETRY_CONTROLLED_SEND_CANDIDATE`
 
-31B preserves the existing AutoSheets configuration except the required Continue Task After Error change on the row-read action. It clears the five AutoSheets output arrays plus `%err` and `%errmsg` before both read attempts, retries once after a 3-second wait, validates that all first elements exist and all five output array counts equal exactly `1`, and if both attempts fail it sets `%AIW27BAllowSend=0`, records `AUTOSHEETS_ROW_READ_FAILED`, performs `SS Lock Release HARD`, and stops before TextNow launch.
+Current 31B includes all known controlled one-send transaction-safety requirements:
+
+- clears the five AutoSheets output arrays plus `%err` and `%errmsg` before both preflight reads
+- retries the preflight row read once after 3 seconds
+- validates all five first elements and all five output array counts
+- consumes `%AIW27BAllowSend` into `%AIW31BRunAllowSendLatch`
+- sets global `%AIW27BAllowSend=0` before TextNow interaction
+- uses the local latch for later send checks
+- writes `SENDING` before TextNow, retries once if needed, and reads back `SENDING`
+- blocks TextNow if `SENDING` is not confirmed
+- keeps Search, contact select, compose, reply insertion, and Send-button AutoInput unchanged
+- after Send click, writes `SEND_CLICKED_AWAITING_CONFIRM`, retrying once if needed
+- does not write `DONE`
+- does not set `%SSSentOne=1`
+- does not set `%SSResult=SENT`
+- always closes authorization and releases the Send lock on exit
 
 Validation summary for 31B:
 
 - Source 31A1 XML SHA256: `1C1FAF33EA30B69E8F35478AA8E93E58A2AA4ABB967CAA8F5EA927506BBF1B6E`
-- Final 31B XML SHA256: `0B984F8CADCBCCA4915676F76C269F927ADED0473C34043F15609F1720C60007`
-- Final 31B ZIP SHA256: `4C529BF48A8DD71B64B0B6B2B62801A0C5C536BD1CA8B6B5DB478723B8150EA3`
+- Superseded narrow 31B XML SHA256: `0B984F8CADCBCCA4915676F76C269F927ADED0473C34043F15609F1720C60007`
+- Superseded narrow 31B ZIP SHA256: `4C529BF48A8DD71B64B0B6B2B62801A0C5C536BD1CA8B6B5DB478723B8150EA3`
+- Final superseding 31B XML SHA256: `156D44624EF534DB8F0D4E81F0E873A44FE8A9560B26D1C260348AFA4ED8B820`
+- Final superseding 31B ZIP SHA256: `B6C8126034AE775157105A0343F627464AF1F1626B44584CA9140DA3B0D3B67D`
 - XML parse: PASS
 - Task count/profile count/scene count: `76 / 4 / 1`
 - Duplicate task IDs/names: `0 / 0`
@@ -26,8 +45,10 @@ Validation summary for 31B:
 - Retry wait: `3` seconds
 - Final AutoSheets failure releases lock: YES
 - Final AutoSheets failure closes AllowSend: YES
-- Search lane unchanged semantically: YES
-- Downstream actions unchanged semantically excluding Tasker action sr/location renumbering: YES
+- SENDING write/readback before TextNow: YES
+- Send authorization consumed before TextNow: YES
+- Post-Send status is awaiting confirmation, not DONE: YES
+- AutoInput nodes unchanged semantically: YES
 - Current key unchanged without printing it: YES
 - Phone proof claimed for 31B: NO
 - Phone import approved by Codex: NO
