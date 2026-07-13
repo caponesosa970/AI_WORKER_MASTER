@@ -343,3 +343,77 @@ Builds that must check this issue in preflight:
 
 - 31A1
 - any future private runtime package carrying the OpenAI key
+
+## ISSUE_31A_AUTOSHEETS_ROW_READ_TIMEOUT_LOCK_RELEASE_RISK
+
+Status: REPAIRED CANDIDATE / HOLD FOR CHATGPT AUDIT
+
+First detected date: 2026-07-13
+
+Affected build:
+
+31A1 current-key controlled-send candidate, task `224`.
+
+Affected task/action:
+
+Task `224`, AutoSheets row-read preflight for the staged row range.
+
+Observed symptom:
+
+Phone proof reported `java.net.SocketTimeoutException: timeout` at the AutoSheets Get Data action after `%AIWSending` was set to `1` and before TextNow launched.
+
+Direct evidence:
+
+- Sosa/ChatGPT phone-result instruction for 31B.
+- Source 31A1 XML SHA256: `1C1FAF33EA30B69E8F35478AA8E93E58A2AA4ABB967CAA8F5EA927506BBF1B6E`
+- 31B final XML SHA256: `0B984F8CADCBCCA4915676F76C269F927ADED0473C34043F15609F1720C60007`
+
+Root cause:
+
+The preflight AutoSheets read could fail before TextNow launch while the Send lock was already active, without a one-time retry and explicit final failure path to close AllowSend and release the lock.
+
+Contributing cause:
+
+The earlier candidate focused on Search-lane repair and credential correction. It did not yet harden the AutoSheets preflight read timeout behavior.
+
+Codex responsibility:
+
+31B must prove that AutoSheets timeout handling was added without changing Search, AutoInput, compose, Send, DONE, Archive, profiles, scenes, or credential material.
+
+ChatGPT/controller responsibility:
+
+ChatGPT must audit the private 31B XML before any phone import and must verify the failure path directly, not from summary alone.
+
+User/operator responsibility:
+
+NONE. The operator supplied the phone failure and reset the Sheet state outside this repository task.
+
+Required repair:
+
+Add a one-retry AutoSheets preflight wrapper in task `224` only. Clear output arrays before both attempts, validate all first elements and array counts, and on final failure set `%AIW27BAllowSend=0`, record `AUTOSHEETS_ROW_READ_FAILED`, perform `SS Lock Release HARD`, and stop before TextNow launch.
+
+Required regression test:
+
+- maximum AutoSheets row-read attempts equals `2`
+- output arrays cleared before both attempts
+- all first elements checked
+- all array counts checked for exactly `1`
+- final failure path releases lock
+- final failure path closes AllowSend
+- no TextNow action is reachable after both reads fail
+- Search lane and downstream actions remain semantically unchanged
+
+Closing proof:
+
+Pending ChatGPT audit of 31B and any later approved phone proof.
+
+Prevention rule:
+
+Any Send-lock path that performs network or Sheet preflight before TextNow launch must have a bounded retry and an explicit lock-release failure path before UI launch.
+
+Builds that must check this issue in preflight:
+
+- 31B
+- any future controlled-send candidate
+- any Gate 10 one-send package
+- any future Send-lock or Sheet preflight repair

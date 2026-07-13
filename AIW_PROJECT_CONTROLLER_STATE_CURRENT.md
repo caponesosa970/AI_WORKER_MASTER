@@ -40,6 +40,7 @@ Status: CURRENT SOURCE-TRUTH TRACKER / HOLD FOR CHATGPT AUDIT
 - ISSUE_27B_AUTOINPUT_TARGET_NOT_V15A_PRESERVED - CORRECTED / SOURCE PRESERVATION STATICALLY PROVEN FOR SEARCH_ICON
 - ISSUE_27B_SEARCH_ICON_RUNTIME_UI_FAILURE_WITH_V15A_PRESERVED - OPEN
 - ISSUE_31A_DISCONTINUED_CREDENTIAL_IN_PRIVATE_PACKAGE - REPAIRED CANDIDATE / HOLD FOR CHATGPT AUDIT
+- ISSUE_31A_AUTOSHEETS_ROW_READ_TIMEOUT_LOCK_RELEASE_RISK - REPAIRED CANDIDATE / HOLD FOR CHATGPT AUDIT
 
 Controlled send remains HOLD.
 
@@ -58,6 +59,8 @@ Next required proof is a ChatGPT-approved 30B phone/runtime/UI diagnostic. No XM
 31A Dashgood search-lane controlled-send candidate status: CANDIDATE / HOLD FOR CHATGPT AUDIT. 31A clones 27B into a new task, keeps original 27B unchanged, and replaces only the cloned task search lane with the active Dashgood Task 71 Search recovery lane. Controlled Send remains HOLD.
 
 31A1 current-key repair status: CANDIDATE / HOLD FOR CHATGPT AUDIT. Original 31A was rejected because the private package carried a discontinued credential from an older 27B base. 31A1 changed only the private credential literal. Sanitized XML comparison after redacting all `sk-...` credentials is IDENTICAL, task 224 is unchanged byte-for-byte, and runtime actions are unchanged. No phone proof is claimed and Codex does not approve phone import.
+
+31B AutoSheets preflight retry repair status: CANDIDATE / HOLD FOR CHATGPT AUDIT. Phone result showed task 224 stopped at the AutoSheets row-read preflight with a socket timeout after the Send lock was active and before TextNow launched. 31B changes only task 224 AutoSheets preflight error handling: clears row-read outputs before both attempts, enables Continue Task After Error on the preserved Get Data action, retries once after 3 seconds, validates all five first elements and all five output array counts, and on final failure sets AllowSend to 0, records `AUTOSHEETS_ROW_READ_FAILED`, performs `SS Lock Release HARD`, and stops before TextNow launch. Search lane and downstream runtime remain semantically unchanged. No phone proof is claimed and Codex does not approve phone import.
 
 ## Current Sheet State
 

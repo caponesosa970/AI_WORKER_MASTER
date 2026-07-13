@@ -2,6 +2,36 @@
 
 Status: CANDIDATE / HOLD FOR CHATGPT AUDIT
 
+## 31B AutoSheets Preflight Retry Repair Update
+
+31B records the phone failure where task `224` stopped at the AutoSheets row-read preflight with a socket timeout after the Send lock was active and before TextNow launched.
+
+31B changes only task `224` AutoSheets preflight error handling. The task is renamed to:
+
+`AIW31B_AUTOSHEETS_RETRY_CONTROLLED_SEND_CANDIDATE`
+
+31B preserves the existing AutoSheets configuration except the required Continue Task After Error change on the row-read action. It clears the five AutoSheets output arrays plus `%err` and `%errmsg` before both read attempts, retries once after a 3-second wait, validates that all first elements exist and all five output array counts equal exactly `1`, and if both attempts fail it sets `%AIW27BAllowSend=0`, records `AUTOSHEETS_ROW_READ_FAILED`, performs `SS Lock Release HARD`, and stops before TextNow launch.
+
+Validation summary for 31B:
+
+- Source 31A1 XML SHA256: `1C1FAF33EA30B69E8F35478AA8E93E58A2AA4ABB967CAA8F5EA927506BBF1B6E`
+- Final 31B XML SHA256: `0B984F8CADCBCCA4915676F76C269F927ADED0473C34043F15609F1720C60007`
+- Final 31B ZIP SHA256: `4C529BF48A8DD71B64B0B6B2B62801A0C5C536BD1CA8B6B5DB478723B8150EA3`
+- XML parse: PASS
+- Task count/profile count/scene count: `76 / 4 / 1`
+- Duplicate task IDs/names: `0 / 0`
+- Missing Perform Task refs: `0`
+- Only task 224 changed: YES
+- AutoSheets attempts maximum: `2`
+- Retry wait: `3` seconds
+- Final AutoSheets failure releases lock: YES
+- Final AutoSheets failure closes AllowSend: YES
+- Search lane unchanged semantically: YES
+- Downstream actions unchanged semantically excluding Tasker action sr/location renumbering: YES
+- Current key unchanged without printing it: YES
+- Phone proof claimed for 31B: NO
+- Phone import approved by Codex: NO
+
 ## 31A1 Current-Key Repair Update
 
 ChatGPT rejected the original 31A private package because the search-lane runtime logic passed static audit, but the private XML carried the discontinued credential from an older 27B base.

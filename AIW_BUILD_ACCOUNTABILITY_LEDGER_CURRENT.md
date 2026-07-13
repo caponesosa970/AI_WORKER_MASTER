@@ -734,3 +734,68 @@ Clone `AIW27B_V15A_PRESERVED_CONTROLLED_SEND_CANDIDATE` into `AIW31A_DASHGOOD_SE
 ### Tracker Effect
 
 No percentage change. Current tracker remains `8/14 locked = 57%`.
+
+## 31B AutoSheets Preflight Retry Repair Entry
+
+### Accountability ID
+
+AIW-ACC-20260713-31B-AUTOSHEETS-PREFLIGHT-RETRY
+
+### Gate
+
+Gate 9 controlled-send repair candidate. Controlled Send remains HOLD.
+
+### Issue
+
+ISSUE_31A_AUTOSHEETS_ROW_READ_TIMEOUT_LOCK_RELEASE_RISK
+
+### Exact Task Assigned
+
+Repair only task `224` AutoSheets row-read preflight error handling so the task can survive one AutoSheets timeout, retry once, and fail safely without leaving the Send lock active.
+
+### Source Truth
+
+- Source 31A1 full-project XML SHA256: `1C1FAF33EA30B69E8F35478AA8E93E58A2AA4ABB967CAA8F5EA927506BBF1B6E`
+- Final 31B full-project XML SHA256: `0B984F8CADCBCCA4915676F76C269F927ADED0473C34043F15609F1720C60007`
+- Final 31B private ZIP SHA256: `4C529BF48A8DD71B64B0B6B2B62801A0C5C536BD1CA8B6B5DB478723B8150EA3`
+
+### Files Touched
+
+Public-safe documentation and accountability ledgers only. Private XML and ZIP artifacts remain outside Git.
+
+### Runtime Tasks Touched
+
+Private runtime candidate changes only task `224`, renamed to:
+
+`AIW31B_AUTOSHEETS_RETRY_CONTROLLED_SEND_CANDIDATE`
+
+### Exact Actions Touched
+
+Task `224` AutoSheets preflight wrapper only:
+
+- clear five AutoSheets output arrays plus `%err` and `%errmsg` before the first read
+- enable Continue Task After Error on the existing Get Data action
+- validate all five first elements and all five output array counts
+- retry the exact same Get Data configuration once after 3 seconds
+- clear the same outputs and errors before retry
+- on final failure, set `%AIW27BAllowSend=0`, record `AUTOSHEETS_ROW_READ_FAILED`, perform `SS Lock Release HARD`, and stop before TextNow launch
+
+### Claims And Proof
+
+| Claim | Required proof | Current status |
+|---|---|---|
+| only task 224 changed | source/output task comparison | SUPPORTED |
+| current private key unchanged | private equality check without printing key | SUPPORTED |
+| AutoSheets configuration preserved | source/output action comparison excluding required Continue Task After Error change | SUPPORTED |
+| maximum read attempts is 2 | count of staged row Get Data actions | SUPPORTED |
+| final failure releases lock | static action scan for `SS Lock Release HARD` in final failure path | SUPPORTED |
+| Search lane unchanged | semantic downstream comparison excluding action sr/location renumbering | SUPPORTED |
+| phone proof not claimed | report status | SUPPORTED |
+
+### Phone Proof Required
+
+ChatGPT audit is required before any phone import. A later phone test must prove the retry path and lock-release behavior if ChatGPT approves it.
+
+### Tracker Effect
+
+No percentage change. Current tracker remains `8/14 locked = 57%`.
