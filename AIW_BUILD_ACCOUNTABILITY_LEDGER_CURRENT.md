@@ -1096,3 +1096,32 @@ No percentage change. Current tracker remains `8/14 locked = 57%`.
 - Prevention rule: no lock release without stale timestamp plus queue-state evidence
 - Final controller decision: CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT
 <!-- GATE13_BUILD_LEDGER_END -->
+
+<!-- GATE13R1_BUILD_LEDGER_START -->
+## Accountability ID AIW-GATE13R1-20260714
+
+- Date/time: 2026-07-14 America/Los_Angeles
+- Gate: Gate 13R1 Android 16 unlock-probe repair
+- Issue: `ISSUE_G13_KEYG_FALSE_HOLD_ANDROID16`
+- Exact task: replace the unreliable `%KEYG` decision in Tasks 130, 224, and 228 without weakening the locked-screen guard.
+- Exact source: `GATE13_FULL_PROJECT_TASKER_IMPORT__TIMER_STOP_RECOVERY_PRIVATE.xml`
+- Source SHA256: `47350C4C2D30814752F8D19B337CA0A23C687B5BE7A41D2D061C024606E8636A`
+- Source role: exact Gate 13 phone-imported candidate that safely stopped at the false keyguard HOLD.
+- Current branch: `repair/31A-dashgood-search-lane-controlled-send`
+- Starting commit: `766a5fe269892e40fff24c3f804297db358d4aeb`
+- Codex mode: one keyguard-detection repair only.
+- Approved actions: Tasks 130/224/228 guard replacement; new Task 230; package, validate, upload, and public accountability updates.
+- Prohibited actions: lifecycle task changes; Sheet or phone execution; profile enablement; credential changes; merge; phone-proof claim; import approval; tracker increase.
+- Runtime tasks touched: 130, 224, 228; new 230.
+- Exact actions touched: one helper call inserted before each old keyguard guard; guard changed from `%KEYG != off` to `%AIWUnlockProbeResult != UNLOCKED`; Task 230 added with 66 actions; Project tids adds 230.
+- Claims made: exact base used; narrow runtime scope; fail-closed helper; protected-node preservation; package integrity.
+- Proof supporting claims: direct XML/raw/reference/package validator PASS 34/34; independent state model PASS 16/16 plus 10/10; repository Tasker static audit PASS; ZIP byte equality; SHA sidecar.
+- Proof not available: actual Java Function execution on Android 16, unlocked/locked phone outcome, and repeated busy-timer phone result.
+- Contradiction found: Gate 13 static assumption that `%KEYG` was a usable current-unlocked signal was disproved by direct phone proof.
+- Phone proof required: YES.
+- Phone proof received: the false-HOLD failure only; no Gate 13R1 repair proof.
+- Tracker effect: none; remains 12/14 locked = 86%.
+- Responsible parties: Codex owns the unsupported `%KEYG` assumption; ChatGPT owns direct artifact/import audit; user/operator responsibility is NONE.
+- Prevention rule: a platform-state variable is not considered phone-proven merely because it is documented or statically present; ambiguous device-state checks fail closed and require direct phone reconciliation.
+- Final decision: CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT.
+<!-- GATE13R1_BUILD_LEDGER_END -->

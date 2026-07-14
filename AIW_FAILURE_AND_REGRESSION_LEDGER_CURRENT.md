@@ -732,3 +732,32 @@ Builds that must check this issue in preflight:
 - Status: OPEN / HOLD FOR PHONE PROOF
 - Prevention rule: do not claim unsupported background states; block before queue/UI work
 <!-- GATE13_FAILURE_LEDGER_END -->
+
+<!-- GATE13R1_FAILURE_LEDGER_START -->
+## ISSUE_G13_KEYG_FALSE_HOLD_ANDROID16
+
+- First detected date: 2026-07-14.
+- Affected build: Gate 13 timer, STOP, background-guard, and recovery candidate.
+- Affected tasks/actions: Task 130 act33, Task 224 act14, and Task 228 act48 in the Gate 13 base.
+- Observed symptom: the controlled busy-timer test stopped at `GATE13_KEYGUARD_HOLD` while Tasker was visibly foreground and the phone was visibly unlocked.
+- Direct evidence: controller-provided phone Run Log and visible phone state.
+- Root cause: built-in `%KEYG` did not provide a reliable current-unlocked result on this Moto Razr 2024 / Android 16 runtime.
+- Contributing cause: the Gate 13 static validator treated a documented built-in as source-proven runtime behavior without direct device proof.
+- Codex responsibility: unsupported static assumption and missing device-specific proof before the keyguard claim.
+- ChatGPT/controller responsibility: reconciled phone evidence, rejected a rerun, and constrained the replacement to one fail-closed probe.
+- User/operator responsibility: NONE.
+- Prior warning missed: phone proof supersedes static audit, including documented platform-state assumptions.
+- Required repair: replace only the three `%KEYG` guard blocks with a shared `KeyguardManager` probe that requires both lock results to be explicitly false.
+- Required regression: unlocked, locked, screen-off, Java error, blank, unresolved, busy-timer skip, caller HOLD preservation, no profile enablement, and no duplicate Send.
+- Status: REPAIRED CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT.
+- Closing proof: independent artifact audit followed by the repeated controlled busy-timer phone test.
+- Prevention rule: platform-state signals require phone proof on the target Android runtime; errors and ambiguous values must HOLD.
+- Builds that must check this issue: Gate 13R1, Gate 13 phone ladder, Gate 14, and release.
+
+## Gate 13 Phone-Failure Safety Reconciliation
+
+- Authorization was consumed before the false keyguard HOLD.
+- No profile, tick, Queue Cycle, Send, confirmation, Archive, or Sheet action ran.
+- No unsafe behavior occurred.
+- Gate 13 remains HOLD and the tracker remains 12/14 locked = 86%.
+<!-- GATE13R1_FAILURE_LEDGER_END -->

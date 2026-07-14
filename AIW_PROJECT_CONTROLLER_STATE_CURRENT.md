@@ -233,3 +233,19 @@ Codex return is automatically rejected if it lacks preflight, bug-history search
 - Codex does not claim Gate 13 phone proof and does not approve phone import.
 - Capacity, release, DeadArchive, Compactor, screen-off operation, and locked-screen operation remain blocked.
 <!-- GATE13_CONTROLLER_END -->
+
+<!-- GATE13R1_CONTROLLER_START -->
+## Gate 13R1 Android 16 Keyguard False-Hold Repair
+
+- Current active issue: `ISSUE_G13_KEYG_FALSE_HOLD_ANDROID16`.
+- Gates 9 through 12 remain LOCKED / PASS by direct Sosa phone proof.
+- Operational tracker remains `12/14 locked = 86%`.
+- Original Gate 13 keyguard behavior is HOLD because `%KEYG` falsely held on a visibly unlocked phone.
+- Gate 13R1 status: CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT.
+- Gate 13R1 base SHA256: `47350C4C2D30814752F8D19B337CA0A23C687B5BE7A41D2D061C024606E8636A`.
+- New Task 230: `FINAL Device Unlock Probe`.
+- Existing Tasks 130, 224, and 228 call Task 230 once and continue only on explicit `UNLOCKED`.
+- Protected lifecycle and recovery tasks remain raw-byte identical.
+- No phone import is approved. No Gate 13 phone proof is claimed. No live Sheet mutation or Tasker execution occurred.
+- Scheduled execution, STOP ladder, overlap proof, recovery phone proof, unattended operation, capacity, and release remain blocked.
+<!-- GATE13R1_CONTROLLER_END -->

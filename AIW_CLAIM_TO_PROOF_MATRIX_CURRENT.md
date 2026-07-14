@@ -242,3 +242,21 @@ Replacement XML SHA256: `82148AF8B72A24E3DBA77936A15E547E2114FEC01B705A084D12AA3
 | GATE13-009 | Package integrity and privacy hold | ZIP equality, hashes, credential fingerprint | One matching XML; unchanged one-key fingerprint; private files untracked | PROVEN STATIC |
 | GATE13-010 | Timer/background/recovery works on phone | Import/render, scheduled tick, STOP and interruption recordings | Not provided | UNSUPPORTED / HOLD |
 <!-- GATE13_CLAIM_MATRIX_END -->
+
+<!-- GATE13R1_CLAIM_MATRIX_START -->
+## Gate 13R1 Android 16 Unlock-Probe Repair
+
+| Claim ID | Claim | Evidence required | Actual evidence | Result |
+| --- | --- | --- | --- | --- |
+| GATE13R1-001 | Exact Gate 13 base used | SHA256 | `47350C4C2D30814752F8D19B337CA0A23C687B5BE7A41D2D061C024606E8636A` matched | PROVEN STATIC |
+| GATE13R1-002 | Task ID 230 was unused | Base topology and task registry | ID 230 absent before build and present once after build | PROVEN STATIC |
+| GATE13R1-003 | Runtime scope is limited | Raw task/profile/scene comparison | Existing changed tasks exactly 130/224/228; new task exactly 230; profiles/scenes unchanged | PROVEN STATIC |
+| GATE13R1-004 | Protected lifecycle and recovery tasks are unchanged | Raw-byte comparison | Tasks 71/199/223/225/226/227/229 byte-identical | PROVEN STATIC |
+| GATE13R1-005 | The probe fails closed | Java fields and independent state model | Error/null/blank/unresolved/ambiguous cases return HOLD | PROVEN STATIC |
+| GATE13R1-006 | UNLOCKED requires both platform results false | Independent decision model | All true/false combinations tested; only false/false unlocks | PROVEN STATIC |
+| GATE13R1-007 | Each caller uses the helper once and preserves HOLD | XML call/guard adjacency | Tasks 130/224/228 each have one adjacent call and result guard | PROVEN STATIC |
+| GATE13R1-008 | Busy timer cannot reach Queue Cycle | Caller ordering and state model | Busy guard precedes Queue Cycle; modeled busy tick returns zero Queue Cycle calls | PROVEN STATIC |
+| GATE13R1-009 | Package integrity and privacy hold | ZIP equality, hashes, key fingerprint, Git scan | One byte-identical XML; credential unchanged; private artifacts untracked | PROVEN STATIC |
+| GATE13R1-010 | Java Function executes correctly on Moto Android 16 | Tasker import/render and direct unlocked/locked phone runs | Not provided | UNSUPPORTED / HOLD |
+| GATE13R1-011 | Gate 13 busy-timer ladder passes after repair | Scheduled phone tick, Run Log, and controller reconciliation | Not provided | UNSUPPORTED / HOLD |
+<!-- GATE13R1_CLAIM_MATRIX_END -->

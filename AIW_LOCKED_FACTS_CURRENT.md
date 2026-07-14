@@ -208,3 +208,16 @@ Blocked until separately proven:
 - Returned XML profiles remain disabled.
 - Timer/live and Gate 13 proof remain blocked pending direct phone evidence.
 <!-- GATE13_LOCKED_FACTS_END -->
+
+<!-- GATE13R1_LOCKED_FACTS_START -->
+## Gate 13R1 Android 16 Unlock-Probe Facts
+
+- Direct Sosa phone proof showed the Gate 13 `%KEYG` guard falsely held while Tasker was foreground and the phone was visibly unlocked.
+- The stop was safe: no profile, tick, Queue Cycle, lifecycle module, or Sheet path ran.
+- Gate 13 remains HOLD at `12/14 locked = 86%`.
+- Gate 13R1 replaces only the `%KEYG` guard in Tasks 130, 224, and 228 with one call to Task 230 and an explicit `UNLOCKED` result check.
+- Task 230 uses `KeyguardManager.isDeviceLocked()` and `isKeyguardLocked()` and fails closed on errors or ambiguous values.
+- Protected lifecycle Tasks 71, 199, 223, 225, 226, 227, and recovery Task 229 remain raw-byte identical.
+- No profile is enabled in the artifact. No Sheet cell was changed. Tasker was not run.
+- Gate 13R1 is a static candidate only; Android execution and the repeated busy-timer test remain blocked pending ChatGPT artifact audit and direct phone proof.
+<!-- GATE13R1_LOCKED_FACTS_END -->
