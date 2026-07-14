@@ -971,3 +971,36 @@ No percentage change. Current tracker remains `8/14 locked = 57%`.
 - ChatGPT responsibility: inspect the actual artifact and direct fields before any import instruction.
 - User/operator responsibility: NONE.
 - Prevention rule: no substring-only confirmation and no DONE claim without exact ID/status readback.
+
+
+<!-- GATE11_BUILD_ACCOUNTABILITY_START -->
+## Accountability ID AIW-GATE11-EXACT-ROW-ARCHIVE-20260713
+
+- Date/time: 2026-07-13 America/Los_Angeles
+- Gate: 11 exact-row Archive candidate
+- Issue: broad Archive path is not safe for one exact bound DONE row
+- Exact task assigned: build permanent `FINAL Archive One Bound Row` and removable one-call Gate 11 launcher
+- Exact source files: Gate 10 full-project base; Group E 20B Archive reference; current GitHub-main controller files
+- Source SHA256: base `E3BB30B974FF3DE9251D75547C8B696FCA101E62996BD6D3D84AC3DA6D34A0D2`; Group E 20B `630D3DD233FD75CD5E30C8193DDAF99F11544DC3E0B159FD1F7300757373CE27`
+- Source role: base is current phone-tested full project; current Task 75 provides current AutoSheets/spreadsheet shape; Group E 20B provides locked copy-before-clear reference behavior
+- Current branch: `repair/31A-dashgood-search-lane-controlled-send`
+- Starting commit: `4ae726466b450c0dbfe1ed260168b5ce1065640e`
+- Codex mode: one exact-row Archive runtime candidate
+- Approved actions: replace Task 224; add Task 226; add project registry reference; create private package; update public-safe evidence
+- Prohibited actions: alter any other task/profile/scene; edit Sheet; run Tasker; Send/TextNow/confirmation; broad Archive; DeadArchive; Compactor; live/timer/capacity/release; expose private data
+- Files touched: private XML/ZIP/SHA/GULAG/build scripts; public report folder; four public accountability/controller files
+- Runtime tasks touched: Task 224 and new Task 226 only
+- Exact actions touched: all 9 launcher actions; all 1,477 new permanent Archive actions; listed in `EXACT_CHANGED_TASK_ACTION_LIST.md`
+- Claims made: exact source binding; bounded AutoSheets retries; duplicate/idempotency handling; verified copy-before-clear; source revalidation; exact clear readback; guarded lock release; forbidden-path absence; byte-preserved protected tasks
+- Proof supporting each claim: two independent XML/state validators, raw-node comparisons, Tasker static audit, ZIP byte comparison, hash sidecar, 30-case model
+- Proof not available: Tasker import/render, live AutoSheets behavior, live Archive target selection, live Sheet copy/clear, Gate 11 phone behavior
+- Known assumptions: Tasker interprets the preserved exported AutoSheets nodes as it did in source; current live Sheet/Archive state will be re-read by ChatGPT before a test
+- Contradictions found: older V18C/V18D local downloads were HTML rather than XML and were excluded
+- Regression checks required/results: 30/30 static cases PASS; 61 structural/security checks PASS
+- Phone proof required: YES
+- Phone proof received: NO for Gate 11
+- Final controller decision: pending ChatGPT full artifact audit
+- Tracker effect: direct Sosa Gate 10 proof recorded as 10/14 = 71%; Gate 11 adds no tracker lock
+- Responsible party for failure: NONE for candidate; Codex owns static accuracy, ChatGPT owns artifact/import approval, Sosa owns phone proof
+- Prevention rule added: never use broad Archive selection for a controlled bound-row gate; never clear source before verified exact copy and immediate source revalidation
+<!-- GATE11_BUILD_ACCOUNTABILITY_END -->

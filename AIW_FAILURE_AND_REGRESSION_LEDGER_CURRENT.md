@@ -623,3 +623,34 @@ Builds that must check this issue in preflight:
 - Status: OPEN / HOLD FOR CHATGPT ARTIFACT AUDIT.
 - Closing proof: direct Sosa phone recording/runlog plus controller verification.
 - Builds that must check this issue: Gate 10, DONE, Archive, live/timer, capacity, and release.
+
+
+<!-- GATE11_FAILURE_LEDGER_START -->
+## ISSUE_GATE10_PRODUCTION_CONFIRMATION_PHONE_PROOF_PENDING - CLOSURE UPDATE
+
+- Closing authority: direct Sosa phone proof accepted by the controller.
+- Closing result: exact independent confirmation and DONE passed; no second Send was run.
+- Status: VERIFIED CLOSED.
+- Codex responsibility: record the controller decision without independently claiming phone proof.
+- User/operator responsibility: NONE.
+
+## ISSUE_GATE11_PRODUCTION_ARCHIVE_PHONE_PROOF_PENDING
+
+- First detected date: 2026-07-13.
+- Affected build: Gate 11 exact-row Archive candidate.
+- Affected task/action: Task 224 launcher and Task 226 permanent exact-row Archive worker.
+- Observed symptom: static candidate exists but has not been imported or run on the phone.
+- Direct evidence: private candidate hashes, raw-node comparison, independent validators, and public audit reports.
+- Root cause: phone import/render and live AutoSheets copy/clear behavior are separate proof gates.
+- Contributing cause: existing Task 75 is broad and cannot prove exact-row idempotent Archive behavior.
+- Codex responsibility: keep Gate 11 on HOLD; disclose source and runtime limitations; never claim phone proof.
+- ChatGPT/controller responsibility: independently inspect the actual artifact before any import instruction and reconcile the future phone result.
+- User/operator responsibility: NONE.
+- Prior warning that was applied: confirmed completion must precede Archive; source clear must follow verified Archive copy.
+- Required repair: none established; candidate requires artifact audit first.
+- Required regression test: one exact bound DONE row archived once, exact Archive readback, exact source A:I clear/readback, lock release, no other row or blocked path touched.
+- Status: OPEN / HOLD FOR CHATGPT ARTIFACT AUDIT.
+- Closing proof: direct Sosa phone recording/runlog and controller review.
+- Prevention rule: broad Archive routes cannot substitute for exact bound-row copy/readback/idempotency proof.
+- Builds that must check this issue: Gate 11, broad Archive integration, DeadArchive, Compactor, live/timer, capacity, and release.
+<!-- GATE11_FAILURE_LEDGER_END -->

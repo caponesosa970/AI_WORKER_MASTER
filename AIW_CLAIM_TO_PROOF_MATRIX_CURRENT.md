@@ -172,3 +172,21 @@ Replacement XML SHA256: `82148AF8B72A24E3DBA77936A15E547E2114FEC01B705A084D12AA3
 | GATE10-007 | Owned confirmation locks release once | Stop/release reachability | no post-acquisition Stop before single common release | PROVEN STATIC |
 | GATE10-008 | Production candidate works on phone | Import/render, runlog, screen proof, Sheet proof | not provided | UNSUPPORTED / HOLD |
 | GATE10-009 | Remote row always remains awaiting after ambiguous DONE plugin outcome | Remote transaction proof | cannot be guaranteed statically; candidate refuses DONE claim without readback | UNSUPPORTED / DISCLOSED |
+
+
+<!-- GATE11_CLAIM_MATRIX_START -->
+## Gate 11 Exact-Row Archive Candidate Claims
+
+| Claim ID | Claim | Required evidence | Actual evidence | Result |
+| --- | --- | --- | --- | --- |
+| GATE11-001 | Exact Gate 10 base used | SHA256 | `E3BB30B974FF3DE9251D75547C8B696FCA101E62996BD6D3D84AC3DA6D34A0D2` matched | PROVEN STATIC |
+| GATE11-002 | Gate 10 confirmation and DONE are locked | Direct Sosa phone proof and controller decision | User supplied controlling proof; Codex records but does not claim it | PROVEN BY CONTROLLER |
+| GATE11-003 | Only Task 224 changed and Task 226 was added | Raw pre-existing task-node comparison | All other pre-existing tasks raw-byte identical | PROVEN STATIC |
+| GATE11-004 | Task 226 is exact-row and DONE-only | AutoSheets ranges, conditions, and call graph | Exact dynamic Sheet1 A:I range; no QueueView; no GROUPED | PROVEN STATIC |
+| GATE11-005 | Duplicate/idempotent Archive behavior | Destination scan and state-model tests | Exact ID count, conflict hold, existing-copy recovery, first empty ID row | PROVEN STATIC |
+| GATE11-006 | Source clear follows verified copy and immediate revalidation | Action-order and state ancestry | Copy readback, unique-ID check, pre-clear source re-read, then exact A:I clear | PROVEN STATIC |
+| GATE11-007 | AutoSheets operations are bounded and error-routable | Actual plugin fields and attempt count | 20/20 `se=false`; 8 Get and 2 Update operations, two attempts each | PROVEN STATIC |
+| GATE11-008 | Archive lock ownership is safe | Stop/release reachability | No owned-lock Stop before one guarded release; conflict exits release none | PROVEN STATIC |
+| GATE11-009 | No blocked runtime path is reachable | Call graph and plugin/target scan | Zero Send, TextNow, confirmation, broad Archive, DeadArchive, Compactor, live/timer | PROVEN STATIC |
+| GATE11-010 | Gate 11 works on phone | Import/render, runlog, screen and Sheet proof | Not provided | UNSUPPORTED / HOLD |
+<!-- GATE11_CLAIM_MATRIX_END -->
