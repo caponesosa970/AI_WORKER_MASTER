@@ -1,14 +1,14 @@
 # AI Worker Locked Facts — Current
 
 Status: CURRENT / CANONICAL
-Updated: 2026-07-13
+Updated: 2026-07-14
 Authority: Phone proof, current GitHub tracker, SHA-verified sources, live Sheet verification, and newest direct Sosa instruction.
 
 ## 1. Current Tracker
 
 Current proof level:
 
-`8/14 locked = 57%`
+`11/14 locked = 79%`
 
 Locked main gates:
 
@@ -20,10 +20,13 @@ Locked main gates:
 6. Group F 22J trigger-to-queue proof.
 7. Group G process-only exact-row proof.
 8. Controlled queue-cycle proof.
+9. Gate 9 controlled Send proof by direct Sosa phone proof.
+10. Gate 10 independent confirmation and DONE proof by direct Sosa phone proof.
+11. Gate 11 exact-row Archive proof by direct Sosa phone proof.
 
 Current active main gate:
 
-- Gate 9 controlled Send path — HOLD.
+- Gate 12 permanent queue lifecycle integration — CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT.
 
 No percentage increase is authorized without new phone proof.
 
@@ -115,14 +118,14 @@ Verified topology:
 
 Plan A is the approved architecture.
 
-Final active roles:
+Historical Plan A active roles before Gates 10-12:
 
 - Task 71 — permanent selector only.
 - Task 199 — permanent queue connection, one selector call per cycle.
 - Task 223 — permanent dynamic `FINAL Send One Bound Row`.
-- Task 224 — temporary removable Gate 9 launcher.
+- Task 224 — temporary removable Gate 9 launcher at that historical stage.
 
-Only Tasks 71, 199, 223, and 224 may change semantically.
+That historical four-task build boundary is superseded by the current Gate 12 boundary above. Gate 12 may change existing Tasks 199 and 224, add Task 227, and register Task 227 only. All other pre-existing runtime nodes remain protected.
 
 Old candidate names must be absent from active runtime:
 
@@ -134,12 +137,14 @@ Removed source must be retained privately in `PRIVATE_WITH_KEY\PLAN_A_GULAG\`.
 
 ## 7. Current Sheet Safety State
 
-Last live verified state on 2026-07-13:
+Newest direct Sosa phone proof records:
 
-- Row 75 ID: `AIW9B1G-STAGED-20260709-01`
-- Row 75 status: `TEST_STAGED_NO_SEND`
-- Row 75 reply is populated.
-- Row 75 is not authorized for Send.
+- Gate 9 sent the exact bound reply once.
+- Gate 10 independently confirmed the exact sent reply and wrote `DONE`.
+- Gate 11 copied the exact row once, verified the Archive copy, cleared only that source row, released the Archive lock, and returned `ARCHIVE_DONE_VERIFIED`.
+- Archive contains exactly one matching copy.
+- Private row, recipient, and message values remain excluded from public files.
+- Codex did not read or change the live Sheet.
 
 A fresh live Sheet read is mandatory before any future test or mutation.
 
@@ -147,15 +152,25 @@ A fresh live Sheet read is mandatory before any future test or mutation.
 
 Blocked until separately proven:
 
-- uncontrolled Send;
-- DONE write;
-- Archive;
+- Gate 12 phone import until ChatGPT audits the actual XML and ZIP;
+- Gate 12 phone proof and tracker advancement beyond 11/14;
+- broad Archive integration outside Task 227 to Task 226;
 - DeadArchive;
 - Compactor;
 - TT5;
-- timer/live;
+- timer/live and recovery;
 - capacity;
 - release/production.
+
+## 10. Gate 12 Candidate Boundary
+
+- Task 199 routes lifecycle work before processing or new Send selection.
+- Task 227 may call Task 225 or Task 226 once, but never both in one cycle.
+- Task 71 remains the only caller of Task 223.
+- Task 199 no longer calls `QUEUE Archive Drain Silent`.
+- Controlled Gate 12 mode performs no processing, maintenance, recursion, profile change, or live activation.
+- The current phone-proven SourceRow range remains 2 through 201; expansion is a later capacity/release requirement.
+- Static validation is not Gate 12 phone proof.
 
 ## 9. Locked Safety Rules
 

@@ -1,0 +1,19 @@
+# Private Package Hashes
+
+The private runtime artifacts are excluded from Git.
+
+| Artifact | Bytes | SHA256 |
+| --- | ---: | --- |
+| `GATE12_FULL_PROJECT_TASKER_IMPORT__QUEUE_LIFECYCLE_INTEGRATION_PRIVATE.xml` | 1690081 | `11D2C17F1107F024155C775E9320D68E447086DA5C6E38C900618A162FD65902` |
+| `GATE12_FULL_PROJECT_PHONE_IMPORT__QUEUE_LIFECYCLE_INTEGRATION_PRIVATE.zip` | 96561 | `1FAC819E955A418C7EE35C3248020D1D67B859DFFEF25740B83F97456E797D33` |
+| `GATE12_SHA256__QUEUE_LIFECYCLE_INTEGRATION_PRIVATE.txt` | 283 | sidecar records the XML and ZIP hashes above |
+
+ZIP members: exactly one file, `GATE12_FULL_PROJECT_TASKER_IMPORT__QUEUE_LIFECYCLE_INTEGRATION_PRIVATE.xml`.
+
+ZIP XML bytes equal standalone XML: PASS.
+
+ZIP integrity: PASS.
+
+Current credential unchanged without printing it: PASS.
+
+Private files tracked by Git: 0.

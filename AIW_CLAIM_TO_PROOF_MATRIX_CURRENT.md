@@ -190,3 +190,21 @@ Replacement XML SHA256: `82148AF8B72A24E3DBA77936A15E547E2114FEC01B705A084D12AA3
 | GATE11-009 | No blocked runtime path is reachable | Call graph and plugin/target scan | Zero Send, TextNow, confirmation, broad Archive, DeadArchive, Compactor, live/timer | PROVEN STATIC |
 | GATE11-010 | Gate 11 works on phone | Import/render, runlog, screen and Sheet proof | Not provided | UNSUPPORTED / HOLD |
 <!-- GATE11_CLAIM_MATRIX_END -->
+
+<!-- GATE12_CLAIM_MATRIX_START -->
+## Gate 12 Queue Lifecycle Integration
+
+| Claim ID | Claim | Evidence required | Actual evidence | Result |
+| --- | --- | --- | --- | --- |
+| GATE12-001 | Exact Gate 11 base used | SHA256 | `FF08EEFFC6E3D6350CEA10924164FAC962797BE984C3643B4A5A68E1D1095195` matched | PROVEN STATIC |
+| GATE12-002 | Gates 9, 10, and 11 are locked | Direct Sosa phone proof and controller decision | User supplied controlling proof; Codex records but does not claim it | PROVEN BY CONTROLLER |
+| GATE12-003 | Only Tasks 199 and 224 changed and Task 227 was added | Raw task-node comparison and task registry diff | 76/76 protected pre-existing task nodes raw-byte identical | PROVEN STATIC |
+| GATE12-004 | Task 199 routes before processing, Send selection, and maintenance | Action order and call graph | Router call precedes all three regions | PROVEN STATIC |
+| GATE12-005 | One lifecycle module maximum per cycle | Separate control-flow/path validator | All modeled paths call at most one of Tasks 223, 225, and 226 | PROVEN STATIC |
+| GATE12-006 | Controlled mode excludes process-new, maintenance, and recursion | Mode guards and reachability | Independent validator found no controlled path to those regions | PROVEN STATIC |
+| GATE12-007 | AIWorkerBusy ownership is released safely | Acquire/release/Stop analysis | One acquire, one common release, no owned early Stop | PROVEN STATIC |
+| GATE12-008 | Router QueueView reads are bounded and error-routable | AutoSheets bundles, `se=false`, and attempt count | Two exact Task 71-derived reads; maximum two attempts | PROVEN STATIC |
+| GATE12-009 | Broad Archive is disconnected from permanent queue | Direct call graph scan | Task 199 has no Task 31 or Task 75 call; Task 227 routes only Task 226 | PROVEN STATIC |
+| GATE12-010 | Private package integrity and privacy hold | SHA, ZIP byte equality, Git tracking, secret scan | One matching XML in ZIP; private files untracked; public scan PASS | PROVEN STATIC |
+| GATE12-011 | Gate 12 works across three phone cycles | Tasker import/render, runlogs, screen and Sheet proof | Not provided | UNSUPPORTED / HOLD |
+<!-- GATE12_CLAIM_MATRIX_END -->

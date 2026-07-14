@@ -654,3 +654,31 @@ Builds that must check this issue in preflight:
 - Prevention rule: broad Archive routes cannot substitute for exact bound-row copy/readback/idempotency proof.
 - Builds that must check this issue: Gate 11, broad Archive integration, DeadArchive, Compactor, live/timer, capacity, and release.
 <!-- GATE11_FAILURE_LEDGER_END -->
+
+<!-- GATE12_FAILURE_LEDGER_START -->
+## ISSUE_GATE12_QUEUE_LIFECYCLE_PHONE_PROOF_PENDING
+
+- First detected date: 2026-07-14.
+- Affected build: Gate 12 queue lifecycle integration candidate.
+- Affected task/action: Tasks 199, 224, and new Task 227.
+- Observed symptom: no Gate 12 phone execution has occurred; static proof cannot establish Tasker import/render or the three-cycle lifecycle behavior.
+- Direct evidence: candidate package, validators, reports, and absence of a Gate 12 runlog or phone recording.
+- Root cause: normal proof boundary for a new runtime integration.
+- Contributing cause: the three permanent modules were phone-proven separately, not through the integrated permanent queue.
+- Codex responsibility: keep Gate 12 on HOLD, disclose unsupported phone claims, and preserve all proven module nodes.
+- ChatGPT/controller responsibility: independently inspect the actual XML and ZIP before any import instruction, then control the three-cycle proof.
+- User/operator responsibility: NONE.
+- Prior warning that was applied: one queue invocation must not Send, confirm, and Archive consecutively.
+- Required repair: none established by static audit; candidate requires artifact audit and controlled phone proof.
+- Required regression test: READY_TO_SEND to awaiting-confirm; awaiting-confirm to DONE; DONE to verified Archive and source clear, with one transition per cycle.
+- Status: OPEN / HOLD FOR CHATGPT FULL ARTIFACT AUDIT.
+- Closing proof: direct Sosa phone recording/runlogs and controller reconciliation for all three cycles.
+- Prevention rule: no tracker increase or lifecycle lock from static proof alone.
+- Builds that must check this issue: Gate 12, Gate 13 recovery/timer, Gate 14 capacity/control/release.
+
+## GATE11_PHONE_PROOF_RECONCILIATION
+
+- Gate 11 exact-row Archive is recorded as VERIFIED CLOSED by direct Sosa phone proof.
+- Codex does not independently claim that proof.
+- Controller-provided result: exact copy verified, exact source row cleared, Archive lock released, `ARCHIVE_DONE_VERIFIED` returned.
+<!-- GATE12_FAILURE_LEDGER_END -->

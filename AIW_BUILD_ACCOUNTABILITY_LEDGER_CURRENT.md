@@ -1004,3 +1004,35 @@ No percentage change. Current tracker remains `8/14 locked = 57%`.
 - Responsible party for failure: NONE for candidate; Codex owns static accuracy, ChatGPT owns artifact/import approval, Sosa owns phone proof
 - Prevention rule added: never use broad Archive selection for a controlled bound-row gate; never clear source before verified exact copy and immediate source revalidation
 <!-- GATE11_BUILD_ACCOUNTABILITY_END -->
+
+<!-- GATE12_BUILD_ACCOUNTABILITY_START -->
+## AIW-ACC-20260714-GATE12-QUEUE-LIFECYCLE-INTEGRATION
+
+- Date/time: 2026-07-14 America/Los_Angeles
+- Gate: Gate 12 permanent queue lifecycle integration
+- Issue: Phone-proven Send, confirmation, and exact-row Archive modules were not yet connected through one-transition-per-cycle queue routing.
+- Exact task assigned: Build one permanent lifecycle router, integrate it into FINAL Queue Cycle, and replace the prior controlled launcher without modifying the phone-proven transaction modules.
+- Exact source files: Gate 11 full-project private XML; current GitHub main controller files; historical queue references used only for comparison.
+- Source SHA256: Gate 11 base `FF08EEFFC6E3D6350CEA10924164FAC962797BE984C3643B4A5A68E1D1095195`; historical v19 `7D8E3B083BA517F6C4FFB37911D96CFFD300439B2EDE843A2E0D07A1EBCD01E1`; historical v12 `92212E46C43C10DFA8BEE7BEB067F008A8A8AA261987A1C7DD99203051AAC28E`.
+- Source role: Gate 11 is the only runtime base; historical sources are reference-only; current main documents supply controller rules.
+- Current branch: `repair/31A-dashgood-search-lane-controlled-send`
+- Starting commit: `3fb2485d1949b76899d703d1bb3c45129cbb1182`
+- Codex mode: One complete Gate 12 integration candidate; no phone or Sheet execution.
+- Approved actions: modify Task 199; replace Task 224; add Task 227; update project task registry; generate private artifacts and public-safe proof records.
+- Prohibited actions: modify any other runtime task/profile/scene; run Tasker; mutate the live Sheet; expose credentials; merge; claim phone proof; approve phone import; build Gate 13 or Gate 14.
+- Files touched: five current public controller/ledger files and the Gate 12 public report directory; private untracked Gate 12 XML, ZIP, SHA, validators, and GULAG records.
+- Runtime tasks touched: existing Tasks 199 and 224; new Task 227 only.
+- Exact actions touched: Task 199 replaced with the controlled/production router-first queue-cycle body; Task 224 replaced with the manually armed one-cycle launcher; Task 227 added as the bounded QueueView lifecycle router; Project tids registered Task 227.
+- Claims made: exact Gate 11 base used; protected task nodes preserved raw-byte; one lifecycle module maximum per Task 199 invocation; broad Archive disconnected; controlled mode excludes processing, maintenance, and recursion; package and static validation pass.
+- Proof supporting each claim: two independent validators, direct XML parser, Tasker static audit, raw-node comparison, call-graph inspection, control-flow simulation, ZIP byte comparison, SHA sidecar, and 57-case static matrix.
+- Proof not available: Tasker import/render and the three controlled Gate 12 phone cycles.
+- Known assumptions: Tasker renders and executes the generated control flow consistently with its valid exported XML structure; live QueueView state will be re-read by the controller before testing.
+- Contradictions found: current GitHub main tracker was stale behind newer direct Sosa phone proof; the operational state was retained at 11/14 without claiming that proof independently.
+- Regression checks required/results: topology, protected-node preservation, one-transition reachability, busy ownership, bounded AutoSheets retries, broad Archive disconnection, controlled isolation, secret/privacy scan, and ZIP integrity all PASS statically.
+- Phone proof required: YES, three controlled cycles on one newly staged row.
+- Phone proof received: NO for Gate 12.
+- Final controller decision: pending ChatGPT full artifact audit.
+- Tracker effect: Gates 9, 10, and 11 recorded from direct Sosa proof at 11/14 = 79%; Gate 12 adds no lock.
+- Responsible party for each failure: no Gate 12 runtime failure observed; Codex owns static artifact accuracy, ChatGPT owns independent artifact/import approval, Sosa owns phone proof.
+- Prevention rule added: one Queue Cycle may route at most one of Send, confirmation, or exact-row Archive, and a transaction or blocker ends that cycle before recursion.
+<!-- GATE12_BUILD_ACCOUNTABILITY_END -->
