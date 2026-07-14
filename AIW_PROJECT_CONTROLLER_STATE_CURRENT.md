@@ -2,11 +2,11 @@
 
 Updated: 2026-07-14
 
-Status: CURRENT SOURCE-TRUTH TRACKER / GATE 12R1 CONTROLLED-MODE REPAIR CANDIDATE HOLD
+Status: CURRENT SOURCE-TRUTH TRACKER / GATE 13 TIMER-STOP-RECOVERY CANDIDATE HOLD
 
 ## Current Proof Percent
 
-11/14 locked = 79%.
+12/14 locked = 86%.
 
 ## Locked Main Gates
 
@@ -21,6 +21,7 @@ Status: CURRENT SOURCE-TRUTH TRACKER / GATE 12R1 CONTROLLED-MODE REPAIR CANDIDAT
 9. 9/14 Gate 9 controlled Send - LOCKED by direct Sosa phone proof
 10. 10/14 Gate 10 independent confirmation and DONE - LOCKED by direct Sosa phone proof
 11. 11/14 Gate 11 exact-row Archive - LOCKED by direct Sosa phone proof
+12. 12/14 Gate 12 permanent queue lifecycle integration - LOCKED by direct Sosa phone proof
 
 ## Locked Sub-Proofs
 
@@ -36,7 +37,7 @@ Status: CURRENT SOURCE-TRUTH TRACKER / GATE 12R1 CONTROLLED-MODE REPAIR CANDIDAT
 
 ## Current Paused Gate
 
-Gate 12R1 controlled-mode normalization repair - HOLD FOR CHATGPT FULL ARTIFACT AUDIT.
+Gate 13 timer, STOP, background guard, and recovery - HOLD FOR CHATGPT FULL ARTIFACT AUDIT.
 
 ## Current Active Issue
 
@@ -48,10 +49,12 @@ Gate 12R1 controlled-mode normalization repair - HOLD FOR CHATGPT FULL ARTIFACT 
 - ISSUE_GATE10_CONFIRMATION_SOURCE_NOT_PROVEN - VERIFIED CLOSED BY DIRECT SOSA PHONE-EXPORTED SOURCE PROOF
 - ISSUE_GATE10_PRODUCTION_CONFIRMATION_PHONE_PROOF_PENDING - VERIFIED CLOSED BY DIRECT SOSA PHONE PROOF
 - ISSUE_GATE11_PRODUCTION_ARCHIVE_PHONE_PROOF_PENDING - VERIFIED CLOSED BY DIRECT SOSA PHONE PROOF
-- ISSUE_GATE12_QUEUE_LIFECYCLE_PHONE_PROOF_PENDING - OPEN / CANDIDATE HOLD
-- ISSUE_GATE12_CONTROLLED_MODE_NORMALIZATION_SUBSTITUTION - REPAIRED CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT
+- ISSUE_GATE12_QUEUE_LIFECYCLE_PHONE_PROOF_PENDING - VERIFIED CLOSED BY DIRECT SOSA PHONE PROOF
+- ISSUE_GATE12_CONTROLLED_MODE_NORMALIZATION_SUBSTITUTION - VERIFIED CLOSED BY DIRECT SOSA PHONE PROOF OF THE REPAIRED CANDIDATE
+- ISSUE_GATE13_BLANKET_LOCK_RESET_PATHS - REPAIRED CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT AND PHONE PROOF
+- ISSUE_GATE13_ENVIRONMENT_STATE_NOT_FULLY_DETECTABLE - OPEN / HOLD FOR PHONE PROOF
 
-Gate 9 controlled Send, Gate 10 independent confirmation/DONE, and Gate 11 exact-row Archive are LOCKED / PASS by direct Sosa phone proof. Their old launchers must not run again. The original Gate 12 candidate is rejected for phone import. Gate 12R1 is the only active runtime candidate.
+Gate 9 controlled Send, Gate 10 independent confirmation/DONE, Gate 11 exact-row Archive, and Gate 12 permanent queue lifecycle integration are LOCKED / PASS by direct Sosa phone proof. Their old controlled launchers must not run again. Gate 13 is the only active runtime candidate.
 
 Direct Sosa phone proof is the authority for the Gate 9, Gate 10, and Gate 11 locks. Codex records those controller decisions but does not independently claim phone proof.
 
@@ -63,7 +66,7 @@ Accountability-system installation is active from main commit `aa4e1ded4d70a8262
 
 No runtime repair was created. Remaining issue is phone/runtime/UI behavior, not source preservation.
 
-Historical 30A next proof was a ChatGPT-approved 30B phone/runtime/UI diagnostic. That diagnostic and later gates are retained as history; the active gate is Gate 12 above.
+Historical 30A next proof was a ChatGPT-approved 30B phone/runtime/UI diagnostic. That diagnostic and later gates are retained as history; the active gate is Gate 13 above.
 
 30B1 diagnostic phone result: DEVELOPMENT PASS. Full-project Tasker import/render passed. V15A Id `menu_search` timed out. Active Dashgood Task 71 combined Search lane reached TextNow Search and both exact `search_field` actions completed OK. Final visible state was Search field focused with keyboard open. No number, contact select, compose, Send, DONE, Archive, live, or Sheet action ran.
 
@@ -76,6 +79,8 @@ Historical 31B candidate record: the AutoSheets-only and transaction-wrapper 31B
 ## Current Sheet State
 
 Direct Sosa Gate 11 phone proof records that the exact DONE source row was copied once to Archive, the copy was verified, and only that source row was cleared. Archive contains exactly one matching copy. Private row values remain redacted. Codex did not read or change the live Sheet.
+
+Direct Sosa Gate 12 phone proof records three separate controlled cycles: Send once, independent confirmation, then exact-row Archive and source clear. No cycle performed two lifecycle transitions. The tested source row is blank after the verified Archive cycle. Codex records but does not claim this phone proof.
 
 Historical queue scan before Gate 9:
 
@@ -104,9 +109,9 @@ V15A source:
 - Gate 9 launcher rerun / second Send
 - New Send transaction while an awaiting-confirm row exists
 - Gate 10 launcher rerun / additional DONE write
-- Original Gate 12 package import or run
-- Gate 12R1 phone import until ChatGPT audits the actual XML and ZIP
-- Gate 12 phone proof and tracker increase beyond 11/14
+- Gate 12 controlled launcher rerun
+- Gate 13 phone import until ChatGPT audits the actual XML and ZIP
+- Gate 13 phone proof and tracker increase beyond 12/14
 - Broad Archive outside the permanent Task 199 -> Task 227 -> Task 226 route
 - DeadArchive
 - Compactor
@@ -116,14 +121,14 @@ V15A source:
 - release/production
 
 <!-- GATE12_CONTROLLER_START -->
-## Gate 12R1 Controlled-Mode Normalization Repair Decision
+## Gate 12R1 Controlled-Mode Normalization Repair Decision - Historical Build Record
 
 - Gate 9 controlled Send: LOCKED / PASS by direct Sosa phone proof.
 - Gate 10 independent confirmation and DONE: LOCKED / PASS by direct Sosa phone proof.
 - Gate 11 exact-row Archive: LOCKED / PASS by direct Sosa phone proof.
 - Operational tracker: `11/14 locked = 79%`.
 - Original Gate 12 candidate: REJECTED FOR PHONE IMPORT because Tasker substituted `%par1` and `%par2` inside two condition regex RHS values.
-- Gate 12R1 superseding candidate: CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT.
+- Gate 12R1 superseding candidate at build time: CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT. Direct Sosa phone proof later locked Gate 12.
 - Repair-base runtime change: only Task 199 act4/rhs and act7/rhs changed to literal unresolved-variable detection.
 - Task 224, Task 227, every other task, the Project registry, all profiles, and the scene remain raw-byte identical to the rejected Gate 12 base.
 - Permanent route: Task 199 -> Task 227 -> exactly one of Task 225 or Task 226, or Task 199 -> Task 71 -> Task 223 when lifecycle state is clear.
@@ -213,3 +218,18 @@ Codex return is automatically rejected if it lacks preflight, bug-history search
 - Codex changed no live Sheet cell and claims no Gate 11 phone proof.
 - Broad Archive, DeadArchive, Compactor, live/timer, capacity, and release remain blocked.
 <!-- GATE11_CONTROLLER_END -->
+
+<!-- GATE13_CONTROLLER_START -->
+## Gate 13 Timer, STOP, Background Guard, and Recovery Candidate
+
+- Gates 9, 10, 11, and 12: LOCKED / PASS by direct Sosa phone proof.
+- Operational tracker: `12/14 locked = 86%`.
+- Gate 13: CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT.
+- Gate 12R1 base SHA: `3DC49BF47837403B36D1B213564F34BD6983598B6734429324FF0ACEDA7A23C8`.
+- Protected lifecycle Tasks 71, 199, 223, 225, 226, and 227 remain raw-byte identical.
+- Timer/live remains blocked pending direct phone proof.
+- QueueView lifecycle formula is a locked runtime dependency and was re-read without mutation.
+- No profile is enabled in the artifact. No live Sheet cell was changed. Tasker was not run.
+- Codex does not claim Gate 13 phone proof and does not approve phone import.
+- Capacity, release, DeadArchive, Compactor, screen-off operation, and locked-screen operation remain blocked.
+<!-- GATE13_CONTROLLER_END -->

@@ -8,7 +8,7 @@ Authority: Phone proof, current GitHub tracker, SHA-verified sources, live Sheet
 
 Current proof level:
 
-`11/14 locked = 79%`
+`12/14 locked = 86%`
 
 Locked main gates:
 
@@ -23,10 +23,11 @@ Locked main gates:
 9. Gate 9 controlled Send proof by direct Sosa phone proof.
 10. Gate 10 independent confirmation and DONE proof by direct Sosa phone proof.
 11. Gate 11 exact-row Archive proof by direct Sosa phone proof.
+12. Gate 12 permanent queue lifecycle integration proof by direct Sosa phone proof.
 
 Current active main gate:
 
-- Gate 12R1 controlled-mode normalization repair — CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT.
+- Gate 13 timer, STOP, background guard, and recovery — CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT.
 
 No percentage increase is authorized without new phone proof.
 
@@ -152,9 +153,9 @@ A fresh live Sheet read is mandatory before any future test or mutation.
 
 Blocked until separately proven:
 
-- original Gate 12 package import or run;
-- Gate 12R1 phone import until ChatGPT audits the actual XML and ZIP;
-- Gate 12 phone proof and tracker advancement beyond 11/14;
+- Gate 12 controlled launcher rerun;
+- Gate 13 phone import until ChatGPT audits the actual XML and ZIP;
+- Gate 13 phone proof and tracker advancement beyond 12/14;
 - broad Archive integration outside Task 227 to Task 226;
 - DeadArchive;
 - Compactor;
@@ -163,7 +164,7 @@ Blocked until separately proven:
 - capacity;
 - release/production.
 
-## 10. Gate 12R1 Candidate Boundary
+## 10. Gate 12R1 Candidate Boundary - Historical Build Record
 
 - The original Gate 12 candidate is rejected because Tasker substituted `%par1` and `%par2` inside the mode-normalization regex text.
 - Gate 12R1 changes only Task 199 act4/rhs and act7/rhs from the rejected Gate 12 base.
@@ -174,7 +175,7 @@ Blocked until separately proven:
 - Task 199 no longer calls `QUEUE Archive Drain Silent`.
 - Controlled Gate 12 mode performs no processing, maintenance, recursion, profile change, or live activation.
 - The current phone-proven SourceRow range remains 2 through 201; expansion is a later capacity/release requirement.
-- Static validation is not Gate 12 phone proof.
+- Static validation was not Gate 12 phone proof. Direct Sosa phone proof later locked Gate 12.
 
 ## 9. Locked Safety Rules
 
@@ -194,3 +195,16 @@ Blocked until separately proven:
 - No tracker increase without proof.
 - No API key or private token in public GitHub files.
 - Codex does not approve phone import and does not claim phone proof.
+
+<!-- GATE13_LOCKED_FACTS_START -->
+## Gate 13 Candidate Facts
+
+- Gate 12 is locked by direct Sosa phone proof; Codex records and does not claim that proof.
+- Gate 13 build base SHA is `3DC49BF47837403B36D1B213564F34BD6983598B6734429324FF0ACEDA7A23C8`.
+- STOP disables timer and trigger profiles before changing worker state and never clears an active transaction lock.
+- Startup recovery requires a stale timestamp and queue-state evidence before releasing any supported lock.
+- `SENDING` remains non-sendable and is never restored to `READY_TO_SEND`.
+- One tick calls Queue Cycle once maximum.
+- Returned XML profiles remain disabled.
+- Timer/live and Gate 13 proof remain blocked pending direct phone evidence.
+<!-- GATE13_LOCKED_FACTS_END -->

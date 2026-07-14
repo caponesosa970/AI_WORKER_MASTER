@@ -225,3 +225,20 @@ Replacement XML SHA256: `82148AF8B72A24E3DBA77936A15E547E2114FEC01B705A084D12AA3
 | GATE12R1-009 | Private package integrity and privacy hold | ZIP equality, SHA, Git tracking, secret scan | One byte-identical XML in ZIP; private files untracked; public scan PASS | PROVEN STATIC |
 | GATE12R1-010 | Gate 12 works on phone | Tasker import/render, runlogs, screen and Sheet proof | Not provided | UNSUPPORTED / HOLD |
 <!-- GATE12R1_CLAIM_MATRIX_END -->
+
+<!-- GATE13_CLAIM_MATRIX_START -->
+## Gate 13 Timer, STOP, Background Guard, and Recovery
+
+| Claim ID | Claim | Evidence required | Actual evidence | Result |
+| --- | --- | --- | --- | --- |
+| GATE13-001 | Exact Gate 12R1 base used | SHA256 | `3DC49BF47837403B36D1B213564F34BD6983598B6734429324FF0ACEDA7A23C8` matched | PROVEN STATIC |
+| GATE13-002 | Gate 12 is locked | Direct Sosa phone proof/controller decision | User supplied controlling proof; Codex records but does not claim it | PROVEN BY CONTROLLER |
+| GATE13-003 | Protected lifecycle tasks unchanged | Raw task-block comparison | Tasks 71/199/223/225/226/227 identical | PROVEN STATIC |
+| GATE13-004 | One safe tick calls Queue Cycle once maximum | XML call graph and independent state model | Task 228 has one Queue Cycle node; overlap locks block | PROVEN STATIC |
+| GATE13-005 | STOP disables future triggers before state changes | Exact Task 131 action order | Timer and trigger profile disables precede STOP/worker/timer variables | PROVEN STATIC |
+| GATE13-006 | STOP does not clear active transaction locks | Assignment and call scan | No reset helper and no transaction-lock assignment | PROVEN STATIC |
+| GATE13-007 | Recovery releases only proven stale locks | Timestamp, queue evidence, and state-model checks | 300-second threshold plus exact lifecycle evidence | PROVEN STATIC |
+| GATE13-008 | SENDING cannot become READY_TO_SEND | Status-write and call scan | Recovery has zero Sheet updates and no Send-task call | PROVEN STATIC |
+| GATE13-009 | Package integrity and privacy hold | ZIP equality, hashes, credential fingerprint | One matching XML; unchanged one-key fingerprint; private files untracked | PROVEN STATIC |
+| GATE13-010 | Timer/background/recovery works on phone | Import/render, scheduled tick, STOP and interruption recordings | Not provided | UNSUPPORTED / HOLD |
+<!-- GATE13_CLAIM_MATRIX_END -->

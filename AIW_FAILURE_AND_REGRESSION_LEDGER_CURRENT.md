@@ -709,3 +709,26 @@ Builds that must check this issue in preflight:
 - XML SHA256 `11D2C17F1107F024155C775E9320D68E447086DA5C6E38C900618A162FD65902` is REJECTED FOR PHONE IMPORT.
 - Its reports remain preserved as failure evidence and are not overwritten.
 <!-- GATE12R1_FAILURE_LEDGER_END -->
+
+<!-- GATE13_FAILURE_LEDGER_START -->
+## ISSUE_GATE13_BLANKET_LOCK_RESET_PATHS
+
+- First detected: 2026-07-14
+- Affected tasks/profiles: Start, Stop, Safe Recovery, boot profiles, watchdogs
+- Symptom: existing control paths could clear transaction ownership without stale proof
+- Direct evidence: Gate 12R1 call-graph audit
+- Root cause: legacy reset helpers predated Send/confirmation/Archive ownership contracts
+- Required repair: disconnect blanket resets; require STOP-first and stale timestamp plus queue evidence
+- Required regression: no active-lock force clear, SENDING preserved, one recovery module maximum
+- Status: REPAIRED CANDIDATE / HOLD FOR PHONE PROOF
+- Closing proof: pending ChatGPT artifact audit and direct phone proof
+- User/operator responsibility: NONE
+
+## ISSUE_GATE13_ENVIRONMENT_STATE_NOT_FULLY_DETECTABLE
+
+- First detected: 2026-07-14
+- Symptom: no source-proven exact node detects fold state, AutoInput accessibility, TextNow availability, and Android battery/background restrictions
+- Required control: screen and keyguard checks plus explicit environment-readiness latch
+- Status: OPEN / HOLD FOR PHONE PROOF
+- Prevention rule: do not claim unsupported background states; block before queue/UI work
+<!-- GATE13_FAILURE_LEDGER_END -->

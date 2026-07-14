@@ -1068,3 +1068,31 @@ No percentage change. Current tracker remains `8/14 locked = 57%`.
 - Responsible party: Codex owns the original validator omission; ChatGPT/controller caught the defect before phone import; Sosa responsibility is NONE.
 - Prevention rule added: every Tasker condition containing `%variable` text must be tested after Tasker-style substitution, not only as literal XML text.
 <!-- GATE12R1_BUILD_ACCOUNTABILITY_END -->
+
+<!-- GATE13_BUILD_LEDGER_START -->
+## Accountability ID AIW-GATE13-20260714
+
+- Date/time: 2026-07-14
+- Gate: 13 timer, STOP, background guard, and recovery
+- Exact source: Gate 12R1 full-project XML
+- Source SHA256: `3DC49BF47837403B36D1B213564F34BD6983598B6734429324FF0ACEDA7A23C8`
+- Source role: phone-proven permanent lifecycle base
+- Codex mode: bounded timer/control/recovery build
+- Approved runtime scope: Tasks 13,72,130,131,132,183,210,224; new 228,229; Profiles 134,135
+- Prohibited runtime scope: Tasks 71,199,223,225,226,227; Send/confirmation/Archive behavior; capacity/release
+- Files touched publicly: this ledger, controller/locked-facts/failure/claim records, Gate 13 reports
+- Runtime tasks touched: 13,72,130,131,132,183,210,224; added 228,229
+- Claims made: static structure, raw preservation, one tick call, STOP order, bounded stale recovery, package integrity
+- Proof: direct XML parser PASS; separate 34/34 state model PASS; ZIP byte equality PASS
+- Proof not available: Tasker import/render, Android scheduling, screen-off/background operation, phone recovery
+- Known assumptions: `%SCREEN` and `%KEYG` are source-proven Tasker built-ins; remaining environment readiness is manual
+- Contradictions found: old blanket Reset Locks paths violated current ownership rules
+- Regression results: PASS/PASS
+- Phone proof required/received: required for Gate 13 / not received
+- Tracker effect: remains 12/14 locked = 86%
+- Codex responsibility: bounded implementation, evidence, unsupported-claim disclosure
+- ChatGPT responsibility: inspect direct artifacts before any phone instruction
+- User/operator responsibility: NONE for static defects
+- Prevention rule: no lock release without stale timestamp plus queue-state evidence
+- Final controller decision: CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT
+<!-- GATE13_BUILD_LEDGER_END -->
