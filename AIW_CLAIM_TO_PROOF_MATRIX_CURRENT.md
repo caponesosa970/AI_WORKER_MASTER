@@ -208,3 +208,20 @@ Replacement XML SHA256: `82148AF8B72A24E3DBA77936A15E547E2114FEC01B705A084D12AA3
 | GATE12-010 | Private package integrity and privacy hold | SHA, ZIP byte equality, Git tracking, secret scan | One matching XML in ZIP; private files untracked; public scan PASS | PROVEN STATIC |
 | GATE12-011 | Gate 12 works across three phone cycles | Tasker import/render, runlogs, screen and Sheet proof | Not provided | UNSUPPORTED / HOLD |
 <!-- GATE12_CLAIM_MATRIX_END -->
+
+<!-- GATE12R1_CLAIM_MATRIX_START -->
+## Gate 12R1 Controlled-Mode Normalization Repair
+
+| Claim ID | Claim | Evidence required | Actual evidence | Result |
+| --- | --- | --- | --- | --- |
+| GATE12R1-001 | Rejected Gate 12 base used directly | SHA256 | `11D2C17F1107F024155C775E9320D68E447086DA5C6E38C900618A162FD65902` matched | PROVEN STATIC |
+| GATE12R1-002 | Only Task 199 changed | Raw task-node comparison | Changed task list is exactly `[199]` | PROVEN STATIC |
+| GATE12R1-003 | Only act4/rhs and act7/rhs changed | Reverse two-field byte comparison | Reversing the two repaired RHS values reconstructs the original Task 199 node exactly | PROVEN STATIC |
+| GATE12R1-004 | Controlled arguments survive Tasker substitution | Independent substitution model | Mode and token remain exact; controlled flag and validity equal 1; latch consumed; production skipped; busy acquired; router reached | PROVEN STATIC |
+| GATE12R1-005 | Blank and unresolved inputs normalize safely | Independent substitution model | Both normalize to production with blank secondary token | PROVEN STATIC |
+| GATE12R1-006 | Invalid modes are rejected before busy/router | Independent substitution model | Controlled+BAD and BAD primary both return mode rejected with no busy/router | PROVEN STATIC |
+| GATE12R1-007 | Prior Gate 12 architecture remains intact | Full prior validator rerun | 57/57 prior cases PASS; call graph and one-transition checks unchanged | PROVEN STATIC |
+| GATE12R1-008 | Complete updated matrix passes | Two independent validators | 65/65 combined cases PASS | PROVEN STATIC |
+| GATE12R1-009 | Private package integrity and privacy hold | ZIP equality, SHA, Git tracking, secret scan | One byte-identical XML in ZIP; private files untracked; public scan PASS | PROVEN STATIC |
+| GATE12R1-010 | Gate 12 works on phone | Tasker import/render, runlogs, screen and Sheet proof | Not provided | UNSUPPORTED / HOLD |
+<!-- GATE12R1_CLAIM_MATRIX_END -->

@@ -2,7 +2,7 @@
 
 Updated: 2026-07-14
 
-Status: CURRENT SOURCE-TRUTH TRACKER / GATE 12 QUEUE LIFECYCLE CANDIDATE HOLD
+Status: CURRENT SOURCE-TRUTH TRACKER / GATE 12R1 CONTROLLED-MODE REPAIR CANDIDATE HOLD
 
 ## Current Proof Percent
 
@@ -36,7 +36,7 @@ Status: CURRENT SOURCE-TRUTH TRACKER / GATE 12 QUEUE LIFECYCLE CANDIDATE HOLD
 
 ## Current Paused Gate
 
-Gate 12 permanent queue lifecycle integration candidate - HOLD FOR CHATGPT FULL ARTIFACT AUDIT.
+Gate 12R1 controlled-mode normalization repair - HOLD FOR CHATGPT FULL ARTIFACT AUDIT.
 
 ## Current Active Issue
 
@@ -49,8 +49,9 @@ Gate 12 permanent queue lifecycle integration candidate - HOLD FOR CHATGPT FULL 
 - ISSUE_GATE10_PRODUCTION_CONFIRMATION_PHONE_PROOF_PENDING - VERIFIED CLOSED BY DIRECT SOSA PHONE PROOF
 - ISSUE_GATE11_PRODUCTION_ARCHIVE_PHONE_PROOF_PENDING - VERIFIED CLOSED BY DIRECT SOSA PHONE PROOF
 - ISSUE_GATE12_QUEUE_LIFECYCLE_PHONE_PROOF_PENDING - OPEN / CANDIDATE HOLD
+- ISSUE_GATE12_CONTROLLED_MODE_NORMALIZATION_SUBSTITUTION - REPAIRED CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT
 
-Gate 9 controlled Send, Gate 10 independent confirmation/DONE, and Gate 11 exact-row Archive are LOCKED / PASS by direct Sosa phone proof. Their old launchers must not run again. Gate 12 is the only active runtime candidate.
+Gate 9 controlled Send, Gate 10 independent confirmation/DONE, and Gate 11 exact-row Archive are LOCKED / PASS by direct Sosa phone proof. Their old launchers must not run again. The original Gate 12 candidate is rejected for phone import. Gate 12R1 is the only active runtime candidate.
 
 Direct Sosa phone proof is the authority for the Gate 9, Gate 10, and Gate 11 locks. Codex records those controller decisions but does not independently claim phone proof.
 
@@ -103,7 +104,8 @@ V15A source:
 - Gate 9 launcher rerun / second Send
 - New Send transaction while an awaiting-confirm row exists
 - Gate 10 launcher rerun / additional DONE write
-- Gate 12 phone import until ChatGPT audits the actual XML and ZIP
+- Original Gate 12 package import or run
+- Gate 12R1 phone import until ChatGPT audits the actual XML and ZIP
 - Gate 12 phone proof and tracker increase beyond 11/14
 - Broad Archive outside the permanent Task 199 -> Task 227 -> Task 226 route
 - DeadArchive
@@ -114,15 +116,16 @@ V15A source:
 - release/production
 
 <!-- GATE12_CONTROLLER_START -->
-## Gate 12 Queue Lifecycle Integration Candidate Decision
+## Gate 12R1 Controlled-Mode Normalization Repair Decision
 
 - Gate 9 controlled Send: LOCKED / PASS by direct Sosa phone proof.
 - Gate 10 independent confirmation and DONE: LOCKED / PASS by direct Sosa phone proof.
 - Gate 11 exact-row Archive: LOCKED / PASS by direct Sosa phone proof.
 - Operational tracker: `11/14 locked = 79%`.
-- Gate 12 permanent queue lifecycle integration: CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT.
-- Runtime changes are limited to existing Tasks 199 and 224 plus new Task 227.
-- Tasks 71, 75, 223, 225, 226, all other pre-existing tasks, profiles, and the scene remain raw-byte identical.
+- Original Gate 12 candidate: REJECTED FOR PHONE IMPORT because Tasker substituted `%par1` and `%par2` inside two condition regex RHS values.
+- Gate 12R1 superseding candidate: CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT.
+- Repair-base runtime change: only Task 199 act4/rhs and act7/rhs changed to literal unresolved-variable detection.
+- Task 224, Task 227, every other task, the Project registry, all profiles, and the scene remain raw-byte identical to the rejected Gate 12 base.
 - Permanent route: Task 199 -> Task 227 -> exactly one of Task 225 or Task 226, or Task 199 -> Task 71 -> Task 223 when lifecycle state is clear.
 - Broad `QUEUE Archive Drain Silent` is disconnected from Task 199.
 - DeadArchive, Compactor, timer/live, recovery, capacity, and release remain blocked.

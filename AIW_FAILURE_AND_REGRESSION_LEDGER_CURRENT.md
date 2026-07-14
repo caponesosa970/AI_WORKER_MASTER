@@ -682,3 +682,30 @@ Builds that must check this issue in preflight:
 - Codex does not independently claim that proof.
 - Controller-provided result: exact copy verified, exact source row cleared, Archive lock released, `ARCHIVE_DONE_VERIFIED` returned.
 <!-- GATE12_FAILURE_LEDGER_END -->
+
+<!-- GATE12R1_FAILURE_LEDGER_START -->
+## ISSUE_GATE12_CONTROLLED_MODE_NORMALIZATION_SUBSTITUTION
+
+- First detected date: 2026-07-14.
+- Affected build: original Gate 12 queue lifecycle integration candidate.
+- Affected task/action: Task 199 action 5/XML act4 RHS and action 8/XML act7 RHS.
+- Observed symptom: controlled arguments would be substituted into their own regex conditions, causing controlled mode to normalize to production and clearing the one-cycle token.
+- Direct evidence: independent artifact audit of the actual XML and Tasker variable-replacement semantics.
+- Root cause: dynamic `%par1` and `%par2` references were embedded in regex RHS text intended to detect unresolved literals.
+- Contributing cause: the 57-case validator modeled branch state but not Tasker substitution inside action text.
+- Codex responsibility: original static controlled-mode claim was unsupported by a substitution-aware test.
+- ChatGPT/controller responsibility: independently inspected the artifact and caught the defect before phone import.
+- User/operator responsibility: NONE.
+- Prior warning missed: static XML structure cannot prove Tasker runtime text behavior.
+- Required repair: replace only both RHS fields with literal `(?is)^\s*$|^%.*$`.
+- Required regression test: model controlled, blank, unresolved, production, and invalid arguments after Tasker substitution; rerun all prior cases.
+- Status: REPAIRED CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT.
+- Closing proof: independent artifact audit followed by controlled phone proof.
+- Prevention rule: scan every Tasker action-text variable reference for runtime substitution effects.
+- Builds that must check this issue: Gate 12R1, Gate 13, Gate 14, and release.
+
+## Original Gate 12 Candidate Disposition
+
+- XML SHA256 `11D2C17F1107F024155C775E9320D68E447086DA5C6E38C900618A162FD65902` is REJECTED FOR PHONE IMPORT.
+- Its reports remain preserved as failure evidence and are not overwritten.
+<!-- GATE12R1_FAILURE_LEDGER_END -->

@@ -1036,3 +1036,35 @@ No percentage change. Current tracker remains `8/14 locked = 57%`.
 - Responsible party for each failure: no Gate 12 runtime failure observed; Codex owns static artifact accuracy, ChatGPT owns independent artifact/import approval, Sosa owns phone proof.
 - Prevention rule added: one Queue Cycle may route at most one of Send, confirmation, or exact-row Archive, and a transaction or blocker ends that cycle before recursion.
 <!-- GATE12_BUILD_ACCOUNTABILITY_END -->
+
+<!-- GATE12R1_BUILD_ACCOUNTABILITY_START -->
+## AIW-ACC-20260714-GATE12R1-CONTROLLED-MODE-NORMALIZATION
+
+- Date/time: 2026-07-14 America/Los_Angeles
+- Gate: Gate 12R1 controlled-mode normalization repair
+- Issue: `ISSUE_GATE12_CONTROLLED_MODE_NORMALIZATION_SUBSTITUTION`
+- Exact task assigned: repair only Task 199 act4/rhs and act7/rhs in the rejected Gate 12 artifact.
+- Exact source file: `GATE12_FULL_PROJECT_TASKER_IMPORT__QUEUE_LIFECYCLE_INTEGRATION_PRIVATE.xml`
+- Source SHA256: `11D2C17F1107F024155C775E9320D68E447086DA5C6E38C900618A162FD65902`
+- Source role: explicitly authorized direct repair base; rejected for import, not rebuilt from Gate 11.
+- Current branch: `repair/31A-dashgood-search-lane-controlled-send`
+- Starting commit: `36c964a295163bbb46b3cbaf8530b024e28904dc`
+- Codex mode: one two-field runtime repair only.
+- Approved actions: change Task 199 act4/rhs and act7/rhs; validate; package; upload; update public-safe proof records.
+- Prohibited actions: any other runtime field, Task 224, Task 227, credential, phone, Sheet, merge, or tracker increase.
+- Files touched: nine Gate 12R1 reports and current public-safe controller/accountability ledgers; private untracked XML, ZIP, SHA, and validators.
+- Runtime tasks touched: Task 199 only.
+- Exact actions touched: Tasker action 5/XML act4 condition RHS and Tasker action 8/XML act7 condition RHS.
+- Claims made: only two RHS fields changed; controlled tokens survive Tasker substitution; prior queue architecture and one-transition behavior remain unchanged.
+- Proof supporting each claim: raw-byte reverse comparison; independent XML/package validator; substitution-aware semantic validator; 57 prior cases plus 8 new substitution cases.
+- Proof not available: Tasker import/render and Gate 12 phone execution.
+- Known assumptions: the substitution model follows the controller-provided Tasker rule; the actual artifact still requires independent ChatGPT audit before import.
+- Contradictions found: the original 57/57 Gate 12 matrix claimed controlled-mode isolation without modeling substitution and is superseded.
+- Regression results: raw-byte validator PASS; semantic validator PASS; combined matrix 65/65 PASS.
+- Phone proof required: YES.
+- Phone proof received: NO for Gate 12.
+- Final controller decision: pending ChatGPT full artifact audit.
+- Tracker effect: none; remains 11/14 = 79%.
+- Responsible party: Codex owns the original validator omission; ChatGPT/controller caught the defect before phone import; Sosa responsibility is NONE.
+- Prevention rule added: every Tasker condition containing `%variable` text must be tested after Tasker-style substitution, not only as literal XML text.
+<!-- GATE12R1_BUILD_ACCOUNTABILITY_END -->

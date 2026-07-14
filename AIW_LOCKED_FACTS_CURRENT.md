@@ -26,7 +26,7 @@ Locked main gates:
 
 Current active main gate:
 
-- Gate 12 permanent queue lifecycle integration — CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT.
+- Gate 12R1 controlled-mode normalization repair — CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT.
 
 No percentage increase is authorized without new phone proof.
 
@@ -152,7 +152,8 @@ A fresh live Sheet read is mandatory before any future test or mutation.
 
 Blocked until separately proven:
 
-- Gate 12 phone import until ChatGPT audits the actual XML and ZIP;
+- original Gate 12 package import or run;
+- Gate 12R1 phone import until ChatGPT audits the actual XML and ZIP;
 - Gate 12 phone proof and tracker advancement beyond 11/14;
 - broad Archive integration outside Task 227 to Task 226;
 - DeadArchive;
@@ -162,8 +163,11 @@ Blocked until separately proven:
 - capacity;
 - release/production.
 
-## 10. Gate 12 Candidate Boundary
+## 10. Gate 12R1 Candidate Boundary
 
+- The original Gate 12 candidate is rejected because Tasker substituted `%par1` and `%par2` inside the mode-normalization regex text.
+- Gate 12R1 changes only Task 199 act4/rhs and act7/rhs from the rejected Gate 12 base.
+- Both repaired RHS fields use the literal regex `(?is)^\s*$|^%.*$` and contain no dynamic `%par1` or `%par2` reference.
 - Task 199 routes lifecycle work before processing or new Send selection.
 - Task 227 may call Task 225 or Task 226 once, but never both in one cycle.
 - Task 71 remains the only caller of Task 223.
