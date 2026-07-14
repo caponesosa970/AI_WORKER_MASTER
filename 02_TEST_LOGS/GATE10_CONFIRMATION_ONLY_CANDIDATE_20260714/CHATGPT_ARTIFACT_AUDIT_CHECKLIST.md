@@ -1,0 +1,21 @@
+# ChatGPT Artifact Audit Checklist
+
+- [ ] Recalculate base, source, output XML, and ZIP hashes.
+- [ ] Extract ZIP and prove one member whose bytes equal the standalone XML.
+- [ ] Parse the full TaskerData project.
+- [ ] Verify 77 tasks, 4 profiles, 1 scene.
+- [ ] Verify Tasks 71, 199, and 223 against the phone-tested base byte-for-byte.
+- [ ] Verify Task 224 has only arm/consume/call-once/stop logic.
+- [ ] Verify Task 225 source row and expected ID remain dynamic.
+- [ ] Verify the code 421 action against the phone-exported source field-for-field.
+- [ ] Verify `%ai_texts.text()` ordered iteration and exact reply count 1.
+- [ ] Verify next non-empty element must equal exact `Sent`.
+- [ ] Verify normalized sender identity and exact TextNow package checks.
+- [ ] Verify all six AutoSheets actions use Continue Task After Error.
+- [ ] Verify DONE is not reachable before positive confirmation.
+- [ ] Verify exact ID/DONE readback is mandatory for success.
+- [ ] Verify every owned confirmation-lock exit reaches one release.
+- [ ] Verify there is no Send/compose/keyboard/paste/Archive/live path.
+- [ ] Verify one unchanged private credential occurrence without printing it.
+- [ ] Verify old Gate 9 launcher source is absent from active runtime.
+- [ ] Record unsupported phone claims and keep phone import unapproved until audit completion.

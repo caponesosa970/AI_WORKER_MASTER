@@ -597,3 +597,29 @@ Builds that must check this issue in preflight:
 - Closing proof: a fully inspectable Sosa-created or phone-exported confirmation action plus successful phone runlog and visual proof.
 - Prevention rule: DONE logic cannot be built from manual sent-bubble evidence alone.
 - Builds that must check this issue: Gate 10 confirmation, DONE, Archive, live/timer, capacity, and release.
+
+
+## ISSUE_GATE10_CONFIRMATION_SOURCE_NOT_PROVEN - CLOSURE UPDATE
+
+- Closing evidence: Sosa supplied a phone-exported one-task source whose native Get Screen Info action completed on the phone and returned TextNow package and ordered visible text.
+- Source role: DEVELOPMENT PASS for the non-mutating screen-read action only.
+- Codex verification: source SHA, exact action, Continue Task After Error, outputs, and forbidden-action absence.
+- Status: VERIFIED CLOSED FOR SOURCE AVAILABILITY.
+- User/operator responsibility: NONE.
+- Prevention retained: production confirmation still requires artifact audit and separate phone proof.
+
+## ISSUE_GATE10_PRODUCTION_CONFIRMATION_PHONE_PROOF_PENDING
+
+- First detected: 2026-07-14.
+- Affected build: Gate 10 production confirmation-only candidate.
+- Affected tasks: Task 224 launcher and new Task 225 confirmation worker.
+- Observed symptom: static candidate exists but has not been imported or run on the phone.
+- Direct evidence: private XML/ZIP and public Gate 10 audit reports.
+- Root cause: phone proof is a separate gate after source and static proof.
+- Codex responsibility: keep candidate on HOLD and never claim phone proof.
+- ChatGPT/controller responsibility: independently audit actual artifacts before any import instruction.
+- User/operator responsibility: NONE.
+- Required regression test: one confirmation-only run proving exact thread identity, exact unique reply + immediate Sent, exact row DONE readback, lock release, and zero Send behavior.
+- Status: OPEN / HOLD FOR CHATGPT ARTIFACT AUDIT.
+- Closing proof: direct Sosa phone recording/runlog plus controller verification.
+- Builds that must check this issue: Gate 10, DONE, Archive, live/timer, capacity, and release.

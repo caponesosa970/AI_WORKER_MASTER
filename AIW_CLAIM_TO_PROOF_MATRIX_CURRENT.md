@@ -157,3 +157,18 @@ Replacement XML SHA256: `82148AF8B72A24E3DBA77936A15E547E2114FEC01B705A084D12AA3
 | GATE10-SRC-003 | Gate 10 source audit | Existing sources provide exact outgoing-message recognition | Phone-exported action plus successful phone proof | No qualifying action found | Proposed confirmation action | NO | NO | Pending | UNSUPPORTED / HOLD |
 | GATE10-SRC-004 | Gate 10 source audit | UI Query can provide confirmation now | Required R1 phone-proof standard | Prior timeouts and explicit current block; required standard not met | AutoInput UI Query | NO | FAILED / BLOCKED | Pending | DISPROVEN FOR CURRENT GATE |
 | GATE10-SRC-005 | Gate 10 source audit | A safe runtime candidate was generated | Exact source-backed XML and package | No runtime XML, ZIP, or sidecar generated because the source gate failed | Gate 10 runtime | N/A | N/A | Pending | CORRECTLY NOT BUILT |
+
+
+## Gate 10 Confirmation Candidate Claims
+
+| Claim ID | Claim | Required evidence | Actual evidence | Result |
+| --- | --- | --- | --- | --- |
+| GATE10-001 | Correct Plan A base used | Exact SHA256 | `82148AF8B72A24E3DBA77936A15E547E2114FEC01B705A084D12AA319534442B` matched | PROVEN STATIC |
+| GATE10-002 | Phone-exported screen action copied exactly | Source SHA plus two semantic comparisons | `C4850C3B24FA7A2E43FC424DF198EACB2DF2DFAE59B89AC42749349ECCD85C64` and both implementations match | PROVEN STATIC; SOURCE PHONE PROOF USER-SUPPLIED |
+| GATE10-003 | Tasks 71/199/223 unchanged | Raw task-node comparison | All three raw-byte identical | PROVEN STATIC |
+| GATE10-004 | Confirmation path cannot Send | Call graph, action/package/target scan | zero Send calls, nodes, AutoInput, keyboard, compose, or paste | PROVEN STATIC |
+| GATE10-005 | Exact unique reply and immediate Sent required | Ordered parser inspection and model tests | exact equality, count=1, next non-empty exact Sent | PROVEN STATIC |
+| GATE10-006 | DONE requires exact positive confirmation and readback | Control ancestry and AutoSheets scan | DONE plugins follow positive gate; success follows exact ID/DONE readback | PROVEN STATIC |
+| GATE10-007 | Owned confirmation locks release once | Stop/release reachability | no post-acquisition Stop before single common release | PROVEN STATIC |
+| GATE10-008 | Production candidate works on phone | Import/render, runlog, screen proof, Sheet proof | not provided | UNSUPPORTED / HOLD |
+| GATE10-009 | Remote row always remains awaiting after ambiguous DONE plugin outcome | Remote transaction proof | cannot be guaranteed statically; candidate refuses DONE claim without readback | UNSUPPORTED / DISCLOSED |

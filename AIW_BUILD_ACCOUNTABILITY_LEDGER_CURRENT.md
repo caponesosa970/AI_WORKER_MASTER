@@ -945,3 +945,29 @@ No percentage change. Current tracker remains `8/14 locked = 57%`.
 - Codex responsibility: refuse to manufacture an unsupported confirmation action.
 - ChatGPT verification checklist: confirm the search record, the UI Query block, the absence of runtime artifacts, and the exact missing-proof request.
 - Prevention rule: manual visual proof and static XML evidence must not be promoted into an automatable UI contract.
+
+
+## GATE10_CONFIRMATION_ONLY_CANDIDATE_20260714
+
+- Accountability ID: `AIW-GATE10-CONFIRM-20260714`.
+- Gate: Gate 10 independent confirmation and DONE candidate.
+- Exact task: build permanent Task 225 and removable Task 224 launcher with zero Send reachability.
+- Exact sources: corrected Plan A SHA `82148AF8B72A24E3DBA77936A15E547E2114FEC01B705A084D12AA319534442B`; phone-exported screen source SHA `C4850C3B24FA7A2E43FC424DF198EACB2DF2DFAE59B89AC42749349ECCD85C64`.
+- Source roles: phone-tested full-project base; direct Sosa phone-exported DEVELOPMENT PASS action.
+- Starting branch/commit: `repair/31A-dashgood-search-lane-controlled-send` / `719c8108bc3653af99f70cc9a09ec3ce08809085`.
+- Codex mode: one bounded confirmation-only runtime candidate and public accountability update.
+- Approved runtime changes: replace Task 224; add Task 225; add Project ID 225.
+- Prohibited runtime changes: Tasks 71/199/223, Send, compose, keyboard, paste, Archive, live/timer, capacity, credential.
+- Runtime tasks touched: Task 224 replaced; Task 225 added.
+- Exact actions: enumerated in `02_TEST_LOGS/GATE10_CONFIRMATION_ONLY_CANDIDATE_20260714/EXACT_CHANGED_TASK_ACTION_LIST.md`.
+- Claims: source action exact; zero Send path; exact sender/unique reply/immediate Sent gate; DONE requires exact readback; owned lock releases once.
+- Proof: actual XML/ZIP hashes, two independent XML implementations, Tasker static audit, 20-case matrix.
+- Proof unavailable: Tasker import/render and Gate 10 phone behavior.
+- Assumptions: TextNow exposes the same ordered screen elements during the authorized test; static audit cannot prove this.
+- Contradictions: a DONE update that returns ambiguously can make the remote state uncertain; the task never reports DONE without exact readback.
+- Phone proof received: screen-read source DEVELOPMENT PASS by direct Sosa proof; production candidate proof NOT received.
+- Tracker effect: none beyond the already controller-locked Gate 9 state; remains `9/14 locked = 64%`.
+- Codex responsibility: preserve source semantics, prevent Send reachability, disclose static/remote-state limits.
+- ChatGPT responsibility: inspect the actual artifact and direct fields before any import instruction.
+- User/operator responsibility: NONE.
+- Prevention rule: no substring-only confirmation and no DONE claim without exact ID/status readback.

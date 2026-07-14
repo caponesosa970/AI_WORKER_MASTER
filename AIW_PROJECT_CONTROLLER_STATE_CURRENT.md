@@ -2,7 +2,7 @@
 
 Updated: 2026-07-13
 
-Status: CURRENT SOURCE-TRUTH TRACKER / GATE 10 CONFIRMATION SOURCE HOLD
+Status: CURRENT SOURCE-TRUTH TRACKER / GATE 10 CONFIRMATION CANDIDATE HOLD
 
 ## Current Proof Percent
 
@@ -34,7 +34,7 @@ Status: CURRENT SOURCE-TRUTH TRACKER / GATE 10 CONFIRMATION SOURCE HOLD
 
 ## Current Paused Gate
 
-Gate 10 independent confirmation-only build - HOLD pending a source-proven outgoing-message confirmation action.
+Gate 10 production confirmation-only candidate - HOLD FOR CHATGPT ARTIFACT AUDIT.
 
 ## Current Active Issue
 
@@ -43,7 +43,8 @@ Gate 10 independent confirmation-only build - HOLD pending a source-proven outgo
 - ISSUE_31A_DISCONTINUED_CREDENTIAL_IN_PRIVATE_PACKAGE - REPAIRED CANDIDATE / HOLD FOR CHATGPT AUDIT
 - ISSUE_31A_AUTOSHEETS_ROW_READ_TIMEOUT_LOCK_RELEASE_RISK - SUPERSEDED REPAIR CANDIDATE / HOLD FOR CHATGPT AUDIT
 - ISSUE_31B_CONTROLLED_SEND_TRANSACTION_SAFETY_REQUIREMENTS - CANDIDATE / HOLD FOR CHATGPT AUDIT
-- ISSUE_GATE10_CONFIRMATION_SOURCE_NOT_PROVEN - OPEN / HARD SOURCE HOLD
+- ISSUE_GATE10_CONFIRMATION_SOURCE_NOT_PROVEN - VERIFIED CLOSED BY DIRECT SOSA PHONE-EXPORTED SOURCE PROOF
+- ISSUE_GATE10_PRODUCTION_CONFIRMATION_PHONE_PROOF_PENDING - OPEN / CANDIDATE HOLD
 
 Gate 9 controlled Send is LOCKED / PASS. The Gate 9 launcher must not run again. New Send transactions remain blocked while the existing row awaits independent confirmation.
 
@@ -164,14 +165,20 @@ Codex return is automatically rejected if it lacks preflight, bug-history search
 - Tasks changed from rejected Plan A: 71 and 223 only.
 - Tasks 199 and 224: byte-identical.
 - Permanent outcomes remain `SEND_CLICKED_AWAITING_CONFIRM`, `SEND_OUTCOME_UNKNOWN_REVIEW`, `POST_SEND_STATUS_UPDATE_FAILED`, and `HOLD_PRE_SEND_FAILED`.
-- Gate 10 confirmation source is not proven. DONE, Archive progression, live/timer, capacity, and release remain blocked.
+- Gate 10 screen-read source is DEVELOPMENT PASS by direct Sosa phone proof. Production confirmation remains CANDIDATE / HOLD FOR CHATGPT ARTIFACT AUDIT. DONE is not locked; Archive progression, live/timer, capacity, and release remain blocked.
 <!-- PLAN_A_ACCOUNTABILITY_END -->
 
-## Gate 10 Confirmation Source Decision
+## Gate 10 Confirmation Candidate Decision
 
 - Base artifact SHA verified: `82148AF8B72A24E3DBA77936A15E547E2114FEC01B705A084D12AA319534442B`.
-- Existing phone-proven sources provide navigation, thread opening, compose, and Send action shapes, but no exact outgoing-message recognition action.
-- Manual visible sent-bubble evidence is phone proof of Gate 9, not an automatable confirmation action contract.
-- AutoInput UI Query remains blocked and did not meet its required phone-proof standard.
-- Runtime XML generated for Gate 10: NO.
-- Exact missing proof: a Sosa-created or phone-exported, phone-proven, non-mutating Tasker action/task that reads the exact outgoing reply from the correct TextNow thread without any reachable compose, keyboard, paste, or Send action.
+- Phone-exported source SHA verified: `C4850C3B24FA7A2E43FC424DF198EACB2DF2DFAE59B89AC42749349ECCD85C64`.
+- Gate 10 screen-read source: DEVELOPMENT PASS by direct Sosa phone proof; Codex records but does not claim that proof.
+- Permanent Task 225: `FINAL Confirm One Bound Row`.
+- Temporary Task 224: `AIW GATE10 CONTROLLED CONFIRM TEST`.
+- Tasks 71, 199, and 223: raw-byte identical to the phone-tested base.
+- Old Gate 9 launcher: absent from active runtime and archived privately.
+- Runtime Send actions in confirmation path: 0.
+- Production confirmation: CANDIDATE / HOLD FOR CHATGPT ARTIFACT AUDIT.
+- Row 75 recorded proof state: `SEND_CLICKED_AWAITING_CONFIRM`; Codex did not read or change the live Sheet.
+- Tracker remains `9/14 locked = 64%` pending Gate 10 phone proof.
+- DONE, Archive, live/timer, capacity, and release remain blocked.

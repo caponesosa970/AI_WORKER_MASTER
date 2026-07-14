@@ -1,0 +1,24 @@
+# Control Inputs Used
+
+Current GitHub-main control files read before the build:
+
+1. `AIW_CONTROLLER_BOOTSTRAP_CURRENT.md`
+2. `AIW_FULL_GOAL_EXECUTION_CONTRACT_CURRENT.md`
+3. `AIW_LOCKED_FACTS_CURRENT.md`
+4. `AIW_PROJECT_CONTROLLER_STATE_CURRENT.md`
+5. `AIW_FAILURE_AND_REGRESSION_LEDGER_CURRENT.md`
+6. `AIW_CLAIM_TO_PROOF_MATRIX_CURRENT.md`
+
+Local standing controls read:
+
+- `AGENTS.md`
+- `.codex/config.toml`
+- `AIW_MANDATORY_BUILD_PREFLIGHT.md`
+- `AIW_BUILD_ACCOUNTABILITY_LEDGER_CURRENT.md`
+
+Runtime source inputs:
+
+- Corrected Plan A full-project base, SHA256 `82148AF8B72A24E3DBA77936A15E547E2114FEC01B705A084D12AA319534442B`.
+- Phone-exported `AIW G10 OUTGOING READ SOURCE TEST`, SHA256 `C4850C3B24FA7A2E43FC424DF198EACB2DF2DFAE59B89AC42749349ECCD85C64`.
+
+Private paths, credentials, recipient values, and Drive IDs are intentionally excluded from this public record.
