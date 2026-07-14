@@ -249,3 +249,18 @@ Codex return is automatically rejected if it lacks preflight, bug-history search
 - No phone import is approved. No Gate 13 phone proof is claimed. No live Sheet mutation or Tasker execution occurred.
 - Scheduled execution, STOP ladder, overlap proof, recovery phone proof, unattended operation, capacity, and release remain blocked.
 <!-- GATE13R1_CONTROLLER_END -->
+
+<!-- GATE13R2_CONTROLLER_START -->
+## Gate 13R2 Awaiting-Confirm Thread Navigation Repair
+
+- Current issue: `ISSUE_G13_CONFIRM_RECOVERY_CHAT_LIST_HOLD`.
+- Gates 9 through 12 remain LOCKED / PASS by direct Sosa phone proof.
+- Operational tracker remains `12/14 locked = 86%`.
+- Recovery routing, no automatic Send retry, fail-closed confirmation, and lock release passed the controller-provided phone run.
+- Exact autonomous conversation navigation failed because Task 225 read the Chats list.
+- Gate 13R2 status: CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT.
+- New Task 231: `FINAL Open Bound TextNow Thread No Send`.
+- Existing Task 225 replaces only its standalone launch prelude with one Task 231 call and explicit ready guard.
+- No phone import is approved. No Gate 13R2 phone proof is claimed. No live Sheet mutation or Tasker execution occurred.
+- Awaiting-confirm completion, final clean Start/timer/STOP proof, unattended operation, capacity, and release remain blocked.
+<!-- GATE13R2_CONTROLLER_END -->

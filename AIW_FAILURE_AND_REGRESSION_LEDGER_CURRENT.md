@@ -761,3 +761,34 @@ Builds that must check this issue in preflight:
 - No unsafe behavior occurred.
 - Gate 13 remains HOLD and the tracker remains 12/14 locked = 86%.
 <!-- GATE13R1_FAILURE_LEDGER_END -->
+
+<!-- GATE13R2_FAILURE_LEDGER_START -->
+## ISSUE_G13_CONFIRM_RECOVERY_CHAT_LIST_HOLD
+
+- First detected date: 2026-07-14.
+- Affected build: Gate 13R1 startup recovery path.
+- Affected task/action: Task 225 standalone TextNow launch/wait prelude before Get Screen Info.
+- Observed symptom: recovery routed correctly to Task 225, but Get Screen Info inspected the Chats list and could not prove exact sender, unique exact reply, and immediate `Sent`.
+- Direct evidence: controller-provided Run Log, visible phone state, unchanged awaiting-confirm row, and disabled profiles.
+- Root cause: Task 225 launched TextNow without source-proven navigation into the exact bound conversation.
+- Contributing cause: the original confirmation candidate was proven from an already-open conversation; recovery from an arbitrary TextNow screen required a separate navigation lane.
+- Codex responsibility: keep failure closed, add only source-proven navigation, and preserve confirmation and lock contracts.
+- ChatGPT/controller responsibility: reconciled phone evidence and prohibited manual pre-navigation as substitute proof.
+- User/operator responsibility: NONE.
+- Prior warning applied: no invented AutoInput target; phone proof supersedes static assumptions; uncertainty must preserve awaiting-confirm state.
+- Required repair: add Task 231 from exact Task 223 navigation nodes and call it once from Task 225 before screen proof.
+- Required regression: start on Chats list; autonomously open exact bound conversation; exact confirmation; DONE readback; zero Send/Archive; confirmation lock released; profiles off.
+- Status: REPAIRED CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT.
+- Closing proof: independent artifact audit and direct Sosa phone recovery run.
+- Prevention rule: confirmation must prove both navigation into the bound thread and independent visible sent-message evidence; neither substitutes for the other.
+- Builds that must check this issue: Gate 13R2, remaining Gate 13 tests, Gate 14, and release.
+
+## Phone-Failure Safety Reconciliation
+
+- Exactly one confirmation task ran.
+- No Send or Archive task ran.
+- Task 225 released its owned confirmation lock.
+- Result was `CONFIRM_UI_HOLD`; startup returned HOLD.
+- The row remained `SEND_CLICKED_AWAITING_CONFIRM`.
+- No unsafe behavior occurred.
+<!-- GATE13R2_FAILURE_LEDGER_END -->

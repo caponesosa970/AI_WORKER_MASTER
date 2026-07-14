@@ -260,3 +260,20 @@ Replacement XML SHA256: `82148AF8B72A24E3DBA77936A15E547E2114FEC01B705A084D12AA3
 | GATE13R1-010 | Java Function executes correctly on Moto Android 16 | Tasker import/render and direct unlocked/locked phone runs | Not provided | UNSUPPORTED / HOLD |
 | GATE13R1-011 | Gate 13 busy-timer ladder passes after repair | Scheduled phone tick, Run Log, and controller reconciliation | Not provided | UNSUPPORTED / HOLD |
 <!-- GATE13R1_CLAIM_MATRIX_END -->
+
+<!-- GATE13R2_CLAIM_MATRIX_START -->
+## Gate 13R2 Awaiting-Confirm Thread Navigation Repair
+
+| Claim ID | Claim | Evidence required | Actual evidence | Result |
+| --- | --- | --- | --- | --- |
+| GATE13R2-001 | Exact Gate 13R1 base used | SHA256 | `CF955572B9EB7F9700E8563AFC6522427ECFE53576DEBF4E5F089BFD1F6A4BC6` matched | PROVEN STATIC |
+| GATE13R2-002 | Task ID 231 was unused | Base tasks and Project tids | ID 231 absent before build and present once after | PROVEN STATIC |
+| GATE13R2-003 | Runtime scope is limited | Raw task/profile/scene comparison | Task 225 changed; Task 231 added; 81/81 other tasks, profiles, and scene raw-byte identical | PROVEN STATIC |
+| GATE13R2-004 | Navigation actions are source-preserved | Two independent XML/semantic comparisons | 72 copied nodes and 12 AutoInput bundles equal excluding output `sr` | PROVEN STATIC |
+| GATE13R2-005 | Helper stops before compose and Send | Action, target, variable, and call scan | No `MESSAGE_BOX`, compose target, reply write, Send target, Sheets, or task call | PROVEN STATIC |
+| GATE13R2-006 | Task 225 confirmation criteria remain unchanged | Semantic action-sequence comparison | Existing Get Screen Info through DONE/readback sequence unchanged | PROVEN STATIC |
+| GATE13R2-007 | Navigation failure preserves safe state | Control-flow and state matrix | Sets `CONFIRM_NAVIGATION_HOLD`, skips confirmation/DONE, reaches one owned-lock release | PROVEN STATIC |
+| GATE13R2-008 | Package integrity and privacy hold | ZIP equality, SHA, key fingerprint, Git scan | One byte-identical XML; credential unchanged; private artifacts untracked | PROVEN STATIC |
+| GATE13R2-009 | Helper opens the correct thread on phone | Tasker import/render and direct run from Chats list | Not provided | UNSUPPORTED / HOLD |
+| GATE13R2-010 | Recovery confirms and writes DONE | Exact phone run, Sheet readback, and controller reconciliation | Not provided | UNSUPPORTED / HOLD |
+<!-- GATE13R2_CLAIM_MATRIX_END -->

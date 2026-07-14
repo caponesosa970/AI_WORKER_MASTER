@@ -1125,3 +1125,32 @@ No percentage change. Current tracker remains `8/14 locked = 57%`.
 - Prevention rule: a platform-state variable is not considered phone-proven merely because it is documented or statically present; ambiguous device-state checks fail closed and require direct phone reconciliation.
 - Final decision: CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT.
 <!-- GATE13R1_BUILD_LEDGER_END -->
+
+<!-- GATE13R2_BUILD_LEDGER_START -->
+## Accountability ID AIW-GATE13R2-20260714
+
+- Date/time: 2026-07-14 America/Los_Angeles
+- Gate: Gate 13R2 awaiting-confirm thread-navigation repair
+- Issue: `ISSUE_G13_CONFIRM_RECOVERY_CHAT_LIST_HOLD`
+- Exact task: add a no-Send bound-thread navigation helper and replace Task 225's standalone launch prelude.
+- Exact source: `GATE13R1_FULL_PROJECT_TASKER_IMPORT__ANDROID16_UNLOCK_PROBE_REPAIR_PRIVATE.xml`
+- Source SHA256: `CF955572B9EB7F9700E8563AFC6522427ECFE53576DEBF4E5F089BFD1F6A4BC6`
+- Source role: exact Gate 13R1 private full-project base from the controller-provided failed-closed recovery run.
+- Current branch: `repair/31A-dashgood-search-lane-controlled-send`
+- Starting commit: `30d30ceff44a59d7b87276717fd7a0fd6463c79e`
+- Codex mode: one confirmation-navigation repair only.
+- Approved actions: modify Task 225; add Task 231; register Task 231; validate/package/upload; public-safe reports and ledger updates.
+- Prohibited actions: any other runtime change, phone/Sheet execution, profile enablement, Send/Archive behavior, credential change, merge, phone-proof claim, import approval, or tracker increase.
+- Runtime tasks touched: existing Task 225; new Task 231.
+- Exact actions touched: Task 225 standalone Launch App/Wait prelude replaced by one Task 231 call, `THREAD_NAV_READY` guard, fail-closed result, and ready-only wrapper; Task 231 adds 121 navigation-only actions copied from Task 223 plus fail-closed wrappers.
+- Claims made: exact base; 72 copied source nodes; 12 exact AutoInput bundles; cutoff before compose; zero Send/Sheet in helper; existing confirmation criteria and cleanup preserved; other runtime raw-byte unchanged.
+- Proof supporting claims: validator 1 PASS 35 direct checks; validator 2 PASS 104 checks; 13 scenario matrix; repository static audit; ZIP equality; SHA sidecar.
+- Proof not available: Tasker import/render, autonomous phone thread navigation, positive confirmation, DONE, or Gate 13 completion.
+- Contradiction found: existing Task 225 launch-only prelude was insufficient from the Chats list despite static confirmation logic being correct.
+- Phone proof required: YES, one controlled startup-recovery rerun on the unchanged awaiting-confirm row after artifact approval.
+- Phone proof received: only the failed-closed Chats-list run; no Gate 13R2 proof.
+- Tracker effect: none; remains 12/14 locked = 86%.
+- Responsible parties: Codex owns static artifact accuracy; ChatGPT owns independent artifact/import audit; user/operator responsibility is NONE.
+- Prevention rule: confirmation recovery must autonomously open the exact bound conversation before screen proof; manual pre-navigation cannot substitute for autonomous proof.
+- Final decision: CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT.
+<!-- GATE13R2_BUILD_LEDGER_END -->

@@ -221,3 +221,16 @@ Blocked until separately proven:
 - No profile is enabled in the artifact. No Sheet cell was changed. Tasker was not run.
 - Gate 13R1 is a static candidate only; Android execution and the repeated busy-timer test remain blocked pending ChatGPT artifact audit and direct phone proof.
 <!-- GATE13R1_LOCKED_FACTS_END -->
+
+<!-- GATE13R2_LOCKED_FACTS_START -->
+## Gate 13R2 Confirmation-Recovery Navigation Facts
+
+- Direct Sosa phone proof showed startup recovery routed exactly once to Task 225 and failed closed on the Chats list as `CONFIRM_UI_HOLD`.
+- No Send, DONE, Archive, profile, or unsafe Sheet action occurred; the awaiting-confirm row remained unchanged.
+- Gate 13 remains HOLD at `12/14 locked = 86%`.
+- Gate 13R2 uses base SHA `CF955572B9EB7F9700E8563AFC6522427ECFE53576DEBF4E5F089BFD1F6A4BC6`.
+- New Task 231 copies the Task 223 navigation lane through exact contact selection and the following wait, stopping before `MESSAGE_BOX`, compose focus, reply typing, or Send.
+- Task 225 alone is changed among existing tasks; 81/81 other existing task blocks, all profiles, and the scene remain raw-byte identical.
+- Task 225's existing exact sender, unique exact reply, immediate `Sent`, DONE readback, and confirmation-lock cleanup remain the confirmation authority.
+- Gate 13R2 is a static candidate only. Phone import and phone proof remain blocked pending ChatGPT full artifact audit.
+<!-- GATE13R2_LOCKED_FACTS_END -->
