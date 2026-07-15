@@ -1,23 +1,21 @@
-# Gate 14A Read-Only Capacity Inventory Candidate
+# Gate 14A R1 Blank Reply Output Normalization
 
-- Main source commit: `1b73c48c77b05b2518c47d30387778f86b647576`
-- Base: `GATE13R2_FULL_PROJECT_TASKER_IMPORT__CONFIRM_THREAD_NAVIGATION_PRIVATE.xml`
-- Base SHA256: `1C4D13872C3D6B4579AA698F9E7D2F50F3E81467A4CBD4EAD63CD567087832A7`
-- Candidate XML SHA256: `832BEB0F9764EB2838B08A582648097C49197C2A366931196E5F0311860529EF`
+- Status: `GATE 14A R1 RUNTIME CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`
+- Rejected Gate 14A XML SHA256: `832BEB0F9764EB2838B08A582648097C49197C2A366931196E5F0311860529EF`
+- Replacement XML SHA256: `34197CB7044B740F73B5ED173D26E7B73DE6B6602637B83F26F94D0ECDECD9FC`
 - Tracker: `13/14 locked = 93%` (unchanged)
-- Runtime phone proof: NOT CLAIMED
-- Phone import approval: NO
-- Capacity proof: NOT CLAIMED
+- Phone import approved by Codex: `NO`
+- Phone proof claimed by Codex: `NO`
 
-## Read Contract
+## Result: UNCHANGED / PASS
 
-1. A valid authorization is captured and consumed at actions 0-3.
-2. Run ID and expected count are validated before AutoSheets.
-3. One exported AutoSheets Get Data node is inside a fixed `1,2` For loop.
-4. Every executed attempt clears all nine arrays plus `%err` and `%errmsg`.
-5. Attempt two waits exactly three seconds.
-6. Numeric `%err` or array-count misalignment fails the attempt.
-7. First-attempt success gates the second plugin execution off.
-8. Two failures return `INVENTORY_READ_HOLD`; no third attempt exists.
+The R1 patch is after the read loop and does not change the read state machine.
 
-Result: PASS.
+1. Clear all nine output arrays, `%err`, and `%errmsg` before each attempt.
+2. AutoSheets Get Data uses Continue Task After Error.
+3. Detect numeric `%err` only.
+4. Attempt one failure waits three seconds.
+5. Attempt two is the final attempt.
+6. One Get Data plugin node remains inside the bounded `1,2` loop.
+7. Two failures return `INVENTORY_READ_HOLD`.
+8. No third attempt exists.

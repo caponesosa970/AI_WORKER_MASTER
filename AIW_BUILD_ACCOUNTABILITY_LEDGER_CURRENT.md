@@ -1202,3 +1202,20 @@ No percentage change. Current tracker remains `8/14 locked = 57%`.
 - Codex claims no phone proof and approves no phone import.
 - Final decision: `GATE 14A RUNTIME CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
 <!-- GATE14A_BUILD_LEDGER_END -->
+
+<!-- GATE14A_R1_BUILD_LEDGER_START -->
+## Accountability ID AIW-GATE14A-R1-BLANK-REPLY-NORMALIZATION-20260715
+
+- Gate: Gate 14A R1 read-only inventory repair.
+- Direct repair base SHA256: `832BEB0F9764EB2838B08A582648097C49197C2A366931196E5F0311860529EF`.
+- Exact runtime scope: Task 232 only; three actions inserted after the Reply-array assignment.
+- Phone result reconciled: exact-row isolated read passed, inventory result held because blank Reply became unresolved `%g14_reply89`.
+- User/operator responsibility: `NONE`.
+- Codex responsibility: initial static simulation did not reproduce the Tasker runtime placeholder.
+- ChatGPT/controller responsibility: phone proof correctly detected the unsupported assumption.
+- Validators: direct XML/raw-byte PASS; independent Tasker/control-state model PASS; standard static audit PASS.
+- Private outputs: XML, one-entry ZIP, and SHA sidecar; all remain untracked.
+- Public boundary: hashes and sanitized evidence only.
+- Tracker effect: none; remains `13/14 locked = 93%`.
+- Phone proof claimed by Codex: NO. Phone import approved by Codex: NO. PR merge: BLOCKED.
+<!-- GATE14A_R1_BUILD_LEDGER_END -->

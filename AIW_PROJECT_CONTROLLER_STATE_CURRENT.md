@@ -303,3 +303,17 @@ Codex return is automatically rejected if it lacks preflight, bug-history search
 - No Gate 14 phone proof or capacity claim exists. No live Sheet mutation or Tasker execution occurred.
 - Phone import, capacity ladder, final interface, unattended production, and release remain blocked.
 <!-- GATE14A_CONTROLLER_END -->
+
+<!-- GATE14A_R1_CONTROLLER_START -->
+## Gate 14A R1 Blank Reply Output Normalization
+
+- Original Gate 14A phone execution: `DEVELOPMENT PARTIAL PASS / FAIL-SAFE HOLD`.
+- Rejected XML SHA256: `832BEB0F9764EB2838B08A582648097C49197C2A366931196E5F0311860529EF`.
+- Phone-observed issue: `ISSUE_G14A_BLANK_REPLY_OUTPUT_UNRESOLVED`.
+- Direct Sosa proof showed one isolated exact-row read and no unsafe runtime path; fresh Sheet proof showed the Reply cell blank.
+- Gate 14A R1 changes Task 232 only with exact indexed Reply-placeholder normalization.
+- Replacement XML SHA256: `34197CB7044B740F73B5ED173D26E7B73DE6B6602637B83F26F94D0ECDECD9FC`.
+- Status: `CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+- Gate 14 remains blocked; tracker remains `13/14 locked = 93%`.
+- Codex changed no live Sheet cell, ran no Tasker task, claims no phone proof, and approves no phone import.
+<!-- GATE14A_R1_CONTROLLER_END -->

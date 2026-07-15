@@ -316,3 +316,20 @@ Codex did not independently inspect or publish raw private phone evidence. ChatG
 
 Tracker remains `13/14 locked = 93%`.
 <!-- GATE14A_CLAIM_MATRIX_END -->
+
+<!-- GATE14A_R1_CLAIM_MATRIX_START -->
+## Gate 14A R1 Blank Reply Normalization
+
+| Claim ID | Claim | Evidence | Result |
+| --- | --- | --- | --- |
+| G14A-R1-001 | First Task 232 run remained isolated and read the exact synthetic row | Direct Sosa phone result and runlog reconciliation | DEVELOPMENT PARTIAL PASS / NOT CLAIMED BY CODEX |
+| G14A-R1-002 | First Task 232 run achieved inventory PASS | Phone result was `INVENTORY_REPLY_HOLD` | DISPROVEN / FAIL-SAFE HOLD |
+| G14A-R1-003 | Sheet Reply cell was blank | Fresh direct controller Sheet read | PROVEN BY CONTROLLER |
+| G14A-R1-004 | Repair is Task 232 only | Raw task/profile/scene/Project comparison | PROVEN STATIC |
+| G14A-R1-005 | Only indexed blank Reply placeholder normalizes | Exact action inspection and independent state model | PROVEN STATIC |
+| G14A-R1-006 | Real and unrelated unresolved replies still HOLD | Independent state model | PROVEN STATIC |
+| G14A-R1-007 | Existing 83 tasks and forbidden-path boundary remain unchanged | Raw-byte and call/action scan | PROVEN STATIC |
+| G14A-R1-008 | Replacement passes on phone | No R1 phone run supplied | UNSUPPORTED / HOLD |
+
+Tracker remains `13/14 locked = 93%`.
+<!-- GATE14A_R1_CLAIM_MATRIX_END -->

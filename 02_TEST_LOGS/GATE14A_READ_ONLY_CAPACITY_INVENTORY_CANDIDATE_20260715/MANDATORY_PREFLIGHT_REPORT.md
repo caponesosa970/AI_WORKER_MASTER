@@ -1,24 +1,34 @@
-# Gate 14A Read-Only Capacity Inventory Candidate
+# Gate 14A R1 Blank Reply Output Normalization
 
-- Main source commit: `1b73c48c77b05b2518c47d30387778f86b647576`
-- Base: `GATE13R2_FULL_PROJECT_TASKER_IMPORT__CONFIRM_THREAD_NAVIGATION_PRIVATE.xml`
-- Base SHA256: `1C4D13872C3D6B4579AA698F9E7D2F50F3E81467A4CBD4EAD63CD567087832A7`
-- Candidate XML SHA256: `832BEB0F9764EB2838B08A582648097C49197C2A366931196E5F0311860529EF`
+- Status: `GATE 14A R1 RUNTIME CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`
+- Rejected Gate 14A XML SHA256: `832BEB0F9764EB2838B08A582648097C49197C2A366931196E5F0311860529EF`
+- Replacement XML SHA256: `34197CB7044B740F73B5ED173D26E7B73DE6B6602637B83F26F94D0ECDECD9FC`
 - Tracker: `13/14 locked = 93%` (unchanged)
-- Runtime phone proof: NOT CLAIMED
-- Phone import approval: NO
-- Capacity proof: NOT CLAIMED
+- Phone import approved by Codex: `NO`
+- Phone proof claimed by Codex: `NO`
 
-## Current-Main Read
+## Source Truth
 
-The eight mandatory controller/accountability files were read from the branch created at the exact merged-main commit. They establish Gate 13 as locked, Gate 14 as the only unfinished gate, and the Gate 13R2 artifact as the current phone-proven runtime baseline.
+- GitHub main commit read: `1b73c48c77b05b2518c47d30387778f86b647576`.
+- PR branch read: `gate14/14A-read-only-capacity-inventory`.
+- Verified pre-repair branch head: `d1b993e0913c476e93e62df246e01235539616f2`.
+- Required current controller, execution-contract, locked-facts, controller-state, failure-ledger, claim-matrix, preflight, and `AGENTS.md` files were read.
+- `.codex/config.toml` was read.
 
-## Applied Controls
+## Exact Scope
 
-- Parser-valid XML is not phone proof.
-- No existing runtime task may change.
-- No Sheet staging, Tasker execution, profile activation, or capacity claim is allowed.
-- Private XML/ZIP/credential material stays outside Git.
-- One new read-only task and one project registry entry are the complete runtime scope.
+- Direct repair base SHA: `832BEB0F9764EB2838B08A582648097C49197C2A366931196E5F0311860529EF`.
+- Changed runtime task: Task 232 only.
+- Added runtime actions: one If, one Variable Clear, one End If.
+- Protected existing tasks: all 83 Gate 13R2 task nodes.
+- Prohibited: Sheet mutation, Tasker execution, production task calls, UI, API, Send, confirmation, Archive, profile, scene, and lock changes.
 
-Result: PASS.
+## Relevant Failure History and Prevention
+
+- Phone proof supersedes static simulation.
+- AutoSheets unresolved outputs must not be assumed blank.
+- Tasker replaces variable references embedded in action text; the literal-percent regex form `[%]` prevents substitution.
+- Static reports cannot approve phone import.
+- Scope and encoding are checked against the exact rejected candidate.
+
+No source ambiguity or scope contradiction was found.

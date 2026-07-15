@@ -844,3 +844,21 @@ Gate 13 is `LOCKED / PASS`; operational tracker is `13/14 locked = 93%`. Gate 14
 - No capacity, throughput, production, or release claim is made.
 - User/operator responsibility: NONE.
 <!-- GATE14A_FAILURE_LEDGER_END -->
+
+<!-- GATE14A_R1_FAILURE_LEDGER_START -->
+## ISSUE_G14A_BLANK_REPLY_OUTPUT_UNRESOLVED
+
+- Status: `REPAIRED CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+- First detected: direct Sosa phone execution of Gate 14A on 2026-07-15.
+- Affected XML SHA256: `832BEB0F9764EB2838B08A582648097C49197C2A366931196E5F0311860529EF`.
+- Symptom: a blank AutoSheets Reply element arrived as `%g14_reply89`, producing `INVENTORY_REPLY_HOLD`, nonblank Reply count 1, and unresolved count 1.
+- Direct evidence: one successful Task 232 phone read bound the correct synthetic row; fresh direct Sheet proof showed the Reply cell was blank; no production or mutation path ran.
+- Root cause: the static model represented a blank array element as an empty string and did not model Tasker's unresolved indexed-array placeholder.
+- Codex responsibility: static validation missed the runtime representation.
+- ChatGPT/controller responsibility: phone proof correctly identified and bounded the unsupported assumption.
+- User/operator responsibility: `NONE`.
+- Repair: Task 232 only clears `%row_reply` when it exactly matches `(?s)^[%]g14_reply[0-9]+$`.
+- Regression: real replies, unrelated unresolved values, required fields, `#ERROR`, duplicate, order, count, and bounded-retry checks remain active.
+- Tracker: `13/14 locked = 93%`; Gate 14 and PR merge remain blocked.
+- Closing proof required: ChatGPT artifact audit followed by one separately authorized phone rerun.
+<!-- GATE14A_R1_FAILURE_LEDGER_END -->

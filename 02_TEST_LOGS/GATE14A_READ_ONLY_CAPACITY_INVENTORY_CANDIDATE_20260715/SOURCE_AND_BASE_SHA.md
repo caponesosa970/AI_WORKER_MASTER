@@ -1,18 +1,21 @@
-# Gate 14A Read-Only Capacity Inventory Candidate
+# Gate 14A R1 Blank Reply Output Normalization
 
-- Main source commit: `1b73c48c77b05b2518c47d30387778f86b647576`
-- Base: `GATE13R2_FULL_PROJECT_TASKER_IMPORT__CONFIRM_THREAD_NAVIGATION_PRIVATE.xml`
-- Base SHA256: `1C4D13872C3D6B4579AA698F9E7D2F50F3E81467A4CBD4EAD63CD567087832A7`
-- Candidate XML SHA256: `832BEB0F9764EB2838B08A582648097C49197C2A366931196E5F0311860529EF`
+- Status: `GATE 14A R1 RUNTIME CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`
+- Rejected Gate 14A XML SHA256: `832BEB0F9764EB2838B08A582648097C49197C2A366931196E5F0311860529EF`
+- Replacement XML SHA256: `34197CB7044B740F73B5ED173D26E7B73DE6B6602637B83F26F94D0ECDECD9FC`
 - Tracker: `13/14 locked = 93%` (unchanged)
-- Runtime phone proof: NOT CLAIMED
-- Phone import approval: NO
-- Capacity proof: NOT CLAIMED
+- Phone import approved by Codex: `NO`
+- Phone proof claimed by Codex: `NO`
 
-## Source Verification
+## Direct Repair Source
 
-- Exact base SHA matched.
-- Base topology: `83 tasks / 4 profiles / 1 scene`.
-- Task ID 232 was absent from tasks and Project `tids`.
-- Final topology: `84 tasks / 4 profiles / 1 scene`.
-- Existing credential marker count and private credential value are unchanged; no credential is printed here.
+- Source file: `GATE14A_FULL_PROJECT_TASKER_IMPORT__READ_ONLY_CAPACITY_INVENTORY_PRIVATE.xml`
+- Source SHA256: `832BEB0F9764EB2838B08A582648097C49197C2A366931196E5F0311860529EF`
+- Source status: rejected for phone rerun because of `ISSUE_G14A_BLANK_REPLY_OUTPUT_UNRESOLVED`.
+
+## Replacement
+
+- Output file: `GATE14A_R1_FULL_PROJECT_TASKER_IMPORT__BLANK_REPLY_NORMALIZATION_PRIVATE.xml`
+- Output bytes: `1943475`
+- Output SHA256: `34197CB7044B740F73B5ED173D26E7B73DE6B6602637B83F26F94D0ECDECD9FC`
+- Topology: 84 tasks / 4 profiles / 1 scene.

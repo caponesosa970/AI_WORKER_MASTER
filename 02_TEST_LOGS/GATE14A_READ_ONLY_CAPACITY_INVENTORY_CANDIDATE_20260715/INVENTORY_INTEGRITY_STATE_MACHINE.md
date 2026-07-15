@@ -1,28 +1,25 @@
-# Gate 14A Read-Only Capacity Inventory Candidate
+# Gate 14A R1 Blank Reply Output Normalization
 
-- Main source commit: `1b73c48c77b05b2518c47d30387778f86b647576`
-- Base: `GATE13R2_FULL_PROJECT_TASKER_IMPORT__CONFIRM_THREAD_NAVIGATION_PRIVATE.xml`
-- Base SHA256: `1C4D13872C3D6B4579AA698F9E7D2F50F3E81467A4CBD4EAD63CD567087832A7`
-- Candidate XML SHA256: `832BEB0F9764EB2838B08A582648097C49197C2A366931196E5F0311860529EF`
+- Status: `GATE 14A R1 RUNTIME CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`
+- Rejected Gate 14A XML SHA256: `832BEB0F9764EB2838B08A582648097C49197C2A366931196E5F0311860529EF`
+- Replacement XML SHA256: `34197CB7044B740F73B5ED173D26E7B73DE6B6602637B83F26F94D0ECDECD9FC`
 - Tracker: `13/14 locked = 93%` (unchanged)
-- Runtime phone proof: NOT CLAIMED
-- Phone import approval: NO
-- Capacity proof: NOT CLAIMED
+- Phone import approved by Codex: `NO`
+- Phone proof claimed by Codex: `NO`
 
-## Inputs
+## R1 Normalization Boundary
 
-- Authorization: `%AIWG14AllowInventory = 1`, consumed immediately.
-- Run ID: uppercase letters/numbers/underscore/hyphen, length 4-32.
-- Expected count: exactly `1`, `5`, `10`, `25`, or `50`.
+Only a value matching `(?s)^[%]g14_reply[0-9]+$` is normalized to blank, and only in `%row_reply`.
 
-## Scan
+Still rejected:
 
-The task reads `Sheet1!A2:I201`, scans IDs in array/source-row order, selects the exact `G14CAP-<RUN_ID>-` prefix, maps index 1 to source row 2, and records ordered rows, IDs, and senders.
+- real nonblank Reply;
+- unrelated unresolved Reply value;
+- unresolved or blank required ID, sender, message, or status;
+- `#ERROR` in any inspected field;
+- duplicate ID or sender;
+- wrong status;
+- bad source-row order;
+- wrong inventory count.
 
-## Independent Integrity Counters
-
-Count, unique IDs, unique senders, duplicate IDs, duplicate senders, blank required fields, wrong statuses, nonblank replies, unresolved variables, `#ERROR` cells, and order failures are measured independently. Matching-prefix invalid rows are retained in the observed count and force HOLD.
-
-## Result Priority
-
-Read, count, duplicate-ID, duplicate-sender, status, reply, order, then field-integrity HOLD. `INVENTORY_PASS` requires every contract check to pass. No result writes to the Sheet.
+`INVENTORY_PASS` still requires every counter to be zero and exact expected/unique counts to match.
