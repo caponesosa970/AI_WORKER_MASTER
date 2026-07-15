@@ -895,3 +895,24 @@ Gate 13 is `LOCKED / PASS`; operational tracker is `13/14 locked = 93%`. Gate 14
 - Codex responsibility: build/static proof only; no phone proof or import approval.
 - Tracker remains `13/14 locked = 93%`; PR merge and Gate 14 completion remain blocked.
 <!-- GATE14B_FAILURE_LEDGER_END -->
+
+<!-- GATE14C_FAILURE_LEDGER_START -->
+## ISSUE_G14C_UNBOUNDED_OPENAI_FAILURE_AND_LEGACY_RETRY_LOOP
+
+- Status: `REPAIRED STATIC CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+- Prior defect: HTTP failure could escape bounded cleanup; transient and permanent classes were not separated; complete response data could enter error logs; legacy `ERROR_OPENAI_RETRY` maintenance could repeatedly reset a row to NEW.
+- Risk: stuck PROCESSING rows, unlimited cross-cycle API calls, cost growth, stale success data, and unsafe retry oscillation.
+- Repair: Task 235 caps each run at two attempts with one 2-4 second jittered retry; Task 173 requests exact `ERROR_OPENAI_REVIEW`; Task 236 migrates legacy retry rows without API or NEW; Task 70 disconnects the old API retry-to-NEW branch.
+- Static regression: 40/40 required cases PASS; independent validators PASS/PASS.
+- Closing proof still required: ChatGPT artifact audit and direct Sosa controlled phone ladder.
+
+## ISSUE_G14C_TASK233_REJECTS_ERROR_OPENAI_REVIEW
+
+- Status: `REPAIRED STATIC CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+- Pre-build finding: phone-proven Task 233 accepted `ERROR_PROCESS`, `ERROR_OPENAI_RETRY`, and `ERROR_PROCESS_REVIEW`, but rejected required `ERROR_OPENAI_REVIEW`.
+- Codex responsibility: identified the contradiction before packaging and returned HOLD instead of bypassing the exact-row transaction engine.
+- Controller decision: authorize one exact regex extension only.
+- Repair proof: Task 233 action count remains 1947; old/new raw task hashes recorded; direct comparison shows one regex-string difference and no other field change.
+- User/operator responsibility: NONE.
+- Tracker remains `13/14 locked = 93%`; Gate 14C phone proof, PR merge, and release remain blocked.
+<!-- GATE14C_FAILURE_LEDGER_END -->

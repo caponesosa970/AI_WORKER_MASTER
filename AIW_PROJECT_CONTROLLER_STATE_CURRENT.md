@@ -344,3 +344,19 @@ Codex return is automatically rejected if it lacks preflight, bug-history search
 - No Sheet mutation, Tasker execution, phone proof, import approval, PR merge, tracker advancement, or release claim by Codex.
 - Operational tracker remains `13/14 locked = 93%`.
 <!-- GATE14B_CONTROLLER_END -->
+
+<!-- GATE14C_CONTROLLER_START -->
+## Gate 14B Phone Closure And Gate 14C Bounded API Candidate
+
+- Direct Sosa proof locks the Gate 14B transaction subproof for exact success, wrong-ID rejection, partial-write review recovery, failure commit, and lock release.
+- Gate 14B remains a Gate 14 subproof; it does not establish production 50-contact processing.
+- Gate 14C runtime base: SHA256 `46880D2B0C7E444195E0BA4F587957E86475A95D0F1737CA42218452E4C49C9B`.
+- Active issues: `ISSUE_G14C_UNBOUNDED_OPENAI_FAILURE_AND_LEGACY_RETRY_LOOP` and repaired scope issue `ISSUE_G14C_TASK233_REJECTS_ERROR_OPENAI_REVIEW`.
+- Existing runtime changes: Tasks 70/171/173/192 and one exact Task 233 condition.
+- Added tasks: 235 bounded retry, 236 legacy review migration, and 237 isolated controlled test.
+- Candidate topology: 89 tasks / 4 disabled profiles / 1 scene.
+- Candidate XML SHA256: `71A766AE8D550C139AABCEC53DE3B1025CAF26C68561583CBF20AC6D5A5138B3`.
+- Status: `GATE 14C BOUNDED OPENAI RETRY RUNTIME CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+- Codex performed no Sheet mutation, Tasker execution, API call, profile enablement, phone proof, import approval, or PR merge.
+- Operational tracker remains `13/14 locked = 93%`.
+<!-- GATE14C_CONTROLLER_END -->

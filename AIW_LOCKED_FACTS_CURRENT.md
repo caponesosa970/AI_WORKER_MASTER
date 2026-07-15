@@ -277,3 +277,20 @@ Blocked until separately proven:
 - Gate 14B static validators PASS/PASS; phone proof does not exist.
 - Tracker remains `13/14 locked = 93%`; Gate 14 and release remain blocked.
 <!-- GATE14B_LOCKED_FACTS_END -->
+
+<!-- GATE14C_LOCKED_FACTS_START -->
+## Gate 14B Phone Closure And Gate 14C Candidate Facts
+
+- Direct Sosa phone proof locks the Gate 14B processor transaction subproof: SUCCESS, WRONG_ID_HOLD, PARTIAL_AFTER_REPLY_HOLD, FAILURE_COMMIT, exact readback, and owned-lock release passed.
+- The accidental repeat of the completed partial mode safely held before lock acquisition or Sheet mutation.
+- Codex records but does not independently claim the Gate 14B phone proof.
+- Gate 14C direct runtime base is Gate 14B SHA256 `46880D2B0C7E444195E0BA4F587957E86475A95D0F1737CA42218452E4C49C9B`.
+- Gate 14C changes existing Tasks 70, 171, 173, 192, and one exact Task 233 regex; it adds Tasks 235, 236, and 237.
+- Task 233 remains 1947 actions and newly accepts `ERROR_OPENAI_REVIEW` only in its existing `COMMIT_FAILURE` status guard.
+- Task 235 permits no more than two HTTP attempts and one randomized 2-4 second retry.
+- Final OpenAI failures persist as exact-row `ERROR_OPENAI_REVIEW`; no production Gate 14C path creates another `ERROR_OPENAI_RETRY`.
+- Legacy `ERROR_OPENAI_RETRY` rows migrate to `ERROR_OPENAI_REVIEW` without an API call or reset to NEW.
+- Gate 14C private candidate XML SHA256 is `71A766AE8D550C139AABCEC53DE3B1025CAF26C68561583CBF20AC6D5A5138B3`.
+- Gate 14C static validators PASS/PASS; phone proof does not exist.
+- Tracker remains `13/14 locked = 93%`; production 50-contact capacity, final controls, merge, and release remain blocked.
+<!-- GATE14C_LOCKED_FACTS_END -->

@@ -1,0 +1,21 @@
+# ChatGPT Artifact Audit Checklist
+
+- [ ] Verify XML SHA `71A766AE8D550C139AABCEC53DE3B1025CAF26C68561583CBF20AC6D5A5138B3`.
+- [ ] Verify ZIP SHA `4DCC4B1F3EEE5B4184F17BF0565EF501EF6013188097F811F62062130A74ACD9`.
+- [ ] Verify sidecar SHA `5529570CC7C071CD53B7EE439CEADEA48D9384A1C0CAF3254B6E7D664BFFA8E6`.
+- [ ] Verify ZIP has one XML and exact byte equality.
+- [ ] Verify topology `89 / 4 / 1` and all profiles disabled.
+- [ ] Verify changed existing tasks are exactly 70/171/173/192/233.
+- [ ] Verify new tasks are exactly 235/236/237.
+- [ ] Verify Task 233 has 1947 actions and one regex-only difference.
+- [ ] Verify Task 69 and Task 234 raw SHA values remain locked.
+- [ ] Verify Task 235 has one HTTP node, 25-second timeout, Continue After Error, at most two executions, and one retry.
+- [ ] Verify quota/auth/bad-request/config outcomes do not retry.
+- [ ] Verify no API response body enters `%AIWorkerLastError` or public reports.
+- [ ] Verify Task 173 requests exact-row `ERROR_OPENAI_REVIEW` through Task 233.
+- [ ] Verify Task 70 cannot restore `ERROR_OPENAI_RETRY` to `NEW`.
+- [ ] Verify Task 236 preserves Reply and uses exact readback.
+- [ ] Verify Task 237 is uncalled, one-shot, and has no forbidden path.
+- [ ] Verify private files are absent from Git.
+- [ ] Keep tracker at `13/14 = 93%`.
+- [ ] Do not approve phone import until the exact private artifacts pass this audit.
