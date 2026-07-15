@@ -1,7 +1,7 @@
 # AI Worker Locked Facts — Current
 
 Status: CURRENT / CANONICAL
-Updated: 2026-07-14
+Updated: 2026-07-15
 Authority: Phone proof, current GitHub tracker, SHA-verified sources, live Sheet verification, and newest direct Sosa instruction.
 
 ## 1. Current Tracker
@@ -265,3 +265,15 @@ Blocked until separately proven:
 - Fold-state and battery/background-restriction behavior are not claimed by this closure and remain Gate 14 release limitations.
 - Gate 14 capacity, final control-interface validation, and release proof remain blocked.
 <!-- GATE13_PHONE_PROOF_CLOSURE_END -->
+
+<!-- GATE14B_LOCKED_FACTS_START -->
+## Gate 14A Closure And Gate 14B Candidate Facts
+
+- Gate 14A R2 read-only inventory passed the direct Sosa 1/5/10/25/50 phone ladder; Codex records but does not claim that phone proof.
+- Every passing inventory run used one read, all defect counters were zero, and staged rows remained unchanged.
+- Gate 14A proves read-only count/order/uniqueness visibility, not production 50-contact processing.
+- Gate 14B uses exact base SHA256 `73E8048D8941C0529A26E397FA9E6EBAF84FAB9C0F03D3C56CBA163932C34662`.
+- Only existing Tasks 166, 172, and 173 change; Tasks 233 and 234 are added; 81/81 protected tasks remain raw-byte equal.
+- Gate 14B static validators PASS/PASS; phone proof does not exist.
+- Tracker remains `13/14 locked = 93%`; Gate 14 and release remain blocked.
+<!-- GATE14B_LOCKED_FACTS_END -->

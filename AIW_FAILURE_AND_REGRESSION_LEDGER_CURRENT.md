@@ -881,3 +881,17 @@ Gate 13 is `LOCKED / PASS`; operational tracker is `13/14 locked = 93%`. Gate 14
 - Tracker: `13/14 locked = 93%`; Gate 14, PR merge, phone rerun, and release remain blocked.
 - Closing proof required: independent artifact audit and a separately authorized R2 phone rerun.
 <!-- GATE14A_R2_FAILURE_LEDGER_END -->
+
+<!-- GATE14B_FAILURE_LEDGER_START -->
+## ISSUE_G14B_PROCESSOR_WRITES_NOT_TRANSACTIONALLY_VERIFIED
+
+- Status: `REPAIRED STATIC CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+- Prior defect: processor wrappers could claim PROCESSING, Reply, final status, or failure status without exact A:E readback.
+- Risk: OpenAI could be authorized after an unverified mark; Reply/status could split; wrong-row or changed-ID writes could go undetected.
+- Repair: Task 233 requires exact A/B/C before every write, bounded attempts, and exact readback authority; wrappers only report verified outcomes.
+- Partial success: verified Reply plus unverified final status routes to verified `ERROR_PROCESS_REVIEW` or a non-NEW partial HOLD; Reply is never cleared and NEW is never restored.
+- Gate 14A historical issues are closed by direct Sosa R2 phone proof across 1/5/10/25/50; no production-capacity claim follows.
+- User/operator responsibility: NONE.
+- Codex responsibility: build/static proof only; no phone proof or import approval.
+- Tracker remains `13/14 locked = 93%`; PR merge and Gate 14 completion remain blocked.
+<!-- GATE14B_FAILURE_LEDGER_END -->

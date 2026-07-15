@@ -1239,3 +1239,21 @@ No percentage change. Current tracker remains `8/14 locked = 57%`.
 - Phone proof claimed by Codex: NO. Phone import approved by Codex: NO. PR merge: BLOCKED.
 - Unsupported: R2 phone result, 5/10/25/50 ladder, processing/API load, soak, final interface, and release.
 <!-- GATE14A_R2_BUILD_LEDGER_END -->
+
+<!-- GATE14B_BUILD_LEDGER_START -->
+## Accountability ID AIW-GATE14B-PROCESSOR-TRANSACTION-READBACK-20260715
+
+- Gate: Gate 14B processor transaction readback candidate.
+- Direct base SHA256: `73E8048D8941C0529A26E397FA9E6EBAF84FAB9C0F03D3C56CBA163932C34662`.
+- Existing runtime changes: Tasks 166, 172, 173 only.
+- Added tasks: 233 exact-row engine and 234 isolated controlled launcher.
+- Protected existing tasks: 81/81 raw-byte equal; profiles and scene unchanged; credentials unchanged without disclosure.
+- Validators: Python XML/raw/plugin audit PASS; independent PowerShell state model PASS 35/35.
+- Packaging: XML SHA `46880D2B0C7E444195E0BA4F587957E86475A95D0F1737CA42218452E4C49C9B`; one-entry ZIP equality/integrity PASS.
+- Gate 14A phone ladder: recorded as direct Sosa proof; Codex does not claim it independently.
+- User/operator responsibility: NONE.
+- Codex responsibility: runtime build, static proof, packaging, public-safe records; no Sheet or phone action.
+- Unsupported: Gate 14B phone behavior, production 50-contact processing, API failure handling, final controls, and release.
+- Tracker effect: none; remains `13/14 locked = 93%`.
+- Phone import approved by Codex: NO. Phone proof claimed by Codex: NO. PR merge: BLOCKED.
+<!-- GATE14B_BUILD_LEDGER_END -->
