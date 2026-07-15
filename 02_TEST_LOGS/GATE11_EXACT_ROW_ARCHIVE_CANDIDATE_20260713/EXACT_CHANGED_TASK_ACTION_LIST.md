@@ -1,0 +1,1500 @@
+# Exact Changed Task And Action List
+
+## Changed Tasks
+
+- Task 224: replaced Gate 10 launcher with Gate 11 launcher.
+- Task 226: new permanent exact-row Archive worker.
+- Project task registry: added Task 226 reference only.
+- All other pre-existing tasks: raw-byte identical.
+
+## Task 224 Actions
+
+- Action 0: launcher: require explicit one-time Gate 11 arm
+- Action 1: launcher: not armed failure
+- Action 2: launcher: not armed result
+- Action 3: launcher: not armed error
+- Action 4: launcher: stop without Archive worker call
+- Action 5: launcher: end arm check
+- Action 6: launcher: consume one-time authorization
+- Action 7: launcher: call permanent exact-row Archive worker exactly once
+- Action 8: launcher: stop after one worker call
+
+## Task 226 Actions
+
+- Action 0: initialize: clear failure result
+- Action 1: initialize: clear blocked result
+- Action 2: initialize: Archive result
+- Action 3: initialize: transaction continuation
+- Action 4: initialize: lock ownership
+- Action 5: initialize: final error
+- Action 6: input: bind source row
+- Action 7: input: bind expected ID
+- Action 8: input: normalize row
+- Action 9: input: normalize expected ID
+- Action 10: input: source row must be numeric and within Sheet1 bounds
+- Action 11: input: invalid row failure
+- Action 12: input: invalid row result
+- Action 13: input: invalid row error
+- Action 14: input: stop before lock and Sheet access
+- Action 15: input: end source row validation
+- Action 16: input: expected ID must be resolved and populated
+- Action 17: input: invalid ID failure
+- Action 18: input: invalid ID result
+- Action 19: input: invalid ID error
+- Action 20: input: stop before lock and Sheet access
+- Action 21: input: end expected ID validation
+- Action 22: lock: initialize conflict scan
+- Action 23: lock: block when %AIWArchiving is active
+- Action 24: lock: record %AIWArchiving conflict
+- Action 25: lock: end %AIWArchiving conflict check
+- Action 26: lock: block when %AIWSending is active
+- Action 27: lock: record %AIWSending conflict
+- Action 28: lock: end %AIWSending conflict check
+- Action 29: lock: block when %AIWConfirming is active
+- Action 30: lock: record %AIWConfirming conflict
+- Action 31: lock: end %AIWConfirming conflict check
+- Action 32: lock: block when %AIWProcessing is active
+- Action 33: lock: record %AIWProcessing conflict
+- Action 34: lock: end %AIWProcessing conflict check
+- Action 35: lock: block when %AIWDeadArchiving is active
+- Action 36: lock: record %AIWDeadArchiving conflict
+- Action 37: lock: end %AIWDeadArchiving conflict check
+- Action 38: lock: block when %AIWCompacting is active
+- Action 39: lock: record %AIWCompacting conflict
+- Action 40: lock: end %AIWCompacting conflict check
+- Action 41: lock: stop on any conflicting owner
+- Action 42: lock: set blocked
+- Action 43: lock: set failure
+- Action 44: lock: deterministic blocked result
+- Action 45: lock: blocked error
+- Action 46: lock: stop without releasing another run's lock
+- Action 47: lock: end conflict stop
+- Action 48: lock: acquire Archive lock
+- Action 49: lock: record acquisition time
+- Action 50: lock: record local ownership
+- Action 51: source exact row read: initialize operation result
+- Action 52: source exact row read attempt 1: clear %archive_src_id()
+- Action 53: source exact row read attempt 1: clear %archive_src_sender()
+- Action 54: source exact row read attempt 1: clear %archive_src_message()
+- Action 55: source exact row read attempt 1: clear %archive_src_status()
+- Action 56: source exact row read attempt 1: clear %archive_src_reply()
+- Action 57: source exact row read attempt 1: clear %archive_src_touch()
+- Action 58: source exact row read attempt 1: clear %archive_src_button()
+- Action 59: source exact row read attempt 1: clear %archive_src_time()
+- Action 60: source exact row read attempt 1: clear %archive_src_ticker()
+- Action 61: source exact row read attempt 1: clear %err
+- Action 62: source exact row read attempt 1: clear %errmsg
+- Action 63: source exact row read: AutoSheets Get Data attempt 1
+- Action 64: source exact row read: numeric plugin error attempt 1
+- Action 65: source exact row read: preserve plugin error attempt 1
+- Action 66: source exact row read: mark attempt 1 failed
+- Action 67: source exact row read: plugin returned without numeric error attempt 1
+- Action 68: source exact row read: provisional attempt 1 success
+- Action 69: source exact row read: end plugin result attempt 1
+- Action 70: source exact row read: validate attempt 1 outputs
+- Action 71: source exact row read attempt 1: %archive_src_id(#) must be zero or one
+- Action 72: source exact row read attempt 1: invalidate structural row count
+- Action 73: source exact row read attempt 1: end structural row count check
+- Action 74: source exact row read attempt 1: %archive_src_sender(#) must be zero or one
+- Action 75: source exact row read attempt 1: invalidate structural row count
+- Action 76: source exact row read attempt 1: end structural row count check
+- Action 77: source exact row read attempt 1: %archive_src_message(#) must be zero or one
+- Action 78: source exact row read attempt 1: invalidate structural row count
+- Action 79: source exact row read attempt 1: end structural row count check
+- Action 80: source exact row read attempt 1: %archive_src_status(#) must be zero or one
+- Action 81: source exact row read attempt 1: invalidate structural row count
+- Action 82: source exact row read attempt 1: end structural row count check
+- Action 83: source exact row read attempt 1: %archive_src_reply(#) must be zero or one
+- Action 84: source exact row read attempt 1: invalidate structural row count
+- Action 85: source exact row read attempt 1: end structural row count check
+- Action 86: source exact row read attempt 1: %archive_src_touch(#) must be zero or one
+- Action 87: source exact row read attempt 1: invalidate structural row count
+- Action 88: source exact row read attempt 1: end structural row count check
+- Action 89: source exact row read attempt 1: %archive_src_button(#) must be zero or one
+- Action 90: source exact row read attempt 1: invalidate structural row count
+- Action 91: source exact row read attempt 1: end structural row count check
+- Action 92: source exact row read attempt 1: %archive_src_time(#) must be zero or one
+- Action 93: source exact row read attempt 1: invalidate structural row count
+- Action 94: source exact row read attempt 1: end structural row count check
+- Action 95: source exact row read attempt 1: %archive_src_ticker(#) must be zero or one
+- Action 96: source exact row read attempt 1: invalidate structural row count
+- Action 97: source exact row read attempt 1: end structural row count check
+- Action 98: source exact row read: end output validation attempt 1
+- Action 99: source exact row read: enter single retry only after first failure
+- Action 100: source exact row read: three second wait before only retry
+- Action 101: source exact row read attempt 2: clear %archive_src_id()
+- Action 102: source exact row read attempt 2: clear %archive_src_sender()
+- Action 103: source exact row read attempt 2: clear %archive_src_message()
+- Action 104: source exact row read attempt 2: clear %archive_src_status()
+- Action 105: source exact row read attempt 2: clear %archive_src_reply()
+- Action 106: source exact row read attempt 2: clear %archive_src_touch()
+- Action 107: source exact row read attempt 2: clear %archive_src_button()
+- Action 108: source exact row read attempt 2: clear %archive_src_time()
+- Action 109: source exact row read attempt 2: clear %archive_src_ticker()
+- Action 110: source exact row read attempt 2: clear %err
+- Action 111: source exact row read attempt 2: clear %errmsg
+- Action 112: source exact row read: AutoSheets Get Data attempt 2
+- Action 113: source exact row read: numeric plugin error attempt 2
+- Action 114: source exact row read: preserve plugin error attempt 2
+- Action 115: source exact row read: mark attempt 2 failed
+- Action 116: source exact row read: plugin returned without numeric error attempt 2
+- Action 117: source exact row read: provisional attempt 2 success
+- Action 118: source exact row read: end plugin result attempt 2
+- Action 119: source exact row read: validate attempt 2 outputs
+- Action 120: source exact row read attempt 2: %archive_src_id(#) must be zero or one
+- Action 121: source exact row read attempt 2: invalidate structural row count
+- Action 122: source exact row read attempt 2: end structural row count check
+- Action 123: source exact row read attempt 2: %archive_src_sender(#) must be zero or one
+- Action 124: source exact row read attempt 2: invalidate structural row count
+- Action 125: source exact row read attempt 2: end structural row count check
+- Action 126: source exact row read attempt 2: %archive_src_message(#) must be zero or one
+- Action 127: source exact row read attempt 2: invalidate structural row count
+- Action 128: source exact row read attempt 2: end structural row count check
+- Action 129: source exact row read attempt 2: %archive_src_status(#) must be zero or one
+- Action 130: source exact row read attempt 2: invalidate structural row count
+- Action 131: source exact row read attempt 2: end structural row count check
+- Action 132: source exact row read attempt 2: %archive_src_reply(#) must be zero or one
+- Action 133: source exact row read attempt 2: invalidate structural row count
+- Action 134: source exact row read attempt 2: end structural row count check
+- Action 135: source exact row read attempt 2: %archive_src_touch(#) must be zero or one
+- Action 136: source exact row read attempt 2: invalidate structural row count
+- Action 137: source exact row read attempt 2: end structural row count check
+- Action 138: source exact row read attempt 2: %archive_src_button(#) must be zero or one
+- Action 139: source exact row read attempt 2: invalidate structural row count
+- Action 140: source exact row read attempt 2: end structural row count check
+- Action 141: source exact row read attempt 2: %archive_src_time(#) must be zero or one
+- Action 142: source exact row read attempt 2: invalidate structural row count
+- Action 143: source exact row read attempt 2: end structural row count check
+- Action 144: source exact row read attempt 2: %archive_src_ticker(#) must be zero or one
+- Action 145: source exact row read attempt 2: invalidate structural row count
+- Action 146: source exact row read attempt 2: end structural row count check
+- Action 147: source exact row read: end output validation attempt 2
+- Action 148: source exact row read: close single retry wrapper
+- Action 149: source exact row read: final failure
+- Action 150: source exact row read: set failure
+- Action 151: source exact row read: set deterministic result
+- Action 152: source exact row read: preserve final error locally
+- Action 153: source exact row read: stop later side effects
+- Action 154: source exact row read: end final failure
+- Action 155: source bind: only after successful read
+- Action 156: source bind: initialize blank id
+- Action 157: source bind: id value exists
+- Action 158: source bind: id
+- Action 159: source bind: end id value existence
+- Action 160: source bind: initialize blank sender
+- Action 161: source bind: sender value exists
+- Action 162: source bind: sender
+- Action 163: source bind: end sender value existence
+- Action 164: source bind: initialize blank message
+- Action 165: source bind: message value exists
+- Action 166: source bind: message
+- Action 167: source bind: end message value existence
+- Action 168: source bind: initialize blank status
+- Action 169: source bind: status value exists
+- Action 170: source bind: status
+- Action 171: source bind: end status value existence
+- Action 172: source bind: initialize blank reply
+- Action 173: source bind: reply value exists
+- Action 174: source bind: reply
+- Action 175: source bind: end reply value existence
+- Action 176: source bind: initialize blank touch
+- Action 177: source bind: touch value exists
+- Action 178: source bind: touch
+- Action 179: source bind: end touch value existence
+- Action 180: source bind: initialize blank button
+- Action 181: source bind: button value exists
+- Action 182: source bind: button
+- Action 183: source bind: end button value existence
+- Action 184: source bind: initialize blank time
+- Action 185: source bind: time value exists
+- Action 186: source bind: time
+- Action 187: source bind: end time value existence
+- Action 188: source bind: initialize blank ticker
+- Action 189: source bind: ticker value exists
+- Action 190: source bind: ticker
+- Action 191: source bind: end ticker value existence
+- Action 192: source bind: assume row is blank
+- Action 193: source bind: detect nonblank id
+- Action 194: source bind: mark nonblank from id
+- Action 195: source bind: end nonblank id
+- Action 196: source bind: detect nonblank sender
+- Action 197: source bind: mark nonblank from sender
+- Action 198: source bind: end nonblank sender
+- Action 199: source bind: detect nonblank message
+- Action 200: source bind: mark nonblank from message
+- Action 201: source bind: end nonblank message
+- Action 202: source bind: detect nonblank status
+- Action 203: source bind: mark nonblank from status
+- Action 204: source bind: end nonblank status
+- Action 205: source bind: detect nonblank reply
+- Action 206: source bind: mark nonblank from reply
+- Action 207: source bind: end nonblank reply
+- Action 208: source bind: detect nonblank touch
+- Action 209: source bind: mark nonblank from touch
+- Action 210: source bind: end nonblank touch
+- Action 211: source bind: detect nonblank button
+- Action 212: source bind: mark nonblank from button
+- Action 213: source bind: end nonblank button
+- Action 214: source bind: detect nonblank time
+- Action 215: source bind: mark nonblank from time
+- Action 216: source bind: end nonblank time
+- Action 217: source bind: detect nonblank ticker
+- Action 218: source bind: mark nonblank from ticker
+- Action 219: source bind: end nonblank ticker
+- Action 220: source bind: validate populated source row
+- Action 221: source bind populated row: %archive_src_id(#) must equal one
+- Action 222: source bind populated row: invalidate exact row count
+- Action 223: source bind populated row: end exact row count check
+- Action 224: source bind populated row: %archive_src_sender(#) must equal one
+- Action 225: source bind populated row: invalidate exact row count
+- Action 226: source bind populated row: end exact row count check
+- Action 227: source bind populated row: %archive_src_message(#) must equal one
+- Action 228: source bind populated row: invalidate exact row count
+- Action 229: source bind populated row: end exact row count check
+- Action 230: source bind populated row: %archive_src_status(#) must equal one
+- Action 231: source bind populated row: invalidate exact row count
+- Action 232: source bind populated row: end exact row count check
+- Action 233: source bind populated row: %archive_src_reply(#) must equal one
+- Action 234: source bind populated row: invalidate exact row count
+- Action 235: source bind populated row: end exact row count check
+- Action 236: source bind populated row: %archive_src_touch(#) must equal one
+- Action 237: source bind populated row: invalidate exact row count
+- Action 238: source bind populated row: end exact row count check
+- Action 239: source bind populated row: %archive_src_button(#) must equal one
+- Action 240: source bind populated row: invalidate exact row count
+- Action 241: source bind populated row: end exact row count check
+- Action 242: source bind populated row: %archive_src_time(#) must equal one
+- Action 243: source bind populated row: invalidate exact row count
+- Action 244: source bind populated row: end exact row count check
+- Action 245: source bind populated row: %archive_src_ticker(#) must equal one
+- Action 246: source bind populated row: invalidate exact row count
+- Action 247: source bind populated row: end exact row count check
+- Action 248: source validation: initialize
+- Action 249: source validation: required id
+- Action 250: source validation: invalidate id
+- Action 251: source validation: end id
+- Action 252: source validation: required sender
+- Action 253: source validation: invalidate sender
+- Action 254: source validation: end sender
+- Action 255: source validation: required message
+- Action 256: source validation: invalidate message
+- Action 257: source validation: end message
+- Action 258: source validation: required status
+- Action 259: source validation: invalidate status
+- Action 260: source validation: end status
+- Action 261: source validation: required reply
+- Action 262: source validation: invalidate reply
+- Action 263: source validation: end reply
+- Action 264: source validation: optional touch
+- Action 265: source validation: invalidate optional touch
+- Action 266: source validation: end optional touch
+- Action 267: source validation: optional button
+- Action 268: source validation: invalidate optional button
+- Action 269: source validation: end optional button
+- Action 270: source validation: optional time
+- Action 271: source validation: invalidate optional time
+- Action 272: source validation: end optional time
+- Action 273: source validation: optional ticker
+- Action 274: source validation: invalidate optional ticker
+- Action 275: source validation: end optional ticker
+- Action 276: source validation: exact ID binding
+- Action 277: source validation: ID mismatch
+- Action 278: source validation: end ID binding
+- Action 279: source validation: DONE only
+- Action 280: source validation: status not DONE
+- Action 281: source validation: end DONE check
+- Action 282: source bind: populated row structural failure
+- Action 283: source bind: set failure
+- Action 284: source bind: set deterministic result
+- Action 285: source bind: preserve final error locally
+- Action 286: source bind: stop later side effects
+- Action 287: source bind: end structural failure
+- Action 288: source bind: populated row contract failure
+- Action 289: source bind: classify binding mismatch
+- Action 290: source bind: set failure
+- Action 291: source bind: set deterministic result
+- Action 292: source bind: preserve final error locally
+- Action 293: source bind: stop later side effects
+- Action 294: source bind: ID matched
+- Action 295: source bind: classify status mismatch
+- Action 296: source bind: set failure
+- Action 297: source bind: set deterministic result
+- Action 298: source bind: preserve final error locally
+- Action 299: source bind: stop later side effects
+- Action 300: source bind: status was DONE but data invalid
+- Action 301: source bind: set failure
+- Action 302: source bind: set deterministic result
+- Action 303: source bind: preserve final error locally
+- Action 304: source bind: stop later side effects
+- Action 305: source bind: end status classification
+- Action 306: source bind: end binding classification
+- Action 307: source bind: end populated source validation
+- Action 308: source bind: end source row binding
+- Action 309: source bind: end successful-read wrapper
+- Action 310: Archive scan: only after source classification
+- Action 311: Archive full destination scan: initialize operation result
+- Action 312: Archive full destination scan attempt 1: clear %archive_scan_id()
+- Action 313: Archive full destination scan attempt 1: clear %archive_scan_sender()
+- Action 314: Archive full destination scan attempt 1: clear %archive_scan_message()
+- Action 315: Archive full destination scan attempt 1: clear %archive_scan_status()
+- Action 316: Archive full destination scan attempt 1: clear %archive_scan_reply()
+- Action 317: Archive full destination scan attempt 1: clear %archive_scan_touch()
+- Action 318: Archive full destination scan attempt 1: clear %archive_scan_button()
+- Action 319: Archive full destination scan attempt 1: clear %archive_scan_time()
+- Action 320: Archive full destination scan attempt 1: clear %archive_scan_ticker()
+- Action 321: Archive full destination scan attempt 1: clear %archive_scan_archived()
+- Action 322: Archive full destination scan attempt 1: clear %err
+- Action 323: Archive full destination scan attempt 1: clear %errmsg
+- Action 324: Archive full destination scan: AutoSheets Get Data attempt 1
+- Action 325: Archive full destination scan: numeric plugin error attempt 1
+- Action 326: Archive full destination scan: preserve plugin error attempt 1
+- Action 327: Archive full destination scan: mark attempt 1 failed
+- Action 328: Archive full destination scan: plugin returned without numeric error attempt 1
+- Action 329: Archive full destination scan: provisional attempt 1 success
+- Action 330: Archive full destination scan: end plugin result attempt 1
+- Action 331: Archive full destination scan: validate attempt 1 outputs
+- Action 332: Archive full destination scan: end output validation attempt 1
+- Action 333: Archive full destination scan: enter single retry only after first failure
+- Action 334: Archive full destination scan: three second wait before only retry
+- Action 335: Archive full destination scan attempt 2: clear %archive_scan_id()
+- Action 336: Archive full destination scan attempt 2: clear %archive_scan_sender()
+- Action 337: Archive full destination scan attempt 2: clear %archive_scan_message()
+- Action 338: Archive full destination scan attempt 2: clear %archive_scan_status()
+- Action 339: Archive full destination scan attempt 2: clear %archive_scan_reply()
+- Action 340: Archive full destination scan attempt 2: clear %archive_scan_touch()
+- Action 341: Archive full destination scan attempt 2: clear %archive_scan_button()
+- Action 342: Archive full destination scan attempt 2: clear %archive_scan_time()
+- Action 343: Archive full destination scan attempt 2: clear %archive_scan_ticker()
+- Action 344: Archive full destination scan attempt 2: clear %archive_scan_archived()
+- Action 345: Archive full destination scan attempt 2: clear %err
+- Action 346: Archive full destination scan attempt 2: clear %errmsg
+- Action 347: Archive full destination scan: AutoSheets Get Data attempt 2
+- Action 348: Archive full destination scan: numeric plugin error attempt 2
+- Action 349: Archive full destination scan: preserve plugin error attempt 2
+- Action 350: Archive full destination scan: mark attempt 2 failed
+- Action 351: Archive full destination scan: plugin returned without numeric error attempt 2
+- Action 352: Archive full destination scan: provisional attempt 2 success
+- Action 353: Archive full destination scan: end plugin result attempt 2
+- Action 354: Archive full destination scan: validate attempt 2 outputs
+- Action 355: Archive full destination scan: end output validation attempt 2
+- Action 356: Archive full destination scan: close single retry wrapper
+- Action 357: Archive scan: final failure
+- Action 358: Archive scan: set failure
+- Action 359: Archive scan: set deterministic result
+- Action 360: Archive scan: preserve final error locally
+- Action 361: Archive scan: stop later side effects
+- Action 362: Archive scan: end final failure
+- Action 363: Archive scan: analyze returned rows
+- Action 364: Archive scan: initialize exact ID count
+- Action 365: Archive scan: initialize row index
+- Action 366: Archive scan: initialize first empty row
+- Action 367: Archive scan: scan Archive ID values
+- Action 368: Archive scan: advance exact Archive row index
+- Action 369: Archive scan: first ID gap
+- Action 370: Archive scan: map first gap to Archive row
+- Action 371: Archive scan: end first gap
+- Action 372: Archive scan: exact ID match
+- Action 373: Archive scan: count exact ID
+- Action 374: Archive scan: bind matching Archive id
+- Action 375: Archive scan: bind matching Archive sender
+- Action 376: Archive scan: bind matching Archive message
+- Action 377: Archive scan: bind matching Archive status
+- Action 378: Archive scan: bind matching Archive reply
+- Action 379: Archive scan: bind matching Archive touch
+- Action 380: Archive scan: bind matching Archive button
+- Action 381: Archive scan: bind matching Archive time
+- Action 382: Archive scan: bind matching Archive ticker
+- Action 383: Archive scan: bind matching Archive timestamp
+- Action 384: Archive scan: end exact ID match
+- Action 385: Archive scan: end Archive ID scan
+- Action 386: Archive scan: no internal gap found
+- Action 387: Archive scan: candidate after last returned ID
+- Action 388: Archive scan: end trailing candidate calculation
+- Action 389: Archive scan: end analysis
+- Action 390: Archive scan: end destination scan
+- Action 391: blank source recovery: exact Archive match only
+- Action 392: blank source recovery: initialize match validity
+- Action 393: blank source recovery: require exactly one matching ID
+- Action 394: blank source recovery: match count invalid
+- Action 395: blank source recovery: end count check
+- Action 396: blank source recovery: validate id
+- Action 397: blank source recovery: invalidate id
+- Action 398: blank source recovery: end id
+- Action 399: blank source recovery: validate sender
+- Action 400: blank source recovery: invalidate sender
+- Action 401: blank source recovery: end sender
+- Action 402: blank source recovery: validate message
+- Action 403: blank source recovery: invalidate message
+- Action 404: blank source recovery: end message
+- Action 405: blank source recovery: validate status
+- Action 406: blank source recovery: invalidate status
+- Action 407: blank source recovery: end status
+- Action 408: blank source recovery: validate reply
+- Action 409: blank source recovery: invalidate reply
+- Action 410: blank source recovery: end reply
+- Action 411: blank source recovery: validate optional touch
+- Action 412: blank source recovery: invalidate optional touch
+- Action 413: blank source recovery: end optional touch
+- Action 414: blank source recovery: validate optional button
+- Action 415: blank source recovery: invalidate optional button
+- Action 416: blank source recovery: end optional button
+- Action 417: blank source recovery: validate optional time
+- Action 418: blank source recovery: invalidate optional time
+- Action 419: blank source recovery: end optional time
+- Action 420: blank source recovery: validate optional ticker
+- Action 421: blank source recovery: invalidate optional ticker
+- Action 422: blank source recovery: end optional ticker
+- Action 423: blank source recovery: archived status must be DONE
+- Action 424: blank source recovery: status invalid
+- Action 425: blank source recovery: end status
+- Action 426: blank source recovery: timestamp required
+- Action 427: blank source recovery: timestamp invalid
+- Action 428: blank source recovery: end timestamp
+- Action 429: blank source recovery: already complete
+- Action 430: blank source recovery: no failure
+- Action 431: blank source recovery: idempotent success
+- Action 432: blank source recovery: final detail
+- Action 433: blank source recovery: no writes needed
+- Action 434: blank source recovery: invalid or ambiguous Archive state
+- Action 435: blank source recovery: duplicate classification
+- Action 436: blank source recovery: set failure
+- Action 437: blank source recovery: set deterministic result
+- Action 438: blank source recovery: preserve final error locally
+- Action 439: blank source recovery: stop later side effects
+- Action 440: blank source recovery: zero or invalid single match
+- Action 441: blank source recovery: set failure
+- Action 442: blank source recovery: set deterministic result
+- Action 443: blank source recovery: preserve final error locally
+- Action 444: blank source recovery: stop later side effects
+- Action 445: blank source recovery: end duplicate classification
+- Action 446: blank source recovery: end validity decision
+- Action 447: blank source recovery: end branch
+- Action 448: populated source: decide duplicate or new copy
+- Action 449: populated source: duplicate exact ID count
+- Action 450: populated source: set failure
+- Action 451: populated source: set deterministic result
+- Action 452: populated source: preserve final error locally
+- Action 453: populated source: stop later side effects
+- Action 454: populated source: end duplicate count
+- Action 455: populated source: validate existing exact-ID Archive row
+- Action 456: existing copy: initialize exact match
+- Action 457: existing copy: normalize id: copy value
+- Action 458: existing copy: normalize id: normalize leading apostrophe
+- Action 459: existing copy: compare id: exact compare
+- Action 460: existing copy: compare id: exact compare mismatch
+- Action 461: existing copy: compare id: end exact compare
+- Action 462: existing copy: normalize sender: copy value
+- Action 463: existing copy: normalize sender: normalize leading apostrophe
+- Action 464: existing copy: compare sender: exact compare
+- Action 465: existing copy: compare sender: exact compare mismatch
+- Action 466: existing copy: compare sender: end exact compare
+- Action 467: existing copy: normalize message: copy value
+- Action 468: existing copy: normalize message: normalize leading apostrophe
+- Action 469: existing copy: compare message: exact compare
+- Action 470: existing copy: compare message: exact compare mismatch
+- Action 471: existing copy: compare message: end exact compare
+- Action 472: existing copy: normalize status: copy value
+- Action 473: existing copy: normalize status: normalize leading apostrophe
+- Action 474: existing copy: compare status: exact compare
+- Action 475: existing copy: compare status: exact compare mismatch
+- Action 476: existing copy: compare status: end exact compare
+- Action 477: existing copy: normalize reply: copy value
+- Action 478: existing copy: normalize reply: normalize leading apostrophe
+- Action 479: existing copy: compare reply: exact compare
+- Action 480: existing copy: compare reply: exact compare mismatch
+- Action 481: existing copy: compare reply: end exact compare
+- Action 482: existing copy: normalize touch: copy value
+- Action 483: existing copy: normalize touch: normalize leading apostrophe
+- Action 484: existing copy: compare touch: exact compare
+- Action 485: existing copy: compare touch: exact compare mismatch
+- Action 486: existing copy: compare touch: end exact compare
+- Action 487: existing copy: normalize button: copy value
+- Action 488: existing copy: normalize button: normalize leading apostrophe
+- Action 489: existing copy: compare button: exact compare
+- Action 490: existing copy: compare button: exact compare mismatch
+- Action 491: existing copy: compare button: end exact compare
+- Action 492: existing copy: normalize time: copy value
+- Action 493: existing copy: normalize time: normalize leading apostrophe
+- Action 494: existing copy: compare time: exact compare
+- Action 495: existing copy: compare time: exact compare mismatch
+- Action 496: existing copy: compare time: end exact compare
+- Action 497: existing copy: normalize ticker: copy value
+- Action 498: existing copy: normalize ticker: normalize leading apostrophe
+- Action 499: existing copy: compare ticker: exact compare
+- Action 500: existing copy: compare ticker: exact compare mismatch
+- Action 501: existing copy: compare ticker: end exact compare
+- Action 502: existing copy: timestamp required
+- Action 503: existing copy: timestamp invalid
+- Action 504: existing copy: end timestamp check
+- Action 505: existing copy: verified
+- Action 506: existing copy: authorize clear-only recovery
+- Action 507: existing copy: conflict
+- Action 508: existing copy: set failure
+- Action 509: existing copy: set deterministic result
+- Action 510: existing copy: preserve final error locally
+- Action 511: existing copy: stop later side effects
+- Action 512: existing copy: end verification
+- Action 513: existing copy: end branch
+- Action 514: new copy: exact ID absent
+- Action 515: new copy: candidate first empty ID row
+- Action 516: new copy: target row out of bounds
+- Action 517: new copy: set failure
+- Action 518: new copy: set deterministic result
+- Action 519: new copy: preserve final error locally
+- Action 520: new copy: stop later side effects
+- Action 521: new copy: end target bounds
+- Action 522: new copy: verify target row is truly empty
+- Action 523: Archive target exact read: initialize operation result
+- Action 524: Archive target exact read attempt 1: clear %archive_target_id()
+- Action 525: Archive target exact read attempt 1: clear %archive_target_sender()
+- Action 526: Archive target exact read attempt 1: clear %archive_target_message()
+- Action 527: Archive target exact read attempt 1: clear %archive_target_status()
+- Action 528: Archive target exact read attempt 1: clear %archive_target_reply()
+- Action 529: Archive target exact read attempt 1: clear %archive_target_touch()
+- Action 530: Archive target exact read attempt 1: clear %archive_target_button()
+- Action 531: Archive target exact read attempt 1: clear %archive_target_time()
+- Action 532: Archive target exact read attempt 1: clear %archive_target_ticker()
+- Action 533: Archive target exact read attempt 1: clear %archive_target_archived()
+- Action 534: Archive target exact read attempt 1: clear %err
+- Action 535: Archive target exact read attempt 1: clear %errmsg
+- Action 536: Archive target exact read: AutoSheets Get Data attempt 1
+- Action 537: Archive target exact read: numeric plugin error attempt 1
+- Action 538: Archive target exact read: preserve plugin error attempt 1
+- Action 539: Archive target exact read: mark attempt 1 failed
+- Action 540: Archive target exact read: plugin returned without numeric error attempt 1
+- Action 541: Archive target exact read: provisional attempt 1 success
+- Action 542: Archive target exact read: end plugin result attempt 1
+- Action 543: Archive target exact read: validate attempt 1 outputs
+- Action 544: Archive target exact read attempt 1: %archive_target_id(#) must be zero or one
+- Action 545: Archive target exact read attempt 1: invalidate structural row count
+- Action 546: Archive target exact read attempt 1: end structural row count check
+- Action 547: Archive target exact read attempt 1: %archive_target_sender(#) must be zero or one
+- Action 548: Archive target exact read attempt 1: invalidate structural row count
+- Action 549: Archive target exact read attempt 1: end structural row count check
+- Action 550: Archive target exact read attempt 1: %archive_target_message(#) must be zero or one
+- Action 551: Archive target exact read attempt 1: invalidate structural row count
+- Action 552: Archive target exact read attempt 1: end structural row count check
+- Action 553: Archive target exact read attempt 1: %archive_target_status(#) must be zero or one
+- Action 554: Archive target exact read attempt 1: invalidate structural row count
+- Action 555: Archive target exact read attempt 1: end structural row count check
+- Action 556: Archive target exact read attempt 1: %archive_target_reply(#) must be zero or one
+- Action 557: Archive target exact read attempt 1: invalidate structural row count
+- Action 558: Archive target exact read attempt 1: end structural row count check
+- Action 559: Archive target exact read attempt 1: %archive_target_touch(#) must be zero or one
+- Action 560: Archive target exact read attempt 1: invalidate structural row count
+- Action 561: Archive target exact read attempt 1: end structural row count check
+- Action 562: Archive target exact read attempt 1: %archive_target_button(#) must be zero or one
+- Action 563: Archive target exact read attempt 1: invalidate structural row count
+- Action 564: Archive target exact read attempt 1: end structural row count check
+- Action 565: Archive target exact read attempt 1: %archive_target_time(#) must be zero or one
+- Action 566: Archive target exact read attempt 1: invalidate structural row count
+- Action 567: Archive target exact read attempt 1: end structural row count check
+- Action 568: Archive target exact read attempt 1: %archive_target_ticker(#) must be zero or one
+- Action 569: Archive target exact read attempt 1: invalidate structural row count
+- Action 570: Archive target exact read attempt 1: end structural row count check
+- Action 571: Archive target exact read attempt 1: %archive_target_archived(#) must be zero or one
+- Action 572: Archive target exact read attempt 1: invalidate structural row count
+- Action 573: Archive target exact read attempt 1: end structural row count check
+- Action 574: Archive target exact read: end output validation attempt 1
+- Action 575: Archive target exact read: enter single retry only after first failure
+- Action 576: Archive target exact read: three second wait before only retry
+- Action 577: Archive target exact read attempt 2: clear %archive_target_id()
+- Action 578: Archive target exact read attempt 2: clear %archive_target_sender()
+- Action 579: Archive target exact read attempt 2: clear %archive_target_message()
+- Action 580: Archive target exact read attempt 2: clear %archive_target_status()
+- Action 581: Archive target exact read attempt 2: clear %archive_target_reply()
+- Action 582: Archive target exact read attempt 2: clear %archive_target_touch()
+- Action 583: Archive target exact read attempt 2: clear %archive_target_button()
+- Action 584: Archive target exact read attempt 2: clear %archive_target_time()
+- Action 585: Archive target exact read attempt 2: clear %archive_target_ticker()
+- Action 586: Archive target exact read attempt 2: clear %archive_target_archived()
+- Action 587: Archive target exact read attempt 2: clear %err
+- Action 588: Archive target exact read attempt 2: clear %errmsg
+- Action 589: Archive target exact read: AutoSheets Get Data attempt 2
+- Action 590: Archive target exact read: numeric plugin error attempt 2
+- Action 591: Archive target exact read: preserve plugin error attempt 2
+- Action 592: Archive target exact read: mark attempt 2 failed
+- Action 593: Archive target exact read: plugin returned without numeric error attempt 2
+- Action 594: Archive target exact read: provisional attempt 2 success
+- Action 595: Archive target exact read: end plugin result attempt 2
+- Action 596: Archive target exact read: validate attempt 2 outputs
+- Action 597: Archive target exact read attempt 2: %archive_target_id(#) must be zero or one
+- Action 598: Archive target exact read attempt 2: invalidate structural row count
+- Action 599: Archive target exact read attempt 2: end structural row count check
+- Action 600: Archive target exact read attempt 2: %archive_target_sender(#) must be zero or one
+- Action 601: Archive target exact read attempt 2: invalidate structural row count
+- Action 602: Archive target exact read attempt 2: end structural row count check
+- Action 603: Archive target exact read attempt 2: %archive_target_message(#) must be zero or one
+- Action 604: Archive target exact read attempt 2: invalidate structural row count
+- Action 605: Archive target exact read attempt 2: end structural row count check
+- Action 606: Archive target exact read attempt 2: %archive_target_status(#) must be zero or one
+- Action 607: Archive target exact read attempt 2: invalidate structural row count
+- Action 608: Archive target exact read attempt 2: end structural row count check
+- Action 609: Archive target exact read attempt 2: %archive_target_reply(#) must be zero or one
+- Action 610: Archive target exact read attempt 2: invalidate structural row count
+- Action 611: Archive target exact read attempt 2: end structural row count check
+- Action 612: Archive target exact read attempt 2: %archive_target_touch(#) must be zero or one
+- Action 613: Archive target exact read attempt 2: invalidate structural row count
+- Action 614: Archive target exact read attempt 2: end structural row count check
+- Action 615: Archive target exact read attempt 2: %archive_target_button(#) must be zero or one
+- Action 616: Archive target exact read attempt 2: invalidate structural row count
+- Action 617: Archive target exact read attempt 2: end structural row count check
+- Action 618: Archive target exact read attempt 2: %archive_target_time(#) must be zero or one
+- Action 619: Archive target exact read attempt 2: invalidate structural row count
+- Action 620: Archive target exact read attempt 2: end structural row count check
+- Action 621: Archive target exact read attempt 2: %archive_target_ticker(#) must be zero or one
+- Action 622: Archive target exact read attempt 2: invalidate structural row count
+- Action 623: Archive target exact read attempt 2: end structural row count check
+- Action 624: Archive target exact read attempt 2: %archive_target_archived(#) must be zero or one
+- Action 625: Archive target exact read attempt 2: invalidate structural row count
+- Action 626: Archive target exact read attempt 2: end structural row count check
+- Action 627: Archive target exact read: end output validation attempt 2
+- Action 628: Archive target exact read: close single retry wrapper
+- Action 629: new copy: target read failure
+- Action 630: new copy: set failure
+- Action 631: new copy: set deterministic result
+- Action 632: new copy: preserve final error locally
+- Action 633: new copy: stop later side effects
+- Action 634: new copy: end target read failure
+- Action 635: new copy: inspect target blankness
+- Action 636: new copy: assume target blank
+- Action 637: new copy: detect target value in archive_target_id
+- Action 638: new copy: target not blank from archive_target_id
+- Action 639: new copy: end target value archive_target_id
+- Action 640: new copy: detect target value in archive_target_sender
+- Action 641: new copy: target not blank from archive_target_sender
+- Action 642: new copy: end target value archive_target_sender
+- Action 643: new copy: detect target value in archive_target_message
+- Action 644: new copy: target not blank from archive_target_message
+- Action 645: new copy: end target value archive_target_message
+- Action 646: new copy: detect target value in archive_target_status
+- Action 647: new copy: target not blank from archive_target_status
+- Action 648: new copy: end target value archive_target_status
+- Action 649: new copy: detect target value in archive_target_reply
+- Action 650: new copy: target not blank from archive_target_reply
+- Action 651: new copy: end target value archive_target_reply
+- Action 652: new copy: detect target value in archive_target_touch
+- Action 653: new copy: target not blank from archive_target_touch
+- Action 654: new copy: end target value archive_target_touch
+- Action 655: new copy: detect target value in archive_target_button
+- Action 656: new copy: target not blank from archive_target_button
+- Action 657: new copy: end target value archive_target_button
+- Action 658: new copy: detect target value in archive_target_time
+- Action 659: new copy: target not blank from archive_target_time
+- Action 660: new copy: end target value archive_target_time
+- Action 661: new copy: detect target value in archive_target_ticker
+- Action 662: new copy: target not blank from archive_target_ticker
+- Action 663: new copy: end target value archive_target_ticker
+- Action 664: new copy: detect target value in archive_target_archived
+- Action 665: new copy: target not blank from archive_target_archived
+- Action 666: new copy: end target value archive_target_archived
+- Action 667: new copy: verified target must be blank
+- Action 668: new copy: set failure
+- Action 669: new copy: set deterministic result
+- Action 670: new copy: preserve final error locally
+- Action 671: new copy: stop later side effects
+- Action 672: new copy: end target blank check
+- Action 673: new copy: end target inspection
+- Action 674: new copy: end target read
+- Action 675: new copy: immediate source re-read before Archive write
+- Action 676: source pre-write revalidation: initialize operation result
+- Action 677: source pre-write revalidation attempt 1: clear %archive_recheck_id()
+- Action 678: source pre-write revalidation attempt 1: clear %archive_recheck_sender()
+- Action 679: source pre-write revalidation attempt 1: clear %archive_recheck_message()
+- Action 680: source pre-write revalidation attempt 1: clear %archive_recheck_status()
+- Action 681: source pre-write revalidation attempt 1: clear %archive_recheck_reply()
+- Action 682: source pre-write revalidation attempt 1: clear %archive_recheck_touch()
+- Action 683: source pre-write revalidation attempt 1: clear %archive_recheck_button()
+- Action 684: source pre-write revalidation attempt 1: clear %archive_recheck_time()
+- Action 685: source pre-write revalidation attempt 1: clear %archive_recheck_ticker()
+- Action 686: source pre-write revalidation attempt 1: clear %err
+- Action 687: source pre-write revalidation attempt 1: clear %errmsg
+- Action 688: source pre-write revalidation: AutoSheets Get Data attempt 1
+- Action 689: source pre-write revalidation: numeric plugin error attempt 1
+- Action 690: source pre-write revalidation: preserve plugin error attempt 1
+- Action 691: source pre-write revalidation: mark attempt 1 failed
+- Action 692: source pre-write revalidation: plugin returned without numeric error attempt 1
+- Action 693: source pre-write revalidation: provisional attempt 1 success
+- Action 694: source pre-write revalidation: end plugin result attempt 1
+- Action 695: source pre-write revalidation: validate attempt 1 outputs
+- Action 696: source pre-write revalidation attempt 1: %archive_recheck_id(#) must equal one
+- Action 697: source pre-write revalidation attempt 1: invalidate exact row count
+- Action 698: source pre-write revalidation attempt 1: end exact row count check
+- Action 699: source pre-write revalidation attempt 1: %archive_recheck_sender(#) must equal one
+- Action 700: source pre-write revalidation attempt 1: invalidate exact row count
+- Action 701: source pre-write revalidation attempt 1: end exact row count check
+- Action 702: source pre-write revalidation attempt 1: %archive_recheck_message(#) must equal one
+- Action 703: source pre-write revalidation attempt 1: invalidate exact row count
+- Action 704: source pre-write revalidation attempt 1: end exact row count check
+- Action 705: source pre-write revalidation attempt 1: %archive_recheck_status(#) must equal one
+- Action 706: source pre-write revalidation attempt 1: invalidate exact row count
+- Action 707: source pre-write revalidation attempt 1: end exact row count check
+- Action 708: source pre-write revalidation attempt 1: %archive_recheck_reply(#) must equal one
+- Action 709: source pre-write revalidation attempt 1: invalidate exact row count
+- Action 710: source pre-write revalidation attempt 1: end exact row count check
+- Action 711: source pre-write revalidation attempt 1: %archive_recheck_touch(#) must equal one
+- Action 712: source pre-write revalidation attempt 1: invalidate exact row count
+- Action 713: source pre-write revalidation attempt 1: end exact row count check
+- Action 714: source pre-write revalidation attempt 1: %archive_recheck_button(#) must equal one
+- Action 715: source pre-write revalidation attempt 1: invalidate exact row count
+- Action 716: source pre-write revalidation attempt 1: end exact row count check
+- Action 717: source pre-write revalidation attempt 1: %archive_recheck_time(#) must equal one
+- Action 718: source pre-write revalidation attempt 1: invalidate exact row count
+- Action 719: source pre-write revalidation attempt 1: end exact row count check
+- Action 720: source pre-write revalidation attempt 1: %archive_recheck_ticker(#) must equal one
+- Action 721: source pre-write revalidation attempt 1: invalidate exact row count
+- Action 722: source pre-write revalidation attempt 1: end exact row count check
+- Action 723: source pre-write revalidation: end output validation attempt 1
+- Action 724: source pre-write revalidation: enter single retry only after first failure
+- Action 725: source pre-write revalidation: three second wait before only retry
+- Action 726: source pre-write revalidation attempt 2: clear %archive_recheck_id()
+- Action 727: source pre-write revalidation attempt 2: clear %archive_recheck_sender()
+- Action 728: source pre-write revalidation attempt 2: clear %archive_recheck_message()
+- Action 729: source pre-write revalidation attempt 2: clear %archive_recheck_status()
+- Action 730: source pre-write revalidation attempt 2: clear %archive_recheck_reply()
+- Action 731: source pre-write revalidation attempt 2: clear %archive_recheck_touch()
+- Action 732: source pre-write revalidation attempt 2: clear %archive_recheck_button()
+- Action 733: source pre-write revalidation attempt 2: clear %archive_recheck_time()
+- Action 734: source pre-write revalidation attempt 2: clear %archive_recheck_ticker()
+- Action 735: source pre-write revalidation attempt 2: clear %err
+- Action 736: source pre-write revalidation attempt 2: clear %errmsg
+- Action 737: source pre-write revalidation: AutoSheets Get Data attempt 2
+- Action 738: source pre-write revalidation: numeric plugin error attempt 2
+- Action 739: source pre-write revalidation: preserve plugin error attempt 2
+- Action 740: source pre-write revalidation: mark attempt 2 failed
+- Action 741: source pre-write revalidation: plugin returned without numeric error attempt 2
+- Action 742: source pre-write revalidation: provisional attempt 2 success
+- Action 743: source pre-write revalidation: end plugin result attempt 2
+- Action 744: source pre-write revalidation: validate attempt 2 outputs
+- Action 745: source pre-write revalidation attempt 2: %archive_recheck_id(#) must equal one
+- Action 746: source pre-write revalidation attempt 2: invalidate exact row count
+- Action 747: source pre-write revalidation attempt 2: end exact row count check
+- Action 748: source pre-write revalidation attempt 2: %archive_recheck_sender(#) must equal one
+- Action 749: source pre-write revalidation attempt 2: invalidate exact row count
+- Action 750: source pre-write revalidation attempt 2: end exact row count check
+- Action 751: source pre-write revalidation attempt 2: %archive_recheck_message(#) must equal one
+- Action 752: source pre-write revalidation attempt 2: invalidate exact row count
+- Action 753: source pre-write revalidation attempt 2: end exact row count check
+- Action 754: source pre-write revalidation attempt 2: %archive_recheck_status(#) must equal one
+- Action 755: source pre-write revalidation attempt 2: invalidate exact row count
+- Action 756: source pre-write revalidation attempt 2: end exact row count check
+- Action 757: source pre-write revalidation attempt 2: %archive_recheck_reply(#) must equal one
+- Action 758: source pre-write revalidation attempt 2: invalidate exact row count
+- Action 759: source pre-write revalidation attempt 2: end exact row count check
+- Action 760: source pre-write revalidation attempt 2: %archive_recheck_touch(#) must equal one
+- Action 761: source pre-write revalidation attempt 2: invalidate exact row count
+- Action 762: source pre-write revalidation attempt 2: end exact row count check
+- Action 763: source pre-write revalidation attempt 2: %archive_recheck_button(#) must equal one
+- Action 764: source pre-write revalidation attempt 2: invalidate exact row count
+- Action 765: source pre-write revalidation attempt 2: end exact row count check
+- Action 766: source pre-write revalidation attempt 2: %archive_recheck_time(#) must equal one
+- Action 767: source pre-write revalidation attempt 2: invalidate exact row count
+- Action 768: source pre-write revalidation attempt 2: end exact row count check
+- Action 769: source pre-write revalidation attempt 2: %archive_recheck_ticker(#) must equal one
+- Action 770: source pre-write revalidation attempt 2: invalidate exact row count
+- Action 771: source pre-write revalidation attempt 2: end exact row count check
+- Action 772: source pre-write revalidation: end output validation attempt 2
+- Action 773: source pre-write revalidation: close single retry wrapper
+- Action 774: new copy: source pre-write read failure
+- Action 775: new copy: set failure
+- Action 776: new copy: set deterministic result
+- Action 777: new copy: preserve final error locally
+- Action 778: new copy: stop later side effects
+- Action 779: new copy: end source pre-write read failure
+- Action 780: new copy: exact source pre-write comparison
+- Action 781: new copy: initialize pre-write match
+- Action 782: new copy pre-write: compare id: exact compare
+- Action 783: new copy pre-write: compare id: exact compare mismatch
+- Action 784: new copy pre-write: compare id: end exact compare
+- Action 785: new copy pre-write: compare sender: exact compare
+- Action 786: new copy pre-write: compare sender: exact compare mismatch
+- Action 787: new copy pre-write: compare sender: end exact compare
+- Action 788: new copy pre-write: compare message: exact compare
+- Action 789: new copy pre-write: compare message: exact compare mismatch
+- Action 790: new copy pre-write: compare message: end exact compare
+- Action 791: new copy pre-write: compare status: exact compare
+- Action 792: new copy pre-write: compare status: exact compare mismatch
+- Action 793: new copy pre-write: compare status: end exact compare
+- Action 794: new copy pre-write: compare reply: exact compare
+- Action 795: new copy pre-write: compare reply: exact compare mismatch
+- Action 796: new copy pre-write: compare reply: end exact compare
+- Action 797: new copy pre-write: compare touch: exact compare
+- Action 798: new copy pre-write: compare touch: exact compare mismatch
+- Action 799: new copy pre-write: compare touch: end exact compare
+- Action 800: new copy pre-write: compare button: exact compare
+- Action 801: new copy pre-write: compare button: exact compare mismatch
+- Action 802: new copy pre-write: compare button: end exact compare
+- Action 803: new copy pre-write: compare time: exact compare
+- Action 804: new copy pre-write: compare time: exact compare mismatch
+- Action 805: new copy pre-write: compare time: end exact compare
+- Action 806: new copy pre-write: compare ticker: exact compare
+- Action 807: new copy pre-write: compare ticker: exact compare mismatch
+- Action 808: new copy pre-write: compare ticker: end exact compare
+- Action 809: new copy: source changed before write
+- Action 810: new copy: set failure
+- Action 811: new copy: set deterministic result
+- Action 812: new copy: preserve final error locally
+- Action 813: new copy: stop later side effects
+- Action 814: new copy: end source changed before write
+- Action 815: new copy: end source pre-write compare
+- Action 816: new copy: end source pre-write read
+- Action 817: new copy: formula and separator safety
+- Action 818: new copy: initialize payload safety
+- Action 819: new copy: reject field separator in id
+- Action 820: new copy: separator hazard in id
+- Action 821: new copy: end separator check id
+- Action 822: new copy: reject field separator in sender
+- Action 823: new copy: separator hazard in sender
+- Action 824: new copy: end separator check sender
+- Action 825: new copy: reject field separator in message
+- Action 826: new copy: separator hazard in message
+- Action 827: new copy: end separator check message
+- Action 828: new copy: reject field separator in status
+- Action 829: new copy: separator hazard in status
+- Action 830: new copy: end separator check status
+- Action 831: new copy: reject field separator in reply
+- Action 832: new copy: separator hazard in reply
+- Action 833: new copy: end separator check reply
+- Action 834: new copy: reject field separator in touch
+- Action 835: new copy: separator hazard in touch
+- Action 836: new copy: end separator check touch
+- Action 837: new copy: reject field separator in button
+- Action 838: new copy: separator hazard in button
+- Action 839: new copy: end separator check button
+- Action 840: new copy: reject field separator in time
+- Action 841: new copy: separator hazard in time
+- Action 842: new copy: end separator check time
+- Action 843: new copy: reject field separator in ticker
+- Action 844: new copy: separator hazard in ticker
+- Action 845: new copy: end separator check ticker
+- Action 846: new copy: separator safety failure
+- Action 847: new copy: set failure
+- Action 848: new copy: set deterministic result
+- Action 849: new copy: preserve final error locally
+- Action 850: new copy: stop later side effects
+- Action 851: new copy: end separator safety failure
+- Action 852: new copy: build formula-safe payload
+- Action 853: new copy: copy id into safe field a
+- Action 854: new copy: formula prefix in field a
+- Action 855: new copy: escape formula field a
+- Action 856: new copy: end formula escape a
+- Action 857: new copy: copy sender into safe field b
+- Action 858: new copy: formula prefix in field b
+- Action 859: new copy: escape formula field b
+- Action 860: new copy: end formula escape b
+- Action 861: new copy: copy message into safe field c
+- Action 862: new copy: formula prefix in field c
+- Action 863: new copy: escape formula field c
+- Action 864: new copy: end formula escape c
+- Action 865: new copy: copy status into safe field d
+- Action 866: new copy: formula prefix in field d
+- Action 867: new copy: escape formula field d
+- Action 868: new copy: end formula escape d
+- Action 869: new copy: copy reply into safe field e
+- Action 870: new copy: formula prefix in field e
+- Action 871: new copy: escape formula field e
+- Action 872: new copy: end formula escape e
+- Action 873: new copy: copy touch into safe field f
+- Action 874: new copy: formula prefix in field f
+- Action 875: new copy: escape formula field f
+- Action 876: new copy: end formula escape f
+- Action 877: new copy: copy button into safe field g
+- Action 878: new copy: formula prefix in field g
+- Action 879: new copy: escape formula field g
+- Action 880: new copy: end formula escape g
+- Action 881: new copy: copy time into safe field h
+- Action 882: new copy: formula prefix in field h
+- Action 883: new copy: escape formula field h
+- Action 884: new copy: end formula escape h
+- Action 885: new copy: copy ticker into safe field i
+- Action 886: new copy: formula prefix in field i
+- Action 887: new copy: escape formula field i
+- Action 888: new copy: end formula escape i
+- Action 889: new copy: generate Archive timestamp
+- Action 890: new copy: end payload build
+- Action 891: new copy: end payload safety
+- Action 892: new copy: write one Archive A:J row
+- Action 893: Archive exact row write: initialize update result
+- Action 894: Archive exact row write attempt 1: clear %err
+- Action 895: Archive exact row write attempt 1: clear %errmsg
+- Action 896: Archive exact row write: AutoSheets Update Data attempt 1
+- Action 897: Archive exact row write: numeric plugin error attempt 1
+- Action 898: Archive exact row write: preserve update error attempt 1
+- Action 899: Archive exact row write: mark update attempt 1 failed
+- Action 900: Archive exact row write: update returned without numeric error attempt 1
+- Action 901: Archive exact row write: update attempt 1 success
+- Action 902: Archive exact row write: end update result attempt 1
+- Action 903: Archive exact row write: enter single retry only after first failure
+- Action 904: Archive exact row write: three second wait before only retry
+- Action 905: Archive exact row write attempt 2: clear %err
+- Action 906: Archive exact row write attempt 2: clear %errmsg
+- Action 907: Archive exact row write: AutoSheets Update Data attempt 2
+- Action 908: Archive exact row write: numeric plugin error attempt 2
+- Action 909: Archive exact row write: preserve update error attempt 2
+- Action 910: Archive exact row write: mark update attempt 2 failed
+- Action 911: Archive exact row write: update returned without numeric error attempt 2
+- Action 912: Archive exact row write: update attempt 2 success
+- Action 913: Archive exact row write: end update result attempt 2
+- Action 914: Archive exact row write: close single retry wrapper
+- Action 915: new copy: Archive write final failure
+- Action 916: new copy: set failure
+- Action 917: new copy: set deterministic result
+- Action 918: new copy: preserve final error locally
+- Action 919: new copy: stop later side effects
+- Action 920: new copy: end Archive write failure
+- Action 921: new copy: end Archive write
+- Action 922: new copy: read back exact Archive row
+- Action 923: Archive copy exact readback: initialize operation result
+- Action 924: Archive copy exact readback attempt 1: clear %archive_copy_id()
+- Action 925: Archive copy exact readback attempt 1: clear %archive_copy_sender()
+- Action 926: Archive copy exact readback attempt 1: clear %archive_copy_message()
+- Action 927: Archive copy exact readback attempt 1: clear %archive_copy_status()
+- Action 928: Archive copy exact readback attempt 1: clear %archive_copy_reply()
+- Action 929: Archive copy exact readback attempt 1: clear %archive_copy_touch()
+- Action 930: Archive copy exact readback attempt 1: clear %archive_copy_button()
+- Action 931: Archive copy exact readback attempt 1: clear %archive_copy_time()
+- Action 932: Archive copy exact readback attempt 1: clear %archive_copy_ticker()
+- Action 933: Archive copy exact readback attempt 1: clear %archive_copy_archived()
+- Action 934: Archive copy exact readback attempt 1: clear %err
+- Action 935: Archive copy exact readback attempt 1: clear %errmsg
+- Action 936: Archive copy exact readback: AutoSheets Get Data attempt 1
+- Action 937: Archive copy exact readback: numeric plugin error attempt 1
+- Action 938: Archive copy exact readback: preserve plugin error attempt 1
+- Action 939: Archive copy exact readback: mark attempt 1 failed
+- Action 940: Archive copy exact readback: plugin returned without numeric error attempt 1
+- Action 941: Archive copy exact readback: provisional attempt 1 success
+- Action 942: Archive copy exact readback: end plugin result attempt 1
+- Action 943: Archive copy exact readback: validate attempt 1 outputs
+- Action 944: Archive copy exact readback attempt 1: %archive_copy_id(#) must equal one
+- Action 945: Archive copy exact readback attempt 1: invalidate exact row count
+- Action 946: Archive copy exact readback attempt 1: end exact row count check
+- Action 947: Archive copy exact readback attempt 1: %archive_copy_sender(#) must equal one
+- Action 948: Archive copy exact readback attempt 1: invalidate exact row count
+- Action 949: Archive copy exact readback attempt 1: end exact row count check
+- Action 950: Archive copy exact readback attempt 1: %archive_copy_message(#) must equal one
+- Action 951: Archive copy exact readback attempt 1: invalidate exact row count
+- Action 952: Archive copy exact readback attempt 1: end exact row count check
+- Action 953: Archive copy exact readback attempt 1: %archive_copy_status(#) must equal one
+- Action 954: Archive copy exact readback attempt 1: invalidate exact row count
+- Action 955: Archive copy exact readback attempt 1: end exact row count check
+- Action 956: Archive copy exact readback attempt 1: %archive_copy_reply(#) must equal one
+- Action 957: Archive copy exact readback attempt 1: invalidate exact row count
+- Action 958: Archive copy exact readback attempt 1: end exact row count check
+- Action 959: Archive copy exact readback attempt 1: %archive_copy_touch(#) must equal one
+- Action 960: Archive copy exact readback attempt 1: invalidate exact row count
+- Action 961: Archive copy exact readback attempt 1: end exact row count check
+- Action 962: Archive copy exact readback attempt 1: %archive_copy_button(#) must equal one
+- Action 963: Archive copy exact readback attempt 1: invalidate exact row count
+- Action 964: Archive copy exact readback attempt 1: end exact row count check
+- Action 965: Archive copy exact readback attempt 1: %archive_copy_time(#) must equal one
+- Action 966: Archive copy exact readback attempt 1: invalidate exact row count
+- Action 967: Archive copy exact readback attempt 1: end exact row count check
+- Action 968: Archive copy exact readback attempt 1: %archive_copy_ticker(#) must equal one
+- Action 969: Archive copy exact readback attempt 1: invalidate exact row count
+- Action 970: Archive copy exact readback attempt 1: end exact row count check
+- Action 971: Archive copy exact readback attempt 1: %archive_copy_archived(#) must equal one
+- Action 972: Archive copy exact readback attempt 1: invalidate exact row count
+- Action 973: Archive copy exact readback attempt 1: end exact row count check
+- Action 974: Archive copy exact readback: end output validation attempt 1
+- Action 975: Archive copy exact readback: enter single retry only after first failure
+- Action 976: Archive copy exact readback: three second wait before only retry
+- Action 977: Archive copy exact readback attempt 2: clear %archive_copy_id()
+- Action 978: Archive copy exact readback attempt 2: clear %archive_copy_sender()
+- Action 979: Archive copy exact readback attempt 2: clear %archive_copy_message()
+- Action 980: Archive copy exact readback attempt 2: clear %archive_copy_status()
+- Action 981: Archive copy exact readback attempt 2: clear %archive_copy_reply()
+- Action 982: Archive copy exact readback attempt 2: clear %archive_copy_touch()
+- Action 983: Archive copy exact readback attempt 2: clear %archive_copy_button()
+- Action 984: Archive copy exact readback attempt 2: clear %archive_copy_time()
+- Action 985: Archive copy exact readback attempt 2: clear %archive_copy_ticker()
+- Action 986: Archive copy exact readback attempt 2: clear %archive_copy_archived()
+- Action 987: Archive copy exact readback attempt 2: clear %err
+- Action 988: Archive copy exact readback attempt 2: clear %errmsg
+- Action 989: Archive copy exact readback: AutoSheets Get Data attempt 2
+- Action 990: Archive copy exact readback: numeric plugin error attempt 2
+- Action 991: Archive copy exact readback: preserve plugin error attempt 2
+- Action 992: Archive copy exact readback: mark attempt 2 failed
+- Action 993: Archive copy exact readback: plugin returned without numeric error attempt 2
+- Action 994: Archive copy exact readback: provisional attempt 2 success
+- Action 995: Archive copy exact readback: end plugin result attempt 2
+- Action 996: Archive copy exact readback: validate attempt 2 outputs
+- Action 997: Archive copy exact readback attempt 2: %archive_copy_id(#) must equal one
+- Action 998: Archive copy exact readback attempt 2: invalidate exact row count
+- Action 999: Archive copy exact readback attempt 2: end exact row count check
+- Action 1000: Archive copy exact readback attempt 2: %archive_copy_sender(#) must equal one
+- Action 1001: Archive copy exact readback attempt 2: invalidate exact row count
+- Action 1002: Archive copy exact readback attempt 2: end exact row count check
+- Action 1003: Archive copy exact readback attempt 2: %archive_copy_message(#) must equal one
+- Action 1004: Archive copy exact readback attempt 2: invalidate exact row count
+- Action 1005: Archive copy exact readback attempt 2: end exact row count check
+- Action 1006: Archive copy exact readback attempt 2: %archive_copy_status(#) must equal one
+- Action 1007: Archive copy exact readback attempt 2: invalidate exact row count
+- Action 1008: Archive copy exact readback attempt 2: end exact row count check
+- Action 1009: Archive copy exact readback attempt 2: %archive_copy_reply(#) must equal one
+- Action 1010: Archive copy exact readback attempt 2: invalidate exact row count
+- Action 1011: Archive copy exact readback attempt 2: end exact row count check
+- Action 1012: Archive copy exact readback attempt 2: %archive_copy_touch(#) must equal one
+- Action 1013: Archive copy exact readback attempt 2: invalidate exact row count
+- Action 1014: Archive copy exact readback attempt 2: end exact row count check
+- Action 1015: Archive copy exact readback attempt 2: %archive_copy_button(#) must equal one
+- Action 1016: Archive copy exact readback attempt 2: invalidate exact row count
+- Action 1017: Archive copy exact readback attempt 2: end exact row count check
+- Action 1018: Archive copy exact readback attempt 2: %archive_copy_time(#) must equal one
+- Action 1019: Archive copy exact readback attempt 2: invalidate exact row count
+- Action 1020: Archive copy exact readback attempt 2: end exact row count check
+- Action 1021: Archive copy exact readback attempt 2: %archive_copy_ticker(#) must equal one
+- Action 1022: Archive copy exact readback attempt 2: invalidate exact row count
+- Action 1023: Archive copy exact readback attempt 2: end exact row count check
+- Action 1024: Archive copy exact readback attempt 2: %archive_copy_archived(#) must equal one
+- Action 1025: Archive copy exact readback attempt 2: invalidate exact row count
+- Action 1026: Archive copy exact readback attempt 2: end exact row count check
+- Action 1027: Archive copy exact readback: end output validation attempt 2
+- Action 1028: Archive copy exact readback: close single retry wrapper
+- Action 1029: new copy: Archive readback failure
+- Action 1030: new copy: set failure
+- Action 1031: new copy: set deterministic result
+- Action 1032: new copy: preserve final error locally
+- Action 1033: new copy: stop later side effects
+- Action 1034: new copy: end Archive readback failure
+- Action 1035: new copy: compare Archive readback
+- Action 1036: new copy: initialize Archive readback match
+- Action 1037: new copy readback: normalize id: copy value
+- Action 1038: new copy readback: normalize id: normalize leading apostrophe
+- Action 1039: new copy readback: compare id: exact compare
+- Action 1040: new copy readback: compare id: exact compare mismatch
+- Action 1041: new copy readback: compare id: end exact compare
+- Action 1042: new copy readback: normalize sender: copy value
+- Action 1043: new copy readback: normalize sender: normalize leading apostrophe
+- Action 1044: new copy readback: compare sender: exact compare
+- Action 1045: new copy readback: compare sender: exact compare mismatch
+- Action 1046: new copy readback: compare sender: end exact compare
+- Action 1047: new copy readback: normalize message: copy value
+- Action 1048: new copy readback: normalize message: normalize leading apostrophe
+- Action 1049: new copy readback: compare message: exact compare
+- Action 1050: new copy readback: compare message: exact compare mismatch
+- Action 1051: new copy readback: compare message: end exact compare
+- Action 1052: new copy readback: normalize status: copy value
+- Action 1053: new copy readback: normalize status: normalize leading apostrophe
+- Action 1054: new copy readback: compare status: exact compare
+- Action 1055: new copy readback: compare status: exact compare mismatch
+- Action 1056: new copy readback: compare status: end exact compare
+- Action 1057: new copy readback: normalize reply: copy value
+- Action 1058: new copy readback: normalize reply: normalize leading apostrophe
+- Action 1059: new copy readback: compare reply: exact compare
+- Action 1060: new copy readback: compare reply: exact compare mismatch
+- Action 1061: new copy readback: compare reply: end exact compare
+- Action 1062: new copy readback: normalize touch: copy value
+- Action 1063: new copy readback: normalize touch: normalize leading apostrophe
+- Action 1064: new copy readback: compare touch: exact compare
+- Action 1065: new copy readback: compare touch: exact compare mismatch
+- Action 1066: new copy readback: compare touch: end exact compare
+- Action 1067: new copy readback: normalize button: copy value
+- Action 1068: new copy readback: normalize button: normalize leading apostrophe
+- Action 1069: new copy readback: compare button: exact compare
+- Action 1070: new copy readback: compare button: exact compare mismatch
+- Action 1071: new copy readback: compare button: end exact compare
+- Action 1072: new copy readback: normalize time: copy value
+- Action 1073: new copy readback: normalize time: normalize leading apostrophe
+- Action 1074: new copy readback: compare time: exact compare
+- Action 1075: new copy readback: compare time: exact compare mismatch
+- Action 1076: new copy readback: compare time: end exact compare
+- Action 1077: new copy readback: normalize ticker: copy value
+- Action 1078: new copy readback: normalize ticker: normalize leading apostrophe
+- Action 1079: new copy readback: compare ticker: exact compare
+- Action 1080: new copy readback: compare ticker: exact compare mismatch
+- Action 1081: new copy readback: compare ticker: end exact compare
+- Action 1082: new copy readback: compare archived timestamp: exact compare
+- Action 1083: new copy readback: compare archived timestamp: exact compare mismatch
+- Action 1084: new copy readback: compare archived timestamp: end exact compare
+- Action 1085: new copy: Archive readback mismatch
+- Action 1086: new copy: set failure
+- Action 1087: new copy: set deterministic result
+- Action 1088: new copy: preserve final error locally
+- Action 1089: new copy: stop later side effects
+- Action 1090: new copy: end Archive readback mismatch
+- Action 1091: new copy: end Archive readback compare
+- Action 1092: new copy: end Archive exact readback
+- Action 1093: new copy: verify exact ID remains unique
+- Action 1094: Archive post-write ID scan: initialize operation result
+- Action 1095: Archive post-write ID scan attempt 1: clear %archive_post_id()
+- Action 1096: Archive post-write ID scan attempt 1: clear %err
+- Action 1097: Archive post-write ID scan attempt 1: clear %errmsg
+- Action 1098: Archive post-write ID scan: AutoSheets Get Data attempt 1
+- Action 1099: Archive post-write ID scan: numeric plugin error attempt 1
+- Action 1100: Archive post-write ID scan: preserve plugin error attempt 1
+- Action 1101: Archive post-write ID scan: mark attempt 1 failed
+- Action 1102: Archive post-write ID scan: plugin returned without numeric error attempt 1
+- Action 1103: Archive post-write ID scan: provisional attempt 1 success
+- Action 1104: Archive post-write ID scan: end plugin result attempt 1
+- Action 1105: Archive post-write ID scan: validate attempt 1 outputs
+- Action 1106: Archive post-write ID scan: end output validation attempt 1
+- Action 1107: Archive post-write ID scan: enter single retry only after first failure
+- Action 1108: Archive post-write ID scan: three second wait before only retry
+- Action 1109: Archive post-write ID scan attempt 2: clear %archive_post_id()
+- Action 1110: Archive post-write ID scan attempt 2: clear %err
+- Action 1111: Archive post-write ID scan attempt 2: clear %errmsg
+- Action 1112: Archive post-write ID scan: AutoSheets Get Data attempt 2
+- Action 1113: Archive post-write ID scan: numeric plugin error attempt 2
+- Action 1114: Archive post-write ID scan: preserve plugin error attempt 2
+- Action 1115: Archive post-write ID scan: mark attempt 2 failed
+- Action 1116: Archive post-write ID scan: plugin returned without numeric error attempt 2
+- Action 1117: Archive post-write ID scan: provisional attempt 2 success
+- Action 1118: Archive post-write ID scan: end plugin result attempt 2
+- Action 1119: Archive post-write ID scan: validate attempt 2 outputs
+- Action 1120: Archive post-write ID scan: end output validation attempt 2
+- Action 1121: Archive post-write ID scan: close single retry wrapper
+- Action 1122: new copy: post-write scan failure
+- Action 1123: new copy: set failure
+- Action 1124: new copy: set deterministic result
+- Action 1125: new copy: preserve final error locally
+- Action 1126: new copy: stop later side effects
+- Action 1127: new copy: end post-write scan failure
+- Action 1128: new copy: count post-write exact IDs
+- Action 1129: new copy: initialize post-write ID count
+- Action 1130: new copy: scan post-write Archive IDs
+- Action 1131: new copy: post-write exact ID match
+- Action 1132: new copy: count post-write exact ID
+- Action 1133: new copy: end post-write exact ID match
+- Action 1134: new copy: end post-write ID scan
+- Action 1135: new copy: exact ID must occur once
+- Action 1136: new copy: set failure
+- Action 1137: new copy: set deterministic result
+- Action 1138: new copy: preserve final error locally
+- Action 1139: new copy: stop later side effects
+- Action 1140: new copy: unique ID verified
+- Action 1141: new copy: authorize source clear
+- Action 1142: new copy: end unique ID verification
+- Action 1143: new copy: end post-write ID count
+- Action 1144: new copy: end post-write scan
+- Action 1145: new copy: end exact-ID-absent branch
+- Action 1146: populated source: end duplicate or new copy decision
+- Action 1147: pre-clear: verified copy required
+- Action 1148: source immediate pre-clear revalidation: initialize operation result
+- Action 1149: source immediate pre-clear revalidation attempt 1: clear %archive_preclear_id()
+- Action 1150: source immediate pre-clear revalidation attempt 1: clear %archive_preclear_sender()
+- Action 1151: source immediate pre-clear revalidation attempt 1: clear %archive_preclear_message()
+- Action 1152: source immediate pre-clear revalidation attempt 1: clear %archive_preclear_status()
+- Action 1153: source immediate pre-clear revalidation attempt 1: clear %archive_preclear_reply()
+- Action 1154: source immediate pre-clear revalidation attempt 1: clear %archive_preclear_touch()
+- Action 1155: source immediate pre-clear revalidation attempt 1: clear %archive_preclear_button()
+- Action 1156: source immediate pre-clear revalidation attempt 1: clear %archive_preclear_time()
+- Action 1157: source immediate pre-clear revalidation attempt 1: clear %archive_preclear_ticker()
+- Action 1158: source immediate pre-clear revalidation attempt 1: clear %err
+- Action 1159: source immediate pre-clear revalidation attempt 1: clear %errmsg
+- Action 1160: source immediate pre-clear revalidation: AutoSheets Get Data attempt 1
+- Action 1161: source immediate pre-clear revalidation: numeric plugin error attempt 1
+- Action 1162: source immediate pre-clear revalidation: preserve plugin error attempt 1
+- Action 1163: source immediate pre-clear revalidation: mark attempt 1 failed
+- Action 1164: source immediate pre-clear revalidation: plugin returned without numeric error attempt 1
+- Action 1165: source immediate pre-clear revalidation: provisional attempt 1 success
+- Action 1166: source immediate pre-clear revalidation: end plugin result attempt 1
+- Action 1167: source immediate pre-clear revalidation: validate attempt 1 outputs
+- Action 1168: source immediate pre-clear revalidation attempt 1: %archive_preclear_id(#) must equal one
+- Action 1169: source immediate pre-clear revalidation attempt 1: invalidate exact row count
+- Action 1170: source immediate pre-clear revalidation attempt 1: end exact row count check
+- Action 1171: source immediate pre-clear revalidation attempt 1: %archive_preclear_sender(#) must equal one
+- Action 1172: source immediate pre-clear revalidation attempt 1: invalidate exact row count
+- Action 1173: source immediate pre-clear revalidation attempt 1: end exact row count check
+- Action 1174: source immediate pre-clear revalidation attempt 1: %archive_preclear_message(#) must equal one
+- Action 1175: source immediate pre-clear revalidation attempt 1: invalidate exact row count
+- Action 1176: source immediate pre-clear revalidation attempt 1: end exact row count check
+- Action 1177: source immediate pre-clear revalidation attempt 1: %archive_preclear_status(#) must equal one
+- Action 1178: source immediate pre-clear revalidation attempt 1: invalidate exact row count
+- Action 1179: source immediate pre-clear revalidation attempt 1: end exact row count check
+- Action 1180: source immediate pre-clear revalidation attempt 1: %archive_preclear_reply(#) must equal one
+- Action 1181: source immediate pre-clear revalidation attempt 1: invalidate exact row count
+- Action 1182: source immediate pre-clear revalidation attempt 1: end exact row count check
+- Action 1183: source immediate pre-clear revalidation attempt 1: %archive_preclear_touch(#) must equal one
+- Action 1184: source immediate pre-clear revalidation attempt 1: invalidate exact row count
+- Action 1185: source immediate pre-clear revalidation attempt 1: end exact row count check
+- Action 1186: source immediate pre-clear revalidation attempt 1: %archive_preclear_button(#) must equal one
+- Action 1187: source immediate pre-clear revalidation attempt 1: invalidate exact row count
+- Action 1188: source immediate pre-clear revalidation attempt 1: end exact row count check
+- Action 1189: source immediate pre-clear revalidation attempt 1: %archive_preclear_time(#) must equal one
+- Action 1190: source immediate pre-clear revalidation attempt 1: invalidate exact row count
+- Action 1191: source immediate pre-clear revalidation attempt 1: end exact row count check
+- Action 1192: source immediate pre-clear revalidation attempt 1: %archive_preclear_ticker(#) must equal one
+- Action 1193: source immediate pre-clear revalidation attempt 1: invalidate exact row count
+- Action 1194: source immediate pre-clear revalidation attempt 1: end exact row count check
+- Action 1195: source immediate pre-clear revalidation: end output validation attempt 1
+- Action 1196: source immediate pre-clear revalidation: enter single retry only after first failure
+- Action 1197: source immediate pre-clear revalidation: three second wait before only retry
+- Action 1198: source immediate pre-clear revalidation attempt 2: clear %archive_preclear_id()
+- Action 1199: source immediate pre-clear revalidation attempt 2: clear %archive_preclear_sender()
+- Action 1200: source immediate pre-clear revalidation attempt 2: clear %archive_preclear_message()
+- Action 1201: source immediate pre-clear revalidation attempt 2: clear %archive_preclear_status()
+- Action 1202: source immediate pre-clear revalidation attempt 2: clear %archive_preclear_reply()
+- Action 1203: source immediate pre-clear revalidation attempt 2: clear %archive_preclear_touch()
+- Action 1204: source immediate pre-clear revalidation attempt 2: clear %archive_preclear_button()
+- Action 1205: source immediate pre-clear revalidation attempt 2: clear %archive_preclear_time()
+- Action 1206: source immediate pre-clear revalidation attempt 2: clear %archive_preclear_ticker()
+- Action 1207: source immediate pre-clear revalidation attempt 2: clear %err
+- Action 1208: source immediate pre-clear revalidation attempt 2: clear %errmsg
+- Action 1209: source immediate pre-clear revalidation: AutoSheets Get Data attempt 2
+- Action 1210: source immediate pre-clear revalidation: numeric plugin error attempt 2
+- Action 1211: source immediate pre-clear revalidation: preserve plugin error attempt 2
+- Action 1212: source immediate pre-clear revalidation: mark attempt 2 failed
+- Action 1213: source immediate pre-clear revalidation: plugin returned without numeric error attempt 2
+- Action 1214: source immediate pre-clear revalidation: provisional attempt 2 success
+- Action 1215: source immediate pre-clear revalidation: end plugin result attempt 2
+- Action 1216: source immediate pre-clear revalidation: validate attempt 2 outputs
+- Action 1217: source immediate pre-clear revalidation attempt 2: %archive_preclear_id(#) must equal one
+- Action 1218: source immediate pre-clear revalidation attempt 2: invalidate exact row count
+- Action 1219: source immediate pre-clear revalidation attempt 2: end exact row count check
+- Action 1220: source immediate pre-clear revalidation attempt 2: %archive_preclear_sender(#) must equal one
+- Action 1221: source immediate pre-clear revalidation attempt 2: invalidate exact row count
+- Action 1222: source immediate pre-clear revalidation attempt 2: end exact row count check
+- Action 1223: source immediate pre-clear revalidation attempt 2: %archive_preclear_message(#) must equal one
+- Action 1224: source immediate pre-clear revalidation attempt 2: invalidate exact row count
+- Action 1225: source immediate pre-clear revalidation attempt 2: end exact row count check
+- Action 1226: source immediate pre-clear revalidation attempt 2: %archive_preclear_status(#) must equal one
+- Action 1227: source immediate pre-clear revalidation attempt 2: invalidate exact row count
+- Action 1228: source immediate pre-clear revalidation attempt 2: end exact row count check
+- Action 1229: source immediate pre-clear revalidation attempt 2: %archive_preclear_reply(#) must equal one
+- Action 1230: source immediate pre-clear revalidation attempt 2: invalidate exact row count
+- Action 1231: source immediate pre-clear revalidation attempt 2: end exact row count check
+- Action 1232: source immediate pre-clear revalidation attempt 2: %archive_preclear_touch(#) must equal one
+- Action 1233: source immediate pre-clear revalidation attempt 2: invalidate exact row count
+- Action 1234: source immediate pre-clear revalidation attempt 2: end exact row count check
+- Action 1235: source immediate pre-clear revalidation attempt 2: %archive_preclear_button(#) must equal one
+- Action 1236: source immediate pre-clear revalidation attempt 2: invalidate exact row count
+- Action 1237: source immediate pre-clear revalidation attempt 2: end exact row count check
+- Action 1238: source immediate pre-clear revalidation attempt 2: %archive_preclear_time(#) must equal one
+- Action 1239: source immediate pre-clear revalidation attempt 2: invalidate exact row count
+- Action 1240: source immediate pre-clear revalidation attempt 2: end exact row count check
+- Action 1241: source immediate pre-clear revalidation attempt 2: %archive_preclear_ticker(#) must equal one
+- Action 1242: source immediate pre-clear revalidation attempt 2: invalidate exact row count
+- Action 1243: source immediate pre-clear revalidation attempt 2: end exact row count check
+- Action 1244: source immediate pre-clear revalidation: end output validation attempt 2
+- Action 1245: source immediate pre-clear revalidation: close single retry wrapper
+- Action 1246: pre-clear: source re-read failure
+- Action 1247: pre-clear: set failure
+- Action 1248: pre-clear: set deterministic result
+- Action 1249: pre-clear: preserve final error locally
+- Action 1250: pre-clear: stop later side effects
+- Action 1251: pre-clear: end source re-read failure
+- Action 1252: pre-clear: compare exact bound A:I
+- Action 1253: pre-clear: initialize exact match
+- Action 1254: pre-clear: compare id: exact compare
+- Action 1255: pre-clear: compare id: exact compare mismatch
+- Action 1256: pre-clear: compare id: end exact compare
+- Action 1257: pre-clear: compare sender: exact compare
+- Action 1258: pre-clear: compare sender: exact compare mismatch
+- Action 1259: pre-clear: compare sender: end exact compare
+- Action 1260: pre-clear: compare message: exact compare
+- Action 1261: pre-clear: compare message: exact compare mismatch
+- Action 1262: pre-clear: compare message: end exact compare
+- Action 1263: pre-clear: compare status: exact compare
+- Action 1264: pre-clear: compare status: exact compare mismatch
+- Action 1265: pre-clear: compare status: end exact compare
+- Action 1266: pre-clear: compare reply: exact compare
+- Action 1267: pre-clear: compare reply: exact compare mismatch
+- Action 1268: pre-clear: compare reply: end exact compare
+- Action 1269: pre-clear: compare touch: exact compare
+- Action 1270: pre-clear: compare touch: exact compare mismatch
+- Action 1271: pre-clear: compare touch: end exact compare
+- Action 1272: pre-clear: compare button: exact compare
+- Action 1273: pre-clear: compare button: exact compare mismatch
+- Action 1274: pre-clear: compare button: end exact compare
+- Action 1275: pre-clear: compare time: exact compare
+- Action 1276: pre-clear: compare time: exact compare mismatch
+- Action 1277: pre-clear: compare time: end exact compare
+- Action 1278: pre-clear: compare ticker: exact compare
+- Action 1279: pre-clear: compare ticker: exact compare mismatch
+- Action 1280: pre-clear: compare ticker: end exact compare
+- Action 1281: pre-clear: status must still be DONE
+- Action 1282: pre-clear: status changed
+- Action 1283: pre-clear: end DONE check
+- Action 1284: pre-clear: source changed after copy
+- Action 1285: pre-clear: set failure
+- Action 1286: pre-clear: set deterministic result
+- Action 1287: pre-clear: preserve final error locally
+- Action 1288: pre-clear: stop later side effects
+- Action 1289: pre-clear: end source changed check
+- Action 1290: pre-clear: end exact compare
+- Action 1291: pre-clear: end source revalidation
+- Action 1292: source clear: verified copy and stable source required
+- Action 1293: Sheet1 exact A:I clear: initialize update result
+- Action 1294: Sheet1 exact A:I clear attempt 1: clear %err
+- Action 1295: Sheet1 exact A:I clear attempt 1: clear %errmsg
+- Action 1296: Sheet1 exact A:I clear: AutoSheets Update Data attempt 1
+- Action 1297: Sheet1 exact A:I clear: numeric plugin error attempt 1
+- Action 1298: Sheet1 exact A:I clear: preserve update error attempt 1
+- Action 1299: Sheet1 exact A:I clear: mark update attempt 1 failed
+- Action 1300: Sheet1 exact A:I clear: update returned without numeric error attempt 1
+- Action 1301: Sheet1 exact A:I clear: update attempt 1 success
+- Action 1302: Sheet1 exact A:I clear: end update result attempt 1
+- Action 1303: Sheet1 exact A:I clear: enter single retry only after first failure
+- Action 1304: Sheet1 exact A:I clear: three second wait before only retry
+- Action 1305: Sheet1 exact A:I clear attempt 2: clear %err
+- Action 1306: Sheet1 exact A:I clear attempt 2: clear %errmsg
+- Action 1307: Sheet1 exact A:I clear: AutoSheets Update Data attempt 2
+- Action 1308: Sheet1 exact A:I clear: numeric plugin error attempt 2
+- Action 1309: Sheet1 exact A:I clear: preserve update error attempt 2
+- Action 1310: Sheet1 exact A:I clear: mark update attempt 2 failed
+- Action 1311: Sheet1 exact A:I clear: update returned without numeric error attempt 2
+- Action 1312: Sheet1 exact A:I clear: update attempt 2 success
+- Action 1313: Sheet1 exact A:I clear: end update result attempt 2
+- Action 1314: Sheet1 exact A:I clear: close single retry wrapper
+- Action 1315: source clear: clear update final failure
+- Action 1316: source clear: set failure
+- Action 1317: source clear: set deterministic result
+- Action 1318: source clear: preserve final error locally
+- Action 1319: source clear: stop later side effects
+- Action 1320: source clear: end clear update failure
+- Action 1321: source clear: read back exact A:I
+- Action 1322: Sheet1 clear exact readback: initialize operation result
+- Action 1323: Sheet1 clear exact readback attempt 1: clear %archive_clear_id()
+- Action 1324: Sheet1 clear exact readback attempt 1: clear %archive_clear_sender()
+- Action 1325: Sheet1 clear exact readback attempt 1: clear %archive_clear_message()
+- Action 1326: Sheet1 clear exact readback attempt 1: clear %archive_clear_status()
+- Action 1327: Sheet1 clear exact readback attempt 1: clear %archive_clear_reply()
+- Action 1328: Sheet1 clear exact readback attempt 1: clear %archive_clear_touch()
+- Action 1329: Sheet1 clear exact readback attempt 1: clear %archive_clear_button()
+- Action 1330: Sheet1 clear exact readback attempt 1: clear %archive_clear_time()
+- Action 1331: Sheet1 clear exact readback attempt 1: clear %archive_clear_ticker()
+- Action 1332: Sheet1 clear exact readback attempt 1: clear %err
+- Action 1333: Sheet1 clear exact readback attempt 1: clear %errmsg
+- Action 1334: Sheet1 clear exact readback: AutoSheets Get Data attempt 1
+- Action 1335: Sheet1 clear exact readback: numeric plugin error attempt 1
+- Action 1336: Sheet1 clear exact readback: preserve plugin error attempt 1
+- Action 1337: Sheet1 clear exact readback: mark attempt 1 failed
+- Action 1338: Sheet1 clear exact readback: plugin returned without numeric error attempt 1
+- Action 1339: Sheet1 clear exact readback: provisional attempt 1 success
+- Action 1340: Sheet1 clear exact readback: end plugin result attempt 1
+- Action 1341: Sheet1 clear exact readback: validate attempt 1 outputs
+- Action 1342: Sheet1 clear exact readback attempt 1: %archive_clear_id(#) must be zero or one
+- Action 1343: Sheet1 clear exact readback attempt 1: invalidate structural row count
+- Action 1344: Sheet1 clear exact readback attempt 1: end structural row count check
+- Action 1345: Sheet1 clear exact readback attempt 1: %archive_clear_sender(#) must be zero or one
+- Action 1346: Sheet1 clear exact readback attempt 1: invalidate structural row count
+- Action 1347: Sheet1 clear exact readback attempt 1: end structural row count check
+- Action 1348: Sheet1 clear exact readback attempt 1: %archive_clear_message(#) must be zero or one
+- Action 1349: Sheet1 clear exact readback attempt 1: invalidate structural row count
+- Action 1350: Sheet1 clear exact readback attempt 1: end structural row count check
+- Action 1351: Sheet1 clear exact readback attempt 1: %archive_clear_status(#) must be zero or one
+- Action 1352: Sheet1 clear exact readback attempt 1: invalidate structural row count
+- Action 1353: Sheet1 clear exact readback attempt 1: end structural row count check
+- Action 1354: Sheet1 clear exact readback attempt 1: %archive_clear_reply(#) must be zero or one
+- Action 1355: Sheet1 clear exact readback attempt 1: invalidate structural row count
+- Action 1356: Sheet1 clear exact readback attempt 1: end structural row count check
+- Action 1357: Sheet1 clear exact readback attempt 1: %archive_clear_touch(#) must be zero or one
+- Action 1358: Sheet1 clear exact readback attempt 1: invalidate structural row count
+- Action 1359: Sheet1 clear exact readback attempt 1: end structural row count check
+- Action 1360: Sheet1 clear exact readback attempt 1: %archive_clear_button(#) must be zero or one
+- Action 1361: Sheet1 clear exact readback attempt 1: invalidate structural row count
+- Action 1362: Sheet1 clear exact readback attempt 1: end structural row count check
+- Action 1363: Sheet1 clear exact readback attempt 1: %archive_clear_time(#) must be zero or one
+- Action 1364: Sheet1 clear exact readback attempt 1: invalidate structural row count
+- Action 1365: Sheet1 clear exact readback attempt 1: end structural row count check
+- Action 1366: Sheet1 clear exact readback attempt 1: %archive_clear_ticker(#) must be zero or one
+- Action 1367: Sheet1 clear exact readback attempt 1: invalidate structural row count
+- Action 1368: Sheet1 clear exact readback attempt 1: end structural row count check
+- Action 1369: Sheet1 clear exact readback: end output validation attempt 1
+- Action 1370: Sheet1 clear exact readback: enter single retry only after first failure
+- Action 1371: Sheet1 clear exact readback: three second wait before only retry
+- Action 1372: Sheet1 clear exact readback attempt 2: clear %archive_clear_id()
+- Action 1373: Sheet1 clear exact readback attempt 2: clear %archive_clear_sender()
+- Action 1374: Sheet1 clear exact readback attempt 2: clear %archive_clear_message()
+- Action 1375: Sheet1 clear exact readback attempt 2: clear %archive_clear_status()
+- Action 1376: Sheet1 clear exact readback attempt 2: clear %archive_clear_reply()
+- Action 1377: Sheet1 clear exact readback attempt 2: clear %archive_clear_touch()
+- Action 1378: Sheet1 clear exact readback attempt 2: clear %archive_clear_button()
+- Action 1379: Sheet1 clear exact readback attempt 2: clear %archive_clear_time()
+- Action 1380: Sheet1 clear exact readback attempt 2: clear %archive_clear_ticker()
+- Action 1381: Sheet1 clear exact readback attempt 2: clear %err
+- Action 1382: Sheet1 clear exact readback attempt 2: clear %errmsg
+- Action 1383: Sheet1 clear exact readback: AutoSheets Get Data attempt 2
+- Action 1384: Sheet1 clear exact readback: numeric plugin error attempt 2
+- Action 1385: Sheet1 clear exact readback: preserve plugin error attempt 2
+- Action 1386: Sheet1 clear exact readback: mark attempt 2 failed
+- Action 1387: Sheet1 clear exact readback: plugin returned without numeric error attempt 2
+- Action 1388: Sheet1 clear exact readback: provisional attempt 2 success
+- Action 1389: Sheet1 clear exact readback: end plugin result attempt 2
+- Action 1390: Sheet1 clear exact readback: validate attempt 2 outputs
+- Action 1391: Sheet1 clear exact readback attempt 2: %archive_clear_id(#) must be zero or one
+- Action 1392: Sheet1 clear exact readback attempt 2: invalidate structural row count
+- Action 1393: Sheet1 clear exact readback attempt 2: end structural row count check
+- Action 1394: Sheet1 clear exact readback attempt 2: %archive_clear_sender(#) must be zero or one
+- Action 1395: Sheet1 clear exact readback attempt 2: invalidate structural row count
+- Action 1396: Sheet1 clear exact readback attempt 2: end structural row count check
+- Action 1397: Sheet1 clear exact readback attempt 2: %archive_clear_message(#) must be zero or one
+- Action 1398: Sheet1 clear exact readback attempt 2: invalidate structural row count
+- Action 1399: Sheet1 clear exact readback attempt 2: end structural row count check
+- Action 1400: Sheet1 clear exact readback attempt 2: %archive_clear_status(#) must be zero or one
+- Action 1401: Sheet1 clear exact readback attempt 2: invalidate structural row count
+- Action 1402: Sheet1 clear exact readback attempt 2: end structural row count check
+- Action 1403: Sheet1 clear exact readback attempt 2: %archive_clear_reply(#) must be zero or one
+- Action 1404: Sheet1 clear exact readback attempt 2: invalidate structural row count
+- Action 1405: Sheet1 clear exact readback attempt 2: end structural row count check
+- Action 1406: Sheet1 clear exact readback attempt 2: %archive_clear_touch(#) must be zero or one
+- Action 1407: Sheet1 clear exact readback attempt 2: invalidate structural row count
+- Action 1408: Sheet1 clear exact readback attempt 2: end structural row count check
+- Action 1409: Sheet1 clear exact readback attempt 2: %archive_clear_button(#) must be zero or one
+- Action 1410: Sheet1 clear exact readback attempt 2: invalidate structural row count
+- Action 1411: Sheet1 clear exact readback attempt 2: end structural row count check
+- Action 1412: Sheet1 clear exact readback attempt 2: %archive_clear_time(#) must be zero or one
+- Action 1413: Sheet1 clear exact readback attempt 2: invalidate structural row count
+- Action 1414: Sheet1 clear exact readback attempt 2: end structural row count check
+- Action 1415: Sheet1 clear exact readback attempt 2: %archive_clear_ticker(#) must be zero or one
+- Action 1416: Sheet1 clear exact readback attempt 2: invalidate structural row count
+- Action 1417: Sheet1 clear exact readback attempt 2: end structural row count check
+- Action 1418: Sheet1 clear exact readback: end output validation attempt 2
+- Action 1419: Sheet1 clear exact readback: close single retry wrapper
+- Action 1420: source clear: readback failure
+- Action 1421: source clear: set failure
+- Action 1422: source clear: set deterministic result
+- Action 1423: source clear: preserve final error locally
+- Action 1424: source clear: stop later side effects
+- Action 1425: source clear: end readback failure
+- Action 1426: source clear: require all nine cells blank
+- Action 1427: source clear: assume blank
+- Action 1428: source clear: detect retained value in archive_clear_id
+- Action 1429: source clear: not blank from archive_clear_id
+- Action 1430: source clear: end retained value archive_clear_id
+- Action 1431: source clear: detect retained value in archive_clear_sender
+- Action 1432: source clear: not blank from archive_clear_sender
+- Action 1433: source clear: end retained value archive_clear_sender
+- Action 1434: source clear: detect retained value in archive_clear_message
+- Action 1435: source clear: not blank from archive_clear_message
+- Action 1436: source clear: end retained value archive_clear_message
+- Action 1437: source clear: detect retained value in archive_clear_status
+- Action 1438: source clear: not blank from archive_clear_status
+- Action 1439: source clear: end retained value archive_clear_status
+- Action 1440: source clear: detect retained value in archive_clear_reply
+- Action 1441: source clear: not blank from archive_clear_reply
+- Action 1442: source clear: end retained value archive_clear_reply
+- Action 1443: source clear: detect retained value in archive_clear_touch
+- Action 1444: source clear: not blank from archive_clear_touch
+- Action 1445: source clear: end retained value archive_clear_touch
+- Action 1446: source clear: detect retained value in archive_clear_button
+- Action 1447: source clear: not blank from archive_clear_button
+- Action 1448: source clear: end retained value archive_clear_button
+- Action 1449: source clear: detect retained value in archive_clear_time
+- Action 1450: source clear: not blank from archive_clear_time
+- Action 1451: source clear: end retained value archive_clear_time
+- Action 1452: source clear: detect retained value in archive_clear_ticker
+- Action 1453: source clear: not blank from archive_clear_ticker
+- Action 1454: source clear: end retained value archive_clear_ticker
+- Action 1455: source clear: exact A:I not blank
+- Action 1456: source clear: set failure
+- Action 1457: source clear: set deterministic result
+- Action 1458: source clear: preserve final error locally
+- Action 1459: source clear: stop later side effects
+- Action 1460: source clear: exact blank readback confirmed
+- Action 1461: source clear: success failure flag
+- Action 1462: source clear: success result
+- Action 1463: source clear: success detail
+- Action 1464: source clear: transaction complete
+- Action 1465: source clear: end blank decision
+- Action 1466: source clear: end blank inspection
+- Action 1467: source clear: end exact readback
+- Action 1468: source clear: end clear stage
+- Action 1469: lock release: owned lock only
+- Action 1470: lock release: release Archive lock
+- Action 1471: lock release: clear acquisition time
+- Action 1472: lock release: clear local ownership
+- Action 1473: lock release: end owned release
+- Action 1474: finalize: publish final Archive detail
+- Action 1475: finalize: restore final Archive detail after release
+- Action 1476: finalize: stop after exact one-row transaction

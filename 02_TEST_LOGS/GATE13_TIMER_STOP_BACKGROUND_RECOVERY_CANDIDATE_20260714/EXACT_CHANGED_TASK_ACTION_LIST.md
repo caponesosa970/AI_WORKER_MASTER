@@ -1,0 +1,714 @@
+# Gate 13 Exact Changed Task and Action List
+
+Only the following existing tasks changed: 13, 72, 130, 131, 132, 183, 210, and 224.
+New tasks: 228 and 229. Changed profiles: 134 and 135 only.
+
+## Task 13
+
+- Action 0: watchdog: no hold by default
+- Action 1: watchdog: current time
+- Action 2: watchdog WORKER_BUSY: active
+- Action 3: watchdog WORKER_BUSY: block queue
+- Action 4: watchdog WORKER_BUSY: timestamp present
+- Action 5: watchdog WORKER_BUSY: age
+- Action 6: watchdog WORKER_BUSY: stale
+- Action 7: watchdog WORKER_BUSY: stale hold
+- Action 8: watchdog WORKER_BUSY: active not stale
+- Action 9: watchdog WORKER_BUSY: active hold
+- Action 10: watchdog WORKER_BUSY: end age
+- Action 11: watchdog WORKER_BUSY: missing timestamp
+- Action 12: watchdog WORKER_BUSY: missing timestamp hold
+- Action 13: watchdog WORKER_BUSY: end timestamp
+- Action 14: watchdog WORKER_BUSY: end active
+- Action 15: watchdog PROCESSING: active
+- Action 16: watchdog PROCESSING: block queue
+- Action 17: watchdog PROCESSING: timestamp present
+- Action 18: watchdog PROCESSING: age
+- Action 19: watchdog PROCESSING: stale
+- Action 20: watchdog PROCESSING: stale hold
+- Action 21: watchdog PROCESSING: active not stale
+- Action 22: watchdog PROCESSING: active hold
+- Action 23: watchdog PROCESSING: end age
+- Action 24: watchdog PROCESSING: missing timestamp
+- Action 25: watchdog PROCESSING: missing timestamp hold
+- Action 26: watchdog PROCESSING: end timestamp
+- Action 27: watchdog PROCESSING: end active
+- Action 28: watchdog SENDING: active
+- Action 29: watchdog SENDING: block queue
+- Action 30: watchdog SENDING: timestamp present
+- Action 31: watchdog SENDING: age
+- Action 32: watchdog SENDING: stale
+- Action 33: watchdog SENDING: stale hold
+- Action 34: watchdog SENDING: active not stale
+- Action 35: watchdog SENDING: active hold
+- Action 36: watchdog SENDING: end age
+- Action 37: watchdog SENDING: missing timestamp
+- Action 38: watchdog SENDING: missing timestamp hold
+- Action 39: watchdog SENDING: end timestamp
+- Action 40: watchdog SENDING: end active
+- Action 41: watchdog CONFIRMING: active
+- Action 42: watchdog CONFIRMING: block queue
+- Action 43: watchdog CONFIRMING: timestamp present
+- Action 44: watchdog CONFIRMING: age
+- Action 45: watchdog CONFIRMING: stale
+- Action 46: watchdog CONFIRMING: stale hold
+- Action 47: watchdog CONFIRMING: active not stale
+- Action 48: watchdog CONFIRMING: active hold
+- Action 49: watchdog CONFIRMING: end age
+- Action 50: watchdog CONFIRMING: missing timestamp
+- Action 51: watchdog CONFIRMING: missing timestamp hold
+- Action 52: watchdog CONFIRMING: end timestamp
+- Action 53: watchdog CONFIRMING: end active
+- Action 54: watchdog ARCHIVING: active
+- Action 55: watchdog ARCHIVING: block queue
+- Action 56: watchdog ARCHIVING: timestamp present
+- Action 57: watchdog ARCHIVING: age
+- Action 58: watchdog ARCHIVING: stale
+- Action 59: watchdog ARCHIVING: stale hold
+- Action 60: watchdog ARCHIVING: active not stale
+- Action 61: watchdog ARCHIVING: active hold
+- Action 62: watchdog ARCHIVING: end age
+- Action 63: watchdog ARCHIVING: missing timestamp
+- Action 64: watchdog ARCHIVING: missing timestamp hold
+- Action 65: watchdog ARCHIVING: end timestamp
+- Action 66: watchdog ARCHIVING: end active
+- Action 67: watchdog TICK: active
+- Action 68: watchdog TICK: block queue
+- Action 69: watchdog TICK: timestamp present
+- Action 70: watchdog TICK: age
+- Action 71: watchdog TICK: stale
+- Action 72: watchdog TICK: stale hold
+- Action 73: watchdog TICK: active not stale
+- Action 74: watchdog TICK: active hold
+- Action 75: watchdog TICK: end age
+- Action 76: watchdog TICK: missing timestamp
+- Action 77: watchdog TICK: missing timestamp hold
+- Action 78: watchdog TICK: end timestamp
+- Action 79: watchdog TICK: end active
+- Action 80: watchdog RETRYING: unsupported active lock
+- Action 81: watchdog RETRYING: block queue
+- Action 82: watchdog RETRYING: hold
+- Action 83: watchdog RETRYING: end
+- Action 84: watchdog DEADARCHIVE: unsupported active lock
+- Action 85: watchdog DEADARCHIVE: block queue
+- Action 86: watchdog DEADARCHIVE: hold
+- Action 87: watchdog DEADARCHIVE: end
+- Action 88: watchdog COMPACTOR: unsupported active lock
+- Action 89: watchdog COMPACTOR: block queue
+- Action 90: watchdog COMPACTOR: hold
+- Action 91: watchdog COMPACTOR: end
+- Action 92: watchdog: no lock hold
+- Action 93: watchdog: safe result
+- Action 94: watchdog: end safe result
+- Action 95: watchdog: read-only stop
+
+## Task 72
+
+- Action 0: timer profile: one guarded tick
+
+## Task 130
+
+- Action 0: start: initial result
+- Action 1: start: recovery before arming
+- Action 2: start: recovery did not prove safe
+- Action 3: start hold: timer profile disabled
+- Action 4: start hold: trigger profile disabled
+- Action 5: start hold: boot process profile disabled
+- Action 6: start hold: boot send profile disabled
+- Action 7: start hold: worker off
+- Action 8: start hold: timer off
+- Action 9: start hold: stop requested
+- Action 10: start hold: result
+- Action 11: start hold: stop
+- Action 12: start: end recovery hold
+- Action 13: start: load existing configuration
+- Action 14: start: verify existing Sheet view
+- Action 15: start: Sheet view guard failed
+- Action 16: start sheet hold: timer disabled
+- Action 17: start sheet hold: trigger disabled
+- Action 18: start sheet hold: worker off
+- Action 19: start sheet hold: timer off
+- Action 20: start sheet hold: stopped
+- Action 21: start sheet hold: result
+- Action 22: start sheet hold: stop
+- Action 23: start: end Sheet hold
+- Action 24: start: environment readiness missing
+- Action 25: start: environment hold result
+- Action 26: start: environment hold error
+- Action 27: start: stop on environment hold
+- Action 28: start: end environment hold
+- Action 29: start: screen must be on
+- Action 30: start: screen hold result
+- Action 31: start: stop on screen hold
+- Action 32: start: end screen hold
+- Action 33: start: keyguard must be off
+- Action 34: start: keyguard hold result
+- Action 35: start: stop on keyguard hold
+- Action 36: start: end keyguard hold
+- Action 37: start: clear STOP before profile enable
+- Action 38: start: arm worker before scheduled tick
+- Action 39: start: arm timer before scheduled tick
+- Action 40: start: no inherited recursion
+- Action 41: start: keep boot process profile disabled
+- Action 42: start: keep boot send profile disabled
+- Action 43: start: enable intended TextNow trigger
+- Action 44: start: enable intended two-minute timer
+- Action 45: start: success result
+- Action 46: start: success detail
+- Action 47: start: stop without immediate queue cycle
+
+## Task 131
+
+- Action 0: stop order 1: disable timer profile
+- Action 1: stop order 2: disable TextNow trigger profile
+- Action 2: stop order 3: disable boot process profile
+- Action 3: stop order 4: disable boot send profile
+- Action 4: stop order 5: block new work
+- Action 5: stop order 6: worker off
+- Action 6: stop order 7: timer off
+- Action 7: stop order 8: no recursion
+- Action 8: stop: default clean
+- Action 9: stop: no active owned transaction
+- Action 10: stop: at least one transaction active
+- Action 11: stop: pending transaction result
+- Action 12: stop: end transaction check
+- Action 13: stop: expose result
+- Action 14: stop: preserve result
+- Action 15: stop: never clear transaction locks
+
+## Task 132
+
+- Action 0: manual: one guarded tick
+
+## Task 183
+
+- Action 0: recovery wrapper: stop future triggers first
+- Action 1: recovery wrapper: bounded safe recovery
+- Action 2: recovery wrapper: status snapshot only
+- Action 3: recovery wrapper: stop
+
+## Task 210
+
+- Action 0: watchdog lite: default clear
+- Action 1: watchdog lite: default no full
+- Action 2: watchdog lite: detect %AIWorkerBusy
+- Action 3: watchdog lite: full required for %AIWorkerBusy
+- Action 4: watchdog lite: end %AIWorkerBusy
+- Action 5: watchdog lite: detect %AIWProcessing
+- Action 6: watchdog lite: full required for %AIWProcessing
+- Action 7: watchdog lite: end %AIWProcessing
+- Action 8: watchdog lite: detect %AIWSending
+- Action 9: watchdog lite: full required for %AIWSending
+- Action 10: watchdog lite: end %AIWSending
+- Action 11: watchdog lite: detect %AIWConfirming
+- Action 12: watchdog lite: full required for %AIWConfirming
+- Action 13: watchdog lite: end %AIWConfirming
+- Action 14: watchdog lite: detect %AIWArchiving
+- Action 15: watchdog lite: full required for %AIWArchiving
+- Action 16: watchdog lite: end %AIWArchiving
+- Action 17: watchdog lite: detect %AIWRetrying
+- Action 18: watchdog lite: full required for %AIWRetrying
+- Action 19: watchdog lite: end %AIWRetrying
+- Action 20: watchdog lite: detect %AIWDeadArchiving
+- Action 21: watchdog lite: full required for %AIWDeadArchiving
+- Action 22: watchdog lite: end %AIWDeadArchiving
+- Action 23: watchdog lite: detect %AIWCompacting
+- Action 24: watchdog lite: full required for %AIWCompacting
+- Action 25: watchdog lite: end %AIWCompacting
+- Action 26: watchdog lite: detect %AIWLiveTickRunning
+- Action 27: watchdog lite: full required for %AIWLiveTickRunning
+- Action 28: watchdog lite: end %AIWLiveTickRunning
+- Action 29: watchdog lite: invoke read-only full watchdog
+- Action 30: watchdog lite: one read-only full call
+- Action 31: watchdog lite: no active locks
+- Action 32: watchdog lite: safe result
+- Action 33: watchdog lite: end full decision
+- Action 34: watchdog lite: stop
+
+## Task 224
+
+- Action 0: launcher: require explicit arm
+- Action 1: launcher: not armed result
+- Action 2: launcher: not armed error
+- Action 3: launcher: stop unarmed
+- Action 4: launcher: end arm check
+- Action 5: launcher: consume authorization immediately
+- Action 6: launcher: environment readiness missing
+- Action 7: launcher: environment hold result
+- Action 8: launcher: stop environment hold
+- Action 9: launcher: end environment hold
+- Action 10: launcher: screen must be on
+- Action 11: launcher: screen hold result
+- Action 12: launcher: stop screen hold
+- Action 13: launcher: end screen hold
+- Action 14: launcher: keyguard must be off
+- Action 15: launcher: keyguard hold result
+- Action 16: launcher: stop keyguard hold
+- Action 17: launcher: end keyguard hold
+- Action 18: launcher: arm one-shot cleanup
+- Action 19: launcher: clear STOP for one shot
+- Action 20: launcher: arm worker for one shot
+- Action 21: launcher: arm timer for one shot
+- Action 22: launcher: no recursion
+- Action 23: launcher: armed result
+- Action 24: launcher: enable only two-minute timer profile
+- Action 25: launcher: asynchronous result returned by global after tick
+
+## Task 228
+
+- Action 0: entry: default runnable
+- Action 1: entry: initial result
+- Action 2: entry: start timestamp
+- Action 3: entry: clear end timestamp
+- Action 4: entry: clear duration
+- Action 5: caller: not timer token
+- Action 6: caller: not manual token
+- Action 7: caller: reject result
+- Action 8: caller: reject error
+- Action 9: caller: block
+- Action 10: caller: end manual check
+- Action 11: caller: end timer check
+- Action 12: guard TICK_SKIPPED_WORKER_OFF: still runnable
+- Action 13: guard TICK_SKIPPED_WORKER_OFF: condition
+- Action 14: guard TICK_SKIPPED_WORKER_OFF: result
+- Action 15: guard TICK_SKIPPED_WORKER_OFF: error
+- Action 16: guard TICK_SKIPPED_WORKER_OFF: block
+- Action 17: guard TICK_SKIPPED_WORKER_OFF: end
+- Action 18: guard TICK_SKIPPED_WORKER_OFF: end runnable
+- Action 19: guard TICK_SKIPPED_TIMER_OFF: still runnable
+- Action 20: guard TICK_SKIPPED_TIMER_OFF: condition
+- Action 21: guard TICK_SKIPPED_TIMER_OFF: result
+- Action 22: guard TICK_SKIPPED_TIMER_OFF: error
+- Action 23: guard TICK_SKIPPED_TIMER_OFF: block
+- Action 24: guard TICK_SKIPPED_TIMER_OFF: end
+- Action 25: guard TICK_SKIPPED_TIMER_OFF: end runnable
+- Action 26: guard TICK_SKIPPED_STOPPED: still runnable
+- Action 27: guard TICK_SKIPPED_STOPPED: condition
+- Action 28: guard TICK_SKIPPED_STOPPED: result
+- Action 29: guard TICK_SKIPPED_STOPPED: error
+- Action 30: guard TICK_SKIPPED_STOPPED: block
+- Action 31: guard TICK_SKIPPED_STOPPED: end
+- Action 32: guard TICK_SKIPPED_STOPPED: end runnable
+- Action 33: guard TICK_SKIPPED_ENVIRONMENT_UNVERIFIED: still runnable
+- Action 34: guard TICK_SKIPPED_ENVIRONMENT_UNVERIFIED: condition
+- Action 35: guard TICK_SKIPPED_ENVIRONMENT_UNVERIFIED: result
+- Action 36: guard TICK_SKIPPED_ENVIRONMENT_UNVERIFIED: error
+- Action 37: guard TICK_SKIPPED_ENVIRONMENT_UNVERIFIED: block
+- Action 38: guard TICK_SKIPPED_ENVIRONMENT_UNVERIFIED: end
+- Action 39: guard TICK_SKIPPED_ENVIRONMENT_UNVERIFIED: end runnable
+- Action 40: guard TICK_SKIPPED_SCREEN_OFF: still runnable
+- Action 41: guard TICK_SKIPPED_SCREEN_OFF: condition
+- Action 42: guard TICK_SKIPPED_SCREEN_OFF: result
+- Action 43: guard TICK_SKIPPED_SCREEN_OFF: error
+- Action 44: guard TICK_SKIPPED_SCREEN_OFF: block
+- Action 45: guard TICK_SKIPPED_SCREEN_OFF: end
+- Action 46: guard TICK_SKIPPED_SCREEN_OFF: end runnable
+- Action 47: guard TICK_SKIPPED_KEYGUARD: still runnable
+- Action 48: guard TICK_SKIPPED_KEYGUARD: condition
+- Action 49: guard TICK_SKIPPED_KEYGUARD: result
+- Action 50: guard TICK_SKIPPED_KEYGUARD: error
+- Action 51: guard TICK_SKIPPED_KEYGUARD: block
+- Action 52: guard TICK_SKIPPED_KEYGUARD: end
+- Action 53: guard TICK_SKIPPED_KEYGUARD: end runnable
+- Action 54: lock %AIWLiveTickRunning: still runnable
+- Action 55: lock %AIWLiveTickRunning: condition
+- Action 56: lock %AIWLiveTickRunning: result
+- Action 57: lock %AIWLiveTickRunning: error
+- Action 58: lock %AIWLiveTickRunning: block
+- Action 59: lock %AIWLiveTickRunning: end
+- Action 60: lock %AIWLiveTickRunning: end runnable
+- Action 61: lock %AIWorkerBusy: still runnable
+- Action 62: lock %AIWorkerBusy: condition
+- Action 63: lock %AIWorkerBusy: result
+- Action 64: lock %AIWorkerBusy: error
+- Action 65: lock %AIWorkerBusy: block
+- Action 66: lock %AIWorkerBusy: end
+- Action 67: lock %AIWorkerBusy: end runnable
+- Action 68: lock %AIWProcessing: still runnable
+- Action 69: lock %AIWProcessing: condition
+- Action 70: lock %AIWProcessing: result
+- Action 71: lock %AIWProcessing: error
+- Action 72: lock %AIWProcessing: block
+- Action 73: lock %AIWProcessing: end
+- Action 74: lock %AIWProcessing: end runnable
+- Action 75: lock %AIWSending: still runnable
+- Action 76: lock %AIWSending: condition
+- Action 77: lock %AIWSending: result
+- Action 78: lock %AIWSending: error
+- Action 79: lock %AIWSending: block
+- Action 80: lock %AIWSending: end
+- Action 81: lock %AIWSending: end runnable
+- Action 82: lock %AIWConfirming: still runnable
+- Action 83: lock %AIWConfirming: condition
+- Action 84: lock %AIWConfirming: result
+- Action 85: lock %AIWConfirming: error
+- Action 86: lock %AIWConfirming: block
+- Action 87: lock %AIWConfirming: end
+- Action 88: lock %AIWConfirming: end runnable
+- Action 89: lock %AIWArchiving: still runnable
+- Action 90: lock %AIWArchiving: condition
+- Action 91: lock %AIWArchiving: result
+- Action 92: lock %AIWArchiving: error
+- Action 93: lock %AIWArchiving: block
+- Action 94: lock %AIWArchiving: end
+- Action 95: lock %AIWArchiving: end runnable
+- Action 96: lock %AIWRetrying: still runnable
+- Action 97: lock %AIWRetrying: condition
+- Action 98: lock %AIWRetrying: result
+- Action 99: lock %AIWRetrying: error
+- Action 100: lock %AIWRetrying: block
+- Action 101: lock %AIWRetrying: end
+- Action 102: lock %AIWRetrying: end runnable
+- Action 103: lock %AIWDeadArchiving: still runnable
+- Action 104: lock %AIWDeadArchiving: condition
+- Action 105: lock %AIWDeadArchiving: result
+- Action 106: lock %AIWDeadArchiving: error
+- Action 107: lock %AIWDeadArchiving: block
+- Action 108: lock %AIWDeadArchiving: end
+- Action 109: lock %AIWDeadArchiving: end runnable
+- Action 110: lock %AIWCompacting: still runnable
+- Action 111: lock %AIWCompacting: condition
+- Action 112: lock %AIWCompacting: result
+- Action 113: lock %AIWCompacting: error
+- Action 114: lock %AIWCompacting: block
+- Action 115: lock %AIWCompacting: end
+- Action 116: lock %AIWCompacting: end runnable
+- Action 117: tick: safe preflight
+- Action 118: tick: own tick guard
+- Action 119: tick: own timestamp
+- Action 120: tick: worker-busy timestamp for recovery
+- Action 121: tick: prevent inherited recursion request
+- Action 122: tick: running result
+- Action 123: tick: call permanent Queue Cycle exactly once
+- Action 124: tick: preserve queue result
+- Action 125: tick: preserve queue error
+- Action 126: tick: expose queue result
+- Action 127: tick: restore queue error
+- Action 128: tick: queue released worker busy
+- Action 129: tick: clear completed busy timestamp
+- Action 130: tick: queue left worker busy active
+- Action 131: tick: preserve stuck busy result
+- Action 132: tick: preserve stuck busy error
+- Action 133: tick: end busy release check
+- Action 134: tick: release owned tick guard
+- Action 135: tick: clear owned tick timestamp
+- Action 136: tick: end runnable path
+- Action 137: tick: end timestamp
+- Action 138: tick: duration
+- Action 139: one-shot: controlled timer cleanup
+- Action 140: one-shot: disable only timer profile
+- Action 141: one-shot: disarm timer
+- Action 142: one-shot: disarm worker
+- Action 143: one-shot: restore stopped state
+- Action 144: one-shot: no recursion
+- Action 145: one-shot: return tick result globally
+- Action 146: one-shot: consume latch
+- Action 147: one-shot: end cleanup
+- Action 148: terminal: stop exactly once
+
+## Task 229
+
+- Action 0: recovery: safe default false
+- Action 1: recovery: no release by default
+- Action 2: recovery: initial result
+- Action 3: recovery: local hold clear
+- Action 4: recovery: not startup token
+- Action 5: recovery: not wrapper token
+- Action 6: recovery: reject caller
+- Action 7: recovery: caller error
+- Action 8: recovery: stop rejected caller
+- Action 9: recovery: end wrapper caller
+- Action 10: recovery: end startup caller
+- Action 11: recovery: exact Task 71 QueueView two-attempt read
+- Action 12: recovery: exact Task 71 QueueView two-attempt read
+- Action 13: recovery: exact Task 71 QueueView two-attempt read
+- Action 14: recovery: exact Task 71 QueueView two-attempt read
+- Action 15: recovery: exact Task 71 QueueView two-attempt read
+- Action 16: recovery: exact Task 71 QueueView two-attempt read
+- Action 17: recovery: exact Task 71 QueueView two-attempt read
+- Action 18: recovery: exact Task 71 QueueView two-attempt read
+- Action 19: recovery: exact Task 71 QueueView two-attempt read
+- Action 20: recovery: exact Task 71 QueueView two-attempt read
+- Action 21: recovery: exact Task 71 QueueView two-attempt read
+- Action 22: recovery: exact Task 71 QueueView two-attempt read
+- Action 23: recovery: exact Task 71 QueueView two-attempt read
+- Action 24: recovery: exact Task 71 QueueView two-attempt read
+- Action 25: recovery: exact Task 71 QueueView two-attempt read
+- Action 26: recovery: exact Task 71 QueueView two-attempt read
+- Action 27: recovery: exact Task 71 QueueView two-attempt read
+- Action 28: recovery: exact Task 71 QueueView two-attempt read
+- Action 29: recovery: exact Task 71 QueueView two-attempt read
+- Action 30: recovery: exact Task 71 QueueView two-attempt read
+- Action 31: recovery: exact Task 71 QueueView two-attempt read
+- Action 32: recovery: exact Task 71 QueueView two-attempt read
+- Action 33: recovery: exact Task 71 QueueView two-attempt read
+- Action 34: recovery: exact Task 71 QueueView two-attempt read
+- Action 35: recovery: exact Task 71 QueueView two-attempt read
+- Action 36: recovery: exact Task 71 QueueView two-attempt read
+- Action 37: recovery: exact Task 71 QueueView two-attempt read
+- Action 38: recovery: exact Task 71 QueueView two-attempt read
+- Action 39: recovery: exact Task 71 QueueView two-attempt read
+- Action 40: recovery: exact Task 71 QueueView two-attempt read
+- Action 41: recovery: exact Task 71 QueueView two-attempt read
+- Action 42: recovery: exact Task 71 QueueView two-attempt read
+- Action 43: recovery: exact Task 71 QueueView two-attempt read
+- Action 44: recovery: exact Task 71 QueueView two-attempt read
+- Action 45: recovery: exact Task 71 QueueView two-attempt read
+- Action 46: recovery: exact Task 71 QueueView two-attempt read
+- Action 47: recovery: exact Task 71 QueueView two-attempt read
+- Action 48: recovery: exact Task 71 QueueView two-attempt read
+- Action 49: recovery: exact Task 71 QueueView two-attempt read
+- Action 50: recovery: exact Task 71 QueueView two-attempt read
+- Action 51: recovery: exact Task 71 QueueView two-attempt read
+- Action 52: recovery: exact Task 71 QueueView two-attempt read
+- Action 53: recovery: exact Task 71 QueueView two-attempt read
+- Action 54: recovery: exact Task 71 QueueView two-attempt read
+- Action 55: recovery: exact Task 71 QueueView two-attempt read
+- Action 56: recovery: exact Task 71 QueueView two-attempt read
+- Action 57: recovery: exact Task 71 QueueView two-attempt read
+- Action 58: recovery: exact Task 71 QueueView two-attempt read
+- Action 59: recovery: exact Task 71 QueueView two-attempt read
+- Action 60: recovery: exact Task 71 QueueView two-attempt read
+- Action 61: recovery: exact Task 71 QueueView two-attempt read
+- Action 62: recovery: exact Task 71 QueueView two-attempt read
+- Action 63: recovery: exact Task 71 QueueView two-attempt read
+- Action 64: recovery: exact Task 71 QueueView two-attempt read
+- Action 65: recovery: exact Task 71 QueueView two-attempt read
+- Action 66: recovery: exact Task 71 QueueView two-attempt read
+- Action 67: recovery: exact Task 71 QueueView two-attempt read
+- Action 68: recovery: exact Task 71 QueueView two-attempt read
+- Action 69: recovery: exact Task 71 QueueView two-attempt read
+- Action 70: recovery: exact Task 71 QueueView two-attempt read
+- Action 71: recovery: exact Task 71 QueueView two-attempt read
+- Action 72: recovery: exact Task 71 QueueView two-attempt read
+- Action 73: recovery: exact Task 71 QueueView two-attempt read
+- Action 74: recovery: exact Task 71 QueueView two-attempt read
+- Action 75: recovery: exact Task 71 QueueView two-attempt read
+- Action 76: recovery: exact Task 71 QueueView two-attempt read
+- Action 77: recovery: exact Task 71 QueueView two-attempt read
+- Action 78: recovery: exact Task 71 QueueView two-attempt read
+- Action 79: recovery: exact Task 71 QueueView two-attempt read
+- Action 80: recovery: exact Task 71 QueueView two-attempt read
+- Action 81: recovery: exact Task 71 QueueView two-attempt read
+- Action 82: recovery: exact Task 71 QueueView two-attempt read
+- Action 83: recovery: exact Task 71 QueueView two-attempt read
+- Action 84: recovery: exact Task 71 QueueView two-attempt read
+- Action 85: recovery: exact Task 71 QueueView two-attempt read
+- Action 86: recovery: exact Task 71 QueueView two-attempt read
+- Action 87: recovery: exact Task 71 QueueView two-attempt read
+- Action 88: recovery: exact Task 71 QueueView two-attempt read
+- Action 89: recovery: exact Task 71 QueueView two-attempt read
+- Action 90: recovery: exact Task 71 QueueView two-attempt read
+- Action 91: recovery: exact Task 71 QueueView two-attempt read
+- Action 92: recovery: exact Task 71 QueueView two-attempt read
+- Action 93: recovery: exact Task 71 QueueView two-attempt read
+- Action 94: recovery: exact Task 71 QueueView two-attempt read
+- Action 95: recovery: exact Task 71 QueueView two-attempt read
+- Action 96: recovery: exact Task 71 QueueView two-attempt read
+- Action 97: recovery: exact Task 71 QueueView two-attempt read
+- Action 98: recovery: exact Task 71 QueueView two-attempt read
+- Action 99: recovery: exact Task 71 QueueView two-attempt read
+- Action 100: recovery: exact Task 71 QueueView two-attempt read
+- Action 101: recovery: exact Task 71 QueueView two-attempt read
+- Action 102: recovery: exact Task 71 QueueView two-attempt read
+- Action 103: recovery: exact Task 71 QueueView two-attempt read
+- Action 104: recovery: exact Task 71 QueueView two-attempt read
+- Action 105: recovery: exact Task 71 QueueView two-attempt read
+- Action 106: recovery: exact Task 71 QueueView two-attempt read
+- Action 107: recovery: exact Task 71 QueueView two-attempt read
+- Action 108: recovery: exact Task 71 QueueView two-attempt read
+- Action 109: recovery: exact Task 71 QueueView two-attempt read
+- Action 110: recovery: exact Task 71 QueueView two-attempt read
+- Action 111: recovery: exact Task 71 QueueView two-attempt read
+- Action 112: recovery: exact Task 71 QueueView two-attempt read
+- Action 113: recovery: exact Task 71 QueueView two-attempt read
+- Action 114: recovery: QueueView read failed
+- Action 115: recovery: read hold result
+- Action 116: recovery: read hold error
+- Action 117: recovery: stop before changing any lock
+- Action 118: recovery: end read hold
+- Action 119: recovery: reset processing count
+- Action 120: recovery: reset sending count
+- Action 121: recovery: reset await count
+- Action 122: recovery: reset done count
+- Action 123: recovery: reset unknown count
+- Action 124: recovery: reset row index
+- Action 125: recovery: scan all lifecycle rows
+- Action 126: recovery: advance row index
+- Action 127: recovery: count PROCESSING
+- Action 128: recovery: increment processing
+- Action 129: recovery: end PROCESSING
+- Action 130: recovery: count SENDING
+- Action 131: recovery: increment sending
+- Action 132: recovery: end SENDING
+- Action 133: recovery: count SEND_CLICKED_AWAITING_CONFIRM
+- Action 134: recovery: increment await
+- Action 135: recovery: end SEND_CLICKED_AWAITING_CONFIRM
+- Action 136: recovery: count DONE
+- Action 137: recovery: increment done
+- Action 138: recovery: end DONE
+- Action 139: recovery: count dangerous unresolved
+- Action 140: recovery: increment dangerous unresolved
+- Action 141: recovery: end dangerous unresolved
+- Action 142: recovery: end lifecycle scan
+- Action 143: recovery: non-sendable evidence count
+- Action 144: recovery: unsupported RETRYING lock
+- Action 145: recovery: hold RETRYING
+- Action 146: recovery: RETRYING hold result
+- Action 147: recovery: end RETRYING hold
+- Action 148: recovery: unsupported DEADARCHIVE lock
+- Action 149: recovery: hold DEADARCHIVE
+- Action 150: recovery: DEADARCHIVE hold result
+- Action 151: recovery: end DEADARCHIVE hold
+- Action 152: recovery: unsupported COMPACTOR lock
+- Action 153: recovery: hold COMPACTOR
+- Action 154: recovery: COMPACTOR hold result
+- Action 155: recovery: end COMPACTOR hold
+- Action 156: recovery AIWProcessing: active
+- Action 157: recovery AIWProcessing: invalid age default
+- Action 158: recovery AIWProcessing: timestamp numeric
+- Action 159: recovery AIWProcessing: calculate age
+- Action 160: recovery AIWProcessing: end timestamp
+- Action 161: recovery AIWProcessing: stale threshold passed
+- Action 162: recovery AIWProcessing: evidence proven
+- Action 163: recovery AIWProcessing: release proven stale lock
+- Action 164: recovery AIWProcessing: clear stale timestamp
+- Action 165: recovery AIWProcessing: record release
+- Action 166: recovery AIWProcessing: release result
+- Action 167: recovery AIWProcessing: unresolved state remains
+- Action 168: recovery AIWProcessing: preserve unresolved row
+- Action 169: recovery AIWProcessing: end unresolved state
+- Action 170: recovery AIWProcessing: evidence missing
+- Action 171: recovery AIWProcessing: hold without release
+- Action 172: recovery AIWProcessing: evidence hold result
+- Action 173: recovery AIWProcessing: end evidence
+- Action 174: recovery AIWProcessing: non-stale or missing timestamp
+- Action 175: recovery AIWProcessing: hold active owner
+- Action 176: recovery AIWProcessing: active hold result
+- Action 177: recovery AIWProcessing: end stale decision
+- Action 178: recovery AIWProcessing: end active
+- Action 179: recovery AIWSending: active
+- Action 180: recovery AIWSending: invalid age default
+- Action 181: recovery AIWSending: timestamp numeric
+- Action 182: recovery AIWSending: calculate age
+- Action 183: recovery AIWSending: end timestamp
+- Action 184: recovery AIWSending: stale threshold passed
+- Action 185: recovery AIWSending: evidence proven
+- Action 186: recovery AIWSending: release proven stale lock
+- Action 187: recovery AIWSending: clear stale timestamp
+- Action 188: recovery AIWSending: record release
+- Action 189: recovery AIWSending: release result
+- Action 190: recovery AIWSending: unresolved state remains
+- Action 191: recovery AIWSending: preserve unresolved row
+- Action 192: recovery AIWSending: end unresolved state
+- Action 193: recovery AIWSending: evidence missing
+- Action 194: recovery AIWSending: hold without release
+- Action 195: recovery AIWSending: evidence hold result
+- Action 196: recovery AIWSending: end evidence
+- Action 197: recovery AIWSending: non-stale or missing timestamp
+- Action 198: recovery AIWSending: hold active owner
+- Action 199: recovery AIWSending: active hold result
+- Action 200: recovery AIWSending: end stale decision
+- Action 201: recovery AIWSending: end active
+- Action 202: recovery AIWConfirming: active
+- Action 203: recovery AIWConfirming: invalid age default
+- Action 204: recovery AIWConfirming: timestamp numeric
+- Action 205: recovery AIWConfirming: calculate age
+- Action 206: recovery AIWConfirming: end timestamp
+- Action 207: recovery AIWConfirming: stale threshold passed
+- Action 208: recovery AIWConfirming: evidence proven
+- Action 209: recovery AIWConfirming: release proven stale lock
+- Action 210: recovery AIWConfirming: clear stale timestamp
+- Action 211: recovery AIWConfirming: record release
+- Action 212: recovery AIWConfirming: release result
+- Action 213: recovery AIWConfirming: evidence missing
+- Action 214: recovery AIWConfirming: hold without release
+- Action 215: recovery AIWConfirming: evidence hold result
+- Action 216: recovery AIWConfirming: end evidence
+- Action 217: recovery AIWConfirming: non-stale or missing timestamp
+- Action 218: recovery AIWConfirming: hold active owner
+- Action 219: recovery AIWConfirming: active hold result
+- Action 220: recovery AIWConfirming: end stale decision
+- Action 221: recovery AIWConfirming: end active
+- Action 222: recovery AIWArchiving: active
+- Action 223: recovery AIWArchiving: invalid age default
+- Action 224: recovery AIWArchiving: timestamp numeric
+- Action 225: recovery AIWArchiving: calculate age
+- Action 226: recovery AIWArchiving: end timestamp
+- Action 227: recovery AIWArchiving: stale threshold passed
+- Action 228: recovery AIWArchiving: evidence proven
+- Action 229: recovery AIWArchiving: release proven stale lock
+- Action 230: recovery AIWArchiving: clear stale timestamp
+- Action 231: recovery AIWArchiving: record release
+- Action 232: recovery AIWArchiving: release result
+- Action 233: recovery AIWArchiving: evidence missing
+- Action 234: recovery AIWArchiving: hold without release
+- Action 235: recovery AIWArchiving: evidence hold result
+- Action 236: recovery AIWArchiving: end evidence
+- Action 237: recovery AIWArchiving: non-stale or missing timestamp
+- Action 238: recovery AIWArchiving: hold active owner
+- Action 239: recovery AIWArchiving: active hold result
+- Action 240: recovery AIWArchiving: end stale decision
+- Action 241: recovery AIWArchiving: end active
+- Action 242: recovery worker busy: active
+- Action 243: recovery worker busy: invalid age default
+- Action 244: recovery worker busy: timestamp numeric
+- Action 245: recovery worker busy: calculate age
+- Action 246: recovery worker busy: end timestamp
+- Action 247: recovery worker busy: stale
+- Action 248: recovery worker busy: no child lock remains
+- Action 249: recovery worker busy: release proven stale lock
+- Action 250: recovery worker busy: clear stale timestamp
+- Action 251: recovery worker busy: record release
+- Action 252: recovery worker busy: result
+- Action 253: recovery worker busy: child lock still active
+- Action 254: recovery worker busy: hold child owner
+- Action 255: recovery worker busy: child hold result
+- Action 256: recovery worker busy: end child check
+- Action 257: recovery worker busy: not stale or timestamp missing
+- Action 258: recovery worker busy: hold active owner
+- Action 259: recovery worker busy: active hold result
+- Action 260: recovery worker busy: end stale decision
+- Action 261: recovery worker busy: end active
+- Action 262: recovery: PROCESSING row is unresolved
+- Action 263: recovery: preserve PROCESSING row
+- Action 264: recovery: PROCESSING hold result
+- Action 265: recovery: end PROCESSING hold
+- Action 266: recovery: SENDING remains non-sendable
+- Action 267: recovery: preserve SENDING row
+- Action 268: recovery: SENDING hold result
+- Action 269: recovery: end SENDING hold
+- Action 270: recovery: ambiguous send outcome exists
+- Action 271: recovery: preserve ambiguous state
+- Action 272: recovery: ambiguous state result
+- Action 273: recovery: end ambiguous state hold
+- Action 274: recovery: no HOLD remains
+- Action 275: recovery: awaiting-confirm row routes through permanent router
+- Action 276: recovery: at most one lifecycle module
+- Action 277: recovery: preserve router result
+- Action 278: recovery: preserve router error
+- Action 279: recovery: do not arm in same invocation after module
+- Action 280: recovery: no awaiting row
+- Action 281: recovery: DONE row routes through permanent router
+- Action 282: recovery: at most one lifecycle module
+- Action 283: recovery: preserve archive router result
+- Action 284: recovery: preserve archive router error
+- Action 285: recovery: do not arm after Archive recovery
+- Action 286: recovery: end DONE route
+- Action 287: recovery: end awaiting priority
+- Action 288: recovery: end no-HOLD routing
+- Action 289: recovery: safe to arm
+- Action 290: recovery: safe result
+- Action 291: recovery: clear state result
+- Action 292: recovery: safe detail
+- Action 293: recovery: HOLD remains
+- Action 294: recovery: hold result
+- Action 295: recovery: preserve hold detail
+- Action 296: recovery: end final decision
+- Action 297: recovery: stop
+
+## Profiles
+
+- Profile 134 `FINAL Device Boot Process`: task reference changed from Task 147 `APP Reset Locks` to Task 183 `APP Safe Recovery`; profile remains disabled.
+- Profile 135 `FINAL Device Boot Send`: task reference changed from Task 147 `APP Reset Locks` to Task 183 `APP Safe Recovery`; profile remains disabled.
+- Profiles 136 and 137: raw-byte identical to the Gate 12R1 base.

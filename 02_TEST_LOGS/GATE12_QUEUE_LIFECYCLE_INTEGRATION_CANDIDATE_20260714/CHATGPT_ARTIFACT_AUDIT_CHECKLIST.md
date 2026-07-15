@@ -1,0 +1,23 @@
+# ChatGPT Full Artifact Audit Checklist
+
+- [ ] Download the standalone `GATE12_FULL_PROJECT_TASKER_IMPORT__QUEUE_LIFECYCLE_INTEGRATION_PRIVATE.xml` and verify SHA256 `11D2C17F1107F024155C775E9320D68E447086DA5C6E38C900618A162FD65902`.
+- [ ] Download `GATE12_FULL_PROJECT_PHONE_IMPORT__QUEUE_LIFECYCLE_INTEGRATION_PRIVATE.zip` and verify SHA256 `1FAC819E955A418C7EE35C3248020D1D67B859DFFEF25740B83F97456E797D33`.
+- [ ] Confirm the ZIP contains exactly one XML and its bytes match the standalone XML.
+- [ ] Parse TaskerData and verify 79 tasks, 4 profiles, and 1 scene.
+- [ ] Verify duplicate task IDs, names, task sr values, and action sr values are zero.
+- [ ] Verify all Perform Task, profile, scene, and Project tids references.
+- [ ] Compare every protected task node raw-byte against the Gate 11 base.
+- [ ] Inspect Task 199 mode checks, latch consumption, busy ownership, router placement, common epilogue, and recursion guard.
+- [ ] Inspect Task 224 authorization consumption and one Task 199 call.
+- [ ] Inspect Task 227 lock guard, two-attempt QueueView read, aligned arrays, classification priority, and lowest-DONE-row choice.
+- [ ] Prove Task 199 has one Task 71 call and one Task 227 call.
+- [ ] Prove Task 199 directly calls none of Tasks 223, 225, and 226.
+- [ ] Prove Task 227 calls Task 225 once and Task 226 once, with a Stop barrier between branches.
+- [ ] Prove one lifecycle module maximum on every reachable Task 199 path.
+- [ ] Prove controlled mode cannot process, maintain, or recurse.
+- [ ] Prove broad Archive is disconnected from Task 199.
+- [ ] Verify Task 227 AutoSheets nodes retain Continue Task After Error ON and maximum two attempts.
+- [ ] Verify no live profile is enabled.
+- [ ] Verify the credential occurrence without printing it.
+- [ ] Verify public reports contain no private runtime data.
+- [ ] Keep phone import unapproved until this actual-artifact audit passes.
