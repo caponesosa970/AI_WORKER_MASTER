@@ -1219,3 +1219,23 @@ No percentage change. Current tracker remains `8/14 locked = 57%`.
 - Tracker effect: none; remains `13/14 locked = 93%`.
 - Phone proof claimed by Codex: NO. Phone import approved by Codex: NO. PR merge: BLOCKED.
 <!-- GATE14A_R1_BUILD_LEDGER_END -->
+
+<!-- GATE14A_R2_BUILD_LEDGER_START -->
+## Accountability ID AIW-GATE14A-R2-NORMALIZED-BLANK-FLAG-20260715
+
+- Gate: Gate 14A R2 read-only inventory repair.
+- Issue: `ISSUE_G14A_R1_CLEAR_LEAVES_ROW_REPLY_UNRESOLVED`.
+- Direct repair base SHA256: `34197CB7044B740F73B5ED173D26E7B73DE6B6602637B83F26F94D0ECDECD9FC`.
+- Exact runtime scope: Task 232 only.
+- R1 phone result: exact-row isolated read passed, then Variable Clear left `%row_reply` unresolved and produced a safe HOLD.
+- User/operator responsibility: `NONE`.
+- Codex responsibility: R1 used an incorrect static assumption about cleared local-variable comparisons.
+- ChatGPT/controller responsibility: direct phone proof identified and bounded the runtime mismatch.
+- R2 actions: per-row flag reset; Clear-to-flag-Set replacement; Reply-only nonblank and unresolved condition gates; required `sr` renumbering.
+- Validators: direct XML/raw-byte PASS; independent control-stack/state model PASS 30/30; standard static Tasker audit PASS.
+- Existing runtime: 83/83 Gate 13R2 tasks raw-byte identical; profiles, scene, Project registry, and credential unchanged.
+- Private outputs: XML, one-entry ZIP, and SHA sidecar; all remain untracked.
+- Tracker effect: none; remains `13/14 locked = 93%`.
+- Phone proof claimed by Codex: NO. Phone import approved by Codex: NO. PR merge: BLOCKED.
+- Unsupported: R2 phone result, 5/10/25/50 ladder, processing/API load, soak, final interface, and release.
+<!-- GATE14A_R2_BUILD_LEDGER_END -->

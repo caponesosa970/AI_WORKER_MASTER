@@ -333,3 +333,21 @@ Tracker remains `13/14 locked = 93%`.
 
 Tracker remains `13/14 locked = 93%`.
 <!-- GATE14A_R1_CLAIM_MATRIX_END -->
+
+<!-- GATE14A_R2_CLAIM_MATRIX_START -->
+## Gate 14A R2 Normalized Blank Flag Repair
+
+| Claim ID | Claim | Evidence | Result |
+| --- | --- | --- | --- |
+| G14A-R2-001 | Exact R1 direct repair base used | SHA256 `34197CB7044B740F73B5ED173D26E7B73DE6B6602637B83F26F94D0ECDECD9FC` | PROVEN STATIC |
+| G14A-R2-002 | Runtime scope is Task 232 only | Direct XML/raw-node comparison | PROVEN STATIC |
+| G14A-R2-003 | The exact indexed Reply placeholder sets the per-row blank flag | Exact action and regex inspection | PROVEN STATIC |
+| G14A-R2-004 | R2 never clears or overwrites `%row_reply` | Task 232 action scan | PROVEN STATIC |
+| G14A-R2-005 | Real and unrelated unresolved replies still HOLD | Independent 30-case state model | PROVEN STATIC |
+| G14A-R2-006 | Existing 83 tasks and all forbidden-path boundaries remain unchanged | Raw-byte and action/call scan | PROVEN STATIC |
+| G14A-R2-007 | Package integrity holds | One-entry ZIP, byte equality, SHA256, integrity test | PROVEN STATIC |
+| G14A-R2-008 | R2 produces `INVENTORY_PASS` on the target phone | Separately authorized phone rerun | UNSUPPORTED / HOLD |
+| G14A-R2-009 | 5/10/25/50 capacity is proven | Ordered capacity ladder | UNSUPPORTED / BLOCKED |
+
+Tracker remains `13/14 locked = 93%`. Codex approves no import and claims no phone proof.
+<!-- GATE14A_R2_CLAIM_MATRIX_END -->

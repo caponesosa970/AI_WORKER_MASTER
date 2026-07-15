@@ -862,3 +862,22 @@ Gate 13 is `LOCKED / PASS`; operational tracker is `13/14 locked = 93%`. Gate 14
 - Tracker: `13/14 locked = 93%`; Gate 14 and PR merge remain blocked.
 - Closing proof required: ChatGPT artifact audit followed by one separately authorized phone rerun.
 <!-- GATE14A_R1_FAILURE_LEDGER_END -->
+
+<!-- GATE14A_R2_FAILURE_LEDGER_START -->
+## ISSUE_G14A_R1_CLEAR_LEAVES_ROW_REPLY_UNRESOLVED
+
+- Status: `REPAIRED R2 CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+- First detected: direct Sosa R1 phone run on 2026-07-15.
+- Affected R1 XML SHA256: `34197CB7044B740F73B5ED173D26E7B73DE6B6602637B83F26F94D0ECDECD9FC`.
+- Symptom: exact placeholder detection and Variable Clear executed, but later Tasker references exposed unresolved `%row_reply`; nonblank and unresolved counters each became 1.
+- Safety result: Task 232 remained isolated, made one read, called no task, wrote no Sheet value, and returned `INVENTORY_REPLY_HOLD`.
+- Fresh controller evidence: the exact staged row remained unchanged and its Reply cell was blank.
+- Root cause: R1 assumed Variable Clear would remain a usable blank value in later Tasker comparisons.
+- User/operator responsibility: `NONE`.
+- Codex responsibility: R1 static modeling did not reproduce Tasker's cleared-local-variable representation.
+- ChatGPT/controller responsibility: direct phone proof identified the mismatch and bounded the flag-based repair.
+- R2 repair: reset `%reply_blank_norm = 0` per row, set it to 1 only for the exact indexed Reply placeholder, and gate only Reply nonblank/unresolved counters.
+- Regression: real replies, unrelated unresolved values, required fields, `#ERROR`, duplicates, order, count, and bounded read handling remain active.
+- Tracker: `13/14 locked = 93%`; Gate 14, PR merge, phone rerun, and release remain blocked.
+- Closing proof required: independent artifact audit and a separately authorized R2 phone rerun.
+<!-- GATE14A_R2_FAILURE_LEDGER_END -->

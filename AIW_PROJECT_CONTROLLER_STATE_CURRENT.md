@@ -317,3 +317,17 @@ Codex return is automatically rejected if it lacks preflight, bug-history search
 - Gate 14 remains blocked; tracker remains `13/14 locked = 93%`.
 - Codex changed no live Sheet cell, ran no Tasker task, claims no phone proof, and approves no phone import.
 <!-- GATE14A_R1_CONTROLLER_END -->
+
+<!-- GATE14A_R2_CONTROLLER_START -->
+## Gate 14A R2 Normalized Blank Flag Repair
+
+- Gate 14A R1 phone result: `FAILED / SAFE HOLD`.
+- Active issue: `ISSUE_G14A_R1_CLEAR_LEAVES_ROW_REPLY_UNRESOLVED`.
+- R1 direct repair-base SHA256: `34197CB7044B740F73B5ED173D26E7B73DE6B6602637B83F26F94D0ECDECD9FC`.
+- R2 changes Task 232 only using a per-row Reply normalization flag; it does not clear `%row_reply`.
+- R2 output SHA256: `73E8048D8941C0529A26E397FA9E6EBAF84FAB9C0F03D3C56CBA163932C34662`.
+- Existing 83 Gate 13R2 tasks, profiles, scene, Project registry, and credential remain unchanged.
+- R2 status: `GATE 14A R2 RUNTIME CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+- Gate 14 remains blocked; tracker remains `13/14 locked = 93%`.
+- Codex changed no live Sheet cell, ran no Tasker task, claims no phone proof, approves no import, and did not merge PR #9.
+<!-- GATE14A_R2_CONTROLLER_END -->

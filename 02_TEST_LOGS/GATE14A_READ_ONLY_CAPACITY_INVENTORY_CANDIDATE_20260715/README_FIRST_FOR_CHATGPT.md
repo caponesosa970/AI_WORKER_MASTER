@@ -1,25 +1,28 @@
-# Gate 14A R1 Blank Reply Output Normalization
+# Gate 14A R2 Normalized Blank Flag Repair
 
-- Status: `GATE 14A R1 RUNTIME CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`
-- Rejected Gate 14A XML SHA256: `832BEB0F9764EB2838B08A582648097C49197C2A366931196E5F0311860529EF`
-- Replacement XML SHA256: `34197CB7044B740F73B5ED173D26E7B73DE6B6602637B83F26F94D0ECDECD9FC`
+- Status: `GATE 14A R2 RUNTIME CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`
+- Direct R1 repair-base SHA256: `34197CB7044B740F73B5ED173D26E7B73DE6B6602637B83F26F94D0ECDECD9FC`
+- R2 XML SHA256: `73E8048D8941C0529A26E397FA9E6EBAF84FAB9C0F03D3C56CBA163932C34662`
 - Tracker: `13/14 locked = 93%` (unchanged)
 - Phone import approved by Codex: `NO`
 - Phone proof claimed by Codex: `NO`
 
 ## Decision
 
-The first Gate 14A phone execution is `FAIL-SAFE / HOLD`, not an inventory PASS. It read the correct synthetic row once and remained fully isolated, but AutoSheets represented the blank Reply element as an unresolved indexed variable. Task 232 counted that runtime placeholder as both nonblank and unresolved.
+The R1 phone run is `FAILED / SAFE HOLD`. Task 232 remained isolated and read the correct staged row, but clearing `%row_reply` left later references as the unresolved literal `%row_reply`. That value was counted as both nonblank and unresolved.
 
-Gate 14A R1 changes Task 232 only. Immediately after the Reply-array assignment, it clears `%row_reply` only when the value exactly matches `(?s)^[%]g14_reply[0-9]+$`. Real replies, unrelated unresolved variables, required-field failures, and `#ERROR` remain HOLD conditions.
+R2 changes Task 232 only. A per-row `%reply_blank_norm` flag is reset to `0`, set to `1` only when Reply matches the exact AutoSheets placeholder `(?s)^[%]g14_reply[0-9]+$`, and gates only the Reply nonblank and Reply unresolved counters. `%row_reply` is never cleared or overwritten.
 
-## Phone Evidence Recorded
+## Static Result
 
-- Direct Sosa phone proof: one Task 232 run, one successful AutoSheets read, correct synthetic row binding, one read attempt, and no production task or write path.
-- Direct fresh Sheet proof: the staged row's Reply cell was blank.
-- Runtime result: `INVENTORY_REPLY_HOLD`, with nonblank Reply and unresolved counters both equal to one.
-- User/operator responsibility: `NONE`.
+- XML parse and Tasker reference audit: PASS.
+- Validator one: PASS.
+- Validator two: PASS, 30/30 cases.
+- Existing Gate 13R2 tasks raw-byte identical: 83/83.
+- Task 232 actions: 325.
+- Get Data nodes: 1. Perform Task calls: 0. Sheet writes: 0.
+- ZIP integrity and standalone-byte equality: PASS.
 
 ## Boundary
 
-No existing Gate 13R2 task, profile, scene, Project registry field, credential, or production runtime behavior changed. Gate 14 and PR merge remain blocked pending ChatGPT audit and a later authorized phone rerun.
+R2 has not run on the phone. Gate 14, the capacity ladder, PR merge, unattended production, and release remain blocked.
