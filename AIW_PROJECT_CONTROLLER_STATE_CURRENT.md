@@ -69,13 +69,13 @@ Accountability-system installation is active from main commit `aa4e1ded4d70a8262
 
 No runtime repair was created. Remaining issue is phone/runtime/UI behavior, not source preservation.
 
-Historical 30A next proof was a ChatGPT-approved 30B phone/runtime/UI diagnostic. That diagnostic and later gates are retained as history; the active gate is Gate 13 above.
+Historical 30A next proof was a ChatGPT-approved 30B phone/runtime/UI diagnostic. That diagnostic and later gates are retained as history; Gate 14 capacity, reliability ladder, final control interface, and release proof is the blocked current active gate.
 
 30B1 diagnostic phone result: DEVELOPMENT PASS. Full-project Tasker import/render passed. V15A Id `menu_search` timed out. Active Dashgood Task 71 combined Search lane reached TextNow Search and both exact `search_field` actions completed OK. Final visible state was Search field focused with keyboard open. No number, contact select, compose, Send, DONE, Archive, live, or Sheet action ran.
 
 Historical 31A candidate record: before Gate 9 phone proof, 31A was CANDIDATE / HOLD FOR CHATGPT AUDIT. Its search-lane work was later incorporated into the corrected Plan A artifact. This historical status does not override the current Gate 9 lock.
 
-31A1 current-key repair status: CANDIDATE / HOLD FOR CHATGPT AUDIT. Original 31A was rejected because the private package carried a discontinued credential from an older 27B base. 31A1 changed only the private credential literal. Sanitized XML comparison after redacting all `sk-...` credentials is IDENTICAL, task 224 is unchanged byte-for-byte, and runtime actions are unchanged. No phone proof is claimed and Codex does not approve phone import.
+Historical 31A1 current-key repair record: CANDIDATE / HOLD FOR CHATGPT AUDIT at that stage. Original 31A was rejected because the private package carried a discontinued credential from an older 27B base. 31A1 changed only the private credential literal. Sanitized XML comparison after redacting all `sk-...` credentials is IDENTICAL, task 224 was unchanged byte-for-byte, and runtime actions were unchanged. This is not the current runtime baseline.
 
 Historical 31B candidate record: the AutoSheets-only and transaction-wrapper 31B candidates were superseded by Plan A and are not current runtime source truth. Their HOLD status does not override the current Gate 9 lock.
 
@@ -92,14 +92,24 @@ Historical queue scan before Gate 9:
 
 ## Current Source Truth
 
-V15A source:
+Current phone-proven runtime baseline:
+
+- File: `GATE13R2_FULL_PROJECT_TASKER_IMPORT__CONFIRM_THREAD_NAVIGATION_PRIVATE.xml`
+- SHA256: `1C4D13872C3D6B4579AA698F9E7D2F50F3E81467A4CBD4EAD63CD567087832A7`
+- Topology: 83 tasks, 4 profiles, 1 scene.
+- Current runtime additions include Task 230, `FINAL Device Unlock Probe`, and Task 231, `FINAL Open Bound TextNow Thread No Send`.
+- Status: Gate 13 `LOCKED / PASS` by direct Sosa phone proof. Codex records and does not claim that proof.
+
+Historical source records:
+
+V15A AutoInput source:
 
 - File: basefile_v15a_phone_send_cleanup_pass.xml
 - Private source reference: Private Drive source - link and ID retained outside the public repository.
 - SHA256: C4CDEAA0BFD78120386FF1B03FA0A2D6B13BCEEDBD15687F84D03A3AD5FEF1C8
 - Source status: Sosa-created authoritative send-path AutoInput source.
 
-27B package:
+Historical 27B package:
 
 - ZIP: 27B_CHATGPT_AUDIT_ZIP__AIW_BUILD100_V15A_PRESERVED_CONTROLLED_SEND_CANDIDATE_20260710.zip
 - Private source reference: Private Drive source - link and ID retained outside the public repository.
@@ -114,14 +124,14 @@ V15A source:
 - Gate 10 launcher rerun / additional DONE write
 - Gate 12 controlled launcher rerun
 - Gate 13 launcher and proof reruns
-- Gate 14 capacity, reliability ladder, final control interface, and release proof
 - Broad Archive outside the permanent Task 199 -> Task 227 -> Task 226 route
 - DeadArchive
 - Compactor
 - TT5
-- live/timer
-- capacity
-- release/production
+- unattended production live operation
+- Gate 14 capacity testing
+- final control-interface release
+- production release
 
 <!-- GATE12_CONTROLLER_START -->
 ## Gate 12R1 Controlled-Mode Normalization Repair Decision - Historical Build Record

@@ -66,22 +66,32 @@ Interpretation:
 - Intermediate wrapper PASS markers are not final proof.
 - Successful Search-field reach is the positive end-state check.
 
-## 4. Current Verified Source Files
+## 4. Current Phone-Proven Runtime Baseline
 
-Authoritative V15A source:
+- File: `GATE13R2_FULL_PROJECT_TASKER_IMPORT__CONFIRM_THREAD_NAVIGATION_PRIVATE.xml`
+- SHA256: `1C4D13872C3D6B4579AA698F9E7D2F50F3E81467A4CBD4EAD63CD567087832A7`
+- Topology: 83 tasks, 4 profiles, 1 scene.
+- Current runtime additions include Task 230, `FINAL Device Unlock Probe`, and Task 231, `FINAL Open Bound TextNow Thread No Send`.
+- Status: phone-proven Gate 13 runtime baseline.
+
+The credential value remains private and must never be printed or committed.
+
+### Historical Source Records
+
+Historical authoritative V15A AutoInput source:
 
 - File: `basefile_v15a_phone_send_cleanup_pass.xml`
 - SHA256: `C4CDEAA0BFD78120386FF1B03FA0A2D6B13BCEEDBD15687F84D03A3AD5FEF1C8`
 - Role: Sosa-created authoritative send-path AutoInput source.
 
-Dashgood active source:
+Historical Dashgood Search source:
 
 - File: `dashgood-backup.xml`
 - SHA256: `62804D52AE6BAB0E0E5895757D56123539F18F99A4E3E9E9060A8BC9C96A8DB7`
 - Active source task: Task ID 71.
 - Legacy Task ID 270 is excluded.
 
-Current correct-key full-project Plan A base:
+Historical correct-key full-project Plan A base:
 
 - File: `31A1_FULL_PROJECT_TASKER_IMPORT__DASHGOOD_SEARCH_LANE_CURRENT_KEY_PRIVATE.xml`
 - SHA256: `1C1FAF33EA30B69E8F35478AA8E93E58A2AA4ABB967CAA8F5EA927506BBF1B6E`
@@ -98,23 +108,23 @@ Rejected 31B reference only:
 - SHA256: `156D44624EF534DB8F0D4E81F0E873A44FE8A9560B26D1C260348AFA4ED8B820`
 - Status: rejected as Plan A build base.
 
-## 5. Verified Current Topology for Plan A
+## 5. Historical Plan A Topology Record
 
-The 31A1 full-project base contains:
+The historical 31A1 full-project base contained:
 
 - 76 tasks.
 - 4 profiles.
 - 1 scene.
 
-Verified topology:
+Historical topology at that Plan A stage:
 
 - Task ID 71 is `FINAL Send Sheet`.
 - Task ID 199 is `FINAL Queue Cycle`.
-- Task 199 calls Task 71 three times in the current base.
-- Task IDs 223 and 224 are old unreferenced candidates.
-- Tasks 223 and 224 have no incoming Perform Task reference.
-- No profile or scene directly invokes Tasks 223 or 224.
-- Tasks 223 and 224 currently share duplicate XML `sr="task223"` and must be corrected in Plan A.
+- Task 199 called Task 71 three times in that historical base.
+- Task IDs 223 and 224 were old unreferenced candidates at that stage.
+- Tasks 223 and 224 had no incoming Perform Task reference at that stage.
+- No profile or scene directly invoked Tasks 223 or 224 at that stage.
+- Tasks 223 and 224 shared duplicate XML `sr="task223"` before Plan A corrected that historical topology.
 
 ## 6. Locked Plan A Decision
 
@@ -156,14 +166,14 @@ Blocked until separately proven:
 
 - Gate 12 controlled launcher rerun;
 - Gate 13 launcher and proof reruns;
-- Gate 14 capacity, reliability ladder, final control interface, and release proof;
 - broad Archive integration outside Task 227 to Task 226;
 - DeadArchive;
 - Compactor;
 - TT5;
-- timer/live and recovery;
-- capacity;
-- release/production.
+- unattended production live operation;
+- Gate 14 capacity testing;
+- final control-interface release;
+- production release.
 
 ## 10. Gate 12R1 Candidate Boundary - Historical Build Record
 
