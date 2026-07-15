@@ -831,3 +831,16 @@ Authority: newest direct Sosa phone proof supplied on 2026-07-14. Raw runlogs an
 
 Gate 13 is `LOCKED / PASS`; operational tracker is `13/14 locked = 93%`. Gate 14 remains blocked.
 <!-- GATE13_PHONE_PROOF_CLOSURE_FAILURES_END -->
+
+
+<!-- GATE14A_FAILURE_LEDGER_START -->
+## ISSUE_GATE14_CAPACITY_MEASUREMENT_NOT_PHONE_PROVEN
+
+- Status: OPEN / GATE 14A CANDIDATE.
+- Risk: later capacity claims could be invalid if source-row order, exact count, ID uniqueness, or sender uniqueness cannot be measured independently.
+- Prevention: Task 232 is read-only, manually authorized, prefix-bound, bounded to two reads, and retains separate integrity counters.
+- Static evidence: exact 1/5/10/25/50 scenario models pass; duplicate and malformed cases hold; existing runtime is unchanged.
+- Missing proof: target-phone import/render and authorized one-row read with the source row unchanged.
+- No capacity, throughput, production, or release claim is made.
+- User/operator responsibility: NONE.
+<!-- GATE14A_FAILURE_LEDGER_END -->

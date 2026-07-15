@@ -297,3 +297,22 @@ Replacement XML SHA256: `82148AF8B72A24E3DBA77936A15E547E2114FEC01B705A084D12AA3
 
 Codex did not independently inspect or publish raw private phone evidence. ChatGPT must audit this source-truth sync before merge.
 <!-- GATE13_PHONE_PROOF_CLOSURE_CLAIMS_END -->
+
+
+<!-- GATE14A_CLAIM_MATRIX_START -->
+## Gate 14A Read-Only Capacity Inventory Candidate
+
+| Claim ID | Claim | Evidence | Result |
+| --- | --- | --- | --- |
+| G14A-001 | Exact Gate 13R2 base used | SHA256 `1C4D13872C3D6B4579AA698F9E7D2F50F3E81467A4CBD4EAD63CD567087832A7` | PROVEN STATIC |
+| G14A-002 | Existing runtime is unchanged | 83/83 task blocks, 4/4 profiles, and scene raw-byte identical | PROVEN STATIC |
+| G14A-003 | Task 232 is isolated and read-only | One Get Data node; zero writes/calls/UI/API/profile/lock actions | PROVEN STATIC |
+| G14A-004 | Reads are bounded and stale-safe | One node in fixed 1,2 loop; arrays/errors cleared; three-second retry | PROVEN STATIC |
+| G14A-005 | Count cannot bypass uniqueness/field checks | Independent counters and scenario validator | PROVEN STATIC |
+| G14A-006 | Private package integrity holds | Hashes, one ZIP entry, byte equality, integrity test | PROVEN STATIC |
+| G14A-007 | Tasker reads one staged row correctly on target phone | Exact approved phone run | UNSUPPORTED / HOLD |
+| G14A-008 | 5/10/25/50 capacity is proven | Ordered phone ladder and unchanged-row proof | UNSUPPORTED / HOLD |
+| G14A-009 | Production release is ready | Complete Gate 14 evidence | UNSUPPORTED / BLOCKED |
+
+Tracker remains `13/14 locked = 93%`.
+<!-- GATE14A_CLAIM_MATRIX_END -->

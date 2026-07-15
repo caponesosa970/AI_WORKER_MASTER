@@ -291,3 +291,15 @@ Codex return is automatically rejected if it lacks preflight, bug-history search
 - No runtime XML, Tasker task, profile, private artifact, or live Sheet value is changed by this source-truth sync.
 - Gate 14 capacity, reliability ladder, final control-interface validation, PR merge, and production release remain blocked.
 <!-- GATE13_PHONE_PROOF_CLOSURE_CONTROLLER_END -->
+
+
+<!-- GATE14A_CONTROLLER_START -->
+## Gate 14A Read-Only Capacity Inventory Candidate
+
+- Gate 13 remains `LOCKED / PASS`; operational tracker remains `13/14 locked = 93%`.
+- Current phone-proven runtime baseline remains `GATE13R2_FULL_PROJECT_TASKER_IMPORT__CONFIRM_THREAD_NAVIGATION_PRIVATE.xml` with SHA256 `1C4D13872C3D6B4579AA698F9E7D2F50F3E81467A4CBD4EAD63CD567087832A7`.
+- Gate 14A adds one isolated Task 232 read-only inventory candidate; no existing runtime task changes.
+- Candidate status: `GATE 14A RUNTIME CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+- No Gate 14 phone proof or capacity claim exists. No live Sheet mutation or Tasker execution occurred.
+- Phone import, capacity ladder, final interface, unattended production, and release remain blocked.
+<!-- GATE14A_CONTROLLER_END -->
