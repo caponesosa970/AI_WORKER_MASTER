@@ -2,11 +2,11 @@
 
 Updated: 2026-07-14
 
-Status: CURRENT SOURCE-TRUTH TRACKER / GATE 13 TIMER-STOP-RECOVERY CANDIDATE HOLD
+Status: CURRENT SOURCE-TRUTH TRACKER / GATE 13 LOCKED / GATE 14 BLOCKED
 
 ## Current Proof Percent
 
-12/14 locked = 86%.
+13/14 locked = 93%.
 
 ## Locked Main Gates
 
@@ -22,6 +22,7 @@ Status: CURRENT SOURCE-TRUTH TRACKER / GATE 13 TIMER-STOP-RECOVERY CANDIDATE HOL
 10. 10/14 Gate 10 independent confirmation and DONE - LOCKED by direct Sosa phone proof
 11. 11/14 Gate 11 exact-row Archive - LOCKED by direct Sosa phone proof
 12. 12/14 Gate 12 permanent queue lifecycle integration - LOCKED by direct Sosa phone proof
+13. 13/14 Gate 13 timer, STOP, background guard, and recovery - LOCKED by direct Sosa phone proof
 
 ## Locked Sub-Proofs
 
@@ -37,7 +38,7 @@ Status: CURRENT SOURCE-TRUTH TRACKER / GATE 13 TIMER-STOP-RECOVERY CANDIDATE HOL
 
 ## Current Paused Gate
 
-Gate 13 timer, STOP, background guard, and recovery - HOLD FOR CHATGPT FULL ARTIFACT AUDIT.
+Gate 14 capacity, reliability ladder, final control interface, and release proof - BLOCKED.
 
 ## Current Active Issue
 
@@ -51,12 +52,14 @@ Gate 13 timer, STOP, background guard, and recovery - HOLD FOR CHATGPT FULL ARTI
 - ISSUE_GATE11_PRODUCTION_ARCHIVE_PHONE_PROOF_PENDING - VERIFIED CLOSED BY DIRECT SOSA PHONE PROOF
 - ISSUE_GATE12_QUEUE_LIFECYCLE_PHONE_PROOF_PENDING - VERIFIED CLOSED BY DIRECT SOSA PHONE PROOF
 - ISSUE_GATE12_CONTROLLED_MODE_NORMALIZATION_SUBSTITUTION - VERIFIED CLOSED BY DIRECT SOSA PHONE PROOF OF THE REPAIRED CANDIDATE
-- ISSUE_GATE13_BLANKET_LOCK_RESET_PATHS - REPAIRED CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT AND PHONE PROOF
-- ISSUE_GATE13_ENVIRONMENT_STATE_NOT_FULLY_DETECTABLE - OPEN / HOLD FOR PHONE PROOF
+- ISSUE_GATE13_BLANKET_LOCK_RESET_PATHS - VERIFIED CLOSED BY DIRECT SOSA PHONE PROOF
+- ISSUE_G13_KEYG_FALSE_HOLD_ANDROID16 - VERIFIED CLOSED BY DIRECT SOSA PHONE PROOF
+- ISSUE_G13_CONFIRM_RECOVERY_CHAT_LIST_HOLD - VERIFIED CLOSED BY DIRECT SOSA PHONE PROOF
+- ISSUE_GATE13_ENVIRONMENT_STATE_NOT_FULLY_DETECTABLE - PARTIAL / GATE 14 RELEASE LIMITATION
 
-Gate 9 controlled Send, Gate 10 independent confirmation/DONE, Gate 11 exact-row Archive, and Gate 12 permanent queue lifecycle integration are LOCKED / PASS by direct Sosa phone proof. Their old controlled launchers must not run again. Gate 13 is the only active runtime candidate.
+Gates 9 through 13 are LOCKED / PASS by direct Sosa phone proof. Their old controlled launchers must not run again. Gate 14 is the only remaining main gate.
 
-Direct Sosa phone proof is the authority for the Gate 9, Gate 10, and Gate 11 locks. Codex records those controller decisions but does not independently claim phone proof.
+Direct Sosa phone proof is the authority for the Gate 9 through Gate 13 locks. Codex records those controller decisions but does not independently claim phone proof.
 
 Accountability-system installation is active from main commit `aa4e1ded4d70a8262adc80cc80a7bb5fad957b46`.
 
@@ -110,8 +113,8 @@ V15A source:
 - New Send transaction while an awaiting-confirm row exists
 - Gate 10 launcher rerun / additional DONE write
 - Gate 12 controlled launcher rerun
-- Gate 13 phone import until ChatGPT audits the actual XML and ZIP
-- Gate 13 phone proof and tracker increase beyond 12/14
+- Gate 13 launcher and proof reruns
+- Gate 14 capacity, reliability ladder, final control interface, and release proof
 - Broad Archive outside the permanent Task 199 -> Task 227 -> Task 226 route
 - DeadArchive
 - Compactor
@@ -264,3 +267,17 @@ Codex return is automatically rejected if it lacks preflight, bug-history search
 - No phone import is approved. No Gate 13R2 phone proof is claimed. No live Sheet mutation or Tasker execution occurred.
 - Awaiting-confirm completion, final clean Start/timer/STOP proof, unattended operation, capacity, and release remain blocked.
 <!-- GATE13R2_CONTROLLER_END -->
+
+<!-- GATE13_PHONE_PROOF_CLOSURE_CONTROLLER_START -->
+## Gate 13 Phone-Proof Closure Decision
+
+- Authority: newest direct Sosa phone proof supplied on 2026-07-14. Codex records the controller decision and does not claim phone proof.
+- Gate 13R2 full-project import/render, unlock/lock probing, controlled scheduled tick, busy overlap, screen-off guard, STOP ordering, active/stale lock handling, `SENDING` preservation, awaiting-confirm recovery, exact confirmation, DONE recovery, clean startup, and clean final STOP passed the supplied phone ladder.
+- Busy overlap produced `TICK_SKIPPED_BUSY` with zero Queue Cycle calls. Screen-off produced `TICK_SKIPPED_SCREEN_OFF`.
+- Clean startup produced `RECOVERY_SAFE` and `STARTED_SAFE`; only TextNow Trigger and Every 2m Tick were enabled.
+- Final STOP produced `STOPPED_CLEAN`, disabled all profiles before the next scheduled tick, and no runtime task ran afterward.
+- Gate 13 is `LOCKED / PASS`; operational tracker is `13/14 locked = 93%`.
+- This section supersedes the earlier Gate 13 candidate/HOLD sections while retaining them as build and failure history.
+- No runtime XML, Tasker task, profile, private artifact, or live Sheet value is changed by this source-truth sync.
+- Gate 14 capacity, reliability ladder, final control-interface validation, PR merge, and production release remain blocked.
+<!-- GATE13_PHONE_PROOF_CLOSURE_CONTROLLER_END -->

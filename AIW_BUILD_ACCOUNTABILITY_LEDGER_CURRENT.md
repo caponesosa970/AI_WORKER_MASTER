@@ -1154,3 +1154,34 @@ No percentage change. Current tracker remains `8/14 locked = 57%`.
 - Prevention rule: confirmation recovery must autonomously open the exact bound conversation before screen proof; manual pre-navigation cannot substitute for autonomous proof.
 - Final decision: CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT.
 <!-- GATE13R2_BUILD_LEDGER_END -->
+
+<!-- GATE13_PHONE_PROOF_CLOSURE_LEDGER_START -->
+## Accountability ID AIW-GATE13-PHONE-PROOF-CLOSURE-20260714
+
+- Date/time: 2026-07-14 America/Los_Angeles.
+- Gate: Gate 13 timer, STOP, background guard, and recovery closure.
+- Exact task assigned: record direct Sosa Gate 13 phone proof, advance durable operational source truth to `13/14 locked = 93%`, and leave Gate 14 blocked.
+- Exact source files: the eight mandatory controller/accountability files read from `origin/main` commit `e3dc7c77830f67e84034761f6d3dab6ed5406698`, plus the current PR branch records and newest direct Sosa instruction.
+- Source role: current-main canonical controls plus newer direct phone-proof authority.
+- Current branch: `repair/31A-dashgood-search-lane-controlled-send`.
+- Starting commit: `ae23e34368f542fbe4ac5e625ef867ae4c8c5d6b`.
+- Codex mode: documentation and source-truth synchronization only.
+- Approved actions: update five public controller/accountability documents, create one sanitized closure report, commit, push, and update PR #7 metadata when access permits.
+- Prohibited actions: runtime XML or Tasker changes, Sheet or profile changes, raw runlog publication, private artifacts, credentials, capacity work, merge, release claim, or Gate 14 advancement.
+- Files touched: exactly the five authorized current documents and one sanitized report under `02_TEST_LOGS/GATE13_PHONE_PROOF_CLOSURE_20260714/`.
+- Runtime tasks touched: NONE.
+- Exact runtime actions touched: NONE.
+- Claims made: Gate 13 phone ladder passed by direct Sosa proof; tracker advances to 13/14; Gate 14 remains blocked; public output contains no private runtime material.
+- Proof supporting claims: newest direct Sosa instruction, sanitized mapped closure report, changed-file audit, privacy scan, and `git diff --check`.
+- Proof not available: Gate 14 capacity ladder, 50-contact reliability, final control-interface validation, production release, fold-state behavior, and battery/background-restriction proof.
+- Known assumptions: none about phone behavior beyond the direct Sosa proof supplied in this task.
+- Contradictions found: current GitHub main still records `8/14 = 57%`; the branch records newer Gates 9-12 proof; this closure records the newest Gate 13 proof but does not merge it.
+- Regression checks required: no raw private evidence, no credential or phone number, no runtime/private file change, no unsupported release claim, and no Gate 14 advancement.
+- Regression results: changed-file scope PASS; public privacy/secret scan PASS; `git diff --check` PASS; ChatGPT audit pending.
+- Phone proof required: direct Sosa Gate 13 proof was required and was supplied to the controller; Codex does not claim it independently.
+- Phone proof received: recorded as direct Sosa proof; raw private artifacts are intentionally not committed.
+- Final controller decision: `GATE 13 SOURCE-TRUTH SYNC CANDIDATE / HOLD FOR CHATGPT AUDIT`.
+- Tracker effect: advances operational tracker from `12/14 = 86%` to `13/14 = 93%`; Gate 14 remains blocked.
+- Responsible parties: Codex owns accurate public synchronization and privacy checks; ChatGPT owns direct-evidence audit and merge approval; Sosa owns phone proof and has no failure responsibility recorded.
+- Prevention rule added: phone-proof closures must map each runtime claim to direct controller evidence while keeping raw private logs and values outside Git.
+<!-- GATE13_PHONE_PROOF_CLOSURE_LEDGER_END -->

@@ -792,3 +792,42 @@ Builds that must check this issue in preflight:
 - The row remained `SEND_CLICKED_AWAITING_CONFIRM`.
 - No unsafe behavior occurred.
 <!-- GATE13R2_FAILURE_LEDGER_END -->
+
+<!-- GATE13_PHONE_PROOF_CLOSURE_FAILURES_START -->
+## Gate 13 Phone-Proof Failure Closures
+
+Authority: newest direct Sosa phone proof supplied on 2026-07-14. Raw runlogs and private phone values remain outside the public repository. Codex records the proof and does not claim it independently.
+
+### ISSUE_GATE13_BLANKET_LOCK_RESET_PATHS
+
+- Status: VERIFIED CLOSED.
+- Closing proof: active non-stale busy lock caused startup HOLD without release; stale busy lock released safely; STOP during a pending transaction preserved the unowned lock; clean STOP disabled triggers first and returned `STOPPED_CLEAN`.
+- Required regression result: PASS by direct Sosa phone proof.
+- Prevention rule retained: no blanket lock reset and no lock release without ownership or stale-age plus queue-state proof.
+- User/operator responsibility: NONE.
+
+### ISSUE_G13_KEYG_FALSE_HOLD_ANDROID16
+
+- Status: VERIFIED CLOSED.
+- Closing proof: the Android unlock probe passed both visibly unlocked and active locked-screen cases; screen-off separately failed closed as `TICK_SKIPPED_SCREEN_OFF`.
+- Required regression result: PASS by direct Sosa phone proof.
+- Prevention rule retained: platform-state signals require target-device proof and ambiguous results must HOLD.
+- User/operator responsibility: NONE.
+
+### ISSUE_G13_CONFIRM_RECOVERY_CHAT_LIST_HOLD
+
+- Status: VERIFIED CLOSED.
+- Closing proof: recovery navigated autonomously to the exact bound thread, independently proved the exact reply and immediate `Sent`, updated only the bound row to `DONE`, released the confirmation lock, and made zero Send and Archive calls during confirmation.
+- Required regression result: PASS by direct Sosa phone proof.
+- Prevention rule retained: confirmation must autonomously open the bound thread and separately prove the exact visible sent-message state.
+- User/operator responsibility: NONE.
+
+### ISSUE_GATE13_ENVIRONMENT_STATE_NOT_FULLY_DETECTABLE
+
+- Status: PARTIAL / OPEN FOR GATE 14 RELEASE REVIEW.
+- Gate 13 evidence closes screen-off and keyguard behavior only.
+- Unsupported fold-state and battery/background-restriction behavior is not claimed and does not reopen Gate 13.
+- Prevention rule retained: unsupported device states must not be advertised as release-proven.
+
+Gate 13 is `LOCKED / PASS`; operational tracker is `13/14 locked = 93%`. Gate 14 remains blocked.
+<!-- GATE13_PHONE_PROOF_CLOSURE_FAILURES_END -->

@@ -277,3 +277,23 @@ Replacement XML SHA256: `82148AF8B72A24E3DBA77936A15E547E2114FEC01B705A084D12AA3
 | GATE13R2-009 | Helper opens the correct thread on phone | Tasker import/render and direct run from Chats list | Not provided | UNSUPPORTED / HOLD |
 | GATE13R2-010 | Recovery confirms and writes DONE | Exact phone run, Sheet readback, and controller reconciliation | Not provided | UNSUPPORTED / HOLD |
 <!-- GATE13R2_CLAIM_MATRIX_END -->
+
+<!-- GATE13_PHONE_PROOF_CLOSURE_CLAIMS_START -->
+## Gate 13 Phone-Proof Closure Claims
+
+| Claim ID | Claim | Evidence required | Actual evidence | Result |
+| --- | --- | --- | --- | --- |
+| GATE13-CLOSE-001 | Gate 13R2 imports and renders on the target phone | Direct Sosa phone import/render proof | Sosa supplied the completed Gate 13 phone ladder | PROVEN BY DIRECT SOSA PHONE PROOF |
+| GATE13-CLOSE-002 | Unlock and locked-screen detection work on the target Android runtime | Direct unlocked and locked-screen runs | Both cases passed; ambiguous states remain fail-closed | PROVEN BY DIRECT SOSA PHONE PROOF |
+| GATE13-CLOSE-003 | Timer overlap and screen-off guards prevent queue work | Scheduled phone runs and task-call evidence | Busy returned `TICK_SKIPPED_BUSY` with zero Queue Cycle calls; screen-off returned `TICK_SKIPPED_SCREEN_OFF` | PROVEN BY DIRECT SOSA PHONE PROOF |
+| GATE13-CLOSE-004 | STOP prevents new work and preserves active ownership | STOP-before-tick, pending-transaction, and clean STOP runs | Pending lock was preserved; clean STOP returned `STOPPED_CLEAN`; no task ran after STOP | PROVEN BY DIRECT SOSA PHONE PROOF |
+| GATE13-CLOSE-005 | Startup recovery handles active and stale locks safely | Direct startup recovery runs | Non-stale busy lock held without release; stale busy lock released safely | PROVEN BY DIRECT SOSA PHONE PROOF |
+| GATE13-CLOSE-006 | Recovery never retries an unresolved Send | Direct `SENDING` recovery run | `SENDING` remained non-sendable and Send calls were zero | PROVEN BY DIRECT SOSA PHONE PROOF |
+| GATE13-CLOSE-007 | Awaiting-confirm recovery navigates and confirms safely | Direct recovery run, visible exact thread/reply/`Sent`, and result reconciliation | Only the bound row became `DONE`; Send and Archive calls during confirmation were zero | PROVEN BY DIRECT SOSA PHONE PROOF |
+| GATE13-CLOSE-008 | DONE recovery archives exactly and safely | Direct Archive recovery runs and controller reconciliation | Exact rows archived one at a time with copy/readback/uniqueness/source-clear proof | PROVEN BY DIRECT SOSA PHONE PROOF |
+| GATE13-CLOSE-009 | Clean startup and final STOP control intended profiles | Direct profile-state screenshots and run results | Startup returned `RECOVERY_SAFE`/`STARTED_SAFE`; only trigger/timer enabled; final STOP disabled all profiles | PROVEN BY DIRECT SOSA PHONE PROOF |
+| GATE13-CLOSE-010 | Gate 13 is locked at 13/14 | Complete mapped phone ladder and controller decision | Newest direct Sosa instruction locks Gate 13 and advances tracker to `13/14 = 93%` | PROVEN BY CONTROLLER |
+| GATE13-CLOSE-011 | Fold and battery/background behavior is release-proven | Direct target-device proof | Not supplied | UNSUPPORTED / GATE 14 HOLD |
+
+Codex did not independently inspect or publish raw private phone evidence. ChatGPT must audit this source-truth sync before merge.
+<!-- GATE13_PHONE_PROOF_CLOSURE_CLAIMS_END -->

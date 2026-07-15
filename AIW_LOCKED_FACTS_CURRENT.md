@@ -8,7 +8,7 @@ Authority: Phone proof, current GitHub tracker, SHA-verified sources, live Sheet
 
 Current proof level:
 
-`12/14 locked = 86%`
+`13/14 locked = 93%`
 
 Locked main gates:
 
@@ -24,10 +24,11 @@ Locked main gates:
 10. Gate 10 independent confirmation and DONE proof by direct Sosa phone proof.
 11. Gate 11 exact-row Archive proof by direct Sosa phone proof.
 12. Gate 12 permanent queue lifecycle integration proof by direct Sosa phone proof.
+13. Gate 13 timer, STOP, background guard, and recovery proof by direct Sosa phone proof.
 
 Current active main gate:
 
-- Gate 13 timer, STOP, background guard, and recovery — CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT.
+- Gate 14 capacity, reliability ladder, final control interface, and release proof - BLOCKED.
 
 No percentage increase is authorized without new phone proof.
 
@@ -154,8 +155,8 @@ A fresh live Sheet read is mandatory before any future test or mutation.
 Blocked until separately proven:
 
 - Gate 12 controlled launcher rerun;
-- Gate 13 phone import until ChatGPT audits the actual XML and ZIP;
-- Gate 13 phone proof and tracker advancement beyond 12/14;
+- Gate 13 launcher and proof reruns;
+- Gate 14 capacity, reliability ladder, final control interface, and release proof;
 - broad Archive integration outside Task 227 to Task 226;
 - DeadArchive;
 - Compactor;
@@ -234,3 +235,23 @@ Blocked until separately proven:
 - Task 225's existing exact sender, unique exact reply, immediate `Sent`, DONE readback, and confirmation-lock cleanup remain the confirmation authority.
 - Gate 13R2 is a static candidate only. Phone import and phone proof remain blocked pending ChatGPT full artifact audit.
 <!-- GATE13R2_LOCKED_FACTS_END -->
+
+<!-- GATE13_PHONE_PROOF_CLOSURE_START -->
+## Gate 13 Phone-Proof Closure
+
+- Authority: newest direct Sosa phone proof supplied on 2026-07-14. Codex records this proof and does not claim it independently.
+- Gate 13R2 full-project import and render passed on the phone.
+- The Android unlock probe passed both visibly unlocked and active locked-screen cases.
+- Controlled scheduled timer proof showed one tick; busy overlap returned `TICK_SKIPPED_BUSY` with zero Queue Cycle calls; screen-off returned `TICK_SKIPPED_SCREEN_OFF`.
+- STOP-before-tick prevented scheduled work. STOP during a pending transaction preserved the unowned lock. Clean STOP returned `STOPPED_CLEAN`.
+- Startup held on an active non-stale busy lock without releasing it and safely released a stale busy lock.
+- An unresolved `SENDING` row stayed non-sendable with zero Send retry.
+- Awaiting-confirm recovery autonomously opened the exact thread, independently proved the exact reply and immediate `Sent`, changed only the bound row to `DONE`, and made zero Send and Archive calls during confirmation.
+- DONE recovery archived exact rows one at a time with copy, readback, uniqueness, and source-clear proof.
+- Clean startup returned `RECOVERY_SAFE` and `STARTED_SAFE`, enabling only TextNow Trigger and Every 2m Tick.
+- Final STOP disabled all four profiles before the next scheduled tick; no Tick, Live Guard, Queue Cycle, Router, Send, Confirm, or Archive task ran after STOP.
+- Gate 13 is `LOCKED / PASS`. Operational tracker is `13/14 locked = 93%`.
+- This closure supersedes the earlier Gate 13, Gate 13R1, and Gate 13R2 candidate/HOLD sections above without deleting their historical evidence.
+- Fold-state and battery/background-restriction behavior are not claimed by this closure and remain Gate 14 release limitations.
+- Gate 14 capacity, final control-interface validation, and release proof remain blocked.
+<!-- GATE13_PHONE_PROOF_CLOSURE_END -->
