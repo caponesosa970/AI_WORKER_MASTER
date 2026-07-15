@@ -16,4 +16,5 @@
 - Phone proof claimed by Codex: NO.
 - Phone import approved by Codex: NO.
 - Tracker effect: none; remains `13/14 locked = 93%`.
+- PR metadata update: attempted after the candidate push; GitHub returned `403 Resource not accessible by integration`, so the committed reports remain authoritative and PR #9 metadata was not changed.
 - Final decision: `GATE 14C BOUNDED OPENAI RETRY RUNTIME CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
