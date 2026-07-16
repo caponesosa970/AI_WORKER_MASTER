@@ -1333,3 +1333,16 @@ No percentage change. Current tracker remains `8/14 locked = 57%`.
 - Tracker effect: none; remains `13/14 locked = 93%` with 50 checkpoints remaining.
 - Final decision: `GATE 14D CONTROLLED PROCESSING CAPACITY RUNTIME CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
 <!-- GATE14D_BUILD_LEDGER_END -->
+
+## Accountability ID AIW-GATE14D-R1-ARRAY-ELEMENT-CLEAR-20260715
+
+- Assigned scope: repair `ISSUE_G14D_AUTOSHEETS_ARRAY_ELEMENT_STALE_BLEED` in Task 238 only.
+- Source SHA256: `A7C577E6929E930938F0D48937332D19F441D2C1FFD9821E7047E397ECE74C07`.
+- Direct Sosa proof recorded: row 149 completed; row 150 failed safely before a second transaction; remaining staged rows stayed unchanged.
+- Runtime delta: Task 238 actions 389 -> 399; five indexed A:E element clears inserted before each of two exact Get Data actions.
+- Preservation: 90/90 other tasks raw-byte identical; profiles, scene, project registry, and credential unchanged.
+- Validation: validator one PASS (36 checks); validator two PASS (22 checks); Tasker static audit PASS.
+- Codex responsibility: the original static model omitted generated AutoSheets element persistence.
+- Prohibited actions honored: no Tasker, Sheet, TextNow, OpenAI, profile, merge, import approval, or phone-proof claim.
+- Tracker effect: none; remains `13/14 locked = 93%`, 50 checkpoints remaining.
+- Decision: `GATE 14D R1 ARRAY ELEMENT CLEAR REPAIR CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.

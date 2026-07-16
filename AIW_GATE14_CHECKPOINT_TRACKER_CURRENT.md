@@ -42,4 +42,6 @@ Gate 14C is now closed. Its completed closure checkpoint is retained here for tr
 
 Candidate build created and statically validated on 2026-07-15. It remains uncounted and on HOLD until ChatGPT audits the exact artifact. The next checkpoint is `GATE 14D ARTIFACT AUDIT`.
 
+First phone run result: one row completed, then `ISSUE_G14D_AUTOSHEETS_ARRAY_ELEMENT_STALE_BLEED` stopped safely before the second row. Gate 14D R1 is a Task-238-only static candidate with validators PASS/PASS. No checkpoint is deducted until ChatGPT audits the exact R1 artifact and direct Sosa phone regression passes.
+
 Live mode, PR merge, release, and `14/14` remain blocked.

@@ -317,3 +317,13 @@ Blocked until separately proven:
 - Static validators PASS/PASS; no Gate 14D phone proof or capacity claim exists.
 - Tracker remains `13/14 locked = 93%` with 50 checkpoints remaining; import, merge, live mode, and release remain blocked.
 <!-- GATE14D_LOCKED_FACTS_END -->
+
+## Gate 14D R1 Candidate Facts
+
+- Direct Sosa proof showed the first Gate 14D candidate completed row 149, then failed closed before row 150 processing because a generated AutoSheets array element retained row 149's Reply.
+- The failure caused no duplicate lock, API call, write, Send, confirmation, DONE, or Archive action; rows 150-153 remained unchanged.
+- R1 uses exact base SHA256 `A7C577E6929E930938F0D48937332D19F441D2C1FFD9821E7047E397ECE74C07`.
+- R1 changes Task 238 only: ten explicit generated-element clears, five before each exact-row Get Data action.
+- All other 90 task blocks, all profiles, the scene, project registry, and credential remain unchanged.
+- Static validators PASS/PASS; R1 has no phone proof and is not approved for import.
+- Tracker remains `13/14 locked = 93%`; 50 checkpoints remain; capacity, interface, merge, live operation, and release remain blocked.

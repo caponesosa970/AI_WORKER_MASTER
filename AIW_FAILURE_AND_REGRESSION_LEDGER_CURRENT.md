@@ -945,3 +945,15 @@ Gate 13 is `LOCKED / PASS`; operational tracker is `13/14 locked = 93%`. Gate 14
 - Separate open checkpoints: same-sender ordering, immediate duplicate suppression, later repeat, overflow/admission, race/recovery, interface, and release.
 - Tracker remains `13/14 locked = 93%`; 50 checkpoints remain.
 <!-- GATE14D_FAILURE_LEDGER_END -->
+
+## ISSUE_G14D_AUTOSHEETS_ARRAY_ELEMENT_STALE_BLEED
+
+- First detected: direct Sosa Gate 14D phone run on 2026-07-15.
+- Observed safe result: row 149 completed with exact Reply, HTTP 200, and one owned-lock release; row 150 failed precheck; rows 150-153 remained `NEW` with blank Reply; no second lock, API call, write, Send, confirmation, DONE, or Archive ran.
+- Root cause: clearing base AutoSheets arrays did not clear the generated `%g14d_reply1` element, and the blank next row did not overwrite that stale value.
+- User/operator responsibility: none.
+- Codex/static responsibility: the original state model did not reproduce Tasker's generated-array-element persistence.
+- R1 repair: Task 238 only; explicitly clear all five generated A:E element variables before each exact-row Get Data action.
+- Static status: validators PASS/PASS; direct Tasker XML audit PASS.
+- Runtime status: OPEN / HOLD pending ChatGPT artifact audit and direct Sosa phone regression.
+- Tracker: unchanged at `13/14 locked = 93%`; 50 checkpoints remain.

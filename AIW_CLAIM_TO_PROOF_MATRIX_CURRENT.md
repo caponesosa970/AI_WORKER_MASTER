@@ -432,3 +432,18 @@ All five Gate 14C modes are phone-proven by Sosa. Codex records but does not ind
 
 Tracker remains `13/14 locked = 93%`; 50 checkpoints remain. Codex claims no phone proof and approves no import.
 <!-- GATE14D_CLAIM_MATRIX_END -->
+
+## Gate 14D R1 Array Element Clear Repair
+
+| ID | Claim | Evidence | Status |
+|---|---|---|---|
+| G14D-R1-001 | Exact rejected phone-tested Gate 14D candidate used as authorized repair base | SHA256 `A7C577E6929E930938F0D48937332D19F441D2C1FFD9821E7047E397ECE74C07` | PROVEN STATIC |
+| G14D-R1-002 | Phone failure was fail-safe | Direct Sosa evidence: one completed row, then HOLD before a second transaction; remaining rows unchanged | PROVEN PHONE / DIRECT SOSA |
+| G14D-R1-003 | Only Task 238 changed | 90 unchanged raw task blocks plus profile/scene/project comparison | PROVEN STATIC |
+| G14D-R1-004 | Each exact read clears five generated A:E array elements | Exact action inventory before both Get Data nodes | PROVEN STATIC |
+| G14D-R1-005 | Blank second row cannot inherit first-row Reply in the independent state model | Two-row stale-bleed regression | PROVEN STATIC |
+| G14D-R1-006 | A real nonblank Reply is not suppressed | Independent state model | PROVEN STATIC |
+| G14D-R1-007 | R1 works on the target phone | No repaired phone run | UNSUPPORTED / HOLD |
+| G14D-R1-008 | 5/10/25/50 processing capacity and release are complete | Remaining Gate 14D-G proof | UNSUPPORTED / BLOCKED |
+
+Tracker remains `13/14 locked = 93%`; 50 checkpoints remain. Codex claims no phone proof and approves no import.

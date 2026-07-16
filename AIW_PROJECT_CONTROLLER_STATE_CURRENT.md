@@ -382,3 +382,15 @@ Codex return is automatically rejected if it lacks preflight, bug-history search
 - Tracker remains `13/14 locked = 93%` with 50 checkpoints remaining.
 - Capacity phone ladder, ordering/duplicate/admission tests, recovery/race, final interface, live mode, merge, and release remain blocked.
 <!-- GATE14D_CONTROLLER_END -->
+
+## Gate 14D R1 Array Element Clear Repair Candidate
+
+- First Gate 14D phone run: `FAIL-SAFE / HOLD` by direct Sosa proof.
+- Row 149 completed correctly; stale generated `%g14d_reply1` state caused row 150 precheck to HOLD before another lock, API call, or write.
+- Rows 150-153 remained `NEW` with blank Reply; no Send, confirmation, DONE, or Archive path ran.
+- R1 direct repair base SHA256: `A7C577E6929E930938F0D48937332D19F441D2C1FFD9821E7047E397ECE74C07`.
+- R1 changes Task 238 only by clearing `%g14d_id1`, `%g14d_sender1`, `%g14d_message1`, `%g14d_status1`, and `%g14d_reply1` before both exact-row reads.
+- R1 XML SHA256: `72D5F636AE72F441ACD2BF1C0C9B5B93FFF8503775FA3CA05C59A9111389CDE4`.
+- Static validators: PASS/PASS. Phone proof for R1: none.
+- Status: `GATE 14D R1 ARRAY ELEMENT CLEAR REPAIR CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+- Tracker remains `13/14 locked = 93%`; 50 checkpoints remain; PR #9 remains open and unmerged.
