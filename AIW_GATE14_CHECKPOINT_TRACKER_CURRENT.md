@@ -6,28 +6,21 @@ Gate 14C runtime and R1 regressions are closed by direct Sosa phone proof. Gate 
 
 ## Visible Ongoing Tracker
 
-- Total checkpoints remaining: 50
-- Phone/runtime remaining: 33
-- Non-phone remaining: 17
+- Total checkpoints remaining: 43
+- Phone/runtime remaining: 28
+- Non-phone remaining: 15
 
 ### Gate 14C - 1 Remaining
 
 - [x] GitHub proof/source closure
 
-Gate 14C is now closed. Its completed closure checkpoint is retained here for traceability and is not included in the 50 remaining Gate 14D-G checkpoints.
+Gate 14C is now closed. Its completed closure checkpoint is retained here for traceability and is not included in the 43 remaining Gate 14D-G checkpoints.
 
-### Gate 14D - Capacity - 11 Remaining
+### Gate 14D - Identity And Admission - 4 Remaining
 
-- [ ] Build controlled capacity harness
-- [ ] Artifact audit
-- [ ] Import/render
-- [ ] 5-row test
-- [ ] 10-row test
-- [ ] 25-row test
-- [ ] 50-row test
 - [ ] Same-sender ordering
-- [ ] Immediate duplicate suppression
-- [ ] Later repeat accepted
+- [ ] Later repeat accepted under a new event ID
+- [ ] Exact duplicate-ID suppression
 - [ ] Overflow/admission closure
 
 ### Later Gate 14 Work
@@ -38,10 +31,10 @@ Gate 14C is now closed. Its completed closure checkpoint is retained here for tr
 
 ## Current Checkpoint
 
-`GATE 14D CONTROLLED CAPACITY HARNESS BUILD - BLOCKED / NEXT`
+`GATE 14D2 CORRECTED MESSAGE IDENTITY AND ORDERING - CANDIDATE / CURRENT`
 
-Candidate build created and statically validated on 2026-07-15. It remains uncounted and on HOLD until ChatGPT audits the exact artifact. The next checkpoint is `GATE 14D ARTIFACT AUDIT`.
+The 5/10/25/50 processing ladder is closed by direct Sosa phone proof. The 50-row run completed exact rows 149-198 with 50 successes, 50 API calls, 50/50 lock accounting, no retries, and every defect counter zero.
 
-First phone run result: one row completed, then `ISSUE_G14D_AUTOSHEETS_ARRAY_ELEMENT_STALE_BLEED` stopped safely before the second row. Gate 14D R1 is a Task-238-only static candidate with validators PASS/PASS. No checkpoint is deducted until ChatGPT audits the exact R1 artifact and direct Sosa phone regression passes.
+Gate 14D2 combines same-sender ordering and later-repeat acceptance in one mode, plus a separate exact duplicate-ID classification mode. It remains uncounted within the four remaining checkpoints until ChatGPT audits the exact artifact and direct Sosa phone proof passes.
 
 Live mode, PR merge, release, and `14/14` remain blocked.

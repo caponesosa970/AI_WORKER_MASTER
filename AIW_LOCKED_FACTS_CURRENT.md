@@ -327,3 +327,15 @@ Blocked until separately proven:
 - All other 90 task blocks, all profiles, the scene, project registry, and credential remain unchanged.
 - Static validators PASS/PASS; R1 has no phone proof and is not approved for import.
 - Tracker remains `13/14 locked = 93%`; 50 checkpoints remain; capacity, interface, merge, live operation, and release remain blocked.
+
+## Gate 14D Capacity Closure And Gate 14D2 Candidate Facts
+
+- Direct Sosa phone proof passes controlled processing at 5, 10, 25, and 50 rows; the 50-row run completed exact rows 149-198 with all defect counters zero and balanced 50/50 locks.
+- Codex records but does not independently claim that phone proof.
+- Active duplicate behavior is exact event-ID equality in `TT5 Simple Sheet Duplicate Guard`.
+- The fingerprint assignment, age calculation, 180-second condition, duplicate log, Stop, and End If in `FINAL Simple` are historical and disabled; no active TTL claim is allowed.
+- Gate 14D2 uses exact base SHA256 `72D5F636AE72F441ACD2BF1C0C9B5B93FFF8503775FA3CA05C59A9111389CDE4`.
+- Gate 14D2 adds two isolated tasks and changes none of the 91 existing task blocks.
+- Topology is 93 tasks / 4 disabled profiles / 1 scene; static validators PASS/PASS.
+- Visible planning tracker is 43 total, 28 phone/runtime, 15 non-phone; main tracker remains `13/14 locked = 93%`.
+- Phone import, target-phone modes, overflow, merge, live operation, interface, hardening, and release remain blocked.

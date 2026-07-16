@@ -957,3 +957,14 @@ Gate 13 is `LOCKED / PASS`; operational tracker is `13/14 locked = 93%`. Gate 14
 - Static status: validators PASS/PASS; direct Tasker XML audit PASS.
 - Runtime status: OPEN / HOLD pending ChatGPT artifact audit and direct Sosa phone regression.
 - Tracker: unchanged at `13/14 locked = 93%`; 50 checkpoints remain.
+
+## ISSUE_G14D2_DISABLED_FINGERPRINT_SOURCE_CONTRACT
+
+- First detected: mandatory Codex preflight before the original Gate 14D2 build.
+- Finding: active TT5 suppresses exact event IDs; the fingerprint assignment, age calculation, 180-second condition, duplicate log, Stop, and End If in `FINAL Simple` are disabled.
+- Safe result: Codex stopped before runtime or repository changes and returned HOLD.
+- Controller correction: Gate 14D2 must test exact-ID suppression and unique-ID ordered repeats only; it must not enable, copy, repair, or claim the disabled branch.
+- Corrected candidate: two isolated tasks added, 91 existing tasks raw-byte identical, fingerprint source unchanged.
+- Static closure: source mapping and both independent validators PASS.
+- Runtime closure: OPEN / HOLD pending ChatGPT artifact audit and direct Sosa phone modes.
+- Tracker: main gate remains `13/14`; visible planning count is 43 total, 28 phone/runtime, 15 non-phone.

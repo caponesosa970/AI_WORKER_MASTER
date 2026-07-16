@@ -394,3 +394,17 @@ Codex return is automatically rejected if it lacks preflight, bug-history search
 - Static validators: PASS/PASS. Phone proof for R1: none.
 - Status: `GATE 14D R1 ARRAY ELEMENT CLEAR REPAIR CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
 - Tracker remains `13/14 locked = 93%`; 50 checkpoints remain; PR #9 remains open and unmerged.
+
+## Gate 14D Capacity Closure And Gate 14D2 Candidate
+
+- Direct Sosa phone proof passes the 5/10/25/50 processing ladder.
+- The 50-row result was `GATE14D_CAPACITY_VERIFIED`: 50 started/completed/successful, 50 API attempts and real calls, 50/50 lock accounting, zero retries, errors, skips, wrong rows, stale replies, duplicate IDs, or lifecycle actions, and final verification 1 in 608 seconds.
+- Exact rows 149-198 reached `REVIEW_READY` with nonblank replies. Codex records but does not independently claim this proof.
+- Source correction: active duplicate behavior is exact event-ID equality in unchanged TT5; the fingerprint/age/180-second branch in `FINAL Simple` is historical and disabled.
+- Gate 14D2 base SHA256: `72D5F636AE72F441ACD2BF1C0C9B5B93FFF8503775FA3CA05C59A9111389CDE4`.
+- Gate 14D2 adds only `GATE14D Message Identity And Ordering Probe` and `AIW GATE14D MESSAGE IDENTITY ORDER TEST`; 91 existing tasks are raw-byte identical.
+- Candidate XML SHA256: `3851E073BE042F80068E52CF7E3D410ED3D0EBA8A63C5F4C10108532912FE0EA`.
+- Static validators PASS/PASS; no Gate 14D2 phone proof exists.
+- Visible planning tracker: 43 total, 28 phone/runtime, 15 non-phone; Gate 14D has four remaining checkpoints.
+- Status: `GATE 14D2 CORRECTED MESSAGE IDENTITY AND ORDERING CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+- Main tracker remains `13/14 locked = 93%`; PR #9 remains open and unmerged.

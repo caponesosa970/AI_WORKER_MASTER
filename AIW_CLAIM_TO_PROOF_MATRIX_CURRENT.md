@@ -431,6 +431,23 @@ All five Gate 14C modes are phone-proven by Sosa. Codex records but does not ind
 | G14D-011 | Production 50-contact capacity and release are complete | Remaining Gate 14D-G proof | UNSUPPORTED / BLOCKED |
 
 Tracker remains `13/14 locked = 93%`; 50 checkpoints remain. Codex claims no phone proof and approves no import.
+
+## Gate 14D Capacity Closure And Gate 14D2 Candidate
+
+| ID | Claim | Evidence | Status |
+|---|---|---|---|
+| G14D-PHONE-001 | 5/10/25/50 processing ladder passed | Direct Sosa phone evidence | PROVEN PHONE / DIRECT SOSA |
+| G14D-PHONE-002 | 50 rows completed with no skips, stale replies, wrong rows, duplicate IDs, retries, or lock imbalance | Direct Sosa counters and exact row result | PROVEN PHONE / DIRECT SOSA |
+| G14D2-001 | Exact R1 base used | SHA256 `72D5F636AE72F441ACD2BF1C0C9B5B93FFF8503775FA3CA05C59A9111389CDE4` | PROVEN STATIC |
+| G14D2-002 | Exactly two tasks added and 91 existing tasks preserved | Raw task and registry comparison | PROVEN STATIC |
+| G14D2-003 | Active production duplicate behavior is exact event-ID equality | `FINAL Simple`/TT5 source mapping | PROVEN STATIC |
+| G14D2-004 | Fingerprint/age/180-second source remains disabled and unchanged | Disabled-node and raw-byte comparison | PROVEN STATIC |
+| G14D2-005 | Ordered mode is restricted to rows 199-201 and repeats row-199 message under a new row-201 ID | Control-flow and state model | PROVEN STATIC |
+| G14D2-006 | Duplicate mode reaches only TT5 twice with zero API/lock/write calls | Mode reachability validator | PROVEN STATIC |
+| G14D2-007 | Both modes pass on target phone | No Gate 14D2 phone execution | UNSUPPORTED / HOLD |
+| G14D2-008 | Overflow, final interface, hardening, live operation, and release are complete | Remaining Gate 14 proof | UNSUPPORTED / BLOCKED |
+
+Main tracker remains `13/14 locked = 93%`; visible planning tracker is 43 total, 28 phone/runtime, 15 non-phone. Codex claims no phone proof and approves no import.
 <!-- GATE14D_CLAIM_MATRIX_END -->
 
 ## Gate 14D R1 Array Element Clear Repair
