@@ -454,3 +454,15 @@ This section is superseded by Gate 14D3 R2 above. It is retained only as source 
 - Visible planning tracker: 40 total, 25 phone/runtime, 15 non-phone; overflow/admission is the sole remaining Gate 14D checkpoint.
 - Status: `REJECTED AS OVERFLOW PROOF / PRIVATE DIAGNOSTIC ONLY / DO NOT IMPORT`.
 - Main tracker remains `13/14 locked = 93%`; PR #9 remains open and unmerged.
+
+## Gate 14D3 R3 Exact Drain Failure Evidence Candidate
+
+- R2 is superseded and prohibited from import and phone testing.
+- Current private candidate filename: `GATE14D3_R3_FULL_PROJECT_TASKER_IMPORT__EXACT_DRAIN_FAILURE_EVIDENCE_PRIVATE.xml`.
+- Candidate SHA256: `04E09D4059D1B314AEDAD89580043B50200EA57C70ACD8C9382802DF1B6F21F7`.
+- Topology: 97 tasks / 4 disabled profiles / 1 scene.
+- Exact drain order: overflow owner, FIFO select, exact source read/bind, verified `DRAINING`, then shared admission owner and idempotent main/source transaction.
+- Every bound failed drain uses one exact Attempts/LastError evidence path before release; failure-evidence readback failure cannot report success.
+- Validators: 367/367 structure PASS; 69/69 semantic PASS; one-entry ZIP equality PASS.
+- Status: `GATE 14D3 R3 SAFE OVERFLOW ADMISSION, FIFO DRAIN, AND IDEMPOTENT RECOVERY CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+- Tracker remains 40 total, 25 phone/runtime, 15 non-phone and `13/14 locked = 93%`; PR #9 remains open and unmerged.

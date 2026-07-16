@@ -1016,3 +1016,13 @@ Gate 13 is `LOCKED / PASS`; operational tracker is `13/14 locked = 93%`. Gate 14
 - R2 proof: exact owner release, no age stealing, Array Clear before every read, direct-row authority, distinct identities, exact state readbacks, FIFO, reconciliation, and capacity hold.
 - Static proof: validator one 360/360 PASS; validator two 64/64 PASS; standard XML audit PASS.
 - Phone closure still required. Tracker remains 40/25/15 and `13/14 locked = 93%`.
+
+## ISSUE_G14D3_R2_DRAIN_LOCK_ORDER_AND_FAILURE_EVIDENCE
+
+- Status: `REPAIRED STATICALLY IN R3 / HOLD FOR CHATGPT ARTIFACT AUDIT`.
+- R2 audit finding 1: drain acquired shared admission ownership before exact source binding and verified `DRAINING`.
+- R2 audit finding 2: Attempts and LastError were durably recorded only on selected review branches, not every exact-source-bound failed drain.
+- Safety result: R2 was not imported or phone tested and is explicitly superseded.
+- R3 repair: overflow owner first, exact FIFO source bind, verified `DRAINING`, then admission owner; all bound failures use one bounded M:N evidence write/readback path unless already verified.
+- R3 static proof: structure 367/367 PASS; semantic control flow 69/69 PASS.
+- Runtime proof: none. Gate 14D remains HOLD and tracker remains 40/25/15 with main `13/14 locked = 93%`.

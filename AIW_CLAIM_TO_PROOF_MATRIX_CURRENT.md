@@ -526,3 +526,19 @@ Main tracker remains `13/14 locked = 93%`; visible planning tracker is 43 total,
 | G14D-R1-008 | 5/10/25/50 processing capacity and release are complete | Remaining Gate 14D-G proof | UNSUPPORTED / BLOCKED |
 
 Tracker remains `13/14 locked = 93%`; 50 checkpoints remain. Codex claims no phone proof and approves no import.
+
+## Gate 14D3 R3 Exact Drain Failure Evidence Candidate
+
+| ID | Claim | Evidence | Status |
+|---|---|---|---|
+| G14D3-R3-001 | R2 is superseded before phone use | R2 marker and public supersession record | PROVEN STATIC |
+| G14D3-R3-002 | Exact Gate 14D2 base used | SHA256 `3851E073BE042F80068E52CF7E3D410ED3D0EBA8A63C5F4C10108532912FE0EA` | PROVEN STATIC |
+| G14D3-R3-003 | Drain persists exact DRAINING before admission acquisition | Action-order and semantic validator | PROVEN STATIC |
+| G14D3-R3-004 | Every exact-source-bound failed drain records Attempts and LastError before release | Common epilogue reachability and exact M:N readback | PROVEN STATIC |
+| G14D3-R3-005 | Collision/duplicate-main evidence is not double-written | Failure-recorded marker control flow | PROVEN STATIC |
+| G14D3-R3-006 | Complete second-audit overflow contract remains present | Structure 367/367 and semantic 69/69 validators | PROVEN STATIC |
+| G14D3-R3-007 | Other existing tasks, profiles, and scene are preserved | 85/85 task blocks, 4/4 profiles, and 1/1 scene raw comparison | PROVEN STATIC |
+| G14D3-R3-008 | Five controlled modes pass on target phone | No R3 phone execution | UNSUPPORTED / HOLD |
+| G14D3-R3-009 | Gate 14D and Gate 14 are complete | Remaining phone, recovery/race, interface, hardening, and release proof | UNSUPPORTED / BLOCKED |
+
+Planning tracker remains 40 total, 25 phone/runtime, 15 non-phone. Main tracker remains `13/14 locked = 93%`. Codex claims no phone proof and approves no import.

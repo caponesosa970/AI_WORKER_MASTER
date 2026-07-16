@@ -1399,3 +1399,17 @@ No percentage change. Current tracker remains `8/14 locked = 57%`.
 - Prohibited actions performed: NONE. No Tasker, Sheet, OpenAI, TextNow, profile, Send, confirmation, Archive, merge, import approval, or phone-proof claim.
 - Tracker effect: none; remains 40/25/15 and `13/14 locked = 93%`.
 - Decision: `GATE 14D3 R2 SAFE OVERFLOW STATE MACHINE CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+
+## Accountability ID AIW-GATE14D3-R3-DRAIN-FAILURE-EVIDENCE-20260716
+
+- Controller finding: R2 still acquired admission too early and did not persist Attempts/LastError for every bound failed drain.
+- Codex responsibility: the R2 static audit did not model those two contracts strictly enough before packaging.
+- Safety response: R2 was stopped before import/testing and is preserved only as superseded source history.
+- Corrected source: exact Gate 14D2 XML SHA256 `3851E073BE042F80068E52CF7E3D410ED3D0EBA8A63C5F4C10108532912FE0EA`.
+- Runtime delta: authorized existing Tasks 33, 35, 68, 215, 217, 218, 219, and 220 plus added Tasks 242-245; 85/85 other existing tasks preserved.
+- R3-specific correction: exact source and verified `DRAINING` precede admission ownership; one common bounded evidence epilogue covers every bound failed drain.
+- Candidate XML SHA256: `04E09D4059D1B314AEDAD89580043B50200EA57C70ACD8C9382802DF1B6F21F7`.
+- Validation: structure 367/367 PASS; semantic 69/69 PASS; XML/package/privacy checks PASS.
+- Prohibited actions performed: NONE. No Tasker, Sheet, OpenAI, TextNow, profile, Send, confirmation, Archive, merge, import approval, or phone-proof claim.
+- Tracker effect: none; remains 40/25/15 and `13/14 locked = 93%`.
+- Decision: `GATE 14D3 R3 SAFE OVERFLOW ADMISSION, FIFO DRAIN, AND IDEMPOTENT RECOVERY CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.

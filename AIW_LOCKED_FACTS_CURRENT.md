@@ -383,3 +383,16 @@ The candidate described in this section is superseded by Gate 14D3 R1 below. It 
 - Drain order is LoggedAt then source row and persists DRAINING, MAIN_COMMITTED, DRAINED, or OVERFLOW_REVIEW through exact readback.
 - Configured V1 overflow capacity is 999 data rows, source rows 2-1000; capacity cannot overwrite.
 - R2 has no phone proof. Gate 14D remains open; tracker remains 40/25/15 and `13/14 locked = 93%`.
+
+## Gate 14D3 R3 Exact Drain Failure Evidence Candidate Facts
+
+- R2 is superseded and is `HOLD / DO NOT IMPORT / DO NOT PHONE TEST`.
+- R2 acquired the shared admission lock before exact source binding and verified `DRAINING`; it also lacked durable Attempts/LastError evidence on every bound failed drain.
+- R3 uses the exact Gate 14D2 base SHA256 `3851E073BE042F80068E52CF7E3D410ED3D0EBA8A63C5F4C10108532912FE0EA`.
+- R3 candidate XML SHA256 is `04E09D4059D1B314AEDAD89580043B50200EA57C70ACD8C9382802DF1B6F21F7`.
+- R3 topology remains 97 tasks / 4 disabled profiles / 1 scene.
+- Drain now acquires overflow ownership, binds and verifies the exact source, and persists verified `DRAINING` before acquiring shared admission ownership.
+- Every exact-source-bound failed drain reaches one bounded exact Attempts/LastError write/readback path before release unless evidence was already verified.
+- Existing changed tasks remain 33, 35, 68, 215, 217, 218, 219, and 220; Tasks 242-245 remain the only additions; 85/85 other tasks are raw-byte identical.
+- Structure validator 367/367 PASS and semantic validator 69/69 PASS. R3 has no phone proof and is not approved for import.
+- Gate 14D remains open; tracker remains 40/25/15 and `13/14 locked = 93%`.
