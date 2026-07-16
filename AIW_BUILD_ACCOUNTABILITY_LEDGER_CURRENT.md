@@ -1358,3 +1358,15 @@ No percentage change. Current tracker remains `8/14 locked = 57%`.
 - Prohibited actions honored: no Tasker, Sheet, TextNow, OpenAI, profile, merge, import approval, or phone-proof claim.
 - Tracker effect: planning checkpoints reduce to 43 total, 28 phone/runtime, 15 non-phone; main tracker remains `13/14 locked = 93%`.
 - Decision: `GATE 14D2 CORRECTED MESSAGE IDENTITY AND ORDERING CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+
+## Accountability ID AIW-GATE14D3-OVERFLOW-ADMISSION-20260716
+
+- Assigned scope: record direct Sosa Gate 14D2 identity proof and add an isolated overflow/admission harness without modifying existing runtime tasks.
+- Source SHA256: `3851E073BE042F80068E52CF7E3D410ED3D0EBA8A63C5F4C10108532912FE0EA`.
+- Direct Sosa proof recorded: strict rows 199/200/201 ordering, later-repeat acceptance under a unique event ID, and exact duplicate-ID suppression passed; Codex does not independently claim it.
+- Runtime delta: two added tasks and project registrations only; 93 existing tasks, four profiles, and scene preserved.
+- Validation: validator one PASS (148 checks); validator two PASS (28 checks); Tasker static audit PASS; package byte equality PASS.
+- Candidate XML SHA256: `E78235FD8D1E896990A2CE6B14BBA29D8BAF49EE79D88CCD2DCDF7D1A7E0B461`.
+- Prohibited actions honored: no Tasker, Sheet, TextNow, OpenAI, profile, merge, import approval, or independent phone-proof claim.
+- Tracker effect: planning checkpoints reduce to 40 total, 25 phone/runtime, 15 non-phone; main tracker remains `13/14 locked = 93%`.
+- Decision: `GATE 14D3 OVERFLOW AND ADMISSION CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.

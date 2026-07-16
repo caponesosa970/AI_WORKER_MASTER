@@ -432,6 +432,25 @@ All five Gate 14C modes are phone-proven by Sosa. Codex records but does not ind
 
 Tracker remains `13/14 locked = 93%`; 50 checkpoints remain. Codex claims no phone proof and approves no import.
 
+## Gate 14D2 Phone Closure And Gate 14D3 Overflow Candidate
+
+| ID | Claim | Evidence | Status |
+|---|---|---|---|
+| G14D2-PHONE-001 | Same-sender rows 199/200/201 completed in strict order | Direct Sosa runlog and counters | PROVEN PHONE / DIRECT SOSA |
+| G14D2-PHONE-002 | Later repeated message was accepted under a unique event ID | Direct Sosa runlog and exact-row readback | PROVEN PHONE / DIRECT SOSA |
+| G14D2-PHONE-003 | Existing event ID was suppressed while unique control ID remained eligible | Direct Sosa duplicate counters and TT5 path | PROVEN PHONE / DIRECT SOSA |
+| G14D2-PHONE-004 | Duplicate mode made no API, lock, or Sheet-write call | Direct Sosa counters and runlog | PROVEN PHONE / DIRECT SOSA |
+| G14D3-001 | Exact Gate 14D2 base used | SHA256 `3851E073BE042F80068E52CF7E3D410ED3D0EBA8A63C5F4C10108532912FE0EA` | PROVEN STATIC |
+| G14D3-002 | Exactly two tasks added and all 93 existing tasks preserved | Raw task and project-registry comparison | PROVEN STATIC |
+| G14D3-003 | Admission is exactly the unchanged bounded rows 149-198 | Call graph and source mapping | PROVEN STATIC |
+| G14D3-004 | Admission mode cannot process row 199 | Exact call boundary plus independent row-199 readback | PROVEN STATIC |
+| G14D3-005 | Drain mode binds only row 199 | Control-flow and call-parameter inspection | PROVEN STATIC |
+| G14D3-006 | New tasks have no TextNow, Send, confirmation, DONE, Archive, profile, timer, or live path | Forbidden-path scan | PROVEN STATIC |
+| G14D3-007 | Both overflow modes pass on the target phone | No Gate 14D3 phone execution | UNSUPPORTED / HOLD |
+| G14D3-008 | Recovery/race, interface, hardening, live operation, and release are complete | Remaining Gate 14 proof | UNSUPPORTED / BLOCKED |
+
+Main tracker remains `13/14 locked = 93%`; visible planning tracker is 40 total, 25 phone/runtime, 15 non-phone. Codex claims no phone proof and approves no import.
+
 ## Gate 14D Capacity Closure And Gate 14D2 Candidate
 
 | ID | Claim | Evidence | Status |

@@ -408,3 +408,16 @@ Codex return is automatically rejected if it lacks preflight, bug-history search
 - Visible planning tracker: 43 total, 28 phone/runtime, 15 non-phone; Gate 14D has four remaining checkpoints.
 - Status: `GATE 14D2 CORRECTED MESSAGE IDENTITY AND ORDERING CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
 - Main tracker remains `13/14 locked = 93%`; PR #9 remains open and unmerged.
+
+## Gate 14D2 Phone Closure And Gate 14D3 Overflow Candidate
+
+- Direct Sosa phone proof passes strict row order for rows 199, 200, and 201, later-repeat acceptance under a unique event ID, and exact duplicate-ID suppression.
+- Duplicate mode reported one suppressed existing ID and one eligible unique control ID with zero API calls, processing locks, Sheet writes, or lifecycle actions; rows 199-201 remained unchanged.
+- Gate 14D3 exact base SHA256: `3851E073BE042F80068E52CF7E3D410ED3D0EBA8A63C5F4C10108532912FE0EA`.
+- Gate 14D3 adds only `GATE14D3 Overflow Admission Probe` and `AIW GATE14D3 OVERFLOW ADMISSION TEST`; all 93 existing tasks are raw-byte identical.
+- Candidate topology: 95 tasks / 4 disabled profiles / 1 scene.
+- Candidate XML SHA256: `E78235FD8D1E896990A2CE6B14BBA29D8BAF49EE79D88CCD2DCDF7D1A7E0B461`.
+- Static validators PASS/PASS; no Gate 14D3 phone proof exists.
+- Visible planning tracker: 40 total, 25 phone/runtime, 15 non-phone; overflow/admission is the sole remaining Gate 14D checkpoint.
+- Status: `GATE 14D3 OVERFLOW AND ADMISSION CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+- Main tracker remains `13/14 locked = 93%`; PR #9 remains open and unmerged.

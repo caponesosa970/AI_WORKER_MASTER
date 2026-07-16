@@ -339,3 +339,16 @@ Blocked until separately proven:
 - Topology is 93 tasks / 4 disabled profiles / 1 scene; static validators PASS/PASS.
 - Visible planning tracker is 43 total, 28 phone/runtime, 15 non-phone; main tracker remains `13/14 locked = 93%`.
 - Phone import, target-phone modes, overflow, merge, live operation, interface, hardening, and release remain blocked.
+
+## Gate 14D2 Phone Closure And Gate 14D3 Candidate Facts
+
+- Direct Sosa phone proof passes same-sender ordering, later-repeat acceptance under a unique event ID, and exact duplicate-ID suppression.
+- The duplicate test suppressed one existing event ID, kept one unique control ID eligible, and made zero API calls, processing-lock calls, or Sheet writes; the controlled rows remained unchanged.
+- Codex records but does not independently claim this phone proof.
+- Gate 14D3 uses exact base SHA256 `3851E073BE042F80068E52CF7E3D410ED3D0EBA8A63C5F4C10108532912FE0EA`.
+- Gate 14D3 adds two isolated tasks and changes none of the 93 existing task blocks.
+- Admission mode reaches only existing bounded rows 149-198 and independently proves row 199 remains exact NEW with blank Reply.
+- Deferred-drain mode binds and processes only row 199 through the existing bounded processor lane.
+- Topology is 95 tasks / 4 disabled profiles / 1 scene; static validators PASS/PASS.
+- Visible planning tracker is 40 total, 25 phone/runtime, 15 non-phone; overflow/admission is the one remaining Gate 14D checkpoint.
+- Phone import, staging, API execution, merge, live operation, interface, hardening, and release remain blocked.

@@ -968,3 +968,19 @@ Gate 13 is `LOCKED / PASS`; operational tracker is `13/14 locked = 93%`. Gate 14
 - Static closure: source mapping and both independent validators PASS.
 - Runtime closure: OPEN / HOLD pending ChatGPT artifact audit and direct Sosa phone modes.
 - Tracker: main gate remains `13/14`; visible planning count is 43 total, 28 phone/runtime, 15 non-phone.
+
+## ISSUE_G14D2_IDENTITY_ORDER_PHONE_PROOF_PENDING
+
+- Status: `CLOSED BY DIRECT SOSA PHONE PROOF`.
+- Closing proof: strict rows 199/200/201 ordering passed; the later repeated message was accepted under a unique event ID; exact duplicate-ID suppression returned one duplicate and one eligible unique control ID.
+- Isolation proof: duplicate mode made zero API calls, processing-lock calls, or Sheet writes; no TextNow, Send, confirmation, DONE, or Archive path ran; rows 199-201 remained unchanged.
+- Codex records but does not independently claim the phone proof.
+
+## ISSUE_G14D3_OVERFLOW_ADMISSION_NOT_PHONE_PROVEN
+
+- Status: `STATIC CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+- Current gap: no controlled 51-row admission and deferred-row drain phone run exists.
+- Candidate boundary: two added tasks only; all 93 existing tasks remain raw-byte identical.
+- Static safety: first mode calls the unchanged 50-row batch and independently verifies row 199 remains NEW with blank Reply; second mode binds only row 199 through the unchanged processor transaction.
+- Closing proof required: ChatGPT artifact audit, exact staging of rows 149-199, one 50-row admission execution, and one separate row-199 drain execution.
+- Tracker: `13/14 locked = 93%`; visible planning count is 40 total, 25 phone/runtime, 15 non-phone.
