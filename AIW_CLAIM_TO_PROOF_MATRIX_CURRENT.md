@@ -391,7 +391,7 @@ Tracker remains `13/14 locked = 93%`. Codex claims no phone proof and approves n
 | G14C-007 | Final API failures use exact-row ERROR_OPENAI_REVIEW | Task 173 -> Task 233 call and accepted-status proof | PROVEN STATIC |
 | G14C-008 | Legacy API retry rows never reset to NEW | Task 70/236 call and write-path audit | PROVEN STATIC |
 | G14C-009 | Private package is one-entry and byte-equal | SHA and ZIP extraction comparison | PROVEN STATIC |
-| G14C-010 | Gate 14C works on the target phone | Controlled Sosa phone ladder | UNSUPPORTED / HOLD |
+| G14C-010 | Gate 14C works on the target phone | Complete controlled Sosa phone ladder | PROVEN PHONE / DIRECT SOSA |
 | G14C-011 | Production 50-contact capacity and release are complete | Full Gate 14 load/interface/release proof | UNSUPPORTED / BLOCKED |
 
 Tracker remains `13/14 locked = 93%`. Codex claims no Gate 14C phone proof and approves no import.
@@ -407,8 +407,8 @@ Tracker remains `13/14 locked = 93%`. Codex claims no Gate 14C phone proof and a
 | G14C-R1-005 | Code 0 remains bounded retryable missing code | Exact `act162` condition plus independent retry model | PROVEN STATIC |
 | G14C-R1-006 | Existing explicit 200 and 429 values overwrite 0 | Control-flow and state-model inspection | PROVEN STATIC |
 | G14C-R1-007 | Attempts remain two and retries remain one | XML loop and state-model proof | PROVEN STATIC |
-| G14C-R1-008 | R1 works on the target phone | Timeout, real-success, and legacy-migration ladder | UNSUPPORTED / HOLD |
+| G14C-R1-008 | R1 works on the target phone | Timeout, real-success, and legacy-migration ladder | PROVEN PHONE / DIRECT SOSA |
 | G14C-R1-009 | Gate 14 and production release are complete | Remaining capacity/interface/release proof | UNSUPPORTED / BLOCKED |
 
-Tracker remains `13/14 locked = 93%`. Codex approves no import and claims no R1 phone proof.
+All five Gate 14C modes are phone-proven by Sosa. Codex records but does not independently claim that proof. Tracker remains `13/14 locked = 93%`; Gate 14D-G remain blocked.
 <!-- GATE14C_CLAIM_MATRIX_END -->

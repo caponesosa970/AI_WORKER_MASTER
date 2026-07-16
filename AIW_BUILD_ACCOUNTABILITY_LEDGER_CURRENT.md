@@ -1297,4 +1297,22 @@ No percentage change. Current tracker remains `8/14 locked = 57%`.
 - Tracker effect: none; remains `13/14 locked = 93%`.
 - Phone import approved by Codex: NO. Phone proof claimed by Codex: NO. PR merge: BLOCKED.
 - Final decision: `GATE 14C R1 HTTP CODE NORMALIZATION CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+
+## Gate 14C R1 Direct Phone-Proof Closure - 2026-07-15
+
+- Exact task assigned: record sanitized direct Sosa proof and close Gate 14C without runtime changes.
+- R1 import/render: PASS by direct Sosa proof.
+- Controlled modes: `REAL_SUCCESS`, `RATE_LIMIT_THEN_SUCCESS`, `TIMEOUT_EXHAUSTED`, `QUOTA_429_NO_RETRY`, and `LEGACY_RETRY_MIGRATION` all PASS.
+- R1 regressions: timeout returned numeric code 0; real success returned code 200.
+- Retry boundary: attempts capped at two, retries capped at one, and no third HTTP attempt occurred.
+- Persistence: `ERROR_OPENAI_RETRY` no longer returned to NEW; exact `ERROR_OPENAI_REVIEW` persistence passed.
+- Lock proof: every owned processing lock released exactly once.
+- Legacy migration: zero API attempts, zero retries, zero real HTTP calls, no processing-lock acquisition, blank Reply preserved, and fresh exact-row readback confirmed review status.
+- Phone-proof authority: Sosa. Codex independently claims phone proof: NO.
+- Runtime/private changes: NONE.
+- Prohibited access: no Sheet, Tasker, TextNow, OpenAI, profile, runtime XML, or private artifact access/change by Codex.
+- Tracker effect: none; remains `13/14 locked = 93%`.
+- Remaining checkpoints after closure: 50 total, 33 phone/runtime, 17 non-phone.
+- PR #9: remains open and unmerged.
+- Final decision: `GATE 14C R1 VERIFIED CLOSED BY DIRECT SOSA PHONE PROOF / GATE 14D CAPACITY NEXT`.
 <!-- GATE14C_BUILD_LEDGER_END -->

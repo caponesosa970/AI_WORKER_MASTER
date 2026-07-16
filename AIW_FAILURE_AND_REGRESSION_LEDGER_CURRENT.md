@@ -918,7 +918,7 @@ Gate 13 is `LOCKED / PASS`; operational tracker is `13/14 locked = 93%`. Gate 14
 
 ## ISSUE_G14C_NO_RESPONSE_CODE_UNRESOLVED_LITERAL
 
-- Status: `REPAIRED STATIC R1 CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+- Status: `CLOSED BY DIRECT SOSA R1 PHONE PROOF`.
 - Direct Sosa phone evidence: quota/no-retry passed; timeout exhaustion used two attempts, one retry, zero real HTTP calls, exact review persistence, blank Reply, and one lock release.
 - Observed defect: when no real HTTP action returned a response code, Task 235 copied unresolved `%http_response_code` into its public result.
 - Root cause: `Variable Clear` leaves the Tasker variable unresolved when later referenced.
@@ -926,6 +926,9 @@ Gate 13 is `LOCKED / PASS`; operational tracker is `13/14 locked = 93%`. Gate 14
 - Regression boundary: Task 235 only; 243 actions remain 243; all other tasks, profiles, scene, and registry are unchanged.
 - User/operator responsibility: NONE.
 - Codex/static responsibility: the first Gate 14C model did not reproduce Tasker's unresolved no-response-code representation.
-- Closing proof: ChatGPT artifact audit, then timeout, real-success, and legacy-migration phone regressions.
+- Closing proof: R1 import/render, timeout exhaustion with numeric code 0, real-success code 200, and legacy migration all passed by direct Sosa proof.
+- Closure details: all five Gate 14C modes passed; attempts stayed at two maximum, retries at one maximum, no third request occurred, exact review persistence passed, and every owned processing lock released once.
+- Legacy closure: zero API attempts, zero retries, zero real HTTP calls, no processing lock, blank Reply preserved, and fresh exact-row readback confirmed `ERROR_OPENAI_REVIEW`.
+- Remaining risk moved to Gate 14D-G; no Gate 14C runtime defect remains open.
 - Tracker remains `13/14 locked = 93%`; merge and release remain blocked.
 <!-- GATE14C_FAILURE_LEDGER_END -->

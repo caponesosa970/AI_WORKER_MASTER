@@ -279,7 +279,7 @@ Blocked until separately proven:
 <!-- GATE14B_LOCKED_FACTS_END -->
 
 <!-- GATE14C_LOCKED_FACTS_START -->
-## Gate 14B Phone Closure And Gate 14C Candidate Facts
+## Gate 14B Phone Closure And Gate 14C Verified Closure Facts
 
 - Direct Sosa phone proof locks the Gate 14B processor transaction subproof: SUCCESS, WRONG_ID_HOLD, PARTIAL_AFTER_REPLY_HOLD, FAILURE_COMMIT, exact readback, and owned-lock release passed.
 - The accidental repeat of the completed partial mode safely held before lock acquisition or Sheet mutation.
@@ -290,10 +290,15 @@ Blocked until separately proven:
 - Task 235 permits no more than two HTTP attempts and one randomized 2-4 second retry.
 - Final OpenAI failures persist as exact-row `ERROR_OPENAI_REVIEW`; no production Gate 14C path creates another `ERROR_OPENAI_RETRY`.
 - Legacy `ERROR_OPENAI_RETRY` rows migrate to `ERROR_OPENAI_REVIEW` without an API call or reset to NEW.
-- Gate 14C private candidate XML SHA256 is `71A766AE8D550C139AABCEC53DE3B1025CAF26C68561583CBF20AC6D5A5138B3`.
+- The original Gate 14C candidate SHA256 `71A766AE8D550C139AABCEC53DE3B1025CAF26C68561583CBF20AC6D5A5138B3` is historical and superseded by R1.
 - Direct Sosa phone proof establishes `QUOTA_429_NO_RETRY` passed and `TIMEOUT_EXHAUSTED` failed safely, but the timeout result exposed an unresolved no-response-code literal.
 - `ISSUE_G14C_NO_RESPONSE_CODE_UNRESOLVED_LITERAL` is repaired only in the Gate 14C R1 candidate by setting the per-attempt response code to numeric `0` and classifying code `0` as bounded missing response code.
-- Gate 14C R1 private candidate XML SHA256 is `535A163DA2FCEF1A655AB7DBBA4EBE5E9A991C7BF63CD74525244820D4BCA2A1`.
-- Gate 14C R1 static validators PASS/PASS; complete Gate 14C phone proof does not exist.
+- Gate 14C R1 phone-proven runtime XML SHA256 is `535A163DA2FCEF1A655AB7DBBA4EBE5E9A991C7BF63CD74525244820D4BCA2A1`.
+- Direct Sosa proof passed R1 import/render and all five controlled modes: real success, rate-limit then success, timeout exhaustion with code 0, quota/no-retry, and legacy retry migration.
+- Attempts remained capped at two, retries at one, and no third HTTP attempt occurred.
+- Exact `ERROR_OPENAI_REVIEW` persistence and every owned processing-lock release passed.
+- Legacy migration made zero API calls, acquired no processing lock, preserved blank Reply, and fresh exact-row readback confirmed the review status.
+- `ISSUE_G14C_NO_RESPONSE_CODE_UNRESOLVED_LITERAL` is closed by direct Sosa R1 phone proof.
+- Gate 14C is verified closed; Gate 14D capacity is next.
 - Tracker remains `13/14 locked = 93%`; production 50-contact capacity, final controls, merge, and release remain blocked.
 <!-- GATE14C_LOCKED_FACTS_END -->
