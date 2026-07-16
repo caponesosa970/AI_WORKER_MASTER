@@ -412,3 +412,23 @@ Tracker remains `13/14 locked = 93%`. Codex claims no Gate 14C phone proof and a
 
 All five Gate 14C modes are phone-proven by Sosa. Codex records but does not independently claim that proof. Tracker remains `13/14 locked = 93%`; Gate 14D-G remain blocked.
 <!-- GATE14C_CLAIM_MATRIX_END -->
+
+<!-- GATE14D_CLAIM_MATRIX_START -->
+## Gate 14D Controlled Processing Capacity Candidate
+
+| Claim ID | Claim | Evidence | Result |
+|---|---|---|---|
+| G14D-001 | Exact Gate 14C R1 base used | SHA256 `535A163DA2FCEF1A655AB7DBBA4EBE5E9A991C7BF63CD74525244820D4BCA2A1` | PROVEN STATIC |
+| G14D-002 | Tasks 238/239 are the only runtime additions | Raw task-set and project-registry comparison | PROVEN STATIC |
+| G14D-003 | All 89 existing tasks are raw-byte identical | Direct raw-node comparison | PROVEN STATIC |
+| G14D-004 | Only rows 149-198 and counts 5/10/25/50 are reachable | XML control-flow inspection | PROVEN STATIC |
+| G14D-005 | Exact row binding precedes every write-capable processor call | Call-order and state-machine audit | PROVEN STATIC |
+| G14D-006 | One row owns one lock and release precedes the next row | Control-flow and independent lock model | PROVEN STATIC |
+| G14D-007 | HOLD or STOP prevents another row from starting | Abort-gate inspection and state model | PROVEN STATIC |
+| G14D-008 | New tasks have no TextNow/Send/confirmation/DONE/Archive path | Call graph and forbidden-path scan | PROVEN STATIC |
+| G14D-009 | Private package has one byte-equal XML entry | ZIP and hash validator | PROVEN STATIC |
+| G14D-010 | 5/10/25/50 processing capacity passes on the target phone | No phone execution | UNSUPPORTED / HOLD |
+| G14D-011 | Production 50-contact capacity and release are complete | Remaining Gate 14D-G proof | UNSUPPORTED / BLOCKED |
+
+Tracker remains `13/14 locked = 93%`; 50 checkpoints remain. Codex claims no phone proof and approves no import.
+<!-- GATE14D_CLAIM_MATRIX_END -->

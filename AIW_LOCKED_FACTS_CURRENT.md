@@ -302,3 +302,18 @@ Blocked until separately proven:
 - Gate 14C is verified closed; Gate 14D capacity is next.
 - Tracker remains `13/14 locked = 93%`; production 50-contact capacity, final controls, merge, and release remain blocked.
 <!-- GATE14C_LOCKED_FACTS_END -->
+
+<!-- GATE14D_LOCKED_FACTS_START -->
+## Gate 14D Controlled Capacity Candidate Facts
+
+- Gate 14C R1 is closed by direct Sosa phone proof; its phone-proven XML SHA256 is `535A163DA2FCEF1A655AB7DBBA4EBE5E9A991C7BF63CD74525244820D4BCA2A1`.
+- Gate 14D adds only Tasks 238 and 239; all 89 existing task blocks are raw-byte identical.
+- Task 238 is limited to controlled synthetic rows 149-198, ascending order, and counts 5/10/25/50.
+- Each row requires exact A/B/C, NEW, and blank Reply before one per-row processing lock is acquired.
+- Existing bounded Tasks 166/170/171/198/172/173 remain the processing authority.
+- An exact terminal readback and owned-lock release are required before another row can start.
+- Task 239 has no production/profile/scene caller and consumes one-shot authorization before calling Task 238.
+- New-task TextNow, Send, confirmation, DONE, Archive, Queue Cycle, profile, timer, and live paths are absent.
+- Static validators PASS/PASS; no Gate 14D phone proof or capacity claim exists.
+- Tracker remains `13/14 locked = 93%` with 50 checkpoints remaining; import, merge, live mode, and release remain blocked.
+<!-- GATE14D_LOCKED_FACTS_END -->

@@ -40,4 +40,6 @@ Gate 14C is now closed. Its completed closure checkpoint is retained here for tr
 
 `GATE 14D CONTROLLED CAPACITY HARNESS BUILD - BLOCKED / NEXT`
 
+Candidate build created and statically validated on 2026-07-15. It remains uncounted and on HOLD until ChatGPT audits the exact artifact. The next checkpoint is `GATE 14D ARTIFACT AUDIT`.
+
 Live mode, PR merge, release, and `14/14` remain blocked.

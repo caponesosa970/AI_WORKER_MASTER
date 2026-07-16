@@ -367,3 +367,18 @@ Codex return is automatically rejected if it lacks preflight, bug-history search
 - Codex performed no Sheet mutation, Tasker execution, API call, profile enablement, phone proof, import approval, or PR merge.
 - Operational tracker remains `13/14 locked = 93%`.
 <!-- GATE14C_CONTROLLER_END -->
+
+<!-- GATE14D_CONTROLLER_START -->
+## Gate 14D Controlled Processing Capacity Candidate
+
+- Gate 14C R1 remains verified closed by direct Sosa phone proof.
+- Gate 14D direct runtime base is the phone-proven Gate 14C R1 SHA256 `535A163DA2FCEF1A655AB7DBBA4EBE5E9A991C7BF63CD74525244820D4BCA2A1`.
+- Added Task 238 serializes the existing bounded processor lane across exact controlled rows 149-198.
+- Added Task 239 is an uncalled one-shot launcher for counts 5, 10, 25, or 50.
+- No existing task, profile, or scene changes. Final topology: 91 tasks / 4 disabled profiles / 1 scene.
+- Candidate XML SHA256: `A7C577E6929E930938F0D48937332D19F441D2C1FFD9821E7047E397ECE74C07`.
+- Static validators PASS/PASS. No phone import/render or processing-capacity proof exists.
+- Status: `GATE 14D CONTROLLED PROCESSING CAPACITY RUNTIME CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+- Tracker remains `13/14 locked = 93%` with 50 checkpoints remaining.
+- Capacity phone ladder, ordering/duplicate/admission tests, recovery/race, final interface, live mode, merge, and release remain blocked.
+<!-- GATE14D_CONTROLLER_END -->

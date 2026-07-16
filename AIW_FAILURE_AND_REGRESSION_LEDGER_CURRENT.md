@@ -932,3 +932,16 @@ Gate 13 is `LOCKED / PASS`; operational tracker is `13/14 locked = 93%`. Gate 14
 - Remaining risk moved to Gate 14D-G; no Gate 14C runtime defect remains open.
 - Tracker remains `13/14 locked = 93%`; merge and release remain blocked.
 <!-- GATE14C_FAILURE_LEDGER_END -->
+
+<!-- GATE14D_FAILURE_LEDGER_START -->
+## ISSUE_G14D_CONTROLLED_CAPACITY_NOT_PHONE_PROVEN
+
+- Status: `STATIC CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+- Current gap: no controlled 5/10/25/50 processing-capacity phone run exists.
+- Candidate boundary: Tasks 238 and 239 only; all production tasks remain byte-identical.
+- Safety controls: exact NEW/blank-Reply binding before each row, one owned processing lock per row, exact terminal readback, common lock release, STOP/HOLD prevents the next row, and no TextNow/Send/confirmation/DONE/Archive path.
+- Static proof: validators PASS/PASS; package integrity PASS.
+- Closing proof required: ChatGPT artifact audit, then separate direct Sosa 5/10/25/50 runs on fresh controlled datasets.
+- Separate open checkpoints: same-sender ordering, immediate duplicate suppression, later repeat, overflow/admission, race/recovery, interface, and release.
+- Tracker remains `13/14 locked = 93%`; 50 checkpoints remain.
+<!-- GATE14D_FAILURE_LEDGER_END -->

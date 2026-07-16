@@ -1316,3 +1316,20 @@ No percentage change. Current tracker remains `8/14 locked = 57%`.
 - PR #9: remains open and unmerged.
 - Final decision: `GATE 14C R1 VERIFIED CLOSED BY DIRECT SOSA PHONE PROOF / GATE 14D CAPACITY NEXT`.
 <!-- GATE14C_BUILD_LEDGER_END -->
+
+<!-- GATE14D_BUILD_LEDGER_START -->
+## Accountability ID AIW-GATE14D-CONTROLLED-PROCESSING-CAPACITY-20260715
+
+- Gate: Gate 14D controlled processing-capacity runtime candidate.
+- Direct base SHA256: `535A163DA2FCEF1A655AB7DBBA4EBE5E9A991C7BF63CD74525244820D4BCA2A1`.
+- Starting branch head: `ed22d991adf6b98a82fc773900701afc9e443387`.
+- Existing runtime changes: none; 89/89 task blocks raw-byte equal.
+- Added tasks: 238 controlled batch engine and 239 isolated one-shot launcher.
+- Profiles/scene: 4/4 and 1/1 raw-byte equal; all profiles disabled.
+- Validators: direct Python XML/raw/call/ZIP validator 137/137 PASS; independent PowerShell control/state validator 43/43 PASS.
+- Package XML SHA: `A7C577E6929E930938F0D48937332D19F441D2C1FFD9821E7047E397ECE74C07`.
+- Prohibited actions performed: NONE. No Tasker run, Sheet access, OpenAI call, TextNow action, profile enablement, Send, confirmation, Archive, or merge.
+- Codex phone proof claim: NO. Codex phone import approval: NO.
+- Tracker effect: none; remains `13/14 locked = 93%` with 50 checkpoints remaining.
+- Final decision: `GATE 14D CONTROLLED PROCESSING CAPACITY RUNTIME CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+<!-- GATE14D_BUILD_LEDGER_END -->
