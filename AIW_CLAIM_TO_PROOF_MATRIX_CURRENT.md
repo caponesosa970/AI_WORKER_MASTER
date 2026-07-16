@@ -542,3 +542,22 @@ Tracker remains `13/14 locked = 93%`; 50 checkpoints remain. Codex claims no pho
 | G14D3-R3-009 | Gate 14D and Gate 14 are complete | Remaining phone, recovery/race, interface, hardening, and release proof | UNSUPPORTED / BLOCKED |
 
 Planning tracker remains 40 total, 25 phone/runtime, 15 non-phone. Main tracker remains `13/14 locked = 93%`. Codex claims no phone proof and approves no import.
+
+## Gate 14D3A Durable Owned Admission Candidate
+
+| ID | Claim | Evidence | Status |
+|---|---|---|---|
+| G14D3A-001 | R3 is rejected before phone use | Controller audit and supersession records | PROVEN STATIC |
+| G14D3A-002 | Exact Gate 14D2 base used | SHA256 `3851E073BE042F80068E52CF7E3D410ED3D0EBA8A63C5F4C10108532912FE0EA` | PROVEN STATIC |
+| G14D3A-003 | Existing changes are admission Tasks 68, 215, and 217 only | Raw task comparison | PROVEN STATIC |
+| G14D3A-004 | Six helpers are each below 500 actions | Exact helper action counts; maximum 494 | PROVEN STATIC |
+| G14D3A-005 | Sheet1 blank authority is direct A:Z | Task 244 AutoSheets range and exact blank checks | PROVEN STATIC |
+| G14D3A-006 | Overflow admission cannot target above row 986 | Task 243/246 ranges and row validation | PROVEN STATIC |
+| G14D3A-007 | Identity includes Archive and DeadArchive | Read-only exact ranges and classification paths | PROVEN STATIC |
+| G14D3A-008 | Direct main writes NEW only after exact staging readback | Plugin action-order validator | PROVEN STATIC |
+| G14D3A-009 | Five exact controlled modes are present with supplied rows | Launcher inventory and reachability validator | PROVEN STATIC |
+| G14D3A-010 | Drain tasks and Queue Cycle are unchanged | Raw-byte comparison Tasks 218-220 and 199 | PROVEN STATIC |
+| G14D3A-011 | D3A works on target phone | No D3A phone execution | UNSUPPORTED / HOLD |
+| G14D3A-012 | D3B, D3C, and Gate 14 are complete | Deferred drain, capacity, recovery, interface, and release proof | UNSUPPORTED / BLOCKED |
+
+Tracker remains 40/25/15 and `13/14 locked = 93%`. Codex claims no phone proof and approves no import.

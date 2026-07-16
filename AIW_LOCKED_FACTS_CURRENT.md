@@ -396,3 +396,17 @@ The candidate described in this section is superseded by Gate 14D3 R1 below. It 
 - Existing changed tasks remain 33, 35, 68, 215, 217, 218, 219, and 220; Tasks 242-245 remain the only additions; 85/85 other tasks are raw-byte identical.
 - Structure validator 367/367 PASS and semantic validator 69/69 PASS. R3 has no phone proof and is not approved for import.
 - Gate 14D remains open; tracker remains 40/25/15 and `13/14 locked = 93%`.
+
+## Gate 14D3A Durable Owned Admission Candidate Facts
+
+- R3 integrity passed but runtime scope is rejected. R3 is design history only and is `DO NOT IMPORT / DO NOT PHONE TEST`.
+- D3A rebuilds from exact Gate 14D2 SHA256 `3851E073BE042F80068E52CF7E3D410ED3D0EBA8A63C5F4C10108532912FE0EA`.
+- D3A candidate XML SHA256 is `880CC569185A9FFF45703EC77E71D6260A88474B0F63ECDE6B31E0A11CFF090A`.
+- Topology is 99 tasks / 4 disabled profiles / 1 scene.
+- Existing changes are exactly Tasks 68, 215, and 217. Tasks 242-247 are added. The other 90 existing tasks are raw-byte identical.
+- Every added helper is below 500 actions; maximum is 494.
+- Sheet1 blank authority is exact A:Z. OverflowInbox admission is limited to physical rows 2-986.
+- Identity checks Sheet1, OverflowInbox, Archive, and DeadArchive before any admission write.
+- Tasks 218-220 and Queue Cycle Task 199 remain raw-byte identical. D3B and D3C remain deferred.
+- Validators pass 450/450 and 559/559. D3A has no phone proof and is not approved for import.
+- Gate 14D remains open; tracker remains 40/25/15 and `13/14 locked = 93%`.

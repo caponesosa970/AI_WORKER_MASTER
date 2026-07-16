@@ -1413,3 +1413,18 @@ No percentage change. Current tracker remains `8/14 locked = 57%`.
 - Prohibited actions performed: NONE. No Tasker, Sheet, OpenAI, TextNow, profile, Send, confirmation, Archive, merge, import approval, or phone-proof claim.
 - Tracker effect: none; remains 40/25/15 and `13/14 locked = 93%`.
 - Decision: `GATE 14D3 R3 SAFE OVERFLOW ADMISSION, FIFO DRAIN, AND IDEMPOTENT RECOVERY CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+
+## Accountability ID AIW-GATE14D3A-DURABLE-ADMISSION-20260716
+
+- Controller decision: R3 integrity passed but runtime scope was rejected; next build was limited to D3A admission only.
+- Codex responsibility: prior Gate 14D3 packages remained broader than the final app-first scope and could not proceed directly to phone proof.
+- Safety response: R3 is marked design source only and was not imported or phone tested.
+- Corrected source: exact Gate 14D2 SHA256 `3851E073BE042F80068E52CF7E3D410ED3D0EBA8A63C5F4C10108532912FE0EA`.
+- Runtime delta: existing Tasks 68, 215, and 217 only; added Tasks 242-247; 90/90 other existing tasks preserved.
+- Helper sizes: 56, 407, 350, 494, 446, and 244 actions.
+- Candidate XML SHA256: `880CC569185A9FFF45703EC77E71D6260A88474B0F63ECDE6B31E0A11CFF090A`.
+- Validation: structure 450/450 PASS; semantic 559/559 PASS; standard XML and package audits PASS.
+- Build-time corrections: rejected a 638-action draft and removed a lexicographically copied legacy hard-release action before packaging.
+- Prohibited actions performed: NONE. No Tasker, Sheet, OpenAI, TextNow, profile, merge, import approval, or phone-proof claim.
+- Tracker effect: none; remains 40/25/15 and `13/14 locked = 93%`.
+- Decision: `GATE 14D3A DURABLE OWNED ADMISSION CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.

@@ -1026,3 +1026,14 @@ Gate 13 is `LOCKED / PASS`; operational tracker is `13/14 locked = 93%`. Gate 14
 - R3 repair: overflow owner first, exact FIFO source bind, verified `DRAINING`, then admission owner; all bound failures use one bounded M:N evidence write/readback path unless already verified.
 - R3 static proof: structure 367/367 PASS; semantic control flow 69/69 PASS.
 - Runtime proof: none. Gate 14D remains HOLD and tracker remains 40/25/15 with main `13/14 locked = 93%`.
+
+## ISSUE_G14D3_R3_FINAL_SCOPE_REJECTION
+
+- Status: `REPAIRED STATICALLY BY D3A RESCOPE / HOLD FOR CHATGPT ARTIFACT AUDIT`.
+- R3 package integrity passed, but its full admission/drain/reconciliation/capacity state machine violated the latest D3A-only loop breaker.
+- Blocking source findings included changed drain tasks, one 4,405-action helper, physical overflow bound 1000 instead of 986, A:I-only blank proof, omitted Archive identity, and unsafe NEW/source ordering.
+- Safety response: R3 was not imported or phone tested and is explicitly marked design source only.
+- D3A repair: rebuild from exact Gate 14D2; change admission Tasks 68/215/217 only; add six sub-500-action helpers; use A:Z, bound 986, and Archive/DeadArchive identity.
+- Drain, reconciliation, Queue Cycle, STOP recovery, capacity durability, and emergency journal remain deferred.
+- Static proof: 450/450 structure PASS and 559/559 semantic PASS.
+- Runtime proof: none. Tracker remains 40/25/15 and main remains `13/14 locked = 93%`.

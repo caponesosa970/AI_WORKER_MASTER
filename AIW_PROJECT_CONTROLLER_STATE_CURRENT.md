@@ -466,3 +466,18 @@ This section is superseded by Gate 14D3 R2 above. It is retained only as source 
 - Validators: 367/367 structure PASS; 69/69 semantic PASS; one-entry ZIP equality PASS.
 - Status: `GATE 14D3 R3 SAFE OVERFLOW ADMISSION, FIFO DRAIN, AND IDEMPOTENT RECOVERY CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
 - Tracker remains 40 total, 25 phone/runtime, 15 non-phone and `13/14 locked = 93%`; PR #9 remains open and unmerged.
+
+## Gate 14D3A Durable Owned Admission Candidate
+
+- R3 is rejected for phone use and retained only as design source.
+- Current candidate filename: `GATE14D3A_FULL_PROJECT_TASKER_IMPORT__DURABLE_ADMISSION_PRIVATE.xml`.
+- Candidate SHA256: `880CC569185A9FFF45703EC77E71D6260A88474B0F63ECDE6B31E0A11CFF090A`.
+- Topology: 99 tasks / 4 disabled profiles / 1 scene.
+- Scope: admission only. Existing changes are Tasks 68, 215, and 217; added helpers are Tasks 242-247.
+- Direct main admission uses A:Z blank authority, ADMISSION_STAGING exact readback, and NEW last.
+- Overflow admission is bounded to rows 2-986 and verifies one exact PENDING A:N row.
+- Identity includes active stores plus Archive and DeadArchive history.
+- Drain Tasks 218-220 and Queue Cycle Task 199 remain raw-byte identical.
+- Validators: 450/450 structure PASS; 559/559 semantic PASS; package equality PASS.
+- Status: `GATE 14D3A DURABLE OWNED ADMISSION CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+- Tracker remains 40/25/15 and `13/14 locked = 93%`; PR #9 remains open and unmerged.
