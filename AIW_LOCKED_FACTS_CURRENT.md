@@ -369,3 +369,17 @@ The candidate described in this section is superseded by Gate 14D3 R1 below. It 
 - Four existing overflow/admission-specific tasks change; 89 existing tasks, all profiles, and scene remain raw-byte identical.
 - No new OpenAI, TextNow, Send, confirmation, DONE, Archive, timer, live, or profile path exists.
 - R1 has no phone proof. Planning tracker remains 40/25/15 and main remains `13/14 locked = 93%`.
+
+## Gate 14D3 R2 Second-Audit Candidate Facts
+
+- Gate 14D3 R1 is superseded and remains `DO NOT IMPORT / DO NOT PHONE TEST`.
+- R2 again uses exact Gate 14D2 base SHA256 `3851E073BE042F80068E52CF7E3D410ED3D0EBA8A63C5F4C10108532912FE0EA`.
+- R2 candidate XML SHA256 is `149D4877B08B2A730CA7B524941E257AE8550C44C9BB7AA9247092C63CDC9ED5`.
+- R2 topology is 97 tasks / 4 disabled profiles / 1 scene.
+- Permanent owner-token locks replace unowned hard release and eight-second age stealing.
+- `OriginalID` and `OverflowID` are distinct; duplicate, collision, and duplicate-main classifications fail closed.
+- Every new AutoSheets read deletes indexed arrays first and is bounded to two attempts.
+- Views are candidate hints only; direct target-row reads are transaction authority.
+- Drain order is LoggedAt then source row and persists DRAINING, MAIN_COMMITTED, DRAINED, or OVERFLOW_REVIEW through exact readback.
+- Configured V1 overflow capacity is 999 data rows, source rows 2-1000; capacity cannot overwrite.
+- R2 has no phone proof. Gate 14D remains open; tracker remains 40/25/15 and `13/14 locked = 93%`.

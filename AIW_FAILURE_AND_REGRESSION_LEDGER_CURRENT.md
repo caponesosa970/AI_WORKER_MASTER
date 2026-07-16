@@ -1006,3 +1006,13 @@ Gate 13 is `LOCKED / PASS`; operational tracker is `13/14 locked = 93%`. Gate 14
 - Static proof: 285-check validator PASS, independent 47-check state/ordering validator PASS, Tasker static audit PASS.
 - Phone closure required: four controlled modes, zero API/TextNow calls, exact row readbacks, exact write counts, and all owned locks released.
 - Tracker remains 40/25/15 and `13/14 locked = 93%`.
+
+## ISSUE_G14D3_R1_SECOND_AUDIT_INCOMPLETE
+
+- Status: `SUPERSEDED BY R2 STATIC CANDIDATE / NO PHONE EXECUTION`.
+- R1 gaps: unowned legacy release remained in source history; age-only lock ownership was not fully removed; identity and collision semantics were incomplete; indexed AutoSheets outputs were not deleted; all unresolved barrier states, FIFO authority, durable drain states, failure evidence, and configured capacity were incomplete.
+- Safe response: R1 was preserved and marked `DO NOT IMPORT / DO NOT PHONE TEST`; no phone run occurred.
+- R2 corrective boundary: rebuild from exact Gate 14D2 and modify only the eight authorized overflow/admission tasks plus four helpers.
+- R2 proof: exact owner release, no age stealing, Array Clear before every read, direct-row authority, distinct identities, exact state readbacks, FIFO, reconciliation, and capacity hold.
+- Static proof: validator one 360/360 PASS; validator two 64/64 PASS; standard XML audit PASS.
+- Phone closure still required. Tracker remains 40/25/15 and `13/14 locked = 93%`.

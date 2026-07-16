@@ -1385,3 +1385,17 @@ No percentage change. Current tracker remains `8/14 locked = 57%`.
 - Codex phone proof claim: NO. Codex phone import approval: NO.
 - Tracker effect: none; remains 40 total, 25 phone/runtime, 15 non-phone and `13/14 locked = 93%`.
 - Decision: `GATE 14D3 R1 SAFE PRODUCTION OVERFLOW ADMISSION AND DRAIN CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+
+## Accountability ID AIW-GATE14D3-R2-SECOND-AUDIT-20260716
+
+- Controller finding: R1 addressed the right product area but remained incomplete for lock ownership, stale arrays, collision identity, durable states, FIFO, and capacity.
+- Codex responsibility: the initial correction did not reconcile the whole overflow contract before packaging.
+- Corrected source: exact Gate 14D2 XML SHA256 `3851E073BE042F80068E52CF7E3D410ED3D0EBA8A63C5F4C10108532912FE0EA`.
+- Existing task delta: Tasks 33, 35, 68, 215, 217, 218, 219, 220 only. Added Tasks 242-245.
+- Preservation: 85/85 other existing tasks, 4/4 profiles, and scene raw-byte identical.
+- Runtime result: one owner-token and exact-readback overflow state machine covering ingress, duplicate/collision, append, FIFO drain, partial reconciliation, STOP acquisition boundary, and capacity hold.
+- Candidate XML SHA256: `149D4877B08B2A730CA7B524941E257AE8550C44C9BB7AA9247092C63CDC9ED5`.
+- Validation: structure 360/360 PASS; semantic 64/64 PASS; standard Tasker audit PASS; one-entry ZIP equality PASS.
+- Prohibited actions performed: NONE. No Tasker, Sheet, OpenAI, TextNow, profile, Send, confirmation, Archive, merge, import approval, or phone-proof claim.
+- Tracker effect: none; remains 40/25/15 and `13/14 locked = 93%`.
+- Decision: `GATE 14D3 R2 SAFE OVERFLOW STATE MACHINE CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.

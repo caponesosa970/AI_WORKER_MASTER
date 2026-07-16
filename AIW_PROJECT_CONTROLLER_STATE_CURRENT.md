@@ -409,7 +409,23 @@ Codex return is automatically rejected if it lacks preflight, bug-history search
 - Status: `GATE 14D2 CORRECTED MESSAGE IDENTITY AND ORDERING CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
 - Main tracker remains `13/14 locked = 93%`; PR #9 remains open and unmerged.
 
-## Gate 14D3 Product-Question Correction And R1 Candidate
+## Gate 14D3 R2 Full Overflow State Machine Candidate
+
+- The original processing-window diagnostic and R1 are both superseded and prohibited from import/testing.
+- Current private candidate: `GATE14D3_R2_FULL_PROJECT_TASKER_IMPORT__SAFE_OVERFLOW_STATE_MACHINE_PRIVATE.xml`.
+- Candidate SHA256: `149D4877B08B2A730CA7B524941E257AE8550C44C9BB7AA9247092C63CDC9ED5`.
+- Topology: 97 tasks / 4 disabled profiles / 1 scene.
+- Existing changed tasks: 33, 35, 68, 215, 217, 218, 219, 220. Added tasks: 242, 243, 244, 245.
+- Protected existing tasks raw-byte identical: 85/85. Profiles and scene raw-byte identical.
+- Runtime contract now includes owner-token ingress/overflow locks, cross-store duplicate/collision classification, native Array Clear before reads, direct-row authority, all unresolved backlog states, LoggedAt/source-row FIFO, OVERFLOW_ADMITTING before NEW, MAIN_COMMITTED and DRAINED readback, partial reconciliation, and capacity hold.
+- Configured OverflowInbox maximum is source row 1000, capacity 999. Live formula/grid alignment remains a pre-phone-test controller action.
+- Validators: 360/360 structure PASS; 64/64 semantic PASS; standard Tasker XML audit PASS.
+- Status: `GATE 14D3 R2 SAFE OVERFLOW STATE MACHINE CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+- Tracker remains 40 total, 25 phone/runtime, 15 non-phone and `13/14 locked = 93%`; PR #9 remains open/unmerged.
+
+## Historical Gate 14D3 Product-Question Correction And R1 Candidate
+
+This R1 section is superseded by the Gate 14D3 R2 current candidate above. R1 is retained only as source history and is prohibited from import and phone testing.
 
 - Commit `262df72253af71d7533061ea701655a545834e97` is rejected as Gate 14 overflow proof and retained only as a private processing-window diagnostic.
 - Source audit confirmed the rejected candidate never exercised the production OverflowInbox logger or drain.
@@ -426,7 +442,7 @@ Codex return is automatically rejected if it lacks preflight, bug-history search
 
 ## Historical Rejected Gate 14D3 Processing-Window Diagnostic
 
-This section is superseded by Gate 14D3 R1 above. It is retained only as source history and must not be treated as the active overflow candidate.
+This section is superseded by Gate 14D3 R2 above. It is retained only as source history and must not be treated as the active overflow candidate.
 
 - Direct Sosa phone proof passes strict row order for rows 199, 200, and 201, later-repeat acceptance under a unique event ID, and exact duplicate-ID suppression.
 - Duplicate mode reported one suppressed existing ID and one eligible unique control ID with zero API calls, processing locks, Sheet writes, or lifecycle actions; rows 199-201 remained unchanged.
