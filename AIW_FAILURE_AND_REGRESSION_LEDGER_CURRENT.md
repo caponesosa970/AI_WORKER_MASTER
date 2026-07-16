@@ -1037,3 +1037,17 @@ Gate 13 is `LOCKED / PASS`; operational tracker is `13/14 locked = 93%`. Gate 14
 - Drain, reconciliation, Queue Cycle, STOP recovery, capacity durability, and emergency journal remain deferred.
 - Static proof: 450/450 structure PASS and 559/559 semantic PASS.
 - Runtime proof: none. Tracker remains 40/25/15 and main remains `13/14 locked = 93%`.
+
+## ISSUE_GATE14_CONTROLLER_SEQUENCING_FRAGMENTATION
+
+- Classification: controller sequencing failure.
+- Status: `CONTROL PROCESS CORRECTED / FINAL INTEGRATED RUNTIME PROOF PENDING`.
+- User/operator responsibility: `NONE`.
+- Evidence: the original D3 package tested the wrong processing-window question; R1 and R2 remained incomplete; R3 passed package integrity but violated the approved D3A-only scope; D3A is now a bounded admission-only static candidate without phone proof.
+- Safety outcome: rejected packages were not promoted as phone proof or release artifacts. Gates 1 through 13 remain locked and were not reopened.
+- Codex responsibility: preserve exact source separation, stop on contradictory authority, verify the active manifest and hashes, and refuse runtime work when current instructions conflict.
+- Controller responsibility: earlier fragmented sequencing and stale authority allowed multiple packages to address overlapping but incomplete admission, overflow, recovery, and capacity questions.
+- Corrective action: one public-safe repository handoff, one current bootstrap, one integrated validation plan, one integrated production candidate, modular helpers, and one final validation orchestrator.
+- Prevention: the next chat must read origin/main first, then the current PR head, verify the handoff commit and private D3A hash, exclude superseded sources, and HOLD on any missing or contradictory input.
+- Tracker impact: none. Main remains `13/14 locked = 93%`; the detailed remaining tracker remains 40/25/15.
+- Runtime impact: none. No XML, Sheet, Tasker, profile, TextNow, OpenAI, or phone state changed during this documentation sync.

@@ -561,3 +561,23 @@ Planning tracker remains 40 total, 25 phone/runtime, 15 non-phone. Main tracker 
 | G14D3A-012 | D3B, D3C, and Gate 14 are complete | Deferred drain, capacity, recovery, interface, and release proof | UNSUPPORTED / BLOCKED |
 
 Tracker remains 40/25/15 and `13/14 locked = 93%`. Codex claims no phone proof and approves no import.
+
+## Final Repository Handoff Claims
+
+| ID | Claim | Evidence | Status |
+|---|---|---|---|
+| HANDOFF-001 | Gates 1 through 13 remain locked | Existing direct Sosa phone-proof records and current locked-facts ledger | LOCKED / PHONE PROVEN |
+| HANDOFF-002 | `13/14 locked = 93%` is a main-gate count only | Controller tracker definition | PROVEN DOCUMENTARY |
+| HANDOFF-003 | Detailed remaining tracker is 40 total, 25 phone/runtime, and 15 non-phone | Current checkpoint tracker | PROVEN DOCUMENTARY |
+| HANDOFF-004 | Gate 14 inventory/import-render is phone proven | Sanitized Gate 14A phone-proof closure | PHONE PROVEN BY SOSA |
+| HANDOFF-005 | Controlled 5/10/25/50 processing and 50-row API/lock accounting are phone proven | Sanitized Gate 14D processing reports | PHONE PROVEN BY SOSA |
+| HANDOFF-006 | Same-sender ordering, later repeat with a new event ID, and exact duplicate-ID suppression are phone proven | Sanitized Gate 14D2 reports | PHONE PROVEN BY SOSA |
+| HANDOFF-007 | Original D3, R1, and R2 are rejected; R3 is design-only | Failure ledger and package disposition reports | PROVEN DOCUMENTARY |
+| HANDOFF-008 | D3A is an admission-only static candidate from the exact Gate 14D2 base | Private hash verification, topology audit, and D3A public reports | PROVEN STATIC |
+| HANDOFF-009 | D3A topology and task scope are 99/4/1, changed Tasks 68/215/217, added Tasks 242-247, and unchanged Tasks 199/218-220 | Raw task comparison and package audit | PROVEN STATIC |
+| HANDOFF-010 | D3A uses rows 2-986, A:Z blank authority, and identity checks across active and history stores | Static source inspection and validators | PROVEN STATIC |
+| HANDOFF-011 | D3A works on the target phone | No D3A phone execution | UNSUPPORTED / HOLD |
+| HANDOFF-012 | Gate 14, connected-system validation, and production release are complete | Remaining 40 checkpoints and unresolved integration blockers | UNSUPPORTED / BLOCKED |
+| HANDOFF-013 | This sync changed no runtime or private artifact | Authorized Git diff and private-file scan | PROVEN REPOSITORY |
+
+Codex records direct Sosa phone proof but does not claim it independently. Phone import, live activation, PR merge, Gate 14 closure, and release remain blocked.

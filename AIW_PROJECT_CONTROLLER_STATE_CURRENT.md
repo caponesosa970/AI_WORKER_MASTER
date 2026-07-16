@@ -481,3 +481,40 @@ This section is superseded by Gate 14D3 R2 above. It is retained only as source 
 - Validators: 450/450 structure PASS; 559/559 semantic PASS; package equality PASS.
 - Status: `GATE 14D3A DURABLE OWNED ADMISSION CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
 - Tracker remains 40/25/15 and `13/14 locked = 93%`; PR #9 remains open and unmerged.
+
+<!-- FINAL_REPOSITORY_HANDOFF_SYNC_START -->
+## Final Repository Handoff State
+
+Repository synchronization preserves the direct phone-proof authority of Gates 1 through 13 and records Gate 14 as the only unfinished main gate. The `13/14 locked = 93%` value is a main-gate count, not a weighted completion estimate.
+
+Current detailed tracker:
+
+- 40 total checkpoints remaining
+- 25 phone/runtime checkpoints remaining
+- 15 non-phone checkpoints remaining
+
+Phone-proven Gate 14 scope is limited to inventory/import-render, the controlled 5/10/25/50 processing ladder, 50-row API and lock accounting, same-sender ordering, later-repeat acceptance under a new event ID, and exact duplicate-ID suppression.
+
+Current static candidate:
+
+- D3A SHA256: `880CC569185A9FFF45703EC77E71D6260A88474B0F63ECDE6B31E0A11CFF090A`
+- Gate 14D2 base SHA256: `3851E073BE042F80068E52CF7E3D410ED3D0EBA8A63C5F4C10108532912FE0EA`
+- Topology: 99 tasks / 4 disabled profiles / 1 scene
+- Existing changes: Tasks 68, 215, and 217
+- Added tasks: 242 through 247
+- Preserved boundary: Tasks 199 and 218 through 220 unchanged
+- Admission bounds: OverflowInbox rows 2 through 986
+- Main blank authority: Sheet1 A:Z
+- Identity history: Sheet1, OverflowInbox, Archive, and DeadArchive
+- Runtime status: candidate only; no D3A phone proof; phone import HOLD
+
+Package disposition is explicit: original D3, R1, and R2 are rejected; R3 is design-only and `DO NOT IMPORT`; D3A is the current admission-only static candidate and is not the final release package.
+
+Public-safe Sheet structure is Sheet1 980 rows, OverflowInbox 986 rows, Archive 933 rows, and DeadArchive 972 rows. Production payload occupies A:I while protected fields extend through Z. Views supply candidate hints only and cannot authorize writes. OverflowView is not FIFO authority. Archive participates in duplicate history, DeadArchive routes review, and no unlimited overflow-capacity claim is supported.
+
+Final integration remains blocked on notification-global contamination, unsafe task collision settings, optional notification fields, admission restart recovery, shared ingress/drain slot ownership, the unsafe legacy drain transaction, Queue Cycle drain-result gating, deterministic AutoSheets errors, AutoInput failure cleanup, DesiredRun startup resume, production environment preflight, removal of blanket lock clearing, the screen-off/lock operating envelope, a durable multi-event ingress journal, and full connected-system validation.
+
+The next build must be one integrated production candidate composed of bounded modular helpers, with one final validation orchestrator, a complete call graph and variable/lock map, independent validators, failure injection, randomized concurrency testing, mutation testing, no more than one real Send, exact failed-phase persistence and resume, and phone import/render proof before any release decision.
+
+Authoritative next-chat rules are in `AIW_NEW_CHAT_BOOTSTRAP_CURRENT.md`. Runtime XML, live Sheet state, Tasker, profiles, and private artifacts were not changed by this synchronization.
+<!-- FINAL_REPOSITORY_HANDOFF_SYNC_END -->

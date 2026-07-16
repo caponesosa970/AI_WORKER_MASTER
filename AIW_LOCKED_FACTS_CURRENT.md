@@ -397,6 +397,22 @@ The candidate described in this section is superseded by Gate 14D3 R1 below. It 
 - Structure validator 367/367 PASS and semantic validator 69/69 PASS. R3 has no phone proof and is not approved for import.
 - Gate 14D remains open; tracker remains 40/25/15 and `13/14 locked = 93%`.
 
+<!-- FINAL_REPOSITORY_HANDOFF_SYNC_START -->
+## Final Repository Handoff Sync
+
+- Gates 1 through 13 remain `LOCKED / PASS` by direct Sosa phone proof. They must not be reopened without newer contradictory phone evidence.
+- `13/14 locked = 93%` is a main-gate count only. It is not weighted product completion or release readiness.
+- The detailed remaining tracker is 40 total checkpoints: 25 phone/runtime and 15 non-phone.
+- Gate 14 phone-proven subproofs include inventory import/render, the 5/10/25/50 controlled processing ladder, 50-row API and processing-lock accounting, same-sender ordering, later-repeat acceptance under a new event ID, and exact duplicate-ID suppression.
+- Original D3, R1, and R2 are rejected. R3 is design history only and is `DO NOT IMPORT`. D3A is the current admission-only candidate with no phone proof and no release claim.
+- D3A SHA256 is `880CC569185A9FFF45703EC77E71D6260A88474B0F63ECDE6B31E0A11CFF090A`; its exact Gate 14D2 base SHA256 is `3851E073BE042F80068E52CF7E3D410ED3D0EBA8A63C5F4C10108532912FE0EA`.
+- D3A topology is 99 tasks / 4 disabled profiles / 1 scene. Existing changes are Tasks 68, 215, and 217; added Tasks are 242 through 247. Queue Cycle Task 199 and drain Tasks 218 through 220 remain unchanged. Every added helper is below 500 actions.
+- D3A uses OverflowInbox rows 2 through 986, Sheet1 A:Z blank authority, and identity checks across Sheet1, OverflowInbox, Archive, and DeadArchive.
+- Public-safe physical structure: Sheet1 980 rows, OverflowInbox 986 rows, Archive 933 rows, and DeadArchive 972 rows. Production payload is A:I; protected fields extend through Z. Views are hints only, OverflowView is not FIFO authority, Archive participates in duplicate history, DeadArchive routes review, and no unlimited-capacity claim exists.
+- The final integrated blockers and validation order are authoritative in `AIW_FINAL_TONIGHT_HANDOFF_CURRENT.md` and `AIW_FINAL_INTEGRATED_VALIDATION_PLAN_CURRENT.md`.
+- Phone import, live activation, PR merge, Gate 14 completion, and production release remain blocked.
+<!-- FINAL_REPOSITORY_HANDOFF_SYNC_END -->
+
 ## Gate 14D3A Durable Owned Admission Candidate Facts
 
 - R3 integrity passed but runtime scope is rejected. R3 is design history only and is `DO NOT IMPORT / DO NOT PHONE TEST`.
