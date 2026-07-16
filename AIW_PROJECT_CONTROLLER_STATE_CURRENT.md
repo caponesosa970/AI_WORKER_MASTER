@@ -356,7 +356,11 @@ Codex return is automatically rejected if it lacks preflight, bug-history search
 - Added tasks: 235 bounded retry, 236 legacy review migration, and 237 isolated controlled test.
 - Candidate topology: 89 tasks / 4 disabled profiles / 1 scene.
 - Candidate XML SHA256: `71A766AE8D550C139AABCEC53DE3B1025CAF26C68561583CBF20AC6D5A5138B3`.
-- Status: `GATE 14C BOUNDED OPENAI RETRY RUNTIME CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+- Phone reconciliation: quota/no-retry passed; timeout exhaustion safely persisted review state and released the lock, but returned unresolved `%http_response_code`.
+- Gate 14C R1 changes Task 235 only: per-attempt code starts at numeric `0`, and the existing missing-code classifier accepts `0` without changing the two-attempt/one-retry cap.
+- Gate 14C R1 topology: 89 tasks / 4 disabled profiles / 1 scene.
+- Gate 14C R1 candidate XML SHA256: `535A163DA2FCEF1A655AB7DBBA4EBE5E9A991C7BF63CD74525244820D4BCA2A1`.
+- Status: `GATE 14C R1 HTTP CODE NORMALIZATION CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
 - Codex performed no Sheet mutation, Tasker execution, API call, profile enablement, phone proof, import approval, or PR merge.
 - Operational tracker remains `13/14 locked = 93%`.
 <!-- GATE14C_CONTROLLER_END -->

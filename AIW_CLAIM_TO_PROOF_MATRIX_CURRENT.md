@@ -395,4 +395,20 @@ Tracker remains `13/14 locked = 93%`. Codex claims no phone proof and approves n
 | G14C-011 | Production 50-contact capacity and release are complete | Full Gate 14 load/interface/release proof | UNSUPPORTED / BLOCKED |
 
 Tracker remains `13/14 locked = 93%`. Codex claims no Gate 14C phone proof and approves no import.
+
+## Gate 14C R1 HTTP Code Normalization Claims
+
+| Claim ID | Claim | Evidence | Status |
+|---|---|---|---|
+| G14C-R1-001 | Exact Gate 14C source used | Source SHA `71A766AE8D550C139AABCEC53DE3B1025CAF26C68561583CBF20AC6D5A5138B3` | PROVEN STATIC |
+| G14C-R1-002 | Task 235 is the only changed task | Raw comparison across all 89 tasks | PROVEN STATIC |
+| G14C-R1-003 | Task 235 remains 243 actions | Direct XML action count | PROVEN STATIC |
+| G14C-R1-004 | Each attempt begins with numeric code 0 | Exact `act119` semantic inspection | PROVEN STATIC |
+| G14C-R1-005 | Code 0 remains bounded retryable missing code | Exact `act162` condition plus independent retry model | PROVEN STATIC |
+| G14C-R1-006 | Existing explicit 200 and 429 values overwrite 0 | Control-flow and state-model inspection | PROVEN STATIC |
+| G14C-R1-007 | Attempts remain two and retries remain one | XML loop and state-model proof | PROVEN STATIC |
+| G14C-R1-008 | R1 works on the target phone | Timeout, real-success, and legacy-migration ladder | UNSUPPORTED / HOLD |
+| G14C-R1-009 | Gate 14 and production release are complete | Remaining capacity/interface/release proof | UNSUPPORTED / BLOCKED |
+
+Tracker remains `13/14 locked = 93%`. Codex approves no import and claims no R1 phone proof.
 <!-- GATE14C_CLAIM_MATRIX_END -->

@@ -291,6 +291,9 @@ Blocked until separately proven:
 - Final OpenAI failures persist as exact-row `ERROR_OPENAI_REVIEW`; no production Gate 14C path creates another `ERROR_OPENAI_RETRY`.
 - Legacy `ERROR_OPENAI_RETRY` rows migrate to `ERROR_OPENAI_REVIEW` without an API call or reset to NEW.
 - Gate 14C private candidate XML SHA256 is `71A766AE8D550C139AABCEC53DE3B1025CAF26C68561583CBF20AC6D5A5138B3`.
-- Gate 14C static validators PASS/PASS; phone proof does not exist.
+- Direct Sosa phone proof establishes `QUOTA_429_NO_RETRY` passed and `TIMEOUT_EXHAUSTED` failed safely, but the timeout result exposed an unresolved no-response-code literal.
+- `ISSUE_G14C_NO_RESPONSE_CODE_UNRESOLVED_LITERAL` is repaired only in the Gate 14C R1 candidate by setting the per-attempt response code to numeric `0` and classifying code `0` as bounded missing response code.
+- Gate 14C R1 private candidate XML SHA256 is `535A163DA2FCEF1A655AB7DBBA4EBE5E9A991C7BF63CD74525244820D4BCA2A1`.
+- Gate 14C R1 static validators PASS/PASS; complete Gate 14C phone proof does not exist.
 - Tracker remains `13/14 locked = 93%`; production 50-contact capacity, final controls, merge, and release remain blocked.
 <!-- GATE14C_LOCKED_FACTS_END -->

@@ -915,4 +915,17 @@ Gate 13 is `LOCKED / PASS`; operational tracker is `13/14 locked = 93%`. Gate 14
 - Repair proof: Task 233 action count remains 1947; old/new raw task hashes recorded; direct comparison shows one regex-string difference and no other field change.
 - User/operator responsibility: NONE.
 - Tracker remains `13/14 locked = 93%`; Gate 14C phone proof, PR merge, and release remain blocked.
+
+## ISSUE_G14C_NO_RESPONSE_CODE_UNRESOLVED_LITERAL
+
+- Status: `REPAIRED STATIC R1 CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+- Direct Sosa phone evidence: quota/no-retry passed; timeout exhaustion used two attempts, one retry, zero real HTTP calls, exact review persistence, blank Reply, and one lock release.
+- Observed defect: when no real HTTP action returned a response code, Task 235 copied unresolved `%http_response_code` into its public result.
+- Root cause: `Variable Clear` leaves the Tasker variable unresolved when later referenced.
+- R1 repair: set `%http_response_code` to numeric `0` before every attempt and extend only the existing missing-code regex with `|^0$`.
+- Regression boundary: Task 235 only; 243 actions remain 243; all other tasks, profiles, scene, and registry are unchanged.
+- User/operator responsibility: NONE.
+- Codex/static responsibility: the first Gate 14C model did not reproduce Tasker's unresolved no-response-code representation.
+- Closing proof: ChatGPT artifact audit, then timeout, real-success, and legacy-migration phone regressions.
+- Tracker remains `13/14 locked = 93%`; merge and release remain blocked.
 <!-- GATE14C_FAILURE_LEDGER_END -->

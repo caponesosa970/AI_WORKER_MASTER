@@ -1279,4 +1279,22 @@ No percentage change. Current tracker remains `8/14 locked = 57%`.
 - Tracker effect: none; remains `13/14 locked = 93%`.
 - Phone import approved by Codex: NO. Phone proof claimed by Codex: NO. PR merge: BLOCKED.
 - Final decision: `GATE 14C BOUNDED OPENAI RETRY RUNTIME CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+
+## Gate 14C R1 HTTP Code Normalization Candidate - 2026-07-15
+
+- Exact task assigned: repair unresolved no-response-code output using two Task 235 semantics only.
+- Source SHA256: `71A766AE8D550C139AABCEC53DE3B1025CAF26C68561583CBF20AC6D5A5138B3`.
+- Active issue: `ISSUE_G14C_NO_RESPONSE_CODE_UNRESOLVED_LITERAL`.
+- Direct phone evidence: supplied by Sosa; Codex records but does not claim it.
+- Runtime delta: Task 235 `act119` clears no longer; it sets code `0`. Existing `act162` missing-code regex gains only `|^0$`.
+- Action count: 243 before and after.
+- Preservation: 88/88 other tasks raw identical; Task 233 SHA preserved; Task 237, profiles, scene, and project registry unchanged.
+- Validators: standard Tasker audit PASS; validator one 29/29 PASS; validator two 24/24 PASS.
+- Packaging: XML SHA `535A163DA2FCEF1A655AB7DBBA4EBE5E9A991C7BF63CD74525244820D4BCA2A1`; ZIP SHA `B47A4BC32FF33BD444F4EC9A710345F354F16DE451C8608F93E1F23C6552D0F9`; one-entry byte equality PASS.
+- Prohibited actions performed: NONE. No Tasker run, Sheet access, OpenAI call, profile enablement, TextNow action, Send, confirmation, Archive, or merge.
+- User/operator responsibility: NONE.
+- Codex/static responsibility: the original Gate 14C static model did not expose Tasker's unresolved no-response-code output.
+- Tracker effect: none; remains `13/14 locked = 93%`.
+- Phone import approved by Codex: NO. Phone proof claimed by Codex: NO. PR merge: BLOCKED.
+- Final decision: `GATE 14C R1 HTTP CODE NORMALIZATION CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
 <!-- GATE14C_BUILD_LEDGER_END -->
