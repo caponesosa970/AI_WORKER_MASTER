@@ -409,7 +409,24 @@ Codex return is automatically rejected if it lacks preflight, bug-history search
 - Status: `GATE 14D2 CORRECTED MESSAGE IDENTITY AND ORDERING CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
 - Main tracker remains `13/14 locked = 93%`; PR #9 remains open and unmerged.
 
-## Gate 14D2 Phone Closure And Gate 14D3 Overflow Candidate
+## Gate 14D3 Product-Question Correction And R1 Candidate
+
+- Commit `262df72253af71d7533061ea701655a545834e97` is rejected as Gate 14 overflow proof and retained only as a private processing-window diagnostic.
+- Source audit confirmed the rejected candidate never exercised the production OverflowInbox logger or drain.
+- Exact Gate 14D2 base SHA256: `3851E073BE042F80068E52CF7E3D410ED3D0EBA8A63C5F4C10108532912FE0EA`.
+- Confirmed source defects: overflow admission had no post-write readback or cross-store duplicate proof; drain had no main-row readback before DRAINED, no DRAINED readback, no partial-commit idempotency, and no shared slot-admission lock.
+- Gate 14D3 R1 changes only `FINAL Simple Get Open Slot Row`, `TT5 Simple Log Lock Release HARD`, `TT5 Log Current Message To OverflowInbox`, and `TT5 Overflow Drain One` among existing tasks.
+- Added permanent task: `TT5 Safe Overflow Admission Drain`. Added isolated launcher: `AIW GATE14D3 SAFE OVERFLOW TEST`.
+- `FINAL Simple`, `FINAL Queue Cycle`, all processing/API tasks, TextNow, Send, confirmation, Archive, timer, profiles, and scene are unchanged.
+- Final topology: 95 tasks / 4 disabled profiles / 1 scene. Existing tasks raw-byte identical: 89/93.
+- Candidate XML SHA256: `9502F289A1BDC83D21762BA3EA6B892D190B115F23FD1C8F5AD5EDC1E4BE9ECE`.
+- Validators: 285-check structural validator PASS; independent 47-check transaction validator PASS; Tasker static audit PASS.
+- Status: `GATE 14D3 R1 SAFE PRODUCTION OVERFLOW ADMISSION AND DRAIN CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+- Planning tracker remains 40 total, 25 phone/runtime, 15 non-phone. Main tracker remains `13/14 locked = 93%`; PR #9 remains open and unmerged.
+
+## Historical Rejected Gate 14D3 Processing-Window Diagnostic
+
+This section is superseded by Gate 14D3 R1 above. It is retained only as source history and must not be treated as the active overflow candidate.
 
 - Direct Sosa phone proof passes strict row order for rows 199, 200, and 201, later-repeat acceptance under a unique event ID, and exact duplicate-ID suppression.
 - Duplicate mode reported one suppressed existing ID and one eligible unique control ID with zero API calls, processing locks, Sheet writes, or lifecycle actions; rows 199-201 remained unchanged.
@@ -419,5 +436,5 @@ Codex return is automatically rejected if it lacks preflight, bug-history search
 - Candidate XML SHA256: `E78235FD8D1E896990A2CE6B14BBA29D8BAF49EE79D88CCD2DCDF7D1A7E0B461`.
 - Static validators PASS/PASS; no Gate 14D3 phone proof exists.
 - Visible planning tracker: 40 total, 25 phone/runtime, 15 non-phone; overflow/admission is the sole remaining Gate 14D checkpoint.
-- Status: `GATE 14D3 OVERFLOW AND ADMISSION CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+- Status: `REJECTED AS OVERFLOW PROOF / PRIVATE DIAGNOSTIC ONLY / DO NOT IMPORT`.
 - Main tracker remains `13/14 locked = 93%`; PR #9 remains open and unmerged.

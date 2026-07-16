@@ -432,7 +432,9 @@ All five Gate 14C modes are phone-proven by Sosa. Codex records but does not ind
 
 Tracker remains `13/14 locked = 93%`; 50 checkpoints remain. Codex claims no phone proof and approves no import.
 
-## Gate 14D2 Phone Closure And Gate 14D3 Overflow Candidate
+## Historical Gate 14D2 Closure And Rejected Gate 14D3 Diagnostic
+
+The Gate 14D2 phone claims remain valid. The Gate 14D3 processing-window claims below are retained as static history but are rejected as overflow proof.
 
 | ID | Claim | Evidence | Status |
 |---|---|---|---|
@@ -446,10 +448,30 @@ Tracker remains `13/14 locked = 93%`; 50 checkpoints remain. Codex claims no pho
 | G14D3-004 | Admission mode cannot process row 199 | Exact call boundary plus independent row-199 readback | PROVEN STATIC |
 | G14D3-005 | Drain mode binds only row 199 | Control-flow and call-parameter inspection | PROVEN STATIC |
 | G14D3-006 | New tasks have no TextNow, Send, confirmation, DONE, Archive, profile, timer, or live path | Forbidden-path scan | PROVEN STATIC |
-| G14D3-007 | Both overflow modes pass on the target phone | No Gate 14D3 phone execution | UNSUPPORTED / HOLD |
+| G14D3-007 | Both overflow modes pass on the target phone | No real overflow mode existed in this package | REJECTED / NOT TESTABLE AS CLAIMED |
 | G14D3-008 | Recovery/race, interface, hardening, live operation, and release are complete | Remaining Gate 14 proof | UNSUPPORTED / BLOCKED |
 
-Main tracker remains `13/14 locked = 93%`; visible planning tracker is 40 total, 25 phone/runtime, 15 non-phone. Codex claims no phone proof and approves no import.
+Main tracker remains `13/14 locked = 93%`; visible planning tracker is 40 total, 25 phone/runtime, 15 non-phone. The package is rejected as overflow proof and no import is approved.
+
+## Gate 14D3 R1 Safe Production Overflow Claims
+
+| ID | Claim | Evidence | Status |
+|---|---|---|---|
+| G14D3-R1-001 | First Gate 14D3 package is not overflow proof | Call graph reaches controlled processor only; no overflow logger/drain | PROVEN STATIC / REJECTED |
+| G14D3-R1-002 | Exact Gate 14D2 base used | SHA256 `3851E073BE042F80068E52CF7E3D410ED3D0EBA8A63C5F4C10108532912FE0EA` | PROVEN STATIC |
+| G14D3-R1-003 | Production logger and queue still reach repaired overflow wrappers | Unchanged `FINAL Simple`, `FINAL Queue Cycle`, and drain-cap call graph | PROVEN STATIC |
+| G14D3-R1-004 | Admission suppresses exact IDs across Sheet1 and OverflowInbox | Pre-write cross-store scan and exact binding checks | PROVEN STATIC |
+| G14D3-R1-005 | One new overflow event is exactly unique after write | Exact A:N readback plus post-write cross-store count one | PROVEN STATIC |
+| G14D3-R1-006 | Normal logger and drain use one owned slot-admission lock | Slot wrapper, transaction owner, and guarded cleanup | PROVEN STATIC |
+| G14D3-R1-007 | Main write is read back before DRAINED | Independent action-order validator | PROVEN STATIC |
+| G14D3-R1-008 | DRAINED is read back before success | Exact source A:N readback and state comparison | PROVEN STATIC |
+| G14D3-R1-009 | Partial main-write/source-PENDING state cannot write a second main row | Exact main-ID recovery branch and state model | PROVEN STATIC |
+| G14D3-R1-010 | Completed rerun performs zero writes | Controlled completed-state branch and state model | PROVEN STATIC |
+| G14D3-R1-011 | New capability reaches no API, TextNow, Send, confirmation, DONE, Archive, profile, timer, or live action | Call graph and forbidden-marker scan | PROVEN STATIC |
+| G14D3-R1-012 | Four controlled modes pass on the target phone | No Gate 14D3 R1 phone execution | UNSUPPORTED / HOLD |
+| G14D3-R1-013 | Gate 14D and Gate 14 are complete | Remaining phone, recovery/race, interface, hardening, and release proof | UNSUPPORTED / BLOCKED |
+
+Main tracker remains `13/14 locked = 93%`; planning tracker remains 40 total, 25 phone/runtime, 15 non-phone. Codex claims no phone proof and approves no import.
 
 ## Gate 14D Capacity Closure And Gate 14D2 Candidate
 

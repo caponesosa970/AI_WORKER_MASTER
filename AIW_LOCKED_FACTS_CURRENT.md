@@ -340,7 +340,9 @@ Blocked until separately proven:
 - Visible planning tracker is 43 total, 28 phone/runtime, 15 non-phone; main tracker remains `13/14 locked = 93%`.
 - Phone import, target-phone modes, overflow, merge, live operation, interface, hardening, and release remain blocked.
 
-## Gate 14D2 Phone Closure And Gate 14D3 Candidate Facts
+## Historical Rejected Gate 14D3 Diagnostic Facts
+
+The candidate described in this section is superseded by Gate 14D3 R1 below. It is retained only as a historical processing-window diagnostic.
 
 - Direct Sosa phone proof passes same-sender ordering, later-repeat acceptance under a unique event ID, and exact duplicate-ID suppression.
 - The duplicate test suppressed one existing event ID, kept one unique control ID eligible, and made zero API calls, processing-lock calls, or Sheet writes; the controlled rows remained unchanged.
@@ -351,4 +353,19 @@ Blocked until separately proven:
 - Deferred-drain mode binds and processes only row 199 through the existing bounded processor lane.
 - Topology is 95 tasks / 4 disabled profiles / 1 scene; static validators PASS/PASS.
 - Visible planning tracker is 40 total, 25 phone/runtime, 15 non-phone; overflow/admission is the one remaining Gate 14D checkpoint.
-- Phone import, staging, API execution, merge, live operation, interface, hardening, and release remain blocked.
+- This package is rejected as overflow proof. Phone import and phone testing are prohibited.
+
+## Gate 14D3 Correction And R1 Candidate Facts
+
+- The first Gate 14D3 package is rejected as overflow proof because it called the already-proven controlled rows 149-198 processor and never exercised production OverflowInbox admission or drain.
+- Rejected source and commit history are preserved; the package is a diagnostic only and is not approved for import or phone testing.
+- Direct Gate 14D3 R1 base SHA256 is `3851E073BE042F80068E52CF7E3D410ED3D0EBA8A63C5F4C10108532912FE0EA`.
+- The production logger still reaches `TT5 Log Current Message To OverflowInbox`; the permanent queue still reaches `TT5 Overflow Drain One` through `TT5 Overflow Drain Cap`.
+- R1 centralizes both wrappers through one exact transaction engine and places the normal Sheet1 slot selector under the same owned admission lock.
+- Admission scans exact IDs across Sheet1 and OverflowInbox, verifies the exact blank destination, writes one PENDING row, reads it back, and requires post-write cross-store count exactly one.
+- Drain selects the earliest PENDING source, verifies its exact A:N fields, checks Sheet1 for an existing exact ID, writes at most one exact A:I row, reads it back before DRAINED, and reads DRAINED back before success.
+- A PENDING source plus one exact matching Sheet1 row follows the source-only recovery path and cannot write a second main row.
+- A completed controlled rerun verifies DRAINED plus the exact existing main row and performs zero writes.
+- Four existing overflow/admission-specific tasks change; 89 existing tasks, all profiles, and scene remain raw-byte identical.
+- No new OpenAI, TextNow, Send, confirmation, DONE, Archive, timer, live, or profile path exists.
+- R1 has no phone proof. Planning tracker remains 40/25/15 and main remains `13/14 locked = 93%`.

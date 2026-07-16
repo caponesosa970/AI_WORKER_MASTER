@@ -1370,3 +1370,18 @@ No percentage change. Current tracker remains `8/14 locked = 57%`.
 - Prohibited actions honored: no Tasker, Sheet, TextNow, OpenAI, profile, merge, import approval, or independent phone-proof claim.
 - Tracker effect: planning checkpoints reduce to 40 total, 25 phone/runtime, 15 non-phone; main tracker remains `13/14 locked = 93%`.
 - Decision: `GATE 14D3 OVERFLOW AND ADMISSION CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+
+## Accountability ID AIW-GATE14D3-R1-SAFE-OVERFLOW-20260716
+
+- Controller correction: the first Gate 14D3 package asked the wrong product question and is rejected as overflow proof.
+- Codex responsibility: the first build reused the already-proven hard-coded processing window and did not inspect the real overflow transaction deeply enough before building.
+- Corrected assignment: repair and test actual OverflowInbox admission, exact duplicate suppression, exact drain ordering, DRAINED readback, shared admission locking, and partial-commit idempotency.
+- Direct base SHA256: `3851E073BE042F80068E52CF7E3D410ED3D0EBA8A63C5F4C10108532912FE0EA`.
+- Existing task changes: four overflow/admission-specific tasks only. Added tasks: one permanent transaction engine and one isolated controlled launcher.
+- Preservation: 89/93 existing task blocks, 4/4 profiles, and scene raw-byte identical; protected processing/API/TextNow/lifecycle tasks unchanged.
+- Validation: validator one 285/285 PASS; validator two 47/47 PASS; Tasker static audit PASS; one-entry ZIP byte equality PASS.
+- Candidate XML SHA256: `9502F289A1BDC83D21762BA3EA6B892D190B115F23FD1C8F5AD5EDC1E4BE9ECE`.
+- Prohibited actions performed: NONE. No Tasker run, Sheet access, API call, TextNow action, profile enablement, Send, confirmation, Archive, or merge.
+- Codex phone proof claim: NO. Codex phone import approval: NO.
+- Tracker effect: none; remains 40 total, 25 phone/runtime, 15 non-phone and `13/14 locked = 93%`.
+- Decision: `GATE 14D3 R1 SAFE PRODUCTION OVERFLOW ADMISSION AND DRAIN CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.

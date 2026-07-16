@@ -978,9 +978,31 @@ Gate 13 is `LOCKED / PASS`; operational tracker is `13/14 locked = 93%`. Gate 14
 
 ## ISSUE_G14D3_OVERFLOW_ADMISSION_NOT_PHONE_PROVEN
 
-- Status: `STATIC CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
-- Current gap: no controlled 51-row admission and deferred-row drain phone run exists.
+- Status: `SUPERSEDED / ORIGINAL PACKAGE REJECTED`.
+- Historical gap: no controlled 51-row admission and deferred-row drain phone run existed.
 - Candidate boundary: two added tasks only; all 93 existing tasks remain raw-byte identical.
 - Static safety: first mode calls the unchanged 50-row batch and independently verifies row 199 remains NEW with blank Reply; second mode binds only row 199 through the unchanged processor transaction.
-- Closing proof required: ChatGPT artifact audit, exact staging of rows 149-199, one 50-row admission execution, and one separate row-199 drain execution.
+- Superseding action: Gate 14D3 R1 tests the real production overflow logger and drain with zero API calls.
 - Tracker: `13/14 locked = 93%`; visible planning count is 40 total, 25 phone/runtime, 15 non-phone.
+
+## ISSUE_G14D3_PRODUCT_QUESTION_MISMATCH
+
+- Status: `CORRECTED STATIC CANDIDATE / ORIGINAL PACKAGE REJECTED`.
+- Affected commit: `262df72253af71d7533061ea701655a545834e97`.
+- Finding: the first Gate 14D3 candidate proved only that the controlled capacity task was hard-coded to rows 149-198 and left row 199 outside that loop.
+- Product mismatch: no production overflow logger, duplicate protection, drain, source transition, or admission lock was exercised.
+- Safe response: no phone import or test occurred; source history and private diagnostic were preserved.
+- Codex responsibility: source-contract audit was too narrow before the first build.
+- Controller responsibility: the forward logic audit caught the mismatch before phone proof was wasted.
+- Corrective boundary: build from Gate 14D2 and exercise the actual production overflow wrappers with zero OpenAI calls.
+
+## ISSUE_G14D3_OVERFLOW_TRANSACTION_NOT_VERIFIED
+
+- Status: `REPAIRED STATIC CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+- Confirmed source risks: admission success without exact readback; no cross-store exact-ID proof; main write before source transition without readback; no DRAINED readback; possible duplicate drain after partial commit; no shared slot-admission lock.
+- R1 repair: one permanent transaction engine owns the shared lock and is reached by the existing logger, drain, and normal slot selector wrappers.
+- Exact ordering: OverflowInbox write and readback; Sheet1 write and readback; only then DRAINED write and DRAINED readback.
+- Idempotency: one exact existing Sheet1 ID skips the main write and permits only the verified source-state completion; multiple or conflicting IDs HOLD.
+- Static proof: 285-check validator PASS, independent 47-check state/ordering validator PASS, Tasker static audit PASS.
+- Phone closure required: four controlled modes, zero API/TextNow calls, exact row readbacks, exact write counts, and all owned locks released.
+- Tracker remains 40/25/15 and `13/14 locked = 93%`.
