@@ -85,3 +85,15 @@ None. Main-gate count remains `13/14 locked = 93%`. Detailed remaining tracker r
 - Controller responsibility: independently audit exact artifacts and separately decide migration and controlled phone proof.
 - User/operator responsibility: `NONE`.
 - Prohibited actions performed: `NONE`; no live Sheet access/mutation, Tasker import/run, profile enablement, OpenAI call, TextNow action, Send, merge, or release claim.
+
+## Option A Phase 1 R2 Accountability
+
+- Exact R1 base verified: 5,738,927 bytes; SHA256 `9EB0A9FD6B3E342E4022AEE20022683F1BF08A54E65892A099565A3542D0A758`.
+- Codex responsibility: R1 failed to model the full-group FreezeLoggedAt boundary and described live migration dimensions too destructively.
+- Repair scope: Tasks 273, 320, and 325 only; no helper; no Send/confirmation/Archive/admission/lifecycle/quiet task change.
+- Static evidence: 42/42 R2 checks, 41/41 second-validator checks, standard audit PASS, 32/32 migration checks, and 9/9 mutations detected.
+- Modeled evidence: 14 deterministic cases plus 100,000 schedules / 24,363,612 operations / zero failures.
+- Migration evidence: controller-supplied grids incorporated; all larger grids/extensions preserved; SystemConfig A3:D16 plan only; historical rows unchanged.
+- Controller responsibility: independently audit exact artifacts, then separately authorize migration/reconciliation and later phone import if safe.
+- User/operator responsibility: `NONE`.
+- Prohibited actions performed: `NONE`; no Sheet access/mutation, reconciliation, fixture selection, Tasker, profile enablement, Send, merge, or release claim.

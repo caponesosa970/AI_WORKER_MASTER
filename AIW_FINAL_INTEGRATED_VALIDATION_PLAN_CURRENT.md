@@ -195,3 +195,11 @@ The source-order regression must execute Task 263's actual order and prove lifec
 Quiet validation must prove exact-cutoff scheduling, Abort-Existing coalescing, no lock/write/API/Send during wait, STOP cancellation, cutoff extension by a newer event, and one normal-cycle dispatch.
 
 Migration validation must independently enumerate all 23 required tabs/views and compare every formula in `AIW_FINAL_INTEGRATED_SHEET_MIGRATION_MANIFEST_CURRENT.md`. Migration remains plan-only and is not part of Codex offline execution.
+
+## Option A Phase 1 R2 Capacity-Boundary Validation
+
+Task 320 must be inspected directly for exact ledger F/Q/AB/AI loading, numeric/range/order validation, default BoundAt cutoff, full-capacity FreezeLoggedAt cutoff, and three derived-cutoff freshness comparisons.
+
+Required source-derived cases are five events as 4+1, eight as 4+4, nine as 4+4+1, full-group post-freeze/pre-bind arrival, non-full pre-bind stale arrival, exact duplicate ID, repeated text/new ID, and restart between consecutive groups. Wrong ID/sender, unresolved output, `#ERROR`, full ledger, and conflicting owner must return their safety HOLD and cannot count as PASS through terminal completion alone.
+
+Migration validation uses the controller-supplied live dimensions as preservation inputs. It must reject shrink operations, row-1 SystemConfig writes, extension-column loss, unapproved formula replacement, automatic historical-row reconciliation, or missing A:Z readback proof.

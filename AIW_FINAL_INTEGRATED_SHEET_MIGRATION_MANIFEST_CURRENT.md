@@ -1,8 +1,8 @@
-# AIW Final Integrated Sheet Migration Manifest - Conversation Continuity P1 R1
+# AIW Final Integrated Sheet Migration Manifest - Conversation Continuity P1 R2
 
 Status: `PLAN ONLY / NOT APPLIED / HOLD FOR CONTROLLER APPROVAL`
 
-This is the complete migration authority for the Option A Phase 1 R1 candidate. It has no dependency on an older manifest. Codex did not open or mutate the live workbook and selected no fixture row.
+This is the complete non-destructive migration authority for the Option A Phase 1 R2 candidate. It has no dependency on an older manifest. It incorporates the controller-supplied live dimensions below. Codex did not open or mutate the live workbook, reconcile historical rows, or select a fixture row.
 
 ## Safety boundary
 
@@ -14,63 +14,64 @@ This is the complete migration authority for the Option A Phase 1 R1 candidate. 
 - Do not select or guess validation fixture rows. They remain dynamic controller inputs after fresh read-only bounds and blankness proof.
 - Views are hints. Exact direct-row reads, identity checks, and readbacks remain write authority.
 - `DeadArchive`, Compactor, broad Archive drain, and legacy maintenance remain unreachable.
+- Every grid size below is a minimum runtime requirement. Never shrink a row count, column count, existing grid range, extension column, or populated cell.
+- Preserve `SystemConfig!A1:J2`, `Sheet1!J:CY`, `QueueView!K:Z`, `OverflowInbox!O:CN`, `Archive!K:Z`, and `DeadArchive!N:CI` exactly.
+- Preserve every other existing cell outside an explicitly approved formula anchor or the controller-approved `SystemConfig!A3:D16` block.
 
-## Exact target inventory
+## Controller-supplied live grid and minimum-requirement matrix
 
-The controller must reconcile every existing tab against this table before applying any formula. Row expansion never authorizes data writes.
+The controller must freshly re-read this matrix before applying the plan. A larger live grid is preserved. Row expansion never authorizes a data write.
 
-| Tab | Purpose | Target physical rows x columns | Runtime maximum | Privacy |
-|---|---|---:|---:|---|
-| `SystemConfig` | Version and bounded maxima | 100 x 4 | rows 2:100 | internal configuration |
-| `Sheet1` | Existing production queue | 980 x 26 | payload rows 2:201; protected range A:Z | private production data |
-| `QueueView` | Existing phone-proven lifecycle hint | 201 x 10 | rows 2:201 | private derived data |
-| `Sheet1SlotView` | Blank-main-row hint | 2 x 1 | row 2 | internal derived data |
-| `OverflowInbox` | Durable overflow admission | 986 x 14 | rows 2:986 | private production data |
-| `OverflowSlotView` | Blank-overflow-row hint | 2 x 1 | row 2 | internal derived data |
-| `OverflowView` | Ordered active overflow hint | 986 x 15 | rows 2:986 | private derived data |
-| `Archive` | Confirmed production history | 1000 x 10 | rows 2:1000 | private production history |
-| `DeadArchive` | Preserved legacy identity history | 1000 x 13 | candidate reads A2:A1000 only | private production history |
-| `IngressJournal` | Durable notification admission journal | 1001 x 14 | rows 2:1001 | private production data |
-| `IngressSlotView` | Blank-journal-row hint | 2 x 1 | row 2 | internal derived data |
-| `IngressView` | Ordered unresolved ingress hint | 1001 x 15 | rows 2:1001 | private derived data |
-| `IdentityProbe` | Serialized exact-identity input | 2 x 5 | row 2 | private transient data |
-| `IdentityProbeResult` | Exact identity classification | 2 x 3 | row 2 | private derived data |
-| `ProofLedger` | Append-only validation proof | 5001 x 12 | rows 2:5001 | private proof data |
-| `ProofLedgerSlotView` | Blank-proof-row hint | 2 x 1 | row 2 | internal derived data |
-| `RuntimeState` | Durable START/STOP desired state | 2 x 4 | row 2 | private runtime state |
-| `ValidationControl` | Dynamic validation gate | 3 x 2 | rows 2:3 | private validation state |
-| `RecoveryProbe` | Durable ambiguity summary | 2 x 6 | row 2 | private derived data |
-| `SchemaCheck` | Integrated base schema gate | 2 x 6 | row 2 | internal derived data |
-| `ConversationGroups` | Durable conversation group ledger | 1000 x 42 | rows 2:1000 | highly private conversation data |
-| `ConversationGroupSlotView` | Blank-group-row hint | 2 x 1 | row 2 | internal derived data |
-| `ConversationSchemaCheck` | Conversation schema and bounds gate | 2 x 7 | row 2 | internal derived data |
+| Tab | Existing grid | Minimum required grid | Actual authorized operation | Runtime maximum / privacy |
+|---|---:|---:|---|---|
+| `SystemConfig` | 1000 x 26 | 100 x 4 | preserve grid and A1:J2; after fresh blank proof write A3:D16 only | lookup A:B / internal configuration |
+| `Sheet1` | 980 x 103 | 980 x 26 | preserve; no resize or header rewrite | payload rows 2:201; protected A:Z / private production data |
+| `QueueView` | 979 x 26 | 201 x 10 | preserve grid and K:Z; preserve A1 formula when exact match | rows 2:201 / private derived data |
+| `Sheet1SlotView` | missing | 2 x 1 | create tab and exact formula anchor | row 2 / internal derived data |
+| `OverflowInbox` | 986 x 92 | 986 x 14 | preserve; no resize or header rewrite | rows 2:986 / private production data |
+| `OverflowSlotView` | 1000 x 26 | 2 x 1 | preserve grid; replace only A2 formula anchor | row 2 / internal derived data |
+| `OverflowView` | 1000 x 26 | 986 x 15 | preserve grid; replace only A1 formula anchor | rows 2:986 / private derived data |
+| `Archive` | 933 x 26 | 1000 x 10 | add 67 rows only; preserve all 26 columns | rows 2:1000 / private production history |
+| `DeadArchive` | 972 x 87 | 1000 x 13 | add 28 rows only; preserve all 87 columns | reads A2:A1000 / private production history |
+| `IngressJournal` | missing | 1001 x 14 | create tab | rows 2:1001 / private production data |
+| `IngressSlotView` | missing | 2 x 1 | create tab and formula | row 2 / internal derived data |
+| `IngressView` | missing | 1001 x 15 | create tab and formula | rows 2:1001 / private derived data |
+| `IdentityProbe` | missing | 2 x 5 | create tab | row 2 / private transient data |
+| `IdentityProbeResult` | missing | 2 x 3 | create tab and formulas | row 2 / private derived data |
+| `ProofLedger` | missing | 5001 x 12 | create tab | rows 2:5001 / private proof data |
+| `ProofLedgerSlotView` | missing | 2 x 1 | create tab and formula | row 2 / internal derived data |
+| `RuntimeState` | missing | 2 x 4 | create tab and seed exact state row | row 2 / private runtime state |
+| `ValidationControl` | missing | 3 x 2 | create tab and seed closed controls | rows 2:3 / private validation state |
+| `RecoveryProbe` | missing | 2 x 6 | create tab and formulas | row 2 / private derived data |
+| `SchemaCheck` | missing | 2 x 6 | create tab and formulas | row 2 / internal derived data |
+| `ConversationGroups` | missing | 1000 x 42 | create tab | rows 2:1000 / highly private conversation data |
+| `ConversationGroupSlotView` | missing | 2 x 1 | create tab and formula | row 2 / internal derived data |
+| `ConversationSchemaCheck` | missing | 2 x 7 | create tab and formulas | row 2 / internal derived data |
 
 ## Exact schemas and seed values
 
 ### SystemConfig
 
-Headers `A1:D1`:
+Preserve `A1:J2` exactly. Do not write or replace row 1. Immediately before migration, re-read `A3:D16` and require every cell blank. Any nonblank, unresolved, errored, or changed value returns migration HOLD.
 
-`Key | Value | Description | UpdatedAt`
-
-Exact rows:
+After that fresh blank proof and separate controller approval, write only these exact rows. Column D remains blank unless the controller supplies the migration timestamp in the same approved operation.
 
 | Row | Key | Value | Description |
 |---:|---|---|---|
-| 2 | `SchemaVersion` | `AIW_FINAL_V1` | integrated base schema |
-| 3 | `MainMaxRow` | `201` | production Sheet1 payload maximum |
-| 4 | `OverflowMaxRow` | `986` | OverflowInbox physical/runtime maximum |
-| 5 | `JournalMaxRow` | `1001` | IngressJournal physical/runtime maximum |
-| 6 | `ReleaseMode` | `FINAL_INTEGRATED` | final integrated candidate mode |
-| 7 | `DeadArchiveEnabled` | `0` | unreachable in V1 |
-| 8 | `CompactorEnabled` | `0` | unreachable in V1 |
-| 9 | `ConversationSchemaVersion` | `AIW_CONVERSATION_V1` | group schema version |
-| 10 | `ConversationGroupMaxRow` | `1000` | bounded ConversationGroups maximum |
-| 11 | `ConversationMemberCapacity` | `4` | maximum members per group |
-| 12 | `ConversationQuietSeconds` | `10` | persisted quiet window |
-| 13 | `Sheet1PhysicalMaxRow` | `980` | verified physical row count |
-| 14 | `ArchivePhysicalMaxRow` | `1000` | required target after audited row expansion |
-| 15 | `DeadArchivePhysicalMaxRow` | `1000` | required target after audited row expansion |
+| 3 | `SchemaVersion` | `AIW_FINAL_V1` | integrated base schema |
+| 4 | `MainMaxRow` | `201` | production Sheet1 payload maximum |
+| 5 | `OverflowMaxRow` | `986` | OverflowInbox physical/runtime maximum |
+| 6 | `JournalMaxRow` | `1001` | IngressJournal physical/runtime maximum |
+| 7 | `ReleaseMode` | `FINAL_INTEGRATED` | final integrated candidate mode |
+| 8 | `DeadArchiveEnabled` | `0` | unreachable in V1 |
+| 9 | `CompactorEnabled` | `0` | unreachable in V1 |
+| 10 | `ConversationSchemaVersion` | `AIW_CONVERSATION_V1` | group schema version |
+| 11 | `ConversationGroupMaxRow` | `1000` | bounded ConversationGroups maximum |
+| 12 | `ConversationMemberCapacity` | `4` | maximum members per group |
+| 13 | `ConversationQuietSeconds` | `10` | persisted quiet window |
+| 14 | `Sheet1PhysicalMaxRow` | `980` | verified minimum physical row count |
+| 15 | `ArchivePhysicalMaxRow` | `1000` | required after audited row addition |
+| 16 | `DeadArchivePhysicalMaxRow` | `1000` | required after audited row addition |
 
 ### Sheet1
 
@@ -78,7 +79,7 @@ Preserve the existing tab. Required payload headers `A1:I1`:
 
 `ID | Sender | Message | Status | Reply | Touch | Button | Time | Ticker`
 
-Columns `J:Z` are protected extension columns. Preserve their existing headers and values byte-for-byte; the R1 candidate does not redefine them. No runtime payload row above 201 is authorized.
+Columns `J:CY` are protected extension columns. Preserve their existing headers and values exactly; the R2 candidate does not redefine them. No runtime payload row above 201 is authorized.
 
 ### OverflowInbox
 
@@ -86,17 +87,19 @@ Headers `A1:N1`:
 
 `OverflowID | OriginalID | Sender | Message | Status | Reply | TouchAction | ButtonAction | EventTime | Ticker | LoggedAt | Source | Attempts | LastError`
 
+Preserve existing columns `O:CN` and every existing header/value. Existing header aliases in A:N may remain when runtime authority is positional and no schema check requires a rename.
+
 ### Archive
 
 Headers `A1:J1`:
 
 `ID | Sender | Message | Status | Reply | Touch | Button | Time | Ticker | ArchivedAt`
 
-Expand the existing grid from its controller-observed 933 rows to exactly 1000 rows without changing any existing cell. No row is seeded.
+Add exactly 67 rows to reach the 1000-row minimum. Preserve columns `K:Z`, all existing 26 columns, and every existing cell. Do not shrink columns and do not seed a row.
 
 ### DeadArchive
 
-The candidate contract uses `A1` = `ID` and reads only `A2:A1000`. Preserve the existing `B:M` headers and all values exactly. Expand rows from the controller-observed 972 to exactly 1000 without changing any existing cell. Do not create a row-999 fixture.
+The candidate contract reads only `A2:A1000` by position. Preserve the existing `A:CI` grid, including `N:CI`, headers, aliases, and all values. Add exactly 28 rows to reach the 1000-row minimum. Do not shrink columns, rewrite a header, or create a row-999 fixture.
 
 ### IngressJournal
 
@@ -149,7 +152,7 @@ Leave `A2:AP1000` blank. No group row is preselected.
 
 ## Exact view formulas
 
-Every formula is entered exactly once in the listed anchor. The target tab must otherwise be blank before the array formula is installed.
+For a newly created view, enter its formula exactly once in the listed anchor and require the remaining spill range blank. For an existing view, preserve the grid and every cell except the explicitly approved anchor. Preserve `QueueView!A1` when it already matches the formula below; otherwise stop for controller approval. For this migration, the only authorized existing-view replacements are `OverflowView!A1` and `OverflowSlotView!A2`.
 
 ### QueueView
 
@@ -265,35 +268,58 @@ No row number appears in runtime as a fixture default. After migration is separa
 
 Missing, stale, duplicate, occupied, out-of-bounds, unresolved, plugin-error, `#ERROR`, or conflicting evidence remains HOLD with zero writes.
 
+## Separately controlled pre-test historical-row reconciliation
+
+This step is not part of Codex work and is not authorized until after migration verification and a fresh controller read. The protected historical rows are:
+
+| Range | Current supplied status | Protected history |
+|---|---|---|
+| `Sheet1!A69:Z69` | `D69=NEW` | controlled Send note records `SENT=YES` |
+| `Sheet1!A72:Z72` | `D72=NEW` | historical trigger-to-queue proof |
+| `Sheet1!A73:Z73` | `D73=NEW` | controlled Send note records `SENT=YES` |
+| `Sheet1!A141:Z141` | `D141=NEW` | historical wrong-ID transaction fixture |
+
+Required controller sequence for each row:
+
+1. Keep Tasker stopped and freshly read the exact `A:Z` row.
+2. Compare the full row with protected evidence and obtain explicit controller approval.
+3. Change only column D from exact `NEW` to exact `REVIEW_HOLD`, using one bounded status write per row or one exact atomic D-only batch.
+4. Re-read all four complete `A:Z` ranges and prove A:C and E:Z are unchanged.
+5. Prove no unlisted row or column changed.
+
+Never set these rows to `PROCESSING`, `READY_TO_SEND`, `DONE`, or blank. Never Archive or clear them automatically. Any mismatch, non-NEW status, unresolved output, plugin error, or changed protected field returns reconciliation HOLD with zero further writes.
+
 ## Migration order
 
 1. STOP; verify profiles disabled and no lock/owner active.
 2. Create a named backup and record revision, all tab sizes, headers, formulas, and protected-row hashes.
-3. Verify `Sheet1!144:147` read-only and record its unchanged proof.
-4. Expand `Archive` to 1000 rows and `DeadArchive` to 1000 rows; add no values.
-5. Create/normalize `SystemConfig`, `IngressJournal`, `ProofLedger`, `RuntimeState`, `ValidationControl`, and `IdentityProbe` in the order listed above.
-6. Create the base view tabs and install their exact formulas.
-7. Create `ConversationGroups` with exact A:AP headers and a blank A2:AP1000 range.
-8. Create `ConversationGroupSlotView` and `ConversationSchemaCheck`; install exact formulas.
-9. Run the read-only verification order below. Do not select fixtures.
+3. Freshly re-read the controller-supplied grid matrix, `SystemConfig!A1:J20`, `Sheet1!A69:CY73`, `Sheet1!A141:CY147`, and every existing formula anchor. Stop on any contradiction.
+4. Require `SystemConfig!A3:D16` blank and preserve `A1:J2`; after separate approval write only A3:D16 as specified.
+5. Add 67 blank rows to `Archive` and 28 blank rows to `DeadArchive`; add no columns or values and remove nothing.
+6. Create only missing base tabs. Preserve existing header aliases when runtime authority is positional.
+7. Preserve matching `QueueView!A1`; replace only `OverflowView!A1` and `OverflowSlotView!A2`; install formulas only in missing view tabs.
+8. Create `ConversationGroups` with exact A:AP headers and a blank A2:AP1000 range.
+9. Create `ConversationGroupSlotView` and `ConversationSchemaCheck`; install exact formulas.
+10. Run the read-only verification order below. Do not select fixtures and do not perform historical-row reconciliation yet.
 
 ## Read-only verification order
 
-1. Re-read workbook revision, tab inventory, physical row/column counts, and all headers.
+1. Re-read workbook revision, tab inventory, physical row/column counts, and all headers; require every grid to be at least its minimum and no preexisting dimension to decrease.
 2. Re-read every exact formula anchor.
 3. Require `SchemaCheck!B2=PASS` and `ConversationSchemaCheck!B2=PASS`.
 4. Require all slot views to return a numeric in-bounds row or `FULL`.
 5. Require empty `IngressView` and `OverflowView` to expose blank output, never an error literal.
 6. Require `RuntimeState!B2=0`, `ValidationControl!B2=NORMAL`, and `ValidationControl!B3=NONE`.
-7. Re-read `Sheet1!144:147` and all preexisting production ranges; compare against backup evidence.
-8. Verify no fixture authorization is armed and no fixture row was selected.
+7. Re-read `SystemConfig!A1:J20`, `Sheet1!J:CY`, `QueueView!K:Z`, `OverflowInbox!O:CN`, `Archive!K:Z`, `DeadArchive!N:CI`, `Sheet1!144:147`, and the four historical A:Z rows; compare with backup evidence.
+8. Prove only the approved SystemConfig block, added blank rows, created tabs, and approved formula anchors changed.
+9. Verify no fixture authorization is armed, no fixture row was selected, and historical-row reconciliation has not run.
 
 ## Rollback order
 
 1. Keep STOP asserted and profiles disabled.
 2. Preserve/export any nonterminal `ConversationGroups` row as private evidence; never reset a bound or possible-click member to `NEW`.
-3. Restore formulas and created tabs from the named backup in reverse migration order.
-4. Remove only the added blank rows from `Archive` and `DeadArchive` after proving they stayed blank and after controller approval.
-5. Re-read all protected rows and production hashes; any mismatch is an incident HOLD.
+3. Restore only created tabs, approved formula anchors, and `SystemConfig!A3:D16` from the named backup in reverse migration order; never overwrite preserved cells while rolling back.
+4. Remove only the added rows from `Archive` and `DeadArchive` after proving every added row remained blank and after separate controller approval; retain all original columns.
+5. Re-read all extension ranges, protected rows, historical rows, and production hashes; any mismatch is an incident HOLD.
 
-Final migration status: `PLAN ONLY / NOT APPLIED / NO LIVE FIXTURE SELECTED / HOLD FOR CHATGPT AUDIT`
+Final migration status: `NON-DESTRUCTIVE PLAN ONLY / NOT APPLIED / HISTORICAL ROWS UNCHANGED / NO LIVE FIXTURE SELECTED / HOLD FOR CHATGPT AUDIT`

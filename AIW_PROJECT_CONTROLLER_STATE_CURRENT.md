@@ -547,3 +547,17 @@ Authoritative next-chat rules are in `AIW_NEW_CHAT_BOOTSTRAP_CURRENT.md`. Runtim
 - Migration contract: complete 23-tab/view plan; not applied; no fixture selected.
 - Static/model status: PASS. Phone/import/migration status: HOLD.
 - PR state remains open/unmerged. No merge, phone proof, Gate 14 closure, or release is claimed.
+
+## Option A Phase 1 R2 Current Candidate
+
+- R1 is rejected for phone import and preserved as the exact R2 base.
+- Authorized head before repair: `2ff9f973c295ad8d7829952a3e85e02a14495f09`.
+- Exact base: 5,738,927 bytes; SHA256 `9EB0A9FD6B3E342E4022AEE20022683F1BF08A54E65892A099565A3542D0A758`.
+- Existing-task scope: Tasks 273, 320, and 325 only; no helper added.
+- R2 XML: 5,758,368 bytes; SHA256 `BD0033F84C582DDF4B323ABC0935F28033DA93AC8AFE1EC69E116D98C3FB0315`.
+- Topology: 171 tasks / 4 profiles / 2 scenes / 24,158 actions.
+- Capacity contract: default freshness cutoff BoundAt; a verified full group uses FreezeLoggedAt; three freshness paths share the derived cutoff.
+- Excess event contract: never consumed; after-freeze events remain the next turn; non-full pre-bind absence still holds.
+- Migration contract: minimum dimensions only, no shrink/overwrite, SystemConfig A3:D16 only after fresh blank proof, Archive/DeadArchive add rows only.
+- Historical rows 69/72/73/141: controller-only D-column reconciliation plan; unchanged by Codex.
+- Static/model status: PASS. Migration, reconciliation, phone import/proof, merge, Gate 14 closure, and release: HOLD.

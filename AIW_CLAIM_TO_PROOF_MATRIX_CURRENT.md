@@ -669,3 +669,28 @@ Generated reports do not self-prove CC-P1 claims. Static PASS rows require direc
 | CC-P1R1-017 | Real Send, final orchestrator, Gate 14, and release are complete | No phone execution or controller release decision | UNSUPPORTED / BLOCKED |
 
 No generated report self-proves these rows; static claims require direct source inspection and modeled claims require the separate source-order implementation.
+
+## Option A Phase 1 R2 Capacity Boundary and Migration Preservation
+
+| Claim ID | Claim | Independent evidence | Status |
+|---|---|---|---|
+| CC-P1R2-001 | Exact R1 base used | Independent bytes/SHA recomputation | PROVEN STATIC |
+| CC-P1R2-002 | Only Tasks 273, 320, and 325 changed and no helper was added | Raw task block comparison and second validator | PROVEN STATIC |
+| CC-P1R2-003 | Task 320 loads ledger F/Q/AB/AI and validates count/capacity/timestamps/order | Direct XML action and condition inspection | PROVEN STATIC |
+| CC-P1R2-004 | Default cutoff is BoundAt and a verified full group uses FreezeLoggedAt | Exact assignment/branch inspection and source-derived model | PROVEN STATIC / MODELED |
+| CC-P1R2-005 | JOURNALED, active Sheet1, and active Overflow paths use one derived cutoff | Exact three-condition RHS inventory | PROVEN STATIC |
+| CC-P1R2-006 | Five rapid messages become four plus one NEW next turn | Independent deterministic model | PROVEN MODELED |
+| CC-P1R2-007 | Eight and nine events become ordered 4/4 and 4/4/1 groups with every ID accounted | Independent deterministic model | PROVEN MODELED |
+| CC-P1R2-008 | Duplicate ID remains suppressed and repeated text/new ID remains eligible | Independent deterministic and randomized models | PROVEN MODELED |
+| CC-P1R2-009 | Restart between groups does not create a second Send for group one | One-shot restart model | PROVEN MODELED |
+| CC-P1R2-010 | Adverse identity, sender, unresolved, error, capacity, and ownership cases HOLD and cannot pass merely through GROUP_COMPLETE | Explicit adverse-result matrix | PROVEN MODELED |
+| CC-P1R2-011 | 100,000 schedules / 24,363,612 operations have zero invariant failures | Independent source-derived model | PROVEN MODELED |
+| CC-P1R2-012 | All nine required R2 unsafe mutations are detected | Independent mutation harness | PROVEN STATIC / MODELED |
+| CC-P1R2-013 | Larger live grids and extension columns are preserved by the plan | 32-check controller-dimension migration validator | PROVEN DOCUMENTARY |
+| CC-P1R2-014 | SystemConfig writes are A3:D16 only after fresh blank proof | Manifest inspection and overwrite mutation | PROVEN DOCUMENTARY |
+| CC-P1R2-015 | Historical rows 69/72/73/141 have a D-only controller reconciliation plan | Manifest inspection | PROVEN DOCUMENTARY |
+| CC-P1R2-016 | Live migration, historical reconciliation, or formulas work in the workbook | Not applied or accessed | UNSUPPORTED / HOLD |
+| CC-P1R2-017 | R2 imports/runs safely on the target phone | No Tasker import/run | UNSUPPORTED / HOLD |
+| CC-P1R2-018 | Real Send, Gate 14 closure, merge, or release is complete | No phone/controller release proof | UNSUPPORTED / BLOCKED |
+
+Generated reports are evidence inputs only. Controller source inspection and phone proof remain required for promotion.

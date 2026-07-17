@@ -172,3 +172,7 @@ The heartbeat/production ledger is not implemented in this phase.
 - Phase 4 real lifecycle: not run.
 - Final orchestrator: not run.
 - Phone proof, Gate 14 closure, PR merge, and production release: not claimed.
+
+## R2 Current Repair Boundary
+
+R2 corrects only the full-capacity freshness cutoff and the non-destructive live-workbook migration plan. Phase 1 architecture, R1 journal/lifecycle/quiet repairs, phone-proven modules, and Option A Phase 2 exclusions remain unchanged. See `AIW_FINAL_CONVERSATION_CONTINUITY_PHASE1_R2_CURRENT.md`.

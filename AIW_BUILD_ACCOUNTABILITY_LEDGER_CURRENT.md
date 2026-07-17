@@ -1470,3 +1470,18 @@ No percentage change. Current tracker remains `8/14 locked = 57%`.
 - Migration result: one self-contained 23-tab/view plan with all exact formulas, no guessed fixture, protected rows 144:147, and no row-999 fixture.
 - Static/model result: PASS; phone result: NONE.
 - Decision: `OPTION A PHASE 1 R1 CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+
+## Option A Phase 1 R2 Capacity-Boundary and Migration-Preservation Repair
+
+- Accountability ID: `AIW-OPTION-A-PHASE1-R2-20260717`.
+- Source head: `2ff9f973c295ad8d7829952a3e85e02a14495f09`.
+- Exact base: 5,738,927 bytes; SHA256 `9EB0A9FD6B3E342E4022AEE20022683F1BF08A54E65892A099565A3542D0A758`.
+- Assigned issues: `ISSUE_CONVERSATION_GROUP_CAPACITY_EXCESS_STALE_HOLD`, `ISSUE_CONVERSATION_MIGRATION_LIVE_PRESERVATION_CONFLICT`, and `ISSUE_PREEXISTING_NEW_ROWS_DUPLICATE_SEND_RISK`.
+- Runtime tasks changed: 273, 320, and 325 only. Added helpers: none.
+- Exact runtime result: validated ledger F/Q/AB/AI; default BoundAt cutoff; full-group FreezeLoggedAt cutoff; all three freshness paths use the derived value.
+- Candidate: 171 tasks / 4 profiles / 2 scenes / 24,158 actions; 5,758,368 bytes; SHA256 `BD0033F84C582DDF4B323ABC0935F28033DA93AC8AFE1EC69E116D98C3FB0315`.
+- Preservation: 168 unaffected tasks, all phone-proven tasks, Tasks 254/255/262/263/282/309/317/327, all profiles/scenes, and changed-task plugin semantics.
+- Model: 100,000 schedules / 24,363,612 operations / zero failures; five/eight/nine, restart, duplicate, repeat, and adverse HOLD cases passed.
+- Migration: controller-supplied grids treated as minima; SystemConfig A1:J2 and extension columns preserved; Archive/DeadArchive rows add-only; historical rows unchanged.
+- Prohibited actions performed: none. No Sheet access/mutation, historical reconciliation, fixture selection, Tasker, profile enablement, Send, merge, or release claim.
+- Decision: `OPTION A PHASE 1 R2 CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.

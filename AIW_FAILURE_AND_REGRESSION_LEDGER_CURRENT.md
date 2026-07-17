@@ -1121,3 +1121,26 @@ Gate 13 is `LOCKED / PASS`; operational tracker is `13/14 locked = 93%`. Gate 14
 Controller responsibility: exact artifact audit and later migration/phone authorization. Codex responsibility: independently reproducible source/package proof and conservative claims. User/operator responsibility: `NONE`.
 
 R1 static status: `REPAIRED / CANDIDATE`. Phone-proof limitation: `NO PHONE IMPORT OR EXECUTION`.
+
+## Option A Phase 1 R2 Issues
+
+### ISSUE_CONVERSATION_GROUP_CAPACITY_EXCESS_STALE_HOLD
+
+- Original defect: all three Task 320 freshness paths used BoundAt, causing a fifth rapid event after the four-member freeze but before ledger bind to stale-hold group one.
+- Root cause: no full-capacity distinction in the membership cutoff.
+- Repair: validate F/Q/AB/AI; use BoundAt by default and FreezeLoggedAt only when MemberCount equals verified MemberCapacity.
+- Regression prevention: source validator requires three derived-cutoff uses; five/eight/nine and restart models preserve every ID; mutations reverting Freeze to Bound, removing capacity validation, or consuming excess are detected.
+
+### ISSUE_CONVERSATION_MIGRATION_LIVE_PRESERVATION_CONFLICT
+
+- Original defect: R1 used exact target-grid language and proposed SystemConfig row-1 content despite larger live grids and occupied A1:J2.
+- Repair: minimum-grid language, extension-column preservation, A3:D16 fresh blank proof, add-only Archive/DeadArchive rows, exact-anchor-only view changes.
+- Regression prevention: controller-dimension validator and shrink/SystemConfig-overwrite mutations.
+
+### ISSUE_PREEXISTING_NEW_ROWS_DUPLICATE_SEND_RISK
+
+- Risk: historical protected rows 69, 72, 73, and 141 remain NEW and could be reselected before reconciliation.
+- Repair plan: controller-only fresh A:Z reads and D-only `NEW` to `REVIEW_HOLD` writes with full-row readback.
+- Build result: rows were not accessed or changed; reconciliation remains HOLD.
+
+R2 static status: `REPAIRED / CANDIDATE`. Phone-proof limitation: `NO SHEET, TASKER, OR PHONE EXECUTION`.
