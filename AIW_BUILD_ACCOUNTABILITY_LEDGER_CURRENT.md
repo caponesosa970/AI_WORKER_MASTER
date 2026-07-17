@@ -1,7 +1,7 @@
 # AI Worker Build Accountability Ledger Current
 
 Status: ACTIVE BUILD GATE
-Updated: 2026-07-12T18:53:46-07:00
+Updated: 2026-07-17T00:00:00-07:00
 
 This ledger is mandatory for all AI Worker work. A build, audit, repository sync, phone-test request, or release review is incomplete until its claims are recorded here and mapped to proof in `AIW_CLAIM_TO_PROOF_MATRIX_CURRENT.md`.
 
@@ -22,7 +22,128 @@ No Codex output may be accepted when it lacks:
 - Codex responsibility statement
 - ChatGPT verification checklist
 
-## Current Build Entry
+## Current Active Entry Pointer
+
+Current active accountability entry:
+
+`AIW-ACC-20260717-SYSTEM-WIDE-ACCOUNTABILITY-SYNC`
+
+The historical 27B installation entry remains preserved below as history. It is not the active current build.
+
+## Accountability ID AIW-ACC-20260717-SYSTEM-WIDE-ACCOUNTABILITY-SYNC
+
+### Date/Time
+
+2026-07-17 America/Los_Angeles.
+
+### Current origin/main commit
+
+`1b73c48c77b05b2518c47d30387778f86b647576`
+
+### Mandatory source SHA256 inventory
+
+| Source file | SHA256 |
+| --- | --- |
+| `AIW_CONTROLLER_BOOTSTRAP_CURRENT.md` | `8D292498FD4C6F3ECC2304DCE2C7B65606CEA8B88F7961A2F77BE03EDEE00D60` |
+| `AIW_FULL_GOAL_EXECUTION_CONTRACT_CURRENT.md` | `2E653112E87A2197291B9E67A689F45A8F505C1DB11AA8C5EB4DD7B3B02075C3` |
+| `AIW_LOCKED_FACTS_CURRENT.md` | `B1F7B3BAD8BD57A178C94D78F98116E8B96214532B9F5912E94FD339026BE59C` |
+| `AIW_PROJECT_CONTROLLER_STATE_CURRENT.md` | `DD22FAC05E307A5CC9FAAD0F0810068FFE6E4B5A1C09AC075E4EA8B5EBCF65B7` |
+| `AIW_FAILURE_AND_REGRESSION_LEDGER_CURRENT.md` | `5AAA5E2930B61BD48955CFFC3842B90D35E72D7A4D085247996D411F5E824473` |
+| `AIW_CLAIM_TO_PROOF_MATRIX_CURRENT.md` | `8A2D2421D866D73E59E99BBF44F30C228A0A5495B5A83EC29CFBC662E3EA1101` |
+| `AIW_MANDATORY_BUILD_PREFLIGHT.md` | `254F6A6AC68AC9918A213A638051C25E8894A155AE0054791615EC94BCB9A97B` |
+| `AIW_BUILD_ACCOUNTABILITY_LEDGER_CURRENT.md` | `E31BD5DA233761BA2A1A334B989088548EC92AB70AA926282D01A433886A2ADC` |
+| `AGENTS.md` | `AFDAF259DE6145E3D2221AD139E261FB5C01936E235BAAA67BFF0021CE47B0B2` |
+| `.codex/config.toml` | `C01CC60C60649F91BEF3876B24C87DF7C0BAD0480AD456BF0355B6AB52FAAB73` |
+
+### Exact six-file changed list
+
+- `AIW_PROJECT_CONTROLLER_STATE_CURRENT.md`
+- `AIW_BUILD_ACCOUNTABILITY_LEDGER_CURRENT.md`
+- `AIW_FAILURE_AND_REGRESSION_LEDGER_CURRENT.md`
+- `AIW_CLAIM_TO_PROOF_MATRIX_CURRENT.md`
+- `AIW_MANDATORY_BUILD_PREFLIGHT.md`
+- `AGENTS.md`
+
+### Codex mode
+
+Controller and accountability synchronization only. Runtime scope is inactive.
+
+### Active issue
+
+`ISSUE_APP_WIDE_ACCOUNTABILITY_DRIFT_GATE14` - `OPEN / HARD HOLD`.
+
+### Current tracker
+
+`13/14 locked = 93%`. Gate 14 is the only active main gate.
+
+### Approved scope
+
+- Synchronize exactly the six public controller/accountability files listed above.
+- Preserve historical entries.
+- Record the active Gate 14 accountability drift issue.
+- Record the public-safe Gate 14 datasource defect.
+- Record that the rejected Classfix base is preserved as repair base only.
+- Record that any Datasource R1 output is `UNREVIEWED / HOLD` unless independently audited.
+- Add the permanent whole-application compatibility rule.
+- Commit and open a draft PR for independent ChatGPT audit.
+
+### Prohibited scope
+
+- No runtime XML change.
+- No private package modification.
+- No Datasource R1 runtime repair continuation.
+- No Tasker import or execution.
+- No TextNow action.
+- No live or staging Sheet read or mutation.
+- No Send, confirmation, DONE, Archive, DeadArchive, Compactor, TT5, live operation, capacity execution, interface execution, or profile activation.
+- No change to Gates 1-13.
+- No tracker increase.
+- No release claim.
+- No merge by Codex.
+- No secret, private datasource, phone number, message content, workbook ID, credential, or private XML publication.
+
+### Controller failure statement
+
+Gate-focused work advanced without keeping the durable build ledger, failure ledger, claim-to-proof matrix, preflight, controller state, and AGENTS instructions synchronized around the entire current application.
+
+### Codex responsibility statement
+
+Codex must stop whenever the active build, gate, issue, or repair is not represented by current accountability records. Codex must not treat a pinned prompt, generated report, simulator, local static PASS, or package claim as a replacement for synchronized GitHub source truth.
+
+### ChatGPT/controller responsibility statement
+
+The controller failed to require full synchronization before later Gate 14 work continued and must independently audit this six-file synchronization before any runtime repair resumes.
+
+### Sosa responsibility
+
+NONE.
+
+### Whole-application compatibility requirements
+
+Every runtime build, repair, audit, phone-test request, tracker decision, and release claim must prove compatibility with the complete application: TextNow ingress, exact-row logging, message identifiers, timestamps, order, row identity, processing, OpenAI reply generation, queue selection, correct-thread navigation, compose safety, Send zero-or-one, independent confirmation, DONE, exact-row Archive, recovery, STOP, timer/live controls, final interface, capacity, and release.
+
+Minimal runtime scope does not reduce this compatibility proof requirement.
+
+### Unsupported-proof disclosure
+
+This synchronization changes documentation only. It does not prove the rejected Classfix artifact, does not approve Datasource R1, does not claim phone proof, does not authorize phone import, and does not move the tracker.
+
+### Tracker effect
+
+NONE. Tracker remains `13/14 locked = 93%`.
+
+### ChatGPT independent verification checklist
+
+1. Verify the PR changes exactly the six authorized files.
+2. Verify no runtime XML, private artifact, script, profile, scene, or Tasker task changed.
+3. Verify `ISSUE_APP_WIDE_ACCOUNTABILITY_DRIFT_GATE14` appears consistently.
+4. Verify every file states the whole-application compatibility rule.
+5. Verify Gates 1-13 remain locked and Gate 14 remains blocked.
+6. Verify the rejected Classfix SHA is recorded without private XML contents.
+7. Verify Datasource R1 remains unapproved.
+8. Verify no phone proof, phone import, tracker increase, merge, Gate 14 release, or production release is claimed.
+
+## Historical Build Entry
 
 ### Accountability ID
 

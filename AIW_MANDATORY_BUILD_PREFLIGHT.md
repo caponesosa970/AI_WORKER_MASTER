@@ -68,6 +68,61 @@ Every task must include a preflight report with:
 - Codex responsibility statement
 - ChatGPT verification checklist
 
+## Whole-Application Compatibility Preflight
+
+Before any runtime build, repair, artifact approval, phone-test request, tracker decision, or release claim, Codex must identify:
+
+- current full-project baseline SHA256
+- active capability boundary
+- local defect
+- upstream contracts
+- downstream contracts
+- changed nodes
+- protected nodes
+- complete reachable call graph
+- state-transition impact
+- lock impact
+- STOP and recovery impact
+- cross-application regression plan
+- exact phone-proof boundary
+- current synchronized ledger sections covering the active build
+
+The compatibility map must cover the entire AI Worker application and release path: TextNow ingress, exact Sheet logging, row binding, message identifiers, timestamps, ordering, processing, OpenAI reply generation, queue selection, correct-thread navigation, compose safety, Send zero-or-one, independent confirmation, DONE, exact-row Archive, recovery, STOP, timer/live controls, interface, capacity, and release.
+
+Minimal runtime scope does not reduce the required full-application compatibility proof. A local static PASS cannot prove full-application compatibility. A generated report, CSV, simulator, mutation tool, pinned prompt, or package cannot prove its own correctness.
+
+### Current Gate 14 System-Wide Accountability Hard Stop
+
+When `ISSUE_APP_WIDE_ACCOUNTABILITY_DRIFT_GATE14` is open, Codex must treat Gate 14 runtime work and phone execution as `HARD HOLD`.
+
+The active tracker remains `13/14 locked = 93%`. Gates 1-13 remain locked. Gate 14 remains blocked. Phone proof is not claimed, phone import is not approved, tracker effect is NONE, and runtime work may resume only after the synchronized accountability records cover the active build.
+
+Blocked while this issue is open: runtime XML repair, private package modification, Datasource R1 continuation, Tasker import, Tasker execution, TextNow action, live or staging Sheet read/mutation, Send, confirmation, DONE, Archive, DeadArchive, Compactor, TT5, live operation, capacity execution, interface execution, profile activation, Gate 14 release, merge, and production release.
+
+Required full-app compatibility output fields:
+
+- issue ID
+- tracker before and after
+- active gate
+- full-project baseline filename and SHA256
+- final product capability advanced
+- exact local behavior repaired
+- upstream producer and contract map
+- downstream consumer and contract map
+- exact changed files, tasks, actions, fields, profiles, scenes, task registry nodes, variables, and call references
+- exact protected nodes and preservation proof level
+- complete reachable call graph from every relevant entry point through every possible terminal outcome
+- state-transition impact map
+- exact-row and message ownership impact
+- lock acquisition, release, stale recovery, retry, interruption, restart, and unresolved transaction impact
+- STOP and recovery impact
+- cross-application regression plan and actual result
+- forbidden-path proof
+- expected phone-proof boundary
+- synchronized ledger references
+- unsupported claims
+- ChatGPT verification checklist
+
 ## Hard Stop Conditions
 
 Codex must stop if:
@@ -82,6 +137,16 @@ Codex must stop if:
 - the claim-to-proof matrix cannot support a requested claim
 - phone proof would be needed but is not available
 - ChatGPT has not approved the current gate
+- accountability records are stale
+- claim matrices are gate-only and do not cover the complete application
+- upstream or downstream impact is missing
+- protected-node map is incomplete
+- reachable call graph is incomplete
+- state-transition analysis is incomplete
+- a local-to-full-application compatibility claim is unsupported
+- a runtime task lacks an accountability entry for the active build
+- expected results or tests were weakened
+- a local PASS could conceal an application-level regression
 
 ## AutoInput Preservation Preflight
 

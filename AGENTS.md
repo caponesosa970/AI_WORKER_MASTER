@@ -59,6 +59,26 @@ Default final status vocabulary:
 - HARD HOLD
 - FAILED
 
+## System-Wide Accountability Authority
+
+Accountability governs the complete AI Worker application and full release path, not only one package, task, gate, repair, test, or runtime module.
+
+Every local repair must be evaluated against the entire application: TextNow ingress, exact Sheet logging, row binding, message identifiers, timestamps, order, processing, OpenAI reply generation, queue selection, correct-thread navigation, compose safety, Send zero-or-one, independent confirmation, DONE, exact-row Archive, recovery, STOP, timer/live controls, interface, capacity, and release.
+
+Minimal patch scope and system-wide compatibility proof are both mandatory.
+
+A pinned Codex prompt is supplementary only. It does not replace current synchronized GitHub controller and accountability records.
+
+Codex must HOLD when current ledgers do not cover the active build, active gate, active issue, active repair, expected proof, and phone-proof boundary.
+
+No local PASS, generated report, simulator, mutation result, package claim, or static audit can substitute for complete claim-to-proof evidence.
+
+Locked Gates 1-13 cannot be reopened without newer contradictory phone proof.
+
+No runtime, phone, tracker, merge, or release action may occur while system-wide accountability is stale.
+
+When `ISSUE_APP_WIDE_ACCOUNTABILITY_DRIFT_GATE14` is open, runtime work and phone execution are HARD HOLD. Tracker remains `13/14 locked = 93%`, Gate 14 remains blocked, phone import is not approved, and phone proof is not claimed.
+
 ## Mandatory Build Accountability Gate
 
 This gate is required before, during, and after every AI Worker task. It applies to audits, repository syncs, runtime packages, phone-test requests, and release review.

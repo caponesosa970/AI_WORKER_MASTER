@@ -40,6 +40,23 @@ Status: CURRENT SOURCE-TRUTH TRACKER / GATE 13 LOCKED / GATE 14 BLOCKED
 
 Gate 14 capacity, reliability ladder, final control interface, and release proof - BLOCKED.
 
+## Current System-Wide Accountability Gate 14 Hold
+
+- Status: SYSTEM-WIDE ACCOUNTABILITY SYNCHRONIZATION REQUIRED / HARD HOLD ON RUNTIME WORK AND PHONE EXECUTION.
+- Tracker remains `13/14 locked = 93%`.
+- Gates 1-13 remain LOCKED by direct Sosa phone proof and must not be rebuilt, rerun, reopened, or re-proven without newer contradictory phone evidence.
+- Gate 14 is the only active main gate.
+- Active issue: `ISSUE_APP_WIDE_ACCOUNTABILITY_DRIFT_GATE14`.
+- Public-safe Gate 14 datasource defect: the rejected Classfix repair base wrote Phase A fixture data to a staging workbook authority while the invoked validation path read a production workbook authority. This means the launcher could not prove the whole application validation path.
+- Rejected repair base preserved for analysis only: `AIW_GATE14_PHASE_A_INTEGRATED_CLASSFIX_PRIVATE.xml`.
+- Rejected repair base SHA256: `2766D926BCCC6FD4EAF1DA6B01469871E839A3C3004B91EDF2B3BAE5A09024E5`.
+- Datasource R1 status during this synchronization: no Datasource R1 runtime output was found in the repository tree or standard Codex-to-ChatGPT handoff folder. If any partial or completed Datasource R1 output is later found, it is `UNREVIEWED / HOLD` until independently audited.
+- The existing Gate 14 import/render proof remains valid as historical proof that the prior artifact imported and rendered. It does not authorize further execution, does not approve the rejected Classfix artifact, and does not need to be repeated merely for this documentation synchronization.
+- No tracker increase is authorized. No release claim is made.
+- Runtime work may resume only after this six-file synchronization PR is independently audited and current GitHub accountability records cover the active build.
+- Blocked while this issue is open: runtime XML repair, private package modification, Tasker import, Tasker execution, TextNow action, live or staging Sheet read/mutation, Send, confirmation, DONE, Archive, DeadArchive, Compactor, TT5, live operation, capacity execution, interface execution, profile activation, Gate 14 release, PR merge for runtime, and production release.
+- Whole-application compatibility rule: every local repair must prove compatibility from TextNow ingress through exact-row logging, processing, OpenAI, queue, Send, confirmation, DONE, Archive, recovery, STOP, capacity, final controls, and release before phone import approval, tracker movement, merge, or release.
+
 ## Current Active Issue
 
 - ISSUE_27B_AUTOINPUT_TARGET_NOT_V15A_PRESERVED - CORRECTED / SOURCE PRESERVATION STATICALLY PROVEN FOR SEARCH_ICON

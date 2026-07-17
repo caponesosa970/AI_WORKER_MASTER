@@ -40,6 +40,91 @@ Each issue must include:
 
 ## Active Issues
 
+### ISSUE_APP_WIDE_ACCOUNTABILITY_DRIFT_GATE14
+
+First detected date:
+
+2026-07-17.
+
+Affected builds and Gate 14 work:
+
+- Gate 14 Phase A foundation and launcher work.
+- Rejected Classfix repair base `AIW_GATE14_PHASE_A_INTEGRATED_CLASSFIX_PRIVATE.xml`.
+- Any partial or completed Datasource R1 output, if later found, until independently audited.
+
+Affected control files:
+
+- `AIW_PROJECT_CONTROLLER_STATE_CURRENT.md`
+- `AIW_BUILD_ACCOUNTABILITY_LEDGER_CURRENT.md`
+- `AIW_FAILURE_AND_REGRESSION_LEDGER_CURRENT.md`
+- `AIW_CLAIM_TO_PROOF_MATRIX_CURRENT.md`
+- `AIW_MANDATORY_BUILD_PREFLIGHT.md`
+- `AGENTS.md`
+
+Observed symptom:
+
+Gate-focused work advanced without keeping the durable build ledger, failure ledger, claim-to-proof matrix, preflight, controller state, and AGENTS instructions synchronized around the entire current application.
+
+Direct evidence:
+
+- Current main controller/accountability files did not contain the active app-wide Gate 14 datasource defect and repair-fit hold before this synchronization.
+- The pinned Codex accountability prompt existed as supplemental instruction but was not durable synchronized GitHub source truth.
+- The rejected Classfix artifact SHA `2766D926BCCC6FD4EAF1DA6B01469871E839A3C3004B91EDF2B3BAE5A09024E5` exposed a datasource authority split: Phase A fixture writes used a staging workbook authority while the validation route read production workbook authority.
+
+Root cause:
+
+The accountability system remained present, but durable records were not advanced with the active Gate 14 work.
+
+Contributing cause:
+
+The pinned Codex accountability prompt was treated as sufficient supplementation even though it cannot replace synchronized current GitHub records.
+
+Codex responsibility:
+
+Codex must stop whenever the active build, gate, issue, or repair is not represented by current accountability records.
+
+ChatGPT/controller responsibility:
+
+The controller failed to require full synchronization before later Gate 14 work continued.
+
+Sosa responsibility:
+
+NONE.
+
+Prior warning missed:
+
+Generated reports, local static PASS, simulators, packages, and pinned prompts cannot prove their own correctness and cannot replace durable claim-to-proof mapping.
+
+Required repair:
+
+Create a six-file documentation-only synchronization PR that records system-wide accountability as the active Gate 14 controller boundary.
+
+Required regression:
+
+- Exact six-file PR diff.
+- Cross-file consistency audit.
+- No runtime/private changes.
+- Secret/privacy scan.
+- `git diff --check`.
+- Independent controller review.
+- Merge into main after approval.
+
+Status:
+
+OPEN / HARD HOLD.
+
+Closing proof required:
+
+The six-file synchronization PR is independently reviewed, merged into main, and verified to contain no runtime, private, phone, Sheet, profile, scene, script, tracker-increase, or release-action changes.
+
+Prevention rule:
+
+Before any runtime build, repair, artifact approval, phone-test request, tracker decision, or release claim, current synchronized GitHub controller/accountability records must identify the full-project baseline, active issue, local defect, upstream/downstream application impact, protected nodes, complete call graph, state-transition impact, regression plan, and phone-proof boundary.
+
+Future builds that must check this issue in preflight:
+
+All Gate 14 builds, Datasource R1 or successor repairs, Phase A/B/C candidates, phone-test requests, capacity proofs, final controls, merge requests, and release packages.
+
 ### ISSUE_27B_AUTOINPUT_TARGET_NOT_V15A_PRESERVED
 
 First detected date:
