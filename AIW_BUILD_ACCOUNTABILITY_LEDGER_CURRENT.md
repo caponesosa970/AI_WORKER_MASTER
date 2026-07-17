@@ -1457,3 +1457,16 @@ No percentage change. Current tracker remains `8/14 locked = 57%`.
 - Transport boundary: source-stable notification replay identity not proven; no text fingerprint added; Phase 2 HOLD.
 - Prohibited actions performed: `NONE`. No live Sheet access/mutation, Tasker import/run, profile enablement, OpenAI call, TextNow action, Send, PR merge, or release claim.
 - Decision: `OPTION A PHASE 1 DURABLE CONVERSATION CONTINUITY CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT, SHEET MIGRATION, AND CONTROLLED PHONE PROOF`.
+
+## Option A Phase 1 R1 Source-Contract and Lifecycle Repair
+
+- Source head before work: `5252f8f09473311e6acd99fa27847149fe849646`.
+- Exact repair base: 5,607,668 bytes; SHA256 `D69480C9A212430D5D46753E3A05CBF4DB52045A6A8F967605BD3A3631CAB66E`.
+- Existing semantic delta: Tasks 263, 273, 282, 309, 317, 320, 324, and 325.
+- Added task: 327 `AIW Conversation Deferred Recheck`, 43 actions, `rty=1`, Project-registered, no profile/scene caller.
+- Candidate: 171 tasks / 4 profiles / 2 scenes / 24,075 actions; XML SHA256 `9EB0A9FD6B3E342E4022AEE20022683F1BF08A54E65892A099565A3542D0A758`.
+- Raw preservation: 162 unaffected existing tasks; Tasks 71/199/223/225/226/227/230/231; Tasks 254/255/262; all profiles and scenes.
+- Source-order result: lifecycle states bypass NEW-row selection and reach Task 262 once; quiet HOLD schedules one STOP-aware recheck after exact owner release.
+- Migration result: one self-contained 23-tab/view plan with all exact formulas, no guessed fixture, protected rows 144:147, and no row-999 fixture.
+- Static/model result: PASS; phone result: NONE.
+- Decision: `OPTION A PHASE 1 R1 CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.

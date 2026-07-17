@@ -1086,3 +1086,38 @@ Gate 13 is `LOCKED / PASS`; operational tracker is `13/14 locked = 93%`. Gate 14
 - User/operator responsibility: `NONE`.
 - Remaining unsupported claim: a stable transport-level AutoNotification replay identity. This remains Option A Phase 2 HOLD.
 - Phone-proof limitation: no Sheet access, Tasker import/run, profile enablement, OpenAI call, Send, Archive, final orchestrator, or phone proof occurred during the build.
+
+## Option A Phase 1 R1 defects
+
+### ISSUE_CONVERSATION_JOURNAL_STATUS_CONTRACT_WRONG
+
+- Original defect: selected production members required `JOURNALED` after admission had persisted `RESOLVED_MAIN` or `RESOLVED_OVERFLOW`.
+- Affected source tasks/actions: Task 309 acts 161/165/169/173; Task 320 act 198; Task 325 act 57 in the rejected P1 source.
+- Root cause: receipt-state validation was mistaken for admitted-member validation.
+- Prevention: selected members require exactly one exact `TEXTNOW` journal row in the two admitted states; unresolved JOURNALED is only a separate freshness input.
+- Regression: journal-only, arbitrary status, duplicate match, mismatched identity, and historical resolved cases are independently modeled/mutated.
+
+### ISSUE_CONVERSATION_LIFECYCLE_STARVATION_BY_NEW_ROW
+
+- Original defect: Task 282 could select NEW, return active-group BUSY_HOLD, and cause Task 263 to exit before Task 262.
+- Root cause: active-group routing occurred after candidate selection and used a HOLD token.
+- Prevention: Task 282's first call is the Task 317 lifecycle gate. Lifecycle/review results contain neither HOLD nor ERROR; zero NEW work occurs before Task 262.
+- Regression: awaiting-confirm plus 1/10/50 NEW rows and every required nonterminal lifecycle state are simulated with exact Task 263 source order.
+
+### ISSUE_CONVERSATION_QUIET_RECHECK_NOT_SCHEDULED
+
+- Original defect: quiet HOLD relied on the next two-minute timer.
+- Root cause: no coalesced continuation existed.
+- Prevention: Task 327 has Abort-Existing collision, bounded 15-second wait, repeated STOP checks, no lock/plugin/API/Send action, and one normal-cycle dispatch.
+- Regression: removed scheduling, lock-held wait, waiter-storm collision, and removed STOP checks are all detected.
+
+### ISSUE_CONVERSATION_MIGRATION_MANIFEST_NOT_SELF_CONTAINED
+
+- Original defect: the Phase 1 addendum depended on an older manifest and omitted required formulas/tabs/bounds.
+- Root cause: additive-only documentation was treated as final migration authority.
+- Prevention: one complete manifest declares 23 required tabs/views, exact schemas/counts/formulas, backup/order/verification/rollback/privacy, and dynamic fixtures.
+- Regression: omission of a required conversation formula is detected.
+
+Controller responsibility: exact artifact audit and later migration/phone authorization. Codex responsibility: independently reproducible source/package proof and conservative claims. User/operator responsibility: `NONE`.
+
+R1 static status: `REPAIRED / CANDIDATE`. Phone-proof limitation: `NO PHONE IMPORT OR EXECUTION`.

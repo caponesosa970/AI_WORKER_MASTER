@@ -645,3 +645,27 @@ No generated report proves itself: FVS-006 through FVS-019 require direct XML in
 | CC-P1-028 | Gate 14 and production release are complete | Artifact audit, migration, phone proof, final orchestrator, and controller decision remain | UNSUPPORTED / BLOCKED |
 
 Generated reports do not self-prove CC-P1 claims. Static PASS rows require direct XML/task-block inspection or a second implementation; modeled rows require the independent executable state model and mapped runtime guards.
+
+## Option A Phase 1 R1 Claims
+
+| ID | Claim | Independent evidence | Status |
+|---|---|---|---|
+| CC-P1R1-001 | Exact rejected P1 source is the repair base | Independent byte/hash check | PROVEN STATIC |
+| CC-P1R1-002 | Existing semantic changes are exactly Tasks 263/273/282/309/317/320/324/325 and added Task 327 | Raw task diff and independent DOM validator | PROVEN STATIC |
+| CC-P1R1-003 | All other 162 existing tasks, phone-proven tasks, Tasks 254/255/262, profiles, and scenes are byte-identical | Per-block SHA comparison | PROVEN STATIC |
+| CC-P1R1-004 | Selected group members require exactly one admitted `TEXTNOW` journal identity | Task 309 inspection, contract model, and status/exact-one mutations | PROVEN STATIC / MODELED |
+| CC-P1R1-005 | Unresolved JOURNALED and active admitted rows are distinct pre-Send freshness inputs | Task 320 inspection and source-order model | PROVEN STATIC / MODELED |
+| CC-P1R1-006 | Historical resolved journal rows without active unresolved locations do not stale-block later groups | Active-location scan inspection and modeled case | PROVEN STATIC / MODELED |
+| CC-P1R1-007 | Active lifecycle is detected before NEW selection and Task 262 runs exactly once | Task 282/263 action order and 1/10/50-row matrix | PROVEN STATIC / MODELED |
+| CC-P1R1-008 | Lifecycle-only paths process zero NEW rows and make zero new OpenAI calls | Source-order model and exact task call graph | PROVEN STATIC / MODELED |
+| CC-P1R1-009 | Quiet wait schedules one coalesced recheck without holding locks or writing | Task 263/327 inspection, collision property, and quiet cases | PROVEN STATIC / MODELED |
+| CC-P1R1-010 | STOP cancels deferred work before normal-cycle dispatch | Task 327 action order and STOP model/mutation | PROVEN STATIC / MODELED |
+| CC-P1R1-011 | All required migration tabs, bounds, schemas, and formulas are self-contained | 22-check independent manifest validator | PROVEN DOCUMENTARY |
+| CC-P1R1-012 | Sheet1 rows 144:147 and row-999 fixtures are excluded | Manifest direct inspection | PROVEN DOCUMENTARY |
+| CC-P1R1-013 | 100,000 R1 schedules and 3,200,000 operations have zero invariant failures | Independent source-order model | PROVEN MODELED |
+| CC-P1R1-014 | All 11 R1 mutations and 18 preserved Phase 1 guard mutations are detected | Two independent mutation reports | PROVEN STATIC / MODELED |
+| CC-P1R1-015 | Migration formulas work in the live workbook | Migration was not applied | UNSUPPORTED / HOLD |
+| CC-P1R1-016 | Deferred collision and lifecycle behavior works in Tasker on the phone | No Tasker import/run | UNSUPPORTED / HOLD |
+| CC-P1R1-017 | Real Send, final orchestrator, Gate 14, and release are complete | No phone execution or controller release decision | UNSUPPORTED / BLOCKED |
+
+No generated report self-proves these rows; static claims require direct source inspection and modeled claims require the separate source-order implementation.

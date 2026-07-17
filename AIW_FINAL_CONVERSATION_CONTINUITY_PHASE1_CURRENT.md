@@ -2,7 +2,9 @@
 
 Date: 2026-07-17
 
-Classification: `STATIC DEVELOPMENT PASS / CANDIDATE / HOLD FOR CONTROLLER ARTIFACT AUDIT AND CONTROLLED PHONE PROOF`
+Classification: `SUPERSEDED SOURCE CANDIDATE / REJECTED FOR PHONE IMPORT / REPAIRED BY PHASE 1 R1`
+
+Controller audit found four blocking defects in this source candidate: admitted IngressJournal rows were incorrectly required to remain `JOURNALED`; an active nonterminal group could be starved by a newly selected `NEW` row; quiet waits had no bounded deferred recheck; and the migration addendum was not self-contained. The exact source remains preserved as the authorized R1 repair base. See `AIW_FINAL_CONVERSATION_CONTINUITY_PHASE1_R1_CURRENT.md` for the current static candidate.
 
 Candidate artifact identity:
 

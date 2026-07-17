@@ -71,3 +71,17 @@ None. Main-gate count remains `13/14 locked = 93%`. Detailed remaining tracker r
 - Operator action during build: `NONE`.
 - Prohibited actions performed: `NONE`.
 - Phone proof, import approval, Gate 14 closure, merge, and release: `NOT CLAIMED`.
+
+## Option A Phase 1 R1 - 2026-07-17
+
+- Controller-audited defects accepted: wrong admitted-journal status, lifecycle starvation by NEW rows, missing quiet recheck, and non-self-contained migration.
+- Exact repair base: 5,607,668 bytes; SHA256 `D69480C9A212430D5D46753E3A05CBF4DB52045A6A8F967605BD3A3631CAB66E`.
+- Existing tasks changed: 263, 273, 282, 309, 317, 320, 324, and 325 only.
+- Added helper: Task 327, 43 actions, Abort-Existing collision, no direct profile/scene caller.
+- Protected result: 162 unaffected existing tasks, all eight phone-proven tasks, Tasks 254/255/262, four profiles, and two scenes are raw-byte identical.
+- Independent evidence: 70/70 R1 static checks, 22/22 migration checks, 11/11 R1 mutations, and 18/18 preserved Phase 1 mutations PASS.
+- Modeled evidence: 100,000 R1 source-order schedules / 3,200,000 operations plus 100,000 preserved group schedules / 2,400,000 operations; zero invariant failures.
+- Codex responsibility: the original Phase 1 proof did not reproduce the admission source contract, Task 263 starvation order, deferred scheduling, or the inherited migration completely enough.
+- Controller responsibility: independently audit exact artifacts and separately decide migration and controlled phone proof.
+- User/operator responsibility: `NONE`.
+- Prohibited actions performed: `NONE`; no live Sheet access/mutation, Tasker import/run, profile enablement, OpenAI call, TextNow action, Send, merge, or release claim.

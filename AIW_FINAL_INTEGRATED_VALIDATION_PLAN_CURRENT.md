@@ -181,3 +181,17 @@ Offline acceptance additionally requires:
 - 32 named conversation scenarios, 100,000 randomized schedules, at least 1,000,000 operations, and mutations for all critical guards.
 
 Transport-level notification replay identity remains a separate Option A Phase 2 HOLD. No text fingerprint is authorized.
+
+## Phase 1 R1 validation correction
+
+Phase 4 must now prove the actual source progression:
+
+`JOURNALED -> RESOLVED_MAIN or RESOLVED_OVERFLOW -> durable group membership`
+
+It must reject zero/duplicate journal matches, arbitrary terminal status, mismatched sender/message/normalized sender, invalid LoggedAt, unresolved output, and `#ERROR`.
+
+The source-order regression must execute Task 263's actual order and prove lifecycle-only routing for awaiting-confirm plus 1/10/50 NEW rows, reply-ready, Send-review, anchor-archived, and partial-finalization states. Every applicable case requires one Task 262 call, zero newly processed rows, zero new OpenAI calls, and zero second Send.
+
+Quiet validation must prove exact-cutoff scheduling, Abort-Existing coalescing, no lock/write/API/Send during wait, STOP cancellation, cutoff extension by a newer event, and one normal-cycle dispatch.
+
+Migration validation must independently enumerate all 23 required tabs/views and compare every formula in `AIW_FINAL_INTEGRATED_SHEET_MIGRATION_MANIFEST_CURRENT.md`. Migration remains plan-only and is not part of Codex offline execution.

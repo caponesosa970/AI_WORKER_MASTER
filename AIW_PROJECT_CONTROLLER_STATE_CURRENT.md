@@ -532,3 +532,18 @@ Authoritative next-chat rules are in `AIW_NEW_CHAT_BOOTSTRAP_CURRENT.md`. Runtim
 - Static/model result: PASS; phone result: NONE.
 - Unsupported claim: stable transport-level notification replay identity; Option A Phase 2 HOLD.
 - Current status: `OPTION A PHASE 1 DURABLE CONVERSATION CONTINUITY CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT, SHEET MIGRATION, PHONE IMPORT, AND CONTROLLED PHONE PROOF`.
+
+## Option A Phase 1 R1 Current Candidate
+
+- P1 source candidate is rejected for phone import and preserved only as the exact R1 base.
+- Authorized head before repair: `5252f8f09473311e6acd99fa27847149fe849646`.
+- R1 existing-task scope: 263, 273, 282, 309, 317, 320, 324, 325.
+- Added Task 327: bounded STOP-aware Abort-Existing quiet recheck.
+- Private XML: 5,738,927 bytes; SHA256 `9EB0A9FD6B3E342E4022AEE20022683F1BF08A54E65892A099565A3542D0A758`.
+- Topology: 171 tasks / 4 profiles / 2 scenes / 24,075 actions.
+- Journal member contract: exact admitted `RESOLVED_MAIN|RESOLVED_OVERFLOW`; unresolved JOURNALED is freshness-only.
+- Lifecycle contract: active nonterminal group routes before NEW selection and reaches Task 262 once.
+- Quiet contract: exact persisted cutoff, one coalesced waiter, no lock/plugin/write/API/Send while waiting, STOP cancellation.
+- Migration contract: complete 23-tab/view plan; not applied; no fixture selected.
+- Static/model status: PASS. Phone/import/migration status: HOLD.
+- PR state remains open/unmerged. No merge, phone proof, Gate 14 closure, or release is claimed.
