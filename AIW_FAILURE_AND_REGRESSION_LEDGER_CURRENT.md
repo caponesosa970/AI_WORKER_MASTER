@@ -831,3 +831,316 @@ Authority: newest direct Sosa phone proof supplied on 2026-07-14. Raw runlogs an
 
 Gate 13 is `LOCKED / PASS`; operational tracker is `13/14 locked = 93%`. Gate 14 remains blocked.
 <!-- GATE13_PHONE_PROOF_CLOSURE_FAILURES_END -->
+
+
+<!-- GATE14A_FAILURE_LEDGER_START -->
+## ISSUE_GATE14_CAPACITY_MEASUREMENT_NOT_PHONE_PROVEN
+
+- Status: OPEN / GATE 14A CANDIDATE.
+- Risk: later capacity claims could be invalid if source-row order, exact count, ID uniqueness, or sender uniqueness cannot be measured independently.
+- Prevention: Task 232 is read-only, manually authorized, prefix-bound, bounded to two reads, and retains separate integrity counters.
+- Static evidence: exact 1/5/10/25/50 scenario models pass; duplicate and malformed cases hold; existing runtime is unchanged.
+- Missing proof: target-phone import/render and authorized one-row read with the source row unchanged.
+- No capacity, throughput, production, or release claim is made.
+- User/operator responsibility: NONE.
+<!-- GATE14A_FAILURE_LEDGER_END -->
+
+<!-- GATE14A_R1_FAILURE_LEDGER_START -->
+## ISSUE_G14A_BLANK_REPLY_OUTPUT_UNRESOLVED
+
+- Status: `REPAIRED CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+- First detected: direct Sosa phone execution of Gate 14A on 2026-07-15.
+- Affected XML SHA256: `832BEB0F9764EB2838B08A582648097C49197C2A366931196E5F0311860529EF`.
+- Symptom: a blank AutoSheets Reply element arrived as `%g14_reply89`, producing `INVENTORY_REPLY_HOLD`, nonblank Reply count 1, and unresolved count 1.
+- Direct evidence: one successful Task 232 phone read bound the correct synthetic row; fresh direct Sheet proof showed the Reply cell was blank; no production or mutation path ran.
+- Root cause: the static model represented a blank array element as an empty string and did not model Tasker's unresolved indexed-array placeholder.
+- Codex responsibility: static validation missed the runtime representation.
+- ChatGPT/controller responsibility: phone proof correctly identified and bounded the unsupported assumption.
+- User/operator responsibility: `NONE`.
+- Repair: Task 232 only clears `%row_reply` when it exactly matches `(?s)^[%]g14_reply[0-9]+$`.
+- Regression: real replies, unrelated unresolved values, required fields, `#ERROR`, duplicate, order, count, and bounded-retry checks remain active.
+- Tracker: `13/14 locked = 93%`; Gate 14 and PR merge remain blocked.
+- Closing proof required: ChatGPT artifact audit followed by one separately authorized phone rerun.
+<!-- GATE14A_R1_FAILURE_LEDGER_END -->
+
+<!-- GATE14A_R2_FAILURE_LEDGER_START -->
+## ISSUE_G14A_R1_CLEAR_LEAVES_ROW_REPLY_UNRESOLVED
+
+- Status: `REPAIRED R2 CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+- First detected: direct Sosa R1 phone run on 2026-07-15.
+- Affected R1 XML SHA256: `34197CB7044B740F73B5ED173D26E7B73DE6B6602637B83F26F94D0ECDECD9FC`.
+- Symptom: exact placeholder detection and Variable Clear executed, but later Tasker references exposed unresolved `%row_reply`; nonblank and unresolved counters each became 1.
+- Safety result: Task 232 remained isolated, made one read, called no task, wrote no Sheet value, and returned `INVENTORY_REPLY_HOLD`.
+- Fresh controller evidence: the exact staged row remained unchanged and its Reply cell was blank.
+- Root cause: R1 assumed Variable Clear would remain a usable blank value in later Tasker comparisons.
+- User/operator responsibility: `NONE`.
+- Codex responsibility: R1 static modeling did not reproduce Tasker's cleared-local-variable representation.
+- ChatGPT/controller responsibility: direct phone proof identified the mismatch and bounded the flag-based repair.
+- R2 repair: reset `%reply_blank_norm = 0` per row, set it to 1 only for the exact indexed Reply placeholder, and gate only Reply nonblank/unresolved counters.
+- Regression: real replies, unrelated unresolved values, required fields, `#ERROR`, duplicates, order, count, and bounded read handling remain active.
+- Tracker: `13/14 locked = 93%`; Gate 14, PR merge, phone rerun, and release remain blocked.
+- Closing proof required: independent artifact audit and a separately authorized R2 phone rerun.
+<!-- GATE14A_R2_FAILURE_LEDGER_END -->
+
+<!-- GATE14B_FAILURE_LEDGER_START -->
+## ISSUE_G14B_PROCESSOR_WRITES_NOT_TRANSACTIONALLY_VERIFIED
+
+- Status: `REPAIRED STATIC CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+- Prior defect: processor wrappers could claim PROCESSING, Reply, final status, or failure status without exact A:E readback.
+- Risk: OpenAI could be authorized after an unverified mark; Reply/status could split; wrong-row or changed-ID writes could go undetected.
+- Repair: Task 233 requires exact A/B/C before every write, bounded attempts, and exact readback authority; wrappers only report verified outcomes.
+- Partial success: verified Reply plus unverified final status routes to verified `ERROR_PROCESS_REVIEW` or a non-NEW partial HOLD; Reply is never cleared and NEW is never restored.
+- Gate 14A historical issues are closed by direct Sosa R2 phone proof across 1/5/10/25/50; no production-capacity claim follows.
+- User/operator responsibility: NONE.
+- Codex responsibility: build/static proof only; no phone proof or import approval.
+- Tracker remains `13/14 locked = 93%`; PR merge and Gate 14 completion remain blocked.
+<!-- GATE14B_FAILURE_LEDGER_END -->
+
+<!-- GATE14C_FAILURE_LEDGER_START -->
+## ISSUE_G14C_UNBOUNDED_OPENAI_FAILURE_AND_LEGACY_RETRY_LOOP
+
+- Status: `REPAIRED STATIC CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+- Prior defect: HTTP failure could escape bounded cleanup; transient and permanent classes were not separated; complete response data could enter error logs; legacy `ERROR_OPENAI_RETRY` maintenance could repeatedly reset a row to NEW.
+- Risk: stuck PROCESSING rows, unlimited cross-cycle API calls, cost growth, stale success data, and unsafe retry oscillation.
+- Repair: Task 235 caps each run at two attempts with one 2-4 second jittered retry; Task 173 requests exact `ERROR_OPENAI_REVIEW`; Task 236 migrates legacy retry rows without API or NEW; Task 70 disconnects the old API retry-to-NEW branch.
+- Static regression: 40/40 required cases PASS; independent validators PASS/PASS.
+- Closing proof still required: ChatGPT artifact audit and direct Sosa controlled phone ladder.
+
+## ISSUE_G14C_TASK233_REJECTS_ERROR_OPENAI_REVIEW
+
+- Status: `REPAIRED STATIC CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+- Pre-build finding: phone-proven Task 233 accepted `ERROR_PROCESS`, `ERROR_OPENAI_RETRY`, and `ERROR_PROCESS_REVIEW`, but rejected required `ERROR_OPENAI_REVIEW`.
+- Codex responsibility: identified the contradiction before packaging and returned HOLD instead of bypassing the exact-row transaction engine.
+- Controller decision: authorize one exact regex extension only.
+- Repair proof: Task 233 action count remains 1947; old/new raw task hashes recorded; direct comparison shows one regex-string difference and no other field change.
+- User/operator responsibility: NONE.
+- Tracker remains `13/14 locked = 93%`; Gate 14C phone proof, PR merge, and release remain blocked.
+
+## ISSUE_G14C_NO_RESPONSE_CODE_UNRESOLVED_LITERAL
+
+- Status: `CLOSED BY DIRECT SOSA R1 PHONE PROOF`.
+- Direct Sosa phone evidence: quota/no-retry passed; timeout exhaustion used two attempts, one retry, zero real HTTP calls, exact review persistence, blank Reply, and one lock release.
+- Observed defect: when no real HTTP action returned a response code, Task 235 copied unresolved `%http_response_code` into its public result.
+- Root cause: `Variable Clear` leaves the Tasker variable unresolved when later referenced.
+- R1 repair: set `%http_response_code` to numeric `0` before every attempt and extend only the existing missing-code regex with `|^0$`.
+- Regression boundary: Task 235 only; 243 actions remain 243; all other tasks, profiles, scene, and registry are unchanged.
+- User/operator responsibility: NONE.
+- Codex/static responsibility: the first Gate 14C model did not reproduce Tasker's unresolved no-response-code representation.
+- Closing proof: R1 import/render, timeout exhaustion with numeric code 0, real-success code 200, and legacy migration all passed by direct Sosa proof.
+- Closure details: all five Gate 14C modes passed; attempts stayed at two maximum, retries at one maximum, no third request occurred, exact review persistence passed, and every owned processing lock released once.
+- Legacy closure: zero API attempts, zero retries, zero real HTTP calls, no processing lock, blank Reply preserved, and fresh exact-row readback confirmed `ERROR_OPENAI_REVIEW`.
+- Remaining risk moved to Gate 14D-G; no Gate 14C runtime defect remains open.
+- Tracker remains `13/14 locked = 93%`; merge and release remain blocked.
+<!-- GATE14C_FAILURE_LEDGER_END -->
+
+<!-- GATE14D_FAILURE_LEDGER_START -->
+## ISSUE_G14D_CONTROLLED_CAPACITY_NOT_PHONE_PROVEN
+
+- Status: `STATIC CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+- Current gap: no controlled 5/10/25/50 processing-capacity phone run exists.
+- Candidate boundary: Tasks 238 and 239 only; all production tasks remain byte-identical.
+- Safety controls: exact NEW/blank-Reply binding before each row, one owned processing lock per row, exact terminal readback, common lock release, STOP/HOLD prevents the next row, and no TextNow/Send/confirmation/DONE/Archive path.
+- Static proof: validators PASS/PASS; package integrity PASS.
+- Closing proof required: ChatGPT artifact audit, then separate direct Sosa 5/10/25/50 runs on fresh controlled datasets.
+- Separate open checkpoints: same-sender ordering, immediate duplicate suppression, later repeat, overflow/admission, race/recovery, interface, and release.
+- Tracker remains `13/14 locked = 93%`; 50 checkpoints remain.
+<!-- GATE14D_FAILURE_LEDGER_END -->
+
+## ISSUE_G14D_AUTOSHEETS_ARRAY_ELEMENT_STALE_BLEED
+
+- First detected: direct Sosa Gate 14D phone run on 2026-07-15.
+- Observed safe result: row 149 completed with exact Reply, HTTP 200, and one owned-lock release; row 150 failed precheck; rows 150-153 remained `NEW` with blank Reply; no second lock, API call, write, Send, confirmation, DONE, or Archive ran.
+- Root cause: clearing base AutoSheets arrays did not clear the generated `%g14d_reply1` element, and the blank next row did not overwrite that stale value.
+- User/operator responsibility: none.
+- Codex/static responsibility: the original state model did not reproduce Tasker's generated-array-element persistence.
+- R1 repair: Task 238 only; explicitly clear all five generated A:E element variables before each exact-row Get Data action.
+- Static status: validators PASS/PASS; direct Tasker XML audit PASS.
+- Runtime status: OPEN / HOLD pending ChatGPT artifact audit and direct Sosa phone regression.
+- Tracker: unchanged at `13/14 locked = 93%`; 50 checkpoints remain.
+
+## ISSUE_G14D2_DISABLED_FINGERPRINT_SOURCE_CONTRACT
+
+- First detected: mandatory Codex preflight before the original Gate 14D2 build.
+- Finding: active TT5 suppresses exact event IDs; the fingerprint assignment, age calculation, 180-second condition, duplicate log, Stop, and End If in `FINAL Simple` are disabled.
+- Safe result: Codex stopped before runtime or repository changes and returned HOLD.
+- Controller correction: Gate 14D2 must test exact-ID suppression and unique-ID ordered repeats only; it must not enable, copy, repair, or claim the disabled branch.
+- Corrected candidate: two isolated tasks added, 91 existing tasks raw-byte identical, fingerprint source unchanged.
+- Static closure: source mapping and both independent validators PASS.
+- Runtime closure: OPEN / HOLD pending ChatGPT artifact audit and direct Sosa phone modes.
+- Tracker: main gate remains `13/14`; visible planning count is 43 total, 28 phone/runtime, 15 non-phone.
+
+## ISSUE_G14D2_IDENTITY_ORDER_PHONE_PROOF_PENDING
+
+- Status: `CLOSED BY DIRECT SOSA PHONE PROOF`.
+- Closing proof: strict rows 199/200/201 ordering passed; the later repeated message was accepted under a unique event ID; exact duplicate-ID suppression returned one duplicate and one eligible unique control ID.
+- Isolation proof: duplicate mode made zero API calls, processing-lock calls, or Sheet writes; no TextNow, Send, confirmation, DONE, or Archive path ran; rows 199-201 remained unchanged.
+- Codex records but does not independently claim the phone proof.
+
+## ISSUE_G14D3_OVERFLOW_ADMISSION_NOT_PHONE_PROVEN
+
+- Status: `SUPERSEDED / ORIGINAL PACKAGE REJECTED`.
+- Historical gap: no controlled 51-row admission and deferred-row drain phone run existed.
+- Candidate boundary: two added tasks only; all 93 existing tasks remain raw-byte identical.
+- Static safety: first mode calls the unchanged 50-row batch and independently verifies row 199 remains NEW with blank Reply; second mode binds only row 199 through the unchanged processor transaction.
+- Superseding action: Gate 14D3 R1 tests the real production overflow logger and drain with zero API calls.
+- Tracker: `13/14 locked = 93%`; visible planning count is 40 total, 25 phone/runtime, 15 non-phone.
+
+## ISSUE_G14D3_PRODUCT_QUESTION_MISMATCH
+
+- Status: `CORRECTED STATIC CANDIDATE / ORIGINAL PACKAGE REJECTED`.
+- Affected commit: `262df72253af71d7533061ea701655a545834e97`.
+- Finding: the first Gate 14D3 candidate proved only that the controlled capacity task was hard-coded to rows 149-198 and left row 199 outside that loop.
+- Product mismatch: no production overflow logger, duplicate protection, drain, source transition, or admission lock was exercised.
+- Safe response: no phone import or test occurred; source history and private diagnostic were preserved.
+- Codex responsibility: source-contract audit was too narrow before the first build.
+- Controller responsibility: the forward logic audit caught the mismatch before phone proof was wasted.
+- Corrective boundary: build from Gate 14D2 and exercise the actual production overflow wrappers with zero OpenAI calls.
+
+## ISSUE_G14D3_OVERFLOW_TRANSACTION_NOT_VERIFIED
+
+- Status: `REPAIRED STATIC CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+- Confirmed source risks: admission success without exact readback; no cross-store exact-ID proof; main write before source transition without readback; no DRAINED readback; possible duplicate drain after partial commit; no shared slot-admission lock.
+- R1 repair: one permanent transaction engine owns the shared lock and is reached by the existing logger, drain, and normal slot selector wrappers.
+- Exact ordering: OverflowInbox write and readback; Sheet1 write and readback; only then DRAINED write and DRAINED readback.
+- Idempotency: one exact existing Sheet1 ID skips the main write and permits only the verified source-state completion; multiple or conflicting IDs HOLD.
+- Static proof: 285-check validator PASS, independent 47-check state/ordering validator PASS, Tasker static audit PASS.
+- Phone closure required: four controlled modes, zero API/TextNow calls, exact row readbacks, exact write counts, and all owned locks released.
+- Tracker remains 40/25/15 and `13/14 locked = 93%`.
+
+## ISSUE_G14D3_R1_SECOND_AUDIT_INCOMPLETE
+
+- Status: `SUPERSEDED BY R2 STATIC CANDIDATE / NO PHONE EXECUTION`.
+- R1 gaps: unowned legacy release remained in source history; age-only lock ownership was not fully removed; identity and collision semantics were incomplete; indexed AutoSheets outputs were not deleted; all unresolved barrier states, FIFO authority, durable drain states, failure evidence, and configured capacity were incomplete.
+- Safe response: R1 was preserved and marked `DO NOT IMPORT / DO NOT PHONE TEST`; no phone run occurred.
+- R2 corrective boundary: rebuild from exact Gate 14D2 and modify only the eight authorized overflow/admission tasks plus four helpers.
+- R2 proof: exact owner release, no age stealing, Array Clear before every read, direct-row authority, distinct identities, exact state readbacks, FIFO, reconciliation, and capacity hold.
+- Static proof: validator one 360/360 PASS; validator two 64/64 PASS; standard XML audit PASS.
+- Phone closure still required. Tracker remains 40/25/15 and `13/14 locked = 93%`.
+
+## ISSUE_G14D3_R2_DRAIN_LOCK_ORDER_AND_FAILURE_EVIDENCE
+
+- Status: `REPAIRED STATICALLY IN R3 / HOLD FOR CHATGPT ARTIFACT AUDIT`.
+- R2 audit finding 1: drain acquired shared admission ownership before exact source binding and verified `DRAINING`.
+- R2 audit finding 2: Attempts and LastError were durably recorded only on selected review branches, not every exact-source-bound failed drain.
+- Safety result: R2 was not imported or phone tested and is explicitly superseded.
+- R3 repair: overflow owner first, exact FIFO source bind, verified `DRAINING`, then admission owner; all bound failures use one bounded M:N evidence write/readback path unless already verified.
+- R3 static proof: structure 367/367 PASS; semantic control flow 69/69 PASS.
+- Runtime proof: none. Gate 14D remains HOLD and tracker remains 40/25/15 with main `13/14 locked = 93%`.
+
+## ISSUE_G14D3_R3_FINAL_SCOPE_REJECTION
+
+- Status: `REPAIRED STATICALLY BY D3A RESCOPE / HOLD FOR CHATGPT ARTIFACT AUDIT`.
+- R3 package integrity passed, but its full admission/drain/reconciliation/capacity state machine violated the latest D3A-only loop breaker.
+- Blocking source findings included changed drain tasks, one 4,405-action helper, physical overflow bound 1000 instead of 986, A:I-only blank proof, omitted Archive identity, and unsafe NEW/source ordering.
+- Safety response: R3 was not imported or phone tested and is explicitly marked design source only.
+- D3A repair: rebuild from exact Gate 14D2; change admission Tasks 68/215/217 only; add six sub-500-action helpers; use A:Z, bound 986, and Archive/DeadArchive identity.
+- Drain, reconciliation, Queue Cycle, STOP recovery, capacity durability, and emergency journal remain deferred.
+- Static proof: 450/450 structure PASS and 559/559 semantic PASS.
+- Runtime proof: none. Tracker remains 40/25/15 and main remains `13/14 locked = 93%`.
+
+## ISSUE_GATE14_CONTROLLER_SEQUENCING_FRAGMENTATION
+
+- Classification: controller sequencing failure.
+- Status: `CONTROL PROCESS CORRECTED / FINAL INTEGRATED RUNTIME PROOF PENDING`.
+- User/operator responsibility: `NONE`.
+- Evidence: the original D3 package tested the wrong processing-window question; R1 and R2 remained incomplete; R3 passed package integrity but violated the approved D3A-only scope; D3A is now a bounded admission-only static candidate without phone proof.
+- Safety outcome: rejected packages were not promoted as phone proof or release artifacts. Gates 1 through 13 remain locked and were not reopened.
+- Codex responsibility: preserve exact source separation, stop on contradictory authority, verify the active manifest and hashes, and refuse runtime work when current instructions conflict.
+- Controller responsibility: earlier fragmented sequencing and stale authority allowed multiple packages to address overlapping but incomplete admission, overflow, recovery, and capacity questions.
+- Corrective action: one public-safe repository handoff, one current bootstrap, one integrated validation plan, one integrated production candidate, modular helpers, and one final validation orchestrator.
+- Prevention: the next chat must read origin/main first, then the current PR head, verify the handoff commit and private D3A hash, exclude superseded sources, and HOLD on any missing or contradictory input.
+- Tracker impact: none. Main remains `13/14 locked = 93%`; the detailed remaining tracker remains 40/25/15.
+- Runtime impact: none. No XML, Sheet, Tasker, profile, TextNow, OpenAI, or phone state changed during this documentation sync.
+
+## ISSUE_FINAL_VALIDATION_UNVERIFIED_FIXTURE_CLEANUP
+
+- Classification: confirmed final-validation runtime safety defect; production behavior is not implicated.
+- Original defect evidence: Tasks 272 and 276 supplied fixed cleanup rows, including protected Sheet1 rows 144-147 and out-of-bounds Archive/DeadArchive row 999; Task 293 could issue blank writes after validating only a layer name and numeric row.
+- Root cause: the final-validation subsystem lacked one authoritative, run-owned fixture contract covering row identity, physical bounds, protected columns, disposable content, and one-shot authorization.
+- Affected existing tasks: 237, 268, 270, 272, 276, and 293 only.
+- Required repair: verify the entire controller-supplied fixture contract before Phase 0, create fixtures only after exact blank reads, clean only after exact run/role/identity/content reads, read back every write, and consume authorization after use.
+- Static repair status: `IMPLEMENTED / INDEPENDENT STATIC AND MODELED PROOF PASS / HOLD FOR CONTROLLER ARTIFACT AUDIT`.
+- Regression boundary: Task 269 and legacy Task 294 remain raw-byte identical; Task 294 has no reachable final-validation, profile, scene, or production caller.
+- Unsafe-path result: missing, stale, conflicting, unresolved, occupied, out-of-bounds, wrong-identity, wrong-run, plugin-error, and partial-content cases return HOLD with zero modeled writes.
+- Controller responsibility: select all live fixture rows later using fresh read-only bound and blankness evidence, then supply one complete one-shot contract.
+- Codex responsibility: preserve the exact integrated base outside the authorized validation-only scope and map every PASS claim to independent evidence.
+- User/operator responsibility: `NONE`.
+- Phone-proof limitation: no Tasker import or execution occurred; no phone proof, Gate 14 closure, or release is claimed.
+
+## ISSUE_FINAL_CONVERSATION_GROUPING_AND_ARCHIVE_CONTEXT_INCOMPLETE
+
+- First detected: `2026-07-17`.
+- Classification: confirmed integrated-runtime conversation-continuity defect.
+- Affected base: SHA256 `58A5229EB7F6892C03AD799BB7A4C3144C59ACD4DEC0E5B2235F0AAF68EEF76B`.
+- Affected route: `199 → 263 → 282 → 262`; legacy grouping used Task 27, did not durably bind companions, and did not reach Task 28 from the active route.
+- Direct evidence: Task 27 held membership only in Tasker variables; Task 282 generated one reply but left companions `NEW`; Task 170 required newest-message-only behavior and no Archive context; Task 278 had no group recovery; Task 262 finalized only the anchor lifecycle.
+- Root cause: conversation membership, lifecycle state, reply ownership, and companion Archive progress had no durable normalized transaction shared by processing, Send, Archive, and recovery.
+- Contributing cause: exact event-ID suppression proves identity duplication only; it does not prove group completion or transport-delivery replay identity.
+- Required repair: additive bounded ConversationGroups ledger, persisted 10-second quiet gate, exact durable bind, conversation-specific confirmed-history prompt, pre-Send freshness, possible-click no-retry, exact companion finalization, and state-aware recovery.
+- Static repair status: `IMPLEMENTED / TWO INDEPENDENT STATIC AUDITS PASS / MODEL AND MUTATION PASS`.
+- Existing semantic scope: Tasks 262, 273, 276, 278, 282, and 284 only.
+- Added scope: Tasks 309-326, each below 500 actions and unreachable from profiles/scenes.
+- Regression boundary: phone-proven Tasks 71, 199, 223, 225, 226, 227, 230, and 231 are raw-byte identical; Tasks 27, 28, 69, and 222 are raw-byte identical and unreachable from final controls.
+- Controller responsibility: audit the exact private artifact, approve additive Sheet migration and dynamic validation records, then authorize controlled phone import/proof.
+- Codex responsibility: preserve protected runtime blocks, provide independently reproducible artifacts and evidence, and keep unsupported runtime claims on HOLD.
+- User/operator responsibility: `NONE`.
+- Remaining unsupported claim: a stable transport-level AutoNotification replay identity. This remains Option A Phase 2 HOLD.
+- Phone-proof limitation: no Sheet access, Tasker import/run, profile enablement, OpenAI call, Send, Archive, final orchestrator, or phone proof occurred during the build.
+
+## Option A Phase 1 R1 defects
+
+### ISSUE_CONVERSATION_JOURNAL_STATUS_CONTRACT_WRONG
+
+- Original defect: selected production members required `JOURNALED` after admission had persisted `RESOLVED_MAIN` or `RESOLVED_OVERFLOW`.
+- Affected source tasks/actions: Task 309 acts 161/165/169/173; Task 320 act 198; Task 325 act 57 in the rejected P1 source.
+- Root cause: receipt-state validation was mistaken for admitted-member validation.
+- Prevention: selected members require exactly one exact `TEXTNOW` journal row in the two admitted states; unresolved JOURNALED is only a separate freshness input.
+- Regression: journal-only, arbitrary status, duplicate match, mismatched identity, and historical resolved cases are independently modeled/mutated.
+
+### ISSUE_CONVERSATION_LIFECYCLE_STARVATION_BY_NEW_ROW
+
+- Original defect: Task 282 could select NEW, return active-group BUSY_HOLD, and cause Task 263 to exit before Task 262.
+- Root cause: active-group routing occurred after candidate selection and used a HOLD token.
+- Prevention: Task 282's first call is the Task 317 lifecycle gate. Lifecycle/review results contain neither HOLD nor ERROR; zero NEW work occurs before Task 262.
+- Regression: awaiting-confirm plus 1/10/50 NEW rows and every required nonterminal lifecycle state are simulated with exact Task 263 source order.
+
+### ISSUE_CONVERSATION_QUIET_RECHECK_NOT_SCHEDULED
+
+- Original defect: quiet HOLD relied on the next two-minute timer.
+- Root cause: no coalesced continuation existed.
+- Prevention: Task 327 has Abort-Existing collision, bounded 15-second wait, repeated STOP checks, no lock/plugin/API/Send action, and one normal-cycle dispatch.
+- Regression: removed scheduling, lock-held wait, waiter-storm collision, and removed STOP checks are all detected.
+
+### ISSUE_CONVERSATION_MIGRATION_MANIFEST_NOT_SELF_CONTAINED
+
+- Original defect: the Phase 1 addendum depended on an older manifest and omitted required formulas/tabs/bounds.
+- Root cause: additive-only documentation was treated as final migration authority.
+- Prevention: one complete manifest declares 23 required tabs/views, exact schemas/counts/formulas, backup/order/verification/rollback/privacy, and dynamic fixtures.
+- Regression: omission of a required conversation formula is detected.
+
+Controller responsibility: exact artifact audit and later migration/phone authorization. Codex responsibility: independently reproducible source/package proof and conservative claims. User/operator responsibility: `NONE`.
+
+R1 static status: `REPAIRED / CANDIDATE`. Phone-proof limitation: `NO PHONE IMPORT OR EXECUTION`.
+
+## Option A Phase 1 R2 Issues
+
+### ISSUE_CONVERSATION_GROUP_CAPACITY_EXCESS_STALE_HOLD
+
+- Original defect: all three Task 320 freshness paths used BoundAt, causing a fifth rapid event after the four-member freeze but before ledger bind to stale-hold group one.
+- Root cause: no full-capacity distinction in the membership cutoff.
+- Repair: validate F/Q/AB/AI; use BoundAt by default and FreezeLoggedAt only when MemberCount equals verified MemberCapacity.
+- Regression prevention: source validator requires three derived-cutoff uses; five/eight/nine and restart models preserve every ID; mutations reverting Freeze to Bound, removing capacity validation, or consuming excess are detected.
+
+### ISSUE_CONVERSATION_MIGRATION_LIVE_PRESERVATION_CONFLICT
+
+- Original defect: R1 used exact target-grid language and proposed SystemConfig row-1 content despite larger live grids and occupied A1:J2.
+- Repair: minimum-grid language, extension-column preservation, A3:D16 fresh blank proof, add-only Archive/DeadArchive rows, exact-anchor-only view changes.
+- Regression prevention: controller-dimension validator and shrink/SystemConfig-overwrite mutations.
+
+### ISSUE_PREEXISTING_NEW_ROWS_DUPLICATE_SEND_RISK
+
+- Risk: historical protected rows 69, 72, 73, and 141 remain NEW and could be reselected before reconciliation.
+- Repair plan: controller-only fresh A:Z reads and D-only `NEW` to `REVIEW_HOLD` writes with full-row readback.
+- Build result: rows were not accessed or changed; reconciliation remains HOLD.
+
+R2 static status: `REPAIRED / CANDIDATE`. Phone-proof limitation: `NO SHEET, TASKER, OR PHONE EXECUTION`.

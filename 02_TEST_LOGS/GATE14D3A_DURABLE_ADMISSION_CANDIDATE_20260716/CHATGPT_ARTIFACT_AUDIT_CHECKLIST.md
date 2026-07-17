@@ -1,0 +1,25 @@
+# ChatGPT Artifact Audit Checklist
+
+- [ ] XML SHA256 is 880CC569185A9FFF45703EC77E71D6260A88474B0F63ECDE6B31E0A11CFF090A.
+- [ ] ZIP SHA256 is C657265BDA061C325CE8B9EBE67F0DCFFA5F3094554A6A591738432B087DC48D.
+- [ ] ZIP contains one byte-identical XML.
+- [ ] Base SHA256 is exact Gate 14D2.
+- [ ] Topology is 99 tasks / 4 disabled profiles / 1 scene.
+- [ ] Existing changes are exactly Tasks 68, 215, and 217.
+- [ ] Added tasks are exactly 242-247.
+- [ ] Every helper is below 500 actions.
+- [ ] Tasks 218, 219, 220, and 199 are raw-byte identical.
+- [ ] Sheet1 blank authority directly reads A:Z.
+- [ ] OverflowInbox targets are restricted to rows 2-986.
+- [ ] Identity reads Sheet1, OverflowInbox, Archive, and DeadArchive.
+- [ ] OriginalID and OverflowID are distinct numeric values.
+- [ ] Direct main status is ADMISSION_STAGING before NEW.
+- [ ] Exact staging readback precedes NEW.
+- [ ] Overflow PENDING payload is read back exactly.
+- [ ] All five D3A modes are present.
+- [ ] Launcher uses controller-supplied rows.
+- [ ] No drain, reconciliation, Queue Cycle, STOP recovery, capacity journal, API, TextNow, Send, confirmation, Archive mutation, profile, timer, or interface path is added.
+- [ ] Public delta contains no secret, recipient, raw runlog, Drive link, or private payload.
+- [ ] R3 is treated as design history and not imported.
+- [ ] Tracker remains 40/25/15 and main remains 13/14 = 93%.
+- [ ] Phone import remains HOLD.

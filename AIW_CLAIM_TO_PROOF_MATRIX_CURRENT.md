@@ -297,3 +297,400 @@ Replacement XML SHA256: `82148AF8B72A24E3DBA77936A15E547E2114FEC01B705A084D12AA3
 
 Codex did not independently inspect or publish raw private phone evidence. ChatGPT must audit this source-truth sync before merge.
 <!-- GATE13_PHONE_PROOF_CLOSURE_CLAIMS_END -->
+
+
+<!-- GATE14A_CLAIM_MATRIX_START -->
+## Gate 14A Read-Only Capacity Inventory Candidate
+
+| Claim ID | Claim | Evidence | Result |
+| --- | --- | --- | --- |
+| G14A-001 | Exact Gate 13R2 base used | SHA256 `1C4D13872C3D6B4579AA698F9E7D2F50F3E81467A4CBD4EAD63CD567087832A7` | PROVEN STATIC |
+| G14A-002 | Existing runtime is unchanged | 83/83 task blocks, 4/4 profiles, and scene raw-byte identical | PROVEN STATIC |
+| G14A-003 | Task 232 is isolated and read-only | One Get Data node; zero writes/calls/UI/API/profile/lock actions | PROVEN STATIC |
+| G14A-004 | Reads are bounded and stale-safe | One node in fixed 1,2 loop; arrays/errors cleared; three-second retry | PROVEN STATIC |
+| G14A-005 | Count cannot bypass uniqueness/field checks | Independent counters and scenario validator | PROVEN STATIC |
+| G14A-006 | Private package integrity holds | Hashes, one ZIP entry, byte equality, integrity test | PROVEN STATIC |
+| G14A-007 | Tasker reads one staged row correctly on target phone | Exact approved phone run | UNSUPPORTED / HOLD |
+| G14A-008 | 5/10/25/50 capacity is proven | Ordered phone ladder and unchanged-row proof | UNSUPPORTED / HOLD |
+| G14A-009 | Production release is ready | Complete Gate 14 evidence | UNSUPPORTED / BLOCKED |
+
+Tracker remains `13/14 locked = 93%`.
+<!-- GATE14A_CLAIM_MATRIX_END -->
+
+<!-- GATE14A_R1_CLAIM_MATRIX_START -->
+## Gate 14A R1 Blank Reply Normalization
+
+| Claim ID | Claim | Evidence | Result |
+| --- | --- | --- | --- |
+| G14A-R1-001 | First Task 232 run remained isolated and read the exact synthetic row | Direct Sosa phone result and runlog reconciliation | DEVELOPMENT PARTIAL PASS / NOT CLAIMED BY CODEX |
+| G14A-R1-002 | First Task 232 run achieved inventory PASS | Phone result was `INVENTORY_REPLY_HOLD` | DISPROVEN / FAIL-SAFE HOLD |
+| G14A-R1-003 | Sheet Reply cell was blank | Fresh direct controller Sheet read | PROVEN BY CONTROLLER |
+| G14A-R1-004 | Repair is Task 232 only | Raw task/profile/scene/Project comparison | PROVEN STATIC |
+| G14A-R1-005 | Only indexed blank Reply placeholder normalizes | Exact action inspection and independent state model | PROVEN STATIC |
+| G14A-R1-006 | Real and unrelated unresolved replies still HOLD | Independent state model | PROVEN STATIC |
+| G14A-R1-007 | Existing 83 tasks and forbidden-path boundary remain unchanged | Raw-byte and call/action scan | PROVEN STATIC |
+| G14A-R1-008 | Replacement passes on phone | No R1 phone run supplied | UNSUPPORTED / HOLD |
+
+Tracker remains `13/14 locked = 93%`.
+<!-- GATE14A_R1_CLAIM_MATRIX_END -->
+
+<!-- GATE14A_R2_CLAIM_MATRIX_START -->
+## Gate 14A R2 Normalized Blank Flag Repair
+
+| Claim ID | Claim | Evidence | Result |
+| --- | --- | --- | --- |
+| G14A-R2-001 | Exact R1 direct repair base used | SHA256 `34197CB7044B740F73B5ED173D26E7B73DE6B6602637B83F26F94D0ECDECD9FC` | PROVEN STATIC |
+| G14A-R2-002 | Runtime scope is Task 232 only | Direct XML/raw-node comparison | PROVEN STATIC |
+| G14A-R2-003 | The exact indexed Reply placeholder sets the per-row blank flag | Exact action and regex inspection | PROVEN STATIC |
+| G14A-R2-004 | R2 never clears or overwrites `%row_reply` | Task 232 action scan | PROVEN STATIC |
+| G14A-R2-005 | Real and unrelated unresolved replies still HOLD | Independent 30-case state model | PROVEN STATIC |
+| G14A-R2-006 | Existing 83 tasks and all forbidden-path boundaries remain unchanged | Raw-byte and action/call scan | PROVEN STATIC |
+| G14A-R2-007 | Package integrity holds | One-entry ZIP, byte equality, SHA256, integrity test | PROVEN STATIC |
+| G14A-R2-008 | R2 produces `INVENTORY_PASS` on the target phone | Separately authorized phone rerun | UNSUPPORTED / HOLD |
+| G14A-R2-009 | 5/10/25/50 capacity is proven | Ordered capacity ladder | UNSUPPORTED / BLOCKED |
+
+Tracker remains `13/14 locked = 93%`. Codex approves no import and claims no phone proof.
+<!-- GATE14A_R2_CLAIM_MATRIX_END -->
+
+<!-- GATE14B_CLAIM_MATRIX_START -->
+## Gate 14A Phone Closure And Gate 14B Candidate
+
+| Claim ID | Claim | Evidence | Result |
+| --- | --- | --- | --- |
+| G14A-PHONE-001 | 1/5/10/25/50 read-only inventory passed | Direct Sosa phone proof | PROVEN BY CONTROLLER |
+| G14A-PHONE-002 | Passing rows remained unchanged | Direct Sosa phone proof | PROVEN BY CONTROLLER |
+| G14A-PHONE-003 | Production 50-contact capacity passed | Read-only inventory does not exercise processing/API/Send | UNSUPPORTED / BLOCKED |
+| G14B-001 | Exact Gate 14A R2 base used | SHA256 `73E8048D8941C0529A26E397FA9E6EBAF84FAB9C0F03D3C56CBA163932C34662` | PROVEN STATIC |
+| G14B-002 | Existing runtime scope is exactly Tasks 166/172/173 | Raw task comparison | PROVEN STATIC |
+| G14B-003 | Tasks 233/234 are the only additions | Topology and project registry audit | PROVEN STATIC |
+| G14B-004 | Exact A/B/C precedes every engine write | XML control-flow audit | PROVEN STATIC |
+| G14B-005 | Reply readback precedes final status | State-machine and XML audit | PROVEN STATIC |
+| G14B-006 | Partial write cannot return NEW or clear Reply | Independent scenario model | PROVEN STATIC |
+| G14B-007 | Protected runtime is unchanged | 81/81 raw-node equality | PROVEN STATIC |
+| G14B-008 | Gate 14B works on the target phone | No phone run | UNSUPPORTED / HOLD |
+| G14B-009 | Gate 14 and release are complete | Capacity/API/live/interface proof incomplete | UNSUPPORTED / BLOCKED |
+
+Tracker remains `13/14 locked = 93%`. Codex claims no phone proof and approves no import.
+<!-- GATE14B_CLAIM_MATRIX_END -->
+
+<!-- GATE14C_CLAIM_MATRIX_START -->
+## Gate 14B Phone Closure And Gate 14C Candidate
+
+| Claim ID | Claim | Evidence | Result |
+| --- | --- | --- | --- |
+| G14B-PHONE-001 | SUCCESS persisted exact Reply and REVIEW_READY | Direct Sosa phone proof | PROVEN BY CONTROLLER / NOT CLAIMED BY CODEX |
+| G14B-PHONE-002 | Wrong ID caused zero writes | Direct Sosa phone proof | PROVEN BY CONTROLLER / NOT CLAIMED BY CODEX |
+| G14B-PHONE-003 | Partial write routed to exact ERROR_PROCESS_REVIEW with Reply preserved | Direct Sosa phone proof | PROVEN BY CONTROLLER / NOT CLAIMED BY CODEX |
+| G14B-PHONE-004 | Failure commit and lock release were verified | Direct Sosa phone proof | PROVEN BY CONTROLLER / NOT CLAIMED BY CODEX |
+| G14C-001 | Exact Gate 14B base used | SHA256 `46880D2B0C7E444195E0BA4F587957E86475A95D0F1737CA42218452E4C49C9B` | PROVEN STATIC |
+| G14C-002 | Existing-task scope is exactly 70/171/173/192/233 | Raw task comparison | PROVEN STATIC |
+| G14C-003 | Task 233 has one regex-only difference | Old/new raw SHA and normalized one-field diff | PROVEN STATIC |
+| G14C-004 | Tasks 235/236/237 are the only additions | Topology and registry audit | PROVEN STATIC |
+| G14C-005 | HTTP attempts are capped at two and retries at one | XML control flow plus independent state model | PROVEN STATIC |
+| G14C-006 | Quota/auth/bad request/config failures do not retry | Error classification model and exact conditions | PROVEN STATIC |
+| G14C-007 | Final API failures use exact-row ERROR_OPENAI_REVIEW | Task 173 -> Task 233 call and accepted-status proof | PROVEN STATIC |
+| G14C-008 | Legacy API retry rows never reset to NEW | Task 70/236 call and write-path audit | PROVEN STATIC |
+| G14C-009 | Private package is one-entry and byte-equal | SHA and ZIP extraction comparison | PROVEN STATIC |
+| G14C-010 | Gate 14C works on the target phone | Complete controlled Sosa phone ladder | PROVEN PHONE / DIRECT SOSA |
+| G14C-011 | Production 50-contact capacity and release are complete | Full Gate 14 load/interface/release proof | UNSUPPORTED / BLOCKED |
+
+Tracker remains `13/14 locked = 93%`. Codex claims no Gate 14C phone proof and approves no import.
+
+## Gate 14C R1 HTTP Code Normalization Claims
+
+| Claim ID | Claim | Evidence | Status |
+|---|---|---|---|
+| G14C-R1-001 | Exact Gate 14C source used | Source SHA `71A766AE8D550C139AABCEC53DE3B1025CAF26C68561583CBF20AC6D5A5138B3` | PROVEN STATIC |
+| G14C-R1-002 | Task 235 is the only changed task | Raw comparison across all 89 tasks | PROVEN STATIC |
+| G14C-R1-003 | Task 235 remains 243 actions | Direct XML action count | PROVEN STATIC |
+| G14C-R1-004 | Each attempt begins with numeric code 0 | Exact `act119` semantic inspection | PROVEN STATIC |
+| G14C-R1-005 | Code 0 remains bounded retryable missing code | Exact `act162` condition plus independent retry model | PROVEN STATIC |
+| G14C-R1-006 | Existing explicit 200 and 429 values overwrite 0 | Control-flow and state-model inspection | PROVEN STATIC |
+| G14C-R1-007 | Attempts remain two and retries remain one | XML loop and state-model proof | PROVEN STATIC |
+| G14C-R1-008 | R1 works on the target phone | Timeout, real-success, and legacy-migration ladder | PROVEN PHONE / DIRECT SOSA |
+| G14C-R1-009 | Gate 14 and production release are complete | Remaining capacity/interface/release proof | UNSUPPORTED / BLOCKED |
+
+All five Gate 14C modes are phone-proven by Sosa. Codex records but does not independently claim that proof. Tracker remains `13/14 locked = 93%`; Gate 14D-G remain blocked.
+<!-- GATE14C_CLAIM_MATRIX_END -->
+
+<!-- GATE14D_CLAIM_MATRIX_START -->
+## Gate 14D Controlled Processing Capacity Candidate
+
+| Claim ID | Claim | Evidence | Result |
+|---|---|---|---|
+| G14D-001 | Exact Gate 14C R1 base used | SHA256 `535A163DA2FCEF1A655AB7DBBA4EBE5E9A991C7BF63CD74525244820D4BCA2A1` | PROVEN STATIC |
+| G14D-002 | Tasks 238/239 are the only runtime additions | Raw task-set and project-registry comparison | PROVEN STATIC |
+| G14D-003 | All 89 existing tasks are raw-byte identical | Direct raw-node comparison | PROVEN STATIC |
+| G14D-004 | Only rows 149-198 and counts 5/10/25/50 are reachable | XML control-flow inspection | PROVEN STATIC |
+| G14D-005 | Exact row binding precedes every write-capable processor call | Call-order and state-machine audit | PROVEN STATIC |
+| G14D-006 | One row owns one lock and release precedes the next row | Control-flow and independent lock model | PROVEN STATIC |
+| G14D-007 | HOLD or STOP prevents another row from starting | Abort-gate inspection and state model | PROVEN STATIC |
+| G14D-008 | New tasks have no TextNow/Send/confirmation/DONE/Archive path | Call graph and forbidden-path scan | PROVEN STATIC |
+| G14D-009 | Private package has one byte-equal XML entry | ZIP and hash validator | PROVEN STATIC |
+| G14D-010 | 5/10/25/50 processing capacity passes on the target phone | No phone execution | UNSUPPORTED / HOLD |
+| G14D-011 | Production 50-contact capacity and release are complete | Remaining Gate 14D-G proof | UNSUPPORTED / BLOCKED |
+
+Tracker remains `13/14 locked = 93%`; 50 checkpoints remain. Codex claims no phone proof and approves no import.
+
+## Gate 14D3 R2 Safe Overflow State Machine Claims
+
+| ID | Claim | Evidence | Status |
+|---|---|---|---|
+| G14D3-R2-001 | Exact Gate 14D2 base used | SHA256 `3851E073BE042F80068E52CF7E3D410ED3D0EBA8A63C5F4C10108532912FE0EA` | PROVEN STATIC |
+| G14D3-R2-002 | Only eight authorized existing tasks changed; four helpers added | Raw task comparison and registry audit | PROVEN STATIC |
+| G14D3-R2-003 | No unowned release or eight-second lock stealing remains reachable | Call graph and owner-lock control flow | PROVEN STATIC |
+| G14D3-R2-004 | Same ID/same payload suppresses; different payload and duplicate main hold | Cross-store classifier plus independent model | PROVEN STATIC |
+| G14D3-R2-005 | Every new read deletes arrays and uses bounded numeric error routing | AutoSheets node audit | PROVEN STATIC |
+| G14D3-R2-006 | View rows are hints; direct exact row is authority | Control-flow and plugin reference audit | PROVEN STATIC |
+| G14D3-R2-007 | FIFO is LoggedAt then physical source row | State-machine control flow and executable model | PROVEN STATIC |
+| G14D3-R2-008 | NEW is published only after complete payload readback | Update-node order and exact readback proof | PROVEN STATIC |
+| G14D3-R2-009 | Partial main commit reconciles without a second main write | State-machine path and executable model | PROVEN STATIC |
+| G14D3-R2-010 | Capacity 999 cannot overwrite and returns a recoverable hold | Bounds scan and executable model | PROVEN STATIC |
+| G14D3-R2-011 | Controlled five-mode artifact passes on target phone | No R2 phone execution | UNSUPPORTED / HOLD |
+| G14D3-R2-012 | Gate 14D and release are complete | Remaining phone/release proof | UNSUPPORTED / BLOCKED |
+
+R2 XML SHA256 is `149D4877B08B2A730CA7B524941E257AE8550C44C9BB7AA9247092C63CDC9ED5`. Tracker remains 40/25/15 and `13/14 locked = 93%`. Codex claims no phone proof and approves no import.
+
+## Historical Gate 14D2 Closure And Rejected Gate 14D3 Diagnostic
+
+The Gate 14D2 phone claims remain valid. The Gate 14D3 processing-window claims below are retained as static history but are rejected as overflow proof.
+
+| ID | Claim | Evidence | Status |
+|---|---|---|---|
+| G14D2-PHONE-001 | Same-sender rows 199/200/201 completed in strict order | Direct Sosa runlog and counters | PROVEN PHONE / DIRECT SOSA |
+| G14D2-PHONE-002 | Later repeated message was accepted under a unique event ID | Direct Sosa runlog and exact-row readback | PROVEN PHONE / DIRECT SOSA |
+| G14D2-PHONE-003 | Existing event ID was suppressed while unique control ID remained eligible | Direct Sosa duplicate counters and TT5 path | PROVEN PHONE / DIRECT SOSA |
+| G14D2-PHONE-004 | Duplicate mode made no API, lock, or Sheet-write call | Direct Sosa counters and runlog | PROVEN PHONE / DIRECT SOSA |
+| G14D3-001 | Exact Gate 14D2 base used | SHA256 `3851E073BE042F80068E52CF7E3D410ED3D0EBA8A63C5F4C10108532912FE0EA` | PROVEN STATIC |
+| G14D3-002 | Exactly two tasks added and all 93 existing tasks preserved | Raw task and project-registry comparison | PROVEN STATIC |
+| G14D3-003 | Admission is exactly the unchanged bounded rows 149-198 | Call graph and source mapping | PROVEN STATIC |
+| G14D3-004 | Admission mode cannot process row 199 | Exact call boundary plus independent row-199 readback | PROVEN STATIC |
+| G14D3-005 | Drain mode binds only row 199 | Control-flow and call-parameter inspection | PROVEN STATIC |
+| G14D3-006 | New tasks have no TextNow, Send, confirmation, DONE, Archive, profile, timer, or live path | Forbidden-path scan | PROVEN STATIC |
+| G14D3-007 | Both overflow modes pass on the target phone | No real overflow mode existed in this package | REJECTED / NOT TESTABLE AS CLAIMED |
+| G14D3-008 | Recovery/race, interface, hardening, live operation, and release are complete | Remaining Gate 14 proof | UNSUPPORTED / BLOCKED |
+
+Main tracker remains `13/14 locked = 93%`; visible planning tracker is 40 total, 25 phone/runtime, 15 non-phone. The package is rejected as overflow proof and no import is approved.
+
+## Historical Gate 14D3 R1 Safe Production Overflow Claims
+
+R1 is superseded by the Gate 14D3 R2 claims above and is prohibited from import and phone testing.
+
+| ID | Claim | Evidence | Status |
+|---|---|---|---|
+| G14D3-R1-001 | First Gate 14D3 package is not overflow proof | Call graph reaches controlled processor only; no overflow logger/drain | PROVEN STATIC / REJECTED |
+| G14D3-R1-002 | Exact Gate 14D2 base used | SHA256 `3851E073BE042F80068E52CF7E3D410ED3D0EBA8A63C5F4C10108532912FE0EA` | PROVEN STATIC |
+| G14D3-R1-003 | Production logger and queue still reach repaired overflow wrappers | Unchanged `FINAL Simple`, `FINAL Queue Cycle`, and drain-cap call graph | PROVEN STATIC |
+| G14D3-R1-004 | Admission suppresses exact IDs across Sheet1 and OverflowInbox | Pre-write cross-store scan and exact binding checks | PROVEN STATIC |
+| G14D3-R1-005 | One new overflow event is exactly unique after write | Exact A:N readback plus post-write cross-store count one | PROVEN STATIC |
+| G14D3-R1-006 | Normal logger and drain use one owned slot-admission lock | Slot wrapper, transaction owner, and guarded cleanup | PROVEN STATIC |
+| G14D3-R1-007 | Main write is read back before DRAINED | Independent action-order validator | PROVEN STATIC |
+| G14D3-R1-008 | DRAINED is read back before success | Exact source A:N readback and state comparison | PROVEN STATIC |
+| G14D3-R1-009 | Partial main-write/source-PENDING state cannot write a second main row | Exact main-ID recovery branch and state model | PROVEN STATIC |
+| G14D3-R1-010 | Completed rerun performs zero writes | Controlled completed-state branch and state model | PROVEN STATIC |
+| G14D3-R1-011 | New capability reaches no API, TextNow, Send, confirmation, DONE, Archive, profile, timer, or live action | Call graph and forbidden-marker scan | PROVEN STATIC |
+| G14D3-R1-012 | Four controlled modes pass on the target phone | No Gate 14D3 R1 phone execution | UNSUPPORTED / HOLD |
+| G14D3-R1-013 | Gate 14D and Gate 14 are complete | Remaining phone, recovery/race, interface, hardening, and release proof | UNSUPPORTED / BLOCKED |
+
+Main tracker remains `13/14 locked = 93%`; planning tracker remains 40 total, 25 phone/runtime, 15 non-phone. Codex claims no phone proof and approves no import.
+
+## Gate 14D Capacity Closure And Gate 14D2 Candidate
+
+| ID | Claim | Evidence | Status |
+|---|---|---|---|
+| G14D-PHONE-001 | 5/10/25/50 processing ladder passed | Direct Sosa phone evidence | PROVEN PHONE / DIRECT SOSA |
+| G14D-PHONE-002 | 50 rows completed with no skips, stale replies, wrong rows, duplicate IDs, retries, or lock imbalance | Direct Sosa counters and exact row result | PROVEN PHONE / DIRECT SOSA |
+| G14D2-001 | Exact R1 base used | SHA256 `72D5F636AE72F441ACD2BF1C0C9B5B93FFF8503775FA3CA05C59A9111389CDE4` | PROVEN STATIC |
+| G14D2-002 | Exactly two tasks added and 91 existing tasks preserved | Raw task and registry comparison | PROVEN STATIC |
+| G14D2-003 | Active production duplicate behavior is exact event-ID equality | `FINAL Simple`/TT5 source mapping | PROVEN STATIC |
+| G14D2-004 | Fingerprint/age/180-second source remains disabled and unchanged | Disabled-node and raw-byte comparison | PROVEN STATIC |
+| G14D2-005 | Ordered mode is restricted to rows 199-201 and repeats row-199 message under a new row-201 ID | Control-flow and state model | PROVEN STATIC |
+| G14D2-006 | Duplicate mode reaches only TT5 twice with zero API/lock/write calls | Mode reachability validator | PROVEN STATIC |
+| G14D2-007 | Both modes pass on target phone | No Gate 14D2 phone execution | UNSUPPORTED / HOLD |
+| G14D2-008 | Overflow, final interface, hardening, live operation, and release are complete | Remaining Gate 14 proof | UNSUPPORTED / BLOCKED |
+
+Main tracker remains `13/14 locked = 93%`; visible planning tracker is 43 total, 28 phone/runtime, 15 non-phone. Codex claims no phone proof and approves no import.
+<!-- GATE14D_CLAIM_MATRIX_END -->
+
+## Gate 14D R1 Array Element Clear Repair
+
+| ID | Claim | Evidence | Status |
+|---|---|---|---|
+| G14D-R1-001 | Exact rejected phone-tested Gate 14D candidate used as authorized repair base | SHA256 `A7C577E6929E930938F0D48937332D19F441D2C1FFD9821E7047E397ECE74C07` | PROVEN STATIC |
+| G14D-R1-002 | Phone failure was fail-safe | Direct Sosa evidence: one completed row, then HOLD before a second transaction; remaining rows unchanged | PROVEN PHONE / DIRECT SOSA |
+| G14D-R1-003 | Only Task 238 changed | 90 unchanged raw task blocks plus profile/scene/project comparison | PROVEN STATIC |
+| G14D-R1-004 | Each exact read clears five generated A:E array elements | Exact action inventory before both Get Data nodes | PROVEN STATIC |
+| G14D-R1-005 | Blank second row cannot inherit first-row Reply in the independent state model | Two-row stale-bleed regression | PROVEN STATIC |
+| G14D-R1-006 | A real nonblank Reply is not suppressed | Independent state model | PROVEN STATIC |
+| G14D-R1-007 | R1 works on the target phone | No repaired phone run | UNSUPPORTED / HOLD |
+| G14D-R1-008 | 5/10/25/50 processing capacity and release are complete | Remaining Gate 14D-G proof | UNSUPPORTED / BLOCKED |
+
+Tracker remains `13/14 locked = 93%`; 50 checkpoints remain. Codex claims no phone proof and approves no import.
+
+## Gate 14D3 R3 Exact Drain Failure Evidence Candidate
+
+| ID | Claim | Evidence | Status |
+|---|---|---|---|
+| G14D3-R3-001 | R2 is superseded before phone use | R2 marker and public supersession record | PROVEN STATIC |
+| G14D3-R3-002 | Exact Gate 14D2 base used | SHA256 `3851E073BE042F80068E52CF7E3D410ED3D0EBA8A63C5F4C10108532912FE0EA` | PROVEN STATIC |
+| G14D3-R3-003 | Drain persists exact DRAINING before admission acquisition | Action-order and semantic validator | PROVEN STATIC |
+| G14D3-R3-004 | Every exact-source-bound failed drain records Attempts and LastError before release | Common epilogue reachability and exact M:N readback | PROVEN STATIC |
+| G14D3-R3-005 | Collision/duplicate-main evidence is not double-written | Failure-recorded marker control flow | PROVEN STATIC |
+| G14D3-R3-006 | Complete second-audit overflow contract remains present | Structure 367/367 and semantic 69/69 validators | PROVEN STATIC |
+| G14D3-R3-007 | Other existing tasks, profiles, and scene are preserved | 85/85 task blocks, 4/4 profiles, and 1/1 scene raw comparison | PROVEN STATIC |
+| G14D3-R3-008 | Five controlled modes pass on target phone | No R3 phone execution | UNSUPPORTED / HOLD |
+| G14D3-R3-009 | Gate 14D and Gate 14 are complete | Remaining phone, recovery/race, interface, hardening, and release proof | UNSUPPORTED / BLOCKED |
+
+Planning tracker remains 40 total, 25 phone/runtime, 15 non-phone. Main tracker remains `13/14 locked = 93%`. Codex claims no phone proof and approves no import.
+
+## Gate 14D3A Durable Owned Admission Candidate
+
+| ID | Claim | Evidence | Status |
+|---|---|---|---|
+| G14D3A-001 | R3 is rejected before phone use | Controller audit and supersession records | PROVEN STATIC |
+| G14D3A-002 | Exact Gate 14D2 base used | SHA256 `3851E073BE042F80068E52CF7E3D410ED3D0EBA8A63C5F4C10108532912FE0EA` | PROVEN STATIC |
+| G14D3A-003 | Existing changes are admission Tasks 68, 215, and 217 only | Raw task comparison | PROVEN STATIC |
+| G14D3A-004 | Six helpers are each below 500 actions | Exact helper action counts; maximum 494 | PROVEN STATIC |
+| G14D3A-005 | Sheet1 blank authority is direct A:Z | Task 244 AutoSheets range and exact blank checks | PROVEN STATIC |
+| G14D3A-006 | Overflow admission cannot target above row 986 | Task 243/246 ranges and row validation | PROVEN STATIC |
+| G14D3A-007 | Identity includes Archive and DeadArchive | Read-only exact ranges and classification paths | PROVEN STATIC |
+| G14D3A-008 | Direct main writes NEW only after exact staging readback | Plugin action-order validator | PROVEN STATIC |
+| G14D3A-009 | Five exact controlled modes are present with supplied rows | Launcher inventory and reachability validator | PROVEN STATIC |
+| G14D3A-010 | Drain tasks and Queue Cycle are unchanged | Raw-byte comparison Tasks 218-220 and 199 | PROVEN STATIC |
+| G14D3A-011 | D3A works on target phone | No D3A phone execution | UNSUPPORTED / HOLD |
+| G14D3A-012 | D3B, D3C, and Gate 14 are complete | Deferred drain, capacity, recovery, interface, and release proof | UNSUPPORTED / BLOCKED |
+
+Tracker remains 40/25/15 and `13/14 locked = 93%`. Codex claims no phone proof and approves no import.
+
+## Final Repository Handoff Claims
+
+| ID | Claim | Evidence | Status |
+|---|---|---|---|
+| HANDOFF-001 | Gates 1 through 13 remain locked | Existing direct Sosa phone-proof records and current locked-facts ledger | LOCKED / PHONE PROVEN |
+| HANDOFF-002 | `13/14 locked = 93%` is a main-gate count only | Controller tracker definition | PROVEN DOCUMENTARY |
+| HANDOFF-003 | Detailed remaining tracker is 40 total, 25 phone/runtime, and 15 non-phone | Current checkpoint tracker | PROVEN DOCUMENTARY |
+| HANDOFF-004 | Gate 14 inventory/import-render is phone proven | Sanitized Gate 14A phone-proof closure | PHONE PROVEN BY SOSA |
+| HANDOFF-005 | Controlled 5/10/25/50 processing and 50-row API/lock accounting are phone proven | Sanitized Gate 14D processing reports | PHONE PROVEN BY SOSA |
+| HANDOFF-006 | Same-sender ordering, later repeat with a new event ID, and exact duplicate-ID suppression are phone proven | Sanitized Gate 14D2 reports | PHONE PROVEN BY SOSA |
+| HANDOFF-007 | Original D3, R1, and R2 are rejected; R3 is design-only | Failure ledger and package disposition reports | PROVEN DOCUMENTARY |
+| HANDOFF-008 | D3A is an admission-only static candidate from the exact Gate 14D2 base | Private hash verification, topology audit, and D3A public reports | PROVEN STATIC |
+| HANDOFF-009 | D3A topology and task scope are 99/4/1, changed Tasks 68/215/217, added Tasks 242-247, and unchanged Tasks 199/218-220 | Raw task comparison and package audit | PROVEN STATIC |
+| HANDOFF-010 | D3A uses rows 2-986, A:Z blank authority, and identity checks across active and history stores | Static source inspection and validators | PROVEN STATIC |
+| HANDOFF-011 | D3A works on the target phone | No D3A phone execution | UNSUPPORTED / HOLD |
+| HANDOFF-012 | Gate 14, connected-system validation, and production release are complete | Remaining 40 checkpoints and unresolved integration blockers | UNSUPPORTED / BLOCKED |
+| HANDOFF-013 | This sync changed no runtime or private artifact | Authorized Git diff and private-file scan | PROVEN REPOSITORY |
+
+Codex records direct Sosa phone proof but does not claim it independently. Phone import, live activation, PR merge, Gate 14 closure, and release remain blocked.
+
+## Final Validation Fixture-Safety Repair Claims
+
+| ID | Claim | Independent evidence | Status |
+|---|---|---|---|
+| FVS-001 | The exact authorized integrated XML is the repair base | Pre-build filename, byte count, and SHA256 verification | PROVEN STATIC |
+| FVS-002 | Existing semantic changes are limited to Tasks 237, 268, 270, 272, 276, and 293 | Raw task-block hash comparison | PROVEN STATIC |
+| FVS-003 | Task 269 and Task 294 are byte-identical to the base | Raw task-block SHA256 comparison | PROVEN STATIC |
+| FVS-004 | Every production task remains byte-identical | Independent all-task comparison excluding the six authorized validation tasks and added helpers | PROVEN STATIC |
+| FVS-005 | Profiles and scenes are unchanged; Project registry delta contains only validation helpers | Raw profile/scene comparison and registry-reference set comparison | PROVEN STATIC |
+| FVS-006 | Task 268 gates Phase 0 and all later phases on `FIXTURE_CONTRACT_READY` | Independent control-flow and reachable-call inspection | PROVEN STATIC |
+| FVS-007 | Missing, malformed, stale, duplicate, or conflicting fixture configuration performs zero writes | Independent validator, fault cases, and randomized executable model | PROVEN MODELED |
+| FVS-008 | No reachable fixed references remain to Sheet1 rows 144-147, Archive/DeadArchive row 999, or fixture IDs ending 001/002 | Reachable string scan rooted at Task 268 | PROVEN STATIC |
+| FVS-009 | Fixture setup reads exact protected columns before one conditional write and performs exact readback | Independent action-order validator and setup mutations | PROVEN STATIC / MODELED |
+| FVS-010 | Cleanup reads before clearing and requires exact layer, row, run ID, role, fixture identity, and permitted disposable state | Independent action-order validator and wrong-owner/identity mutations | PROVEN STATIC / MODELED |
+| FVS-011 | Already-blank cleanup returns clean with zero writes | Independent state-model case | PROVEN MODELED |
+| FVS-012 | Physical bounds are checked before setup and cleanup writes | Independent bounds cases and removed-bound mutation | PROVEN STATIC / MODELED |
+| FVS-013 | AutoSheets reads clear stale arrays/outputs/errors, use numeric error routing, and stop after at most two attempts | Direct plugin-action inspection and error-routing mutation | PROVEN STATIC / MODELED |
+| FVS-014 | One-shot authorization cannot be reused by a later validation run | Runtime-variable ownership map, stale-authorization cases, and mutation | PROVEN STATIC / MODELED |
+| FVS-015 | Task 294 is unreachable from Task 268, profiles, scenes, production, and indirect validation paths | Complete call graph and reverse-call scan | PROVEN STATIC |
+| FVS-016 | All added validation-only helpers remain below 500 actions and have no profile/scene/production caller | Full task-property and reverse-call inventory | PROVEN STATIC |
+| FVS-017 | The corrected collision-setting claim covers all tasks and classifies reachability separately | Full `rty` property inventory rooted at the final orchestrator | PROVEN STATIC |
+| FVS-018 | Unsafe conditions and weakened critical guards are detected | Independent fault injection and eight critical mutation results | PROVEN MODELED |
+| FVS-019 | At least 100,000 randomized schedules and 1,000,000 operations complete with zero unsafe writes | Independent model reports with counters | PROVEN MODELED |
+| FVS-020 | The repaired XML works on the target phone | No phone import or execution | UNSUPPORTED / HOLD |
+| FVS-021 | Live fixture rows are safe and selected | Controller has not yet supplied fresh read-only row evidence | UNSUPPORTED / HOLD |
+| FVS-022 | Gate 14 and production release are complete | Final controller audit, phone import/render, orchestrator, and direct phone lifecycle proof remain | UNSUPPORTED / BLOCKED |
+
+No generated report proves itself: FVS-006 through FVS-019 require direct XML inspection, an independent validator, a separate executable model, or more than one of those sources.
+
+## Option A Phase 1 Durable Conversation Continuity
+
+| ID | Claim | Independent evidence | Status |
+|---|---|---|---|
+| CC-P1-001 | Exact fixture-safety R1 base was used | Independent SHA recomputation: `58A5229EB7F6892C03AD799BB7A4C3144C59ACD4DEC0E5B2235F0AAF68EEF76B` | PROVEN STATIC |
+| CC-P1-002 | Only Tasks 262, 273, 276, 278, 282, and 284 changed among existing tasks | Raw Task-block diff and independent DOM validator | PROVEN STATIC |
+| CC-P1-003 | Phone-proven Tasks 71, 199, 223, 225, 226, 227, 230, and 231 are raw-byte identical | Per-task SHA comparison | PROVEN STATIC |
+| CC-P1-004 | Tasks 27, 28, 69, and 222 are unchanged and unreachable from final production/validation roots | Raw comparison and complete call-graph BFS | PROVEN STATIC |
+| CC-P1-005 | Every added conversation helper is below 500 actions, explicitly collision-configured, Project-registered, and has no profile/scene caller | Complete task-property and reverse-caller inventory | PROVEN STATIC |
+| CC-P1-006 | Quiet authority is persisted IngressJournal LoggedAt and waits 10 seconds before ownership or writes | Direct Task 309/317 action-order inspection and quiet mutant/model | PROVEN STATIC / MODELED |
+| CC-P1-007 | Quiet HOLD makes zero group/Sheet writes, OpenAI calls, locks, and Send calls | Read-only plugin inventory for Task 309 and zero-side-effect model case | PROVEN STATIC / MODELED |
+| CC-P1-008 | Membership is exact same normalized sender, source ordered, ID-preserving, capacity four, and duplicate-row/ID rejecting | Task 309 direct inspection and scenarios 2-6 | PROVEN STATIC / MODELED |
+| CC-P1-009 | Excess messages are not consumed and only one nonterminal group binds in the serialized route | Task 309/317 active-group guard and randomized invariant | PROVEN STATIC / MODELED |
+| CC-P1-010 | Group creation and companion binding use exact reads, one bounded write, readback, and durable progress | Tasks 311-317 direct inspection and bind fault injection | PROVEN STATIC / MODELED |
+| CC-P1-011 | Every state transition requires exact source state, legal edge, write, and exact readback | Task 316 edge inventory, transition mutant, and state model | PROVEN STATIC / MODELED |
+| CC-P1-012 | Archive history is same-sender, confirmed DONE only, latest five, character-bounded, and no-cache-on-failure | Task 318 direct inspection and scenarios 20-24 | PROVEN STATIC / MODELED |
+| CC-P1-013 | A completed grouped history turn contributes ordered inbound members and one assistant reply | Durable schema plus Task 318 collapse logic and collapse mutation | PROVEN STATIC / MODELED |
+| CC-P1-014 | Single-message processing still uses unchanged Task 233 and protected Send/confirm/Archive tasks | Call graph and protected-task hashes | PROVEN STATIC |
+| CC-P1-015 | Pre-Send checks exact group/member/reply identity and detects stale pre-freeze membership | Task 320 direct inspection and freshness mutation/model | PROVEN STATIC / MODELED |
+| CC-P1-016 | No automatic second Send occurs after any possible click | Task 262 lifecycle-only branch, Task 321 durable state, recovery no-Send call graph, and 2.4M-operation invariant | PROVEN STATIC / MODELED |
+| CC-P1-017 | Confirmation and anchor Archive precede companion DONE/Archive | Task 262/322 action order, unchanged Tasks 225/226, and fault model | PROVEN STATIC / MODELED |
+| CC-P1-018 | Companion finalization is exact and idempotent; GROUP_COMPLETE requires all members archived | Task 322 read/write/readback flow, restart cases, and completion mutation | PROVEN STATIC / MODELED |
+| CC-P1-019 | Startup recovery classifies every partial group state without blind NEW reset or Send retry | Task 278/323 call graph, ten state-boundary crashes, and repeated-recovery scenario | PROVEN STATIC / MODELED |
+| CC-P1-020 | AutoSheets operations clear arrays/errors, route numeric plugin errors, use at most two reads, disable offline writes, and read back writes | Plugin property inventory and independent validator | PROVEN STATIC |
+| CC-P1-021 | Phase 4 requires dynamic approved contact/history fixtures and two to four rapid events | Tasks 273/325 and fixture-contract comparison | PROVEN STATIC |
+| CC-P1-022 | Phase 7 cleans only run-owned conversation validation records with exact readback | Tasks 276/326 direct inspection and cleanup guard mutations | PROVEN STATIC / MODELED |
+| CC-P1-023 | 100,000 randomized schedules and 2,400,000 modeled operations have zero invariant failures | Independent state model report | PROVEN MODELED |
+| CC-P1-024 | All 18 critical XML guard mutations are detected | In-memory parseable XML mutation run plus independent guard inventory | PROVEN STATIC |
+| CC-P1-025 | Stable transport replay identity is proven | AutoNotification source audit finds available candidate identifiers but current OriginalID remains TIMEMS plus random values | UNSUPPORTED / OPTION A PHASE 2 HOLD |
+| CC-P1-026 | The additive ConversationGroups schema exists and works in the live Sheet | No live Sheet access or migration occurred | UNSUPPORTED / HOLD |
+| CC-P1-027 | The package imports/renders and works on the phone | No Tasker import or phone run occurred | UNSUPPORTED / HOLD |
+| CC-P1-028 | Gate 14 and production release are complete | Artifact audit, migration, phone proof, final orchestrator, and controller decision remain | UNSUPPORTED / BLOCKED |
+
+Generated reports do not self-prove CC-P1 claims. Static PASS rows require direct XML/task-block inspection or a second implementation; modeled rows require the independent executable state model and mapped runtime guards.
+
+## Option A Phase 1 R1 Claims
+
+| ID | Claim | Independent evidence | Status |
+|---|---|---|---|
+| CC-P1R1-001 | Exact rejected P1 source is the repair base | Independent byte/hash check | PROVEN STATIC |
+| CC-P1R1-002 | Existing semantic changes are exactly Tasks 263/273/282/309/317/320/324/325 and added Task 327 | Raw task diff and independent DOM validator | PROVEN STATIC |
+| CC-P1R1-003 | All other 162 existing tasks, phone-proven tasks, Tasks 254/255/262, profiles, and scenes are byte-identical | Per-block SHA comparison | PROVEN STATIC |
+| CC-P1R1-004 | Selected group members require exactly one admitted `TEXTNOW` journal identity | Task 309 inspection, contract model, and status/exact-one mutations | PROVEN STATIC / MODELED |
+| CC-P1R1-005 | Unresolved JOURNALED and active admitted rows are distinct pre-Send freshness inputs | Task 320 inspection and source-order model | PROVEN STATIC / MODELED |
+| CC-P1R1-006 | Historical resolved journal rows without active unresolved locations do not stale-block later groups | Active-location scan inspection and modeled case | PROVEN STATIC / MODELED |
+| CC-P1R1-007 | Active lifecycle is detected before NEW selection and Task 262 runs exactly once | Task 282/263 action order and 1/10/50-row matrix | PROVEN STATIC / MODELED |
+| CC-P1R1-008 | Lifecycle-only paths process zero NEW rows and make zero new OpenAI calls | Source-order model and exact task call graph | PROVEN STATIC / MODELED |
+| CC-P1R1-009 | Quiet wait schedules one coalesced recheck without holding locks or writing | Task 263/327 inspection, collision property, and quiet cases | PROVEN STATIC / MODELED |
+| CC-P1R1-010 | STOP cancels deferred work before normal-cycle dispatch | Task 327 action order and STOP model/mutation | PROVEN STATIC / MODELED |
+| CC-P1R1-011 | All required migration tabs, bounds, schemas, and formulas are self-contained | 22-check independent manifest validator | PROVEN DOCUMENTARY |
+| CC-P1R1-012 | Sheet1 rows 144:147 and row-999 fixtures are excluded | Manifest direct inspection | PROVEN DOCUMENTARY |
+| CC-P1R1-013 | 100,000 R1 schedules and 3,200,000 operations have zero invariant failures | Independent source-order model | PROVEN MODELED |
+| CC-P1R1-014 | All 11 R1 mutations and 18 preserved Phase 1 guard mutations are detected | Two independent mutation reports | PROVEN STATIC / MODELED |
+| CC-P1R1-015 | Migration formulas work in the live workbook | Migration was not applied | UNSUPPORTED / HOLD |
+| CC-P1R1-016 | Deferred collision and lifecycle behavior works in Tasker on the phone | No Tasker import/run | UNSUPPORTED / HOLD |
+| CC-P1R1-017 | Real Send, final orchestrator, Gate 14, and release are complete | No phone execution or controller release decision | UNSUPPORTED / BLOCKED |
+
+No generated report self-proves these rows; static claims require direct source inspection and modeled claims require the separate source-order implementation.
+
+## Option A Phase 1 R2 Capacity Boundary and Migration Preservation
+
+| Claim ID | Claim | Independent evidence | Status |
+|---|---|---|---|
+| CC-P1R2-001 | Exact R1 base used | Independent bytes/SHA recomputation | PROVEN STATIC |
+| CC-P1R2-002 | Only Tasks 273, 320, and 325 changed and no helper was added | Raw task block comparison and second validator | PROVEN STATIC |
+| CC-P1R2-003 | Task 320 loads ledger F/Q/AB/AI and validates count/capacity/timestamps/order | Direct XML action and condition inspection | PROVEN STATIC |
+| CC-P1R2-004 | Default cutoff is BoundAt and a verified full group uses FreezeLoggedAt | Exact assignment/branch inspection and source-derived model | PROVEN STATIC / MODELED |
+| CC-P1R2-005 | JOURNALED, active Sheet1, and active Overflow paths use one derived cutoff | Exact three-condition RHS inventory | PROVEN STATIC |
+| CC-P1R2-006 | Five rapid messages become four plus one NEW next turn | Independent deterministic model | PROVEN MODELED |
+| CC-P1R2-007 | Eight and nine events become ordered 4/4 and 4/4/1 groups with every ID accounted | Independent deterministic model | PROVEN MODELED |
+| CC-P1R2-008 | Duplicate ID remains suppressed and repeated text/new ID remains eligible | Independent deterministic and randomized models | PROVEN MODELED |
+| CC-P1R2-009 | Restart between groups does not create a second Send for group one | One-shot restart model | PROVEN MODELED |
+| CC-P1R2-010 | Adverse identity, sender, unresolved, error, capacity, and ownership cases HOLD and cannot pass merely through GROUP_COMPLETE | Explicit adverse-result matrix | PROVEN MODELED |
+| CC-P1R2-011 | 100,000 schedules / 24,363,612 operations have zero invariant failures | Independent source-derived model | PROVEN MODELED |
+| CC-P1R2-012 | All nine required R2 unsafe mutations are detected | Independent mutation harness | PROVEN STATIC / MODELED |
+| CC-P1R2-013 | Larger live grids and extension columns are preserved by the plan | 32-check controller-dimension migration validator | PROVEN DOCUMENTARY |
+| CC-P1R2-014 | SystemConfig writes are A3:D16 only after fresh blank proof | Manifest inspection and overwrite mutation | PROVEN DOCUMENTARY |
+| CC-P1R2-015 | Historical rows 69/72/73/141 have a D-only controller reconciliation plan | Manifest inspection | PROVEN DOCUMENTARY |
+| CC-P1R2-016 | Live migration, historical reconciliation, or formulas work in the workbook | Not applied or accessed | UNSUPPORTED / HOLD |
+| CC-P1R2-017 | R2 imports/runs safely on the target phone | No Tasker import/run | UNSUPPORTED / HOLD |
+| CC-P1R2-018 | Real Send, Gate 14 closure, merge, or release is complete | No phone/controller release proof | UNSUPPORTED / BLOCKED |
+
+Generated reports are evidence inputs only. Controller source inspection and phone proof remain required for promotion.

@@ -19,11 +19,12 @@ The full product goal remains active during every individual gate or repair.
 Before every material AI Worker decision, Codex prompt, phone-test approval, tracker decision, repair plan, or release claim, retrieve the current versions from GitHub main:
 
 1. `AIW_CONTROLLER_BOOTSTRAP_CURRENT.md`
-2. `AIW_FULL_GOAL_EXECUTION_CONTRACT_CURRENT.md`
-3. `AIW_LOCKED_FACTS_CURRENT.md`
-4. `AIW_PROJECT_CONTROLLER_STATE_CURRENT.md`
-5. `AIW_FAILURE_AND_REGRESSION_LEDGER_CURRENT.md` when relevant
-6. `AIW_CLAIM_TO_PROOF_MATRIX_CURRENT.md` when proof is being evaluated
+2. `AIW_CONTROLLER_EXECUTION_DISCIPLINE_CURRENT.md`
+3. `AIW_FULL_GOAL_EXECUTION_CONTRACT_CURRENT.md`
+4. `AIW_LOCKED_FACTS_CURRENT.md`
+5. `AIW_PROJECT_CONTROLLER_STATE_CURRENT.md`
+6. `AIW_FAILURE_AND_REGRESSION_LEDGER_CURRENT.md` when relevant
+7. `AIW_CLAIM_TO_PROOF_MATRIX_CURRENT.md` when proof is being evaluated
 
 Do not rely on chat memory, old prompts, old package reports, filenames, or Project Source mirrors when current GitHub source is available.
 

@@ -1,7 +1,7 @@
 # AI Worker Locked Facts — Current
 
 Status: CURRENT / CANONICAL
-Updated: 2026-07-14
+Updated: 2026-07-15
 Authority: Phone proof, current GitHub tracker, SHA-verified sources, live Sheet verification, and newest direct Sosa instruction.
 
 ## 1. Current Tracker
@@ -265,3 +265,164 @@ Blocked until separately proven:
 - Fold-state and battery/background-restriction behavior are not claimed by this closure and remain Gate 14 release limitations.
 - Gate 14 capacity, final control-interface validation, and release proof remain blocked.
 <!-- GATE13_PHONE_PROOF_CLOSURE_END -->
+
+<!-- GATE14B_LOCKED_FACTS_START -->
+## Gate 14A Closure And Gate 14B Candidate Facts
+
+- Gate 14A R2 read-only inventory passed the direct Sosa 1/5/10/25/50 phone ladder; Codex records but does not claim that phone proof.
+- Every passing inventory run used one read, all defect counters were zero, and staged rows remained unchanged.
+- Gate 14A proves read-only count/order/uniqueness visibility, not production 50-contact processing.
+- Gate 14B uses exact base SHA256 `73E8048D8941C0529A26E397FA9E6EBAF84FAB9C0F03D3C56CBA163932C34662`.
+- Only existing Tasks 166, 172, and 173 change; Tasks 233 and 234 are added; 81/81 protected tasks remain raw-byte equal.
+- Gate 14B static validators PASS/PASS; phone proof does not exist.
+- Tracker remains `13/14 locked = 93%`; Gate 14 and release remain blocked.
+<!-- GATE14B_LOCKED_FACTS_END -->
+
+<!-- GATE14C_LOCKED_FACTS_START -->
+## Gate 14B Phone Closure And Gate 14C Verified Closure Facts
+
+- Direct Sosa phone proof locks the Gate 14B processor transaction subproof: SUCCESS, WRONG_ID_HOLD, PARTIAL_AFTER_REPLY_HOLD, FAILURE_COMMIT, exact readback, and owned-lock release passed.
+- The accidental repeat of the completed partial mode safely held before lock acquisition or Sheet mutation.
+- Codex records but does not independently claim the Gate 14B phone proof.
+- Gate 14C direct runtime base is Gate 14B SHA256 `46880D2B0C7E444195E0BA4F587957E86475A95D0F1737CA42218452E4C49C9B`.
+- Gate 14C changes existing Tasks 70, 171, 173, 192, and one exact Task 233 regex; it adds Tasks 235, 236, and 237.
+- Task 233 remains 1947 actions and newly accepts `ERROR_OPENAI_REVIEW` only in its existing `COMMIT_FAILURE` status guard.
+- Task 235 permits no more than two HTTP attempts and one randomized 2-4 second retry.
+- Final OpenAI failures persist as exact-row `ERROR_OPENAI_REVIEW`; no production Gate 14C path creates another `ERROR_OPENAI_RETRY`.
+- Legacy `ERROR_OPENAI_RETRY` rows migrate to `ERROR_OPENAI_REVIEW` without an API call or reset to NEW.
+- The original Gate 14C candidate SHA256 `71A766AE8D550C139AABCEC53DE3B1025CAF26C68561583CBF20AC6D5A5138B3` is historical and superseded by R1.
+- Direct Sosa phone proof establishes `QUOTA_429_NO_RETRY` passed and `TIMEOUT_EXHAUSTED` failed safely, but the timeout result exposed an unresolved no-response-code literal.
+- `ISSUE_G14C_NO_RESPONSE_CODE_UNRESOLVED_LITERAL` is repaired only in the Gate 14C R1 candidate by setting the per-attempt response code to numeric `0` and classifying code `0` as bounded missing response code.
+- Gate 14C R1 phone-proven runtime XML SHA256 is `535A163DA2FCEF1A655AB7DBBA4EBE5E9A991C7BF63CD74525244820D4BCA2A1`.
+- Direct Sosa proof passed R1 import/render and all five controlled modes: real success, rate-limit then success, timeout exhaustion with code 0, quota/no-retry, and legacy retry migration.
+- Attempts remained capped at two, retries at one, and no third HTTP attempt occurred.
+- Exact `ERROR_OPENAI_REVIEW` persistence and every owned processing-lock release passed.
+- Legacy migration made zero API calls, acquired no processing lock, preserved blank Reply, and fresh exact-row readback confirmed the review status.
+- `ISSUE_G14C_NO_RESPONSE_CODE_UNRESOLVED_LITERAL` is closed by direct Sosa R1 phone proof.
+- Gate 14C is verified closed; Gate 14D capacity is next.
+- Tracker remains `13/14 locked = 93%`; production 50-contact capacity, final controls, merge, and release remain blocked.
+<!-- GATE14C_LOCKED_FACTS_END -->
+
+<!-- GATE14D_LOCKED_FACTS_START -->
+## Gate 14D Controlled Capacity Candidate Facts
+
+- Gate 14C R1 is closed by direct Sosa phone proof; its phone-proven XML SHA256 is `535A163DA2FCEF1A655AB7DBBA4EBE5E9A991C7BF63CD74525244820D4BCA2A1`.
+- Gate 14D adds only Tasks 238 and 239; all 89 existing task blocks are raw-byte identical.
+- Task 238 is limited to controlled synthetic rows 149-198, ascending order, and counts 5/10/25/50.
+- Each row requires exact A/B/C, NEW, and blank Reply before one per-row processing lock is acquired.
+- Existing bounded Tasks 166/170/171/198/172/173 remain the processing authority.
+- An exact terminal readback and owned-lock release are required before another row can start.
+- Task 239 has no production/profile/scene caller and consumes one-shot authorization before calling Task 238.
+- New-task TextNow, Send, confirmation, DONE, Archive, Queue Cycle, profile, timer, and live paths are absent.
+- Static validators PASS/PASS; no Gate 14D phone proof or capacity claim exists.
+- Tracker remains `13/14 locked = 93%` with 50 checkpoints remaining; import, merge, live mode, and release remain blocked.
+<!-- GATE14D_LOCKED_FACTS_END -->
+
+## Gate 14D R1 Candidate Facts
+
+- Direct Sosa proof showed the first Gate 14D candidate completed row 149, then failed closed before row 150 processing because a generated AutoSheets array element retained row 149's Reply.
+- The failure caused no duplicate lock, API call, write, Send, confirmation, DONE, or Archive action; rows 150-153 remained unchanged.
+- R1 uses exact base SHA256 `A7C577E6929E930938F0D48937332D19F441D2C1FFD9821E7047E397ECE74C07`.
+- R1 changes Task 238 only: ten explicit generated-element clears, five before each exact-row Get Data action.
+- All other 90 task blocks, all profiles, the scene, project registry, and credential remain unchanged.
+- Static validators PASS/PASS; R1 has no phone proof and is not approved for import.
+- Tracker remains `13/14 locked = 93%`; 50 checkpoints remain; capacity, interface, merge, live operation, and release remain blocked.
+
+## Gate 14D Capacity Closure And Gate 14D2 Candidate Facts
+
+- Direct Sosa phone proof passes controlled processing at 5, 10, 25, and 50 rows; the 50-row run completed exact rows 149-198 with all defect counters zero and balanced 50/50 locks.
+- Codex records but does not independently claim that phone proof.
+- Active duplicate behavior is exact event-ID equality in `TT5 Simple Sheet Duplicate Guard`.
+- The fingerprint assignment, age calculation, 180-second condition, duplicate log, Stop, and End If in `FINAL Simple` are historical and disabled; no active TTL claim is allowed.
+- Gate 14D2 uses exact base SHA256 `72D5F636AE72F441ACD2BF1C0C9B5B93FFF8503775FA3CA05C59A9111389CDE4`.
+- Gate 14D2 adds two isolated tasks and changes none of the 91 existing task blocks.
+- Topology is 93 tasks / 4 disabled profiles / 1 scene; static validators PASS/PASS.
+- Visible planning tracker is 43 total, 28 phone/runtime, 15 non-phone; main tracker remains `13/14 locked = 93%`.
+- Phone import, target-phone modes, overflow, merge, live operation, interface, hardening, and release remain blocked.
+
+## Historical Rejected Gate 14D3 Diagnostic Facts
+
+The candidate described in this section is superseded by Gate 14D3 R1 below. It is retained only as a historical processing-window diagnostic.
+
+- Direct Sosa phone proof passes same-sender ordering, later-repeat acceptance under a unique event ID, and exact duplicate-ID suppression.
+- The duplicate test suppressed one existing event ID, kept one unique control ID eligible, and made zero API calls, processing-lock calls, or Sheet writes; the controlled rows remained unchanged.
+- Codex records but does not independently claim this phone proof.
+- Gate 14D3 uses exact base SHA256 `3851E073BE042F80068E52CF7E3D410ED3D0EBA8A63C5F4C10108532912FE0EA`.
+- Gate 14D3 adds two isolated tasks and changes none of the 93 existing task blocks.
+- Admission mode reaches only existing bounded rows 149-198 and independently proves row 199 remains exact NEW with blank Reply.
+- Deferred-drain mode binds and processes only row 199 through the existing bounded processor lane.
+- Topology is 95 tasks / 4 disabled profiles / 1 scene; static validators PASS/PASS.
+- Visible planning tracker is 40 total, 25 phone/runtime, 15 non-phone; overflow/admission is the one remaining Gate 14D checkpoint.
+- This package is rejected as overflow proof. Phone import and phone testing are prohibited.
+
+## Gate 14D3 Correction And R1 Candidate Facts
+
+- The first Gate 14D3 package is rejected as overflow proof because it called the already-proven controlled rows 149-198 processor and never exercised production OverflowInbox admission or drain.
+- Rejected source and commit history are preserved; the package is a diagnostic only and is not approved for import or phone testing.
+- Direct Gate 14D3 R1 base SHA256 is `3851E073BE042F80068E52CF7E3D410ED3D0EBA8A63C5F4C10108532912FE0EA`.
+- The production logger still reaches `TT5 Log Current Message To OverflowInbox`; the permanent queue still reaches `TT5 Overflow Drain One` through `TT5 Overflow Drain Cap`.
+- R1 centralizes both wrappers through one exact transaction engine and places the normal Sheet1 slot selector under the same owned admission lock.
+- Admission scans exact IDs across Sheet1 and OverflowInbox, verifies the exact blank destination, writes one PENDING row, reads it back, and requires post-write cross-store count exactly one.
+- Drain selects the earliest PENDING source, verifies its exact A:N fields, checks Sheet1 for an existing exact ID, writes at most one exact A:I row, reads it back before DRAINED, and reads DRAINED back before success.
+- A PENDING source plus one exact matching Sheet1 row follows the source-only recovery path and cannot write a second main row.
+- A completed controlled rerun verifies DRAINED plus the exact existing main row and performs zero writes.
+- Four existing overflow/admission-specific tasks change; 89 existing tasks, all profiles, and scene remain raw-byte identical.
+- No new OpenAI, TextNow, Send, confirmation, DONE, Archive, timer, live, or profile path exists.
+- R1 has no phone proof. Planning tracker remains 40/25/15 and main remains `13/14 locked = 93%`.
+
+## Gate 14D3 R2 Second-Audit Candidate Facts
+
+- Gate 14D3 R1 is superseded and remains `DO NOT IMPORT / DO NOT PHONE TEST`.
+- R2 again uses exact Gate 14D2 base SHA256 `3851E073BE042F80068E52CF7E3D410ED3D0EBA8A63C5F4C10108532912FE0EA`.
+- R2 candidate XML SHA256 is `149D4877B08B2A730CA7B524941E257AE8550C44C9BB7AA9247092C63CDC9ED5`.
+- R2 topology is 97 tasks / 4 disabled profiles / 1 scene.
+- Permanent owner-token locks replace unowned hard release and eight-second age stealing.
+- `OriginalID` and `OverflowID` are distinct; duplicate, collision, and duplicate-main classifications fail closed.
+- Every new AutoSheets read deletes indexed arrays first and is bounded to two attempts.
+- Views are candidate hints only; direct target-row reads are transaction authority.
+- Drain order is LoggedAt then source row and persists DRAINING, MAIN_COMMITTED, DRAINED, or OVERFLOW_REVIEW through exact readback.
+- Configured V1 overflow capacity is 999 data rows, source rows 2-1000; capacity cannot overwrite.
+- R2 has no phone proof. Gate 14D remains open; tracker remains 40/25/15 and `13/14 locked = 93%`.
+
+## Gate 14D3 R3 Exact Drain Failure Evidence Candidate Facts
+
+- R2 is superseded and is `HOLD / DO NOT IMPORT / DO NOT PHONE TEST`.
+- R2 acquired the shared admission lock before exact source binding and verified `DRAINING`; it also lacked durable Attempts/LastError evidence on every bound failed drain.
+- R3 uses the exact Gate 14D2 base SHA256 `3851E073BE042F80068E52CF7E3D410ED3D0EBA8A63C5F4C10108532912FE0EA`.
+- R3 candidate XML SHA256 is `04E09D4059D1B314AEDAD89580043B50200EA57C70ACD8C9382802DF1B6F21F7`.
+- R3 topology remains 97 tasks / 4 disabled profiles / 1 scene.
+- Drain now acquires overflow ownership, binds and verifies the exact source, and persists verified `DRAINING` before acquiring shared admission ownership.
+- Every exact-source-bound failed drain reaches one bounded exact Attempts/LastError write/readback path before release unless evidence was already verified.
+- Existing changed tasks remain 33, 35, 68, 215, 217, 218, 219, and 220; Tasks 242-245 remain the only additions; 85/85 other tasks are raw-byte identical.
+- Structure validator 367/367 PASS and semantic validator 69/69 PASS. R3 has no phone proof and is not approved for import.
+- Gate 14D remains open; tracker remains 40/25/15 and `13/14 locked = 93%`.
+
+<!-- FINAL_REPOSITORY_HANDOFF_SYNC_START -->
+## Final Repository Handoff Sync
+
+- Gates 1 through 13 remain `LOCKED / PASS` by direct Sosa phone proof. They must not be reopened without newer contradictory phone evidence.
+- `13/14 locked = 93%` is a main-gate count only. It is not weighted product completion or release readiness.
+- The detailed remaining tracker is 40 total checkpoints: 25 phone/runtime and 15 non-phone.
+- Gate 14 phone-proven subproofs include inventory import/render, the 5/10/25/50 controlled processing ladder, 50-row API and processing-lock accounting, same-sender ordering, later-repeat acceptance under a new event ID, and exact duplicate-ID suppression.
+- Original D3, R1, and R2 are rejected. R3 is design history only and is `DO NOT IMPORT`. D3A is the current admission-only candidate with no phone proof and no release claim.
+- D3A SHA256 is `880CC569185A9FFF45703EC77E71D6260A88474B0F63ECDE6B31E0A11CFF090A`; its exact Gate 14D2 base SHA256 is `3851E073BE042F80068E52CF7E3D410ED3D0EBA8A63C5F4C10108532912FE0EA`.
+- D3A topology is 99 tasks / 4 disabled profiles / 1 scene. Existing changes are Tasks 68, 215, and 217; added Tasks are 242 through 247. Queue Cycle Task 199 and drain Tasks 218 through 220 remain unchanged. Every added helper is below 500 actions.
+- D3A uses OverflowInbox rows 2 through 986, Sheet1 A:Z blank authority, and identity checks across Sheet1, OverflowInbox, Archive, and DeadArchive.
+- Public-safe physical structure: Sheet1 980 rows, OverflowInbox 986 rows, Archive 933 rows, and DeadArchive 972 rows. Production payload is A:I; protected fields extend through Z. Views are hints only, OverflowView is not FIFO authority, Archive participates in duplicate history, DeadArchive routes review, and no unlimited-capacity claim exists.
+- The final integrated blockers and validation order are authoritative in `AIW_FINAL_TONIGHT_HANDOFF_CURRENT.md` and `AIW_FINAL_INTEGRATED_VALIDATION_PLAN_CURRENT.md`.
+- Phone import, live activation, PR merge, Gate 14 completion, and production release remain blocked.
+<!-- FINAL_REPOSITORY_HANDOFF_SYNC_END -->
+
+## Gate 14D3A Durable Owned Admission Candidate Facts
+
+- R3 integrity passed but runtime scope is rejected. R3 is design history only and is `DO NOT IMPORT / DO NOT PHONE TEST`.
+- D3A rebuilds from exact Gate 14D2 SHA256 `3851E073BE042F80068E52CF7E3D410ED3D0EBA8A63C5F4C10108532912FE0EA`.
+- D3A candidate XML SHA256 is `880CC569185A9FFF45703EC77E71D6260A88474B0F63ECDE6B31E0A11CFF090A`.
+- Topology is 99 tasks / 4 disabled profiles / 1 scene.
+- Existing changes are exactly Tasks 68, 215, and 217. Tasks 242-247 are added. The other 90 existing tasks are raw-byte identical.
+- Every added helper is below 500 actions; maximum is 494.
+- Sheet1 blank authority is exact A:Z. OverflowInbox admission is limited to physical rows 2-986.
+- Identity checks Sheet1, OverflowInbox, Archive, and DeadArchive before any admission write.
+- Tasks 218-220 and Queue Cycle Task 199 remain raw-byte identical. D3B and D3C remain deferred.
+- Validators pass 450/450 and 559/559. D3A has no phone proof and is not approved for import.
+- Gate 14D remains open; tracker remains 40/25/15 and `13/14 locked = 93%`.

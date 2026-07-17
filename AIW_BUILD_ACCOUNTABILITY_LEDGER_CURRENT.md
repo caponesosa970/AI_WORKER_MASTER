@@ -1185,3 +1185,303 @@ No percentage change. Current tracker remains `8/14 locked = 57%`.
 - Responsible parties: Codex owns accurate public synchronization and privacy checks; ChatGPT owns direct-evidence audit and merge approval; Sosa owns phone proof and has no failure responsibility recorded.
 - Prevention rule added: phone-proof closures must map each runtime claim to direct controller evidence while keeping raw private logs and values outside Git.
 <!-- GATE13_PHONE_PROOF_CLOSURE_LEDGER_END -->
+
+
+<!-- GATE14A_BUILD_LEDGER_START -->
+## Accountability ID AIW-GATE14A-READ-ONLY-INVENTORY-20260715
+
+- Gate: Gate 14A read-only capacity inventory candidate.
+- Starting main commit: `1b73c48c77b05b2518c47d30387778f86b647576`.
+- Exact base: `GATE13R2_FULL_PROJECT_TASKER_IMPORT__CONFIRM_THREAD_NAVIGATION_PRIVATE.xml`; SHA256 `1C4D13872C3D6B4579AA698F9E7D2F50F3E81467A4CBD4EAD63CD567087832A7`.
+- Approved runtime scope: add Task 232 and register it once; change no existing task/profile/scene.
+- Runtime result: 84 tasks / 4 disabled profiles / 1 scene; 83/83 existing tasks raw-byte identical.
+- Task 232: 321 actions, one AutoSheets Get Data node, zero Sheet writes, zero task/UI/API/profile/lock actions.
+- Proof: validator one PASS; validator two PASS 47/47; ZIP equality/integrity PASS; public privacy scan and `git diff --check` PASS.
+- Proof not available: Tasker import/render, one-row phone run, 5/10/25/50 phone ladder, throughput, API/load, final interface, or release.
+- Tracker effect: none; remains `13/14 locked = 93%`.
+- Codex claims no phone proof and approves no phone import.
+- Final decision: `GATE 14A RUNTIME CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+<!-- GATE14A_BUILD_LEDGER_END -->
+
+<!-- GATE14A_R1_BUILD_LEDGER_START -->
+## Accountability ID AIW-GATE14A-R1-BLANK-REPLY-NORMALIZATION-20260715
+
+- Gate: Gate 14A R1 read-only inventory repair.
+- Direct repair base SHA256: `832BEB0F9764EB2838B08A582648097C49197C2A366931196E5F0311860529EF`.
+- Exact runtime scope: Task 232 only; three actions inserted after the Reply-array assignment.
+- Phone result reconciled: exact-row isolated read passed, inventory result held because blank Reply became unresolved `%g14_reply89`.
+- User/operator responsibility: `NONE`.
+- Codex responsibility: initial static simulation did not reproduce the Tasker runtime placeholder.
+- ChatGPT/controller responsibility: phone proof correctly detected the unsupported assumption.
+- Validators: direct XML/raw-byte PASS; independent Tasker/control-state model PASS; standard static audit PASS.
+- Private outputs: XML, one-entry ZIP, and SHA sidecar; all remain untracked.
+- Public boundary: hashes and sanitized evidence only.
+- Tracker effect: none; remains `13/14 locked = 93%`.
+- Phone proof claimed by Codex: NO. Phone import approved by Codex: NO. PR merge: BLOCKED.
+<!-- GATE14A_R1_BUILD_LEDGER_END -->
+
+<!-- GATE14A_R2_BUILD_LEDGER_START -->
+## Accountability ID AIW-GATE14A-R2-NORMALIZED-BLANK-FLAG-20260715
+
+- Gate: Gate 14A R2 read-only inventory repair.
+- Issue: `ISSUE_G14A_R1_CLEAR_LEAVES_ROW_REPLY_UNRESOLVED`.
+- Direct repair base SHA256: `34197CB7044B740F73B5ED173D26E7B73DE6B6602637B83F26F94D0ECDECD9FC`.
+- Exact runtime scope: Task 232 only.
+- R1 phone result: exact-row isolated read passed, then Variable Clear left `%row_reply` unresolved and produced a safe HOLD.
+- User/operator responsibility: `NONE`.
+- Codex responsibility: R1 used an incorrect static assumption about cleared local-variable comparisons.
+- ChatGPT/controller responsibility: direct phone proof identified and bounded the runtime mismatch.
+- R2 actions: per-row flag reset; Clear-to-flag-Set replacement; Reply-only nonblank and unresolved condition gates; required `sr` renumbering.
+- Validators: direct XML/raw-byte PASS; independent control-stack/state model PASS 30/30; standard static Tasker audit PASS.
+- Existing runtime: 83/83 Gate 13R2 tasks raw-byte identical; profiles, scene, Project registry, and credential unchanged.
+- Private outputs: XML, one-entry ZIP, and SHA sidecar; all remain untracked.
+- Tracker effect: none; remains `13/14 locked = 93%`.
+- Phone proof claimed by Codex: NO. Phone import approved by Codex: NO. PR merge: BLOCKED.
+- Unsupported: R2 phone result, 5/10/25/50 ladder, processing/API load, soak, final interface, and release.
+<!-- GATE14A_R2_BUILD_LEDGER_END -->
+
+<!-- GATE14B_BUILD_LEDGER_START -->
+## Accountability ID AIW-GATE14B-PROCESSOR-TRANSACTION-READBACK-20260715
+
+- Gate: Gate 14B processor transaction readback candidate.
+- Direct base SHA256: `73E8048D8941C0529A26E397FA9E6EBAF84FAB9C0F03D3C56CBA163932C34662`.
+- Existing runtime changes: Tasks 166, 172, 173 only.
+- Added tasks: 233 exact-row engine and 234 isolated controlled launcher.
+- Protected existing tasks: 81/81 raw-byte equal; profiles and scene unchanged; credentials unchanged without disclosure.
+- Validators: Python XML/raw/plugin audit PASS; independent PowerShell state model PASS 35/35.
+- Packaging: XML SHA `46880D2B0C7E444195E0BA4F587957E86475A95D0F1737CA42218452E4C49C9B`; one-entry ZIP equality/integrity PASS.
+- Gate 14A phone ladder: recorded as direct Sosa proof; Codex does not claim it independently.
+- User/operator responsibility: NONE.
+- Codex responsibility: runtime build, static proof, packaging, public-safe records; no Sheet or phone action.
+- Unsupported: Gate 14B phone behavior, production 50-contact processing, API failure handling, final controls, and release.
+- Tracker effect: none; remains `13/14 locked = 93%`.
+- Phone import approved by Codex: NO. Phone proof claimed by Codex: NO. PR merge: BLOCKED.
+<!-- GATE14B_BUILD_LEDGER_END -->
+
+<!-- GATE14C_BUILD_LEDGER_START -->
+## Accountability ID AIW-GATE14C-BOUNDED-OPENAI-RETRY-20260715
+
+- Gate: Gate 14C bounded OpenAI retry and safe review recovery candidate.
+- Direct base SHA256: `46880D2B0C7E444195E0BA4F587957E86475A95D0F1737CA42218452E4C49C9B`.
+- Starting branch head: `848f880ba2d5b7223b23f00f50b8921dd89bf2c0`.
+- Existing runtime changes: Tasks 70, 171, 173, 192, and one Task 233 regex.
+- Added tasks: 235 bounded HTTP retry, 236 legacy review migration, and 237 isolated controlled launcher.
+- Pre-build contradiction: Task 233 rejected required `ERROR_OPENAI_REVIEW`.
+- Codex action: stopped before packaging; controller then authorized one exact Task 233 condition extension.
+- Protected existing tasks: 81/81 raw-node equal; Task 69 and Task 234 hashes unchanged; profiles and scene unchanged; credential equal without disclosure.
+- Validators: standard Tasker static audit PASS; Python direct XML/raw validator 59/59 PASS; independent PowerShell control/state validator 64/64 PASS.
+- Packaging: XML SHA `71A766AE8D550C139AABCEC53DE3B1025CAF26C68561583CBF20AC6D5A5138B3`; ZIP SHA `4DCC4B1F3EEE5B4184F17BF0565EF501EF6013188097F811F62062130A74ACD9`; one-entry byte equality PASS.
+- Gate 14B phone proof: recorded as direct Sosa proof; Codex does not claim it independently.
+- User/operator responsibility: NONE.
+- Codex responsibility: source contradiction detection, bounded runtime build, static proof, private packaging, and public-safe records.
+- Prohibited actions performed: NONE. No Tasker run, Sheet access, API call, profile enablement, TextNow action, Send, confirmation, Archive, or merge.
+- Unsupported: Gate 14C phone behavior, production 50-contact processing/API throughput, final interface, unattended production, and release.
+- Tracker effect: none; remains `13/14 locked = 93%`.
+- Phone import approved by Codex: NO. Phone proof claimed by Codex: NO. PR merge: BLOCKED.
+- Final decision: `GATE 14C BOUNDED OPENAI RETRY RUNTIME CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+
+## Gate 14C R1 HTTP Code Normalization Candidate - 2026-07-15
+
+- Exact task assigned: repair unresolved no-response-code output using two Task 235 semantics only.
+- Source SHA256: `71A766AE8D550C139AABCEC53DE3B1025CAF26C68561583CBF20AC6D5A5138B3`.
+- Active issue: `ISSUE_G14C_NO_RESPONSE_CODE_UNRESOLVED_LITERAL`.
+- Direct phone evidence: supplied by Sosa; Codex records but does not claim it.
+- Runtime delta: Task 235 `act119` clears no longer; it sets code `0`. Existing `act162` missing-code regex gains only `|^0$`.
+- Action count: 243 before and after.
+- Preservation: 88/88 other tasks raw identical; Task 233 SHA preserved; Task 237, profiles, scene, and project registry unchanged.
+- Validators: standard Tasker audit PASS; validator one 29/29 PASS; validator two 24/24 PASS.
+- Packaging: XML SHA `535A163DA2FCEF1A655AB7DBBA4EBE5E9A991C7BF63CD74525244820D4BCA2A1`; ZIP SHA `B47A4BC32FF33BD444F4EC9A710345F354F16DE451C8608F93E1F23C6552D0F9`; one-entry byte equality PASS.
+- Prohibited actions performed: NONE. No Tasker run, Sheet access, OpenAI call, profile enablement, TextNow action, Send, confirmation, Archive, or merge.
+- User/operator responsibility: NONE.
+- Codex/static responsibility: the original Gate 14C static model did not expose Tasker's unresolved no-response-code output.
+- Tracker effect: none; remains `13/14 locked = 93%`.
+- Phone import approved by Codex: NO. Phone proof claimed by Codex: NO. PR merge: BLOCKED.
+- Final decision: `GATE 14C R1 HTTP CODE NORMALIZATION CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+
+## Gate 14C R1 Direct Phone-Proof Closure - 2026-07-15
+
+- Exact task assigned: record sanitized direct Sosa proof and close Gate 14C without runtime changes.
+- R1 import/render: PASS by direct Sosa proof.
+- Controlled modes: `REAL_SUCCESS`, `RATE_LIMIT_THEN_SUCCESS`, `TIMEOUT_EXHAUSTED`, `QUOTA_429_NO_RETRY`, and `LEGACY_RETRY_MIGRATION` all PASS.
+- R1 regressions: timeout returned numeric code 0; real success returned code 200.
+- Retry boundary: attempts capped at two, retries capped at one, and no third HTTP attempt occurred.
+- Persistence: `ERROR_OPENAI_RETRY` no longer returned to NEW; exact `ERROR_OPENAI_REVIEW` persistence passed.
+- Lock proof: every owned processing lock released exactly once.
+- Legacy migration: zero API attempts, zero retries, zero real HTTP calls, no processing-lock acquisition, blank Reply preserved, and fresh exact-row readback confirmed review status.
+- Phone-proof authority: Sosa. Codex independently claims phone proof: NO.
+- Runtime/private changes: NONE.
+- Prohibited access: no Sheet, Tasker, TextNow, OpenAI, profile, runtime XML, or private artifact access/change by Codex.
+- Tracker effect: none; remains `13/14 locked = 93%`.
+- Remaining checkpoints after closure: 50 total, 33 phone/runtime, 17 non-phone.
+- PR #9: remains open and unmerged.
+- Final decision: `GATE 14C R1 VERIFIED CLOSED BY DIRECT SOSA PHONE PROOF / GATE 14D CAPACITY NEXT`.
+<!-- GATE14C_BUILD_LEDGER_END -->
+
+<!-- GATE14D_BUILD_LEDGER_START -->
+## Accountability ID AIW-GATE14D-CONTROLLED-PROCESSING-CAPACITY-20260715
+
+- Gate: Gate 14D controlled processing-capacity runtime candidate.
+- Direct base SHA256: `535A163DA2FCEF1A655AB7DBBA4EBE5E9A991C7BF63CD74525244820D4BCA2A1`.
+- Starting branch head: `ed22d991adf6b98a82fc773900701afc9e443387`.
+- Existing runtime changes: none; 89/89 task blocks raw-byte equal.
+- Added tasks: 238 controlled batch engine and 239 isolated one-shot launcher.
+- Profiles/scene: 4/4 and 1/1 raw-byte equal; all profiles disabled.
+- Validators: direct Python XML/raw/call/ZIP validator 137/137 PASS; independent PowerShell control/state validator 43/43 PASS.
+- Package XML SHA: `A7C577E6929E930938F0D48937332D19F441D2C1FFD9821E7047E397ECE74C07`.
+- Prohibited actions performed: NONE. No Tasker run, Sheet access, OpenAI call, TextNow action, profile enablement, Send, confirmation, Archive, or merge.
+- Codex phone proof claim: NO. Codex phone import approval: NO.
+- Tracker effect: none; remains `13/14 locked = 93%` with 50 checkpoints remaining.
+- Final decision: `GATE 14D CONTROLLED PROCESSING CAPACITY RUNTIME CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+<!-- GATE14D_BUILD_LEDGER_END -->
+
+## Accountability ID AIW-GATE14D-R1-ARRAY-ELEMENT-CLEAR-20260715
+
+- Assigned scope: repair `ISSUE_G14D_AUTOSHEETS_ARRAY_ELEMENT_STALE_BLEED` in Task 238 only.
+- Source SHA256: `A7C577E6929E930938F0D48937332D19F441D2C1FFD9821E7047E397ECE74C07`.
+- Direct Sosa proof recorded: row 149 completed; row 150 failed safely before a second transaction; remaining staged rows stayed unchanged.
+- Runtime delta: Task 238 actions 389 -> 399; five indexed A:E element clears inserted before each of two exact Get Data actions.
+- Preservation: 90/90 other tasks raw-byte identical; profiles, scene, project registry, and credential unchanged.
+- Validation: validator one PASS (36 checks); validator two PASS (22 checks); Tasker static audit PASS.
+- Codex responsibility: the original static model omitted generated AutoSheets element persistence.
+- Prohibited actions honored: no Tasker, Sheet, TextNow, OpenAI, profile, merge, import approval, or phone-proof claim.
+- Tracker effect: none; remains `13/14 locked = 93%`, 50 checkpoints remaining.
+- Decision: `GATE 14D R1 ARRAY ELEMENT CLEAR REPAIR CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+
+## Accountability ID AIW-GATE14D2-IDENTITY-ORDER-20260716
+
+- Assigned scope: build corrected exact-ID and ordered-repeat harness with two added tasks only.
+- Source SHA256: `72D5F636AE72F441ACD2BF1C0C9B5B93FFF8503775FA3CA05C59A9111389CDE4`.
+- Direct Sosa proof recorded: 5/10/25/50 processing ladder passed; Codex does not independently claim it.
+- Source-contract correction: exact-ID TT5 path active; fingerprint/age/180-second branch disabled and unclaimed.
+- Runtime delta: two added tasks and project registrations only; 91 existing tasks, four profiles, and scene preserved.
+- Validation: validator one PASS (149 checks); validator two PASS (30 checks); Tasker static audit PASS; package byte equality PASS.
+- Prohibited actions honored: no Tasker, Sheet, TextNow, OpenAI, profile, merge, import approval, or phone-proof claim.
+- Tracker effect: planning checkpoints reduce to 43 total, 28 phone/runtime, 15 non-phone; main tracker remains `13/14 locked = 93%`.
+- Decision: `GATE 14D2 CORRECTED MESSAGE IDENTITY AND ORDERING CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+
+## Accountability ID AIW-GATE14D3-OVERFLOW-ADMISSION-20260716
+
+- Assigned scope: record direct Sosa Gate 14D2 identity proof and add an isolated overflow/admission harness without modifying existing runtime tasks.
+- Source SHA256: `3851E073BE042F80068E52CF7E3D410ED3D0EBA8A63C5F4C10108532912FE0EA`.
+- Direct Sosa proof recorded: strict rows 199/200/201 ordering, later-repeat acceptance under a unique event ID, and exact duplicate-ID suppression passed; Codex does not independently claim it.
+- Runtime delta: two added tasks and project registrations only; 93 existing tasks, four profiles, and scene preserved.
+- Validation: validator one PASS (148 checks); validator two PASS (28 checks); Tasker static audit PASS; package byte equality PASS.
+- Candidate XML SHA256: `E78235FD8D1E896990A2CE6B14BBA29D8BAF49EE79D88CCD2DCDF7D1A7E0B461`.
+- Prohibited actions honored: no Tasker, Sheet, TextNow, OpenAI, profile, merge, import approval, or independent phone-proof claim.
+- Tracker effect: planning checkpoints reduce to 40 total, 25 phone/runtime, 15 non-phone; main tracker remains `13/14 locked = 93%`.
+- Decision: `GATE 14D3 OVERFLOW AND ADMISSION CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+
+## Accountability ID AIW-GATE14D3-R1-SAFE-OVERFLOW-20260716
+
+- Controller correction: the first Gate 14D3 package asked the wrong product question and is rejected as overflow proof.
+- Codex responsibility: the first build reused the already-proven hard-coded processing window and did not inspect the real overflow transaction deeply enough before building.
+- Corrected assignment: repair and test actual OverflowInbox admission, exact duplicate suppression, exact drain ordering, DRAINED readback, shared admission locking, and partial-commit idempotency.
+- Direct base SHA256: `3851E073BE042F80068E52CF7E3D410ED3D0EBA8A63C5F4C10108532912FE0EA`.
+- Existing task changes: four overflow/admission-specific tasks only. Added tasks: one permanent transaction engine and one isolated controlled launcher.
+- Preservation: 89/93 existing task blocks, 4/4 profiles, and scene raw-byte identical; protected processing/API/TextNow/lifecycle tasks unchanged.
+- Validation: validator one 285/285 PASS; validator two 47/47 PASS; Tasker static audit PASS; one-entry ZIP byte equality PASS.
+- Candidate XML SHA256: `9502F289A1BDC83D21762BA3EA6B892D190B115F23FD1C8F5AD5EDC1E4BE9ECE`.
+- Prohibited actions performed: NONE. No Tasker run, Sheet access, API call, TextNow action, profile enablement, Send, confirmation, Archive, or merge.
+- Codex phone proof claim: NO. Codex phone import approval: NO.
+- Tracker effect: none; remains 40 total, 25 phone/runtime, 15 non-phone and `13/14 locked = 93%`.
+- Decision: `GATE 14D3 R1 SAFE PRODUCTION OVERFLOW ADMISSION AND DRAIN CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+
+## Accountability ID AIW-GATE14D3-R2-SECOND-AUDIT-20260716
+
+- Controller finding: R1 addressed the right product area but remained incomplete for lock ownership, stale arrays, collision identity, durable states, FIFO, and capacity.
+- Codex responsibility: the initial correction did not reconcile the whole overflow contract before packaging.
+- Corrected source: exact Gate 14D2 XML SHA256 `3851E073BE042F80068E52CF7E3D410ED3D0EBA8A63C5F4C10108532912FE0EA`.
+- Existing task delta: Tasks 33, 35, 68, 215, 217, 218, 219, 220 only. Added Tasks 242-245.
+- Preservation: 85/85 other existing tasks, 4/4 profiles, and scene raw-byte identical.
+- Runtime result: one owner-token and exact-readback overflow state machine covering ingress, duplicate/collision, append, FIFO drain, partial reconciliation, STOP acquisition boundary, and capacity hold.
+- Candidate XML SHA256: `149D4877B08B2A730CA7B524941E257AE8550C44C9BB7AA9247092C63CDC9ED5`.
+- Validation: structure 360/360 PASS; semantic 64/64 PASS; standard Tasker audit PASS; one-entry ZIP equality PASS.
+- Prohibited actions performed: NONE. No Tasker, Sheet, OpenAI, TextNow, profile, Send, confirmation, Archive, merge, import approval, or phone-proof claim.
+- Tracker effect: none; remains 40/25/15 and `13/14 locked = 93%`.
+- Decision: `GATE 14D3 R2 SAFE OVERFLOW STATE MACHINE CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+
+## Accountability ID AIW-GATE14D3-R3-DRAIN-FAILURE-EVIDENCE-20260716
+
+- Controller finding: R2 still acquired admission too early and did not persist Attempts/LastError for every bound failed drain.
+- Codex responsibility: the R2 static audit did not model those two contracts strictly enough before packaging.
+- Safety response: R2 was stopped before import/testing and is preserved only as superseded source history.
+- Corrected source: exact Gate 14D2 XML SHA256 `3851E073BE042F80068E52CF7E3D410ED3D0EBA8A63C5F4C10108532912FE0EA`.
+- Runtime delta: authorized existing Tasks 33, 35, 68, 215, 217, 218, 219, and 220 plus added Tasks 242-245; 85/85 other existing tasks preserved.
+- R3-specific correction: exact source and verified `DRAINING` precede admission ownership; one common bounded evidence epilogue covers every bound failed drain.
+- Candidate XML SHA256: `04E09D4059D1B314AEDAD89580043B50200EA57C70ACD8C9382802DF1B6F21F7`.
+- Validation: structure 367/367 PASS; semantic 69/69 PASS; XML/package/privacy checks PASS.
+- Prohibited actions performed: NONE. No Tasker, Sheet, OpenAI, TextNow, profile, Send, confirmation, Archive, merge, import approval, or phone-proof claim.
+- Tracker effect: none; remains 40/25/15 and `13/14 locked = 93%`.
+- Decision: `GATE 14D3 R3 SAFE OVERFLOW ADMISSION, FIFO DRAIN, AND IDEMPOTENT RECOVERY CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+
+## Accountability ID AIW-GATE14D3A-DURABLE-ADMISSION-20260716
+
+- Controller decision: R3 integrity passed but runtime scope was rejected; next build was limited to D3A admission only.
+- Codex responsibility: prior Gate 14D3 packages remained broader than the final app-first scope and could not proceed directly to phone proof.
+- Safety response: R3 is marked design source only and was not imported or phone tested.
+- Corrected source: exact Gate 14D2 SHA256 `3851E073BE042F80068E52CF7E3D410ED3D0EBA8A63C5F4C10108532912FE0EA`.
+- Runtime delta: existing Tasks 68, 215, and 217 only; added Tasks 242-247; 90/90 other existing tasks preserved.
+- Helper sizes: 56, 407, 350, 494, 446, and 244 actions.
+- Candidate XML SHA256: `880CC569185A9FFF45703EC77E71D6260A88474B0F63ECDE6B31E0A11CFF090A`.
+- Validation: structure 450/450 PASS; semantic 559/559 PASS; standard XML and package audits PASS.
+- Build-time corrections: rejected a 638-action draft and removed a lexicographically copied legacy hard-release action before packaging.
+- Prohibited actions performed: NONE. No Tasker, Sheet, OpenAI, TextNow, profile, merge, import approval, or phone-proof claim.
+- Tracker effect: none; remains 40/25/15 and `13/14 locked = 93%`.
+- Decision: `GATE 14D3A DURABLE OWNED ADMISSION CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+
+## Accountability ID AIW-FINAL-FIXTURE-SAFETY-REPAIR-20260717
+
+- Assigned issue: `ISSUE_FINAL_VALIDATION_UNVERIFIED_FIXTURE_CLEANUP`.
+- Controller authorization: change only existing Tasks 237, 268, 270, 272, 276, and 293, plus sub-500-action validation-only helpers and their Project registry references.
+- Original defect: fixed or insufficiently authorized cleanup targets could be written or cleared without physical-bound, blankness, run-ownership, fixture-identity, or disposable-content proof.
+- Codex responsibility: implement a centralized fail-closed contract, preserve all production tasks byte-for-byte, remove Task 294 from the reachable orchestrator graph without modifying it, and independently test every unsafe branch for zero writes.
+- Controller responsibility: select and authorize fresh live rows later from exact read-only physical-bound and blankness evidence.
+- User/operator responsibility: `NONE`.
+- Runtime result: dynamic controller-supplied roles only; no default rows, IDs, senders, messages, or layers; exact reads before writes; exact readbacks after writes; one-shot authorization consumed after Phase 7.
+- Helper disposition: fourteen added validation-only helpers, each below 500 actions, registered only in the Project and unreachable from profiles, scenes, and production callers.
+- Independent proof: structural validator, direct Tasker inspection, two connected state models, bounded fault injection, mutation testing, and at least 100,000 randomized schedules.
+- Prohibited actions performed: `NONE`. No live Sheet mutation, Tasker import/run, profile enablement, real Send, phone execution, PR merge, or release claim.
+- Decision: `FINAL INTEGRATED FIXTURE-SAFETY REPAIR CANDIDATE / HOLD FOR CONTROLLER FULL ARTIFACT AUDIT AND LIVE FIXTURE SELECTION`.
+
+## Accountability ID AIW-OPTION-A-PHASE1-CONVERSATION-CONTINUITY-20260717
+
+- Assigned issue: `ISSUE_FINAL_CONVERSATION_GROUPING_AND_ARCHIVE_CONTEXT_INCOMPLETE`.
+- Authorized base SHA256: `58A5229EB7F6892C03AD799BB7A4C3144C59ACD4DEC0E5B2235F0AAF68EEF76B`.
+- Authorized existing-task scope: 262, 273, 276, 278, 282, and 284.
+- Runtime result: one durable ordered conversation group for one to four messages, persisted quiet cutoff and legal state transitions, confirmed Archive history, one reply, one possible-click path, exact companion finalization, and bounded recovery.
+- Existing-task preservation: every other existing Task block is raw-byte identical; the eight named phone-proven tasks are independently hash-equal.
+- Added helpers: Tasks 309-326; action counts 221, 46, 331, 98, 138, 175, 36, 139, 147, 172, 26, 221, 48, 295, 82, 244, 130, and 474.
+- Candidate XML: 5,607,668 bytes; SHA256 `D69480C9A212430D5D46753E3A05CBF4DB52045A6A8F967605BD3A3631CAB66E`.
+- Static evidence: independent runtime-contract validator 61/61 PASS; standard Tasker audit PASS; complete analyzer PASS; 18/18 XML guard mutants detected.
+- Modeled evidence: 32 scenarios, 10 state-boundary crashes, 100,000 schedules, 2,400,000 operations, and zero invariant failures.
+- Transport boundary: source-stable notification replay identity not proven; no text fingerprint added; Phase 2 HOLD.
+- Prohibited actions performed: `NONE`. No live Sheet access/mutation, Tasker import/run, profile enablement, OpenAI call, TextNow action, Send, PR merge, or release claim.
+- Decision: `OPTION A PHASE 1 DURABLE CONVERSATION CONTINUITY CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT, SHEET MIGRATION, AND CONTROLLED PHONE PROOF`.
+
+## Option A Phase 1 R1 Source-Contract and Lifecycle Repair
+
+- Source head before work: `5252f8f09473311e6acd99fa27847149fe849646`.
+- Exact repair base: 5,607,668 bytes; SHA256 `D69480C9A212430D5D46753E3A05CBF4DB52045A6A8F967605BD3A3631CAB66E`.
+- Existing semantic delta: Tasks 263, 273, 282, 309, 317, 320, 324, and 325.
+- Added task: 327 `AIW Conversation Deferred Recheck`, 43 actions, `rty=1`, Project-registered, no profile/scene caller.
+- Candidate: 171 tasks / 4 profiles / 2 scenes / 24,075 actions; XML SHA256 `9EB0A9FD6B3E342E4022AEE20022683F1BF08A54E65892A099565A3542D0A758`.
+- Raw preservation: 162 unaffected existing tasks; Tasks 71/199/223/225/226/227/230/231; Tasks 254/255/262; all profiles and scenes.
+- Source-order result: lifecycle states bypass NEW-row selection and reach Task 262 once; quiet HOLD schedules one STOP-aware recheck after exact owner release.
+- Migration result: one self-contained 23-tab/view plan with all exact formulas, no guessed fixture, protected rows 144:147, and no row-999 fixture.
+- Static/model result: PASS; phone result: NONE.
+- Decision: `OPTION A PHASE 1 R1 CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+
+## Option A Phase 1 R2 Capacity-Boundary and Migration-Preservation Repair
+
+- Accountability ID: `AIW-OPTION-A-PHASE1-R2-20260717`.
+- Source head: `2ff9f973c295ad8d7829952a3e85e02a14495f09`.
+- Exact base: 5,738,927 bytes; SHA256 `9EB0A9FD6B3E342E4022AEE20022683F1BF08A54E65892A099565A3542D0A758`.
+- Assigned issues: `ISSUE_CONVERSATION_GROUP_CAPACITY_EXCESS_STALE_HOLD`, `ISSUE_CONVERSATION_MIGRATION_LIVE_PRESERVATION_CONFLICT`, and `ISSUE_PREEXISTING_NEW_ROWS_DUPLICATE_SEND_RISK`.
+- Runtime tasks changed: 273, 320, and 325 only. Added helpers: none.
+- Exact runtime result: validated ledger F/Q/AB/AI; default BoundAt cutoff; full-group FreezeLoggedAt cutoff; all three freshness paths use the derived value.
+- Candidate: 171 tasks / 4 profiles / 2 scenes / 24,158 actions; 5,758,368 bytes; SHA256 `BD0033F84C582DDF4B323ABC0935F28033DA93AC8AFE1EC69E116D98C3FB0315`.
+- Preservation: 168 unaffected tasks, all phone-proven tasks, Tasks 254/255/262/263/282/309/317/327, all profiles/scenes, and changed-task plugin semantics.
+- Model: 100,000 schedules / 24,363,612 operations / zero failures; five/eight/nine, restart, duplicate, repeat, and adverse HOLD cases passed.
+- Migration: controller-supplied grids treated as minima; SystemConfig A1:J2 and extension columns preserved; Archive/DeadArchive rows add-only; historical rows unchanged.
+- Prohibited actions performed: none. No Sheet access/mutation, historical reconciliation, fixture selection, Tasker, profile enablement, Send, merge, or release claim.
+- Decision: `OPTION A PHASE 1 R2 CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.

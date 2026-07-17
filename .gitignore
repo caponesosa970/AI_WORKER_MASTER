@@ -7,6 +7,8 @@ tmp-install/
 Thumbs.db
 *.tmp
 *.log
+__pycache__/
+*.py[cod]
 
 # Keep ZIP handoff packages in Drive unless explicitly approved for GitHub.
 *.zip

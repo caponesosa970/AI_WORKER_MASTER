@@ -1,0 +1,21 @@
+# ChatGPT Artifact Audit Checklist
+
+- [ ] XML SHA256 equals 04E09D4059D1B314AEDAD89580043B50200EA57C70ACD8C9382802DF1B6F21F7.
+- [ ] ZIP SHA256 equals CD33453D0B7120DA3766589F5310438BF0839924AB45A57E2ACD135AAB7B9726.
+- [ ] ZIP contains one XML byte-identical to standalone XML.
+- [ ] Topology is 97 tasks / 4 disabled profiles / 1 scene.
+- [ ] Only Tasks 33, 35, 68, 215, 217, 218, 219, and 220 changed among existing tasks.
+- [ ] Tasks 242-245 are the only additions.
+- [ ] Other existing tasks are raw-byte identical 85/85.
+- [ ] Drain persists verified DRAINING before admission-lock acquisition.
+- [ ] Every exact-source-bound failure reaches verified Attempts/LastError evidence.
+- [ ] Exact-owner release is enforced for both locks.
+- [ ] Every Get Data path clears outputs and is bounded to two attempts.
+- [ ] Views are hints; exact target-row reads are authority.
+- [ ] NEW appears only after exact payload readback.
+- [ ] FIFO, duplicate/collision, reconciliation, result constants, and capacity boundary match the reports.
+- [ ] Controlled launcher reaches no processing, API, TextNow, Send, confirmation, DONE, Archive, profile, or live action.
+- [ ] Public files contain no secret, recipient, raw runlog, Drive link, or private artifact content.
+- [ ] R2 is treated as superseded and prohibited from import/testing.
+- [ ] Tracker remains 40/25/15 and main remains 13/14 = 93%.
+- [ ] Phone import remains HOLD until this exact artifact passes audit.
