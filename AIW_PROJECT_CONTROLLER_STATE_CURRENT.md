@@ -518,3 +518,17 @@ The next build must be one integrated production candidate composed of bounded m
 
 Authoritative next-chat rules are in `AIW_NEW_CHAT_BOOTSTRAP_CURRENT.md`. Runtime XML, live Sheet state, Tasker, profiles, and private artifacts were not changed by this synchronization.
 <!-- FINAL_REPOSITORY_HANDOFF_SYNC_END -->
+
+## Option A Phase 1 Durable Conversation Continuity Candidate
+
+- Authorized repository head before work: `bcce8a6407f1dda4aa42b64edeaa1369c0bde106`.
+- Authorized runtime base: 4,876,933 bytes; SHA256 `58A5229EB7F6892C03AD799BB7A4C3144C59ACD4DEC0E5B2235F0AAF68EEF76B`.
+- Existing semantic changes: Tasks 262, 273, 276, 278, 282, and 284.
+- Added conversation helpers: Tasks 309-326, all below 500 actions.
+- Additive migration: `ConversationGroups` A:AP, schema `AIW_CONVERSATION_V1`, controller-verified physical/runtime bounds, no guessed live rows.
+- Static topology: 170 tasks / 4 profiles / 2 scenes / 23,519 actions.
+- Private candidate XML: 5,607,668 bytes; SHA256 `D69480C9A212430D5D46753E3A05CBF4DB52045A6A8F967605BD3A3631CAB66E`.
+- Protected phone-proven tasks: raw-byte identical.
+- Static/model result: PASS; phone result: NONE.
+- Unsupported claim: stable transport-level notification replay identity; Option A Phase 2 HOLD.
+- Current status: `OPTION A PHASE 1 DURABLE CONVERSATION CONTINUITY CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT, SHEET MIGRATION, PHONE IMPORT, AND CONTROLLED PHONE PROOF`.

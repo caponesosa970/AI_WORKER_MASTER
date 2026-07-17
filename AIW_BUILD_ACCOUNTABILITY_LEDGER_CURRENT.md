@@ -1442,3 +1442,18 @@ No percentage change. Current tracker remains `8/14 locked = 57%`.
 - Independent proof: structural validator, direct Tasker inspection, two connected state models, bounded fault injection, mutation testing, and at least 100,000 randomized schedules.
 - Prohibited actions performed: `NONE`. No live Sheet mutation, Tasker import/run, profile enablement, real Send, phone execution, PR merge, or release claim.
 - Decision: `FINAL INTEGRATED FIXTURE-SAFETY REPAIR CANDIDATE / HOLD FOR CONTROLLER FULL ARTIFACT AUDIT AND LIVE FIXTURE SELECTION`.
+
+## Accountability ID AIW-OPTION-A-PHASE1-CONVERSATION-CONTINUITY-20260717
+
+- Assigned issue: `ISSUE_FINAL_CONVERSATION_GROUPING_AND_ARCHIVE_CONTEXT_INCOMPLETE`.
+- Authorized base SHA256: `58A5229EB7F6892C03AD799BB7A4C3144C59ACD4DEC0E5B2235F0AAF68EEF76B`.
+- Authorized existing-task scope: 262, 273, 276, 278, 282, and 284.
+- Runtime result: one durable ordered conversation group for one to four messages, persisted quiet cutoff and legal state transitions, confirmed Archive history, one reply, one possible-click path, exact companion finalization, and bounded recovery.
+- Existing-task preservation: every other existing Task block is raw-byte identical; the eight named phone-proven tasks are independently hash-equal.
+- Added helpers: Tasks 309-326; action counts 221, 46, 331, 98, 138, 175, 36, 139, 147, 172, 26, 221, 48, 295, 82, 244, 130, and 474.
+- Candidate XML: 5,607,668 bytes; SHA256 `D69480C9A212430D5D46753E3A05CBF4DB52045A6A8F967605BD3A3631CAB66E`.
+- Static evidence: independent runtime-contract validator 61/61 PASS; standard Tasker audit PASS; complete analyzer PASS; 18/18 XML guard mutants detected.
+- Modeled evidence: 32 scenarios, 10 state-boundary crashes, 100,000 schedules, 2,400,000 operations, and zero invariant failures.
+- Transport boundary: source-stable notification replay identity not proven; no text fingerprint added; Phase 2 HOLD.
+- Prohibited actions performed: `NONE`. No live Sheet access/mutation, Tasker import/run, profile enablement, OpenAI call, TextNow action, Send, PR merge, or release claim.
+- Decision: `OPTION A PHASE 1 DURABLE CONVERSATION CONTINUITY CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT, SHEET MIGRATION, AND CONTROLLED PHONE PROOF`.

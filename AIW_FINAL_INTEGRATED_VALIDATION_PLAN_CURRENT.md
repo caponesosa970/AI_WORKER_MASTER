@@ -159,3 +159,25 @@ This section supersedes every fixed-row validation-fixture example in earlier pl
 - Cleanup performs exact read-before-clear, requires the current run, role, row, identity, and permitted disposable contents, then performs exact blank readback.
 - Already-blank cleanup writes nothing. Any ambiguity, unexpected content, plugin error, stale authorization, or bounds conflict returns HOLD with zero writes.
 - The controller must select live rows later from fresh read-only evidence. Sheet migration and phone import remain HOLD until that evidence and the complete artifact audit pass.
+
+## Option A Phase 1 Conversation-Continuity Amendment
+
+This section supersedes the earlier one-inbound Phase 4 description only.
+
+Phase 4 now requires one approved test contact, two to four rapid legitimate inbound messages, exact journal evidence for every OriginalID, the 10-second persisted-`LoggedAt` quiet gate, one durable ordered group, one context-aware OpenAI reply, one READY_TO_SEND anchor, zero sendable companions, one Send click maximum, independent confirmation, exact anchor Archive, exact companion Archive, `GROUP_COMPLETE`, clean ownership, and zero second Send.
+
+The validation run must use a controller-approved confirmed Archive history fixture from the existing one-shot fixture contract. No fixed row or identity is permitted. Phase 7 must clear only the current run-owned journal, Archive, and ConversationGroups records after exact identity reads and exact blank readbacks.
+
+Offline acceptance additionally requires:
+
+- all ten durable group states and legal transition edges;
+- exact source-order and normalized-sender membership;
+- duplicate member row/ID rejection;
+- a four-message V1 capacity with excess left eligible;
+- Archive-history sender isolation, latest-five and character caps, and grouped-reply collapse;
+- active-group serialization before any second group can bind;
+- pre-Send membership freshness and lifecycle-only routing after a possible click;
+- recovery at every group-state boundary;
+- 32 named conversation scenarios, 100,000 randomized schedules, at least 1,000,000 operations, and mutations for all critical guards.
+
+Transport-level notification replay identity remains a separate Option A Phase 2 HOLD. No text fingerprint is authorized.

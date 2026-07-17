@@ -58,3 +58,16 @@ Generated reports are evidence inputs, not self-authenticating proof. ChatGPT mu
 ## Tracker effect
 
 None. Main-gate count remains `13/14 locked = 93%`. Detailed remaining tracker remains `40 total / 25 phone-runtime / 15 non-phone` unless the controller records a later decision.
+
+## Option A Phase 1 — 2026-07-17
+
+- Scope accepted: durable conversation continuity only; no general heartbeat or production event ledger.
+- Exact base verified: 4,876,933 bytes; SHA256 `58A5229EB7F6892C03AD799BB7A4C3144C59ACD4DEC0E5B2235F0AAF68EEF76B`.
+- Existing tasks changed: 262, 273, 276, 278, 282, and 284 only.
+- Added helpers: 309-326, all below 500 actions, with explicit collision settings and no profile/scene caller.
+- Protected result: Tasks 71, 199, 223, 225, 226, 227, 230, and 231 are raw-byte identical.
+- Codex correction during audit: added completed-group lookup for validation, exact Archive cleanup readback, a controller-approved history-fixture gate, legal state-edge enforcement, duplicate member rejection, and single-active-group serialization before packaging.
+- Independent evidence: standard Tasker audit PASS; conversation validator 61/61 PASS; 18/18 XML mutants detected; 100,000 randomized schedules and 2,400,000 operations PASS.
+- Operator action during build: `NONE`.
+- Prohibited actions performed: `NONE`.
+- Phone proof, import approval, Gate 14 closure, merge, and release: `NOT CLAIMED`.

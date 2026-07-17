@@ -610,3 +610,38 @@ Codex records direct Sosa phone proof but does not claim it independently. Phone
 | FVS-022 | Gate 14 and production release are complete | Final controller audit, phone import/render, orchestrator, and direct phone lifecycle proof remain | UNSUPPORTED / BLOCKED |
 
 No generated report proves itself: FVS-006 through FVS-019 require direct XML inspection, an independent validator, a separate executable model, or more than one of those sources.
+
+## Option A Phase 1 Durable Conversation Continuity
+
+| ID | Claim | Independent evidence | Status |
+|---|---|---|---|
+| CC-P1-001 | Exact fixture-safety R1 base was used | Independent SHA recomputation: `58A5229EB7F6892C03AD799BB7A4C3144C59ACD4DEC0E5B2235F0AAF68EEF76B` | PROVEN STATIC |
+| CC-P1-002 | Only Tasks 262, 273, 276, 278, 282, and 284 changed among existing tasks | Raw Task-block diff and independent DOM validator | PROVEN STATIC |
+| CC-P1-003 | Phone-proven Tasks 71, 199, 223, 225, 226, 227, 230, and 231 are raw-byte identical | Per-task SHA comparison | PROVEN STATIC |
+| CC-P1-004 | Tasks 27, 28, 69, and 222 are unchanged and unreachable from final production/validation roots | Raw comparison and complete call-graph BFS | PROVEN STATIC |
+| CC-P1-005 | Every added conversation helper is below 500 actions, explicitly collision-configured, Project-registered, and has no profile/scene caller | Complete task-property and reverse-caller inventory | PROVEN STATIC |
+| CC-P1-006 | Quiet authority is persisted IngressJournal LoggedAt and waits 10 seconds before ownership or writes | Direct Task 309/317 action-order inspection and quiet mutant/model | PROVEN STATIC / MODELED |
+| CC-P1-007 | Quiet HOLD makes zero group/Sheet writes, OpenAI calls, locks, and Send calls | Read-only plugin inventory for Task 309 and zero-side-effect model case | PROVEN STATIC / MODELED |
+| CC-P1-008 | Membership is exact same normalized sender, source ordered, ID-preserving, capacity four, and duplicate-row/ID rejecting | Task 309 direct inspection and scenarios 2-6 | PROVEN STATIC / MODELED |
+| CC-P1-009 | Excess messages are not consumed and only one nonterminal group binds in the serialized route | Task 309/317 active-group guard and randomized invariant | PROVEN STATIC / MODELED |
+| CC-P1-010 | Group creation and companion binding use exact reads, one bounded write, readback, and durable progress | Tasks 311-317 direct inspection and bind fault injection | PROVEN STATIC / MODELED |
+| CC-P1-011 | Every state transition requires exact source state, legal edge, write, and exact readback | Task 316 edge inventory, transition mutant, and state model | PROVEN STATIC / MODELED |
+| CC-P1-012 | Archive history is same-sender, confirmed DONE only, latest five, character-bounded, and no-cache-on-failure | Task 318 direct inspection and scenarios 20-24 | PROVEN STATIC / MODELED |
+| CC-P1-013 | A completed grouped history turn contributes ordered inbound members and one assistant reply | Durable schema plus Task 318 collapse logic and collapse mutation | PROVEN STATIC / MODELED |
+| CC-P1-014 | Single-message processing still uses unchanged Task 233 and protected Send/confirm/Archive tasks | Call graph and protected-task hashes | PROVEN STATIC |
+| CC-P1-015 | Pre-Send checks exact group/member/reply identity and detects stale pre-freeze membership | Task 320 direct inspection and freshness mutation/model | PROVEN STATIC / MODELED |
+| CC-P1-016 | No automatic second Send occurs after any possible click | Task 262 lifecycle-only branch, Task 321 durable state, recovery no-Send call graph, and 2.4M-operation invariant | PROVEN STATIC / MODELED |
+| CC-P1-017 | Confirmation and anchor Archive precede companion DONE/Archive | Task 262/322 action order, unchanged Tasks 225/226, and fault model | PROVEN STATIC / MODELED |
+| CC-P1-018 | Companion finalization is exact and idempotent; GROUP_COMPLETE requires all members archived | Task 322 read/write/readback flow, restart cases, and completion mutation | PROVEN STATIC / MODELED |
+| CC-P1-019 | Startup recovery classifies every partial group state without blind NEW reset or Send retry | Task 278/323 call graph, ten state-boundary crashes, and repeated-recovery scenario | PROVEN STATIC / MODELED |
+| CC-P1-020 | AutoSheets operations clear arrays/errors, route numeric plugin errors, use at most two reads, disable offline writes, and read back writes | Plugin property inventory and independent validator | PROVEN STATIC |
+| CC-P1-021 | Phase 4 requires dynamic approved contact/history fixtures and two to four rapid events | Tasks 273/325 and fixture-contract comparison | PROVEN STATIC |
+| CC-P1-022 | Phase 7 cleans only run-owned conversation validation records with exact readback | Tasks 276/326 direct inspection and cleanup guard mutations | PROVEN STATIC / MODELED |
+| CC-P1-023 | 100,000 randomized schedules and 2,400,000 modeled operations have zero invariant failures | Independent state model report | PROVEN MODELED |
+| CC-P1-024 | All 18 critical XML guard mutations are detected | In-memory parseable XML mutation run plus independent guard inventory | PROVEN STATIC |
+| CC-P1-025 | Stable transport replay identity is proven | AutoNotification source audit finds available candidate identifiers but current OriginalID remains TIMEMS plus random values | UNSUPPORTED / OPTION A PHASE 2 HOLD |
+| CC-P1-026 | The additive ConversationGroups schema exists and works in the live Sheet | No live Sheet access or migration occurred | UNSUPPORTED / HOLD |
+| CC-P1-027 | The package imports/renders and works on the phone | No Tasker import or phone run occurred | UNSUPPORTED / HOLD |
+| CC-P1-028 | Gate 14 and production release are complete | Artifact audit, migration, phone proof, final orchestrator, and controller decision remain | UNSUPPORTED / BLOCKED |
+
+Generated reports do not self-prove CC-P1 claims. Static PASS rows require direct XML/task-block inspection or a second implementation; modeled rows require the independent executable state model and mapped runtime guards.

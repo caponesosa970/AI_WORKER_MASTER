@@ -105,3 +105,60 @@ An unresolved output, plugin error, partial value, unexpected value, stale array
 ## Migration decision
 
 No fixture rows are currently selected. Sheet migration, Tasker import, the final orchestrator, PR merge, Gate 14 closure, and production release remain HOLD.
+
+## Conversation continuity additive migration
+
+Option A Phase 1 adds one required tab and two formula/view helpers. This migration is additive and does not restructure phone-proven `Sheet1` A:I data.
+
+### ConversationGroups
+
+- Tab: `ConversationGroups`
+- Schema version: `AIW_CONVERSATION_V1`
+- Header range: `A1:AP1`
+- Runtime row range: `A2:AP<configured maximum>`
+- Physical maximum: `CONTROLLER_VERIFIED`
+- Configured runtime maximum: `CONTROLLER_SUPPLIED`, at least 2, no greater than the verified physical maximum, and no greater than 1000
+- V1 member capacity: 4
+
+Exact headers, in order:
+
+`SchemaVersion, GroupID, SenderKey, AnchorSheet1Row, AnchorOriginalID, MemberCount, Member1Row, Member1OriginalID, Member2Row, Member2OriginalID, Member3Row, Member3OriginalID, Member4Row, Member4OriginalID, GroupState, QuietCutoffMs, BoundAtMs, ConfirmedReply, RecoveryCount, LastError, LastUpdateMs, ConfirmationState, ArchiveState, FinalizedMemberCount, OwnerToken, OwnerStartedAtMs, LedgerRow, FreezeLoggedAtMs, HistoryReference, HistoryTurnCount, PromptReference, TransitionSequence, BoundMask, ArchivedMask, MemberCapacity, ValidationRunContext, Member1Message, Member2Message, Member3Message, Member4Message, SenderDisplay, FixtureRole`
+
+### Required views
+
+`ConversationGroupSlotView!A2` is a hint for the next blank group row within the configured maximum. The runtime still performs an exact direct-row A:AP blank read before creating a group.
+
+`ConversationSchemaCheck!A2:G2` must return:
+
+1. `AIW_CONVERSATION_V1`
+2. `PASS`
+3. exact physical maximum for `ConversationGroups`
+4. configured runtime maximum for `ConversationGroups`
+5. exact physical maximum for `Archive`
+6. exact physical maximum for `Sheet1`
+7. exact physical maximum for `IngressJournal`
+
+Task 284 directly verifies `ConversationGroups!A1:AP1` and this schema-check result before START can pass. Views are hints only and never authorize a write.
+
+### Migration order
+
+1. Back up the workbook and record workbook revision evidence.
+2. Add `ConversationGroups` with the exact A:AP headers.
+3. Set a controller-approved physical row count and a smaller or equal configured runtime maximum.
+4. Add `ConversationGroupSlotView` and `ConversationSchemaCheck` formulas.
+5. Verify the header, physical maximums, configured maximum, and blank runtime range read-only.
+6. Re-verify all existing fixture-contract roles and protected rows without mutation.
+7. Keep runtime disabled until the exact candidate is imported/rendered and controller audit approves a controlled phone test.
+
+### Rollback order
+
+1. STOP and keep profiles disabled.
+2. Preserve/export all nonterminal ConversationGroups rows as private evidence.
+3. Do not reset any `GROUP_BOUND`, possible-click, confirmed, or partially archived member to `NEW`.
+4. Reconcile or place every nonterminal group in explicit review.
+5. Remove formula/view helpers only after no nonterminal group remains.
+6. Remove the additive tab only after controller approval and a verified backup.
+
+### Privacy and authorization
+
+ConversationGroups contains private sender, message, reply, row, OriginalID, and transaction data. It must remain private. Codex did not access or mutate the live Sheet and selected no live row. The migration remains HOLD pending controller-approved read-only physical-bound evidence and full artifact audit.

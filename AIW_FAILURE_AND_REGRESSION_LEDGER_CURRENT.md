@@ -1066,3 +1066,23 @@ Gate 13 is `LOCKED / PASS`; operational tracker is `13/14 locked = 93%`. Gate 14
 - Codex responsibility: preserve the exact integrated base outside the authorized validation-only scope and map every PASS claim to independent evidence.
 - User/operator responsibility: `NONE`.
 - Phone-proof limitation: no Tasker import or execution occurred; no phone proof, Gate 14 closure, or release is claimed.
+
+## ISSUE_FINAL_CONVERSATION_GROUPING_AND_ARCHIVE_CONTEXT_INCOMPLETE
+
+- First detected: `2026-07-17`.
+- Classification: confirmed integrated-runtime conversation-continuity defect.
+- Affected base: SHA256 `58A5229EB7F6892C03AD799BB7A4C3144C59ACD4DEC0E5B2235F0AAF68EEF76B`.
+- Affected route: `199 → 263 → 282 → 262`; legacy grouping used Task 27, did not durably bind companions, and did not reach Task 28 from the active route.
+- Direct evidence: Task 27 held membership only in Tasker variables; Task 282 generated one reply but left companions `NEW`; Task 170 required newest-message-only behavior and no Archive context; Task 278 had no group recovery; Task 262 finalized only the anchor lifecycle.
+- Root cause: conversation membership, lifecycle state, reply ownership, and companion Archive progress had no durable normalized transaction shared by processing, Send, Archive, and recovery.
+- Contributing cause: exact event-ID suppression proves identity duplication only; it does not prove group completion or transport-delivery replay identity.
+- Required repair: additive bounded ConversationGroups ledger, persisted 10-second quiet gate, exact durable bind, conversation-specific confirmed-history prompt, pre-Send freshness, possible-click no-retry, exact companion finalization, and state-aware recovery.
+- Static repair status: `IMPLEMENTED / TWO INDEPENDENT STATIC AUDITS PASS / MODEL AND MUTATION PASS`.
+- Existing semantic scope: Tasks 262, 273, 276, 278, 282, and 284 only.
+- Added scope: Tasks 309-326, each below 500 actions and unreachable from profiles/scenes.
+- Regression boundary: phone-proven Tasks 71, 199, 223, 225, 226, 227, 230, and 231 are raw-byte identical; Tasks 27, 28, 69, and 222 are raw-byte identical and unreachable from final controls.
+- Controller responsibility: audit the exact private artifact, approve additive Sheet migration and dynamic validation records, then authorize controlled phone import/proof.
+- Codex responsibility: preserve protected runtime blocks, provide independently reproducible artifacts and evidence, and keep unsupported runtime claims on HOLD.
+- User/operator responsibility: `NONE`.
+- Remaining unsupported claim: a stable transport-level AutoNotification replay identity. This remains Option A Phase 2 HOLD.
+- Phone-proof limitation: no Sheet access, Tasker import/run, profile enablement, OpenAI call, Send, Archive, final orchestrator, or phone proof occurred during the build.
