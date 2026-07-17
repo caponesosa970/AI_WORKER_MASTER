@@ -1051,3 +1051,18 @@ Gate 13 is `LOCKED / PASS`; operational tracker is `13/14 locked = 93%`. Gate 14
 - Prevention: the next chat must read origin/main first, then the current PR head, verify the handoff commit and private D3A hash, exclude superseded sources, and HOLD on any missing or contradictory input.
 - Tracker impact: none. Main remains `13/14 locked = 93%`; the detailed remaining tracker remains 40/25/15.
 - Runtime impact: none. No XML, Sheet, Tasker, profile, TextNow, OpenAI, or phone state changed during this documentation sync.
+
+## ISSUE_FINAL_VALIDATION_UNVERIFIED_FIXTURE_CLEANUP
+
+- Classification: confirmed final-validation runtime safety defect; production behavior is not implicated.
+- Original defect evidence: Tasks 272 and 276 supplied fixed cleanup rows, including protected Sheet1 rows 144-147 and out-of-bounds Archive/DeadArchive row 999; Task 293 could issue blank writes after validating only a layer name and numeric row.
+- Root cause: the final-validation subsystem lacked one authoritative, run-owned fixture contract covering row identity, physical bounds, protected columns, disposable content, and one-shot authorization.
+- Affected existing tasks: 237, 268, 270, 272, 276, and 293 only.
+- Required repair: verify the entire controller-supplied fixture contract before Phase 0, create fixtures only after exact blank reads, clean only after exact run/role/identity/content reads, read back every write, and consume authorization after use.
+- Static repair status: `IMPLEMENTED / INDEPENDENT STATIC AND MODELED PROOF PASS / HOLD FOR CONTROLLER ARTIFACT AUDIT`.
+- Regression boundary: Task 269 and legacy Task 294 remain raw-byte identical; Task 294 has no reachable final-validation, profile, scene, or production caller.
+- Unsafe-path result: missing, stale, conflicting, unresolved, occupied, out-of-bounds, wrong-identity, wrong-run, plugin-error, and partial-content cases return HOLD with zero modeled writes.
+- Controller responsibility: select all live fixture rows later using fresh read-only bound and blankness evidence, then supply one complete one-shot contract.
+- Codex responsibility: preserve the exact integrated base outside the authorized validation-only scope and map every PASS claim to independent evidence.
+- User/operator responsibility: `NONE`.
+- Phone-proof limitation: no Tasker import or execution occurred; no phone proof, Gate 14 closure, or release is claimed.

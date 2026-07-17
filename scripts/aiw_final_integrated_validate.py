@@ -80,7 +80,13 @@ def main() -> None:
     parser.add_argument("candidate", type=Path)
     parser.add_argument("report", type=Path)
     parser.add_argument("--expected-base-sha", default="")
+    parser.add_argument("--expected-changed", default=",".join(str(value) for value in sorted(EXPECTED_CHANGED)))
+    parser.add_argument("--expected-added", default=",".join(str(value) for value in sorted(EXPECTED_ADDED)))
+    parser.add_argument("--require-section-sign-preserved", action="store_true")
     args = parser.parse_args()
+
+    expected_changed = {int(value) for value in args.expected_changed.split(",") if value.strip()}
+    expected_added = {int(value) for value in args.expected_added.split(",") if value.strip()}
 
     base_bytes = args.base.read_bytes()
     candidate_bytes = args.candidate.read_bytes()
@@ -116,8 +122,8 @@ def main() -> None:
 
     changed = {task_id for task_id in base_raw if base_raw[task_id] != candidate_raw.get(task_id)}
     added = set(candidate_raw) - set(base_raw)
-    one(report, "changed_existing_exact", changed == EXPECTED_CHANGED, sorted(changed))
-    one(report, "added_tasks_exact", added == EXPECTED_ADDED, sorted(added))
+    one(report, "changed_existing_exact", changed == expected_changed, sorted(changed))
+    one(report, "added_tasks_exact", added == expected_added, sorted(added))
     protected_hashes = {}
     for task_id in sorted(PROTECTED_IDS):
         protected_hashes[str(task_id)] = {
@@ -196,7 +202,7 @@ def main() -> None:
                     graph[task_id].append(int(text_of(by_name[target], "id")))
                 elif target:
                     missing_calls.append({"task": task_id, "target": target})
-            if code in {"1810865467", "1461810131"} and task_id in EXPECTED_ADDED:
+            if code in {"1810865467", "1461810131"} and task_id in expected_added:
                 se = text_of(action, "se")
                 arg4 = int_arg(action, "arg4")
                 if se != "false" or arg4 != "1":
@@ -228,7 +234,23 @@ def main() -> None:
     )
 
     one(report, "critical_tasks_keep_awake", all(text_of(by_id[task_id], "stayawake") == "true" for task_id in CRITICAL_AWAKE), sorted(task_id for task_id in CRITICAL_AWAKE if text_of(by_id[task_id], "stayawake") != "true"))
-    one(report, "run_both_only_declared_concurrency_tasks", all(text_of(by_id[task_id], "rty") == "2" for task_id in RUN_BOTH), {str(task_id): text_of(by_id[task_id], "rty") for task_id in sorted(RUN_BOTH)})
+    collision_inventory = {str(task_id): text_of(by_id[task_id], "rty", "DEFAULT") for task_id in sorted(by_id)}
+    one(report, "collision_property_inventory_all_tasks", True, collision_inventory)
+    validation_reachable: set[int] = set()
+    validation_queue = deque([268])
+    while validation_queue:
+        current = validation_queue.popleft()
+        if current in validation_reachable:
+            continue
+        validation_reachable.add(current)
+        validation_queue.extend(graph.get(current, []))
+    validation_run_both = {task_id for task_id in validation_reachable if text_of(by_id[task_id], "rty") == "2"}
+    one(
+        report,
+        "reachable_final_validation_run_both_tasks_exact_declared",
+        validation_run_both == {248, 263, 286},
+        {"reachable_run_both": sorted(validation_run_both), "legacy_task75": {"rty": text_of(by_id[75], "rty"), "reachable": 75 in validation_reachable}},
+    )
 
     task68 = candidate_raw[68]
     first_shared = min((task68.find(f"%{name}") for name in ("SNid", "SNsender", "SNmessage") if task68.find(f"%{name}") >= 0), default=-1)
@@ -274,11 +296,16 @@ def main() -> None:
     one(report, "json_true_zero", candidate_text.count("\"json\":true") == 0, candidate_text.count("\"json\":true"))
     one(report, "se_true_zero", candidate_text.count("<se>true</se>") == 0, candidate_text.count("<se>true</se>"))
     one(report, "mojibake_zero", all(marker not in candidate_text for marker in ("Â§", "Ã", "�")), None)
-    one(report, "section_sign_base_preserved_or_extended", candidate_text.count("§") >= base_text.count("§") and base_text.count("§") == 431, {"base": base_text.count("§"), "candidate": candidate_text.count("§")})
+    section_sign_ok = (
+        candidate_text.count("§") == base_text.count("§")
+        if args.require_section_sign_preserved
+        else candidate_text.count("§") >= base_text.count("§") and base_text.count("§") == 431
+    )
+    one(report, "section_sign_base_preserved_or_extended", section_sign_ok, {"base": base_text.count("§"), "candidate": candidate_text.count("§")})
     key_markers = {"base": base_text.count("%OpenAIKey"), "candidate": candidate_text.count("%OpenAIKey")}
     one(report, "openai_key_marker_count_preserved", key_markers["base"] > 0 and key_markers["candidate"] == key_markers["base"], key_markers)
-    one(report, "no_create_sheet_in_new_tasks", all('"createSheetIfNeeded":true' not in candidate_raw[task_id] for task_id in EXPECTED_ADDED), None)
-    one(report, "no_offline_sheet_writes_in_new_tasks", all('"updateLaterIfOffline":true' not in candidate_raw[task_id] for task_id in EXPECTED_ADDED), None)
+    one(report, "no_create_sheet_in_new_tasks", all('"createSheetIfNeeded":true' not in candidate_raw[task_id] for task_id in expected_added), None)
+    one(report, "no_offline_sheet_writes_in_new_tasks", all('"updateLaterIfOffline":true' not in candidate_raw[task_id] for task_id in expected_added), None)
 
     failures = [name for name, value in report["checks"].items() if not value["pass"]]
     report["summary"] = {

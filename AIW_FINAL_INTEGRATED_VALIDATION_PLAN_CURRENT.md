@@ -147,3 +147,15 @@ Current status remains:
 - phone import: HOLD;
 - PR merge: BLOCKED;
 - release: BLOCKED.
+
+## Fixture-Safety Contract Amendment
+
+This section supersedes every fixed-row validation-fixture example in earlier planning text.
+
+- Task 268 must obtain one complete controller-supplied, one-shot fixture contract and return `FIXTURE_CONTRACT_READY` before Task 269 or any phase is reachable.
+- The contract must bind the current validation run ID, layer, physically valid row, approved maximum row, protected columns, expected fixture identity, disposable payload, and role.
+- There are no default or example fixture rows, IDs, senders, messages, or layers in runtime.
+- Setup performs exact read-before-write, requires the protected range to be blank, then performs exact identity readback.
+- Cleanup performs exact read-before-clear, requires the current run, role, row, identity, and permitted disposable contents, then performs exact blank readback.
+- Already-blank cleanup writes nothing. Any ambiguity, unexpected content, plugin error, stale authorization, or bounds conflict returns HOLD with zero writes.
+- The controller must select live rows later from fresh read-only evidence. Sheet migration and phone import remain HOLD until that evidence and the complete artifact audit pass.

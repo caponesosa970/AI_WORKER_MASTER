@@ -1428,3 +1428,17 @@ No percentage change. Current tracker remains `8/14 locked = 57%`.
 - Prohibited actions performed: NONE. No Tasker, Sheet, OpenAI, TextNow, profile, merge, import approval, or phone-proof claim.
 - Tracker effect: none; remains 40/25/15 and `13/14 locked = 93%`.
 - Decision: `GATE 14D3A DURABLE OWNED ADMISSION CANDIDATE / HOLD FOR CHATGPT FULL ARTIFACT AUDIT`.
+
+## Accountability ID AIW-FINAL-FIXTURE-SAFETY-REPAIR-20260717
+
+- Assigned issue: `ISSUE_FINAL_VALIDATION_UNVERIFIED_FIXTURE_CLEANUP`.
+- Controller authorization: change only existing Tasks 237, 268, 270, 272, 276, and 293, plus sub-500-action validation-only helpers and their Project registry references.
+- Original defect: fixed or insufficiently authorized cleanup targets could be written or cleared without physical-bound, blankness, run-ownership, fixture-identity, or disposable-content proof.
+- Codex responsibility: implement a centralized fail-closed contract, preserve all production tasks byte-for-byte, remove Task 294 from the reachable orchestrator graph without modifying it, and independently test every unsafe branch for zero writes.
+- Controller responsibility: select and authorize fresh live rows later from exact read-only physical-bound and blankness evidence.
+- User/operator responsibility: `NONE`.
+- Runtime result: dynamic controller-supplied roles only; no default rows, IDs, senders, messages, or layers; exact reads before writes; exact readbacks after writes; one-shot authorization consumed after Phase 7.
+- Helper disposition: fourteen added validation-only helpers, each below 500 actions, registered only in the Project and unreachable from profiles, scenes, and production callers.
+- Independent proof: structural validator, direct Tasker inspection, two connected state models, bounded fault injection, mutation testing, and at least 100,000 randomized schedules.
+- Prohibited actions performed: `NONE`. No live Sheet mutation, Tasker import/run, profile enablement, real Send, phone execution, PR merge, or release claim.
+- Decision: `FINAL INTEGRATED FIXTURE-SAFETY REPAIR CANDIDATE / HOLD FOR CONTROLLER FULL ARTIFACT AUDIT AND LIVE FIXTURE SELECTION`.

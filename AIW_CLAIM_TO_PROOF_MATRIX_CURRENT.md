@@ -581,3 +581,32 @@ Tracker remains 40/25/15 and `13/14 locked = 93%`. Codex claims no phone proof a
 | HANDOFF-013 | This sync changed no runtime or private artifact | Authorized Git diff and private-file scan | PROVEN REPOSITORY |
 
 Codex records direct Sosa phone proof but does not claim it independently. Phone import, live activation, PR merge, Gate 14 closure, and release remain blocked.
+
+## Final Validation Fixture-Safety Repair Claims
+
+| ID | Claim | Independent evidence | Status |
+|---|---|---|---|
+| FVS-001 | The exact authorized integrated XML is the repair base | Pre-build filename, byte count, and SHA256 verification | PROVEN STATIC |
+| FVS-002 | Existing semantic changes are limited to Tasks 237, 268, 270, 272, 276, and 293 | Raw task-block hash comparison | PROVEN STATIC |
+| FVS-003 | Task 269 and Task 294 are byte-identical to the base | Raw task-block SHA256 comparison | PROVEN STATIC |
+| FVS-004 | Every production task remains byte-identical | Independent all-task comparison excluding the six authorized validation tasks and added helpers | PROVEN STATIC |
+| FVS-005 | Profiles and scenes are unchanged; Project registry delta contains only validation helpers | Raw profile/scene comparison and registry-reference set comparison | PROVEN STATIC |
+| FVS-006 | Task 268 gates Phase 0 and all later phases on `FIXTURE_CONTRACT_READY` | Independent control-flow and reachable-call inspection | PROVEN STATIC |
+| FVS-007 | Missing, malformed, stale, duplicate, or conflicting fixture configuration performs zero writes | Independent validator, fault cases, and randomized executable model | PROVEN MODELED |
+| FVS-008 | No reachable fixed references remain to Sheet1 rows 144-147, Archive/DeadArchive row 999, or fixture IDs ending 001/002 | Reachable string scan rooted at Task 268 | PROVEN STATIC |
+| FVS-009 | Fixture setup reads exact protected columns before one conditional write and performs exact readback | Independent action-order validator and setup mutations | PROVEN STATIC / MODELED |
+| FVS-010 | Cleanup reads before clearing and requires exact layer, row, run ID, role, fixture identity, and permitted disposable state | Independent action-order validator and wrong-owner/identity mutations | PROVEN STATIC / MODELED |
+| FVS-011 | Already-blank cleanup returns clean with zero writes | Independent state-model case | PROVEN MODELED |
+| FVS-012 | Physical bounds are checked before setup and cleanup writes | Independent bounds cases and removed-bound mutation | PROVEN STATIC / MODELED |
+| FVS-013 | AutoSheets reads clear stale arrays/outputs/errors, use numeric error routing, and stop after at most two attempts | Direct plugin-action inspection and error-routing mutation | PROVEN STATIC / MODELED |
+| FVS-014 | One-shot authorization cannot be reused by a later validation run | Runtime-variable ownership map, stale-authorization cases, and mutation | PROVEN STATIC / MODELED |
+| FVS-015 | Task 294 is unreachable from Task 268, profiles, scenes, production, and indirect validation paths | Complete call graph and reverse-call scan | PROVEN STATIC |
+| FVS-016 | All added validation-only helpers remain below 500 actions and have no profile/scene/production caller | Full task-property and reverse-call inventory | PROVEN STATIC |
+| FVS-017 | The corrected collision-setting claim covers all tasks and classifies reachability separately | Full `rty` property inventory rooted at the final orchestrator | PROVEN STATIC |
+| FVS-018 | Unsafe conditions and weakened critical guards are detected | Independent fault injection and eight critical mutation results | PROVEN MODELED |
+| FVS-019 | At least 100,000 randomized schedules and 1,000,000 operations complete with zero unsafe writes | Independent model reports with counters | PROVEN MODELED |
+| FVS-020 | The repaired XML works on the target phone | No phone import or execution | UNSUPPORTED / HOLD |
+| FVS-021 | Live fixture rows are safe and selected | Controller has not yet supplied fresh read-only row evidence | UNSUPPORTED / HOLD |
+| FVS-022 | Gate 14 and production release are complete | Final controller audit, phone import/render, orchestrator, and direct phone lifecycle proof remain | UNSUPPORTED / BLOCKED |
+
+No generated report proves itself: FVS-006 through FVS-019 require direct XML inspection, an independent validator, a separate executable model, or more than one of those sources.
