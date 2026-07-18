@@ -181,3 +181,74 @@ Never collapse separate workbook IDs or datasource authorities into one abstract
 | Gate 11 exact-row Archive | LOCKED | Preserve exact-row Archive and source-clear boundaries. | Gate 14 regression audit |
 | Gate 12 queue lifecycle | LOCKED | Preserve one lifecycle transition per cycle. | Gate 14 regression audit |
 | Gate 13 timer, STOP, background guard, recovery | LOCKED | Preserve STOP, busy overlap, screen-off, timer, and recovery behavior. | Gate 14 regression audit |
+
+## ISSUE_GATE14_FINAL_VALIDATOR_ACTION_BOUND_HOLD
+
+Status: `OPEN / HOLD`
+
+First detected: 2026-07-18
+
+Affected work:
+
+- Final Gate 14 private-copy validator Build 2.
+- Public source synchronization for diagnostic phone proof.
+
+Direct evidence:
+
+- The accepted no-write diagnostic phone run `G14D-1784348825` resolved the AutoSheets blank/populated/failure output contract.
+- The final validator prompt requires a complete private-copy write, row-level readback, 36-cell readback, QueueView settlement, OpenSlot proof, precleanup ownership proof, exact cleanup, postcleanup blank proof, QueueView removal, OpenSlot restoration, fail-closed evidence, and forbidden-path counters.
+- A direct single-runner implementation using only proven Tasker/native/plugin action shapes exceeds the current runner action limit.
+- The prompt authorizes helper tasks, but the named helper contracts restrict them to audit-only/no-plugin behavior, so they cannot safely absorb the plugin-bearing write/read/cleanup phases without a controller correction.
+
+Current root cause:
+
+The remaining validator behavior is larger than the current runner action bound when implemented with proven action shapes and explicit fail-closed evidence. The helper allowance is not broad enough to split the plugin-bearing phases safely.
+
+Diagnostic phone proof now locked:
+
+- Artifact: `AIW_G14_AUTOSHEETS_CONTRACT_DIAGNOSTIC_NO_WRITE.tsk.xml`
+- SHA256: `C5818297BEE535DF5B9B6DB7C862B63F15949483BA73A2D7C59B12DCE97AE411`
+- Phone run: `G14D-1784348825`
+- Blank success: literal `%err`, literal `%errmsg`, A:I counts all `0`.
+- Populated success: literal `%err`, literal `%errmsg`, A:I counts all `1`.
+- Controlled failure: numeric `%err`, missing-tab `%errmsg`, A:I counts all `0`, Continue After Error confirmed.
+
+Rejected R1 regression:
+
+R1 must not be reused. Its broad `%err` regex falsely classifies the phone-proven success rendering as failure.
+
+Prevention rule:
+
+Before any new final-validator build, the controller must reconcile behavior size with Tasker action bounds. If helper tasks are authorized to carry plugin phases, their exact scope must be stated. If not, the runner action limit must be increased or the validator proof must be split by controller approval.
+
+Closing proof required:
+
+- Updated controller instruction resolving the action-bound/helper-scope conflict.
+- A candidate built from the Gate13R2 baseline only.
+- Existing baseline task/profile/scene preservation proof.
+- Production authority count preserved.
+- New validation path contains zero production authority.
+- Exact private-copy write/readback/formula/cleanup proof path configured.
+- Static and mutation audit against the exact returned artifact.
+- ChatGPT artifact approval before phone import.
+- One final phone run proving private-copy cleanup/restoration.
+
+Public-source privacy rule:
+
+- Production authority alias: `AIW_PRODUCTION_WORKBOOK_AUTHORITY_PRIVATE`.
+- Faithful private-copy authority alias: `AIW_GATE14_FAITHFUL_COPY_AUTHORITY_PRIVATE`.
+- Exact workbook IDs must remain private and must not be added to public GitHub, PR text, reports, or final returns.
+- Git history has not been purged; separate history remediation is outside this issue.
+
+Current remaining counts:
+
+- Runtime builds remaining: `1`
+- ChatGPT artifact audits remaining: `1`
+- Phone runs remaining: `1`
+- Private-copy controlled runs remaining: `1`
+- Production write runs remaining: `0`
+- Release decisions remaining: `1`
+
+Sosa responsibility: `NONE`.
+
+Tracker effect: `NONE`; tracker remains `13/14 LOCKED = 93%`.

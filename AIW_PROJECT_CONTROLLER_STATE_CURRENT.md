@@ -90,11 +90,11 @@ Status:
 
 Production workbook authority:
 
-`19-wPlSW44YW49QpisZo_VW4AAtsgoCrXgECGg3h5I3I`
+`AIW_PRODUCTION_WORKBOOK_AUTHORITY_PRIVATE`
 
 Faithful private-copy authority:
 
-`1gW6RYgssLT5KIT4C0S-FgtxUkWlk3BA_em424oTGJ1w`
+`AIW_GATE14_FAITHFUL_COPY_AUTHORITY_PRIVATE`
 
 Production workbook writes remain blocked.
 
@@ -223,3 +223,67 @@ Codex may build, audit, patch, package, and report only inside the exact scope a
 Codex does not claim phone proof, approve phone import, approve merge, move the tracker, close Gate 14, or declare release.
 
 ChatGPT must independently audit runtime artifacts and approve phone import before Sosa imports or executes them.
+
+## CURRENT GATE 14 UPDATE ? DIAGNOSTIC PHONE PROOF ACCEPTED / FINAL VALIDATOR BUILD HOLD
+
+Status date: 2026-07-18
+
+Tracker remains `13/14 LOCKED = 93%`.
+
+Gates 1-13 remain locked by direct phone proof and are regression-protected only. They are not reopened by this Gate 14 validator work.
+
+Accepted phone-proven diagnostic:
+
+- Artifact: `AIW_G14_AUTOSHEETS_CONTRACT_DIAGNOSTIC_NO_WRITE.tsk.xml`
+- SHA256: `C5818297BEE535DF5B9B6DB7C862B63F15949483BA73A2D7C59B12DCE97AE411`
+- Accepted run ID: `G14D-1784348825`
+- Blank success contract: `%err` renders as literal `%err`, `%errmsg` renders as literal `%errmsg`, and A:I array counts are all `0`.
+- Populated success contract: `%err` renders as literal `%err`, `%errmsg` renders as literal `%errmsg`, and A:I array counts are all `1`.
+- Controlled failure contract: `%err` becomes a numeric plugin error, `%errmsg` contains the missing-tab parse failure, A:I array counts are all `0`, Continue After Error works, and execution continues to completion.
+- Classification: `PHONE-PROVEN / RETIRE AFTER GATE 14 LOCK`.
+
+Confirmed R1 root cause:
+
+`AIW_GATE14_REAL_PRODUCT_CONTRACT_R1_PRIVATE.xml` is rejected because Task 329 treated the phone-proven successful unresolved `%err` rendering as an error. The rejected broad regex matched values beginning with `%` and caused a false-positive guard.
+
+Current public-source privacy rule:
+
+- Production authority alias: `AIW_PRODUCTION_WORKBOOK_AUTHORITY_PRIVATE`.
+- Faithful private-copy authority alias: `AIW_GATE14_FAITHFUL_COPY_AUTHORITY_PRIVATE`.
+- Exact workbook IDs remain private and must not be placed in public GitHub, PR text, reports, or final returns.
+- Git history has not been purged; separate history remediation is outside this Gate 14 build.
+
+Current final-validator build result:
+
+- Candidate XML: not produced.
+- Current blocker: the complete final-validator behavior could not be made to satisfy the current hard action bounds without violating the prompt's helper-task constraints. The smallest safe single-task implementation requires more than the runner action limit, while the authorized helpers are constrained to audit-only/no-plugin behavior and cannot absorb the write/read/cleanup plugin phases.
+- Runtime artifact status: `HOLD / NOT BUILT`.
+
+Remaining plan after this HOLD:
+
+- Remaining runtime builds: `1`
+- Remaining ChatGPT artifact audits: `1`
+- Remaining phone runs: `1`
+- Remaining private-copy controlled runs: `1`
+- Remaining production write runs: `0`
+- Remaining release decisions: `1`
+
+Current next action:
+
+ChatGPT/controller must either approve revised action bounds or authorize a helper split that permits plugin-bearing private-copy validation helpers. Until then, do not import, run, or build a final validator candidate.
+
+Blocked actions remain:
+
+- production workbook writes;
+- phone import;
+- Tasker execution;
+- TextNow;
+- OpenAI;
+- Send;
+- DONE;
+- Archive;
+- DeadArchive;
+- profile enablement;
+- tracker movement;
+- Gate 14 closure;
+- production release.
