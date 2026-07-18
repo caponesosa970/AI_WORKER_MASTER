@@ -4,17 +4,27 @@ Status: CURRENT OPERATIONAL SOURCE TRUTH
 
 ## STATUS
 
-13/14 LOCKED = 93%
+`STATUS = 14/14 LOCKED = 100%`
 
-GATE 14 ACTIVE / BLOCKED
+`GATES_1_TO_14 = LOCKED`
 
-RUNTIME HOLD
+`GATE_14 = PHONE-PROVEN`
+
+`FULL_PRODUCT_RELEASE = HOLD`
+
+`LIVE_ACTIVATION = OFF`
+
+`PROFILE_ACTIVATION = OFF`
+
+`PRODUCTION_WRITES = 0`
+
+`CURRENT_NEXT_CAPABILITY = DEADARCHIVE`
+
+`CURRENT_NEXT_ACTION = READ-ONLY APPLICATION-WIDE DEADARCHIVE AUDIT`
 
 ## Locked Main Gates
 
-Gates 1-13 remain `LOCKED` by direct phone proof.
-
-They must not be rebuilt, rerun, reopened, or re-proven without newer contradictory phone evidence.
+Gates 1-14 are `LOCKED` by direct phone proof. They must not be rebuilt, rerun, reopened, or re-proven without newer contradictory phone evidence.
 
 Locked gates:
 
@@ -31,195 +41,171 @@ Locked gates:
 11. Gate 11 exact-row Archive
 12. Gate 12 permanent queue lifecycle integration
 13. Gate 13 timer, STOP, background guard, and recovery
+14. Gate 14 faithful-copy AutoSheets contract and exact validation proof
 
-## Locked Sub-Proofs
+Locked sub-proofs include Gate 9A, Gate 9B0 through Gate 9B1F, and 27B no-send guard proof.
 
-- Gate 9A non-UI send-readiness
-- Gate 9B0 manual TextNow identity
-- Gate 9B1A TextNow search-navigation
-- Gate 9B1B manual thread identity
-- Gate 9B1C no-send compose safety inspection
-- Gate 9B1D manual compose-focus proof
-- Gate 9B1E manual draft insert-and-clear proof
-- Gate 9B1F exact reply compose dry-run
-- 27B no-send guard proof
+## Current Phone-Proven Full-Project Baseline
 
-## CURRENT PHONE-PROVEN BASELINE
+File: `AIW_GATE14_FINAL_PRIVATE_COPY_VALIDATOR_CANDIDATE.xml`
 
-File:
+SHA256: `A170870077C50B2350EB94F823145E5FD80A22FBEA34D1096738DDBA0EEA2B98`
 
-`GATE13R2_FULL_PROJECT_TASKER_IMPORT__CONFIRM_THREAD_NAVIGATION_PRIVATE.xml`
+Role: phone-proven full-project baseline for the next separately authorized capability.
 
-SHA256:
+Predecessor and construction ancestor:
 
-`1C4D13872C3D6B4579AA698F9E7D2F50F3E81467A4CBD4EAD63CD567087832A7`
+- File: `GATE13R2_FULL_PROJECT_TASKER_IMPORT__CONFIRM_THREAD_NAVIGATION_PRIVATE.xml`
+- SHA256: `1C4D13872C3D6B4579AA698F9E7D2F50F3E81467A4CBD4EAD63CD567087832A7`
+- Role: retained phone-proven predecessor baseline; it is not the current baseline.
 
-Role:
+## Gate 14 Phone-Proven Closeout
 
-Current phone-proven runtime baseline for further Gate 14 work.
+Artifact: `AIW_GATE14_FINAL_PRIVATE_COPY_VALIDATOR_CANDIDATE.xml`
 
-## CURRENT REJECTED REPAIR BASE
+SHA256: `A170870077C50B2350EB94F823145E5FD80A22FBEA34D1096738DDBA0EEA2B98`
 
-File:
+Task: `AIW G14 FINAL PRIVATE COPY VALIDATOR`
 
-`AIW_GATE14_PHASE_A_INTEGRATED_CLASSFIX_PRIVATE.xml`
+Task ID: `333`
 
-SHA256:
+Accepted phone run: `G14V-1784387491`
 
-`2766D926BCCC6FD4EAF1DA6B01469871E839A3C3004B91EDF2B3BAE5A09024E5`
+Result: `PASS`
 
-Status:
+Terminal step: `FINAL_PRIVATE_COPY_VALIDATION_PASS`
 
-`REJECTED FOR PHONE IMPORT / PRESERVE AS HISTORICAL REPAIR BASE ONLY`
+Accepted structural proof:
 
-## CURRENT REJECTED R1 ARTIFACT
+- exact full-project import;
+- task rendered through action `1432`;
+- OpenSlot before was `75`;
+- the authorized range was blank before mutation;
+- four exact single-row A:I writes completed;
+- four exact row-level readbacks completed;
+- full readback match count was `36`;
+- QueueView current-run count during the fixture was `4`;
+- QueueView source rows were exactly `75-78`;
+- QueueView status was exactly `SKIP_MANUAL` for the four run-owned rows;
+- QueueView uniqueness was proven;
+- OpenSlot during the fixture was `79`;
+- precleanup ownership match count was `36`;
+- cleanup was authorized only after exact ownership proof;
+- four exact single-row A:I clears completed;
+- the authorized range was blank after cleanup;
+- QueueView current-run count after cleanup was `0`;
+- QueueView total was restored;
+- OpenSlot after cleanup was `75`;
+- manual cleanup required was `0`;
+- final complete was `1`;
+- Tasker exited normally with `ExitOK`;
+- the faithful private copy was restored;
+- production was untouched;
+- TextNow, AutoInput, OpenAI, Send, DONE, Archive, DeadArchive, profile, live, shell, and network execution counts were all `0`.
 
-File:
+No Gate 14 rerun is required.
 
-`AIW_GATE14_REAL_PRODUCT_CONTRACT_R1_PRIVATE.xml`
+## Gate 14 Proof Boundary
 
-SHA256:
+Gate 14 proved:
 
-`B291963FEFD5C9DD938F69F8CE0C1C4CB3318E21DF17EA6646FB14C4594730CC`
+- the AutoSheets output contract used by validation;
+- faithful-copy write and exact readback behavior;
+- QueueView and OpenSlot formula settlement;
+- exact ownership-safe cleanup;
+- faithful-copy restoration;
+- production isolation;
+- predecessor-baseline preservation;
+- forbidden-path isolation.
 
-Status:
+Gate 14 did not prove or enable:
 
-`REJECTED FOR PHONE IMPORT / PRESERVE AS R1 FAILURE EVIDENCE ONLY`
+- DeadArchive;
+- Compactor;
+- broad archive drains;
+- live activation;
+- production activation;
+- capacity execution.
 
-## CURRENT AUTHORITATIVE WORKBOOKS
+## Workbook Authorities
 
-Production workbook authority:
+- Production authority alias: `AIW_PRODUCTION_WORKBOOK_AUTHORITY_PRIVATE`.
+- Faithful private-copy authority alias: `AIW_GATE14_FAITHFUL_COPY_AUTHORITY_PRIVATE`.
+- Exact workbook identifiers remain only in authorized private artifacts or private configuration.
+- Production authority remains blocked from validation and production writes remain `0`.
+- Git history has not been purged; history remediation is a separate decision.
 
-`19-wPlSW44YW49QpisZo_VW4AAtsgoCrXgECGg3h5I3I`
+## Gate 14 Remaining Counts
 
-Faithful private-copy authority:
+- Gate 14 runtime builds remaining: `0`
+- Gate 14 artifact audits remaining: `0`
+- Gate 14 phone runs remaining: `0`
+- Gate 14 private-copy controlled runs remaining: `0`
+- Gate 14 gate decisions remaining: `0`
 
-`1gW6RYgssLT5KIT4C0S-FgtxUkWlk3BA_em424oTGJ1w`
+The full-product release decision remains pending.
 
-Production workbook writes remain blocked.
+## Current Next Capability
 
-## CURRENT R1 PHONE EVIDENCE
+Status: `BLOCKED / UNPROVEN / UNAUTHORIZED`
 
-Task:
+DeadArchive is present or referenced in the project but remains blocked, unproven, and unauthorized pending a complete read-only application-wide audit. This state is not an implementation-defect finding.
 
-`AIW REAL PRODUCT CONTRACT R1 LAUNCHER`
+- DeadArchive build count: `UNDETERMINED PENDING AUDIT`
+- DeadArchive artifact-audit count: `UNDETERMINED PENDING AUDIT`
+- DeadArchive phone-run count: `UNDETERMINED PENDING AUDIT`
 
-Task ID:
+## Current Next Action
 
-`329`
+The audit must inventory every DeadArchive task, caller, trigger, variable, datasource, status rule, lock, recovery path, exact-row ownership boundary, idempotency rule, source-clear rule, STOP interaction, and activation control. It must compare current behavior to the permanent Archive contract before classifying the implementation or defining build and phone-proof counts.
 
-Phone result:
+No DeadArchive enablement, execution, diagnosis-as-defect, repair, or phone test is authorized in the source-closeout run.
 
-- Task 329 opened and ran.
-- OpenSlotView read completed.
-- Rows 75-78 were selected.
-- Faithful-copy `Sheet1 A75:I78` read completed.
-- `%pav_read_ok` was set to `1`.
-- Human Action 52 evaluated true.
-- `%pav_read_ok` was reset to `0`.
-- Task stopped at `PHASE_A_NO_WRITE`.
-- No Sheet write occurred.
-- No TextNow, OpenAI, Send, DONE, Archive, DeadArchive, or profile action occurred.
-- Exact `%err`, `%errmsg`, and A:I array output remain unknown.
+## Permanent Workflow Controls
 
-## CURRENT BLOCKER
+### Source Lock
 
-`ISSUE_GATE14_R1_AUTOSHEETS_BLANK_RANGE_CONTRACT_UNPROVEN`
+Freeze current main SHA, current PR head, and exact artifact SHA before every material decision. If any source moves, reread and regenerate the decision before acting.
 
-Root-cause class:
+### Prompt Compiler
 
-`UNPROVEN AUTOSHEETS BLANK-RANGE OUTPUT CONTRACT`
+Classify mandatory requirements as product, safety, source-proven, phone-proven, controller choice, or unresolved assumption. An unresolved assumption cannot become a mandatory fact. Contradiction, missing-information, evidence-retrieval, privacy, cleanup, and locked-work checks must pass before dispatch.
 
-The immediate Gate 14 blocker is that AutoSheets success output, `%err` / `%errmsg` behavior, unset rendering, and A:I blank-array shape after a faithful-copy blank range read are not phone-proven.
+### Exact Artifact Verifier
 
-The earlier staging datasource mismatch remains historical context. R1 advanced the datasource boundary to the faithful private copy, but R1 failed before any write because the blank-range AutoSheets contract was not phone-proven.
+Codex reports cannot approve their own artifact. ChatGPT independently audits exact bytes, SHA256, call graph, mutations, cleanup, evidence, and protected nodes.
 
-## Current Approved Scope
+### Binary Phone Handoff
 
-Gate 14 remains a fixed two-build proof ladder.
+Every phone handoff must be exactly one of:
 
-Build 1:
+- `APPROVED FOR ONE PHONE RUN`
+- `REJECTED — ONE EXACT DEFECT / ONE MINIMAL REPAIR`
 
-One complete no-write AutoSheets contract diagnostic.
+## Current Blocked Actions
 
-It must test exactly:
+- DeadArchive build, repair, enablement, or execution;
+- Compactor;
+- broad archive drains;
+- Tasker execution;
+- phone action;
+- workbook writes and any workbook read not separately authorized by the DeadArchive audit;
+- production writes;
+- TextNow;
+- AutoInput;
+- OpenAI;
+- Send;
+- DONE;
+- Archive;
+- TT5;
+- live or timer activation;
+- profile activation;
+- capacity execution;
+- production activation;
+- production release.
 
-- Blank success: faithful private copy, `Sheet1`, `A75:I78`.
-- Populated structural success: faithful private copy, `Sheet1`, `A1:I1`; log counts and shape only, not header values.
-- Controlled failure: faithful private-copy spreadsheet ID, deliberately nonexistent tab `AIW_DIAG_MISSING_TAB_20260718`, range `A1:I1`, Continue Task After Error ON.
+## Controller Boundary
 
-It must persist one complete bounded summary through a phone-proven Tasker Run Log action and preserve the summary in a global Tasker variable.
+Gate 14 is locked, but the complete product remains `HOLD` for release. Locking Gate 14 does not authorize DeadArchive, live operation, production activation, capacity execution, or production release.
 
-Build 2:
-
-One final integrated private-copy validator proving:
-
-- open-row selection;
-- approved fixture write;
-- exact readback;
-- QueueView/formula settlement;
-- queue non-contamination;
-- cleanup identity and execution;
-- cleanup readback;
-- OpenSlotView restoration;
-- production untouched;
-- no TextNow, OpenAI, Send, DONE, Archive, DeadArchive, or profile reachability;
-- locked baseline preservation.
-
-Remaining counts:
-
-- Runtime builds: `2`
-- ChatGPT artifact audits: `2`
-- Phone runs: `2`
-- Private-copy write runs: `1`
-- Production write runs: `0`
-- Release decisions: `1`
-
-## CURRENT NEXT ACTION
-
-After this source-truth update PR is independently audited and merged, build one complete no-write AutoSheets contract diagnostic.
-
-Do not import or run the existing 15-action diagnostic. It is replaced because it creates `%AIWR1ErrDiagSummary` but does not persist or display the complete summary and does not cover populated structural read or controlled private-copy failure behavior.
-
-## CURRENT PREVENTION RULES
-
-1. Audit the entire gate and plan its complete dependency chain before authorizing a runtime build.
-2. Build only one behavior at a time inside that complete plan.
-3. No external plugin output assumption may be integrated before exact phone proof or an already applicable phone-proven contract.
-4. Builder and simulator must not share an unchallenged external-behavior assumption.
-5. Every diagnostic requires an Evidence Delivery Contract:
-   - evidence generated;
-   - exact persistence action;
-   - retrieval location;
-   - PASS/HOLD/FAIL meaning;
-   - rerun rule.
-6. Gates 1-13 remain locked and regression-protected unless newer contradictory phone evidence exists.
-
-## CURRENT BLOCKED ACTIONS
-
-- phone import
-- Tasker execution outside the future ChatGPT-approved diagnostic
-- production workbook writes
-- current R1 candidate rerun
-- TextNow
-- OpenAI
-- Send
-- DONE
-- Archive
-- DeadArchive
-- Compactor
-- TT5
-- live operation
-- capacity execution
-- profile activation
-- tracker increase
-- Gate 14 closure
-- production release
-
-## Current Controller Boundary
-
-Codex may build, audit, patch, package, and report only inside the exact scope authorized by the current controller state and direct Sosa instruction.
-
-Codex does not claim phone proof, approve phone import, approve merge, move the tracker, close Gate 14, or declare release.
-
-ChatGPT must independently audit runtime artifacts and approve phone import before Sosa imports or executes them.
+Codex may build, audit, patch, package, and report only inside the exact current controller scope. ChatGPT remains the independent artifact auditor and release checker. Sosa remains the owner and phone-proof operator.
