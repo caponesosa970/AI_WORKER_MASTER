@@ -1,6 +1,6 @@
 # AI Worker Failure and Regression Ledger
 
-Status: CURRENT ACTIVE RELEASE-CAPABILITY HOLD AND PERMANENT REGRESSIONS
+Status: CURRENT ACTIVE RELEASE-CAPABILITY HOLDS AND PERMANENT REGRESSIONS
 
 Static audit cannot close a phone/runtime issue by itself.
 
@@ -59,6 +59,71 @@ Closing proof required:
 Prevention rule:
 
 Do not infer a DeadArchive defect, approve DeadArchive execution, or invent build and phone-run counts before the read-only audit proves the current implementation and its complete application-wide impact.
+
+### ISSUE_BRAIN_AND_ARCHIVE_CONTEXT_INTEGRATION_PENDING
+
+Status: `OPEN / RELEASE HOLD / CONFIRMED INTEGRATION GAP / READ-ONLY AUDIT REQUIRED`
+
+First recorded: `2026-07-18`
+
+Affected capability:
+
+- enabled Brain-rule retrieval;
+- exact-sender normal-Archive history retrieval;
+- chronological conversation-context construction;
+- current same-sender group integration;
+- OpenAI prompt assembly;
+- context-size bounds;
+- no cross-sender leakage;
+- incomplete/uncertain-row exclusion;
+- safe no-history fallback.
+
+Confirmed evidence from the exact A170 artifact:
+
+- same-sender current-message grouping is present and supports a maximum group size of four;
+- no active AutoSheets action reads the Brain sheet;
+- no active prompt-building action reads normal Archive conversation history;
+- `%BrainRules` is cleared during reset but is not populated in the active processing path;
+- `%ConversationHistory` is cleared during reset but is not populated in the active processing path;
+- `PROCESS Build Prompt` uses a hard-coded system prompt and the newest/current grouped message only;
+- Brain rules and prior archived conversation turns therefore do not reach the active OpenAI prompt.
+
+Required audit before build:
+
+1. Inventory all current grouping, prompt, OpenAI, Archive, Brain, SenderState, reset, and recovery tasks.
+2. Trace the exact active processing call graph.
+3. Define which normal Archive statuses are valid conversation history.
+4. Define exact-sender identity normalization and matching.
+5. Define chronological ordering.
+6. Define bounded turn count and prompt-size limits.
+7. Define incoming-message and confirmed-outgoing-reply formatting.
+8. Define exclusion rules for DeadArchive, uncertain Send, incomplete rows, unrelated senders, duplicates, and malformed history.
+9. Define safe no-history and failed-history-read behavior.
+10. Only after the audit define exact build, artifact-audit, and phone-run counts.
+
+Current planned counts:
+
+- Brain/context build count: `UNDETERMINED PENDING AUDIT`
+- Brain/context artifact-audit count: `UNDETERMINED PENDING AUDIT`
+- Brain/context phone-run count: `UNDETERMINED PENDING AUDIT`
+
+Closing proof will eventually require:
+
+- enabled Brain rules proven in the final prompt;
+- bounded exact-sender normal-Archive history proven in the final prompt;
+- the current same-sender group appended last;
+- no cross-sender leakage;
+- no DeadArchive contamination;
+- context-aware controlled phone reply proof;
+- preservation of locked Gates 1-14.
+
+Current boundary:
+
+Do not build, enable, execute, or phone-test this capability in the source-correction run. DeadArchive remains the immediate next capability; Brain/context follows it. Full-product release remains `HOLD`.
+
+Prevention rule:
+
+A current-message grouping proof does not prove durable conversation context. Brain rules and exact-sender normal-Archive history must be traced into the exact final prompt, bounded, isolated, and independently proven before release.
 
 ## Verified Closed and Historical Failures
 
@@ -224,6 +289,9 @@ Builds that must check it: every validation artifact.
 - DeadArchive build count: `UNDETERMINED PENDING AUDIT`
 - DeadArchive artifact-audit count: `UNDETERMINED PENDING AUDIT`
 - DeadArchive phone-run count: `UNDETERMINED PENDING AUDIT`
+- Brain/context build count: `UNDETERMINED PENDING AUDIT`
+- Brain/context artifact-audit count: `UNDETERMINED PENDING AUDIT`
+- Brain/context phone-run count: `UNDETERMINED PENDING AUDIT`
 - Full-product release decision: `PENDING`
 
-Gate 14 is phone-proven and locked. Full-product release remains `HOLD`. DeadArchive, Compactor, broad archive drains, live activation, production activation, and capacity execution remain blocked unless separately authorized.
+Gate 14 is phone-proven and locked. Full-product release remains `HOLD`. DeadArchive remains the immediate next audit capability; Brain plus bounded normal-Archive conversation-context integration follows it. A final application-wide release audit occurs after both known capability holds are resolved, and the known list is not exhaustive until that audit. DeadArchive, Brain/context integration, Compactor, broad archive drains, live activation, production activation, and capacity execution remain blocked unless separately authorized.

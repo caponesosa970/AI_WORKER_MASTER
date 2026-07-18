@@ -121,6 +121,7 @@ Gate 14 proved:
 Gate 14 did not prove or enable:
 
 - DeadArchive;
+- Brain plus bounded normal-Archive conversation-context integration;
 - Compactor;
 - broad archive drains;
 - live activation;
@@ -161,6 +162,46 @@ The audit must inventory every DeadArchive task, caller, trigger, variable, data
 
 No DeadArchive enablement, execution, diagnosis-as-defect, repair, or phone test is authorized in the source-closeout run.
 
+## Known Pending Full-Product Release Capabilities
+
+This is the current known set of pending release capabilities. It is not an exhaustive release checklist. A final application-wide release audit must identify any additional release hold after the two known capabilities below are resolved.
+
+### 1. DeadArchive Proof and Authorization
+
+- DeadArchive remains the immediate next capability.
+- It remains `BLOCKED / UNPROVEN / UNAUTHORIZED`.
+- No implementation-defect classification is permitted before the read-only application-wide DeadArchive audit.
+- Build, artifact-audit, and phone-run counts remain `UNDETERMINED PENDING AUDIT`.
+
+### 2. Brain and Bounded Normal-Archive Conversation-Context Integration
+
+Status: `BLOCKED / CONFIRMED INTEGRATION GAP / READ-ONLY AUDIT REQUIRED`
+
+Confirmed A170 structural findings:
+
+- same-sender current-message grouping exists and supports a maximum group size of four;
+- `PROCESS Build Prompt` uses a hard-coded system prompt;
+- the active prompt contains the newest/current grouped message only;
+- no active AutoSheets action reads the Brain sheet;
+- no active prompt-building action reads normal Archive conversation history;
+- `%BrainRules` is cleared during reset but is not populated in the active processing path;
+- `%ConversationHistory` is cleared during reset but is not populated in the active processing path;
+- Brain rules and prior archived conversation turns therefore do not reach the OpenAI prompt.
+
+Brain/context work is blocked pending a separate application-wide read-only audit and a controller-approved build. Counts are not yet known:
+
+- Brain/context build count: `UNDETERMINED PENDING AUDIT`
+- Brain/context artifact-audit count: `UNDETERMINED PENDING AUDIT`
+- Brain/context phone-run count: `UNDETERMINED PENDING AUDIT`
+
+Required order:
+
+1. Complete the DeadArchive read-only audit and its separately approved proof path.
+2. Audit and resolve Brain plus bounded normal-Archive conversation-context integration.
+3. Perform a final application-wide release audit after both known capability holds are resolved.
+
+Full-product release remains `HOLD` throughout this sequence.
+
 ## Permanent Workflow Controls
 
 ### Source Lock
@@ -197,15 +238,19 @@ Every phone handoff must be exactly one of:
 - Send;
 - DONE;
 - Archive;
+- Brain runtime integration;
+- normal-Archive conversation-context reads;
+- Brain/context phone testing;
 - TT5;
 - live or timer activation;
 - profile activation;
 - capacity execution;
 - production activation;
+- full-product release until both known capability holds and the final application-wide release audit are complete;
 - production release.
 
 ## Controller Boundary
 
-Gate 14 is locked, but the complete product remains `HOLD` for release. Locking Gate 14 does not authorize DeadArchive, live operation, production activation, capacity execution, or production release.
+Gate 14 is locked, but the complete product remains `HOLD` for release. Locking Gate 14 does not authorize DeadArchive, Brain or normal-Archive conversation-context integration, live operation, production activation, capacity execution, or production release. DeadArchive remains first, Brain/context remains second, and a final application-wide release audit follows both. The two known capability holds are not an exhaustive release checklist until that final audit.
 
 Codex may build, audit, patch, package, and report only inside the exact current controller scope. ChatGPT remains the independent artifact auditor and release checker. Sosa remains the owner and phone-proof operator.
