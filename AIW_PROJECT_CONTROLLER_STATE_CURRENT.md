@@ -4,17 +4,15 @@ Status: CURRENT OPERATIONAL SOURCE TRUTH
 
 ## STATUS
 
-13/14 LOCKED = 93%
+`13/14 LOCKED = 93%`
 
-GATE 14 ACTIVE / BLOCKED
+`GATE 14 ACTIVE / BLOCKED`
 
-RUNTIME HOLD
+`RUNTIME HOLD`
 
 ## Locked Main Gates
 
-Gates 1-13 remain `LOCKED` by direct phone proof.
-
-They must not be rebuilt, rerun, reopened, or re-proven without newer contradictory phone evidence.
+Gates 1-13 remain `LOCKED` by direct phone proof. They must not be rebuilt, rerun, reopened, or re-proven without newer contradictory phone evidence.
 
 Locked gates:
 
@@ -32,282 +30,133 @@ Locked gates:
 12. Gate 12 permanent queue lifecycle integration
 13. Gate 13 timer, STOP, background guard, and recovery
 
-## Locked Sub-Proofs
+Locked sub-proofs include Gate 9A, Gate 9B0 through Gate 9B1F, and 27B no-send guard proof.
 
-- Gate 9A non-UI send-readiness
-- Gate 9B0 manual TextNow identity
-- Gate 9B1A TextNow search-navigation
-- Gate 9B1B manual thread identity
-- Gate 9B1C no-send compose safety inspection
-- Gate 9B1D manual compose-focus proof
-- Gate 9B1E manual draft insert-and-clear proof
-- Gate 9B1F exact reply compose dry-run
-- 27B no-send guard proof
+## Current Phone-Proven Baseline
 
-## CURRENT PHONE-PROVEN BASELINE
+File: `GATE13R2_FULL_PROJECT_TASKER_IMPORT__CONFIRM_THREAD_NAVIGATION_PRIVATE.xml`
 
-File:
+SHA256: `1C4D13872C3D6B4579AA698F9E7D2F50F3E81467A4CBD4EAD63CD567087832A7`
 
-`GATE13R2_FULL_PROJECT_TASKER_IMPORT__CONFIRM_THREAD_NAVIGATION_PRIVATE.xml`
+Role: phone-proven runtime baseline and exact Build 2 construction base.
 
-SHA256:
+## Current Rejected Artifacts
 
-`1C4D13872C3D6B4579AA698F9E7D2F50F3E81467A4CBD4EAD63CD567087832A7`
+- `AIW_GATE14_PHASE_A_INTEGRATED_CLASSFIX_PRIVATE.xml`, SHA256 `2766D926BCCC6FD4EAF1DA6B01469871E839A3C3004B91EDF2B3BAE5A09024E5`: rejected; historical repair base only.
+- `AIW_GATE14_REAL_PRODUCT_CONTRACT_R1_PRIVATE.xml`, SHA256 `B291963FEFD5C9DD938F69F8CE0C1C4CB3318E21DF17EA6646FB14C4594730CC`: rejected; R1 failure evidence only.
+- The prior helper-based final-validator draft is superseded by the controller-approved single-task architecture and is not a phone-import candidate.
 
-Role:
+## Workbook Authorities
 
-Current phone-proven runtime baseline for further Gate 14 work.
+- Production authority alias: `AIW_PRODUCTION_WORKBOOK_AUTHORITY_PRIVATE`.
+- Faithful private-copy authority alias: `AIW_GATE14_FAITHFUL_COPY_AUTHORITY_PRIVATE`.
+- Exact workbook IDs remain only in authorized private artifacts or private configuration.
+- Production is blocked from the Gate 14 validation path. Production writes remain `0`.
+- The faithful private copy is the only authorized validation datasource.
+- Git history has not been purged; history remediation is outside this Gate 14 build.
 
-## CURRENT REJECTED REPAIR BASE
+## Build 1 Diagnostic — Phone-Proven
 
-File:
+Artifact: `AIW_G14_AUTOSHEETS_CONTRACT_DIAGNOSTIC_NO_WRITE.tsk.xml`
 
-`AIW_GATE14_PHASE_A_INTEGRATED_CLASSFIX_PRIVATE.xml`
+SHA256: `C5818297BEE535DF5B9B6DB7C862B63F15949483BA73A2D7C59B12DCE97AE411`
 
-SHA256:
+Accepted phone run: `G14D-1784348825`
 
-`2766D926BCCC6FD4EAF1DA6B01469871E839A3C3004B91EDF2B3BAE5A09024E5`
+Phone-proven contract:
 
-Status:
-
-`REJECTED FOR PHONE IMPORT / PRESERVE AS HISTORICAL REPAIR BASE ONLY`
-
-## CURRENT REJECTED R1 ARTIFACT
-
-File:
-
-`AIW_GATE14_REAL_PRODUCT_CONTRACT_R1_PRIVATE.xml`
-
-SHA256:
-
-`B291963FEFD5C9DD938F69F8CE0C1C4CB3318E21DF17EA6646FB14C4594730CC`
-
-Status:
-
-`REJECTED FOR PHONE IMPORT / PRESERVE AS R1 FAILURE EVIDENCE ONLY`
-
-## CURRENT AUTHORITATIVE WORKBOOKS
-
-Production workbook authority:
-
-`AIW_PRODUCTION_WORKBOOK_AUTHORITY_PRIVATE`
-
-Faithful private-copy authority:
-
-`AIW_GATE14_FAITHFUL_COPY_AUTHORITY_PRIVATE`
-
-Production workbook writes remain blocked.
-
-## CURRENT R1 PHONE EVIDENCE
-
-Task:
-
-`AIW REAL PRODUCT CONTRACT R1 LAUNCHER`
-
-Task ID:
-
-`329`
-
-Phone result:
-
-- Task 329 opened and ran.
-- OpenSlotView read completed.
-- Rows 75-78 were selected.
-- Faithful-copy `Sheet1 A75:I78` read completed.
-- `%pav_read_ok` was set to `1`.
-- Human Action 52 evaluated true.
-- `%pav_read_ok` was reset to `0`.
-- Task stopped at `PHASE_A_NO_WRITE`.
-- No Sheet write occurred.
-- No TextNow, OpenAI, Send, DONE, Archive, DeadArchive, or profile action occurred.
-- Exact `%err`, `%errmsg`, and A:I array output remain unknown.
-
-## CURRENT BLOCKER
-
-`ISSUE_GATE14_R1_AUTOSHEETS_BLANK_RANGE_CONTRACT_UNPROVEN`
-
-Root-cause class:
-
-`UNPROVEN AUTOSHEETS BLANK-RANGE OUTPUT CONTRACT`
-
-The immediate Gate 14 blocker is that AutoSheets success output, `%err` / `%errmsg` behavior, unset rendering, and A:I blank-array shape after a faithful-copy blank range read are not phone-proven.
-
-The earlier staging datasource mismatch remains historical context. R1 advanced the datasource boundary to the faithful private copy, but R1 failed before any write because the blank-range AutoSheets contract was not phone-proven.
-
-## Current Approved Scope
-
-Gate 14 remains a fixed two-build proof ladder.
-
-Build 1:
-
-One complete no-write AutoSheets contract diagnostic.
-
-It must test exactly:
-
-- Blank success: faithful private copy, `Sheet1`, `A75:I78`.
-- Populated structural success: faithful private copy, `Sheet1`, `A1:I1`; log counts and shape only, not header values.
-- Controlled failure: faithful private-copy spreadsheet ID, deliberately nonexistent tab `AIW_DIAG_MISSING_TAB_20260718`, range `A1:I1`, Continue Task After Error ON.
-
-It must persist one complete bounded summary through a phone-proven Tasker Run Log action and preserve the summary in a global Tasker variable.
-
-Build 2:
-
-One final integrated private-copy validator proving:
-
-- open-row selection;
-- approved fixture write;
-- exact readback;
-- QueueView/formula settlement;
-- queue non-contamination;
-- cleanup identity and execution;
-- cleanup readback;
-- OpenSlotView restoration;
-- production untouched;
-- no TextNow, OpenAI, Send, DONE, Archive, DeadArchive, or profile reachability;
-- locked baseline preservation.
-
-Remaining counts:
-
-- Runtime builds: `2`
-- ChatGPT artifact audits: `2`
-- Phone runs: `2`
-- Private-copy write runs: `1`
-- Production write runs: `0`
-- Release decisions: `1`
-
-## CURRENT NEXT ACTION
-
-After this source-truth update PR is independently audited and merged, build one complete no-write AutoSheets contract diagnostic.
-
-Do not import or run the existing 15-action diagnostic. It is replaced because it creates `%AIWR1ErrDiagSummary` but does not persist or display the complete summary and does not cover populated structural read or controlled private-copy failure behavior.
-
-## CURRENT PREVENTION RULES
-
-1. Audit the entire gate and plan its complete dependency chain before authorizing a runtime build.
-2. Build only one behavior at a time inside that complete plan.
-3. No external plugin output assumption may be integrated before exact phone proof or an already applicable phone-proven contract.
-4. Builder and simulator must not share an unchallenged external-behavior assumption.
-5. Every diagnostic requires an Evidence Delivery Contract:
-   - evidence generated;
-   - exact persistence action;
-   - retrieval location;
-   - PASS/HOLD/FAIL meaning;
-   - rerun rule.
-6. Gates 1-13 remain locked and regression-protected unless newer contradictory phone evidence exists.
-
-## CURRENT BLOCKED ACTIONS
-
-- phone import
-- Tasker execution outside the future ChatGPT-approved diagnostic
-- production workbook writes
-- current R1 candidate rerun
-- TextNow
-- OpenAI
-- Send
-- DONE
-- Archive
-- DeadArchive
-- Compactor
-- TT5
-- live operation
-- capacity execution
-- profile activation
-- tracker increase
-- Gate 14 closure
-- production release
-
-## Current Controller Boundary
-
-Codex may build, audit, patch, package, and report only inside the exact scope authorized by the current controller state and direct Sosa instruction.
-
-Codex does not claim phone proof, approve phone import, approve merge, move the tracker, close Gate 14, or declare release.
-
-ChatGPT must independently audit runtime artifacts and approve phone import before Sosa imports or executes them.
-
-## CURRENT GATE 14 UPDATE - DIAGNOSTIC PHONE PROOF ACCEPTED / FINAL VALIDATOR CANDIDATE BUILT
-
-Status date: 2026-07-18
-
-Tracker remains `13/14 LOCKED = 93%`.
-
-Gates 1-13 remain locked by direct phone proof and are regression-protected only. They are not reopened by this Gate 14 validator work.
-
-Accepted phone-proven diagnostic:
-
-- Artifact: `AIW_G14_AUTOSHEETS_CONTRACT_DIAGNOSTIC_NO_WRITE.tsk.xml`
-- SHA256: `C5818297BEE535DF5B9B6DB7C862B63F15949483BA73A2D7C59B12DCE97AE411`
-- Accepted run ID: `G14D-1784348825`
-- Blank success contract: `%err` renders as literal `%err`, `%errmsg` renders as literal `%errmsg`, and A:I array counts are all `0`.
-- Populated success contract: `%err` renders as literal `%err`, `%errmsg` renders as literal `%errmsg`, and A:I array counts are all `1`.
-- Controlled failure contract: `%err` becomes a numeric plugin error, `%errmsg` contains the missing-tab parse failure, A:I array counts are all `0`, Continue After Error works, and execution continues to completion.
+- Blank success: `%err` rendered literally as `%err`; `%errmsg` rendered literally as `%errmsg`; A:I array counts were all `0`.
+- Populated success: `%err` rendered literally as `%err`; `%errmsg` rendered literally as `%errmsg`; A:I array counts were all `1`.
+- Controlled failure: `%err` became a numeric plugin error; `%errmsg` contained the missing-tab parse failure; A:I array counts were all `0`; Continue After Error worked; execution continued to normal completion.
+- The diagnostic performed zero Sheet writes, zero production touch, and zero forbidden-path execution.
 - Classification: `PHONE-PROVEN / RETIRE AFTER GATE 14 LOCK`.
 
 Confirmed R1 root cause:
 
-`AIW_GATE14_REAL_PRODUCT_CONTRACT_R1_PRIVATE.xml` is rejected because Task 329 treated the phone-proven successful unresolved `%err` rendering as an error. The rejected broad regex matched values beginning with `%` and caused a false-positive guard.
+Task 329 used a broad `%err` regex that treated the phone-proven unresolved success rendering as an error. The rejected broad pattern matched a value beginning with `%` and caused a false-positive guard.
 
-Current public-source privacy rule:
+## Build 2 Final Validator — Current Candidate
 
-- Production authority alias: `AIW_PRODUCTION_WORKBOOK_AUTHORITY_PRIVATE`.
-- Faithful private-copy authority alias: `AIW_GATE14_FAITHFUL_COPY_AUTHORITY_PRIVATE`.
-- Exact workbook IDs remain private and must not be placed in public GitHub, PR text, reports, or final returns.
-- Git history has not been purged; separate history remediation is outside this Gate 14 build.
+Artifact: `AIW_GATE14_FINAL_PRIVATE_COPY_VALIDATOR_CANDIDATE.xml`
 
-Current final-validator build result:
+SHA256: `A170870077C50B2350EB94F823145E5FD80A22FBEA34D1096738DDBA0EEA2B98`
 
-- Candidate XML: `AIW_GATE14_FINAL_PRIVATE_COPY_VALIDATOR_CANDIDATE.xml`
-- SHA256: `E097F4CAC7796735E73D4E2B7845D48235EA3AF01F00BCC736AC0CF53D0C6E85`
-- New validation tasks:
-  - `AIW G14 FINAL PRIVATE COPY VALIDATOR`
-  - `AIW G14 FV ROW AUDIT`
-  - `AIW G14 FV QUEUE AUDIT`
-- New task IDs: `232`, `233`, `234`
-- New action counts:
-  - runner: `217`
-  - row helper: `81`
-  - queue helper: `89`
-  - total new actions: `387`
-- Existing Gate13R2 task, profile, scene, action, credential-bearing, and production datasource nodes are preserved by static subtree comparison.
-- Baseline production-authority occurrence count remains preserved at the independently measured baseline value.
-- New validation task production-authority occurrence count is `0`.
-- Validation path uses only the faithful private-copy authority alias.
-- Runtime artifact status: `CANDIDATE / HOLD FOR CHATGPT EXACT ARTIFACT AUDIT`.
+Architecture:
 
-Scope correction recorded:
+- exactly one new manually executed task;
+- task name `AIW G14 FINAL PRIVATE COPY VALIDATOR`;
+- task ID `333`;
+- `1432` actions, under the source-backed hard maximum of `1477`;
+- no helper tasks;
+- no `Perform Task`;
+- no new profile or scene;
+- one Project `tids` addition;
+- Project modification timestamp unchanged;
+- all existing baseline task, profile, scene, action, credential-bearing, and production-datasource subtrees preserved;
+- baseline production-authority count preserved at `206`;
+- new task production-authority count `0`;
+- four exact single-row A:I writes and four exact single-row A:I clears, restricted to rows 75-78;
+- no TextNow, AutoInput, OpenAI, Send, DONE, Archive, DeadArchive, profile-enable, live, timer, shell, network, or automatic-rerun reachability.
 
-Direct Sosa instruction authorized repairing the action-bound block and continuing autonomous work. The repaired candidate uses a plugin-bearing helper split limited to the new validation subgraph. No existing Gate13R2 task, profile, scene, production datasource, TextNow, AutoInput, OpenAI, Send, DONE, Archive, DeadArchive, profile, or live path is changed.
+Static and independent semantic review status: `CANDIDATE / HOLD FOR CHATGPT EXACT ARTIFACT AUDIT`.
 
-Current blocker:
+This is not Tasker import proof and not phone proof.
 
-`ISSUE_GATE14_FINAL_VALIDATOR_ARTIFACT_AND_PHONE_PROOF_PENDING`
+## Current Blocker
 
-The final integrated private-copy validator has been built and statically audited, but it is not phone-approved, not phone-proven, and not Gate 14 closing proof. ChatGPT must independently audit the exact private artifact and this source PR before any Tasker import or phone execution.
+`ISSUE_GATE14_FINAL_VALIDATOR_CANDIDATE_UNAUDITED`
 
-Remaining plan:
+The single-task private-copy validator has been built and independently statically reviewed. ChatGPT must audit the exact source PR, XML bytes, SHA256 sidecar, preservation proof, mutation results, and private Drive files before any phone import or execution.
+
+## Current Counts
 
 - Remaining runtime builds: `0`
 - Remaining ChatGPT artifact audits: `1`
 - Remaining phone runs: `1`
-- Remaining private-copy controlled runs: `1`
+- Remaining faithful-copy controlled mutation runs: `1`
 - Remaining production write runs: `0`
 - Remaining release decisions: `1`
 
-Current next action:
+## Current Next Action
 
-ChatGPT/controller must audit the source PR and the exact private candidate XML. Only after ChatGPT approval may Sosa import and execute the final validator once against the faithful private copy.
+ChatGPT audits PR #13 and the exact private candidate before phone import. Only after ChatGPT approval may Sosa import and execute the validator once against the faithful private copy.
 
-Blocked actions remain:
+## Current Prevention Rules
 
-- production workbook writes;
+1. Audit the entire gate and its dependency chain before building.
+2. Build only one behavior inside the approved complete plan.
+3. Phone proof overrides static, simulated, and package claims.
+4. No external plugin output assumption may enter integration before exact applicable phone proof.
+5. Builder and simulator must not share an unchallenged external-behavior assumption.
+6. Every diagnostic and validator needs complete, durable, retrievable evidence.
+7. Mutation success requires exact readback; plugin return alone is never write or cleanup authority.
+8. Cleanup requires current-run exact ownership and may never clear an unknown row.
+9. Gates 1-13 remain locked and regression-protected unless newer contradictory phone evidence exists.
+10. A static candidate remains HOLD until exact ChatGPT artifact audit and authorized phone proof.
+
+## Current Blocked Actions
+
 - phone import;
 - Tasker execution;
+- faithful-copy fixture mutation before ChatGPT approval;
+- all production workbook writes;
 - TextNow;
+- AutoInput;
 - OpenAI;
 - Send;
 - DONE;
 - Archive;
 - DeadArchive;
-- profile enablement;
+- Compactor;
+- TT5;
+- live or timer activation;
+- profile activation;
 - tracker movement;
 - Gate 14 closure;
 - production release.
+
+## Controller Boundary
+
+Codex may build, audit, patch, package, and report only inside the exact current controller scope. Codex does not claim phone proof, approve phone import, approve merge, move the tracker, close Gate 14, or declare release.
+
+ChatGPT is the independent artifact auditor and phone-import controller. Sosa is the phone-proof operator.
