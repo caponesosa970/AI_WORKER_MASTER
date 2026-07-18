@@ -182,9 +182,9 @@ Never collapse separate workbook IDs or datasource authorities into one abstract
 | Gate 12 queue lifecycle | LOCKED | Preserve one lifecycle transition per cycle. | Gate 14 regression audit |
 | Gate 13 timer, STOP, background guard, recovery | LOCKED | Preserve STOP, busy overlap, screen-off, timer, and recovery behavior. | Gate 14 regression audit |
 
-## ISSUE_GATE14_FINAL_VALIDATOR_ACTION_BOUND_HOLD
+## ISSUE_GATE14_FINAL_VALIDATOR_ARTIFACT_AND_PHONE_PROOF_PENDING
 
-Status: `OPEN / HOLD`
+Status: `OPEN / CANDIDATE HOLD`
 
 First detected: 2026-07-18
 
@@ -204,6 +204,29 @@ Current root cause:
 
 The remaining validator behavior is larger than the current runner action bound when implemented with proven action shapes and explicit fail-closed evidence. The helper allowance is not broad enough to split the plugin-bearing phases safely.
 
+Current repair disposition:
+
+Direct Sosa instruction authorized repairing the action-bound block and continuing autonomous work. The current candidate resolves the size conflict by using a plugin-bearing helper split limited to three new validation-only tasks. This does not approve phone import and does not close Gate 14.
+
+Candidate artifact:
+
+- Filename: `AIW_GATE14_FINAL_PRIVATE_COPY_VALIDATOR_CANDIDATE.xml`
+- SHA256: `E097F4CAC7796735E73D4E2B7845D48235EA3AF01F00BCC736AC0CF53D0C6E85`
+- New tasks:
+  - `AIW G14 FINAL PRIVATE COPY VALIDATOR`
+  - `AIW G14 FV ROW AUDIT`
+  - `AIW G14 FV QUEUE AUDIT`
+- New task IDs: `232`, `233`, `234`
+- New action counts:
+  - runner: `217`
+  - row helper: `81`
+  - queue helper: `89`
+  - total new actions: `387`
+- Static artifact result: existing Gate13R2 tasks, profiles, scenes, actions, credential-bearing nodes, and production datasource bytes are preserved.
+- Production authority count remains at the independently measured baseline value.
+- New validation subgraph production-authority occurrence count is `0`.
+- Runtime artifact status: `CANDIDATE / HOLD FOR CHATGPT EXACT ARTIFACT AUDIT`.
+
 Diagnostic phone proof now locked:
 
 - Artifact: `AIW_G14_AUTOSHEETS_CONTRACT_DIAGNOSTIC_NO_WRITE.tsk.xml`
@@ -221,17 +244,19 @@ Prevention rule:
 
 Before any new final-validator build, the controller must reconcile behavior size with Tasker action bounds. If helper tasks are authorized to carry plugin phases, their exact scope must be stated. If not, the runner action limit must be increased or the validator proof must be split by controller approval.
 
+For this candidate, plugin-bearing helper behavior is limited to the newly added private-copy validation tasks only. Existing Gate13R2 runtime tasks remain protected and unchanged.
+
 Closing proof required:
 
-- Updated controller instruction resolving the action-bound/helper-scope conflict.
-- A candidate built from the Gate13R2 baseline only.
-- Existing baseline task/profile/scene preservation proof.
-- Production authority count preserved.
+- ChatGPT audit of this source PR.
+- ChatGPT audit of the exact private candidate XML and SHA256 sidecar.
+- Existing baseline task/profile/scene preservation proof accepted by ChatGPT.
+- Production authority count preservation accepted by ChatGPT.
 - New validation path contains zero production authority.
-- Exact private-copy write/readback/formula/cleanup proof path configured.
-- Static and mutation audit against the exact returned artifact.
+- Exact private-copy write/readback/formula/cleanup proof path accepted by ChatGPT.
+- Static and mutation audit against the exact returned artifact accepted by ChatGPT.
 - ChatGPT artifact approval before phone import.
-- One final phone run proving private-copy cleanup/restoration.
+- One final phone run proving private-copy write, exact readback, QueueView settlement, cleanup, OpenSlot restoration, production untouched, and no forbidden-path reachability.
 
 Public-source privacy rule:
 
@@ -242,7 +267,7 @@ Public-source privacy rule:
 
 Current remaining counts:
 
-- Runtime builds remaining: `1`
+- Runtime builds remaining: `0`
 - ChatGPT artifact audits remaining: `1`
 - Phone runs remaining: `1`
 - Private-copy controlled runs remaining: `1`

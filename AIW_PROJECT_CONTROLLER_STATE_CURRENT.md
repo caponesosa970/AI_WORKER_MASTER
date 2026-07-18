@@ -224,7 +224,7 @@ Codex does not claim phone proof, approve phone import, approve merge, move the 
 
 ChatGPT must independently audit runtime artifacts and approve phone import before Sosa imports or executes them.
 
-## CURRENT GATE 14 UPDATE ? DIAGNOSTIC PHONE PROOF ACCEPTED / FINAL VALIDATOR BUILD HOLD
+## CURRENT GATE 14 UPDATE - DIAGNOSTIC PHONE PROOF ACCEPTED / FINAL VALIDATOR CANDIDATE BUILT
 
 Status date: 2026-07-18
 
@@ -255,13 +255,37 @@ Current public-source privacy rule:
 
 Current final-validator build result:
 
-- Candidate XML: not produced.
-- Current blocker: the complete final-validator behavior could not be made to satisfy the current hard action bounds without violating the prompt's helper-task constraints. The smallest safe single-task implementation requires more than the runner action limit, while the authorized helpers are constrained to audit-only/no-plugin behavior and cannot absorb the write/read/cleanup plugin phases.
-- Runtime artifact status: `HOLD / NOT BUILT`.
+- Candidate XML: `AIW_GATE14_FINAL_PRIVATE_COPY_VALIDATOR_CANDIDATE.xml`
+- SHA256: `E097F4CAC7796735E73D4E2B7845D48235EA3AF01F00BCC736AC0CF53D0C6E85`
+- New validation tasks:
+  - `AIW G14 FINAL PRIVATE COPY VALIDATOR`
+  - `AIW G14 FV ROW AUDIT`
+  - `AIW G14 FV QUEUE AUDIT`
+- New task IDs: `232`, `233`, `234`
+- New action counts:
+  - runner: `217`
+  - row helper: `81`
+  - queue helper: `89`
+  - total new actions: `387`
+- Existing Gate13R2 task, profile, scene, action, credential-bearing, and production datasource nodes are preserved by static subtree comparison.
+- Baseline production-authority occurrence count remains preserved at the independently measured baseline value.
+- New validation task production-authority occurrence count is `0`.
+- Validation path uses only the faithful private-copy authority alias.
+- Runtime artifact status: `CANDIDATE / HOLD FOR CHATGPT EXACT ARTIFACT AUDIT`.
 
-Remaining plan after this HOLD:
+Scope correction recorded:
 
-- Remaining runtime builds: `1`
+Direct Sosa instruction authorized repairing the action-bound block and continuing autonomous work. The repaired candidate uses a plugin-bearing helper split limited to the new validation subgraph. No existing Gate13R2 task, profile, scene, production datasource, TextNow, AutoInput, OpenAI, Send, DONE, Archive, DeadArchive, profile, or live path is changed.
+
+Current blocker:
+
+`ISSUE_GATE14_FINAL_VALIDATOR_ARTIFACT_AND_PHONE_PROOF_PENDING`
+
+The final integrated private-copy validator has been built and statically audited, but it is not phone-approved, not phone-proven, and not Gate 14 closing proof. ChatGPT must independently audit the exact private artifact and this source PR before any Tasker import or phone execution.
+
+Remaining plan:
+
+- Remaining runtime builds: `0`
 - Remaining ChatGPT artifact audits: `1`
 - Remaining phone runs: `1`
 - Remaining private-copy controlled runs: `1`
@@ -270,7 +294,7 @@ Remaining plan after this HOLD:
 
 Current next action:
 
-ChatGPT/controller must either approve revised action bounds or authorize a helper split that permits plugin-bearing private-copy validation helpers. Until then, do not import, run, or build a final validator candidate.
+ChatGPT/controller must audit the source PR and the exact private candidate XML. Only after ChatGPT approval may Sosa import and execute the final validator once against the faithful private copy.
 
 Blocked actions remain:
 
