@@ -8,50 +8,134 @@ Static audit cannot close a phone/runtime issue by itself.
 
 ## Active Failures
 
-### ISSUE_CONTROL_SOURCE_TRUTH_DUPLICATION_LOOP
-
-Status: `OPEN / HOLD UNTIL CLEANUP PR MERGED`
-
-Root cause:
-
-Too many active root controller files repeated the same tracker, blocker, proof, merge, phone, Codex, and safety rules. A correction in one file required copying the same correction into multiple files. Small wording differences then created contradictions and additional documentation runs.
-
-Required repair:
-
-Consolidate active root source truth into exactly four files:
-
-- `AGENTS.md`
-- `AIW_FULL_GOAL_EXECUTION_CONTRACT_CURRENT.md`
-- `AIW_PROJECT_CONTROLLER_STATE_CURRENT.md`
-- `AIW_FAILURE_AND_REGRESSION_LEDGER_CURRENT.md`
-
-Required regression:
-
-- only four retained files modified;
-- five redundant root control files deleted;
-- no new control file, ledger, matrix, preflight file, report directory, or replacement framework;
-- no runtime/private/script/phone/Sheet/TextNow/profile/scene/package changes;
-- deleted files are not referenced as mandatory active sources;
-- only project controller state contains the active tracker and current blocker;
-- permanent full goal remains in the execution contract;
-- system-wide compatibility and proof rules remain in AGENTS;
-- active failures and permanent regression rules remain in this ledger.
-
-Closing proof:
-
-Cleanup PR is independently audited, merged into main, and verified on main.
-
-Prevention rule:
-
-Do not create new active controller documents when the four retained files can carry the required source truth.
-
-### ISSUE_GATE14_DATASOURCE_AUTHORITY_MISMATCH
+### ISSUE_GATE14_R1_AUTOSHEETS_BLANK_RANGE_CONTRACT_UNPROVEN
 
 Status: `OPEN / RUNTIME HOLD`
 
+First detected: `2026-07-18`
+
+Affected artifact:
+
+`AIW_GATE14_REAL_PRODUCT_CONTRACT_R1_PRIVATE.xml`
+
+SHA256:
+
+`B291963FEFD5C9DD938F69F8CE0C1C4CB3318E21DF17EA6646FB14C4594730CC`
+
+Affected task:
+
+`AIW REAL PRODUCT CONTRACT R1 LAUNCHER`
+
+Task ID:
+
+`329`
+
+Affected action:
+
+Human Action 52 / XML action `act51`
+
+Observed phone result:
+
+- AutoSheets OpenSlotView read completed.
+- Rows 75-78 were selected.
+- AutoSheets blank-range read of faithful-copy `Sheet1 A75:I78` completed.
+- `%pav_read_ok` was set to `1`.
+- Human Action 52 evaluated true.
+- `%pav_read_ok` was reset to `0`.
+- Task stopped at `PHASE_A_NO_WRITE`.
+- No Sheet write occurred.
+- No TextNow, OpenAI, Send, DONE, Archive, DeadArchive, or profile action occurred.
+
+Root-cause class:
+
+`UNPROVEN AUTOSHEETS BLANK-RANGE OUTPUT CONTRACT`
+
+Current known defect:
+
+Codex simulated AutoSheets blank-range behavior using assumptions that were not isolated on the phone. Static and simulated PASS claims overstated proof. The phone result proves the R1 candidate cannot continue past the blank-range read guard, but it does not yet prove the exact `%err`, `%errmsg`, or A:I array state.
+
+Required diagnostic proof:
+
+One corrected bounded no-write diagnostic must phone-prove exactly:
+
+- blank-range success behavior against faithful-copy `Sheet1 A75:I78`;
+- populated-range structural behavior against faithful-copy `Sheet1 A1:I1`, logging counts and shape only, not header values;
+- `%err` and `%errmsg` state/rendering;
+- unset-variable rendering;
+- A:I array existence/count/shape;
+- one controlled private-copy AutoSheets failure with Continue Task After Error ON using nonexistent tab `AIW_DIAG_MISSING_TAB_20260718` and range `A1:I1`;
+- durable retrievable evidence output through one phone-proven Tasker Run Log action and a preserved global summary variable.
+
+Required integration proof:
+
+One final integrated private-copy validator must phone-prove:
+
+- open-row selection;
+- approved fixture write;
+- exact readback;
+- QueueView/formula settlement;
+- queue non-contamination;
+- cleanup identity and execution;
+- cleanup readback;
+- OpenSlotView restoration;
+- production workbook untouched;
+- no TextNow, OpenAI, Send, DONE, Archive, DeadArchive, or profile reachability;
+- locked baseline preservation.
+
+Current planned counts:
+
+- Runtime builds remaining: `2`
+- ChatGPT artifact audits remaining: `2`
+- Phone runs remaining: `2`
+- Private-copy write runs remaining: `1`
+- Production write runs remaining: `0`
+- Release decisions remaining: `1`
+
+Prevention rule:
+
+No future Gate 14 build may integrate external plugin output assumptions unless the exact external contract is first isolated with phone-visible, durable, retrievable evidence.
+
+Regression rule:
+
+Mocks and mutations must include separate cases for:
+
+- unset `%err` rendered literally;
+- set-empty `%err`;
+- numeric `%err`;
+- `#ERROR`;
+- missing arrays;
+- zero-length arrays;
+- one-empty-item arrays;
+- populated arrays;
+- controlled AutoSheets failure;
+- stale output arrays.
+
+Static or simulated evidence cannot close this issue.
+
+Closing proof required:
+
+- ChatGPT-approved corrected diagnostic artifact.
+- One diagnostic phone run with complete durable structural evidence.
+- ChatGPT-approved final integrated private-copy validator.
+- One integrated phone run proving write/readback/formula settlement/cleanup/protection.
+- Production workbook unchanged.
+- Tracker remains 13/14 until ChatGPT release decision.
+
+## Historical Context
+
+### ISSUE_CONTROL_SOURCE_TRUTH_DUPLICATION_LOOP
+
+Status: `HISTORICAL / CONSOLIDATION MERGED TO MAIN`
+
+The active root source truth was consolidated into four files. Do not recreate deleted controller files, ledgers, matrices, preflight files, report directories, or replacement frameworks when the four retained files can carry the required source truth.
+
+### ISSUE_GATE14_DATASOURCE_AUTHORITY_MISMATCH
+
+Status: `SUPERSEDED / HISTORICAL CONTEXT`
+
 Root cause:
 
-The Gate 14 Phase A fixture writer and validator used different workbook authorities.
+The earlier Gate 14 Phase A fixture writer and validator used different workbook authorities.
 
 Direct static evidence:
 
@@ -64,27 +148,9 @@ Phone-proof classification:
 
 No phone execution proved this datasource defect.
 
-Required repair:
+Current disposition:
 
-Run 2 must return directly to a bounded Datasource R1 or successor runtime artifact path that resolves datasource authority without changing unrelated runtime behavior.
-
-Required regression:
-
-- exact full-project baseline and SHA;
-- exact changed-node map;
-- upstream/downstream contract map;
-- actual workbook authority separation in tests;
-- full reachable call graph for affected path;
-- state-transition impact;
-- protected-node proof;
-- application-wide regression plan;
-- forbidden-path proof;
-- zero Send/TextNow/OpenAI/DONE/Archive/Profile enablement from validation-only path;
-- independent ChatGPT artifact approval before phone import.
-
-Closing proof:
-
-Approved runtime artifact passes static and simulated validation, then receives required phone proof under ChatGPT control.
+R1 superseded the staging datasource path by moving the validation launcher to the faithful private copy, but R1 is rejected because phone evidence exposed the newer AutoSheets blank-range output contract blocker before any Sheet write occurred.
 
 Prevention rule:
 
@@ -107,6 +173,7 @@ Never collapse separate workbook IDs or datasource authorities into one abstract
 | AutoInput target drift | PERMANENT | No guessed AutoInput target; preserve and prove phone-visible fields. | Every TextNow/AutoInput artifact |
 | Credential drift | PERMANENT | Verify current credential source privately without printing or committing values. | Every private package |
 | AutoSheets timeout after lock | PERMANENT | Bound retries and release/close locks on final failure before TextNow. | Every Sheet-read-before-Send path |
+| External plugin output assumptions | PERMANENT | Do not integrate unproven AutoSheets or plugin output shape; isolate the exact phone-visible contract first with durable evidence. | Every Gate 14 diagnostic and runtime validator |
 | Lifecycle ordering | PERMANENT | One lifecycle transition per cycle; unresolved Send states block new Send selection. | Every queue-cycle artifact |
 | STOP/profile safety | PERMANENT | STOP prevents new work and leaves runtime profiles disabled; no silent profile enablement. | Every STOP/recovery/runtime artifact |
 | Gate 9 controlled Send | LOCKED | Do not rerun or reopen without newer contradictory phone proof. | Gate 14 regression audit |
