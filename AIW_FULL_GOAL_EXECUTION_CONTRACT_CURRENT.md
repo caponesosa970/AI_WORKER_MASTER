@@ -1,238 +1,171 @@
-# AI Worker Full Goal Execution Contract — Current
-
-Status: CURRENT / CANONICAL
-Established: 2026-07-13
-Authority: Newest direct Sosa instructions and the approved Plan A architecture.
-
-## 1. Product Goal
-
-Deliver a phone-based autonomous AI Worker that:
-
-1. Detects legitimate TextNow messages.
-2. Logs each message to the exact Google Sheet row.
-3. Preserves sender, message, IDs, timestamps, and row identity.
-4. Generates a context-aware reply through the OpenAI API.
-5. Opens the correct TextNow conversation.
-6. Ensures the compose field is safe.
-7. Inserts the exact bound reply.
-8. Clicks Send no more than once.
-9. Confirms the outcome before declaring completion.
-10. Archives only confirmed completed rows.
-11. Recovers safely from partial failures.
-12. Runs until STOP.
-13. Supports the final control interface.
-14. Reaches the intended 50-contact reliability target.
+# AI Worker Full Goal Execution Contract
 
-## 2. Permanent End-to-End Flow
+Status: CURRENT / PERMANENT PRODUCT CONTRACT
 
-The final system flow is:
+This file defines the durable end-to-end behavior required for AI Worker V1. It does not record the active tracker, current gate, active blocker, or candidate status.
 
-`TextNow event`
-→ `exact Sheet row logged`
-→ `exact row processed`
-→ `reply generated`
-→ `READY_TO_SEND`
-→ `exact row selected`
-→ `SENDING written and verified`
-→ `correct TextNow thread opened`
-→ `compose verified and populated`
-→ `Send clicked zero or one time`
-→ `SEND_CLICKED_AWAITING_CONFIRM`
-→ `send confirmation`
-→ `DONE / confirmed completion`
-→ `Archive eligible`
-→ `safe archive`
-→ `next cycle`
+## Full Product Goal
 
-## 3. Exact-Row Contract
+AI Worker must:
 
-Every runtime action must remain bound to one exact source row and one exact message ID.
+1. Detect legitimate TextNow messages.
+2. Log each legitimate event to the exact authorized Sheet row.
+3. Preserve sender, message, message ID, notification identity, timestamps, order, and row identity.
+4. Group rapid same-contact messages safely with a maximum group size of four.
+5. Preserve different senders in separate groups.
+6. Preserve repeated text with a new event ID as a new legitimate event.
+7. Suppress only exact duplicate IDs under an explicit duplicate rule.
+8. Build bounded confirmed conversation context.
+9. Generate a context-aware OpenAI reply.
+10. Bind the reply to the exact source row, sender, message, and ID.
+11. Open the exact TextNow conversation.
+12. Verify thread identity and compose safety.
+13. Insert the exact bound reply.
+14. Click Send zero or one time.
+15. Never automatically retry Send after a possible click.
+16. Confirm completion independently.
+17. Write `DONE` only after independent confirmation.
+18. Archive only independently confirmed exact rows.
+19. Recover safely from interruption, plugin failure, restart, and stale state.
+20. Run until STOP.
+21. Support START, STOP, SAFE, LIVE, STATUS, validation, final interface, and release controls.
+22. Meet the intended 50-contact reliability target through bounded, proof-backed capacity testing.
 
-Required:
+## Exact-Row Contract
 
-- No stale row index.
-- No wrong-row status update.
-- No blank sender.
-- No blank reply.
-- No unresolved literal variable.
-- No `#ERROR`.
-- No switching to a different row after binding.
-- No completion update to any row other than the bound row.
-- No row clear or archive before confirmed completion.
+Every runtime operation must remain bound to one exact source row and one exact message ID.
 
-## 4. Message Contract
+Forbidden:
 
-The system must respond to every non-identical message event in order.
+- row switch after binding;
+- blank sender;
+- blank message;
+- blank ID;
+- blank or stale reply reaching Send;
+- unresolved variable authorizing a write, API call, UI action, Send, DONE, or Archive;
+- stale plugin output authorizing a state transition;
+- source clear before exact Archive copy/readback proof.
 
-Rules:
+Every Sheet write that affects runtime authority must have exact readback proof before downstream action depends on it.
 
-- A newer message does not silently erase an older valid event.
-- Exact duplicates may be suppressed only by a short, explicit duplicate guard.
-- A later repeated message must be accepted when it is a new event.
-- Replies must use the current bound message and current conversation context.
-- Stale replies are forbidden.
+## Message and Grouping Contract
 
-## 5. Send Transaction Contract
+One legitimate event receives one stable event identity.
 
-The permanent Send module must:
+Same-contact rapid messages may group only in arrival order and only up to four events.
 
-1. Receive a dynamic row and expected message ID.
-2. Validate inputs before acquiring the Send lock.
-3. Acquire the lock only when no other Send owns it.
-4. Re-read and validate the exact row.
-5. Require `READY_TO_SEND`.
-6. Persist and verify `SENDING` before opening TextNow.
-7. Use only source-proven TextNow UI actions.
-8. Verify the correct conversation and safe compose state.
-9. Click Send no more than once.
-10. Never automatically retry Send after a possible click.
-11. Persist an outcome state.
-12. Release the owned lock exactly once.
-13. Never release another run's lock.
-14. Never mark `DONE` from the Send click alone.
-15. Never Archive from the Send module.
+Five messages partition as `4+1`.
 
-Permanent Send outcomes:
+Eight messages partition as `4+4`.
 
-- `SEND_CLICKED_AWAITING_CONFIRM`
-- `SEND_OUTCOME_UNKNOWN_REVIEW`
-- `POST_SEND_STATUS_UPDATE_FAILED`
-- `HOLD_PRE_SEND_FAILED`
+Nine messages partition as `4+4+1`.
 
-A later confirmation module consumes `SEND_CLICKED_AWAITING_CONFIRM`.
+Different senders must never share a group.
 
-A later Archive module consumes only independently confirmed completion.
+No legitimate event may be lost, silently overwritten, or hidden by view ordering.
 
-## 6. Approved Plan A Architecture
+## OpenAI Contract
 
-The approved permanent architecture is:
+OpenAI requests must:
 
-- Task 71 — `FINAL Send Sheet`: permanent selector only.
-- Task 199 — `FINAL Queue Cycle`: permanent queue connection.
-- Task 223 — `FINAL Send One Bound Row`: permanent production Send transaction.
-- Task 224 — `AIW GATE9 CONTROLLED SEND TEST`: temporary removable Gate 9 launcher.
+- use the exact bound sender/message/context;
+- avoid stale prompt or stale reply reuse;
+- bound retries;
+- handle timeout, rate limit, quota, malformed response, empty response, and unusable body safely;
+- never return a row to a sendable state after an unresolved API failure;
+- never print, commit, or expose credentials.
 
-Only Tasks 71, 199, 223, and 224 may change semantically during Plan A.
+## Send Transaction Contract
 
-Task 224 may hard-code the controlled test row and test ID.
+A Send-capable path must:
 
-Tasks 71, 199, and 223 must remain free of Gate 9 hard-coded test values.
+- validate row, ID, sender, message, reply, status, authorization, and lock state before UI action;
+- persist and verify the send-intent state before opening TextNow;
+- open only the exact bound TextNow thread;
+- fail closed on ambiguous search results, unknown UI, popup, overlay, login prompt, update prompt, network banner, dirty compose, or unrelated draft text;
+- insert only the exact bound reply;
+- consume one-shot Send authorization before Send-capable work;
+- click Send zero or one time;
+- permanently end automatic Send eligibility after any possible click;
+- route uncertain click outcome to review without retry;
+- never mark `DONE` from Send-click evidence alone;
+- never Archive from the Send module;
+- release owned locks exactly once and never release another owner.
 
-Removing Task 224 after Gate 9 must not change Tasks 71, 199, or 223.
+## Confirmation and DONE Contract
 
-## 7. Queue Contract
+Confirmation must be independent from Send.
 
-The queue controller may start at most one Send transaction per cycle.
+`DONE` requires proof that the expected reply reached the correct conversation as the completed outgoing message.
 
-Before choosing `READY_TO_SEND`, the selector must block when any unresolved send state exists, including:
+Confirmation must fail closed on wrong thread, wrong reply, missing sent marker, stale UI, unresolved variables, plugin timeout, or uncertain screen state.
 
-- `SENDING`
-- `SEND_CLICKED_AWAITING_CONFIRM`
-- `SEND_OUTCOME_UNKNOWN_REVIEW`
-- `POST_SEND_STATUS_UPDATE_FAILED`
-- `HOLD_PRE_SEND_FAILED`
+## Archive Contract
 
-When blocked:
+Archive may occur only after confirmed completion.
 
-- no new Send transaction starts;
-- Task 223 is not called;
-- the cycle reports `SEND_BLOCKED_PENDING_CONFIRM`.
+Archive must:
 
-## 8. Lock and Recovery Contract
+- copy the exact confirmed source row;
+- read back the copy;
+- prove uniqueness or idempotent existing copy;
+- clear only the exact source row after copy/readback proof;
+- fail closed on mismatch, duplicate conflict, source-row change, or clear uncertainty.
 
-Every owned-lock terminal path must release the lock exactly once.
+DeadArchive, Compactor, and broad archive drains remain blocked unless specifically proven and authorized in the current controller state.
 
-Every operation that can time out must have deterministic handling.
+## Lock, Recovery, and STOP Contract
 
-For AutoSheets operations:
+Every lock must have:
 
-- clear expected outputs before each read;
-- clear `%err` and `%errmsg`;
-- Continue Task After Error must be enabled where error routing depends on `%err`;
-- numeric error detection only;
-- maximum two attempts;
-- no infinite retry;
-- exact readback for states that authorize TextNow or Send.
+- owner token;
+- acquisition proof;
+- stale detection;
+- active-owner protection;
+- success release;
+- failure release;
+- STOP/restart handling;
+- no unowned release;
+- no double release;
+- no owned leak on terminal paths.
 
-After a possible Send click:
+STOP must prevent new work and leave runtime profiles disabled.
 
-- never return automatically to `READY_TO_SEND`;
-- never click Send again automatically;
-- preserve a non-sendable review state.
+Recovery must not retry Send after a possible click, clear another run's lock, skip unresolved events, or hide durable review states.
 
-## 9. STOP and Live Contract
+## UI and Phone Runtime Contract
 
-STOP must prevent new work and release owned locks safely.
+AutoInput/TextNow behavior requires phone proof for release claims.
 
-Live operation remains blocked until:
+Static XML can verify structure and configured selectors, but cannot prove Android, TextNow, keyboard, accessibility, overlay, fold-state, or render behavior.
 
-- controlled Send passes;
-- confirmation passes;
-- Archive passes;
-- timer/background reliability passes;
-- recovery passes;
-- capacity ladder passes.
+No guessed AutoInput target is allowed.
 
-No test package may silently enable live profiles, timer loops, Archive, DeadArchive, Compactor, or capacity behavior.
+Unknown UI state fails closed.
 
-## 10. Capacity Contract
+## Capacity and Release Contract
 
-The intended release target is 50 contacts.
+The 50-contact target must map to:
 
-Capacity work must prove:
+- accepted events;
+- completed events;
+- skipped or held events;
+- duplicate IDs suppressed;
+- legitimate repeated messages accepted;
+- API attempts and retries;
+- permanent failures;
+- lock acquisitions/releases;
+- group counts and sizes;
+- SendCount;
+- confirmations;
+- Archives;
+- queue age;
+- cycle duration;
+- recovery duration;
+- measured and projected throughput.
 
-- no skipped rows;
-- no duplicate sends;
-- no stale replies;
-- no race between processing, sending, and archiving;
-- bounded retries;
-- ordered handling;
-- safe crash/restart behavior;
-- controlled API timeout and rate-limit behavior;
-- measurable throughput and recovery.
+Capacity proof must not imply a 50-recipient real-Send blast.
 
-Capacity claims require stress proof and may not be inferred from one-row success.
+Production release requires direct proof for every release claim and independent ChatGPT approval.
 
-## 11. Proof Contract
-
-Development proof permits a safe test.
-
-Gate proof locks one behavior.
-
-Release proof requires the complete system.
-
-Phone proof beats static audit.
-
-Tasker import/render proof beats XML parse.
-
-Static reports may support a claim but cannot prove phone behavior.
-
-No tracker increase, merge, release, or unlock occurs without mapped evidence.
-
-## 12. Source and Security Contract
-
-Source truth order is defined in `AIW_CONTROLLER_BOOTSTRAP_CURRENT.md`.
-
-No API key, credential, private token, phone number, or private package may be committed to the public repository.
-
-Private artifacts remain outside Git.
-
-SHA256 must identify every private package used for testing.
-
-## 13. Plan A Completion Boundary
-
-Plan A is complete only when:
-
-- one permanent selector exists;
-- one permanent queue connection exists;
-- one permanent dynamic Send module exists;
-- one removable Gate 9 launcher exists;
-- old candidates and diagnostics are removed from active runtime;
-- all changed paths are classified;
-- every reachable Send path clicks zero or one time;
-- every owned lock exit releases safely;
-- AutoSheets and AutoInput preservation checks pass;
-- actual XML and ZIP pass independent ChatGPT artifact audit;
-- phone proof confirms the controlled transaction.
-
-Plan A does not itself unlock Archive, live, capacity, or release.
+No tracker increase, merge, gate closure, phone import, real Send, or release occurs without mapped evidence.

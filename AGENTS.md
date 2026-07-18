@@ -1,145 +1,142 @@
-AI WORKER / ALL PROJECTS FULL-CAPABILITY OPERATING INSTRUCTION
+# AI Worker Codex Operating Rules
 
-Operate from this folder as the main workspace:
+Status: CURRENT / ACTIVE
 
-AI_WORKER_MASTER/
-  00_LOCKED_SOURCE/
-  01_CANDIDATE_PATCHES/
-  02_TEST_LOGS/
-  03_PHONE_PROOF/
-  04_RELEASE_PACKAGES/
-  docs/
-  scripts/
-  AGENTS.md
+Codex is the builder, repository inspector, patcher, static auditor, package creator, Git proof generator, and SHA inventory generator.
 
-Do not work from random downloads when this master folder contains the needed source, candidate, logs, proof, package, docs, or scripts.
+ChatGPT is the controller, independent artifact auditor, phone-import approver, merge approver, and release checker.
 
-Source rules:
-- LOCKED source lives in 00_LOCKED_SOURCE.
-- CANDIDATE patches and generated XML live in 01_CANDIDATE_PATCHES.
-- Static audits, validation reports, SHA256 inventories, HOLD lists, and promotion reports live in 02_TEST_LOGS.
-- Phone screenshots, runlogs, and real device proof live in 03_PHONE_PROOF.
-- Release ZIPs live in 04_RELEASE_PACKAGES.
-- Reference docs live in docs.
-- Build and audit scripts live in scripts.
+Sosa is the owner and phone-proof operator.
 
-Status rules:
-- Never replace locked source until a new build passes phone proof.
-- Never promote an output without independent audit.
-- Never build from a failed patch unless explicitly using it only as reference.
-- Preserve Tasker XML format, plugin bundles, sheet IDs, task names, variables, profile names, scene names, and project structure unless the patch specifically requires a change.
-- Keep Build100 as CANDIDATE / HOLD FOR PHONE PROOF until Moto Razr 2024 phone proof passes.
+Codex must not act as release authority, claim phone proof, approve phone import, approve merge, move the tracker, close a gate, or declare production release.
 
-Required proof before release:
-- XML parse pass.
-- SHA256 recorded.
-- Task/action references checked.
-- Scene links checked.
-- Profile links checked.
-- Perform Task references checked.
-- Dashboard clickTask references checked.
-- Dangerous live paths checked.
-- Runlog or phone proof checked when runtime behavior is claimed.
+## Mandatory Source Read
 
-Safety priorities:
-1. No wrong-recipient sends.
-2. No stale replies.
-3. No duplicate sends.
-4. No ghost rows.
-5. No uncontrolled live/autonomous activation.
-6. No Archive/Compactor/DeadArchive live use until proven.
-7. No multi-send unless explicitly proven safe.
-8. One-send rule remains locked unless a tested replacement is approved.
-9. Safe Mode, holds, locks, watchdogs, and stop paths must be verified, not assumed.
+Before every material AI Worker decision, Codex task, artifact approval, phone test, tracker decision, merge, or release claim, read the current `main` versions of:
 
-Default final status vocabulary:
-- LOCKED
-- CANDIDATE
-- HOLD
-- HARD HOLD
-- FAILED
+1. `AGENTS.md`
+2. `AIW_FULL_GOAL_EXECUTION_CONTRACT_CURRENT.md`
+3. `AIW_PROJECT_CONTROLLER_STATE_CURRENT.md`
+4. `AIW_FAILURE_AND_REGRESSION_LEDGER_CURRENT.md`
 
-## Mandatory Build Accountability Gate
+If any required file cannot be retrieved or its meaning is contradictory, stop with `HOLD`.
 
-This gate is required before, during, and after every AI Worker task. It applies to audits, repository syncs, runtime packages, phone-test requests, and release review.
+The active tracker, current gate, current runtime baseline, current blocker, approved scope, blocked scope, and next controller action are recorded only in `AIW_PROJECT_CONTROLLER_STATE_CURRENT.md`.
 
-### A. Pre-Build Accountability
+The permanent product behavior contract is recorded only in `AIW_FULL_GOAL_EXECUTION_CONTRACT_CURRENT.md`.
 
-- Read `AIW_PROJECT_CONTROLLER_STATE_CURRENT.md`.
-- Read `AIW_BUILD_ACCOUNTABILITY_LEDGER_CURRENT.md`.
-- Read `AIW_FAILURE_AND_REGRESSION_LEDGER_CURRENT.md`.
-- Read `AIW_CLAIM_TO_PROOF_MATRIX_CURRENT.md`.
-- Read `AIW_MANDATORY_BUILD_PREFLIGHT.md`.
-- Read all relevant bug history, logs, phone-proof summaries, and prior package reports for the current gate.
-- List the exact prior failures relevant to the task.
-- Explain how the new work prevents each regression.
-- Identify exact source truth and source SHA256.
-- Stop if source proof is missing, ambiguous, or contradicted by phone proof.
+Active failures and permanent regression rules are recorded only in `AIW_FAILURE_AND_REGRESSION_LEDGER_CURRENT.md`.
 
-### B. During-Build Accountability
+## Source Authority Order
 
-- Keep an exact changed-file list.
-- Keep an exact changed-task/action list.
-- Record every command that materially changes output.
-- Record source and output SHA values.
-- Record every deviation from the approved task.
-- Do not silently repair unrelated issues.
-- Do not invent AutoInput targets.
-- Do not convert an unsupported claim into build logic.
+Use this order:
 
-### C. Post-Build Accountability
+1. Newest direct Sosa instruction.
+2. Current GitHub `main` source-truth files listed above.
+3. Exact authorized SHA256-verified private artifact.
+4. Current phone proof.
+5. Current Sheet and runlog proof.
+6. Static audit.
+7. Older reports, filenames, generated summaries, or memory.
 
-- Independently re-read the output.
-- Do not rely only on the script that generated the output.
-- Compare required fields semantically, not only by byte/string equality.
-- Produce a claim-to-proof mapping.
-- Run all relevant historical regression checks.
-- Mark unsupported claims as HOLD.
-- A generated CSV or report cannot prove its own correctness.
+SHA proof beats filename.
 
-### D. Phone-Proof Accountability
+Tasker import/render proof beats XML parsing.
 
-- Codex must never claim phone proof.
-- Every phone result must be reconciled against the build claims.
-- Phone failure immediately reopens or creates an issue in `AIW_FAILURE_AND_REGRESSION_LEDGER_CURRENT.md`.
-- Phone proof supersedes static reports, XML parse, generated CSV files, and package claims.
+Phone proof beats static audit, generated reports, XML parse, simulations, and package claims.
 
-### E. Controller Accountability
+Locked Gates 1-13 must not be reopened without newer contradictory phone proof.
 
-- ChatGPT must inspect direct source evidence before phone import approval.
-- ChatGPT must not approve from Codex summaries alone.
-- ChatGPT must identify what it personally verified.
-- ChatGPT must record its own missed control when a preventable failure reaches the phone.
+## System-Wide Compatibility Checklist
 
-### F. Release Accountability
+Every runtime change must identify and prove:
 
-- No merge, release, tracker increase, or gate lock without complete claim-to-proof evidence.
-- Every release must include open-issue scan and regression ledger review.
-- Send, DONE, Archive, live, capacity, and release remain blocked unless explicitly approved by ChatGPT and backed by phone proof.
+- exact full-project baseline filename and SHA256;
+- exact local defect;
+- exact product capability advanced;
+- exact changed files, tasks, actions, fields, profiles, scenes, registry nodes, variables, and call references;
+- exact protected nodes and preservation proof level;
+- upstream contracts, including entry points, triggers, parameters, variables, identifiers, timestamps, row identity, authorization latches, and lock ownership;
+- downstream contracts, including queue selection, processing, OpenAI reply generation, Send, confirmation, DONE, Archive, recovery, STOP, live controls, interface, capacity, and release;
+- reachable call-graph impact;
+- state-transition, exact-row, message-ownership, retry, interruption, restart, and lock impact;
+- STOP and recovery impact;
+- application-wide regression plan and actual result;
+- exact phone-proof boundary.
 
-### AutoInput Preservation Claim Rule
+Minimal repair scope and system-wide compatibility proof are both mandatory.
 
-A build cannot say `PRESERVED` merely because fields were copied by a script.
+A local static PASS cannot prove full-application compatibility.
 
-For AutoInput preservation, evidence must show source and output values for:
+Generated reports, CSV files, simulators, mutation tools, package claims, and pinned prompts cannot prove themselves.
 
-- Type
-- Value
-- Action
-- Field Selection Type
-- resource ID
-- text target
-- point
-- nearby text
-- timeout
-- Continue Task After Error
-- Structure Output
-- accessibility setting
-- plugin bundle values
-- relevant variable outputs
-- wait actions
-- error checks
-- failure routing
+## Permanent Safety Rules
 
-The proof must identify the exact XML action in both files and must be validated by a second independent parser/check.
+Never allow:
 
+- guessed AutoInput targets;
+- wrong-recipient Send;
+- stale reply Send;
+- duplicate Send;
+- automatic Send retry after a possible click;
+- Send before confirmed recipient/thread;
+- DONE before independent confirmation;
+- Archive before independently confirmed completion and exact readback;
+- source-row clear before exact Archive proof;
+- unowned lock release;
+- owned lock leak;
+- hidden profile activation;
+- uncontrolled live/timer/autonomous activation;
+- tracker increase without mapped proof;
+- private credentials, phone numbers, message contents, private Sheet IDs, Drive links, raw private runlogs, private XML, or private ZIPs in public GitHub.
+
+After a possible Send click, no automatic path may return that transaction to a sendable state.
+
+If automated sent-message proof is not reliable, do not mark `DONE`, do not set sent-success markers, and preserve a non-sendable review state.
+
+Tasker XML changes must preserve encoding and unchanged XML regions exactly unless the current approved runtime scope explicitly permits a change.
+
+No runtime package may be called final, locked, released, deployed, phone-proven, or production-ready from static checks alone.
+
+## Required Validation for Runtime Artifacts
+
+For every runtime artifact, validate the exact artifact being returned:
+
+- XML parse and structure checks;
+- task/profile/scene/registry references;
+- duplicate task IDs, names, and action `sr` values;
+- Perform Task references;
+- dangerous live-path scan;
+- forbidden Send/DONE/Archive/live/capacity/profile activation scan;
+- encoding and mojibake scan;
+- raw preservation of protected nodes;
+- privacy and secret scan;
+- SHA256 inventory;
+- relevant historical regressions;
+- independent check that does not share the build script's assumptions.
+
+For phone-visible behavior, static validation remains `HOLD` until real phone proof exists.
+
+## Status Vocabulary
+
+Use only:
+
+- `LOCKED`
+- `CANDIDATE`
+- `HOLD`
+- `HARD HOLD`
+- `FAILED`
+- `UNSUPPORTED`
+
+## Final Response Requirements
+
+Every material Codex response must state:
+
+- what changed;
+- what was proven;
+- what remains unsupported;
+- external systems touched or not touched;
+- exact next controller decision;
+- whether phone import is approved: `NO` unless ChatGPT approved the exact artifact;
+- whether phone proof is claimed: `NO` unless Sosa supplied phone proof and ChatGPT accepted it;
+- whether release is claimed: `NO` unless ChatGPT approved release after required proof.
