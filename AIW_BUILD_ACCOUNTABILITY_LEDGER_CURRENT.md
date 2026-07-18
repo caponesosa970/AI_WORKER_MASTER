@@ -143,6 +143,51 @@ NONE. Tracker remains `13/14 locked = 93%`.
 7. Verify Datasource R1 remains unapproved.
 8. Verify no phone proof, phone import, tracker increase, merge, Gate 14 release, or production release is claimed.
 
+### Independent-audit repair 2026-07-17
+
+Before SHA:
+
+`d4c6adcd134bc61b1b56038a600bfd9e7391d9b8`
+
+Exact defects found by ChatGPT/controller before merge:
+
+1. `CLAIM-SYSACC-20260717-006` falsely classified the datasource mismatch as requiring or having phone-proof evidence.
+2. The synchronization introduced a corrective-merge and issue-closure deadlock by prohibiting all merges while also requiring the documentation PR to merge before the issue could close.
+
+Exact correction scope:
+
+- `AIW_CLAIM_TO_PROOF_MATRIX_CURRENT.md`: corrected `CLAIM-SYSACC-20260717-006` to require static XML datasource/call-path trace plus newest controller source-truth instruction, with phone proof `NO / NOT RUN FOR THIS DEFECT`, controller check `PENDING CHATGPT RE-AUDIT`, and result `CONFIRMED DEFECT / STATIC SOURCE TRACE`.
+- `AIW_CLAIM_TO_PROOF_MATRIX_CURRENT.md`: added claims proving the exact documentation-only accountability synchronization PR may merge only after independent ChatGPT audit and exact head SHA approval, while every runtime or release-bearing merge remains prohibited until separately authorized.
+- `AGENTS.md`: distinguished prohibited runtime/release-bearing merges from the allowed exact documentation-only corrective merge.
+- `AIW_MANDATORY_BUILD_PREFLIGHT.md`: added the documentation-only corrective merge exception, exact-SHA merge closure condition, no-runtime-approval boundary, and post-closure artifact-specific audit requirement.
+- `AIW_FAILURE_AND_REGRESSION_LEDGER_CURRENT.md`: updated required regression, closing proof, and future-build checks to avoid the merge deadlock while preserving runtime HARD HOLD.
+- `AIW_PROJECT_CONTROLLER_STATE_CURRENT.md`: added the same merge exception, exact-SHA closure condition, no-runtime-approval boundary, and artifact-specific audit requirement.
+- `AIW_BUILD_ACCOUNTABILITY_LEDGER_CURRENT.md`: recorded this independent-audit repair.
+
+After SHA:
+
+Recorded by the pushed PR branch head and Codex final return. The final commit SHA is not embedded in this same commit because embedding it would change the commit identity.
+
+Tracker effect:
+
+NONE.
+
+Runtime effect:
+
+NONE.
+
+Sosa responsibility:
+
+NONE.
+
+ChatGPT/controller finding:
+
+The two documentation defects above were found before merge.
+
+Codex responsibility:
+
+Correct only the audited documentation defects, preserve the system-wide rule, preserve runtime HARD HOLD, and push the correction to the existing PR branch.
+
 ## Historical Build Entry
 
 ### Accountability ID

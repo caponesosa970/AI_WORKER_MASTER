@@ -75,7 +75,15 @@ No local PASS, generated report, simulator, mutation result, package claim, or s
 
 Locked Gates 1-13 cannot be reopened without newer contradictory phone proof.
 
-No runtime, phone, tracker, merge, or release action may occur while system-wide accountability is stale.
+Runtime and release-bearing merges remain prohibited while system-wide accountability is stale; any runtime or release-bearing merge remains blocked.
+
+One exception is permitted: the exact documentation-only accountability synchronization PR may merge after independent ChatGPT audit, all requested corrections are resolved, exact head SHA approval is recorded, only authorized controller/accountability files changed, and runtime, private artifacts, phone, Sheets, tracker, and release state remain untouched.
+
+`ISSUE_APP_WIDE_ACCOUNTABILITY_DRIFT_GATE14` is satisfied only when the exact ChatGPT-approved PR head SHA is merged into `main` and that merge is verified on `main`.
+
+Closing the accountability-drift issue does not approve Datasource R1, approve runtime work, approve phone import, authorize Tasker execution, move the tracker, close Gate 14, or authorize production release.
+
+Before Datasource R1 or any successor runtime work resumes, the active artifact must have its own current build-ledger entry, exact full-project baseline and SHA, exact changed-node map, upstream and downstream contract map, full reachable call graph, state-transition impact, protected-node proof, app-wide regression plan, claim-to-proof mapping, and independent ChatGPT artifact approval.
 
 When `ISSUE_APP_WIDE_ACCOUNTABILITY_DRIFT_GATE14` is open, runtime work and phone execution are HARD HOLD. Tracker remains `13/14 locked = 93%`, Gate 14 remains blocked, phone import is not approved, and phone proof is not claimed.
 

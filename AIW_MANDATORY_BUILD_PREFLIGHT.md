@@ -97,7 +97,15 @@ When `ISSUE_APP_WIDE_ACCOUNTABILITY_DRIFT_GATE14` is open, Codex must treat Gate
 
 The active tracker remains `13/14 locked = 93%`. Gates 1-13 remain locked. Gate 14 remains blocked. Phone proof is not claimed, phone import is not approved, tracker effect is NONE, and runtime work may resume only after the synchronized accountability records cover the active build.
 
-Blocked while this issue is open: runtime XML repair, private package modification, Datasource R1 continuation, Tasker import, Tasker execution, TextNow action, live or staging Sheet read/mutation, Send, confirmation, DONE, Archive, DeadArchive, Compactor, TT5, live operation, capacity execution, interface execution, profile activation, Gate 14 release, merge, and production release.
+Blocked while this issue is open: runtime XML repair, private package modification, Datasource R1 continuation, Tasker import, Tasker execution, TextNow action, live or staging Sheet read/mutation, Send, confirmation, DONE, Archive, DeadArchive, Compactor, TT5, live operation, capacity execution, interface execution, profile activation, Gate 14 release, runtime or release-bearing merge, and production release.
+
+One corrective merge exception exists: the exact documentation-only accountability synchronization PR may merge after independent ChatGPT audit, all requested corrections are resolved, exact head SHA approval is recorded, only authorized controller/accountability files changed, and runtime, private artifacts, phone, Sheets, tracker, and release state remain untouched.
+
+`ISSUE_APP_WIDE_ACCOUNTABILITY_DRIFT_GATE14` is satisfied only when the exact ChatGPT-approved PR head SHA is merged into `main` and that merge is verified on `main`.
+
+Closing the accountability-drift issue does not approve Datasource R1, approve runtime work, approve phone import, authorize Tasker execution, move the tracker, close Gate 14, or authorize production release.
+
+Before Datasource R1 or any successor runtime work resumes, the active artifact must have its own current build-ledger entry, exact full-project baseline and SHA, exact changed-node map, upstream and downstream contract map, full reachable call graph, state-transition impact, protected-node proof, app-wide regression plan, claim-to-proof mapping, and independent ChatGPT artifact approval.
 
 Required full-app compatibility output fields:
 

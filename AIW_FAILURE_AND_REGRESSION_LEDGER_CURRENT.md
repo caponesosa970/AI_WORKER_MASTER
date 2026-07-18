@@ -107,7 +107,7 @@ Required regression:
 - Secret/privacy scan.
 - `git diff --check`.
 - Independent controller review.
-- Merge into main after approval.
+- The exact documentation-only accountability synchronization PR may merge into main only after independent ChatGPT audit, requested corrections are resolved, exact head SHA approval is recorded, only authorized controller/accountability files changed, and runtime, private artifacts, phone, Sheets, tracker, and release state remain untouched.
 
 Status:
 
@@ -115,7 +115,9 @@ OPEN / HARD HOLD.
 
 Closing proof required:
 
-The six-file synchronization PR is independently reviewed, merged into main, and verified to contain no runtime, private, phone, Sheet, profile, scene, script, tracker-increase, or release-action changes.
+The six-file synchronization PR is independently reviewed, all requested corrections are resolved, the exact ChatGPT-approved PR head SHA is merged into main, and that merge is verified on main with no runtime, private, phone, Sheet, profile, scene, script, tracker-increase, or release-action changes.
+
+Closing this accountability-drift issue does not approve Datasource R1, approve runtime work, approve phone import, authorize Tasker execution, move the tracker, close Gate 14, or authorize production release.
 
 Prevention rule:
 
@@ -123,7 +125,7 @@ Before any runtime build, repair, artifact approval, phone-test request, tracker
 
 Future builds that must check this issue in preflight:
 
-All Gate 14 builds, Datasource R1 or successor repairs, Phase A/B/C candidates, phone-test requests, capacity proofs, final controls, merge requests, and release packages.
+All Gate 14 builds, Datasource R1 or successor repairs, Phase A/B/C candidates, phone-test requests, capacity proofs, final controls, runtime or release-bearing merge requests, and release packages. Before Datasource R1 or any successor runtime work resumes, the active artifact must have its own current build-ledger entry, exact full-project baseline and SHA, exact changed-node map, upstream and downstream contract map, full reachable call graph, state-transition impact, protected-node proof, app-wide regression plan, claim-to-proof mapping, and independent ChatGPT artifact approval.
 
 ### ISSUE_27B_AUTOINPUT_TARGET_NOT_V15A_PRESERVED
 
