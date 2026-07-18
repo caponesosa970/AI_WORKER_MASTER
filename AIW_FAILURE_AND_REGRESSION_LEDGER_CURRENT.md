@@ -1,56 +1,113 @@
 # AI Worker Failure and Regression Ledger
 
-Status: CURRENT ACTIVE FAILURES AND PERMANENT REGRESSIONS
+Status: CURRENT ACTIVE RELEASE-CAPABILITY HOLD AND PERMANENT REGRESSIONS
 
 Static audit cannot close a phone/runtime issue by itself.
 
-## Active Failures
+## Active Release-Capability Holds
 
-### ISSUE_GATE14_FINAL_VALIDATOR_CANDIDATE_UNAUDITED
+### ISSUE_DEADARCHIVE_PROOF_AND_AUTHORIZATION_PENDING
 
-Status: `OPEN / CANDIDATE HOLD`
+Status: `OPEN / RELEASE HOLD / READ-ONLY AUDIT REQUIRED`
 
-First detected: `2026-07-18`
+First recorded: `2026-07-18`
+
+Classification:
+
+This is a proof-and-authorization gap, not an implementation-defect finding.
 
 Affected capability:
 
-Final Gate 14 faithful-private-copy write, exact readback, QueueView settlement, ownership-safe cleanup, and restoration proof.
+- DeadArchive eligibility;
+- routing;
+- destination proof;
+- exact-row ownership;
+- idempotency;
+- source clearing;
+- lock ownership and release;
+- interruption and restart recovery;
+- STOP compatibility;
+- activation control.
 
-Current candidate:
+Current boundary:
 
-- File: `AIW_GATE14_FINAL_PRIVATE_COPY_VALIDATOR_CANDIDATE.xml`
-- SHA256: `A170870077C50B2350EB94F823145E5FD80A22FBEA34D1096738DDBA0EEA2B98`
-- New task: `AIW G14 FINAL PRIVATE COPY VALIDATOR`
-- Task ID: `333`
-- Action count: `1432`
-- Architecture: one manually executed plugin-bearing task, no helpers, no `Perform Task`, no profile or scene trigger.
+DeadArchive is present or referenced in the current phone-proven full project, but it remains blocked, unproven, and unauthorized. Gate 14 did not prove or enable it. No DeadArchive task may be built, repaired, enabled, executed, or phone-tested before the read-only application-wide audit and an exact controller decision.
 
-Current evidence:
+Required next proof:
 
-- Build 1 AutoSheets contract diagnostic is phone-proven under run `G14D-1784348825`.
-- Build 2 is built from the exact Gate13R2 baseline and is static-only.
-- Existing baseline task, profile, scene, action, credential-bearing, and production-datasource subtrees are preserved.
-- Baseline production-authority count remains `206`; the new task contains zero production authority.
-- The new task uses exactly four single-row A:I writes and four single-row A:I clears for rows 75-78.
-- Independent static review found and repaired a post-cleanup QueueView false-success path, a preflight fifth-entry authorization gap, and incomplete Popup evidence before the final SHA was accepted.
-- The final exact SHA has passed static and independent semantic review, but has not been imported or executed on the phone.
+1. Read-only inventory of every DeadArchive task, caller, trigger, variable, datasource, status rule, lock, and recovery path.
+2. Compare current behavior to the permanent Archive contract, including exact-row ownership, destination readback, idempotency, safe source clear, interruption recovery, STOP, and activation boundaries.
+3. Classify the existing implementation as exactly one of:
+   - already sufficient but unproven;
+   - repair required;
+   - superseded or unnecessary.
+4. Only after that classification define exact build, artifact-audit, and phone-proof counts.
+5. No DeadArchive enablement or execution before ChatGPT approves an exact artifact.
 
-Required closing proof:
 
-1. ChatGPT audits the exact PR #13 head.
-2. ChatGPT audits the exact XML and SHA256 sidecar.
-3. ChatGPT accepts baseline preservation, production-isolation, range, control-flow, evidence, and mutation proof.
-4. ChatGPT approves the exact artifact for one phone run.
-5. One phone run proves open-row selection, prewrite blank state, four exact fixture writes, exact row readbacks, 36-cell proof, QueueView settlement, OpenSlot 79, current-run ownership, four exact clears, post-cleanup blank state, QueueView restoration, OpenSlot 75, production untouched, and zero forbidden execution.
-6. ChatGPT reconciles the phone evidence and makes the one remaining release decision.
+Closing proof required:
+
+- exact read-only application-wide inventory;
+- complete caller/callee and reachable-path map;
+- exact-row, destination, idempotency, source-clear, lock, interruption, restart, STOP, and activation analysis;
+- classification of the existing implementation without assuming a defect;
+- controller-approved proof ladder based on the audit;
+- exact artifact audit and bounded phone proof if the audit determines they are required;
+- preservation of locked Gates 1-14;
+- independent ChatGPT release decision.
 
 Prevention rule:
 
-No candidate may pass from zero-initialized or stale plugin outputs. Every success latch must include the phone-proven plugin success guard plus the phase-specific identity, count, settlement, and ownership proof.
-
-Tracker effect: `NONE`; tracker remains `13/14 LOCKED = 93%`.
+Do not infer a DeadArchive defect, approve DeadArchive execution, or invent build and phone-run counts before the read-only audit proves the current implementation and its complete application-wide impact.
 
 ## Verified Closed and Historical Failures
+
+### ISSUE_GATE14_FINAL_VALIDATOR_CANDIDATE_UNAUDITED
+
+Status: `CLOSED / PHONE-PROVEN GATE 14`
+
+Closed: `2026-07-18`
+
+Accepted artifact:
+
+- File: `AIW_GATE14_FINAL_PRIVATE_COPY_VALIDATOR_CANDIDATE.xml`
+- SHA256: `A170870077C50B2350EB94F823145E5FD80A22FBEA34D1096738DDBA0EEA2B98`
+- Task: `AIW G14 FINAL PRIVATE COPY VALIDATOR`
+- Task ID: `333`
+- Accepted phone run: `G14V-1784387491`
+- Result: `PASS`
+- Terminal step: `FINAL_PRIVATE_COPY_VALIDATION_PASS`
+
+Closing proof:
+
+- exact full-project import and task rendering through action `1432`;
+- OpenSlot before `75` and authorized range preblank;
+- four exact single-row A:I writes and four exact row-level readbacks;
+- full readback match count `36`;
+- QueueView current-run count `4` during the fixture;
+- exact source rows `75-78`, exact `SKIP_MANUAL` statuses, and uniqueness proof;
+- OpenSlot during `79`;
+- precleanup ownership match count `36` and cleanup authorization only after ownership proof;
+- four exact single-row A:I clears;
+- postcleanup range blank;
+- QueueView current-run count `0` after cleanup and queue total restored;
+- OpenSlot after `75`;
+- manual cleanup required `0`;
+- final complete `1` and normal Tasker `ExitOK`;
+- faithful private copy restored;
+- production untouched;
+- zero TextNow, AutoInput, OpenAI, Send, DONE, Archive, DeadArchive, profile, live, shell, or network execution.
+
+Gate effect:
+
+- Gate 14 is `LOCKED` and phone-proven.
+- Tracker is `14/14 LOCKED = 100%`.
+- Gate 14 requires no rerun.
+- Full-product release remains `HOLD`.
+
+Permanent prevention rule:
+
+No candidate may pass from zero-initialized or stale plugin outputs. Every success latch must include the phone-proven plugin success guard plus phase-specific identity, count, settlement, ownership, cleanup, and restoration proof.
 
 ### ISSUE_GATE14_R1_AUTOSHEETS_BLANK_RANGE_CONTRACT_UNPROVEN
 
@@ -75,7 +132,7 @@ Permanent prevention rule:
 
 Clear error variables and output arrays before every Get Data action, snapshot error variables immediately after it, and apply the accepted literal success contract plus exact phase evidence. Never restore the rejected broad regex.
 
-Builds that must check it: every Gate 14 AutoSheets diagnostic and validator.
+Builds that must check it: every AutoSheets diagnostic and validator.
 
 ### ISSUE_GATE14_FINAL_VALIDATOR_ACTION_BOUND_HELPER_SCOPE
 
@@ -83,13 +140,13 @@ Status: `RESOLVED / SINGLE-TASK 1477-ACTION CONTROLLER DECISION`
 
 Resolution:
 
-The controller withdrew the helper architecture and 220-action cap. Build 2 uses exactly one new task with a source-backed hard maximum equal to the verified baseline maximum of 1477 actions. The current task uses 1432 actions. No helper or `Perform Task` action exists.
+The controller withdrew the helper architecture and 220-action cap. Gate 14 used exactly one new task with a source-backed hard maximum equal to the verified predecessor-baseline maximum of 1477 actions. The phone-proven task uses 1432 actions. No helper or `Perform Task` action exists.
 
 Permanent prevention rule:
 
 Reconcile required proof behavior with verified Tasker task limits before construction. Do not invent helper authority or weaken proof to meet an arbitrary cap.
 
-Builds that must check it: final Gate 14 validator artifacts.
+Builds that must check it: future large Tasker validation artifacts.
 
 ### ISSUE_CONTROL_SOURCE_TRUTH_DUPLICATION_LOOP
 
@@ -111,9 +168,19 @@ An earlier staging fixture writer and validation reader used different workbook 
 
 Permanent prevention rule:
 
-Never collapse distinct workbook authorities into one abstract store during simulation. The new validation path may resolve only to the faithful private-copy authority and must contain zero production authority.
+Never collapse distinct workbook authorities into one abstract store during simulation. A validation path may resolve only to its explicitly authorized authority and must preserve production isolation.
 
-Builds that must check it: every Gate 14 validation artifact.
+Builds that must check it: every validation artifact.
+
+## Permanent Workflow Controls
+
+| Control | Permanent rule | Must check in |
+| --- | --- | --- |
+| Source lock | Freeze current main SHA, PR head, and artifact SHA before every material decision; regenerate the decision if any source moves. | Every material decision and merge |
+| Prompt compiler | Classify requirements as product, safety, source-proven, phone-proven, controller choice, or unresolved assumption; unresolved assumptions cannot become mandatory facts. | Every controller dispatch |
+| Pre-dispatch checks | Contradiction, missing-information, evidence-retrieval, privacy, cleanup, and locked-work checks must pass before dispatch. | Every build, audit, phone handoff, and release decision |
+| Exact artifact verifier | Codex reports cannot approve their own artifact; ChatGPT independently audits exact bytes, SHA256, call graph, mutations, cleanup, evidence, and protected nodes. | Every artifact approval |
+| Binary phone handoff | Phone handoff is exactly `APPROVED FOR ONE PHONE RUN` or `REJECTED — ONE EXACT DEFECT / ONE MINIMAL REPAIR`. | Every phone-test decision |
 
 ## Permanent Regression Requirements
 
@@ -123,13 +190,14 @@ Builds that must check it: every Gate 14 validation artifact.
 | Phone proof supersedes static audit | PERMANENT | When phone proof contradicts static claims, update source truth before further repair. | Every runtime failure triage |
 | Generated reports can be incomplete | PERMANENT | A generated report cannot prove its own correctness; use independent verification. | Every artifact audit |
 | Encoding and unchanged-byte drift | PERMANENT | Preserve Tasker XML encoding and unchanged regions; reject unexplained special-character or protected-node drift. | Every runtime XML build |
-| External plugin output assumptions | PERMANENT | Isolate exact external output contracts with durable phone-visible evidence before integration. | Every Gate 14 plugin path |
+| External plugin output assumptions | PERMANENT | Isolate exact external output contracts with durable phone-visible evidence before integration. | Every plugin path |
 | Stale plugin outputs | PERMANENT | Clear errors and output arrays, snapshot immediately, and require exact phase evidence; zero-initialized counters never authorize PASS. | Every AutoSheets phase |
 | Wrong-recipient Send | PERMANENT | Prove exact recipient/thread before compose or Send. | Every Send-capable artifact |
 | Stale reply Send | PERMANENT | Prove row, ID, sender, message, reply, and status binding before Send. | Every processing and Send artifact |
 | Duplicate Send | PERMANENT | Check prior send-attempt and sent state before any reset; no retry after uncertainty. | Every Send/recovery artifact |
 | DONE before confirmation | PERMANENT | DONE requires independent confirmation, never Send-click evidence alone. | Every confirmation/DONE artifact |
 | Archive before exact proof | PERMANENT | Archive requires confirmed completion, exact copy/readback, uniqueness, and safe source clear. | Every Archive artifact |
+| DeadArchive authorization | PERMANENT | Do not enable or execute DeadArchive before a read-only application-wide audit, controller classification, exact artifact approval, and any required phone proof. | Every DeadArchive decision |
 | Lock release defect | PERMANENT | Every owned terminal path releases exactly once; no unowned release. | Every lock/recovery artifact |
 | AutoInput target drift | PERMANENT | No guessed AutoInput target; preserve and prove phone-visible fields. | Every TextNow/AutoInput artifact |
 | Credential drift | PERMANENT | Verify current credential source privately without printing or committing values. | Every private package |
@@ -138,19 +206,24 @@ Builds that must check it: every Gate 14 validation artifact.
 | Formula settlement | PERMANENT | Poll within a fixed bound; a failed read or unsettled formula blocks PASS and never triggers automatic rerun. | Every view/formula validation |
 | Lifecycle ordering | PERMANENT | One lifecycle transition per cycle; unresolved Send states block new Send selection. | Every queue-cycle artifact |
 | STOP/profile safety | PERMANENT | STOP prevents new work and leaves runtime profiles disabled; no silent profile enablement. | Every STOP/recovery/runtime artifact |
-| Gate 9 controlled Send | LOCKED | Do not rerun or reopen without newer contradictory phone proof. | Gate 14 regression audit |
-| Gate 10 confirmation and DONE | LOCKED | Preserve confirmation separate from Send and DONE only after confirmation. | Gate 14 regression audit |
-| Gate 11 exact-row Archive | LOCKED | Preserve exact-row Archive and source-clear boundaries. | Gate 14 regression audit |
-| Gate 12 queue lifecycle | LOCKED | Preserve one lifecycle transition per cycle. | Gate 14 regression audit |
-| Gate 13 timer, STOP, background guard, recovery | LOCKED | Preserve STOP, busy overlap, screen-off, timer, and recovery behavior. | Gate 14 regression audit |
+| Gate 9 controlled Send | LOCKED | Do not rerun or reopen without newer contradictory phone proof. | Every later regression audit |
+| Gate 10 confirmation and DONE | LOCKED | Preserve confirmation separate from Send and DONE only after confirmation. | Every later regression audit |
+| Gate 11 exact-row Archive | LOCKED | Preserve exact-row Archive and source-clear boundaries. | Every later regression audit |
+| Gate 12 queue lifecycle | LOCKED | Preserve one lifecycle transition per cycle. | Every later regression audit |
+| Gate 13 timer, STOP, background guard, recovery | LOCKED | Preserve STOP, busy overlap, screen-off, timer, and recovery behavior. | Every later regression audit |
+| Gate 14 validation and isolation | LOCKED | Preserve the phone-proven AutoSheets contract, exact readback, ownership-safe cleanup, restoration, production isolation, and forbidden-path isolation. | Every later regression and release audit |
+| Gates 1-14 | LOCKED | Do not rerun or reopen a locked gate without newer contradictory phone proof. | Every regression and release audit |
 
 ## Current Counts and Boundary
 
-- Runtime builds remaining: `0`
-- ChatGPT artifact audits remaining: `1`
-- Phone runs remaining: `1`
-- Faithful-copy controlled mutation runs remaining: `1`
-- Production write runs remaining: `0`
-- Release decisions remaining: `1`
+- Gate 14 runtime builds remaining: `0`
+- Gate 14 artifact audits remaining: `0`
+- Gate 14 phone runs remaining: `0`
+- Gate 14 private-copy controlled runs remaining: `0`
+- Gate 14 gate decisions remaining: `0`
+- DeadArchive build count: `UNDETERMINED PENDING AUDIT`
+- DeadArchive artifact-audit count: `UNDETERMINED PENDING AUDIT`
+- DeadArchive phone-run count: `UNDETERMINED PENDING AUDIT`
+- Full-product release decision: `PENDING`
 
-The candidate remains `HOLD`. Phone import, Tasker execution, workbook mutation, tracker movement, Gate 14 closure, and production release remain blocked until ChatGPT approves the exact artifact and the remaining phone proof is accepted.
+Gate 14 is phone-proven and locked. Full-product release remains `HOLD`. DeadArchive, Compactor, broad archive drains, live activation, production activation, and capacity execution remain blocked unless separately authorized.
