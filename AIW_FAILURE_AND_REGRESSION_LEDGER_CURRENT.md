@@ -6,7 +6,7 @@ Static audit cannot close a phone/runtime issue by itself.
 
 ## ISSUE_DEADARCHIVE_REPAIR_REQUIRED
 
-Status: `OPEN / RELEASE HOLD / R3 LOCK SUB-PROOF PHONE-PROVEN / MINIMUM TASK 229 RECOVERY CHANGE AUTHORIZED`
+Status: `OPEN / RELEASE HOLD / R3 LOCK SUB-PROOF PHONE-PROVEN / TASK 229 RECOVERY AND RELEASE_BOOLEAN_FINALIZE AUTHORIZED`
 
 Classification: `REPAIR_REQUIRED`
 
@@ -48,11 +48,13 @@ Integrated-build blocker:
 - accepting a blank/manual caller would not prove the existing owner token and would violate foreign-owner protection;
 - the minimum Task 229 recovery entry is authorized only when the Boolean lock is active, the existing owner is verified, and persistent transaction state identifies the same owned transaction;
 - Task 229 may pass that exact owner to Task 19 in a dedicated recovery mode, but may not start new work, clear a foreign owner, or alter unrelated recovery behavior;
-- authorized runtime changes remain Tasks 18, 19, 199, and only this minimum Task 229 recovery entry; no unrelated runtime changes are authorized.
+- the additional `RELEASE_BOOLEAN_FINALIZE` entry is authorized only for Boolean lock `1`, idle owner, phase `RELEASE_BOOLEAN_INTENT`, complete matching transaction identity, proven exact/unique or idempotent destination, proven source reread and exact A:I clear/readback, matching commit state, no owner-controlled work, and immediate commit revalidation;
+- that finalizer may set only the Boolean lock to `0`; it may not clear an owner, select a row, start or resume transaction work, mutate a Sheet, accept another phase, or mutate on missing or inconsistent proof;
+- authorized runtime changes remain Tasks 18, 19, 199, and only the minimum Task 229 recovery and `RELEASE_BOOLEAN_FINALIZE` entries; no unrelated runtime changes are authorized.
 
 Closing sequence:
 1. R3 exact artifact audit and bounded phone run: complete;
-2. minimum Task 229 recovery entry authorization: granted;
+2. minimum Task 229 recovery and `RELEASE_BOOLEAN_FINALIZE` authorization: granted;
 3. one complete integrated DeadArchive transaction build;
 4. application-wide integrity verification;
 5. bounded integrated phone proof;
