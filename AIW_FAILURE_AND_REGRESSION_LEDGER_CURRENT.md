@@ -6,7 +6,7 @@ Static, model, simulation, or local audit cannot close a phone/runtime issue. Ge
 
 ## ISSUE_DEADARCHIVE_REPAIR_REQUIRED
 
-Status: `OPEN / HARD HOLD / R3 LOCK SUB-PROOF PHONE-PROVEN / RUNTIME BUILD BLOCKED UNTIL PROTOCOL IS ON CURRENT MAIN AND AN EXACT CONTRACT IS ISSUED`
+Status: `OPEN / HARD HOLD / R3 LOCK SUB-PROOF PHONE-PROVEN / RUNTIME BUILD BLOCKED PENDING ONE EXACT REFRESHED DEADARCHIVE EXECUTION CONTRACT`
 
 Classification: `REPAIR_REQUIRED`
 
@@ -66,17 +66,14 @@ The prior restart analysis remains evidence:
 - `RELEASE_BOOLEAN_FINALIZE` may set only Boolean lock `0` after exact phase, identity, destination, source-clear/readback, commit, and immediate revalidation proof with idle owner;
 - recovery must never select new work, clear a foreign owner, or mutate on missing/inconsistent proof.
 
-These are not an active mutation allowlist. Runtime construction is blocked until the unified protocol is present on refreshed current main and ChatGPT issues one exact execution contract.
+These are not an active mutation allowlist. The unified protocol is present on current main; runtime construction remains blocked until ChatGPT issues one exact refreshed DeadArchive execution contract.
 
 Closing sequence:
 
-1. protocol source update;
-2. independent diff audit;
-3. merge;
-4. clean source-locked DeadArchive execution contract;
-5. one integrated candidate from the resolved clean ancestor/parent;
-6. independent exact-artifact audit;
-7. one bounded phone run and controller decision.
+1. clean source-locked DeadArchive execution contract against refreshed current main;
+2. one integrated candidate from the resolved clean ancestor/parent;
+3. independent exact-artifact audit;
+4. one bounded phone run and controller decision.
 
 ## ISSUE_GLOBAL_BUILDER_VERIFIER_AND_ARTIFACT_PROOF_FAILURE
 
@@ -119,9 +116,11 @@ Permanent prevention is consolidated in `AGENTS.md`:
 - verified upload identity and working HTTPS links only;
 - first-fundamental-failure stop plus one consolidated return.
 
-Closing proof requires:
+Completed workflow prerequisite:
 
-- independent ChatGPT audit and merge of the unified protocol;
+- the unified protocol was independently audited and merged through PR #15 at merge SHA `83d14b31e5222da49de22763ada1dfbd12e0800f`.
+
+Closing proof requires:
 - next contract uses refreshed current-main and exact artifact identities;
 - next verifier rejects the exact SHA256-verified clean integrated R2 and every other contract-required known-bad fixture;
 - next candidate supplies reproducible finished-artifact proof;
@@ -174,6 +173,9 @@ Other controller/tracker/matrix/bootstrap/handoff/status files must be deleted w
 ## Protocol Review Boundary
 
 `SOURCE_UPDATE_SELF_APPROVED = NO`
-`CHATGPT_DIFF_AUDIT_REQUIRED = YES`
-`MERGE_APPROVED = NO`
-`RUNTIME_BUILD = BLOCKED`
+`CHATGPT_DIFF_AUDIT_REQUIRED = COMPLETE`
+`MERGE_APPROVED = YES`
+`PROTOCOL_PR = #15`
+`PROTOCOL_MERGE_SHA = 83d14b31e5222da49de22763ada1dfbd12e0800f`
+`GLOBAL_EXECUTION_PROTOCOL = ACTIVE / MERGED ON CURRENT MAIN`
+`RUNTIME_BUILD = BLOCKED PENDING ONE EXACT REFRESHED DEADARCHIVE EXECUTION CONTRACT`

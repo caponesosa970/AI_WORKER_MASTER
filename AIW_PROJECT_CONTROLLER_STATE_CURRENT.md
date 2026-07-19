@@ -11,16 +11,18 @@ Status: CURRENT OPERATIONAL SOURCE TRUTH
 `PROFILE_ACTIVATION = OFF`
 `PRODUCTION_WRITES = 0`
 
-`GLOBAL_EXECUTION_PROTOCOL = REQUIRED / ACTIVE WHEN THIS EXACT SOURCE UPDATE IS ON CURRENT MAIN`
+`GLOBAL_EXECUTION_PROTOCOL = ACTIVE / MERGED ON CURRENT MAIN`
 `DEADARCHIVE_R2 = HARD HOLD / CLEAN INTEGRATED ARTIFACT ONLY`
 `DEADARCHIVE_CLEAN_INTEGRATED_R2 = HARD HOLD`
 `R2_PATCH = FORBIDDEN`
 `NEXT_RUNTIME_BASELINE = AIW_DEADARCHIVE_LOCK_COMPATIBILITY_PROOF_CANDIDATE_R3.xml / 0DBA8B521C33FDECD62C3877A44A860EF9DA8125E0F604FE86782880E7FDD10C UNLESS NEWER CURRENT AUTHORITY PROVES OTHERWISE`
-`RUNTIME_BUILD = BLOCKED UNTIL PROTOCOL IS ON CURRENT MAIN, MAIN IS REFRESHED, AND ONE EXACT EXECUTION CONTRACT IS ISSUED`
+`RUNTIME_BUILD = BLOCKED PENDING ONE EXACT REFRESHED DEADARCHIVE EXECUTION CONTRACT`
 
 `SOURCE_UPDATE_SELF_APPROVED = NO`
-`CHATGPT_DIFF_AUDIT_REQUIRED = YES`
-`MERGE_APPROVED = NO`
+`CHATGPT_DIFF_AUDIT_REQUIRED = COMPLETE`
+`MERGE_APPROVED = YES`
+`PROTOCOL_PR = #15`
+`PROTOCOL_MERGE_SHA = 83d14b31e5222da49de22763ada1dfbd12e0800f`
 
 ## Full Goal
 
@@ -131,21 +133,18 @@ The prior design facts remain inputs for the future contract, not current permis
 - A future `RELEASE_BOOLEAN_FINALIZE` path may set only the Boolean to `0` after exact phase, transaction, destination, source-clear, commit, and immediate revalidation proof with an idle owner and no owner-controlled work.
 - No recovery path may select new work, clear a foreign owner, mutate a Sheet on mismatch, or alter unrelated Task 229 behavior.
 
-The earlier Tasks 18/19/199 plus bounded Task 229 scope is deactivated pending the protocol appearing on current main and one exact execution contract. It must not be treated as an active mutation allowlist.
+The earlier Tasks 18/19/199 plus bounded Task 229 scope is deactivated pending one exact refreshed DeadArchive execution contract. It must not be treated as an active mutation allowlist.
 
 ## Current Blocker and Authorized Sequence
 
-Current runtime blocker: the unified protocol is not yet proven present on refreshed current main under an exact execution contract. Before merge, the protocol-on-main condition is unmet; after merge, runtime remains blocked until refreshed source-lock and contract issuance.
+Current runtime blocker: ChatGPT has not yet issued one exact refreshed DeadArchive execution contract against current main. The unified protocol is verified present on current main through PR #15 at merge SHA `83d14b31e5222da49de22763ada1dfbd12e0800f`.
 
 Required sequence:
 
-1. protocol source update;
-2. independent ChatGPT diff audit;
-3. merge;
-4. refresh current main and issue one clean source-locked DeadArchive execution contract;
-5. build one integrated candidate from the exact resolved clean ancestor/parent;
-6. independent exact-artifact audit;
-7. one bounded phone run.
+1. issue one clean source-locked DeadArchive execution contract against refreshed current main;
+2. build one integrated candidate from the exact resolved clean ancestor/parent;
+3. independent exact-artifact audit;
+4. one bounded phone run.
 
 After DeadArchive:
 
@@ -155,7 +154,7 @@ After DeadArchive:
 
 ## Current Blocked Actions
 
-Until exact protocol merge, contract, candidate construction, independent audit, and phone approval:
+Until exact refreshed contract, candidate construction, independent audit, and phone approval:
 
 - runtime XML construction or import;
 - DeadArchive or Compactor execution;
