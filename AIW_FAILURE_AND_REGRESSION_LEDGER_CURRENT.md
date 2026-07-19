@@ -6,7 +6,7 @@ Static audit cannot close a phone/runtime issue by itself.
 
 ## ISSUE_DEADARCHIVE_REPAIR_REQUIRED
 
-Status: `OPEN / RELEASE HOLD / R3 LOCK SUB-PROOF AUTHORIZED`
+Status: `OPEN / RELEASE HOLD / R3 LOCK SUB-PROOF PHONE-PROVEN / MINIMUM TASK 229 RECOVERY CHANGE AUTHORIZED`
 
 Classification: `REPAIR_REQUIRED`
 
@@ -16,7 +16,9 @@ Confirmed:
 - Boolean compatibility lock must remain `%AIWDeadArchiving = 0/1`;
 - owner token must remain separate in `%AIWDeadArchiveOwner`;
 - permanent foreign-reset guards exist in Tasks 34, 73, 74, and 147;
-- broad transaction build is paused for the final lock-contract sub-proof.
+- R3 phone proof passed the lock contract;
+- Task 334 is locked proof evidence and must remain byte-identical;
+- no additional lock-only package is authorized.
 
 R2 rejected:
 - artifact SHA256 `31A871EB97C923360A54812A04A5A78BC67477DEAD54729F237E75A002340CD6`;
@@ -26,18 +28,31 @@ R2 rejected:
 - safe zero-mutation outcome;
 - R2 must not be rerun.
 
-R3 authorized:
-- Task 334 only;
-- one-shot `%AIWDeadArchiveProfileProofArm`;
-- consume before any lock mutation;
-- zero mutation on arm failure;
-- remove `%PENABLED` and `%PACTIVE`;
-- preserve resetter guards and protected project bytes;
-- no external runtime path.
+R3 phone-proven:
+- artifact SHA256 `0DBA8B521C33FDECD62C3877A44A860EF9DA8125E0F604FE86782880E7FDD10C`;
+- accepted run `DAL-1784441447757`;
+- result `PASS`;
+- terminal `DEADARCHIVE_LOCK_CONTRACT_PASS`;
+- arm consumed `1` to `0`;
+- Boolean lock compatibility and separate owner confirmed;
+- all four permanent resetters blocked foreign or invalid resets;
+- owner release count exactly `1`;
+- protected consumers unchanged and globals restored;
+- zero workbook, profile-enable, live-enable, and manual-cleanup activity;
+- final complete `1` and normal Tasker exit.
+
+Integrated-build blocker:
+- restart reconciliation is mandatory at every persistent boundary;
+- current startup recovery holds on an active DeadArchive Boolean lock before Queue Cycle can reach Task 199;
+- the prior Tasks 18, 19, and 199 scope had no reachable post-restart entry capable of resuming the exact owned transaction;
+- accepting a blank/manual caller would not prove the existing owner token and would violate foreign-owner protection;
+- the minimum Task 229 recovery entry is authorized only when the Boolean lock is active, the existing owner is verified, and persistent transaction state identifies the same owned transaction;
+- Task 229 may pass that exact owner to Task 19 in a dedicated recovery mode, but may not start new work, clear a foreign owner, or alter unrelated recovery behavior;
+- authorized runtime changes remain Tasks 18, 19, 199, and only this minimum Task 229 recovery entry; no unrelated runtime changes are authorized.
 
 Closing sequence:
-1. independent exact R3 artifact audit;
-2. one bounded R3 phone run;
+1. R3 exact artifact audit and bounded phone run: complete;
+2. minimum Task 229 recovery entry authorization: granted;
 3. one complete integrated DeadArchive transaction build;
 4. application-wide integrity verification;
 5. bounded integrated phone proof;
