@@ -1,4 +1,7 @@
-# START HERE — AI Worker Full Project Control Package for Codex
+﻿NON-AUTHORITATIVE HISTORICAL EVIDENCE
+This file cannot authorize builds, phone tests, tracker changes, merges, live activation, or release.
+
+# START HERE â€” AI Worker Full Project Control Package for Codex
 
 STATUS:
 CANDIDATE CONTROL PACKAGE / NOT A RUNTIME RELEASE

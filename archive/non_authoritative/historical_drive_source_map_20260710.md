@@ -1,8 +1,11 @@
-# Current Drive Source Truth Map
+﻿NON-AUTHORITATIVE HISTORICAL EVIDENCE
+This file cannot authorize builds, phone tests, tracker changes, merges, live activation, or release.
+
+# Historical Drive HISTORICAL SOURCE MAP
 
 Updated: 2026-07-10
 
-Status: SOURCE MAP / HOLD FOR CHATGPT AUDIT
+Status: HISTORICAL SOURCE MAP / HOLD FOR CHATGPT AUDIT
 
 ## V15A Source XML
 
@@ -10,7 +13,7 @@ Status: SOURCE MAP / HOLD FOR CHATGPT AUDIT
 - Private source reference: Private Drive source - link and ID retained outside the public repository.
 - Private source reference: Private Drive source - link and ID retained outside the public repository.
 - SHA256: `C4CDEAA0BFD78120386FF1B03FA0A2D6B13BCEEDBD15687F84D03A3AD5FEF1C8`
-- Role: source truth / high-trust phone-proven v15a TextNow action reference
+- Role: historical high-trust phone-proven v15a TextNow action reference
 
 ## 27B Package
 
@@ -27,9 +30,9 @@ Status: SOURCE MAP / HOLD FOR CHATGPT AUDIT
 - Private source reference: Private Drive source - link and ID retained outside the public repository.
 - Role: SHA sidecar
 
-## Current Sheet State
+## Historical Sheet State Snapshot
 
-Source: Sosa/ChatGPT current direct instruction.
+Source: Sosa/ChatGPT historical direct instruction.
 
 Sheet link: [PRIVATE_LIVE_SHEET_LINK_REDACTED]
 
@@ -50,7 +53,7 @@ Queue scan:
 - No READY_TO_SEND rows found in Sheet1 A1:I200.
 - No READY_TO_SEND rows found in QueueView A1:I200.
 
-## Current Local Evidence
+## Historical Local Evidence Snapshot
 
 - `02_TEST_LOGS/27B_20260710/`
 - `03_PHONE_PROOF/27B_NO_SEND_GUARD_20260710/`
@@ -58,10 +61,10 @@ Queue scan:
 
 ## Live Sheet Re-Read Rule
 
-Before any future AI Worker test or Sheet mutation, ChatGPT must perform a fresh read-only verification of the live Sheet and confirm the intended target row and current status. Values recorded in this handoff are historical evidence and must not be treated as current live Sheet proof.
+Before any future AI Worker test or Sheet mutation, ChatGPT must perform a fresh read-only verification of the live Sheet and confirm the intended target row and current status. Values recorded in this handoff are historical evidence and must not be treated as authority.
 
-Last verified handoff state:
+Historical handoff state snapshot:
 - D74 = HOLD_27B_PRESERVE
 - D75 = TEST_STAGED_NO_SEND
 
-These are not authority for the current live Sheet state. The Sheet must be re-read before any future test.
+These are not authority for the historical live Sheet state. The Sheet must be re-read before any future test.

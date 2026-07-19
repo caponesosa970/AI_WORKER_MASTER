@@ -1,8 +1,11 @@
-# AI Worker Current ChatGPT Handoff
+﻿NON-AUTHORITATIVE HISTORICAL EVIDENCE
+This file cannot authorize builds, phone tests, tracker changes, merges, live activation, or release.
+
+# AI Worker Historical ChatGPT Handoff
 
 Updated: 2026-07-10
 
-Status: REPO SOURCE-TRUTH SYNC / HOLD FOR CHATGPT AUDIT
+Status: HISTORICAL REPO SYNC SNAPSHOT / HOLD FOR CHATGPT AUDIT
 
 ## Read First
 
@@ -10,20 +13,20 @@ Use:
 
 - `AIW_PROJECT_CONTROLLER_STATE_CURRENT.md`
 - `MASTER_INDEX.md`
-- `docs/CURRENT_DRIVE_SOURCE_TRUTH_MAP.md`
+- `archived historical Drive source map`
 - `docs/V15A_AUTOINPUT_PRESERVATION_RULE_20260710.md`
 - `02_TEST_LOGS/27B_20260710/`
 - `03_PHONE_PROOF/27B_NO_SEND_GUARD_20260710/`
 
-## Current State
+## Historical State Snapshot
 
 8/14 locked = 57%.
 
-Current paused gate:
+Historical paused gate:
 
 - 27B controlled one-send rerun - HOLD
 
-Current blocked paths:
+Historical blocked paths:
 
 - Send
 - DONE
@@ -35,7 +38,7 @@ Current blocked paths:
 - capacity
 - release/production
 
-## Current Package
+## Historical Package Snapshot
 
 27B candidate package:
 
@@ -58,10 +61,10 @@ REPO SYNC ONLY / HOLD FOR CHATGPT AUDIT
 
 ## Live Sheet Re-Read Rule
 
-Before any future AI Worker test or Sheet mutation, ChatGPT must perform a fresh read-only verification of the live Sheet and confirm the intended target row and current status. Values recorded in this handoff are historical evidence and must not be treated as current live Sheet proof.
+Before any future AI Worker test or Sheet mutation, ChatGPT must perform a fresh read-only verification of the live Sheet and confirm the intended target row and current status. Values recorded in this handoff are historical evidence and must not be treated as authority.
 
-Last verified handoff state:
+Historical handoff state snapshot:
 - D74 = HOLD_27B_PRESERVE
 - D75 = TEST_STAGED_NO_SEND
 
-These are not authority for the current live Sheet state. The Sheet must be re-read before any future test.
+These are not authority for the historical live Sheet state. The Sheet must be re-read before any future test.

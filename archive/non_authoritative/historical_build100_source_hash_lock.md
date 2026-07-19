@@ -1,3 +1,6 @@
+﻿NON-AUTHORITATIVE HISTORICAL EVIDENCE
+This file cannot authorize builds, phone tests, tracker changes, merges, live activation, or release.
+
 # Build100 Source Hash Lock
 
 STATUS: CANDIDATE / HOLD FOR PHONE PROOF

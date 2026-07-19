@@ -1,12 +1,15 @@
+﻿NON-AUTHORITATIVE HISTORICAL EVIDENCE
+This file cannot authorize builds, phone tests, tracker changes, merges, live activation, or release.
+
 # AI Worker Master Index
 
 Updated: 2026-07-10
 
-Status: REPO SOURCE-TRUTH SYNC / HOLD FOR CHATGPT AUDIT
+Status: HISTORICAL REPO SYNC SNAPSHOT / HOLD FOR CHATGPT AUDIT
 
 This folder is the clean working root for AI Worker Build100 work.
 
-## Active Controller Source
+## Historical Controller Source Snapshot
 
 Read first:
 
@@ -14,7 +17,7 @@ Read first:
 - `AGENTS.md`
 - `.codex/config.toml`
 
-## Current Proof State
+## Historical Proof State Snapshot
 
 8/14 locked = 57%.
 
@@ -41,7 +44,7 @@ Locked sub-proofs:
 - Gate 9B1F exact reply compose dry-run
 - 27B no-send guard proof
 
-Current paused gate:
+Historical paused gate:
 
 - 27B controlled one-send rerun - HOLD
 
@@ -57,7 +60,7 @@ Blocked:
 - capacity
 - release/production
 
-## Current Source Packages And Records
+## Historical Source Packages And Records
 
 V15A source:
 
@@ -76,7 +79,7 @@ V15A source:
 ## Folder Map
 
 - `00_LOCKED_SOURCE/`: locked source references and raw source packages.
-- `01_CANDIDATE_PATCHES/`: active Build100 candidate XMLs and narrow patch work.
+- `01_CANDIDATE_PATCHES/`: historical Build100 candidate XMLs and narrow patch work.
 - `02_TEST_LOGS/`: static audits, validation reports, SHA inventories, HOLD lists, sync reports, and generated ledgers.
 - `03_PHONE_PROOF/`: Moto Razr runlogs, screenshots, phone-proof summaries, and phone-proof packages.
 - `04_RELEASE_PACKAGES/`: candidate and audit package outputs for ChatGPT handoff.
@@ -86,8 +89,8 @@ V15A source:
 
 ## Required Ledgers
 
-- `AIW_PROJECT_CONTROLLER_STATE_CURRENT.md`: active controller tracker.
-- `docs/CURRENT_DRIVE_SOURCE_TRUTH_MAP.md`: Drive source truth map.
+- `AIW_PROJECT_CONTROLLER_STATE_CURRENT.md`: historical controller tracker.
+- `archived historical Drive source map`: historical Drive source map.
 - `docs/V15A_AUTOINPUT_PRESERVATION_RULE_20260710.md`: v15a preservation rule.
 - `02_TEST_LOGS/GITHUB_SYNC_STATUS_20260710.md`: latest GitHub sync state.
 - `FAILED_PACKAGES_LEDGER.md`: failed, rejected, or hard-held packages.
@@ -96,6 +99,6 @@ V15A source:
 
 ## Historical Note
 
-Older Stage 2, Stage 3A, Stage 4A, Stage 4B, Group B, and Group C handoff text remains historical evidence through Git history and older reports. It is not the active controller state.
+Older Stage 2, Stage 3A, Stage 4A, Stage 4B, Group B, and Group C handoff text remains historical evidence through Git history and older reports. It is not controller authority.
 
-The active controller state is now `AIW_PROJECT_CONTROLLER_STATE_CURRENT.md`.
+At the time, the controller state was `AIW_PROJECT_CONTROLLER_STATE_CURRENT.md`.

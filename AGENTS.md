@@ -2,7 +2,7 @@
 
 Status: CURRENT / ACTIVE
 
-Codex is the builder, repository inspector, patcher, static auditor, package creator, Git proof generator, and SHA inventory generator.
+Codex is the builder, repository inspector, patcher, static auditor, package creator, Git proof generator, SHA inventory generator, and Application Integrity Verifier operator.
 
 ChatGPT is the controller, independent artifact auditor, phone-import approver, merge approver, and release checker.
 
@@ -12,131 +12,133 @@ Codex must not act as release authority, claim phone proof, approve phone import
 
 ## Mandatory Source Read
 
-Before every material AI Worker decision, Codex task, artifact approval, phone test, tracker decision, merge, or release claim, read the current `main` versions of:
+Before every material AI Worker decision, Codex task, artifact approval, phone test, tracker decision, merge, or release claim, read current `main`:
 
 1. `AGENTS.md`
 2. `AIW_FULL_GOAL_EXECUTION_CONTRACT_CURRENT.md`
 3. `AIW_PROJECT_CONTROLLER_STATE_CURRENT.md`
 4. `AIW_FAILURE_AND_REGRESSION_LEDGER_CURRENT.md`
 
-If any required file cannot be retrieved or its meaning is contradictory, stop with `HOLD`.
+If a required file cannot be retrieved or conflicts with another current file, stop with `HOLD`.
 
-The active tracker, current gate, current runtime baseline, current blocker, approved scope, blocked scope, and next controller action are recorded only in `AIW_PROJECT_CONTROLLER_STATE_CURRENT.md`.
+Only these four root files may define current controller authority. Older controller files, reports, matrices, handoffs, generated summaries, prompts, Drive documents, package notes, and filenames are evidence inputs only.
 
-The permanent product behavior contract is recorded only in `AIW_FULL_GOAL_EXECUTION_CONTRACT_CURRENT.md`.
-
-Active failures and permanent regression rules are recorded only in `AIW_FAILURE_AND_REGRESSION_LEDGER_CURRENT.md`.
-
-## Source Authority Order
-
-Use this order:
+## Source Authority
 
 1. Newest direct Sosa instruction.
-2. Current GitHub `main` source-truth files listed above.
+2. Current GitHub `main` source-truth files.
 3. Exact authorized SHA256-verified private artifact.
 4. Current phone proof.
 5. Current Sheet and runlog proof.
 6. Static audit.
-7. Older reports, filenames, generated summaries, or memory.
+7. Older reports or memory.
 
-SHA proof beats filename.
+SHA proof beats filename. Tasker import/render beats XML parsing. Phone proof beats static audit.
 
-Tasker import/render proof beats XML parsing.
+## Full-System Work Rule
 
-Phone proof beats static audit, generated reports, XML parse, simulations, and package claims.
+Every runtime repair is one component inside the complete AI Worker application.
 
-Locked Gates 1-13 must not be reopened without newer contradictory phone proof.
+Mandatory sequence:
 
-## System-Wide Compatibility Checklist
+1. Application-wide audit first.
+2. One exact defect repair.
+3. Immediate integrated full-project build.
+4. Application Integrity Verifier on the exact candidate.
+5. One bounded phone test.
+6. Immediate integration or one minimal repair.
 
-Every runtime change must identify and prove:
+Minimal phone testing isolates cause. It never makes the component a separate product.
 
-- exact full-project baseline filename and SHA256;
-- exact local defect;
-- exact product capability advanced;
-- exact changed files, tasks, actions, fields, profiles, scenes, registry nodes, variables, and call references;
-- exact protected nodes and preservation proof level;
-- upstream contracts, including entry points, triggers, parameters, variables, identifiers, timestamps, row identity, authorization latches, and lock ownership;
-- downstream contracts, including queue selection, processing, OpenAI reply generation, Send, confirmation, DONE, Archive, recovery, STOP, live controls, interface, capacity, and release;
-- reachable call-graph impact;
-- state-transition, exact-row, message-ownership, retry, interruption, restart, and lock impact;
-- STOP and recovery impact;
-- application-wide regression plan and actual result;
-- exact phone-proof boundary.
+Temporary proof logic must name its permanent integration point. After a sub-proof PASS, no second package for that sub-proof is allowed; move directly to the integrated subsystem build.
 
-Minimal repair scope and system-wide compatibility proof are both mandatory.
+## Application Integrity Verifier
 
-A local static PASS cannot prove full-application compatibility.
+Every runtime candidate must produce a machine-checkable return covering:
 
-Generated reports, CSV files, simulators, mutation tools, package claims, and pinned prompts cannot prove themselves.
+### Source Lock
+- current main commit SHA;
+- exact baseline filename and SHA256;
+- exact candidate filename and SHA256;
+- exact authorized behavior;
+- immediate HOLD on any source mismatch.
+
+### Mutation Map
+- every changed file, task, action, field, variable, profile, scene, registry node, datasource, plugin action, and call reference;
+- byte-identical proof for every protected node;
+- rejection of unexplained drift.
+
+### Application Call Graph
+- all callers and callees of changed tasks;
+- reachability to queue selection, processing, OpenAI, TextNow, Send, confirmation, DONE, Archive, DeadArchive, recovery, STOP, live, interface, and capacity controls.
+
+### Runtime Contracts
+- exact-row and message-ID ownership;
+- legal state transitions;
+- lock acquisition, owner protection, exact-once release, no unowned release, no owned leak;
+- destination copy/readback/uniqueness/source-clear order;
+- STOP, interruption, restart, and recovery;
+- one lifecycle transition per cycle;
+- no Send retry after a possible click.
+
+### Scenario Matrix
+- normal success;
+- missing or invalid authorization;
+- foreign owner;
+- stale lock;
+- failure before and after each persistent boundary;
+- STOP and restart during each phase;
+- duplicate/idempotent destination;
+- changed source row;
+- repeated maintenance activation;
+- forbidden production, profile, live, TextNow, AutoInput, OpenAI, Send, DONE, Archive, shell, and network reachability.
+
+### Release Mapping
+State exactly:
+- what is proven;
+- what remains unsupported;
+- exact phone-proof boundary;
+- permanent integration point;
+- regressions checked;
+- phone import approved: NO unless ChatGPT approved the exact artifact;
+- phone proof claimed: NO unless Sosa supplied it and ChatGPT accepted it;
+- release claimed: NO unless ChatGPT approved release.
+
+The verifier is development proof only. It cannot approve its own output and cannot replace phone proof.
+
+## Loop Breakers
+
+Stop and reduce scope when:
+- two Codex returns occur without a phone test;
+- more than one documentation-only cycle occurs for the same issue;
+- a diagnostic becomes larger than the behavior tested;
+- one build touches multiple unrelated runtime behaviors;
+- Codex output requires another build before reaching the phone;
+- temporary proof has no permanent integration point;
+- local PASS is treated as application PASS.
 
 ## Permanent Safety Rules
 
-Never allow:
+Never allow guessed AutoInput targets, wrong-recipient Send, stale or duplicate Send, automatic Send retry after a possible click, DONE before independent confirmation, Archive before exact copy/readback, source clear before exact Archive proof, unowned lock release, owned lock leak, hidden profile activation, uncontrolled live activation, tracker movement without proof, or private data in public GitHub.
 
-- guessed AutoInput targets;
-- wrong-recipient Send;
-- stale reply Send;
-- duplicate Send;
-- automatic Send retry after a possible click;
-- Send before confirmed recipient/thread;
-- DONE before independent confirmation;
-- Archive before independently confirmed completion and exact readback;
-- source-row clear before exact Archive proof;
-- unowned lock release;
-- owned lock leak;
-- hidden profile activation;
-- uncontrolled live/timer/autonomous activation;
-- tracker increase without mapped proof;
-- private credentials, phone numbers, message contents, private Sheet IDs, Drive links, raw private runlogs, private XML, or private ZIPs in public GitHub.
+Tasker XML changes must preserve encoding and unchanged XML regions exactly unless current scope explicitly permits a change.
 
-After a possible Send click, no automatic path may return that transaction to a sendable state.
+## Required Artifact Validation
 
-If automated sent-message proof is not reliable, do not mark `DONE`, do not set sent-success markers, and preserve a non-sendable review state.
-
-Tasker XML changes must preserve encoding and unchanged XML regions exactly unless the current approved runtime scope explicitly permits a change.
-
-No runtime package may be called final, locked, released, deployed, phone-proven, or production-ready from static checks alone.
-
-## Required Validation for Runtime Artifacts
-
-For every runtime artifact, validate the exact artifact being returned:
-
-- XML parse and structure checks;
+Validate exact returned bytes:
+- XML parse and structure;
 - task/profile/scene/registry references;
 - duplicate task IDs, names, and action `sr` values;
 - Perform Task references;
-- dangerous live-path scan;
-- forbidden Send/DONE/Archive/live/capacity/profile activation scan;
-- encoding and mojibake scan;
-- raw preservation of protected nodes;
+- dangerous reachable paths;
+- forbidden Send/DONE/Archive/live/capacity/profile activation;
+- encoding and mojibake;
+- protected-node raw preservation;
 - privacy and secret scan;
 - SHA256 inventory;
-- relevant historical regressions;
-- independent check that does not share the build script's assumptions.
-
-For phone-visible behavior, static validation remains `HOLD` until real phone proof exists.
+- historical regressions;
+- an independent check that does not share the build script assumptions.
 
 ## Status Vocabulary
 
-Use only:
-
-- `LOCKED`
-- `CANDIDATE`
-- `HOLD`
-- `HARD HOLD`
-- `FAILED`
-- `UNSUPPORTED`
-
-## Final Response Requirements
-
-Every material Codex response must state:
-
-- what changed;
-- what was proven;
-- what remains unsupported;
-- external systems touched or not touched;
-- exact next controller decision;
-- whether phone import is approved: `NO` unless ChatGPT approved the exact artifact;
-- whether phone proof is claimed: `NO` unless Sosa supplied phone proof and ChatGPT accepted it;
-- whether release is claimed: `NO` unless ChatGPT approved release after required proof.
+Use only `LOCKED`, `CANDIDATE`, `HOLD`, `HARD HOLD`, `FAILED`, or `UNSUPPORTED`.

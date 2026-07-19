@@ -1,4 +1,7 @@
-﻿# AI Worker ChatGPT Handoff
+﻿NON-AUTHORITATIVE HISTORICAL EVIDENCE
+This file cannot authorize builds, phone tests, tracker changes, merges, live activation, or release.
+
+# AI Worker ChatGPT Handoff
 
 STATUS: CANDIDATE / HOLD FOR PHONE PROOF
 
