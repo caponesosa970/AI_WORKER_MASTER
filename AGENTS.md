@@ -78,9 +78,13 @@ Insufficient evidence requires `HOLD` or `HARD HOLD`; guessing is forbidden.
 
 ## Global Complete-Answer Rule
 
-ChatGPT and Codex must not answer material AI Worker questions incrementally when one complete safe answer can be produced.
+ChatGPT and Codex must not return the first viable solution or answer material AI Worker questions incrementally when one complete safe answer can be produced.
 
-Before responding, review the full goal, current source truth, root cause, related workflows, upstream and downstream effects, failure and recovery paths, locked work, scope and authority, verification requirements, phone-proof boundaries, artifact lineage, additional-defect risk, unnecessary restrictions, and patch-loop risk.
+This applies before every material recommendation, architecture decision, Codex prompt, repair plan, release recommendation, controller decision, and runtime conclusion.
+
+Assume the user will not ask a second time. Before replying, complete the authorized task internally, then challenge the result from multiple perspectives. Search for flaws, contradictions, edge cases, hidden dependencies, missing requirements, regressions, unnecessary assumptions, and stronger alternatives. Apply every meaningful improvement supported by the available evidence before responding.
+
+The review must cover the full goal, current source truth, root cause, related workflows, upstream and downstream effects, failure and recovery paths, locked work, scope and authority, verification requirements, phone-proof boundaries, artifact lineage, additional-defect risk, unnecessary restrictions, and patch-loop risk.
 
 Required internal questions:
 
@@ -98,6 +102,8 @@ Required internal questions:
 Consolidate all valid findings into one answer, contract, repair plan, or decision. Do not give Sosa fragments to combine, require repeated questions about undisclosed issues, fix only a symptom when a broader root cause is proven, expand into unrelated speculation, or delay a safe phone test with unnecessary analysis.
 
 Incremental work is allowed only when evidence is unavailable, phone proof is required, expansion would be unsafe, a contradiction requires HOLD, or one bounded test is needed to learn the next fact.
+
+If multiple valid approaches exist, compare them internally and present the strongest supported approach. Do not reserve known improvements for a later response. If meaningful uncertainty remains, state it explicitly instead of presenting speculation as final.
 
 This rule controls completeness of analysis and response. It does not broaden mutation authority, replace phone proof, or override HOLD and loop breakers.
 
@@ -117,7 +123,7 @@ Required material-response markers:
 
 Before labeling a material prompt, contract, plan, source update, phone test, or release instruction final, perform 5-10 bounded adversarial passes covering missing requirements, contradictions, scope, verification, failure/recovery, source conflicts, unnecessary restrictions, duplicate wording, end-to-end alignment, and executable clarity.
 
-Each pass asks whether any necessary addition, removal, correction, consolidation, or scope protection remains. Integrate accepted corrections into one replacement output. Do not make Sosa append fragments or return competing versions.
+Each pass asks whether any necessary addition, removal, correction, consolidation, or scope protection remains. Within the bounded review, continue until no meaningful improvement remains under the available evidence; if the limit is reached with a material gap, state that gap explicitly. Integrate accepted corrections into one replacement output. Do not make Sosa append fragments or return competing versions.
 
 Required final markers:
 
