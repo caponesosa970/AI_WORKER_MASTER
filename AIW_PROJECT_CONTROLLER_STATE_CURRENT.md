@@ -16,7 +16,8 @@ Status: CURRENT OPERATIONAL SOURCE TRUTH
 `DEADARCHIVE_CLEAN_INTEGRATED_R2 = HARD HOLD`
 `R2_PATCH = FORBIDDEN`
 `NEXT_RUNTIME_BASELINE = AIW_DEADARCHIVE_LOCK_COMPATIBILITY_PROOF_CANDIDATE_R3.xml / 0DBA8B521C33FDECD62C3877A44A860EF9DA8125E0F604FE86782880E7FDD10C UNLESS NEWER CURRENT AUTHORITY PROVES OTHERWISE`
-`RUNTIME_BUILD = BLOCKED PENDING ONE EXACT REFRESHED DEADARCHIVE EXECUTION CONTRACT`
+`RUNTIME_BUILD = AUTHORIZED ONLY FOR ONE CONTRACT-BOUND NO-WRITE QUEUEVIEW DIAGNOSTIC`
+`PRODUCTION_REPAIR_BUILD = FORBIDDEN PENDING PHONE-MEASURED AUTOSHEETS OUTPUT CONTRACT`
 
 `SOURCE_UPDATE_SELF_APPROVED = NO`
 `CHATGPT_DIFF_AUDIT_REQUIRED = COMPLETE`
@@ -40,7 +41,7 @@ This remains the full-project phone-proven baseline for Gates 1-14. Gates 1-14 a
 
 `CURRENT_CAPABILITY = DEADARCHIVE`
 
-Classification: `REPAIR_REQUIRED / RUNTIME BUILD BLOCKED`
+Classification: `REPAIR_REQUIRED / PRODUCTION REPAIR BUILD BLOCKED / NO-WRITE DIAGNOSTIC AUTHORIZED`
 
 Lock-contract sub-proof: `PHONE-PROVEN / LOCKED`
 
@@ -81,6 +82,20 @@ Result: `PASS`
 Terminal: `DEADARCHIVE_LOCK_CONTRACT_PASS`
 
 The exact phone boundary confirmed profile-proof arm consumption, Boolean `%AIWDeadArchiving` compatibility, separate `%AIWDeadArchiveOwner`, foreign/invalid reset protection in Tasks 34/73/74/147, matching-owner release exactly once, protected-consumer preservation, global restoration, zero workbook/profile/live/manual-cleanup activity, final complete `1`, and normal Tasker exit. It proves only that tested lock boundary.
+
+## QueueView Diagnostic-First Phone Evidence
+
+The following direct phone facts now control the next step:
+
+1. `FINAL Queue Cycle` direct manual entry stopped safely before DeadArchive.
+2. `APP Run Tick Once` first stopped because `%AIWorkerTimerOn` was not armed.
+3. After arming the timer, Live Tick reached the DeadArchive guard and stopped because `%AIWDeadArchiving = 1`.
+4. `APP Safe Recovery` reached both QueueView AutoSheets reads, then stopped with `%AIWRecoveryResult = RECOVERY_QUEUE_READ_HOLD`.
+5. A subsequent assumed-predicate repair repeated the same phone failure.
+6. No destructive Sheet operation, profile activation, processing, sending, or normal Archive was proven in those failed recovery runs.
+7. Root process failure: production predicates were built before measuring the exact phone AutoSheets output contract.
+
+A diagnostic execution contract is required before a no-write QueueView measurement build. A production repair execution contract is forbidden until the real phone AutoSheets output contract is measured and frozen.
 
 ## Malformed Clean Integrated R2
 
@@ -137,14 +152,19 @@ The earlier Tasks 18/19/199 plus bounded Task 229 scope is deactivated pending o
 
 ## Current Blocker and Authorized Sequence
 
-Current runtime blocker: ChatGPT has not yet issued one exact refreshed DeadArchive execution contract against current main. The unified protocol is verified present on current main through PR #15 at merge SHA `83d14b31e5222da49de22763ada1dfbd12e0800f`.
+Current runtime blocker: the exact phone AutoSheets QueueView output contract is unknown in the Task 229 configuration.
+
+A diagnostic execution contract is required before a no-write QueueView measurement build. A production repair execution contract is forbidden until the real phone AutoSheets output contract is measured and frozen.
 
 Required sequence:
 
-1. issue one clean source-locked DeadArchive execution contract against refreshed current main;
-2. build one integrated candidate from the exact resolved clean ancestor/parent;
-3. independent exact-artifact audit;
-4. one bounded phone run.
+1. issue one canonical source-locked diagnostic execution contract against refreshed current main;
+2. build exactly one isolated `AIW AUTOSHEETS QUEUEVIEW OUTPUT DIAGNOSTIC NO WRITE` using the exact Task 229 QueueView read configuration;
+3. complete independent exact-artifact and structural audit;
+4. obtain ChatGPT approval for one bounded phone diagnostic run;
+5. measure and freeze raw plugin outputs, array shapes, unset/blank/literal states, and completion markers;
+6. only then issue a production repair execution contract;
+7. rebuild the production repair from the exact resolved clean ancestor/parent, independently audit it, and run one bounded phone test.
 
 After DeadArchive:
 
@@ -154,9 +174,11 @@ After DeadArchive:
 
 ## Current Blocked Actions
 
-Until exact refreshed contract, candidate construction, independent audit, and phone approval:
+The only authorized runtime construction is the isolated, no-write QueueView diagnostic named above. It may read QueueView once, write only dedicated diagnostic variables, display once, and stop.
 
-- runtime XML construction or import;
+Until the real phone AutoSheets output contract is measured, frozen, and incorporated into a later exact production repair contract, the following remain blocked:
+
+- production DeadArchive runtime repair construction or import;
 - DeadArchive or Compactor execution;
 - broad archive drains or production writes;
 - TextNow, AutoInput, OpenAI, Send, DONE, Archive, or Brain/context runtime;

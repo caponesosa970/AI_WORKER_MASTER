@@ -6,7 +6,7 @@ Static, model, simulation, or local audit cannot close a phone/runtime issue. Ge
 
 ## ISSUE_DEADARCHIVE_REPAIR_REQUIRED
 
-Status: `OPEN / HARD HOLD / R3 LOCK SUB-PROOF PHONE-PROVEN / RUNTIME BUILD BLOCKED PENDING ONE EXACT REFRESHED DEADARCHIVE EXECUTION CONTRACT`
+Status: `OPEN / HARD HOLD / R3 LOCK SUB-PROOF PHONE-PROVEN / PRODUCTION REPAIR BLOCKED / ONE NO-WRITE QUEUEVIEW DIAGNOSTIC AUTHORIZED`
 
 Classification: `REPAIR_REQUIRED`
 
@@ -40,6 +40,20 @@ Result/terminal: `PASS / DEADARCHIVE_LOCK_CONTRACT_PASS`
 
 The exact phone boundary proved profile-arm consumption, Boolean lock compatibility, separate owner, foreign/invalid reset blocking, matching-owner release once, protected-consumer preservation, global restoration, zero workbook/profile/live/manual-cleanup activity, final complete `1`, and normal Tasker exit. It did not prove the integrated transaction.
 
+### QueueView Diagnostic-First Phone Evidence
+
+Confirmed phone facts:
+
+1. `FINAL Queue Cycle` direct manual entry stopped safely before DeadArchive.
+2. `APP Run Tick Once` first stopped because `%AIWorkerTimerOn` was not armed.
+3. After arming the timer, Live Tick reached the DeadArchive guard and stopped because `%AIWDeadArchiving = 1`.
+4. `APP Safe Recovery` reached both QueueView AutoSheets reads, then stopped with `%AIWRecoveryResult = RECOVERY_QUEUE_READ_HOLD`.
+5. A subsequent assumed-predicate repair repeated the same phone failure.
+6. No destructive Sheet operation, profile activation, processing, sending, or normal Archive was proven in those failed recovery runs.
+7. Root process failure: production predicates were built before measuring the exact phone AutoSheets output contract.
+
+A diagnostic execution contract is required before a no-write QueueView measurement build. A production repair execution contract is forbidden until the real phone AutoSheets output contract is measured and frozen.
+
 ### Malformed Clean Integrated R2
 
 Artifact: `AIW_DEADARCHIVE_CLEAN_INTEGRATED_CANDIDATE_R2.xml`
@@ -66,14 +80,16 @@ The prior restart analysis remains evidence:
 - `RELEASE_BOOLEAN_FINALIZE` may set only Boolean lock `0` after exact phase, identity, destination, source-clear/readback, commit, and immediate revalidation proof with idle owner;
 - recovery must never select new work, clear a foreign owner, or mutate on missing/inconsistent proof.
 
-These are not an active mutation allowlist. The unified protocol is present on current main; runtime construction remains blocked until ChatGPT issues one exact refreshed DeadArchive execution contract.
+These are not an active production mutation allowlist. The unified protocol is present on current main. Only one contract-bound, isolated, no-write QueueView diagnostic is authorized before phone measurement; production repair construction remains forbidden until the measured plugin output contract is frozen in a later exact execution contract.
 
 Closing sequence:
 
-1. clean source-locked DeadArchive execution contract against refreshed current main;
-2. one integrated candidate from the resolved clean ancestor/parent;
-3. independent exact-artifact audit;
-4. one bounded phone run and controller decision.
+1. one canonical source-locked diagnostic execution contract against refreshed current main;
+2. one isolated no-write QueueView output diagnostic using the exact Task 229 configuration;
+3. independent exact-artifact audit and one bounded phone diagnostic run;
+4. freeze the measured AutoSheets output contract;
+5. only then issue the production repair contract and build from the resolved clean ancestor/parent;
+6. independently audit the production repair and obtain a separate bounded phone decision.
 
 ## ISSUE_GLOBAL_BUILDER_VERIFIER_AND_ARTIFACT_PROOF_FAILURE
 
@@ -148,6 +164,7 @@ Order: DeadArchive first, Brain/context second, final application-wide release a
 - Requirements/contracts remain acceptance truth; disagreement with bytes is `HARD HOLD`.
 - Preserve Tasker numeric action order, encoding, action schemas, branch targets, and unauthorized bytes.
 - Clear stale plugin output and require exact readback before dependent/destructive action.
+- No plugin-dependent production patch may rely on inferred plugin output. When the exact behavior is not already phone-proven in the same configuration, first build and run one isolated diagnostic that captures raw outputs, array shapes, unset/blank/literal states, and completion markers.
 - Prove exact recipient/thread/row/ID/sender/message/reply/status before Send.
 - Never retry automatically after a possible Send click.
 - DONE requires independent confirmation.
@@ -178,4 +195,5 @@ Other controller/tracker/matrix/bootstrap/handoff/status files must be deleted w
 `PROTOCOL_PR = #15`
 `PROTOCOL_MERGE_SHA = 83d14b31e5222da49de22763ada1dfbd12e0800f`
 `GLOBAL_EXECUTION_PROTOCOL = ACTIVE / MERGED ON CURRENT MAIN`
-`RUNTIME_BUILD = BLOCKED PENDING ONE EXACT REFRESHED DEADARCHIVE EXECUTION CONTRACT`
+`RUNTIME_BUILD = AUTHORIZED ONLY FOR ONE CONTRACT-BOUND NO-WRITE QUEUEVIEW DIAGNOSTIC`
+`PRODUCTION_REPAIR_BUILD = FORBIDDEN PENDING PHONE-MEASURED AUTOSHEETS OUTPUT CONTRACT`
