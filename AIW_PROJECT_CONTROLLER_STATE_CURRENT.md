@@ -15,8 +15,9 @@ Status: CURRENT OPERATIONAL SOURCE TRUTH
 `DEADARCHIVE_R2 = HARD HOLD / CLEAN INTEGRATED ARTIFACT ONLY`
 `DEADARCHIVE_CLEAN_INTEGRATED_R2 = HARD HOLD`
 `R2_PATCH = FORBIDDEN`
-`NEXT_RUNTIME_BASELINE = AIW_DEADARCHIVE_LOCK_COMPATIBILITY_PROOF_CANDIDATE_R3.xml / 0DBA8B521C33FDECD62C3877A44A860EF9DA8125E0F604FE86782880E7FDD10C UNLESS NEWER CURRENT AUTHORITY PROVES OTHERWISE`
-`RUNTIME_BUILD = BLOCKED PENDING ONE EXACT REFRESHED DEADARCHIVE EXECUTION CONTRACT`
+`ACTIVE_CAPABILITY_MECHANICAL_BASELINE = AIW_GATE14_FINAL_PRIVATE_COPY_VALIDATOR_CANDIDATE.xml / A170870077C50B2350EB94F823145E5FD80A22FBEA34D1096738DDBA0EEA2B98`
+`DEADARCHIVE_NEXT_RUNTIME_BASELINE = AIW_DEADARCHIVE_LOCK_COMPATIBILITY_PROOF_CANDIDATE_R3.xml / 0DBA8B521C33FDECD62C3877A44A860EF9DA8125E0F604FE86782880E7FDD10C UNLESS A FUTURE EXACT DEADARCHIVE CONTRACT PROVES OTHERWISE`
+`RUNTIME_BUILD = BLOCKED PENDING ONE EXACT MACHINE-READABLE EXECUTION CONTRACT FOR BRAIN_AND_BOUNDED_NORMAL_ARCHIVE_CONTEXT`
 `AUTOMATIC_DEADARCHIVE_RUNTIME = DEFERRED`
 `DEADARCHIVE_RECOVERY = BLOCKED`
 `DEADARCHIVE_CLEANUP_MODE = MANUAL_ONLY`
@@ -42,13 +43,27 @@ This remains the full-project phone-proven baseline for Gates 1-14. Gates 1-14 a
 
 ## Current Capability and Lineage
 
-`CURRENT_CAPABILITY = DEADARCHIVE`
+`CURRENT_CAPABILITY = BRAIN_AND_BOUNDED_NORMAL_ARCHIVE_CONTEXT`
 
-Classification: `REPAIR_REQUIRED / RUNTIME BUILD BLOCKED`
+Classification: `AUDIT_REQUIRED / RUNTIME BUILD BLOCKED PENDING ONE EXACT MACHINE-READABLE EXECUTION CONTRACT`
 
-Lock-contract sub-proof: `PHONE-PROVEN / LOCKED`
+Active mechanical baseline:
 
-Next clean capability ancestor:
+- file: `AIW_GATE14_FINAL_PRIVATE_COPY_VALIDATOR_CANDIDATE.xml`;
+- SHA256: `A170870077C50B2350EB94F823145E5FD80A22FBEA34D1096738DDBA0EEA2B98`;
+- role: `PHONE_PROVEN_FULL_PROJECT_GATE14_BASELINE / MECHANICAL_BASELINE_FOR_NEXT_CONTEXT_AUDIT`.
+
+DeadArchive status remains unchanged:
+
+- automatic DeadArchive runtime remains deferred;
+- DeadArchive recovery remains blocked;
+- DeadArchive cleanup remains manual only;
+- all DeadArchive evidence, rejected-parent boundaries, and future exact-contract requirements remain preserved;
+- no rejected DeadArchive artifact may be used as a parent for any runtime build.
+
+DeadArchive lock-contract sub-proof: `PHONE-PROVEN / LOCKED`
+
+Next DeadArchive clean capability ancestor:
 
 - file: `AIW_DEADARCHIVE_LOCK_COMPATIBILITY_PROOF_CANDIDATE_R3.xml`;
 - SHA256: `0DBA8B521C33FDECD62C3877A44A860EF9DA8125E0F604FE86782880E7FDD10C`;
@@ -57,6 +72,27 @@ Next clean capability ancestor:
 The future source-locked execution contract must independently resolve `BEHAVIORAL_AUTHORITY` and `MECHANICAL_PARENT`. These roles may not be silently equated with the full-project baseline or capability ancestor.
 
 Task 334 is locked proof evidence and must remain byte-identical. Permanent runtime guards in Tasks 34, 73, 74, and 147 remain locked. No additional lock-only package is authorized.
+
+## Brain and Bounded Normal-Archive Context Transition
+
+Source refresh for this source update:
+
+- `CURRENT_MAIN_SHA = 6d6d219eeb1c72e489791d9f0a683c0501fe827f`
+- `AGENTS_BLOB_SHA = 5bb5781f7fb8e6fc6eeb9ff9615fe2ccb5e288e6`
+- `FULL_GOAL_BLOB_SHA = 22770a4bf88767f5782e40cc978529c4bb623bd0`
+- `CONTROLLER_STATE_BLOB_SHA = 99b75b6a57d443126204d82dc70ec293d48d9b3f`
+- `FAILURE_LEDGER_BLOB_SHA = e6eba6dd268578dd7051ade51112551535661376`
+
+Next authorized sequence:
+
+1. audit the phone-proven Gate14 full-project baseline;
+2. identify the exact Brain and normal-Archive context gap;
+3. issue one exact machine-readable execution contract;
+4. build one bounded candidate;
+5. independent exact-artifact audit;
+6. one bounded phone run.
+
+No runtime XML construction, runtime package, phone import, or phone run is authorized until the exact machine-readable execution contract exists and ChatGPT approves the exact candidate boundary.
 
 ## Historical Lock-Compatibility R2 Failure
 
@@ -191,27 +227,24 @@ The earlier Tasks 18/19/199 plus bounded Task 229 scope is deactivated pending o
 
 ## Current Blocker and Authorized Sequence
 
-Current runtime blocker: ChatGPT has not yet issued one exact refreshed DeadArchive execution contract against current main. The unified protocol is verified present on current main through PR #15 at merge SHA `83d14b31e5222da49de22763ada1dfbd12e0800f`.
+Current runtime blocker: ChatGPT has not yet issued one exact machine-readable execution contract for `BRAIN_AND_BOUNDED_NORMAL_ARCHIVE_CONTEXT` against current main and the Gate14 full-project baseline. The unified protocol is verified present on current main through PR #15 at merge SHA `83d14b31e5222da49de22763ada1dfbd12e0800f`.
 
-Additional runtime blocker: the exact phone AutoSheets QueueView output contract remains unmeasured for the failing recovery configuration. The next production DeadArchive repair contract must include the measured diagnostic proof before authorizing plugin-dependent predicates.
+DeadArchive runtime blocker: the exact phone AutoSheets QueueView output contract remains unmeasured for the failing recovery configuration. The next production DeadArchive repair contract must include the measured diagnostic proof before authorizing plugin-dependent predicates. Automatic DeadArchive runtime remains deferred; DeadArchive recovery remains blocked; cleanup remains manual only.
 
 Required sequence:
 
-1. issue one clean source-locked DeadArchive diagnostic or production execution contract against refreshed current main;
-2. if production predicates depend on QueueView plugin output, first obtain prior phone-measured diagnostic proof for the exact Task 229 QueueView configuration;
-3. build one integrated production candidate from the exact resolved clean ancestor/parent only after the production contract is complete;
-4. independent exact-artifact audit;
-5. one bounded phone run.
+1. audit the phone-proven Gate14 full-project baseline;
+2. identify the exact Brain and normal-Archive context gap;
+3. issue one exact machine-readable execution contract;
+4. build one bounded candidate from `AIW_GATE14_FINAL_PRIVATE_COPY_VALIDATOR_CANDIDATE.xml` only after the contract is complete;
+5. independent exact-artifact audit;
+6. one bounded phone run.
 
-After DeadArchive:
-
-1. Brain plus bounded normal-Archive conversation-context audit/build;
-2. final application-wide release audit;
-3. capacity, interface, live, and production proof.
+After Brain/context: final application-wide release audit, then capacity, interface, live, and production proof.
 
 ## Current Blocked Actions
 
-Until exact refreshed contract, candidate construction, independent audit, and phone approval:
+Until exact machine-readable contract, candidate construction, independent audit, and phone approval:
 
 - runtime XML construction or import;
 - automatic DeadArchive runtime;
