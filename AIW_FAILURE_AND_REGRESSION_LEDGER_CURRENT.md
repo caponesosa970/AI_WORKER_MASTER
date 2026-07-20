@@ -19,6 +19,10 @@ Locked facts:
 - Task 334 is locked proof evidence and must remain byte-identical;
 - no additional lock-only package is authorized;
 - Gates 1-14 remain locked.
+- automatic DeadArchive runtime is deferred;
+- DeadArchive recovery is blocked;
+- DeadArchive cleanup is manual only until a later exact contract and phone proof authorize otherwise;
+- no plugin-dependent production patch may be built from inferred QueueView/AutoSheets output behavior.
 
 ### Historical Lock-Compatibility R2
 
@@ -39,6 +43,60 @@ Accepted run: `DAL-1784441447757`
 Result/terminal: `PASS / DEADARCHIVE_LOCK_CONTRACT_PASS`
 
 The exact phone boundary proved profile-arm consumption, Boolean lock compatibility, separate owner, foreign/invalid reset blocking, matching-owner release once, protected-consumer preservation, global restoration, zero workbook/profile/live/manual-cleanup activity, final complete `1`, and normal Tasker exit. It did not prove the integrated transaction.
+
+### QueueView Recovery Read Hold and Failed Assumed-Predicate Repair
+
+Status: `OPEN / PHONE FAILURE RECORDED / PRODUCTION REPAIR BLOCKED`
+
+Latest phone failure facts:
+
+- `FINAL Queue Cycle` direct manual entry stopped safely before DeadArchive.
+- `APP Run Tick Once` first stopped because `%AIWorkerTimerOn` was not armed.
+- After arming the timer, Live Tick reached the DeadArchive guard and stopped because `%AIWDeadArchiving = 1`.
+- `APP Safe Recovery` reached both QueueView AutoSheets reads, then stopped with `%AIWRecoveryResult = RECOVERY_QUEUE_READ_HOLD`.
+- A later assumed-predicate repair repeated the same `RECOVERY_QUEUE_READ_HOLD` phone failure.
+- No destructive Sheet operation, profile activation, processing, sending, normal Archive, or DeadArchive completion is proven by those failed recovery runs.
+
+Root process failure:
+
+- production recovery predicates were assumed before the exact phone AutoSheets QueueView output contract was measured in the same Task 229 configuration.
+
+Permanent prevention:
+
+- no plugin-dependent production patch may rely on inferred AutoSheets output;
+- when exact behavior is not already phone-proven in the same configuration, first obtain one isolated phone-measured diagnostic proof that captures raw outputs, array shapes, unset/blank/literal states, completion markers, `%err`, and `%errmsg`;
+- automatic DeadArchive runtime remains deferred;
+- DeadArchive recovery remains blocked;
+- cleanup remains manual only.
+
+### Active Queue and Process Terminal-Row Audit
+
+Status: `OPEN / SOURCE AUDIT RECORDED / PHONE AND PLUGIN BOUNDARIES PRESERVED`
+
+Audited source path: R3-compatible full-project path with Tasks `221`, `222`, `25`, `193`, `37`, `69`, `199`, `71`, `223`, `227`, and `229`.
+
+Static findings:
+
+- `QUEUE New Row Precheck` reads `Sheet1!D2:D201`, loops all `%qcn_status()` values, and counts `NEW`; it does not stop at the first terminal or non-NEW row.
+- `PROCESS Load Queue Globals` reads `QueueView!A2:J201`, loops all `%qv_status()` values, and copies the full scanned view into `%PSQ*` arrays.
+- `PROCESS Select Candidate Row` loops all `%PSQStatus()` values and binds work only when status is exactly `NEW`, source row is valid, and ID/sender/message are nonblank and nonliteral.
+- `PROCESS Live Row Guard` rereads the selected exact `Sheet1` row and continues only if the live status is still exactly `NEW`.
+- `FINAL Queue Cycle` treats process completion as sendable only for `READY_TO_SEND` or `REVIEW_READY`.
+- `FINAL Send Sheet` scans all `%qv_status()` values for unresolved send states, then scans all statuses for `READY_TO_SEND`; terminal, review, skip, error, and non-send statuses are not selected for Send.
+- `FINAL Queue Lifecycle Router` scans all `%qv_status()` values. `DONE` may route only to normal Archive. Terminal/review/skip/error rows are not routed to processing or sending.
+- `APP Safe Recovery` also loops all `%qv_status()` values for recovery evidence; the latest phone failure is the read contract, not a first-terminal-row stop.
+
+Verification result:
+
+- terminal statuses ignored by processing: `PASS`
+- terminal statuses ignored by sending: `PASS`
+- terminal rows selected for processing: `NO`
+- terminal rows selected for sending: `NO`
+- new rows below terminal or non-NEW rows remain reachable within the locked source window and view contract: `PASS`
+- queue readers stop at first terminal row: `NO`
+- accumulated terminal rows cannot be used by Tasker to overwrite or hide an active row: `PASS`
+
+Boundary: this is source/static proof only. It does not prove Tasker import, phone runtime, Google Sheets formula health, AutoSheets plugin output behavior, or capacity under a full source-row window. Formula damage, QueueView output drift, or window exhaustion remains `HOLD / MANUAL CLEANUP ONLY` until independently proven.
 
 ### Malformed Clean Integrated R2
 
@@ -148,6 +206,7 @@ Order: DeadArchive first, Brain/context second, final application-wide release a
 - Requirements/contracts remain acceptance truth; disagreement with bytes is `HARD HOLD`.
 - Preserve Tasker numeric action order, encoding, action schemas, branch targets, and unauthorized bytes.
 - Clear stale plugin output and require exact readback before dependent/destructive action.
+- Do not build a plugin-dependent production patch from assumed plugin output; require prior phone-measured diagnostic proof for the same plugin configuration.
 - Prove exact recipient/thread/row/ID/sender/message/reply/status before Send.
 - Never retry automatically after a possible Send click.
 - DONE requires independent confirmation.
@@ -179,3 +238,7 @@ Other controller/tracker/matrix/bootstrap/handoff/status files must be deleted w
 `PROTOCOL_MERGE_SHA = 83d14b31e5222da49de22763ada1dfbd12e0800f`
 `GLOBAL_EXECUTION_PROTOCOL = ACTIVE / MERGED ON CURRENT MAIN`
 `RUNTIME_BUILD = BLOCKED PENDING ONE EXACT REFRESHED DEADARCHIVE EXECUTION CONTRACT`
+`AUTOMATIC_DEADARCHIVE_RUNTIME = DEFERRED`
+`DEADARCHIVE_RECOVERY = BLOCKED`
+`DEADARCHIVE_CLEANUP_MODE = MANUAL_ONLY`
+`PLUGIN_DEPENDENT_PRODUCTION_PATCH = BLOCKED UNTIL PRIOR PHONE-MEASURED DIAGNOSTIC PROOF`

@@ -17,6 +17,10 @@ Status: CURRENT OPERATIONAL SOURCE TRUTH
 `R2_PATCH = FORBIDDEN`
 `NEXT_RUNTIME_BASELINE = AIW_DEADARCHIVE_LOCK_COMPATIBILITY_PROOF_CANDIDATE_R3.xml / 0DBA8B521C33FDECD62C3877A44A860EF9DA8125E0F604FE86782880E7FDD10C UNLESS NEWER CURRENT AUTHORITY PROVES OTHERWISE`
 `RUNTIME_BUILD = BLOCKED PENDING ONE EXACT REFRESHED DEADARCHIVE EXECUTION CONTRACT`
+`AUTOMATIC_DEADARCHIVE_RUNTIME = DEFERRED`
+`DEADARCHIVE_RECOVERY = BLOCKED`
+`DEADARCHIVE_CLEANUP_MODE = MANUAL_ONLY`
+`PLUGIN_DEPENDENT_PRODUCTION_PATCH = BLOCKED UNTIL PRIOR PHONE-MEASURED DIAGNOSTIC PROOF`
 
 `SOURCE_UPDATE_SELF_APPROVED = NO`
 `CHATGPT_DIFF_AUDIT_REQUIRED = COMPLETE`
@@ -82,6 +86,56 @@ Terminal: `DEADARCHIVE_LOCK_CONTRACT_PASS`
 
 The exact phone boundary confirmed profile-proof arm consumption, Boolean `%AIWDeadArchiving` compatibility, separate `%AIWDeadArchiveOwner`, foreign/invalid reset protection in Tasks 34/73/74/147, matching-owner release exactly once, protected-consumer preservation, global restoration, zero workbook/profile/live/manual-cleanup activity, final complete `1`, and normal Tasker exit. It proves only that tested lock boundary.
 
+## QueueView Recovery Failure and Terminal-Row Source Audit
+
+Source refresh for this source update:
+
+- `CURRENT_MAIN_SHA = 0586718187b4ab4281009d1e8e113510900d7e4a`
+- `AGENTS_BLOB_SHA = 5bb5781f7fb8e6fc6eeb9ff9615fe2ccb5e288e6`
+- `FULL_GOAL_BLOB_SHA = 22770a4bf88767f5782e40cc978529c4bb623bd0`
+- `CONTROLLER_STATE_BLOB_SHA = 292e5346134937c124d7794ce0f3011a0e0e984c`
+- `FAILURE_LEDGER_BLOB_SHA = 6f73736a76e8be773c2bbd28a511bb7b0622bcdb`
+
+Latest phone failure record:
+
+- `FINAL Queue Cycle` direct manual entry stopped safely before DeadArchive.
+- `APP Run Tick Once` first stopped because `%AIWorkerTimerOn` was not armed.
+- After arming the timer, Live Tick reached the DeadArchive guard and stopped because `%AIWDeadArchiving = 1`.
+- `APP Safe Recovery` reached both QueueView AutoSheets reads, then stopped with `%AIWRecoveryResult = RECOVERY_QUEUE_READ_HOLD`.
+- A later assumed-predicate repair repeated the same `RECOVERY_QUEUE_READ_HOLD` phone failure.
+- No destructive Sheet operation, profile activation, processing, sending, normal Archive, or DeadArchive completion is proven by those failed recovery runs.
+
+Controller decision:
+
+- automatic DeadArchive runtime remains deferred;
+- DeadArchive recovery remains blocked;
+- cleanup is manual only;
+- no plugin-dependent production patch may be built from inferred AutoSheets output behavior;
+- a prior phone-measured diagnostic proof is required before any production patch that depends on QueueView plugin output shape, array alignment, blank/unset handling, `%err`, or `%errmsg`.
+
+Active queue/process path audit from the R3-compatible full-project path:
+
+- `QUEUE New Row Precheck` reads `Sheet1!D2:D201`, loops all `%qcn_status()` values, and counts `NEW`; it does not stop at the first terminal or non-NEW row.
+- `PROCESS Load Queue Globals` reads `QueueView!A2:J201`, loops all `%qv_status()` values, and copies the full scanned view into `%PSQ*` arrays.
+- `PROCESS Select Candidate Row` loops all `%PSQStatus()` values and binds work only when status is exactly `NEW`, source row is within the valid row window, and ID/sender/message are nonblank and nonliteral.
+- `PROCESS Live Row Guard` rereads the selected exact `Sheet1` row and continues only if the live status is still exactly `NEW`.
+- `FINAL Queue Cycle` treats process completion as sendable only for `READY_TO_SEND` or `REVIEW_READY`.
+- `FINAL Send Sheet` scans all `%qv_status()` values for unresolved send states, then scans all statuses for `READY_TO_SEND`; terminal, review, skip, error, and non-send statuses are not selected for Send.
+- `FINAL Queue Lifecycle Router` scans all `%qv_status()` values. It may route `DONE` only to the normal Archive lifecycle path. It does not route terminal/review/skip/error rows to processing or sending.
+- Locked view proof records `QueueView` as a formula view with source rows; `APP Sheet View Guard` verifies `QueueView` and `OpenSlotView` headers and next-open-row shape before maintenance work.
+
+Verification result:
+
+- terminal statuses ignored by processing: `PASS`
+- terminal statuses ignored by sending: `PASS`
+- terminal rows selected for processing: `NO`
+- terminal rows selected for sending: `NO`
+- new rows below terminal or non-NEW rows remain reachable within the locked source window and view contract: `PASS`
+- queue readers stop at first terminal row: `NO`
+- accumulated terminal rows cannot be used by Tasker to overwrite or hide an active row: `PASS`
+
+Boundary: this is a source/static path audit, not phone proof, not plugin-output proof, not approval for DeadArchive runtime, not approval for production repair, and not approval for merge. Formula damage, QueueView plugin output drift, or a full source-row window remains `HOLD / MANUAL CLEANUP ONLY` until independently proven otherwise.
+
 ## Malformed Clean Integrated R2
 
 Artifact: `AIW_DEADARCHIVE_CLEAN_INTEGRATED_CANDIDATE_R2.xml`
@@ -139,12 +193,15 @@ The earlier Tasks 18/19/199 plus bounded Task 229 scope is deactivated pending o
 
 Current runtime blocker: ChatGPT has not yet issued one exact refreshed DeadArchive execution contract against current main. The unified protocol is verified present on current main through PR #15 at merge SHA `83d14b31e5222da49de22763ada1dfbd12e0800f`.
 
+Additional runtime blocker: the exact phone AutoSheets QueueView output contract remains unmeasured for the failing recovery configuration. The next production DeadArchive repair contract must include the measured diagnostic proof before authorizing plugin-dependent predicates.
+
 Required sequence:
 
-1. issue one clean source-locked DeadArchive execution contract against refreshed current main;
-2. build one integrated candidate from the exact resolved clean ancestor/parent;
-3. independent exact-artifact audit;
-4. one bounded phone run.
+1. issue one clean source-locked DeadArchive diagnostic or production execution contract against refreshed current main;
+2. if production predicates depend on QueueView plugin output, first obtain prior phone-measured diagnostic proof for the exact Task 229 QueueView configuration;
+3. build one integrated production candidate from the exact resolved clean ancestor/parent only after the production contract is complete;
+4. independent exact-artifact audit;
+5. one bounded phone run.
 
 After DeadArchive:
 
@@ -157,8 +214,11 @@ After DeadArchive:
 Until exact refreshed contract, candidate construction, independent audit, and phone approval:
 
 - runtime XML construction or import;
+- automatic DeadArchive runtime;
+- DeadArchive recovery;
 - DeadArchive or Compactor execution;
 - broad archive drains or production writes;
+- plugin-dependent production predicates without prior phone-measured diagnostic proof;
 - TextNow, AutoInput, OpenAI, Send, DONE, Archive, or Brain/context runtime;
 - live/timer/profile/capacity/production activation;
 - full-product release.
