@@ -12,14 +12,21 @@ Integrate Brain rules and bounded sender history into the production prompt only
 
 ## Proven Inputs
 
-No production Brain/context integration proof is recorded in this lane.
+- The controlling Brain-path build plan is: `H_FINAL_BRAIN_PATH_BUILD_PLAN_LOCKED_SECTION12_AMENDED.txt`
+- Bytes: `39524`
+- SHA256: `3291AB0A79FCBEA0B88DA0017AD5E8100A6DAA23BE03EBE743E22DE693A56DB5`
+- Section 12 proves the Archive configuration `A1:J933`.
+- The locked plan defines the intended production task contract, implementation scope, and prompt placement.
+- The plan does not authorize production construction by itself.
 
 ## Unknowns
 
-- Exact production build contract.
-- Exact implementation scope.
-- Production prompt placement.
-- Phone/runtime behavior after integration.
+- Exact finished production artifact identity and SHA256.
+- Latest-six timestamp/order proof.
+- Range-growth handling beyond row 933.
+- Production phone/runtime results.
+- Failure-path and regression results.
+- Final controller authorization.
 
 ## Authorized Work
 

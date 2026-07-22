@@ -6,11 +6,11 @@ This folder contains sanitized Markdown-only coordination packets from Codex to 
 
 Use:
 
-`YYYYMMDD_<LANE_ID>_<RETURN_TYPE>.md`
+`YYYYMMDDTHHMMSSZ_<LANE_ID>_<PACKET_ID>_<SHORT_PURPOSE>.md`
 
 Example:
 
-`20260721_TEST_BRAIN_ARCHIVE_ALIGNMENT_CODEX_RETURN.md`
+`20260721T184500Z_TEST_BRAIN_ARCHIVE_ALIGNMENT_PKT001_CODEX_RETURN.md`
 
 ## Allowed Content
 

@@ -1,8 +1,10 @@
-# Test Lane — DeadArchive
+# Test Lane - DeadArchive
 
 Lane ID: `TEST_DEADARCHIVE`
 
 Classification: `ISOLATED / DEFERRED / NON-RELEASE-BLOCKING`
+
+Production authorization: `NO`
 
 ## Product decision
 

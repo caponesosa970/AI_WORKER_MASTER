@@ -9,7 +9,7 @@ Source main last verified during preparation: `06cbf2df88ce59cb63310fa97d0490664
 | `MAIN_LOCKED_CORE` | Real application, accepted architecture, Gates 1-14, and promoted facts | `MAIN_LOCKED` | N/A | N/A |
 | `TEST_BRAIN_ARCHIVE_ALIGNMENT` | Prove exact aligned AutoSheets Archive retrieval | `LANE_LOCKED / SECTION 12 VERIFIED` | Yes | `MAIN_LOCKED_CORE` |
 | `TEST_BRAIN_CONTEXT_INTEGRATION` | Integrate Brain rules and bounded sender history into the production prompt | `BLOCKED BY EXPLICIT PRODUCTION BUILD AUTHORIZATION` | Yes | `MAIN_LOCKED_CORE` |
-| `TEST_HISTORY_ORDER_QUALITY` | Prove latest-six ordering, timestamp rules, sender isolation, and history eligibility | `BLOCKED BY RETRIEVAL` | Yes | `MAIN_LOCKED_CORE` |
+| `TEST_HISTORY_ORDER_QUALITY` | Prove latest-six ordering, timestamp rules, sender isolation, and history eligibility | `BLOCKED BY PRODUCTION BUILD AUTHORIZATION / ORDER PROOF PENDING` | Yes | `MAIN_LOCKED_CORE` |
 | `TEST_DEADARCHIVE` | Accumulate isolated DeadArchive transaction, recovery, cleanup, and plugin evidence | `ISOLATED / DEFERRED` | No | Optional later promotion |
 | `TEST_SECURITY_PRIVATE_ARTIFACTS` | Produce release derivatives without embedded credentials or private evidence | `REQUIRED BEFORE PUBLIC RELEASE` | Yes | `MAIN_LOCKED_CORE` |
 | `TEST_FULL_SYSTEM_REGRESSION` | Recheck STOP, locks, recipient safety, duplicate prevention, confirmation, Archive, and recovery | `DEPENDENT` | Yes | `MAIN_LOCKED_CORE` |
