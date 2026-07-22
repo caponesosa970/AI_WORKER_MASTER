@@ -1,6 +1,13 @@
 # Main Locked State
 
-Classification: `MAIN_LOCKED`
+Classification: `NON-AUTHORITATIVE MIRROR OF MAIN_LOCKED`
+
+This file is a coordination mirror only. If this mirror becomes stale or conflicts with the four root authority files, the four root authority files remain controlling:
+
+1. `AGENTS.md`
+2. `AIW_FULL_GOAL_EXECUTION_CONTRACT_CURRENT.md`
+3. `AIW_PROJECT_CONTROLLER_STATE_CURRENT.md`
+4. `AIW_FAILURE_AND_REGRESSION_LEDGER_CURRENT.md`
 
 ## Locked baseline
 

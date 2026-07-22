@@ -1,8 +1,8 @@
 # AI Worker Cross-Chat Work Lanes
 
-Status: `CANDIDATE / REPO-READY / NOT YET INSTALLED`
+Status: `COORDINATION SCAFFOLD / NON-AUTHORITATIVE`
 
-This directory is a non-authoritative coordination system. It cannot override the four current root authority files:
+This directory is a non-authoritative coordination system before and after merge. It cannot override the four current root authority files:
 
 1. `AGENTS.md`
 2. `AIW_FULL_GOAL_EXECUTION_CONTRACT_CURRENT.md`
@@ -21,11 +21,13 @@ Allow Sosa, ChatGPT, and Codex to continue AI Worker work across separate chats 
 - `HOLD`: work blocked by one exact unresolved condition.
 - `REJECTED`: failure evidence only; forbidden as a runtime parent unless a later exact authorization names an isolated safe region.
 
+Merging coordination records does not promote evidence into Main. Only an explicit promotion record plus controller decision may change Main authority.
+
 ## Promotion flow
 
-`NEW INFORMATION -> TEST LANE -> VERIFIED -> LANE_LOCKED -> CHATGPT AUDIT -> PHONE PROOF WHEN REQUIRED -> PROMOTION RECORD -> MAIN_LOCKED`
+`NEW INFORMATION -> TEST LANE -> VERIFIED -> LANE_LOCKED -> CHATGPT AUDIT -> PHONE PROOF WHEN REQUIRED -> PROMOTION RECORD -> CONTROLLER DECISION -> MAIN_LOCKED`
 
-No test lane may edit Main, approve itself, claim phone proof, or declare release.
+No test lane may edit Main, approve itself, claim phone proof, declare release, or authorize production Brain/context construction.
 
 ## Privacy
 
