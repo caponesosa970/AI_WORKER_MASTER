@@ -237,8 +237,8 @@ Required sequence:
 2. identify the exact Brain and normal-Archive context gap;
 3. issue one exact machine-readable execution contract;
 4. build one bounded candidate from `AIW_GATE14_FINAL_PRIVATE_COPY_VALIDATOR_CANDIDATE.xml` only after the contract is complete;
-5. independent exact-artifact audit;
-6. one bounded phone run.
+5. ChatGPT retrieves and fully audits the exact Codex return, patches only directly proven defects, and independently reaudits the complete corrected artifact;
+6. issue exactly one binary decision; only an approved exact candidate may receive one bounded phone run.
 
 After Brain/context: final application-wide release audit, then capacity, interface, live, and production proof.
 
@@ -260,5 +260,5 @@ Until exact machine-readable contract, candidate construction, independent audit
 
 Use exactly:
 
-- `APPROVED FOR ONE PHONE RUN`
+- `APPROVED FOR ONE BOUNDED PHONE RUN`
 - `REJECTED — ONE EXACT DEFECT / ONE MINIMAL REPAIR`
