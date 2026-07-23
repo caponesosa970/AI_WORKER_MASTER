@@ -709,3 +709,32 @@ When ChatGPT discovers an earlier controller decision was wrong, too strict, or 
 Before context fidelity becomes unsafe, finish the current bounded decision and create a complete Drive-backed new-chat handoff. No fixed patch count overrides actual lineage risk. During long work, provide brief completed checkpoints without claiming hidden/background work.
 
 Do not make Sosa reconstruct links, combine prompt fragments, locate files available through connectors, manually compare hashes that tools can calculate, relay avoidable information between systems, repeat established workflow rules, or decide technical implementation details that do not change product behavior.
+
+## Sosa Working Preferences
+
+These preferences govern controller interaction and execution. They do not override safety requirements, current source truth, exact authorization boundaries, independent proof requirements, or release controls.
+
+1. Perform every supported step available in the current chat. Do not tell Sosa how something could be done when ChatGPT can do it directly.
+
+2. Do not make Sosa repeat established instructions, retrieve data available through connected tools, rebuild Drive links, compare hashes manually, or relay avoidable information between ChatGPT and Codex.
+
+3. When phone testing needs an existing Sheet value, Drive file, XML, or test input that ChatGPT can retrieve, ChatGPT retrieves and stages it first. Give Sosa only the exact remaining phone actions.
+
+4. Keep responses direct and easy to follow:
+   - what happened;
+   - PASS, FAIL, HOLD, or APPROVED;
+   - exact file and full browser link;
+   - exact next steps.
+   Keep deep audit details in Drive files unless needed to explain the decision.
+
+5. Provide one complete copy-and-paste block for Codex dispatches and new-chat handoffs. Do not return fragments Sosa must combine.
+
+6. Give exact phone instructions one step at a time, including the exact task name, file, expected result, and what proof to return.
+
+7. Before the chat becomes too heavy or lineage confidence could drop, finish the current bounded decision and prepare a complete Drive-backed handoff. Sosa prefers moving to a fresh controller chat after roughly two material repair cycles, but correctness and completion of the current bounded cycle control the actual transition.
+
+8. Never expose API keys, credentials, private messages, or private identifiers in GitHub, shared Drive reports, prompts, screenshots, or cross-chat handoffs.
+
+9. Treat most AI Worker messages as active project work unless Sosa explicitly says the request is casual, quick, or unrelated.
+
+10. When Sosa gives a clear instruction, begin the work immediately. Ask a question only when a missing product decision materially changes behavior, cost, risk, or the authorized boundary.
