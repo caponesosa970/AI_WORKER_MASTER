@@ -529,3 +529,183 @@ Codex may not approve its own documentation update:
 - `SOURCE_UPDATE_SELF_APPROVED = NO`
 - `CHATGPT_DIFF_AUDIT_REQUIRED = YES`
 - `MERGE_APPROVED = NO`
+
+## Permanent Capability Continuation and Drive-First Delivery
+
+These rules consolidate recurring controller, Codex, Drive, handoff, and phone-test failures. They supplement the protocol above without changing the full product contract or authorizing any current runtime mutation.
+
+### 1. Authoritative Candidate and Mechanical Parent
+
+Runtime lineage has three distinct stages:
+
+1. `CODEX_CANDIDATE`: built by Codex; not approved for import or reuse as a future parent.
+2. `CONTROLLER_AUDITED_ACTIVE_CANDIDATE`: independently audited or patched by ChatGPT; the only artifact allowed to continue through the exact current audit and bounded phone boundary.
+3. `PHONE_PROVEN_LOCKED_MECHANICAL_PARENT`: passed the required phone boundary, was explicitly locked by ChatGPT, and has a complete verified Drive capability package.
+
+A ChatGPT patch supersedes the original Codex candidate for continued work, receives a new exact identity and SHA, and must be independently reaudited. The original return remains preserved as superseded or rejected evidence. A candidate becomes the next mechanical parent only after required phone PASS and Drive lock. Until then, the last phone-proven locked parent remains authoritative.
+
+### 2. Latest Locked Full-Project Parent
+
+Every new production capability must extend the newest exact phone-proven, ChatGPT-locked full-project artifact from Drive.
+
+Codex must verify exact filename, byte count, SHA256, Drive file ID, complete browser URL, capability lock record, and remote readback before modification. Filenames, memory, old local copies, chat attachments, reports, isolated diagnostics, task-only exports, test harnesses, rejected candidates, and prior Codex returns are insufficient.
+
+If the exact parent cannot be resolved, use `ARTIFACT_LINEAGE_HOLD`. No older or parallel lineage may silently become authoritative after a newer locked parent exists.
+
+### 3. Bounded Capability and Proof Levels
+
+Build only the smallest missing capability that can reach one independent audit and one bounded phone test without another known runtime build.
+
+Separate:
+
+- `BLOCKS_NEXT_PHONE_TEST`;
+- `BLOCKS_CAPABILITY_LOCK`;
+- `BLOCKS_PRODUCTION_RELEASE`.
+
+Release packaging, unrelated recovery, broad capacity, scheduler, interface, and final-regression proof must not delay a contained development phone test unless they can directly harm that test. Active maintenance, recovery, scheduler, or destructive behavior should progress through independently testable parts: entry/ownership, one exact transaction, bounded multi-item behavior, interruption/recovery, scheduling/repetition, then final integration.
+
+### 4. Controller Patch and Supersession
+
+When one bounded defect is directly proven and direct patching is supported, ChatGPT may patch within the exact authorized scope instead of creating another avoidable Codex cycle.
+
+ChatGPT must preserve locked bytes, assign the patch a new identity and SHA, independently reaudit the exact patched artifact, and preserve the original Codex artifact as superseded or rejected evidence. Codex must not extend the superseded original. Direct patching does not authorize scope expansion, redesign, or promotion without phone proof.
+
+### 5. Exact Phone Run, First Failure, and Clean Retest
+
+Any phone test that can mutate persistent state must state `RUN_EXACTLY_ONCE`. Do not rerun after PASS, HOLD, FAIL, or an uncertain outcome until evidence is returned and the controller issues the next instruction. A repeated run may never be used to discover whether the first run completed.
+
+At the first actual runtime blocker:
+
+- stop later test cases;
+- record the exact last reached action, guard, result, side effects, and paths not reached;
+- label downstream behavior `NOT_REACHED / NOT_TESTED`;
+- preserve the exact artifact, SHA, runlog, screenshots, workbook state, and persistent state;
+- perform only the minimum authorized cleanup;
+- rerun preparation before an integrated task when the approved test design requires it;
+- rerun only the failed boundary and required locked sentinel unless shared runtime logic changed.
+
+Normal Tasker exit is not runtime PASS.
+
+### 6. Independent Phone Pass and Operator Override
+
+Flash text, local result variables, ExitOK, screenshot position, or internal PASS labels are evidence only. Final phone PASS requires the strongest available independent confirmation, including exact runlog and external-state readback when applicable.
+
+If Sosa runs a candidate before formal approval, preserve and analyze the evidence honestly:
+
+- `OPERATOR_OVERRIDE = YES`;
+- `PHONE_EVIDENCE_USABLE = YES/NO`;
+- `PROMOTION_AUTHORIZED = NO`.
+
+Useful phone evidence is not discarded, but the run is not retroactively approved and cannot lock or promote the capability without the required artifact audit.
+
+### 7. Ownership, Cleanup, and Recovery Separation
+
+Never clear a lock, owner, transaction ID, phase, sentinel, maintenance flag, or persistent state solely because it appears stale.
+
+Before cleanup, determine active execution, exact owner, persistent transaction evidence, foreign-use risk, and whether cleanup would erase recovery proof. Clear only exact authorized state owned by the tested transaction. Never clear a foreign or uncertain owner.
+
+Manual cleanup, operator reset, development-only repair tasks, and automatic production recovery are separate capabilities. Manual intervention does not prove restart recovery, idempotency, or production self-healing.
+
+### 8. Test Harness and Private-Test Containment
+
+Temporary harness logic must remain distinguishable from permanent product logic and follow the same exact-row and ownership protections as production writes.
+
+For each staged row, sentinel, marker, or temporary value: save the original state, prove the expected baseline, clear stale plugin outputs, write only authorized cells, read back the staged state, restore only when the exact owned marker remains, and read back restoration. Never overwrite a row changed by another actor.
+
+A private bounded exception must explicitly isolate the workbook/rows, prevent TextNow/Send and automatic LIVE/profile/timer reachability, use one operator-controlled entry, run once, require independent verification, and expire after the test. Harness proof must name its permanent integration point and must not silently become production logic.
+
+### 9. Plugin Output Contract
+
+Destructive or production behavior must not rely on assumed plugin output.
+
+When the same plugin configuration is not already phone-proven, first run one isolated no-write diagnostic that records raw outputs, array lengths and alignment, headers, blank/unset/literal states, completion markers, error variables, timeout behavior, and zero/one/multiple-result behavior when applicable.
+
+The exact phone-proven diagnostic configuration is the only valid plugin-output contract for the next bounded build. A similar plugin action or different task configuration does not inherit that proof automatically.
+
+### 10. Tasker Import Type and Order
+
+Every Tasker artifact handoff must identify its exact import type:
+
+- project XML `.prj.xml`;
+- task XML `.tsk.xml`;
+- full backup/restore XML;
+- or another exact type.
+
+Phone instructions must state the exact import method, expected imported project/task name, replacement behavior, whether the old project remains installed, and exact import order. Filename alone does not prove import type. Static XML PASS does not prove Tasker import or render compatibility.
+
+### 11. Self-Contained Capability Lock and Evidence Vault
+
+Every locked capability package in Drive must be sufficient to continue or rebuild without old chats. It must contain or point to, when applicable:
+
+- read-first file;
+- behavioral authority and exact contract;
+- exact incoming locked parent;
+- original Codex return;
+- ChatGPT patch and final full-project artifact;
+- task-only export when useful;
+- builder, scanner, verifier, manifests, call graph, mutation map, protected-byte comparison, and hashes;
+- phone instructions, complete runlog, screenshots, workbook readback, and PASS lock;
+- rejected/superseded artifacts and forbidden-parent boundaries;
+- rebuild/import order and next-capability handoff;
+- exact file/folder names, Drive IDs, bytes, SHA256 values, and full browser links.
+
+Package sufficiency must be classified separately for static audit, build, phone test, capability lock, and release. One general completeness claim is insufficient.
+
+### 12. Drive-First Capability Promotion and GitHub Timing
+
+Under current GitHub governance, Drive is the authoritative private artifact, audit-evidence, phone-proof, and capability-lock chain during active capability work. Drive evidence cannot override the four GitHub root authority files, and GitHub text cannot substitute for missing private artifact bytes or phone proof.
+
+Use this sequence:
+
+`LATEST_LOCKED_DRIVE_PARENT -> BOUNDED BUILD -> CHATGPT AUDIT/PATCH -> PHONE PROOF -> COMPLETE DRIVE CAPABILITY LOCK -> PROMOTE TO LINK-CHAT MAIN DRIVE FOLDER -> VERIFIED GITHUB SOURCE UPDATE`
+
+Working artifacts remain in the correct capability lane. After the capability is complete and its lock package is verified, promote the exact completed package to the main folder used by the Drive Link Chat/full-project build. Only after that Drive promotion is verified may GitHub be updated to record the completed capability, new authoritative parent, proven failures, and next authorization.
+
+GitHub stores sanitized governance, current state, product contract, and failure/regression truth; it does not replace the private Drive artifact chain or store private runtime bytes. A rules-only governance update is separate from a capability-status promotion and must not falsely claim runtime completion.
+
+### 13. New-Chat Continuation and Codex-Return Intake
+
+Every new-chat handoff must state the full goal, latest locked capability, exact current parent, candidate status, current blocker, next exact action, Drive folder and browser links, what is locked, what is rejected, what must not be rebuilt, phone boundary, and expected ChatGPT/Codex/Sosa roles.
+
+A new chat must read current GitHub main and the self-contained Drive capability package before material work. It must not reconstruct authority from chat memory.
+
+When Sosa pastes a Codex return into a controller chat, treat it as an exact artifact-audit request unless Sosa explicitly says otherwise: fetch returned files, verify identity and hashes, audit the exact finished artifact, patch only proven defects, place the corrected package in the proper Drive lane when supported, and issue the binary phone decision. Do not require Sosa to restate history already available in source truth and Drive.
+
+### 14. Missing Artifact and Stronger Replacement
+
+Never fabricate missing intermediate bytes or claim byte identity with an unavailable artifact.
+
+Preserve known filenames, hashes, roles, and rejection status as historical references. Determine whether the missing artifact is required for authority, lineage, verification, or history only. When the exact trusted parent and complete verified behavioral intent are available, stronger current engineering work may replace a missing weaker or rejected intermediate without reconstructing it. The replacement must be clearly labeled and independently verified.
+
+### 15. Evidence-Lane Promotion and Immediate Fact Lock
+
+A complete Drive vault, uploaded ZIP, merged coordination record, or test-lane PASS does not automatically become Main authority.
+
+Promotion remains:
+
+`LANE EVIDENCE COMPLETE -> CHATGPT AUDIT -> PHONE PROOF WHEN REQUIRED -> COMPLETE DRIVE LOCK -> PROMOTION RECORD -> CONTROLLER DECISION -> MAIN LOCK`
+
+After each bounded phone PASS, immediately record the exact artifact/SHA, task and entry, preconditions, observed behavior, evidence, locked fact, permanent integration point, and remaining unknowns. Do not repeatedly retest an already locked sub-proof unless newer evidence contradicts it or shared runtime logic changed.
+
+### 16. Current Main and Root-Blob Refresh
+
+Before every material build, audit, phone approval, capability lock, promotion, source update, or release decision, refresh the actual current GitHub main commit and all four root authority files.
+
+A changed repository commit does not by itself mean governance changed. Record separately:
+
+- current main SHA;
+- each root-file blob SHA;
+- whether any controlling root blob changed;
+- whether only coordination or unrelated files changed.
+
+Source drift invalidates the applicable contract until refreshed. Historical source snapshots remain evidence only.
+
+### 17. Audit Completion, Controller Correction, Chat Capacity, and User Work
+
+Before authorizing another build, collect every directly proven blocker within the exact authorized boundary, merge related symptoms into root causes, and issue one complete repair set that can reach the phone without another already-known repair. Stop mutation at the first fundamental failure, but report all already-proven related consequences discoverable through bounded read-only analysis. Do not imply unreviewed downstream paths passed.
+
+When ChatGPT discovers an earlier controller decision was wrong, too strict, or incomplete, correct it directly, preserve valid prior evidence, withdraw only the unsupported portion, and issue one replacement decision without requiring Sosa to repeat the request.
+
+Before context fidelity becomes unsafe, finish the current bounded decision and create a complete Drive-backed new-chat handoff. No fixed patch count overrides actual lineage risk. During long work, provide brief completed checkpoints without claiming hidden/background work.
+
+Do not make Sosa reconstruct links, combine prompt fragments, locate files available through connectors, manually compare hashes that tools can calculate, relay avoidable information between systems, repeat established workflow rules, or decide technical implementation details that do not change product behavior.
