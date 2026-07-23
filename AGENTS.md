@@ -451,34 +451,34 @@ If requested delivery is unavailable:
 - `LOCAL_FILES_CREATED = YES` or `NO`
 - `UPLOAD_COMPLETED = NO`
 
-## ChatGPT Fixed Acceptance and Phone Contract
+## Codex Return Audit, Repair, and Phone Decision
 
-ChatGPT must not rely on Codex's report alone. For every exact runtime candidate, ChatGPT must:
+When Sosa pastes a Codex return or Codex supplies a completed candidate or return folder:
 
-1. refresh current GitHub source truth;
-2. verify contract SHA and package inventory;
-3. calculate candidate SHA and scan secrets/privacy;
-4. verify lineage, baseline, and candidate diff;
-5. reconstruct numeric action order and Tasker control flow;
-6. validate action schemas, duplicate fields, and branch targets;
-7. validate task/registry references and protected bytes;
-8. validate original-body preservation and mutation scope;
-9. reconstruct the complete call graph and trace each requirement to side effects;
-10. check ownership, release, STOP, failure, restart, and recovery;
-11. check maintenance concurrency and data round trip;
-12. report size/import risk;
-13. review independent verifier evidence and known-bad rejection;
-14. identify phone-only claims;
-15. issue only the authorized binary phone decision.
+`CONTROLLER_PHASE = CODEX_RETURN_AUDIT`
 
-ChatGPT must challenge incomplete instructions, prevent accidental removal of required behavior, explain conflicts simply, recommend the professional design, never guess or approve from urgency/polished reports, avoid needless delay, and perform the complete-answer and iterative reviews.
+This phase locks ChatGPT to the current return. Until the return receives a binary decision, ChatGPT must not design the next Safe Group, issue the next contract, dispatch another build, or treat Codex reports as finished-artifact proof.
 
-Phone instructions derive only from exact candidate/contract SHAs and unresolved phone requirements. They state exact task, expected/forbidden outputs, workbook bounds, runlog/evidence markers, cleanup, and pass/fail criteria. Phone proof applies only to the exact tested boundary.
+ChatGPT must:
 
-Binary phone decisions remain:
+1. refresh current GitHub `main` and all four root authority files;
+2. retrieve the complete return and verify every file's Drive ID, URL, filename, bytes, SHA256, contract, and parent;
+3. audit the exact finished artifact itself, not only reports, manifests, scripts, or PASS claims;
+4. reconstruct numeric `actN` execution, real branches and loops, targets, call paths, variable initialization, terminal paths, and forbidden-side-effect reachability;
+5. compare the artifact against the exact contract, mechanical parent, authorized mutations, protected tasks, and protected bytes;
+6. accept a defect only when its exact artifact location, execution path, consequence, and violated requirement are directly proven;
+7. patch only proven defects when direct patching is supported and authorized; otherwise issue one exact minimal-repair Codex assignment;
+8. give every patched artifact a new identity and SHA, preserve the original return as evidence, and independently reaudit the complete patched artifact;
+9. issue exactly one binary decision.
 
-- `APPROVED FOR ONE PHONE RUN`
+If no defect is proven, do not patch.
+
+Binary decisions are:
+
+- `APPROVED FOR ONE BOUNDED PHONE RUN`
 - `REJECTED — ONE EXACT DEFECT / ONE MINIMAL REPAIR`
+
+The next Safe Group remains blocked until the current candidate passes its bounded phone run and is explicitly locked. This is the single active Codex-return workflow. Conflicting, weaker, duplicate, or exception wording must be removed from active authority; necessary history may remain only as `NON-AUTHORITATIVE / SUPERSEDED / DO NOT EXECUTE`.
 
 ## Full-System Workflow, Loop Breakers, and Permanent Safety
 
@@ -663,13 +663,11 @@ Working artifacts remain in the correct capability lane. After the capability is
 
 GitHub stores sanitized governance, current state, product contract, and failure/regression truth; it does not replace the private Drive artifact chain or store private runtime bytes. A rules-only governance update is separate from a capability-status promotion and must not falsely claim runtime completion.
 
-### 13. New-Chat Continuation and Codex-Return Intake
+### 13. New-Chat Continuation
 
 Every new-chat handoff must state the full goal, latest locked capability, exact current parent, candidate status, current blocker, next exact action, Drive folder and browser links, what is locked, what is rejected, what must not be rebuilt, phone boundary, and expected ChatGPT/Codex/Sosa roles.
 
 A new chat must read current GitHub main and the self-contained Drive capability package before material work. It must not reconstruct authority from chat memory.
-
-When Sosa pastes a Codex return into a controller chat, treat it as an exact artifact-audit request unless Sosa explicitly says otherwise: fetch returned files, verify identity and hashes, audit the exact finished artifact, patch only proven defects, place the corrected package in the proper Drive lane when supported, and issue the binary phone decision. Do not require Sosa to restate history already available in source truth and Drive.
 
 ### 14. Missing Artifact and Stronger Replacement
 
