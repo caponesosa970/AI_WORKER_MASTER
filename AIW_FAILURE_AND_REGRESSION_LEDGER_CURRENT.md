@@ -6,38 +6,51 @@ Static, model, simulation, or local audit cannot close a phone/runtime issue. Ge
 
 ## ISSUE_CURRENT_CAPABILITY_TRANSITION_BRAIN_AND_ARCHIVE_CONTEXT
 
-Status: `OPEN / ACTIVE CAPABILITY / RUNTIME BUILD BLOCKED PENDING ONE EXACT MACHINE-READABLE EXECUTION CONTRACT`
+Status: `OPEN / SG03 PHONE-PROVEN LOCKED / SG04 EXACT CONTRACT NEXT`
 
 Current capability:
 
-- `CURRENT_CAPABILITY = BRAIN_AND_BOUNDED_NORMAL_ARCHIVE_CONTEXT`
+- `CURRENT_CAPABILITY = SG04_CONVERSATION_HISTORY_FORMAT_NO_OPENAI`.
+
+Locked Brain capability chain:
+
+- SG01 eligible-history predicate core: `PHONE-PROVEN / LOCKED`;
+- SG02 live normal-Archive read into the locked predicate: `PHONE-PROVEN / LOCKED`;
+- SG03 newest-six retention and oldest-to-newest order: `PHONE-PROVEN / LOCKED`.
 
 Mechanical baseline:
 
-- file: `AIW_GATE14_FINAL_PRIVATE_COPY_VALIDATOR_CANDIDATE.xml`;
-- SHA256: `A170870077C50B2350EB94F823145E5FD80A22FBEA34D1096738DDBA0EEA2B98`;
-- role: `PHONE_PROVEN_FULL_PROJECT_GATE14_BASELINE / MECHANICAL_BASELINE_FOR_NEXT_CONTEXT_AUDIT`.
+- file: `01_LOCKED_AIW_GATE14_PLUS_BRAIN_SG01_PLUS_SG02_PLUS_SG03_R1_FULL_IMPORT.xml`;
+- bytes: `2469906`;
+- SHA256: `AE8349296300F4645C00EB3369930EC81C2DA3CC9192A14F6101C5505172D837`;
+- private lock package: exact Drive identity retained out of public GitHub;
+- role: `PHONE_PROVEN_GATE14_PLUS_SG01_PLUS_SG02_PLUS_SG03_FULL_PROJECT_PARENT / ONLY AUTHORIZED SG04 MECHANICAL PARENT`.
+
+SG03 phone proof:
+
+- task341 ran manually exactly once;
+- result: `PASS`;
+- selected positions: `4,5,6,7,8,9`;
+- six IDs, messages, and replies remained paired and oldest-to-newest;
+- normal Tasker exit: `ExitOK`;
+- no Sheet, plugin, HTTP, OpenAI, Send, profile, live, or Perform Task action ran.
 
 Next authorized sequence:
 
-1. audit the phone-proven Gate14 full-project baseline;
-2. identify the exact Brain and normal-Archive context gap;
-3. issue one exact machine-readable execution contract;
-4. build one bounded candidate;
-5. independent exact-artifact audit;
-6. one bounded phone run.
+1. issue one exact machine-readable SG04 contract;
+2. build one isolated conversation-history formatting candidate;
+3. independent exact-artifact and protected-byte audit;
+4. one bounded phone run;
+5. lock SG04 after PASS.
 
 Boundaries:
 
-- no XML modification is authorized by this source update;
-- no runtime build is authorized by this source update;
-- the execution-contract requirement remains mandatory;
-- Gates 1-14 remain protected;
+- SG01-SG03 and all existing parent bytes remain protected;
+- SG04 must stop before Brain read, FinalPrompt, production integration, OpenAI, HTTP, Sheet access, TextNow, AutoInput, Send, profile, timer, or live behavior;
 - automatic DeadArchive runtime remains deferred;
 - DeadArchive recovery remains blocked;
 - DeadArchive cleanup remains manual only;
-- all DeadArchive evidence, rejected-parent boundaries, and future exact-contract requirements remain preserved;
-- no rejected DeadArchive artifact may be used as a parent for any runtime build.
+- no rejected artifact may be used as a parent.
 
 ## ISSUE_DEADARCHIVE_REPAIR_REQUIRED
 
@@ -222,17 +235,19 @@ Closing proof requires:
 
 ## ISSUE_BRAIN_AND_ARCHIVE_CONTEXT_INTEGRATION_PENDING
 
-Status: `OPEN / RELEASE HOLD / CONFIRMED INTEGRATION GAP`
+Status: `OPEN / SG01-SG03 PHONE-PROVEN / SG04 NEXT / RELEASE HOLD`
 
 Confirmed:
 
 - current same-sender grouping supports up to four messages;
-- no active AutoSheets path reads Brain;
-- no active prompt path reads normal Archive history;
-- `%BrainRules` and `%ConversationHistory` do not reach the active prompt;
-- current prompt uses a hard-coded system prompt and current grouped message only.
+- SG01 proves exact eligible-history filtering and source-order preservation;
+- SG02 proves the phone-local aligned normal-Archive read feeds the locked SG01 predicate;
+- SG03 proves more than six eligible exchanges are reduced to the newest six and retained oldest-to-newest;
+- no active prompt path yet receives a formatted `%ConversationHistory`;
+- `%BrainRules` and `%ConversationHistory` do not yet reach the active production prompt;
+- current production prompt still uses a hard-coded system prompt and current grouped message only.
 
-Order: Brain plus bounded normal-Archive conversation-context audit/build next, under one exact machine-readable execution contract; final application-wide release audit after that. DeadArchive runtime remains deferred, blocked, and manual-cleanup only until a later exact DeadArchive contract and phone proof authorize otherwise.
+Remaining order: SG04 conversation-history formatting, SG05 Brain plus bounded FinalPrompt, SG06 production call-edge integration with forced stop before OpenAI, SG07 OpenAI handoff, then final application-wide release audit. DeadArchive runtime remains deferred, blocked, and manual-cleanup only until a later exact DeadArchive contract and phone proof authorize otherwise.
 
 ## Permanent Regression Rules
 
@@ -272,9 +287,9 @@ Other controller/tracker/matrix/bootstrap/handoff/status files must be deleted w
 `PROTOCOL_PR = #15`
 `PROTOCOL_MERGE_SHA = 83d14b31e5222da49de22763ada1dfbd12e0800f`
 `GLOBAL_EXECUTION_PROTOCOL = ACTIVE / MERGED ON CURRENT MAIN`
-`CURRENT_CAPABILITY = BRAIN_AND_BOUNDED_NORMAL_ARCHIVE_CONTEXT`
-`ACTIVE_CAPABILITY_MECHANICAL_BASELINE = AIW_GATE14_FINAL_PRIVATE_COPY_VALIDATOR_CANDIDATE.xml / A170870077C50B2350EB94F823145E5FD80A22FBEA34D1096738DDBA0EEA2B98`
-`RUNTIME_BUILD = BLOCKED PENDING ONE EXACT MACHINE-READABLE EXECUTION CONTRACT FOR BRAIN_AND_BOUNDED_NORMAL_ARCHIVE_CONTEXT`
+`CURRENT_CAPABILITY = SG04_CONVERSATION_HISTORY_FORMAT_NO_OPENAI`
+`ACTIVE_CAPABILITY_MECHANICAL_BASELINE = 01_LOCKED_AIW_GATE14_PLUS_BRAIN_SG01_PLUS_SG02_PLUS_SG03_R1_FULL_IMPORT.xml / AE8349296300F4645C00EB3369930EC81C2DA3CC9192A14F6101C5505172D837`
+`RUNTIME_BUILD = BLOCKED UNTIL ONE EXACT MACHINE-READABLE EXECUTION CONTRACT EXISTS FOR SG04_CONVERSATION_HISTORY_FORMAT_NO_OPENAI`
 `AUTOMATIC_DEADARCHIVE_RUNTIME = DEFERRED`
 `DEADARCHIVE_RECOVERY = BLOCKED`
 `DEADARCHIVE_CLEANUP_MODE = MANUAL_ONLY`

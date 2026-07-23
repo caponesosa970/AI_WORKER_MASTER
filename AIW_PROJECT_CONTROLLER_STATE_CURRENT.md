@@ -6,6 +6,10 @@ Status: CURRENT OPERATIONAL SOURCE TRUTH
 
 `STATUS = 14/14 LOCKED = 100%`
 `GATES_1_TO_14 = LOCKED`
+`SG01 = PHONE-PROVEN / LOCKED`
+`SG02 = PHONE-PROVEN / LOCKED`
+`SG03 = PHONE-PROVEN / LOCKED`
+`SG04 = AUTHORIZED FOR ONE EXACT CONTRACT AND BOUNDED BUILD`
 `FULL_PRODUCT_RELEASE = HOLD`
 `LIVE_ACTIVATION = OFF`
 `PROFILE_ACTIVATION = OFF`
@@ -15,9 +19,9 @@ Status: CURRENT OPERATIONAL SOURCE TRUTH
 `DEADARCHIVE_R2 = HARD HOLD / CLEAN INTEGRATED ARTIFACT ONLY`
 `DEADARCHIVE_CLEAN_INTEGRATED_R2 = HARD HOLD`
 `R2_PATCH = FORBIDDEN`
-`ACTIVE_CAPABILITY_MECHANICAL_BASELINE = AIW_GATE14_FINAL_PRIVATE_COPY_VALIDATOR_CANDIDATE.xml / A170870077C50B2350EB94F823145E5FD80A22FBEA34D1096738DDBA0EEA2B98`
+`ACTIVE_CAPABILITY_MECHANICAL_BASELINE = 01_LOCKED_AIW_GATE14_PLUS_BRAIN_SG01_PLUS_SG02_PLUS_SG03_R1_FULL_IMPORT.xml / AE8349296300F4645C00EB3369930EC81C2DA3CC9192A14F6101C5505172D837`
 `DEADARCHIVE_NEXT_RUNTIME_BASELINE = AIW_DEADARCHIVE_LOCK_COMPATIBILITY_PROOF_CANDIDATE_R3.xml / 0DBA8B521C33FDECD62C3877A44A860EF9DA8125E0F604FE86782880E7FDD10C UNLESS A FUTURE EXACT DEADARCHIVE CONTRACT PROVES OTHERWISE`
-`RUNTIME_BUILD = BLOCKED PENDING ONE EXACT MACHINE-READABLE EXECUTION CONTRACT FOR BRAIN_AND_BOUNDED_NORMAL_ARCHIVE_CONTEXT`
+`RUNTIME_BUILD = BLOCKED UNTIL ONE EXACT MACHINE-READABLE EXECUTION CONTRACT EXISTS FOR SG04_CONVERSATION_HISTORY_FORMAT_NO_OPENAI`
 `AUTOMATIC_DEADARCHIVE_RUNTIME = DEFERRED`
 `DEADARCHIVE_RECOVERY = BLOCKED`
 `DEADARCHIVE_CLEANUP_MODE = MANUAL_ONLY`
@@ -33,25 +37,36 @@ Status: CURRENT OPERATIONAL SOURCE TRUTH
 
 Complete the autonomous AI Worker system that detects legitimate TextNow messages, logs exact Sheet rows, builds bounded context-aware OpenAI replies, opens the correct conversation, sends exactly once, confirms completion independently, archives safely, recovers from failures, runs until STOP, supports the final interface, and reaches the intended 50-contact reliability target.
 
-## Locked Full-Project Phone Baseline
+## Latest Locked Full-Project Mechanical Parent
 
-File: `AIW_GATE14_FINAL_PRIVATE_COPY_VALIDATOR_CANDIDATE.xml`
+File: `01_LOCKED_AIW_GATE14_PLUS_BRAIN_SG01_PLUS_SG02_PLUS_SG03_R1_FULL_IMPORT.xml`
 
-SHA256: `A170870077C50B2350EB94F823145E5FD80A22FBEA34D1096738DDBA0EEA2B98`
+Bytes: `2469906`
 
-This remains the full-project phone-proven baseline for Gates 1-14. Gates 1-14 are locked and must not be rebuilt or rerun without newer contradictory phone evidence.
+SHA256: `AE8349296300F4645C00EB3369930EC81C2DA3CC9192A14F6101C5505172D837`
+
+Private Drive identity and browser URL are preserved in the verified SG03 lock package and intentionally omitted from public GitHub.
+
+This is the phone-proven full-project mechanical parent for SG04. Gates 1-14 and SG01-SG03 are locked and must not be rebuilt or rerun without newer contradictory phone evidence.
 
 ## Current Capability and Lineage
 
-`CURRENT_CAPABILITY = BRAIN_AND_BOUNDED_NORMAL_ARCHIVE_CONTEXT`
+`CURRENT_CAPABILITY = SG04_CONVERSATION_HISTORY_FORMAT_NO_OPENAI`
 
-Classification: `AUDIT_REQUIRED / RUNTIME BUILD BLOCKED PENDING ONE EXACT MACHINE-READABLE EXECUTION CONTRACT`
+Classification: `AUTHORIZED FOR ONE EXACT CONTRACT AND ONE BOUNDED BUILD / PHONE IMPORT NOT APPROVED`
 
 Active mechanical baseline:
 
-- file: `AIW_GATE14_FINAL_PRIVATE_COPY_VALIDATOR_CANDIDATE.xml`;
-- SHA256: `A170870077C50B2350EB94F823145E5FD80A22FBEA34D1096738DDBA0EEA2B98`;
-- role: `PHONE_PROVEN_FULL_PROJECT_GATE14_BASELINE / MECHANICAL_BASELINE_FOR_NEXT_CONTEXT_AUDIT`.
+- file: `01_LOCKED_AIW_GATE14_PLUS_BRAIN_SG01_PLUS_SG02_PLUS_SG03_R1_FULL_IMPORT.xml`;
+- bytes: `2469906`;
+- SHA256: `AE8349296300F4645C00EB3369930EC81C2DA3CC9192A14F6101C5505172D837`;
+- role: `PHONE_PROVEN_GATE14_PLUS_SG01_PLUS_SG02_PLUS_SG03_FULL_PROJECT_PARENT / ONLY AUTHORIZED SG04 MECHANICAL PARENT`.
+
+Locked Brain capabilities:
+
+- SG01 eligible-history predicate core: `PHONE-PROVEN / LOCKED`;
+- SG02 live normal-Archive read into the locked predicate: `PHONE-PROVEN / LOCKED`;
+- SG03 newest-six retention and oldest-to-newest order: `PHONE-PROVEN / LOCKED`.
 
 DeadArchive status remains unchanged:
 
@@ -75,24 +90,33 @@ Task 334 is locked proof evidence and must remain byte-identical. Permanent runt
 
 ## Brain and Bounded Normal-Archive Context Transition
 
-Source refresh for this source update:
+Source base for this promotion:
 
-- `CURRENT_MAIN_SHA = 6d6d219eeb1c72e489791d9f0a683c0501fe827f`
-- `AGENTS_BLOB_SHA = 5bb5781f7fb8e6fc6eeb9ff9615fe2ccb5e288e6`
+- `SOURCE_BASE_MAIN_SHA = 7dd560543c03a9d38a01616701fa4ee5d964a9fa`
+- `AGENTS_BLOB_SHA = 0e45451b3729f83a2598963a28b9d4b64e4c7f0d`
 - `FULL_GOAL_BLOB_SHA = 22770a4bf88767f5782e40cc978529c4bb623bd0`
-- `CONTROLLER_STATE_BLOB_SHA = 99b75b6a57d443126204d82dc70ec293d48d9b3f`
-- `FAILURE_LEDGER_BLOB_SHA = e6eba6dd268578dd7051ade51112551535661376`
+- `CONTROLLER_STATE_BLOB_SHA_BEFORE_UPDATE = c00735cb44ada644cffd592985fac6b66a1e2f84`
+- `FAILURE_LEDGER_BLOB_SHA_BEFORE_UPDATE = a18144f69e4761bc509742ea38874ee984e34b14`
+
+SG03 phone lock:
+
+- task: `AIW BRAIN SG03 NEWEST SIX ORDER NO OPENAI` / task341;
+- result: `PASS`;
+- selected positions: `4,5,6,7,8,9`;
+- exact paired IDs/messages/replies remained oldest-to-newest;
+- normal exit: `ExitOK`;
+- forbidden external effects observed: `0`;
+- private lock package: exact Drive identity retained out of public GitHub.
 
 Next authorized sequence:
 
-1. audit the phone-proven Gate14 full-project baseline;
-2. identify the exact Brain and normal-Archive context gap;
-3. issue one exact machine-readable execution contract;
-4. build one bounded candidate;
-5. independent exact-artifact audit;
-6. one bounded phone run.
+1. issue one exact machine-readable SG04 execution contract against current main and the locked SG03 full-project parent;
+2. build one isolated SG04 conversation-history formatting candidate;
+3. independently audit the exact finished XML and protected parent bytes;
+4. authorize one bounded phone run only if no blocker remains;
+5. lock SG04 after phone PASS.
 
-No runtime XML construction, runtime package, phone import, or phone run is authorized until the exact machine-readable execution contract exists and ChatGPT approves the exact candidate boundary.
+SG04 must stop before Brain reading, FinalPrompt construction, production integration, OpenAI, HTTP, Sheet access, TextNow, AutoInput, Send, profiles, timers, or live activation.
 
 ## Historical Lock-Compatibility R2 Failure
 
@@ -227,18 +251,17 @@ The earlier Tasks 18/19/199 plus bounded Task 229 scope is deactivated pending o
 
 ## Current Blocker and Authorized Sequence
 
-Current runtime blocker: ChatGPT has not yet issued one exact machine-readable execution contract for `BRAIN_AND_BOUNDED_NORMAL_ARCHIVE_CONTEXT` against current main and the Gate14 full-project baseline. The unified protocol is verified present on current main through PR #15 at merge SHA `83d14b31e5222da49de22763ada1dfbd12e0800f`.
+Current runtime blocker: the exact SG04 machine-readable execution contract has not yet been issued against current main and `01_LOCKED_AIW_GATE14_PLUS_BRAIN_SG01_PLUS_SG02_PLUS_SG03_R1_FULL_IMPORT.xml`. SG03 is phone-proven and locked; no SG03 repair or rerun is authorized.
 
 DeadArchive runtime blocker: the exact phone AutoSheets QueueView output contract remains unmeasured for the failing recovery configuration. The next production DeadArchive repair contract must include the measured diagnostic proof before authorizing plugin-dependent predicates. Automatic DeadArchive runtime remains deferred; DeadArchive recovery remains blocked; cleanup remains manual only.
 
 Required sequence:
 
-1. audit the phone-proven Gate14 full-project baseline;
-2. identify the exact Brain and normal-Archive context gap;
-3. issue one exact machine-readable execution contract;
-4. build one bounded candidate from `AIW_GATE14_FINAL_PRIVATE_COPY_VALIDATOR_CANDIDATE.xml` only after the contract is complete;
-5. ChatGPT retrieves and fully audits the exact Codex return, patches only directly proven defects, and independently reaudits the complete corrected artifact;
-6. issue exactly one binary decision; only an approved exact candidate may receive one bounded phone run.
+1. issue the exact SG04 contract;
+2. build one bounded SG04 candidate from the locked SG03 full-project parent only;
+3. independently audit the exact finished artifact;
+4. authorize one bounded SG04 phone run;
+5. lock SG04 after PASS.
 
 After Brain/context: final application-wide release audit, then capacity, interface, live, and production proof.
 
@@ -252,7 +275,7 @@ Until exact machine-readable contract, candidate construction, independent audit
 - DeadArchive or Compactor execution;
 - broad archive drains or production writes;
 - plugin-dependent production predicates without prior phone-measured diagnostic proof;
-- TextNow, AutoInput, OpenAI, Send, DONE, Archive, or Brain/context runtime;
+- TextNow, AutoInput, OpenAI, Send, DONE, Archive, Brain reading, FinalPrompt, production integration, or any SG05+ runtime;
 - live/timer/profile/capacity/production activation;
 - full-product release.
 
