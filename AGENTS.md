@@ -184,6 +184,75 @@ Required final markers:
 
 These review passes are advisory process controls whose outputs are independently auditable only through the resulting response, contract, evidence, and markers. They do not authorize hidden scope expansion or replace direct verification, independent audit, Tasker import, phone proof, or release approval.
 
+## Broad Testing and Stress Rule
+
+For every material build, repair, verifier, navigation system, integration, runtime candidate, or release-capability audit, testing must be risk-based, broad, reproducible, and tied to the exact finished artifact or exact controlled system under test. Do not stop after the happy path, one narrow regression, one static count, or repeated polishing of one test lane while another material lane remains untested.
+
+Before execution, map the applicable test matrix. Use `NOT_APPLICABLE - <exact reason>` only when a dimension genuinely cannot affect the authorized boundary. The matrix must consider:
+
+1. normal and expected behavior;
+2. zero, one, minimum, maximum, limit-minus-one, limit, and limit-plus-one boundaries;
+3. blank, missing, malformed, stale, unresolved, duplicated, ambiguous, partial, reordered, and conflicting state;
+4. repeated and randomized sequences with recorded seeds or deterministic plans;
+5. concurrency, race, ownership, re-entry, duplicate invocation, and competing-work conditions;
+6. interruption, STOP, timeout, crash-equivalent state, restart, recovery, cleanup, idempotency, and rerun behavior;
+7. cross-task, cross-module, cross-window, call-graph, profile, scene, direct/manual entry, and indirect-entry behavior;
+8. performance, latency distribution, throughput, saturation, resource growth, task/action size, and sustained-run behavior;
+9. security, privacy, credentials, forbidden reachability, production isolation, and mutation-boundary enforcement;
+10. known historical failures, plausible adjacent variants, mutation survivors, and evidence that would disprove the current conclusion.
+
+Testing must rotate across materially different lanes. After one lane has stable evidence, move to another unresolved high-risk lane before repeating more of the same. Return to earlier lanes after changes or cross-lane findings. Do not become stuck optimizing one benchmark, selector, task, guard, or scenario while higher-risk gaps remain.
+
+Prefer background and no-click methods when they prove the same fact:
+
+1. exact file, parser, hash, or structured API inspection;
+2. deterministic model, scanner, or direct process query;
+3. read-only accessibility or state observation;
+4. isolated disposable fixture;
+5. foreground or phone input only when that behavior itself requires direct proof.
+
+Speed work follows correctness. First prove exact target, authorization, ownership, side-effect boundary, and postcondition. Then measure at least count, failures, median, p95, maximum, and resource or process stability when applicable. A faster path that weakens identity, safety, readback, or evidence is rejected.
+
+Stress execution must remain bounded and safety-gated:
+
+- state exact iterations, workers, duration, data range, seed, fixtures, timeout, stop conditions, and cleanup ownership before the run;
+- use only authorized disposable or private-test surfaces unless the exact contract separately authorizes another boundary;
+- preserve one-action, one-row, one-owner, one-send, and no-retry safety rules where applicable;
+- never interpret broad testing as permission for production writes, Send, LIVE, profiles, phone input, secret exposure, destructive cleanup, or scope expansion;
+- stop mutation and dependent execution at the first fundamental failure, while completing only bounded read-only analysis needed to report its already-proven consequences;
+- do not use unbounded loops, hidden automatic reruns, uncontrolled process creation, or stress that cannot prove cleanup;
+- log each miss before a materially changed retry and do not repeat a failed method unless its root cause changed.
+
+Every material stress claim must preserve exact evidence:
+
+- exact source, contract, baseline, candidate, script, fixture, seed, and output identities and SHA256 values;
+- exact command, parameters, start/end time, exit code, iteration and worker counts;
+- pass/fail criteria fixed before results are interpreted;
+- raw bounded results or machine-readable summaries;
+- foreground, process, workbook, phone, profile, and production before/after state when applicable;
+- cleanup and residual-state proof;
+- failures, interrupted paths, untested dimensions, and proof-lane boundaries.
+
+Detached mocks may support design but cannot prove finished-artifact behavior. Mutation testing must alter the exact finished artifact or exact controlled configuration and prove the independent verifier rejects each unsafe change. A broad test count is not proof when the scenarios share one assumption or one code path.
+
+Required material-test return fields:
+
+- `TEST_BREADTH_MATRIX = PASS` or `HOLD - <exact missing dimension>`
+- `STRESS_TEST_STATUS = PASS`, `FAILED`, `HOLD`, or `NOT_APPLICABLE - <reason>`
+- `TEST_ROTATION_COMPLETE = YES/NO`
+- `SURVIVING_SAFETY_MUTATIONS = <number or NOT_APPLICABLE>`
+- `PERFORMANCE_DISTRIBUTION_REPORTED = YES/NO/NOT_APPLICABLE`
+- `CLEANUP_AND_RESIDUAL_STATE_PROOF = PASS/HOLD/NOT_APPLICABLE`
+- `UNTESTED_MATERIAL_DIMENSIONS = NONE` or an exact list
+
+Enforceability classification:
+
+- exact matrix, limits, seeds, scripts, hashes, outputs, mutations, cleanup, and before/after state are `MECHANICALLY_ENFORCEABLE` or `INDEPENDENTLY_AUDITABLE`;
+- Tasker import, plugin behavior, Android UI, TextNow, workbook runtime behavior, and phone performance remain `PHONE_PROOF_DEPENDENT` where direct phone proof is required;
+- searching for unconventional cases and better alternatives is `ADVISORY_ONLY`, but the resulting accepted scenario, rejection, or exact reason must be recorded.
+
+This rule broadens test analysis, not mutation authority. It does not override the exact execution contract, protected scope, first-fundamental-failure stop, phone boundary, release authority, or proof-lane separation.
+
 ## Shared Execution Contract and Prebuild Acknowledgment
 
 Before every material runtime build, ChatGPT must issue one exact machine-readable execution contract. Use canonical UTF-8 JSON or another explicitly named deterministic format; hash the exact bytes. The contract is a controlled input, not a fifth root authority file. Every artifact and report must carry the same `CONTRACT_SHA256`.
